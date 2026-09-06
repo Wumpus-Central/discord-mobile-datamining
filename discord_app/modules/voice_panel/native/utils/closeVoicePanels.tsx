@@ -1,9 +1,9 @@
-// === Module 9479: closeVoicePanels ===
+// === Module 9508: closeVoicePanels ===
 
-// Module 9479 (closeVoicePanels)
+// Module 9508 (closeVoicePanels)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1228 */;
+import ME from "ME" /* 1074 */;
+import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
 
 const ComponentActions = ME.ComponentActions;
 const result = set.fileFinishedImporting("modules/voice_panel/native/utils/closeVoicePanels.tsx");

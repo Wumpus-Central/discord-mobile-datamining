@@ -1,16 +1,16 @@
-// === Module 15977: openFavoritesGuildChannelSortModal ===
+// === Module 16141: openFavoritesGuildChannelSortModal ===
 
-// Module 15977 (openFavoritesGuildChannelSortModal)
+// Module 16141 (openFavoritesGuildChannelSortModal)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import _modDef4724 from "module_4724" /* 4724 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import _modDef4763 from "module_4763" /* 4763 */;
 
 const FavoritesGuildChannelSortModal = "FavoritesGuildChannelSortModal";
 const result = set.fileFinishedImporting("modules/favorites/native/modal/openFavoritesGuildChannelSortModal.tsx");
 
 export default function openFavoritesGuildChannelSortModal() {
-  _modDef4724.pushLazy(asyncRequireImpl(15978, dependencyMap.paths), undefined, FavoritesGuildChannelSortModal);
+  _modDef4763.pushLazy(asyncRequireImpl(16142, dependencyMap.paths), undefined, FavoritesGuildChannelSortModal);
 };
 export const closeFavoritesGuildChannelSortModal = function closeFavoritesGuildChannelSortModal() {
-  _modDef4724.popWithKey(FavoritesGuildChannelSortModal);
+  _modDef4763.popWithKey(FavoritesGuildChannelSortModal);
 };

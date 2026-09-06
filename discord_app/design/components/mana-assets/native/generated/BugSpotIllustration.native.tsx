@@ -1,10 +1,10 @@
-// === Module 6385: BugSpotIllustration ===
+// === Module 5813: BugSpotIllustration ===
 
-// Module 6385 (BugSpotIllustration)
+// Module 5813 (BugSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6386 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5814 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BugSpotIllustration.native.tsx");

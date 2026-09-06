@@ -1,15 +1,15 @@
-// === Module 6009: UserProfileCard ===
+// === Module 7207: UserProfileCard ===
 
-// Module 6009 (UserProfileCard)
-import ThemesDefault from "Themes" /* 709 */;
-import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6012 */;
+// Module 7207 (UserProfileCard)
+import ThemesDefault from "Themes" /* 576 */;
+import Text from "Text" /* 4556 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7209 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: c4 } = ARBITRARY_LARGE_OFFSET);

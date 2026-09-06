@@ -1,35 +1,36 @@
-// === Module 16158: areHomeDrawerGuildTypingStatesEqual ===
+// === Module 16320: areHomeDrawerGuildTypingStatesEqual ===
 
-// Module 16158 (areHomeDrawerGuildTypingStatesEqual)
-import shallowEqual from "shallowEqual" /* 640 */;
-import closure_3 from "storeThread" /* 4122 */;
-import { isThread } from "createChannelRecord" /* 1390 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "handleTypingStart" /* 11766 */;
+// Module 16320 (areHomeDrawerGuildTypingStatesEqual)
+import shallowEqual from "shallowEqual" /* 558 */;
+import closure_3 from "storeThread" /* 4201 */;
+import { isThread } from "createChannelRecord" /* 1961 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "handleTypingStart" /* 11965 */;
 
 require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
   let result = typingChannelId.typingChannelId === typingChannelId2.typingChannelId && typingChannelId.typingChannelName === typingChannelId2.typingChannelName;
   if (result) {
     result = shallowEqual.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
-    const obj = shallowEqual;
+    obj = shallowEqual;
   }
   return result;
 }
-let closure_7 = { typingChannelId: "Array", typingChannelName: "PX_16", typingUserIds: [] };
+let obj = { typingChannelId: "Array", typingChannelName: "isArray", typingUserIds: -11665405 };
+obj[2] = [];
 let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
   const _require = id;
   const isHomeDrawerChannelMuted = _require(isHomeDrawerChannelInChannelList[5]).useIsHomeDrawerChannelMuted();
-  let obj = _require(isHomeDrawerChannelInChannelList[5]);
+  obj = _require(isHomeDrawerChannelInChannelList[5]);
   isHomeDrawerChannelInChannelList = _require(isHomeDrawerChannelInChannelList[6]).useIsHomeDrawerChannelInChannelList();
   const obj2 = _require(isHomeDrawerChannelInChannelList[6]);
   const items = [closure_6, closure_5, closure_3];
   const items1 = [id, isHomeDrawerChannelMuted, isHomeDrawerChannelInChannelList];
   return _require(isHomeDrawerChannelInChannelList[7]).useStateFromStores(items, () => {
     const typingUsersByGuild = closure_1_6.getTypingUsersByGuild(closure_0);
-    let obj = isHomeDrawerChannelMuted(isHomeDrawerChannelInChannelList[8]);
+    obj = isHomeDrawerChannelMuted(isHomeDrawerChannelInChannelList[8]);
     const keys = obj.keys(typingUsersByGuild);
     const found = keys.find((id) => {
       const basicChannel = closure_1_5.getBasicChannel(id);

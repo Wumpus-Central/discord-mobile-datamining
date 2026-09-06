@@ -1,10 +1,10 @@
-// === Module 15903: cardSize ===
+// === Module 16067: cardSize ===
 
-// Module 15903 (cardSize)
+// Module 16067 (cardSize)
 import apply from "apply" /* 12 */;
-import closure_3 from "markAllUserIdListsStale" /* 4130 */;
-import closure_4 from "updateVoiceState" /* 4497 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15134 */;
+import closure_3 from "markAllUserIdListsStale" /* 4209 */;
+import closure_4 from "updateVoiceState" /* 4579 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15294 */;
 
 require = arg1;
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: c5, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: error } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
@@ -47,7 +47,7 @@ export const filterHappeningNowCards = function filterHappeningNowCards(isFocuse
             let someResult = null != voiceStatesForChannel;
             if (someResult) {
               const mapped = callback2(12)(voiceStatesForChannel).map((userId) => userId.userId);
-              const found = mapped.filter(callback(1470).isNotNullish);
+              const found = mapped.filter(callback(1369).isNotNullish);
               someResult = found.some((id) => blockedOrIgnored.isBlockedOrIgnored(id));
               const arr2 = callback2(12)(voiceStatesForChannel);
             }

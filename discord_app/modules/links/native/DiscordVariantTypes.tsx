@@ -1,8 +1,8 @@
-// === Module 16220: DISCORD_VARIANTS ===
+// === Module 16382: DISCORD_VARIANTS ===
 
-// Module 16220 (DISCORD_VARIANTS)
+// Module 16382 (DISCORD_VARIANTS)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
+import ThemesDefault from "Themes" /* 576 */;
 
 let obj = { production: null, ci: null, main: null, beta: null, dev: null };
 obj = { scheme: "discord-prod", label: "Discord", color: ThemesDefault.unsafe_rawColors.BRAND_500 };

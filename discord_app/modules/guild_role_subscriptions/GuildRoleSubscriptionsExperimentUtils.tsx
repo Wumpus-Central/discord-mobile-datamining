@@ -1,8 +1,8 @@
-// === Module 13871: GuildFeatures ===
+// === Module 13893: GuildFeatures ===
 
-// Module 13871 (GuildFeatures)
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import { GuildFeatures } from "ME" /* 673 */;
+// Module 13893 (GuildFeatures)
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import { GuildFeatures } from "ME" /* 1074 */;
 
 const require = arg1;
 let items = [, , ];
@@ -35,7 +35,7 @@ export const isGuildEligibleForTierTemplates = function isGuildEligibleForTierTe
 export const useGuildEligibleForTierTemplates = function useGuildEligibleForTierTemplates(guildId) {
   const _require = guildId;
   items = [closure_2];
-  return _require(644).useStateFromStores(items, () => {
+  return _require(563).useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let flag;
     if (guild != null) {

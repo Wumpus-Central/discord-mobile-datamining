@@ -1,8 +1,8 @@
-// === Module 9756: DEFAULT_DISCOVERY_CATEGORY_ID ===
+// === Module 9066: DEFAULT_DISCOVERY_CATEGORY_ID ===
 
-// Module 9756 (DEFAULT_DISCOVERY_CATEGORY_ID)
-import setDefault from "set" /* 684 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+// Module 9066 (DEFAULT_DISCOVERY_CATEGORY_ID)
+import setDefault from "set" /* 1090 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -41,8 +41,8 @@ export const getLanguageOptions = function getLanguageOptions() {
     if ("en-US" === code.code) {
       const obj = {};
       const merged = Object.assign(code);
-      const intl = callback(1233).intl;
-      obj.name = intl.string(callback(1233).t.LQLMGP);
+      const intl = callback(1114).intl;
+      obj.name = intl.string(callback(1114).t.LQLMGP);
       tmp = obj;
     }
     return tmp;

@@ -1,9 +1,9 @@
-// === Module 17312: prototype ===
+// === Module 17472: prototype ===
 
-// Module 17312 (prototype)
-import initializeDefault from "initialize" /* 5495 */;
-import closure_2 from "initialize" /* 12213 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
+// Module 17472 (prototype)
+import initializeDefault from "initialize" /* 7118 */;
+import closure_2 from "initialize" /* 12413 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
 
 initializeDefault;
 let prototype = function PushNotificationCacheManager() {
@@ -26,15 +26,15 @@ let prototype = function PushNotificationCacheManager() {
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      applyArgumentsResult(9674).setCurrentUser(currentUser.username, currentUser.id);
-      const obj2 = applyArgumentsResult(9674);
+      applyArgumentsResult(9687).setCurrentUser(currentUser.username, currentUser.id);
+      const obj2 = applyArgumentsResult(9687);
     } else {
-      applyArgumentsResult(9674).setCurrentUser(null, null);
-      const obj = applyArgumentsResult(9674);
+      applyArgumentsResult(9687).setCurrentUser(null, null);
+      const obj = applyArgumentsResult(9687);
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
-    obj = obj(9674);
+    obj = obj(9687);
     obj = undefined;
     if (obj.canUseMultiAccountNotifications) {
       const validUsers = obj.getValidUsers();

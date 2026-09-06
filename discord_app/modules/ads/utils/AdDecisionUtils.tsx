@@ -1,8 +1,8 @@
-// === Module 7456: result ===
+// === Module 7701: result ===
 
-// Module 7456 (result)
-import setDefault from "set" /* 684 */;
-import AdCreativeType from "AdCreativeType" /* 7457 */;
+// Module 7701 (result)
+import setDefault from "set" /* 1090 */;
+import AdCreativeType from "AdCreativeType" /* 5451 */;
 
 require = arg1;
 let result = 6 * setDefault.Millis.HOUR;
@@ -16,9 +16,9 @@ export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(type) 
     type = type.type;
     if (AdCreativeType.AdCreativeType.QUEST === type) {
       return type.questId;
-    } else if (tmp(7457).AdCreativeType.BOUNTY === type) {
+    } else if (tmp(5451).AdCreativeType.BOUNTY === type) {
       return type.bounty.id;
-    } else if (tmp(7457).AdCreativeType.QUEST_HOME_HERO === type) {
+    } else if (tmp(5451).AdCreativeType.QUEST_HOME_HERO === type) {
       return type.questHomeHero.id;
     }
   }

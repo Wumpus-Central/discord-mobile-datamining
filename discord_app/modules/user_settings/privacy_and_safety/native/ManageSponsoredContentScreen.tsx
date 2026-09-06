@@ -1,27 +1,27 @@
-// === Module 15704: AdTopicRow ===
+// === Module 15862: AdTopicRow ===
 
-// Module 15704 (AdTopicRow)
+// Module 15862 (AdTopicRow)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import combinedDefault from "combined" /* 1994 */;
-import messagesProxyDefault from "messagesProxy" /* 2042 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import combinedDefault from "combined" /* 2024 */;
+import messagesProxyDefault from "messagesProxy" /* 2070 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 673 */;
+import { HelpdeskArticles } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
-  let AdTopicOptOuts = adTopic(4166).AdTopicOptOuts;
+  let AdTopicOptOuts = adTopic(1935).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   const hasItem = setting.includes(adTopic);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
-  const intl = adTopic(1233).intl;
+  const intl = adTopic(1114).intl;
   obj[0] = intl.string(obj[adTopic]);
-  const intl2 = adTopic(1233).intl;
+  const intl2 = adTopic(1114).intl;
   const tmp3 = messagesProxyDefault;
   obj[1] = intl2.string(hasItem ? tmp3.B9PPxE : tmp3.Y9ZOp8);
   obj[2] = !hasItem;
@@ -37,7 +37,7 @@ function AdTopicRow(adTopic) {
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(6002).TableSwitchRow, obj);
+  return closure_5(adTopic(7201).TableSwitchRow, obj);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

@@ -1,15 +1,15 @@
-// === Module 17032: VideoButtonRive ===
+// === Module 17196: VideoButtonRive ===
 
-// Module 17032 (VideoButtonRive)
-import ManaContext from "ManaContext" /* 4204 */;
+// Module 17196 (VideoButtonRive)
+import ManaContext from "ManaContext" /* 4271 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 9552 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
-import { Features } from "DesktopSources" /* 4542 */;
+import closure_5 from "initialize" /* 9486 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4199 */;
+import { Features } from "DesktopSources" /* 4585 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -23,9 +23,9 @@ function VideoButtonRive(arg0) {
   }
   obj[1] = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(10219).VideoIcon;
+    let VideoSlashIcon = tmp3(10110).VideoIcon;
   } else {
-    VideoSlashIcon = tmp3(12713).VideoSlashIcon;
+    VideoSlashIcon = tmp3(13046).VideoSlashIcon;
   }
   obj[2] = <VideoSlashIcon color={color} />;
   obj[1] = jsx(ManaContext.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });
@@ -38,6 +38,7 @@ export default function VideoButton(arg0) {
   let stateFromStores;
   let stateFromStores1;
   let stateFromStores2;
+  closure_4 = undefined;
   let color;
   let obj = stateFromStores2;
   ({ props, wrapperSpecs } = arg0);
@@ -65,7 +66,10 @@ export default function VideoButton(arg0) {
   const obj4 = channelId(stateFromStores1[11]);
   const items2 = [closure_8];
   stateFromStores2 = channelId(stateFromStores1[11]).useStateFromStores(items2, () => closure_8.supports(constants.VIDEO));
-  const items3 = [channelId, stateFromStores1, stateFromStores, stateFromStores2];
+  const VideoGuardExperiment = channelId(stateFromStores1[13]).VideoGuardExperiment;
+  const videoEnabled = VideoGuardExperiment.useConfig({ location: "VoicePanelVideoButton" }).videoEnabled;
+  closure_4 = tmp8;
+  const items3 = [channelId, stateFromStores1, stateFromStores, stateFromStores2, !videoEnabled];
   if (stateFromStores2) {
     if (stateFromStores1) {
       let color2 = voicePanelButtonStyles.iconFillSelected.color;
@@ -74,13 +78,19 @@ export default function VideoButton(arg0) {
     }
   } else {
     color = voicePanelButtonStyles.iconFillMuted.color;
+    const items4 = [color, stateFromStores1];
+    let memo = obj.useMemo(() => closure_1_11(closure_1_12, { isVideoEnabled: stateFromStores1, color }), items4);
     obj = { onPress: null, disabled: null, props: null, accessibilityLabel: null, style: null, children: null };
-    obj[0] = tmp8;
-    obj[1] = !stateFromStores2;
+    obj[0] = tmp9;
+    let tmp14 = !tmp8;
+    if (videoEnabled) {
+      tmp14 = !stateFromStores2;
+    }
+    obj[1] = tmp14;
     obj[2] = props;
-    const intl = tmp3(tmp2[18]).intl;
+    let intl = tmp3(tmp2[16]).intl;
     const string = intl.string;
-    const t = tmp3(tmp2[18]).t;
+    const t = tmp3(tmp2[16]).t;
     if (stateFromStores1) {
       let stringResult = string(t.EnX2Jl);
     } else {
@@ -88,8 +98,12 @@ export default function VideoButton(arg0) {
     }
     obj[3] = stringResult;
     obj[4] = stateFromStores1 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
-    const items4 = [color, stateFromStores1];
-    obj[5] = obj.useMemo(() => closure_1_11(closure_1_12, { isVideoEnabled: stateFromStores1, color }), items4);
-    return jsx(tmp(tmp2[17]), { onPress: null, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
+    if (!videoEnabled) {
+      obj = { color: null };
+      obj[0] = voicePanelButtonStyles.iconFill.color;
+      memo = tmp12(tmp3(tmp2[21]).VideoDenyIcon, obj);
+    }
+    obj[5] = memo;
+    return jsx(tmp(tmp2[20]), { onPress: null, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
   }
 };

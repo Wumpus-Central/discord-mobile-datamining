@@ -1,12 +1,12 @@
-// === Module 15855: useChannelListWidth ===
+// === Module 16017: useChannelListWidth ===
 
-// Module 15855 (useChannelListWidth)
+// Module 16017 (useChannelListWidth)
 import set from "set" /* 2 */;
-import keys from "keys" /* 688 */;
-import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 4197 */;
-import useChatLayoutDefault from "useChatLayout" /* 4335 */;
-import sum from "sum" /* 11352 */;
+import ThemesDefault from "Themes" /* 576 */;
+import keys from "keys" /* 1093 */;
+import map from "map" /* 4262 */;
+import useChatLayoutDefault from "useChatLayout" /* 4420 */;
+import sum from "sum" /* 11528 */;
 
 const result = set.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 

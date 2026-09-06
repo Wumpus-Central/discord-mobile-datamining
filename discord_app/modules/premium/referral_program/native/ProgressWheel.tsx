@@ -1,15 +1,15 @@
-// === Module 13350: ProgressWheel ===
+// === Module 13455: ProgressWheel ===
 
-// Module 13350 (ProgressWheel)
+// Module 13455 (ProgressWheel)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 4197 */;
-import preloadDefault from "preload" /* 5502 */;
-import inlineStyles from "inlineStyles" /* 8254 */;
-import MAX_REFERRALS_SENT from "MAX_REFERRALS_SENT" /* 13339 */;
+import ThemesDefault from "Themes" /* 576 */;
+import map from "map" /* 4262 */;
+import preloadDefault from "preload" /* 5587 */;
+import inlineStyles from "inlineStyles" /* 8453 */;
+import MAX_REFERRALS_SENT from "MAX_REFERRALS_SENT" /* 13445 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -30,19 +30,19 @@ export default function ProgressWheel(arg0) {
   let tmp9 = nReferralsSent === MAX_REFERRALS_SENT.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
-    let tmp4Result = tmp4(5502);
-    obj[0] = tmp4(13351);
+    let tmp4Result = tmp4(5587);
+    obj[0] = tmp4(13456);
     obj[1] = tmp.glowImage;
     tmp9 = callback(tmp4Result, obj);
   }
   const items = [tmp9, , ];
   obj1 = { width: c6, height: c6, children: null };
-  tmp4Result = tmp4(8254);
+  tmp4Result = tmp4(8453);
   const items1 = [callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray: closure_7, strokeDashoffset: closure_7 * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" })];
   obj1[2] = items1;
   items[1] = closure_5(tmp4Result, obj1);
   if (altImage == null) {
-    altImage = tmp4(13352);
+    altImage = tmp4(13457);
   }
   items[2] = callback(preloadDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj[1] = items;

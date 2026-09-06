@@ -1,9 +1,9 @@
-// === Module 11897: TrackSectionHeader ===
+// === Module 12096: TrackSectionHeader ===
 
-// Module 11897 (TrackSectionHeader)
-import encodeProperties from "encodeProperties" /* 500 */;
-import trackImpressionDefault from "trackImpression" /* 8911 */;
-import closure_3 from "handleDismissWithDismissed" /* 8447 */;
+// Module 12096 (TrackSectionHeader)
+import encodeProperties from "encodeProperties" /* 1250 */;
+import trackImpressionDefault from "trackImpression" /* 8768 */;
+import closure_3 from "handleDismissWithDismissed" /* 9408 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/TrackSectionHeader.tsx");

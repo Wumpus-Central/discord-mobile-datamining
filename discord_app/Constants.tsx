@@ -1,24 +1,24 @@
-// === Module 673: ME ===
+// === Module 1074: ME ===
 
-// Module 673 (ME)
-import set7 from "set" /* 683 */;
-import setDefault from "set" /* 684 */;
-import ApplicationDistributors from "ApplicationDistributors" /* 687 */;
-import keys2 from "keys" /* 688 */;
-import set8 from "set" /* 689 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 690 */;
-import MessageReferenceTypes from "MessageReferenceTypes" /* 691 */;
-import SKUFlags from "SKUFlags" /* 692 */;
+// Module 1074 (ME)
+import set7 from "set" /* 1089 */;
+import setDefault from "set" /* 1090 */;
+import ApplicationDistributors from "ApplicationDistributors" /* 1092 */;
+import keys2 from "keys" /* 1093 */;
+import set8 from "set" /* 1094 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
+import MessageReferenceTypes from "MessageReferenceTypes" /* 1096 */;
+import SKUFlags from "SKUFlags" /* 1097 */;
 import module_16 from "module_16" /* 16 */;
-import INVITE from "INVITE" /* 674 */;
-import sum from "sum" /* 502 */;
-import getAuthenticationPath from "getAuthenticationPath" /* 504 */;
-import int2hslRaw from "int2hslRaw" /* 685 */;
+import INVITE from "INVITE" /* 1075 */;
+import sum from "sum" /* 1085 */;
+import getAuthenticationPath from "getAuthenticationPath" /* 1083 */;
+import int2hslRaw from "int2hslRaw" /* 1091 */;
 import int2hexResult from "module_10070709" /* 10070709 */;
 import powResult from "set" /* 2 */;
 import powResult1 from "set" /* 2 */;
 import powResult2 from "set" /* 2 */;
-import importAllResult from "fromString" /* 503 */;
+import importAllResult from "fromString" /* 1086 */;
 import set from "set" /* 2 */;
 
 const ME = INVITE.ME;
@@ -1216,6 +1216,7 @@ obj = {
     return "/entitlements/partner-promotions/" + arg0;
   },
   USER_GIFT_CODE_CREATE: "/users/@me/entitlements/gift-codes",
+  USER_GIFT_CODE_DELIVERIES: "/users/@me/gift-code-deliveries",
   USER_GIFT_CODE_REVOKE(closure_1_0) {
     return "/users/@me/entitlements/gift-codes/" + closure_1_0;
   },
@@ -2465,7 +2466,7 @@ export const GuildSettingsSections = { LANDING: "LANDING", OVERVIEW: "OVERVIEW",
 export const GuildSettingsSubsections = { DISPLAY: "DISPLAY", INVITE: "INVITE", DEFAULT_NOTIFICATIONS: "DEFAULT_NOTIFICATIONS", ROLE_SUBSCRIPTION_TIERS: "ROLE_SUBSCRIPTION_TIERS", ROLE_SUBSCRIPTION_EMOJI: "ROLE_SUBSCRIPTION_EMOJI", ROLE_SUBSCRIPTION_TIER_TEMPLATE: "ROLE_SUBSCRIPTION_TIER_TEMPLATE", AUTOMOD_MENTION_SPAM: "AUTOMOD_MENTION_SPAM", SERVER_GUIDE: "SERVER_GUIDE", SAFETY_OVERVIEW: "SAFETY_OVERVIEW", SAFETY_AUTOMOD: "SAFETY_AUTOMOD", SAFETY_DM_AND_SPAM_PROTECTION: "SAFETY_DM_AND_SPAM_PROTECTION", SAFETY_CAPTCHA_AND_RAID_PROTECTION: "SAFETY_CAPTCHA_AND_RAID_PROTECTION", SAFETY_PERMISSIONS: "SAFETY_PERMISSIONS", ACCESS_DISCOVERABLE: "ACCESS_DISCOVERABLE", PROFILE_VISIBILITY: "PROFILE_VISIBILITY", BOOST_PERKS_VANITY_URL: "BOOST_PERKS_VANITY_URL" };
 export const ChannelSettingsSections = { OVERVIEW: "OVERVIEW", PERMISSIONS: "PERMISSIONS", INSTANT_INVITES: "INSTANT_INVITES", INTEGRATIONS: "INTEGRATIONS", DELETE: "DELETE", DEFAULT_FORUM_LAYOUT: "DEFAULT_FORUM_LAYOUT", NOTIFICATIONS: "NOTIFICATIONS", PINNED_MESSAGES: "PINNED_MESSAGES", INSTANT_INVITES_MANAGEMENT: "INSTANT_INVITES_MANAGEMENT", PINNED_CHAT: "PINNED_CHAT", NEW_PERMISSION: "NEW_PERMISSION", PERMISSION_OVERRIDES: "PERMISSION_OVERRIDES", CHANGE_CATEGORY: "CHANGE_CATEGORY", WEBHOOKS: "WEBHOOKS", EDIT_LINKED_LOBBY: "EDIT_LINKED_LOBBY", CHANNELS_FOLLOWED: "CHANNELS_FOLLOWED", EDIT_WEBHOOK: "EDIT_WEBHOOK", CHANGE_RTC_REGION: "CHANGE_RTC_REGION", EDIT_FORUM_TAG: "EDIT_FORUM_TAG" };
 export const ChannelSettingsSubsections = { TOPIC: "TOPIC" };
-export const ChannelSections = { NONE: "NONE", MEMBERS: "MEMBERS", SEARCH: "SEARCH", SIDEBAR_CHAT: "SIDEBAR_CHAT", PROFILE: "PROFILE", SUMMARIES: "SUMMARIES", CONVERSATIONS: "CONVERSATIONS" };
+export const ChannelSections = { NONE: "NONE", MEMBERS: "MEMBERS", SEARCH: "SEARCH", SIDEBAR_CHAT: "SIDEBAR_CHAT", PROFILE: "PROFILE", SUMMARIES: "SUMMARIES", CONVERSATIONS: "CONVERSATIONS", FRIENDS: "FRIENDS" };
 export const FriendsSections = { ADD_FRIEND: "ADD_FRIEND", ALL: "ALL", ONLINE: "ONLINE", PENDING: "PENDING", PENDING_IGNORED: "PENDING_IGNORED", SPAM: "SPAM", SUGGESTIONS: "SUGGESTIONS" };
 export const SearchSections = { SEARCH: "SEARCH", CHANNEL: "CHANNEL" };
 export const DesktopNotificationTypes = { NEVER: "NEVER", ALL: "ALL" };

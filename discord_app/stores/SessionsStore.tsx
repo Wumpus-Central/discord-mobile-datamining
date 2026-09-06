@@ -1,10 +1,10 @@
-// === Module 4496: handleUpdate ===
+// === Module 4578: handleUpdate ===
 
-// Module 4496 (handleUpdate)
+// Module 4578 (handleUpdate)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
 
 function handleUpdate(sessions) {
   closure_4 = {};

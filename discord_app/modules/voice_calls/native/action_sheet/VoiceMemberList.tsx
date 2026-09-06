@@ -1,26 +1,26 @@
-// === Module 13676: ItemSeparator ===
+// === Module 13784: ItemSeparator ===
 
-// Module 13676 (ItemSeparator)
-import Text from "Text" /* 4474 */;
-import Form from "Form" /* 8376 */;
-import registerAssetDefault from "registerAsset" /* 10140 */;
-import _modDef13672 from "module_13672" /* 13672 */;
+// Module 13784 (ItemSeparator)
+import Text from "Text" /* 4556 */;
+import Form from "Form" /* 8593 */;
+import registerAssetDefault from "registerAsset" /* 10031 */;
+import _modDef13780 from "module_13780" /* 13780 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "participantFromServer" /* 1385 */;
-import closure_10 from "createdAt" /* 1934 */;
-import closure_11 from "reset" /* 4500 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_13 from "mergeGuildAvatar" /* 1921 */;
-import closure_14 from "getVoiceStatesForGuild" /* 4555 */;
-import ME from "ME" /* 673 */;
-import { FORM_ROW_VERTICAL_PADDING } from "semanticColor" /* 1300 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5632 */;
-import { ThemeTypes } from "sum" /* 502 */;
+import closure_9 from "participantFromServer" /* 1956 */;
+import closure_10 from "createdAt" /* 1385 */;
+import closure_11 from "reset" /* 4582 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_13 from "mergeGuildAvatar" /* 1371 */;
+import closure_14 from "getVoiceStatesForGuild" /* 4584 */;
+import ME from "ME" /* 1074 */;
+import { FORM_ROW_VERTICAL_PADDING } from "semanticColor" /* 1182 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
+import { ThemeTypes } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function ItemSeparator() {
@@ -186,10 +186,10 @@ function VoiceSectionRow(arg0) {
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = ME);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
 let closure_24 = createCacheKey.createStyles({ container: { flex: 1, flexShrink: 1 }, sectionContainer: { paddingTop: 16, paddingHorizontal: 16 }, sectionTitle: { lineHeight: 16 }, voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 }, headerFormDivider: { marginLeft: 0 }, rowFormDivider: { marginHorizontal: 16 } });
-let closure_25 = importAllResult.memo((channel) => callback2(_modDef13672, { channel: channel.channel }));
+let closure_25 = importAllResult.memo((channel) => callback2(_modDef13780, { channel: channel.channel }));
 let closure_26 = importAllResult.memo((channel) => {
   channel = channel.channel;
-  channel(586);
+  channel(504);
   [][0] = channel;
   let tmp7 = null;
   if (!tmp3) {
@@ -199,25 +199,24 @@ let closure_26 = importAllResult.memo((channel) => {
       const items = [callback2(ItemSeparator, {}), ];
       obj = { leading: null, label: null, onPress: null };
       obj = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
-      const intl = tmp4(1233).intl;
-      obj[0] = intl.string(tmp4(1233).t["6Qgrev"]);
+      const intl = tmp4(1114).intl;
+      obj[0] = intl.string(tmp4(1114).t["6Qgrev"]);
       obj[2] = registerAssetDefault;
-      obj[3] = tmp4(13360).CircularIconButton.Sizes.MEDIUM_32;
-      obj[0] = callback2(tmp4(13360).CircularIconButton, obj);
-      const intl2 = tmp4(1233).intl;
-      obj[1] = intl2.string(tmp4(1233).t["6Qgrev"]);
+      obj[3] = tmp4(13466).CircularIconButton.Sizes.MEDIUM_32;
+      obj[0] = callback2(tmp4(13466).CircularIconButton, obj);
+      const intl2 = tmp4(1114).intl;
+      obj[1] = intl2.string(tmp4(1114).t["6Qgrev"]);
       obj[2] = function onPress() {
         if (channel.isPrivate()) {
-          let tmp2Result = tmp2(tmp3[23]);
-          tmp2Result.navigateToNewGroupDM(tmp.id, closure_1_15.CHANNEL_CALL);
+          closure_1_1(closure_1_3[23])(tmp.id, closure_1_15.CHANNEL_CALL);
         } else {
-          tmp2Result = tmp2(tmp3[24]);
-          const obj = { source: null };
+          let obj = channel(closure_1_3[24]);
+          obj = { source: null };
           obj[0] = closure_1_16.VOICE_CHANNEL;
-          const result = tmp2Result.showInstantInviteActionSheet(tmp, obj);
+          const result = obj.showInstantInviteActionSheet(tmp, obj);
         }
       };
-      items[1] = callback2(tmp4(8376).FormRow, obj);
+      items[1] = callback2(tmp4(8593).FormRow, obj);
       obj[0] = items;
       tmp7 = callback3(importAllResult.Fragment, obj);
     }
@@ -265,7 +264,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
     }
     return viewerIds;
   });
-  let obj2 = channel(analyticsLocations[23]);
+  let obj2 = channel(analyticsLocations[36]);
   let obj3 = channel(analyticsLocations[31]);
   const isModalOpen = obj2.useIsModalOpen(obj3.getVoiceChannelKey(channel.id));
   let obj4 = channel(analyticsLocations[18]);
@@ -301,7 +300,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
         if (str == null) {
           str = "";
         }
-        let tmp3Result = tmp3(tmp4[36]);
+        let tmp3Result = tmp3(tmp4[37]);
         [arr10, arr11] = callback(tmp3Result.partition(stateFromStores, (user) => stateFromStoresArray.includes(user.user.id)), 2);
         if (arr10.length > 0) {
           obj = { type: null, title: null, data: null };
@@ -333,10 +332,10 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
       }
       const items6 = [channel.id, analyticsLocations];
       callback = stateFromStoresArray.useCallback((id) => {
-        let obj = flag(analyticsLocations[37]);
+        let obj = flag(analyticsLocations[38]);
         obj.hideActionSheet();
         obj = { userId: id.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations };
-        flag(analyticsLocations[38])(obj);
+        flag(analyticsLocations[39])(obj);
       }, items6);
       const items7 = [channel, flag, callback];
       callback1 = stateFromStoresArray.useCallback((item) => {
@@ -376,13 +375,13 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
         obj4[0] = tmp2.container;
         const obj5 = { channel: null };
         obj5[0] = channel;
-        const items8 = [tmp24(tmp5(tmp4[40]).VoiceChannelHeader, obj5), , ];
+        const items8 = [tmp24(tmp5(tmp4[41]).VoiceChannelHeader, obj5), , ];
         const obj6 = { style: null };
         obj6[0] = tmp2.headerFormDivider;
         items8[1] = tmp24(tmp5(tmp4[19]).FormDivider, obj6);
         const obj7 = { inActionSheet: true, style: null };
         obj7[1] = tmp2.voiceChannelContainer;
-        tmp3Result = tmp3(tmp4[41]);
+        tmp3Result = tmp3(tmp4[42]);
         const merged1 = Object.assign(merged);
         obj7.renderItem = function renderRow(arg0, arg1) {
           if (null == items5[arg0].data[arg1]) {
@@ -437,7 +436,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
         items8[2] = tmp24(tmp3Result, obj7);
         obj4[1] = items8;
         obj3[1] = callback3(items5, obj4);
-        let tmp24Result = tmp24(tmp5(tmp4[39]).ThemeContextProvider, obj3);
+        let tmp24Result = tmp24(tmp5(tmp4[40]).ThemeContextProvider, obj3);
       } else {
         const obj8 = { ref: null, sections: null, renderSectionHeader: null, renderItem: null, keyExtractor: null, ItemSeparatorComponent: null, ListFooterComponent: null, ListHeaderComponent: null, stickySectionHeadersEnabled: false };
         obj8[0] = arg1;

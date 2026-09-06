@@ -1,10 +1,10 @@
-// === Module 15105: route ===
+// === Module 15265: route ===
 
-// Module 15105 (route)
-import initialize from "initialize" /* 586 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import closure_2 from "handleThemeChange" /* 1301 */;
-import createToggle from "createToggle" /* 11292 */;
+// Module 15265 (route)
+import initialize from "initialize" /* 504 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import closure_2 from "handleThemeChange" /* 1183 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {
@@ -23,7 +23,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
   getComponent() {
-    return require(15106) /* ThemeTypes */.default;
+    return require(15266) /* ThemeTypes */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

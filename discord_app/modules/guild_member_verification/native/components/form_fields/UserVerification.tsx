@@ -1,12 +1,12 @@
-// === Module 7697: UserVerification ===
+// === Module 5619: UserVerification ===
 
-// Module 7697 (UserVerification)
+// Module 5619 (UserVerification)
 import noopAll from "noop" /* 19 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
-import Text from "Text" /* 4474 */;
-import BaseIdentityVerificationFieldDefault from "BaseIdentityVerificationField" /* 7698 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
+import Text from "Text" /* 4556 */;
+import BaseIdentityVerificationFieldDefault from "BaseIdentityVerificationField" /* 5620 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -23,8 +23,8 @@ export default function UserVerification(arg0) {
     let tmp5 = platform === MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE;
     if (tmp5) {
       let obj = { passesVerification: null, platform: null };
-      obj[0] = verification[tmp12(undefined, 4302).UserVerificationFieldPlatforms.PHONE];
-      obj[1] = tmp12(4302).UserVerificationFieldPlatforms.PHONE;
+      obj[0] = verification[tmp12(undefined, 4384).UserVerificationFieldPlatforms.PHONE];
+      obj[1] = tmp12(4384).UserVerificationFieldPlatforms.PHONE;
       tmp5 = callback(BaseIdentityVerificationFieldDefault, obj);
       const tmp4 = BaseIdentityVerificationFieldDefault;
     }
@@ -36,11 +36,11 @@ export default function UserVerification(arg0) {
     obj = { style: null, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
     obj[0] = tmp.emailPhoneNote;
     if (platform === MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE) {
-      const intl2 = tmp12(1233).intl;
-      let stringResult = intl2.string(tmp12(1233).t["jMh+TY"]);
+      const intl2 = tmp12(1114).intl;
+      let stringResult = intl2.string(tmp12(1114).t["jMh+TY"]);
     } else {
-      const intl = tmp12(1233).intl;
-      stringResult = intl.string(tmp12(1233).t.Vgv9ip);
+      const intl = tmp12(1114).intl;
+      stringResult = intl.string(tmp12(1114).t.Vgv9ip);
     }
     obj1 = { children: null };
     obj[3] = stringResult;

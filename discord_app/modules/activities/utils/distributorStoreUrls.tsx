@@ -1,6 +1,6 @@
-// === Module 8830: XBOX_DISCORD_OCID ===
+// === Module 8685: XBOX_DISCORD_OCID ===
 
-// Module 8830 (XBOX_DISCORD_OCID)
+// Module 8685 (XBOX_DISCORD_OCID)
 import set from "set" /* 2 */;
 
 const discord7937464 = "discord7937464";

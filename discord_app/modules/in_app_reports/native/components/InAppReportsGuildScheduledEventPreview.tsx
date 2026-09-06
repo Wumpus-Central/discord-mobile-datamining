@@ -1,13 +1,13 @@
-// === Module 13005: GuildScheduledEventPreview ===
+// === Module 9037: GuildScheduledEventPreview ===
 
-// Module 13005 (GuildScheduledEventPreview)
+// Module 9037 (GuildScheduledEventPreview)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6013 */;
+import ThemesDefault from "Themes" /* 576 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -27,7 +27,7 @@ const result = require("set").fileFinishedImporting("modules/in_app_reports/nati
 export default function GuildScheduledEventPreview(event) {
   event = event.event;
   const tmp = callback3();
-  let obj = event(586);
+  let obj = event(504);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(event.guild_id));
   if (null == stateFromStores) {
@@ -35,35 +35,35 @@ export default function GuildScheduledEventPreview(event) {
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const tmp2Result = tmp2(4326);
+    const tmp2Result = tmp2(4409);
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     obj[0] = tmp.title;
-    const intl = tmp2(1233).intl;
-    obj[3] = intl.string(tmp2(1233).t.SDTOL7);
-    const items1 = [callback(tmp2(4474).Text, obj), ];
+    const intl = tmp2(1114).intl;
+    obj[3] = intl.string(tmp2(1114).t.SDTOL7);
+    const items1 = [callback(tmp2(4556).Text, obj), ];
     obj1 = { style: null, children: null };
     const items2 = [tmp.itemContainer, ];
     const obj2 = { borderColor: null };
-    obj2[0] = tmp2(4326).hexWithOpacity(tmp.borderColor.color, 0.08);
+    obj2[0] = tmp2(4409).hexWithOpacity(tmp.borderColor.color, 0.08);
     items2[1] = obj2;
     obj1[0] = items2;
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.guildInfo;
     const obj4 = { guild: null, size: null, selected: false };
     obj4[0] = stateFromStores;
-    const hexWithOpacityResult = tmp2(4326).hexWithOpacity(tmp.borderColor.color, 0.08);
-    obj4[1] = tmp2(6013).GuildIconSizes.XXSMALL;
+    const hexWithOpacityResult = tmp2(4409).hexWithOpacity(tmp.borderColor.color, 0.08);
+    obj4[1] = tmp2(5584).GuildIconSizes.XXSMALL;
     const items3 = [callback(GuildIconSizesDefault, obj4), ];
     const obj5 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj5[0] = tmp.guildName;
     obj5[3] = stateFromStores.name;
-    items3[1] = callback(tmp2(4474).Text, obj5);
+    items3[1] = callback(tmp2(4556).Text, obj5);
     obj3[1] = items3;
     const items4 = [callback2(View, obj3), ];
     const obj6 = { style: null, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     obj6[0] = tmp.eventName;
     obj6[3] = event.name;
-    items4[1] = callback(tmp2(4474).Text, obj6);
+    items4[1] = callback(tmp2(4556).Text, obj6);
     obj1[1] = items4;
     items1[1] = callback2(View, obj1);
     obj[1] = items1;

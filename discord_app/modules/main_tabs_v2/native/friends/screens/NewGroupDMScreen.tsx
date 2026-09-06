@@ -1,19 +1,19 @@
-// === Module 16600: handleOneRecipientInDM ===
+// === Module 16765: handleOneRecipientInDM ===
 
-// Module 16600 (handleOneRecipientInDM)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 16765 (handleOneRecipientInDM)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import closure_9 from "performQuery" /* 13646 */;
-import closure_10 from "createRTCConnection" /* 4554 */;
-import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import { UserRowModes } from "UserRowModes" /* 10857 */;
-import ME from "ME" /* 673 */;
+import closure_8 from "ensureGuildLoaded" /* 1957 */;
+import closure_9 from "performQuery" /* 13754 */;
+import closure_10 from "createRTCConnection" /* 4583 */;
+import closure_11 from "mergeGuildAvatar" /* 1371 */;
+import { UserRowModes } from "UserRowModes" /* 10860 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function handleOneRecipientInDM() {
@@ -124,7 +124,7 @@ function _handleInviteUsers() {
                         return obj2;
                       }
                     }
-                    const obj13 = arr(4491);
+                    const obj13 = arr(4573);
                     c5 = 2;
                     c6 = 1;
                     let obj3 = { value: null, done: false };
@@ -135,7 +135,7 @@ function _handleInviteUsers() {
                 if (null != lib) {
                   if (store.getChannelId() === lib.id) {
                     if (lib.isDM()) {
-                      let obj10 = lib(4728);
+                      let obj10 = lib(4767);
                       obj10.showGuardCallAlert(callback(function*() {
                         if (dependencyMap === 2) {
                           dependencyMap = 3;
@@ -171,7 +171,7 @@ function _handleInviteUsers() {
                                   obj1[0] = closure_1_20(tmp33, dependencyMap);
                                   return obj1;
                                 } else {
-                                  let obj5 = v0(4491);
+                                  let obj5 = v0(4573);
                                   v0 = 1;
                                   dependencyMap = 1;
                                   let obj2 = { value: null, done: false };
@@ -209,19 +209,19 @@ function _handleInviteUsers() {
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                const tmp8 = v0(9897);
+                                const tmp8 = v0(9182);
                                 const call = tmp8.call;
                                 if (typeof call === "unknown") {
                                   tmp8(false, true);
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(12701)(closure_3);
+                                v0(9536)(closure_3);
                                 dependencyMap = 3;
                                 tmp9 = closure_3;
                               }
                               closure_3 = arg1;
-                              obj2 = closure_1_0(4728);
+                              obj2 = closure_1_0(4767);
                               v0 = 3;
                               dependencyMap = 1;
                               obj5 = { value: null, done: false };
@@ -235,7 +235,7 @@ function _handleInviteUsers() {
                         }
                       }));
                     } else if (lib.isGroupDM()) {
-                      let obj8 = arr(4491);
+                      let obj8 = arr(4573);
                       c5 = 5;
                       c6 = 1;
                       let obj4 = { value: null, done: false };
@@ -244,7 +244,7 @@ function _handleInviteUsers() {
                     }
                   }
                 }
-                let obj5 = arr(4491);
+                let obj5 = arr(4573);
                 obj5 = { recipientIds: null, location: "New Group DM", onBeforeTransition: null };
                 obj5[0] = arr;
                 obj5[2] = dependencyMap;
@@ -293,7 +293,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   closure_3 = arg1;
-                  obj = arr(9897);
+                  obj = arr(9182);
                   obj.ring(closure_3, arr, "gdm_invite");
                 }
                 c6 = 3;
@@ -303,9 +303,9 @@ function _handleInviteUsers() {
               }
               closure_3 = arg1;
             }
-            arr(4445).hideActionSheet(closure_16);
+            arr(4527).hideActionSheet(closure_16);
             c6 = 3;
-            const obj12 = arr(4445);
+            const obj12 = arr(4527);
           }
         } catch (tmp77) {
           c6 = tmp;
@@ -355,32 +355,53 @@ export default function NewGroupDMScreen(navigation) {
   let stateFromStores1;
   let first;
   closure_7 = undefined;
-  let first1;
-  closure_9 = undefined;
-  let first2;
-  let memo;
-  UserRowModes = undefined;
-  closure_13 = undefined;
+  closure_8 = undefined;
   callback = undefined;
-  c15 = undefined;
-  c16 = undefined;
+  let first1;
+  closure_11 = undefined;
+  let first2;
+  c13 = undefined;
+  closure_14 = undefined;
+  closure_15 = undefined;
+  let memo;
+  let callback3;
+  closure_18 = undefined;
+  let callback4;
+  c20 = undefined;
+  closure_21 = undefined;
+  let enabled;
+  let callback1;
+  c24 = undefined;
+  c25 = undefined;
+  callback3 = undefined;
   const tmp = callback4();
   callback = tmp;
   let obj = _require(locationPage[18]);
-  let items = [first1];
-  stateFromStores = obj.useStateFromStores(items, () => first1.getChannel(closure_1));
+  let items = [closure_8];
+  stateFromStores = obj.useStateFromStores(items, () => ref.getChannel(closure_1));
   let obj2 = _require(locationPage[18]);
-  const items1 = [memo];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => memo.getCurrentUser());
+  const items1 = [closure_11];
+  stateFromStores1 = obj2.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let obj3 = stateFromStores1;
   let tmp6 = callback(stateFromStores1.useState([]), 2);
   first = tmp6[0];
   closure_7 = tmp6[1];
-  const tmp7 = callback(stateFromStores1.useState(false), 2);
-  first1 = tmp7[0];
-  closure_9 = tmp7[1];
-  const tmp9 = callback(stateFromStores1.useState(""), 2);
-  first2 = tmp9[0];
+  closure_8 = stateFromStores1.useRef([]);
+  callback = stateFromStores1.useCallback((current) => {
+    closure_8.current = current;
+    callback(current);
+  }, []);
+  const tmp9 = callback(stateFromStores1.useState(false), 2);
+  first1 = tmp9[0];
+  closure_11 = tmp9[1];
+  const tmp11 = callback(stateFromStores1.useState(""), 2);
+  first2 = tmp11[0];
+  [tmp15, tmp16] = callback(stateFromStores1.useState(importDefault(locationPage[12]).space.PX_12), 2);
+  let tmp14 = callback(stateFromStores1.useState(importDefault(locationPage[12]).space.PX_12), 2);
+  let tmp5 = callback;
+  [tmp18, c13] = callback(stateFromStores1.useState(false), 2);
+  closure_14 = stateFromStores1.useRef(false);
+  closure_15 = stateFromStores1.useRef({ offsetY: 0 });
   const items2 = [stateFromStores];
   memo = stateFromStores1.useMemo(() => {
     let recipients;
@@ -392,27 +413,38 @@ export default function NewGroupDMScreen(navigation) {
     }
     return recipients;
   }, items2);
-  let num = memo.length;
-  if (num == null) {
-    num = 0;
+  const items3 = [...first];
+  const tmp17 = callback(stateFromStores1.useState(false), 2);
+  let sum = new Set(items3).size + 1;
+  callback3 = sum;
+  const tmp22 = importDefault(locationPage[19])({ useNitroCapExperiment: true });
+  closure_18 = tmp22;
+  callback4 = tmp23;
+  let obj4 = importDefault(locationPage[20]);
+  const config = obj4.useConfig({ location: "NewGroupDMScreen" });
+  const set = new Set(items3);
+  let result = _require(locationPage[21]).shouldUseGroupDMParticipantLimitUI(config.enabled, tmp22);
+  c20 = result;
+  closure_21 = tmp26;
+  _require(locationPage[21]);
+  enabled = config.enabled;
+  if (enabled) {
+    enabled = tmp2(tmp3[21]).isGroupDMNitroUpsellAudience(tmp28);
+    const tmp2Result = tmp2(tmp3[21]);
   }
-  const sum = first.length + (num + 1);
-  UserRowModes = sum;
-  const tmp13 = sum > importDefault(locationPage[19])();
-  closure_13 = tmp13;
-  const items3 = [locationPage];
+  const items4 = [locationPage];
   const effect = obj3.useEffect(() => {
-    let obj = closure_1_1(locationPage[20]);
-    obj = { type: _undefined.DM_INVITE, location: obj };
+    let obj = closure_1_1(locationPage[22]);
+    obj = { type: closure_15.DM_INVITE, location: obj };
     obj = { page: locationPage };
-    obj.track(callback.OPEN_POPOUT, obj);
-  }, items3);
-  const items4 = [stateFromStores, navigation, memo, first, first2];
-  callback = obj3.useCallback(stateFromStores(function*() {
+    obj.track(ref2.OPEN_POPOUT, obj);
+  }, items4);
+  const items5 = [stateFromStores, navigation, memo, first, first2];
+  callback1 = obj3.useCallback(stateFromStores(function*() {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
@@ -435,14 +467,14 @@ export default function NewGroupDMScreen(navigation) {
             obj[0] = arg1;
             return obj;
           } else {
-            closure_1 = tmp3;
-            closure_0 = tmp7;
+            closure_1 = tmp4;
+            closure_0 = tmp8;
             closure_0 = undefined;
-            closure_1_9(true);
-            c3 = 1;
+            closure_1_11(true);
+            c3 = 2;
             const items = [];
-            HermesBuiltin.arraySpread(closure_1_11, HermesBuiltin.arraySpread(closure_1_6, 0));
-            c4 = 2;
+            HermesBuiltin.arraySpread(closure_1_16, HermesBuiltin.arraySpread(closure_1_6, 0));
+            c4 = 3;
             c5 = 1;
             obj1 = { value: null, done: false };
             obj1[0] = (function handleInviteUsers(c4, items, arg2) {
@@ -460,97 +492,107 @@ export default function NewGroupDMScreen(navigation) {
             });
             return obj1;
           }
-        } else if (1 === tmp7) {
+        } else if (1 === tmp8) {
           c3 = 0;
-          let obj4 = closure_1_1(closure_1_2[21]);
-          const obj2 = { key: "GROUP_DM_ADD_ERROR", content: null };
-          const intl = closure_1_0(closure_1_2[22]).intl;
-          obj2[1] = intl.string(closure_1_0(closure_1_2[22]).t["N/9OFy"]);
-          obj4.open(obj2);
           callback(false);
-          c5 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = undefined;
-          return obj3;
+          throw closure_2;
         } else {
-          if (2 === tmp7) {
-            if (arg0 === 1) {
+          if (2 === tmp8) {
+            c3 = 1;
+            let obj4 = closure_1_1(closure_1_2[23]);
+            const obj2 = { key: "GROUP_DM_ADD_ERROR", content: null };
+            const intl = closure_1_0(closure_1_2[24]).intl;
+            obj2[1] = intl.string(closure_1_0(closure_1_2[24]).t["N/9OFy"]);
+            obj4.open(obj2);
+          } else {
+            if (3 === tmp8) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c3 = 0;
+                callback(false);
+                c5 = 3;
+                const obj3 = { value: null, done: true };
+                obj3[0] = arg1;
+                return obj3;
+              } else {
+                closure_0 = arg1;
+                let tmp14 = null == c4;
+                if (tmp14) {
+                  tmp14 = null != closure_0;
+                }
+                if (tmp14) {
+                  tmp14 = "" !== closure_12;
+                }
+                obj1 = closure_1_1(closure_1_2[13]);
+                c4 = 4;
+                c5 = 1;
+                obj4 = { value: null, done: false };
+                obj4[0] = obj1.setName(closure_0, closure_12);
+                return obj4;
+              }
+            } else if (arg0 === 1) {
               c5 = 3;
               throw arg1;
             } else if (arg0 === 2) {
               c3 = 0;
+              callback(false);
               c5 = 3;
-              obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              closure_0 = arg1;
-              c3 = 0;
-              let tmp10 = null == c4;
-              if (tmp10) {
-                tmp10 = null != closure_0;
-              }
-              if (tmp10) {
-                tmp10 = "" !== closure_10;
-              }
-              if (tmp10) {
-                obj1 = closure_1_1(closure_1_2[13]);
-                c4 = 3;
-                c5 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = obj1.setName(closure_0, closure_10);
-                return obj5;
-              }
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c3 = 1;
           }
+          c3 = 0;
+          callback(false);
           c5 = 3;
-          return { value: "HermesInternal", done: null };
         }
-      } catch (tmp37) {
-        closure_2 = tmp37;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp37;
+      } catch (tmp50) {
+        closure_2 = tmp50;
+        if (tmp5 === c3) {
+          c5 = tmp3;
+          throw tmp50;
+        } else if (tmp2 === tmp52) {
+          c4 = tmp2;
         } else {
           c4 = tmp;
         }
       }
     }
-  }), items4);
-  const items5 = [stateFromStores, first1, navigation, sum, tmp13, memo, first, callback, tmp];
+  }), items5);
+  const items6 = [stateFromStores, first1, navigation, sum, tmp22, sum > tmp22, memo, first, result, sum >= tmp22, callback1, tmp];
   const layoutEffect = obj3.useLayoutEffect(() => {
     let obj = stateFromStores;
     let isGroupDMResult;
     if (stateFromStores != null) {
       isGroupDMResult = obj.isGroupDM();
     }
-    let intl = options(locationPage[22]).intl;
+    let intl = options(locationPage[24]).intl;
     let string = intl.string;
-    let t = options(locationPage[22]).t;
+    let t = options(locationPage[24]).t;
     if (isGroupDMResult) {
       let stringResult = string(t["LR+Ptf"]);
     } else {
       stringResult = string(t["3hF1W4"]);
     }
     options = stringResult;
-    if (obj != null) {
-      obj.isGroupDM();
+    const intl2 = options(locationPage[24]).intl;
+    obj = { numMembers: c17, maxMemberLimit: closure_18 };
+    let formatToPlainStringResult = intl2.formatToPlainString(options(locationPage[24]).t["9EQix0"], obj);
+    if (!c20) {
+      const intl3 = options(locationPage[24]).intl;
+      obj = { numMembers: null, maxMemberLimit: null };
+      obj[0] = c17;
+      obj[1] = closure_18;
+      formatToPlainStringResult = intl3.formatToPlainString(options(locationPage[24]).t.YUhnoy, obj);
     }
-    const intl2 = options(locationPage[22]).intl;
-    obj = { numMembers: c12, maxMemberLimit: closure_1_1(locationPage[19])() };
-    const formatToPlainStringResult = intl2.formatToPlainString(options(locationPage[22]).t.YUhnoy, obj);
     closure_1 = formatToPlainStringResult;
-    obj = {
+    closure_2 = tmp6 ? closure_21 : closure_19;
+    options.setOptions({
       title: "" + stringResult + " (" + formatToPlainStringResult + ")",
-      headerTitle(arg0) {
+      headerTitle: c20 ? (() => callback(closure_2_1(locationPage[25]), { title: closure_0, memberCount: closure_1_17, recipientLimit: closure_1_18 })) : ((arg0) => {
         if (arg0 == null) {
           HermesBuiltin.throwTypeError();
         } else {
@@ -560,38 +602,38 @@ export default function NewGroupDMScreen(navigation) {
           obj.title = stringResult;
           obj.subtitle = closure_1;
           let str = "mobile-text-heading-primary";
-          if (closure_1_13) {
+          if (closure_2) {
             str = "text-feedback-critical";
           }
           obj.color = str;
-          return closure_2_17(stringResult(locationPage[23]).GenericHeaderTitle, obj);
+          return c17(stringResult(locationPage[26]).GenericHeaderTitle, obj);
         }
-      },
+      }),
       headerRight(arg0) {
-        if (closure_1_8) {
+        if (closure_1_10) {
           let obj = { color: null, size: "small" };
           obj[0] = closure_1_3.button.color;
-          let result = closure_2_17(first, obj);
+          let result = callback(first, obj);
         } else {
           obj = closure_1_4;
           let isGroupDMResult;
           if (closure_1_4 != null) {
             isGroupDMResult = obj.isGroupDM();
           }
-          const getRenderHeaderTextButton = stringResult(locationPage[23]).getRenderHeaderTextButton;
-          const intl = stringResult(locationPage[22]).intl;
+          const getRenderHeaderTextButton = stringResult(locationPage[26]).getRenderHeaderTextButton;
+          const intl = stringResult(locationPage[24]).intl;
           const string = intl.string;
-          const t = stringResult(locationPage[22]).t;
+          const t = stringResult(locationPage[24]).t;
           if (isGroupDMResult) {
             stringResult = string(t.OYkgVk);
             obj = {};
             const renderHeaderTextButton = getRenderHeaderTextButton(stringResult, stateFromStores(function*() {
-              yield closure_1_14();
+              yield closure_1_23();
               return arg1;
             }));
             const merged = Object.assign(arg0);
-            let tmp25 = closure_1_13;
-            if (!closure_1_13) {
+            let tmp25 = closure_1_19;
+            if (!closure_1_19) {
               let isGroupDMResult1;
               if (obj != null) {
                 isGroupDMResult1 = obj.isGroupDM();
@@ -606,40 +648,87 @@ export default function NewGroupDMScreen(navigation) {
           } else {
             obj1 = {};
             const renderHeaderTextButton1 = getRenderHeaderTextButton(string(t.CumH4u), stateFromStores(function*() {
-              yield closure_1_14();
+              yield closure_1_23();
               return arg1;
             }));
             const merged1 = Object.assign(arg0);
-            obj1.disabled = closure_1_13;
+            obj1.disabled = closure_1_19;
             result = renderHeaderTextButton1(obj1);
             const stringResult1 = string(t.CumH4u);
           }
-          const tmp6 = stringResult(locationPage[23]);
+          const tmp6 = stringResult(locationPage[26]);
         }
         return result;
       }
-    };
-    options.setOptions(obj);
-  }, items5);
-  const callback1 = obj3.useCallback((arg0) => {
-    closure_0 = arg0;
-    callback((arr) => {
-      const index = arr.indexOf(id.id);
-      const items = [...arr];
-      if (-1 === index) {
-        items.push(id.id);
-      } else {
-        items.splice(index, 1);
-      }
-      return items;
     });
+  }, items6);
+  const items7 = [memo, tmp22, result, enabled, callback];
+  const callback2 = obj3.useCallback((id) => {
+    const options = id;
+    const current = ref.current;
+    const hasItem = current.includes(id.id);
+    const items = [...current];
+    new Set(items);
+    if (!hasItem) {
+      if (c20) {
+        if (tmp3 >= closure_18) {
+          if (enabled) {
+            closure_1_1(locationPage[27])("NewGroupDMScreen");
+          } else {
+            options(locationPage[28]).showMaxGroupMembers();
+            const obj = options(locationPage[28]);
+          }
+        }
+      }
+    }
+    if (hasItem) {
+      let found = current.filter((arg0) => arg0 !== id.id);
+    } else {
+      found = [];
+      found[HermesBuiltin.arraySpread(current, 0)] = id.id;
+    }
+    callback(found);
+  }, items7);
+  const obj6 = _require(locationPage[21]);
+  const tmp30 = stateFromStores;
+  [c24, c25] = tmp5(obj3.useState(false), 2);
+  const tmp5Result = tmp5(obj3.useState(false), 2);
+  callback3 = obj3.useCallback(() => {
+    ({ contentLength, layoutHeight } = closure_15.current);
+    if (null != contentLength) {
+      if (null != layoutHeight) {
+        const _Math = Math;
+        const _Math2 = Math;
+        const rounded = Math.ceil(layoutHeight);
+        const _Math3 = Math;
+        const sum = rounded + Math.ceil(tmp);
+        const tmp5 = sum >= Math.floor(contentLength);
+        if (ref2.current !== tmp5) {
+          ref2.current = tmp5;
+          _undefined(tmp5);
+        }
+      }
+    }
   }, []);
-  [c15, c16] = callback(obj3.useState(false), 2);
+  const items8 = [callback3];
+  const items9 = [callback3];
+  callback4 = obj3.useCallback((contentLength) => {
+    closure_15.current.contentLength = contentLength;
+    callback3();
+  }, items8);
+  const items10 = [callback3];
+  const callback5 = obj3.useCallback((nativeEvent) => {
+    closure_15.current.layoutHeight = nativeEvent.nativeEvent.layout.height;
+    callback3();
+  }, items9);
   obj = { style: tmp.container, children: null };
   let isGroupDMResult;
-  const tmp15 = stateFromStores;
-  const tmp5 = callback;
-  const tmp5Result = callback(obj3.useState(false), 2);
+  const callback6 = obj3.useCallback((nativeEvent) => {
+    nativeEvent = nativeEvent.nativeEvent;
+    closure_15.current.layoutHeight = nativeEvent.layoutMeasurement.height;
+    closure_15.current.offsetY = nativeEvent.contentOffset.y;
+    callback3();
+  }, items10);
   if (stateFromStores != null) {
     isGroupDMResult = stateFromStores.isGroupDM();
   }
@@ -647,14 +736,14 @@ export default function NewGroupDMScreen(navigation) {
     isGroupDMResult = null != stateFromStores1;
   }
   if (isGroupDMResult) {
-    isGroupDMResult = sum < tmp12(tmp3[19])();
+    isGroupDMResult = !tmp23;
   }
   if (isGroupDMResult) {
     obj = { style: null, children: null };
     obj[0] = tmp.instantInviteView;
     obj1 = { onItemPressed: null };
     _require = undefined;
-    _require = tmp15((arg0) => {
+    _require = tmp30((arg0) => {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
@@ -688,11 +777,11 @@ export default function NewGroupDMScreen(navigation) {
                 closure_2 = tmp5;
                 closure_1 = tmp2;
                 closure_1 = undefined;
-                if (closure_1_15) {
+                if (closure_1_24) {
                   c4 = 3;
                 } else {
-                  closure_1_16(true);
-                  obj1 = closure_2_1(locationPage[26]);
+                  closure_1_25(true);
+                  obj1 = closure_2_1(locationPage[31]);
                   c3 = 1;
                   c4 = 1;
                   obj1 = { value: null, done: false };
@@ -709,15 +798,15 @@ export default function NewGroupDMScreen(navigation) {
                 const obj2 = { channel: null, code: null, message: null, location: null };
                 obj2[0] = c4;
                 obj2[1] = closure_1;
-                const intl = callback(locationPage[22]).intl;
+                const intl = callback(locationPage[24]).intl;
                 const obj3 = { username: null, link: null };
                 obj3[0] = closure_1_5.username;
-                obj3[1] = closure_2_1(locationPage[27])(closure_1);
-                obj2[2] = intl.formatToPlainString(callback(locationPage[22]).t["+zWvOQ"], obj3);
+                obj3[1] = closure_2_1(locationPage[32])(closure_1);
+                obj2[2] = intl.formatToPlainString(callback(locationPage[24]).t["+zWvOQ"], obj3);
                 obj2[3] = constants.GROUP_DM;
                 callback(obj2);
               }
-              closure_1_16(false);
+              closure_1_25(false);
             }
             c4 = 3;
             obj = { value: null, done: true };
@@ -740,28 +829,28 @@ export default function NewGroupDMScreen(navigation) {
       }
       return applyArgumentsResult;
     };
-    obj[1] = callback3(tmp12(tmp3[25]), obj1);
-    isGroupDMResult = callback3(tmp22, obj);
-    const tmp12Result = tmp12(tmp3[25]);
+    obj[1] = callback3(tmp13(tmp3[30]), obj1);
+    isGroupDMResult = callback3(tmp41, obj);
+    const tmp13Result = tmp13(tmp3[30]);
   }
-  const items6 = [isGroupDMResult, , ];
-  let tmp26 = null;
+  const items11 = [isGroupDMResult, , , ];
+  let tmp45 = null;
   if (flag) {
     obj2 = { style: null, children: null };
     obj2[0] = tmp.nameInputContainer;
     obj3 = { style: null, value: null, onChangeText: null, placeholder: null };
     obj3[0] = tmp.nameInput;
     obj3[1] = first2;
-    obj3[2] = tmp9[1];
-    let intl = tmp2(tmp3[22]).intl;
-    obj3[3] = intl.string(tmp2(tmp3[22]).t.KSVhrX);
-    obj2[1] = callback3(tmp2(tmp3[28]).TextInput, obj3);
-    tmp26 = callback3(tmp22, obj2);
+    obj3[2] = tmp11[1];
+    let intl = tmp2(tmp3[24]).intl;
+    obj3[3] = intl.string(tmp2(tmp3[24]).t.KSVhrX);
+    obj2[1] = callback3(tmp2(tmp3[33]).TextInput, obj3);
+    tmp45 = callback3(tmp41, obj2);
   }
-  items6[1] = tmp26;
-  const tmp20 = importDefault(locationPage[24])();
-  const tmp21 = closure_18;
-  items6[2] = callback3(importDefault(locationPage[29]), { rowMode: UserRowModes.TOGGLE, onSelectUser: callback1, disabledUserIds: memo, selectedUserIds: first, withAffinitySuggestions: true, withAlphabeticalSections: false, disableGradient: true, disableStickySections: importDefault(locationPage[24])(), focusOnAdd: false });
-  obj[1] = items6;
-  return tmp21(closure_7, obj);
+  items11[1] = tmp45;
+  obj4 = { rowMode: first2.TOGGLE, onSelectUser: callback2, disabledUserIds: memo, selectedUserIds: first, focusOnAdd: false, withAffinitySuggestions: true, withAlphabeticalSections: false, insetEnd: tmp15, onContentLengthChange: callback4, onLayout: callback5, onScroll: callback6, disableGradient: true, disableStickySections: importDefault(locationPage[29])() };
+  items11[2] = callback3(importDefault(locationPage[34]), obj4);
+  items11[3] = callback3(importDefault(locationPage[35]), { location: "NewGroupDMScreen", memberCount: sum, recipientLimit: tmp22, floating: true, hideFloatingGradient: tmp18, onFloatingListInsetChange: tmp16 });
+  obj[1] = items11;
+  return closure_18(closure_7, obj);
 };

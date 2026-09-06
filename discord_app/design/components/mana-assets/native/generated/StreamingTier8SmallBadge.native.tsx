@@ -1,10 +1,10 @@
-// === Module 7085: StreamingTier8SmallBadge ===
+// === Module 6523: StreamingTier8SmallBadge ===
 
-// Module 7085 (StreamingTier8SmallBadge)
+// Module 6523 (StreamingTier8SmallBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import vanityUrlDefault from "vanityUrl" /* 7086 */;
+import preloadDefault from "preload" /* 5587 */;
+import vanityUrlDefault from "vanityUrl" /* 6524 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/StreamingTier8SmallBadge.native.tsx");

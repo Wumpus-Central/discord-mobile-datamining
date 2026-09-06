@@ -1,10 +1,10 @@
-// === Module 6965: SafetyShieldIllocon ===
+// === Module 6401: SafetyShieldIllocon ===
 
-// Module 6965 (SafetyShieldIllocon)
+// Module 6401 (SafetyShieldIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6966 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6402 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SafetyShieldIllocon.native.tsx");

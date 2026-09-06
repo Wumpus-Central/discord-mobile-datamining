@@ -1,12 +1,12 @@
-// === Module 4130: markAllUserIdListsStale ===
+// === Module 4209: markAllUserIdListsStale ===
 
-// Module 4130 (markAllUserIdListsStale)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 4209 (markAllUserIdListsStale)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "hasFlag" /* 4131 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { RelationshipTypes } from "ME" /* 673 */;
+import closure_3 from "hasFlag" /* 4210 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import { RelationshipTypes } from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 function markAllUserIdListsStale() {

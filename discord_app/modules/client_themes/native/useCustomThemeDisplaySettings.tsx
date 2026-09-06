@@ -1,10 +1,10 @@
-// === Module 4412: useCustomThemeDisplaySettings ===
+// === Module 4494: useCustomThemeDisplaySettings ===
 
-// Module 4412 (useCustomThemeDisplaySettings)
-import initialize from "initialize" /* 586 */;
-import getThemeForColor from "getThemeForColor" /* 1346 */;
+// Module 4494 (useCustomThemeDisplaySettings)
+import initialize from "initialize" /* 504 */;
+import getThemeForColor from "getThemeForColor" /* 1229 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "reset" /* 1345 */;
+import closure_3 from "reset" /* 1228 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");

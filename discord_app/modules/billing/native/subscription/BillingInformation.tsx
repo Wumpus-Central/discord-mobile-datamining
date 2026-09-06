@@ -1,8 +1,8 @@
-// === Module 13242: getBillingInformationStringNative ===
+// === Module 13347: getBillingInformationStringNative ===
 
-// Module 13242 (getBillingInformationStringNative)
+// Module 13347 (getBillingInformationStringNative)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { SubscriptionStatusTypes } from "ME" /* 673 */;
+import { SubscriptionStatusTypes } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
@@ -16,14 +16,14 @@ export const getBillingInformationStringNative = function getBillingInformationS
     flag = false;
   }
   let _require;
-  let obj = _require(4139);
+  let obj = _require(4218);
   let billingInformationString = obj.getBillingInformationString(subscription, first, tmp, flag, fractionalPremiumInfo);
-  let tmp5 = _require(1235).isIOS() && subscription.isPurchasedViaApple;
+  let tmp5 = _require(1116).isIOS() && subscription.isPurchasedViaApple;
   if (tmp5) {
     tmp5 = subscription.status === SubscriptionStatusTypes.ACTIVE;
   }
   if (tmp5) {
-    const intl = tmp2(1233).intl;
+    const intl = tmp2(1114).intl;
     obj = { renewalDate: null, onSubscriptionManagementClick: null };
     obj[0] = first.subscriptionPeriodStart;
     _require = callback(function*() {
@@ -88,7 +88,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
       }
       return applyArgumentsResult;
     };
-    billingInformationString = intl.format(tmp2(1233).t.gknRR3, obj);
+    billingInformationString = intl.format(tmp2(1114).t.gknRR3, obj);
   }
   return billingInformationString;
 };

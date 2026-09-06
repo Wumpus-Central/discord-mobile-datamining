@@ -1,7 +1,7 @@
-// === Module 10356: useGetThreadDraftSettings ===
+// === Module 10253: useGetThreadDraftSettings ===
 
-// Module 10356 (useGetThreadDraftSettings)
-import closure_3 from "handleChanged" /* 4855 */;
+// Module 10253 (useGetThreadDraftSettings)
+import closure_3 from "handleChanged" /* 4901 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/threads/useGetThrea
 export default function useGetThreadDraftSettings(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
       let threadSettings = closure_1_3.getThreadSettings(tmp);
@@ -26,7 +26,7 @@ export default function useGetThreadDraftSettings(arg0) {
 export const useHasThreadDraft = function useHasThreadDraft(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let threadSettings = closure_1_3.getThreadSettings(tmp);

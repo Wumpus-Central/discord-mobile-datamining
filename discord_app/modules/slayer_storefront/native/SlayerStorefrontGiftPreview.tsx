@@ -1,15 +1,15 @@
-// === Module 8519: WarningBox ===
+// === Module 11447: WarningBox ===
 
-// Module 8519 (WarningBox)
+// Module 11447 (WarningBox)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8520 */;
-import InfoBox from "InfoBox" /* 8522 */;
-import InfoBoxDefault from "InfoBox" /* 8522 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8825 */;
+import InfoBox from "InfoBox" /* 9459 */;
+import InfoBoxDefault from "InfoBox" /* 9459 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function WarningBox(application) {
@@ -26,7 +26,7 @@ function WarningBox(application) {
     obj[1] = tmp.warningBox;
     const intl = getSystemLocale.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3370).BMMo2K;
+      BMMo2K = name(3417).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {
@@ -45,10 +45,10 @@ function WarningBox(application) {
         name1 = application.name;
       }
       obj[1] = name1;
-      obj[2] = intl.formatToPlainString(tmp6(1233).t["EgCl+Q"], obj);
+      obj[2] = intl.formatToPlainString(tmp6(1114).t["EgCl+Q"], obj);
       tmp7 = obj;
     } else {
-      obj[2] = intl.format(tmp6(1233).t["3T0cpx"], {});
+      obj[2] = intl.format(tmp6(1114).t["3T0cpx"], {});
       tmp7 = obj;
     }
     closure_4(InfoBoxDefault, tmp7);

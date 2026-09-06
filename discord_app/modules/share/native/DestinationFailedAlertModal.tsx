@@ -1,23 +1,23 @@
-// === Module 11514: FailedGroupDMRow ===
+// === Module 11703: FailedGroupDMRow ===
 
-// Module 11514 (FailedGroupDMRow)
+// Module 11703 (FailedGroupDMRow)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import Text from "Text" /* 4474 */;
-import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4864 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10873 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import Text from "Text" /* 4556 */;
+import computeChannelNameDefault from "computeChannelName" /* 4713 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10910 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "sortActivity" /* 4569 */;
-import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import { StatusTypes } from "sum" /* 502 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "sortActivity" /* 4600 */;
+import closure_7 from "markAllUserIdListsStale" /* 4209 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import { StatusTypes } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function FailedGroupDMRow(channel) {
@@ -37,10 +37,10 @@ function FailedGroupDMRow(channel) {
 function FailedUserRow(user) {
   user = user.user;
   const tmp = callback3();
-  let obj = user(586);
+  let obj = user(504);
   const items = [closure_7];
   let stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getNickname(user.id));
-  obj1 = user(586);
+  obj1 = user(504);
   const items1 = [closure_6];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ isMobileOnline: closure_1_6.isMobileOnline(user.id), status: closure_1_6.getStatus(user.id), isVROnline: closure_1_6.isVROnline(user.id) }));
   const status = stateFromStoresObject.status;
@@ -48,7 +48,7 @@ function FailedUserRow(user) {
   if (null != user) {
     obj = { style: null, children: null };
     obj[0] = tmp.row;
-    obj = { user: null, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: null, avatarDecoration: null, autoStatusCutout: false };
+    obj = { user: null, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: 195, avatarDecoration: null, autoStatusCutout: null };
     obj[0] = user;
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
@@ -57,9 +57,9 @@ function FailedUserRow(user) {
     obj[2] = tmp13;
     obj[3] = tmp6;
     obj[4] = tmp7;
-    obj[5] = tmp2(1296).AvatarSizes.XSMALL;
+    obj[5] = tmp2(1178).AvatarSizes.XSMALL;
     obj[6] = user.avatarDecoration;
-    const items2 = [closure_10(tmp2(1296).Avatar, obj), ];
+    const items2 = [closure_10(tmp2(1178).Avatar, obj), ];
     obj1 = { style: null, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     obj1[0] = tmp.label;
     if (stateFromStores == null) {
@@ -67,7 +67,7 @@ function FailedUserRow(user) {
       const obj6 = nameFromUserDefault;
     }
     obj1[4] = stateFromStores;
-    items2[1] = closure_10(tmp2(4474).Text, obj1);
+    items2[1] = closure_10(tmp2(4556).Text, obj1);
     obj[1] = items2;
     tmp9Result = closure_11(View, obj);
     const tmp10 = View;
@@ -78,7 +78,7 @@ function FailedUserRow(user) {
 function FailedChannelRow(channel) {
   channel = channel.channel;
   const tmp = callback3();
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let guild_id;
@@ -88,16 +88,16 @@ function FailedChannelRow(channel) {
     return closure_1_5.getGuild(guild_id);
   });
   obj = { style: tmp.row, children: null };
-  obj = { "aria-label": "", guild: stateFromStores, channel, size: channel(10961).GuildIconWithChannelTypeSizes.SMALL_32 };
-  const items1 = [callback(channel(10961).GuildIconWithChannelType, obj), ];
+  obj = { "aria-label": "", guild: stateFromStores, channel, size: channel(10999).GuildIconWithChannelTypeSizes.SMALL_32 };
+  const items1 = [callback(channel(10999).GuildIconWithChannelType, obj), ];
   const tmp3 = computeChannelNameDefault(channel);
-  items1[1] = callback(channel(4474).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: computeChannelNameDefault(channel) });
+  items1[1] = callback(channel(4556).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: computeChannelNameDefault(channel) });
   obj[1] = items1;
   return callback2(View, obj);
 }
 function FailedDestinationRow(destination) {
   destination = destination.destination;
-  let obj = destination(586);
+  let obj = destination(504);
   const items = [closure_4, closure_8];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let channel = null;
@@ -156,20 +156,20 @@ export default function DestinationFailedAlertModal(arg0) {
     obj = { children: null };
     obj1 = { variant: "primary", onPress: null, text: null };
     obj1[1] = onRetry;
-    const intl2 = tmp3(1233).intl;
-    obj1[2] = intl2.string(tmp3(1233).t["5911Lb"]);
-    const items = [tmp2(tmp3(4864).AlertActionButton, obj1, "confirm"), ];
+    const intl2 = tmp3(1114).intl;
+    obj1[2] = intl2.string(tmp3(1114).t["5911Lb"]);
+    const items = [tmp2(tmp3(4910).AlertActionButton, obj1, "confirm"), ];
     const obj2 = { variant: "secondary", text: null };
-    const intl3 = tmp3(1233).intl;
-    obj2[1] = intl3.string(tmp3(1233).t.WAI6xu);
-    items[1] = tmp2(tmp3(4864).AlertActionButton, obj2, "cancel");
+    const intl3 = tmp3(1114).intl;
+    obj2[1] = intl3.string(tmp3(1114).t.WAI6xu);
+    items[1] = tmp2(tmp3(4910).AlertActionButton, obj2, "cancel");
     obj[0] = items;
     let tmp2Result = callback2(closure_12, obj);
   } else {
     const obj3 = { variant: "primary", text: null };
-    const intl = tmp3(1233).intl;
-    obj3[1] = intl.string(tmp3(1233).t.BddRzS);
-    tmp2Result = tmp2(tmp3(4864).AlertActionButton, obj3, "confirm");
+    const intl = tmp3(1114).intl;
+    obj3[1] = intl.string(tmp3(1114).t.BddRzS);
+    tmp2Result = tmp2(tmp3(4910).AlertActionButton, obj3, "confirm");
   }
   obj[3] = callback(getAlertModalItemKey.AlertActions, { children: tmp2Result });
   return callback(getAlertModalItemKey.AlertModal, obj);

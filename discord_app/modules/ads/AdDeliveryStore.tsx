@@ -1,26 +1,27 @@
-// === Module 7455: map ===
+// === Module 7700: map ===
 
-// Module 7455 (map)
-import failsDefault from "fails" /* 581 */;
-import initializeDefault from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import AdPlacement from "AdPlacement" /* 5402 */;
-import result3 from "result" /* 7456 */;
-import AdCreativeType from "AdCreativeType" /* 7457 */;
+// Module 7700 (map)
+import initializeDefault from "initialize" /* 504 */;
+import failsDefault from "fails" /* 559 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import AdPlacement from "AdPlacement" /* 5450 */;
+import AdCreativeType from "AdCreativeType" /* 5451 */;
+import result3 from "result" /* 7701 */;
 
 require = arg1;
-let closure_8 = 30 * setDefault.Millis.SECOND;
-let closure_9 = 10 * setDefault.Millis.MINUTE;
-let c10 = null;
-let c11 = false;
+let closure_9 = 30 * setDefault.Millis.SECOND;
+let closure_10 = 10 * setDefault.Millis.MINUTE;
+let c11 = null;
+let c12 = false;
 let map = new Map();
 let c4 = 0;
 let map1 = new Map();
 let map2 = new Map();
 let map3 = new Map();
-c10 = null;
-c11 = false;
+let map4 = new Map();
+c11 = null;
+c12 = false;
 const Store = initializeDefault.Store;
 class AdDeliveryStore extends Store {
 }
@@ -31,20 +32,20 @@ Object.defineProperty(prototype, "lastFetchedQuestToDeliver", {
   },
   set: undefined
 });
-prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP) {
+prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA) {
   let flag;
   if (map != null) {
-    flag = map.get(QUEST_HOME_BANNER_DESKTOP);
+    flag = map.get(MOBILE_HOME_DOCK_AREA);
   }
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["canRefreshAd"] = function canRefreshAd(QUEST_HOME_BANNER_DESKTOP) {
+prototype["canRefreshAd"] = function canRefreshAd(MOBILE_HOME_DOCK_AREA) {
   let value;
-  if (map3 != null) {
-    value = map3.get(QUEST_HOME_BANNER_DESKTOP);
+  if (map4 != null) {
+    value = map4.get(MOBILE_HOME_DOCK_AREA);
   }
   let tmp3 = null == value;
   if (!tmp3) {
@@ -59,11 +60,34 @@ Object.defineProperty(prototype, "deliveryAdDecisionByPlacement", {
   },
   set: undefined
 });
+prototype["getNoFillForPlacement"] = function getNoFillForPlacement(arg0, arg1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  let flag = obj.includeExpired;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const value = map2.get(arg0);
+  let tmp2 = null;
+  if (null != value) {
+    if (flag) {
+      let tmp5 = value;
+    } else {
+      const _Date = Date;
+      const sum = value.fetchedAt + value.ttlMillis;
+      tmp5 = null;
+    }
+    tmp2 = tmp5;
+  }
+  return tmp2;
+};
 prototype["isFetchingQuestHomeHero"] = function isFetchingQuestHomeHero() {
-  return c11;
+  return c12;
 };
 prototype["getLastFetchedQuestHomeHero"] = function getLastFetchedQuestHomeHero() {
-  return c10;
+  return c11;
 };
 prototype["getQuestHomeHero"] = function getQuestHomeHero() {
   const value = map1.get(AdPlacement.AdPlacement.QUEST_HOME_BANNER_DESKTOP);
@@ -89,44 +113,76 @@ const adDeliveryStore = new AdDeliveryStore(dispatcherDefault, {
     map1 = new Map();
     map2 = new Map();
     map3 = new Map();
-    c10 = null;
-    c11 = false;
+    map4 = new Map();
+    c11 = null;
+    c12 = false;
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: function handleFetchQuestToDeliverBegin(placement) {
     map = new Map(map);
     const result = map.set(placement.placement, true);
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function handleFetchQuestToDeliverSuccess(arg0) {
-    ({ creative, placement } = arg0);
-    ({ adDecisionData, adContext, responseTtlSeconds, metadataSealed, trafficMetadataSealed, provenanceMetadataSealed, fetchedAt } = arg0);
+    ({ creative, placement, adDecisionData, responseTtlSeconds, metadataSealed, trafficMetadataSealed, fetchedAt } = arg0);
+    ({ quest, isNoFill, adContext, provenanceMetadataSealed } = arg0);
     closure_4 = Date.now();
     map = new Map(map);
     const result = map.set(placement, false);
-    const value = map2.get(placement);
-    if (value != null) {
-      value.succeed();
-    }
-    map3.delete(placement);
-    if (creative == null) {
-      creative = null;
-    }
-    const obj = { creative, fetchedAt, ttlMillis: result3.resolveResponseTtl(responseTtlSeconds), adDecisionData, adContext, metadataSealed, trafficMetadataSealed, provenanceMetadataSealed };
     map1 = new Map(map1);
-    const result1 = map1.set(placement, obj);
+    if (true === isNoFill) {
+      if (null == quest) {
+        let decision_id;
+        if (adDecisionData != null) {
+          decision_id = adDecisionData.decision_id;
+        }
+        if (null != decision_id) {
+          let obj = { decisionId: null, metadataSealed: null, trafficMetadataSealed: null, fetchedAt: null, ttlMillis: null };
+          obj[0] = adDecisionData.decision_id;
+          obj[1] = metadataSealed;
+          obj[2] = trafficMetadataSealed;
+          obj[3] = fetchedAt;
+          obj[4] = result3.resolveResponseTtl(responseTtlSeconds);
+          const result1 = map1.set(placement, obj);
+          const obj3 = result3;
+        }
+        const value = map3.get(placement);
+        if (value != null) {
+          value.succeed();
+        }
+        map4.delete(placement);
+        if (creative == null) {
+          creative = null;
+        }
+        obj = { creative: null, fetchedAt: null, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
+        obj[0] = creative;
+        obj[1] = fetchedAt;
+        obj[2] = result3.resolveResponseTtl(responseTtlSeconds);
+        obj[3] = adDecisionData;
+        obj[4] = adContext;
+        obj[5] = metadataSealed;
+        obj[6] = trafficMetadataSealed;
+        obj[7] = provenanceMetadataSealed;
+        const _Map = Map;
+        map2 = new Map(map2);
+        const result2 = map2.set(placement, obj);
+      }
+    }
+    map1.delete(placement);
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function handleFetchQuestToDeliverFailure(placement) {
     placement = placement.placement;
-    closure_4 = Date.now();
     map = new Map(map);
-    const result = map.set(placement, false);
-    let value = map2.get(placement);
+    map.delete(placement);
+    closure_4 = Date.now();
+    map1 = new Map(map1);
+    const result = map1.set(placement, false);
+    let value = map3.get(placement);
     if (null == value) {
-      const tmp8 = new failsDefault(closure_8, closure_9);
-      const result1 = map2.set(placement, tmp8);
-      value = tmp8;
+      const tmp9 = new failsDefault(closure_9, closure_10);
+      const result1 = map3.set(placement, tmp9);
+      value = tmp9;
     }
     const timestamp = Date.now();
-    const result2 = map3.set(placement, timestamp + value.fail());
+    const result2 = map4.set(placement, timestamp + value.fail());
   },
   QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function handleClearExpiredQuestToDeliver(placement) {
     placement = placement.placement;
@@ -138,13 +194,13 @@ const adDeliveryStore = new AdDeliveryStore(dispatcherDefault, {
     const result1 = map1.set(placement, obj);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function handleFetchQuestHomeHeroBegin(placement) {
-    c11 = true;
+    c12 = true;
     map = new Map(map);
     const result = map.set(placement.placement, true);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function handleFetchQuestHomeHeroSuccess(fetchedAt) {
-    c11 = false;
-    closure_10 = Date.now();
+    c12 = false;
+    closure_11 = Date.now();
     map = new Map(map);
     const result = map.set(fetchedAt.placement, false);
     let tmp2 = null;
@@ -160,7 +216,7 @@ const adDeliveryStore = new AdDeliveryStore(dispatcherDefault, {
     const result1 = map1.set(fetchedAt.placement, obj);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function handleFetchQuestHomeHeroFailure(placement) {
-    c11 = false;
+    c12 = false;
     map = new Map(map);
     const result = map.set(placement.placement, false);
   }

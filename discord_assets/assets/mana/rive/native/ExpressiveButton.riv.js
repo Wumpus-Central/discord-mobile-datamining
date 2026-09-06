@@ -1,6 +1,6 @@
-// === Module 4282: metadata ===
+// === Module 4363: metadata ===
 
-// Module 4282 (metadata)
+// Module 4363 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/ExpressiveButton.riv.js");

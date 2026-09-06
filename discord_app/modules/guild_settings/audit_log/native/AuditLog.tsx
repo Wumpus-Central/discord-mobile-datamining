@@ -1,22 +1,22 @@
-// === Module 17395: ApplicationHook ===
+// === Module 17555: ApplicationHook ===
 
-// Module 17395 (ApplicationHook)
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 5968 */;
-import getPermissionChangesAll from "getPermissionChanges" /* 17378 */;
+// Module 17555 (ApplicationHook)
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7168 */;
+import getPermissionChangesAll from "getPermissionChanges" /* 17538 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import importDefaultResult from "handleThemeChange" /* 1301 */;
-import closure_7 from "createdAt" /* 1934 */;
-import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import importDefaultResult from "handleThemeChange" /* 1183 */;
+import closure_7 from "createdAt" /* 1385 */;
+import closure_8 from "markAllUserIdListsStale" /* 4209 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 1234 */;
-import importDefaultResult1 from "initialize" /* 586 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import set from "set" /* 1115 */;
+import importDefaultResult1 from "initialize" /* 504 */;
 
 require = arg1;
 function ApplicationHook(applicationId) {
@@ -563,10 +563,10 @@ prototype["render"] = function render() {
   obj1[3] = str3;
   obj1[4] = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [callback(user(17387), { action: log.action }), , , ];
+  const items2 = [callback(user(17547), { action: log.action }), , , ];
   const obj4 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
-  const intl = tmp10(1233).intl;
-  obj4[1] = intl.string(tmp10(1233).t.iXAna6);
+  const intl = tmp10(1114).intl;
+  obj4[1] = intl.string(tmp10(1114).t.iXAna6);
   let username;
   if (user != null) {
     username = user.username;
@@ -588,15 +588,15 @@ prototype["render"] = function render() {
       if (log.action !== tmp21.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== tmp21.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            const value = tmp18(5236).get(log.options.integration_type);
+            const value = tmp18(5283).get(log.options.integration_type);
             if (null != value) {
-              let tmp9Result = tmp9(1362);
+              let tmp9Result = tmp9(4411);
               const icon = value.icon;
-              tmp9Result = tmp9(1430);
+              tmp9Result = tmp9(1396);
               let source = tmp9Result.makeSource(tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG);
               const tmp25 = tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
             }
-            const tmp18Result = tmp18(5236);
+            const tmp18Result = tmp18(5283);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -608,9 +608,9 @@ prototype["render"] = function render() {
           }
         }
         obj5[1] = source;
-        obj5[2] = tmp10(1296).AvatarSizes.SMALL;
+        obj5[2] = tmp10(1178).AvatarSizes.SMALL;
         obj4[4] = tmp17(tmp20, obj5);
-        items2[1] = tmp17(tmp10(5077).PressableOpacity, obj4);
+        items2[1] = tmp17(tmp10(5123).PressableOpacity, obj4);
         const obj6 = { accessibilityRole: "button", accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
         obj7 = { expanded: null, disabled: null };
         obj7[0] = expanded;
@@ -621,15 +621,15 @@ prototype["render"] = function render() {
         obj6[4] = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj6[5] = items3;
-        items2[2] = tmp15(tmp10(5077).PressableOpacity, obj6);
+        items2[2] = tmp15(tmp10(5123).PressableOpacity, obj6);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj8 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj8[0] = items4;
-          obj8[1] = tmp10(1296).Icon.Sizes.CUSTOM;
-          obj8[2] = tmp18(14495);
-          tmp17Result = tmp17(tmp10(1296).Icon, obj8);
+          obj8[1] = tmp10(1178).Icon.Sizes.CUSTOM;
+          obj8[2] = tmp18(14602);
+          tmp17Result = tmp17(tmp10(1178).Icon, obj8);
         }
         items2[3] = tmp17Result;
         obj2[1] = items2;
@@ -640,15 +640,15 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj1[5] = items5;
-        return tmp15(tmp10(5610).Card, obj1);
+        return tmp15(tmp10(5607).Card, obj1);
       }
     }
   }
   const obj3 = { action: log.action };
   tmp16 = View;
-  const tmp9Result1 = tmp9(1433);
-  const tmp9Result2 = tmp9(1430);
-  source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1433).getAutomodAvatarURL()));
+  const tmp9Result1 = tmp9(1399);
+  const tmp9Result2 = tmp9(1396);
+  source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1399).getAutomodAvatarURL()));
 };
 AuditLog.contextType = require("ManaContext").ThemeContext;
 let obj6 = { height: "auto", paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, transform: items1 };

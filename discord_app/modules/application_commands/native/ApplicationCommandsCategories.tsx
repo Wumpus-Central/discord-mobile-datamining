@@ -1,14 +1,14 @@
-// === Module 12198: ApplicationCommandsCategories ===
+// === Module 12398: ApplicationCommandsCategories ===
 
-// Module 12198 (ApplicationCommandsCategories)
-import ThemesDefault from "Themes" /* 709 */;
-import preloadDefault from "preload" /* 5502 */;
+// Module 12398 (ApplicationCommandsCategories)
+import ThemesDefault from "Themes" /* 576 */;
+import preloadDefault from "preload" /* 5587 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import ICON_SIZE from "ICON_SIZE" /* 12195 */;
+import closure_6 from "trackCommunicationDisabled" /* 2021 */;
+import ICON_SIZE from "ICON_SIZE" /* 12395 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -28,7 +28,7 @@ let closure_10 = importAllResult.memo((section) => {
   ({ handlePressCategory: importDefault, active, index: dependencyMap, guildId: closure_3 } = section);
   let stateFromStores;
   const tmp = callback();
-  let obj = section(586);
+  let obj = section(504);
   const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => {
     if (null != closure_3) {
@@ -58,9 +58,9 @@ let closure_10 = importAllResult.memo((section) => {
     accessibilityLabel: null,
     children: null
   };
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp2(1233).t;
+  const t = tmp2(1114).t;
   if (active) {
     obj1 = { applicationName: null };
     obj1[0] = section.name;
@@ -73,7 +73,7 @@ let closure_10 = importAllResult.memo((section) => {
   obj[2] = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj[3] = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(5077).PressableOpacity, {
+  return jsx(section(5123).PressableOpacity, {
     onPress() {
       return callback(closure_2);
     },

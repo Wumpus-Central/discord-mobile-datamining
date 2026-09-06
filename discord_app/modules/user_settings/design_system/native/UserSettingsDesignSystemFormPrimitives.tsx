@@ -1,22 +1,22 @@
-// === Module 15641: Radio ===
+// === Module 15799: Radio ===
 
-// Module 15641 (Radio)
-import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4927 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5055 */;
-import TableRowInner from "TableRowInner" /* 5608 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7695 */;
-import context from "context" /* 7704 */;
-import TableRadioRow from "TableRadioRow" /* 7705 */;
-import VoiceXIcon from "VoiceXIcon" /* 10096 */;
-import Slider from "Slider" /* 14060 */;
+// Module 15799 (Radio)
+import Text from "Text" /* 4556 */;
+import Stack from "Stack" /* 4973 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
+import TableRowInner from "TableRowInner" /* 5605 */;
+import context from "context" /* 5685 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+import TableRadioRow from "TableRadioRow" /* 5688 */;
+import VoiceXIcon from "VoiceXIcon" /* 9987 */;
+import Slider from "Slider" /* 14178 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { NOOP } from "ME" /* 673 */;
+import { NOOP } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function Radio() {
@@ -60,26 +60,26 @@ function Switch() {
   [tmp8, c0] = callback(React.useState(false), 2);
   const tmp7 = callback(React.useState(false), 2);
   const obj2 = { children: null };
-  const items = [callback2(_require(4474).Text, { variant: "heading-lg/bold", children: "Switch" }), callback2(_require(4474).Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
+  const items = [callback2(_require(4556).Text, { variant: "heading-lg/bold", children: "Switch" }), callback2(_require(4556).Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
   const obj3 = { title: "Emoji", hasIcons: false, children: null };
   const merged = Object.assign(obj);
-  obj3[2] = callback2(_require(6002).TableSwitchRow, { label: "Show emoji reactions on messages", subLabel: "Show more information in less space" });
-  items[2] = callback2(_require(6001).TableRowGroup, obj3);
+  obj3[2] = callback2(_require(7201).TableSwitchRow, { label: "Show emoji reactions on messages", subLabel: "Show more information in less space" });
+  items[2] = callback2(_require(5687).TableRowGroup, obj3);
   const obj5 = { title: "Display images, videos, and lolcats", hasIcons: false, children: null };
   const merged1 = Object.assign(obj);
-  const items1 = [callback2(_require(6002).TableSwitchRow, { label: "When posted as links to chat" }), , , ];
+  const items1 = [callback2(_require(7201).TableSwitchRow, { label: "When posted as links to chat" }), , , ];
   const merged2 = Object.assign(obj);
-  items1[1] = callback2(_require(6002).TableSwitchRow, { label: "When uploaded directly to Discord" });
+  items1[1] = callback2(_require(7201).TableSwitchRow, { label: "When uploaded directly to Discord" });
   const merged3 = Object.assign({
     value: tmp8,
     onValueChange: React.useCallback((arg0) => {
       _undefined(arg0);
     }, [])
   });
-  items1[2] = callback2(_require(6002).TableSwitchRow, { label: "With image descriptions" });
-  items1[3] = callback2(_require(6002).TableSwitchRow, { label: "Disabled switch item", subLabel: "This should not be switchable", disabled: true, value: false, onValueChange: NOOP });
+  items1[2] = callback2(_require(7201).TableSwitchRow, { label: "With image descriptions" });
+  items1[3] = callback2(_require(7201).TableSwitchRow, { label: "Disabled switch item", subLabel: "This should not be switchable", disabled: true, value: false, onValueChange: NOOP });
   obj5[2] = items1;
-  items[3] = callback3(_require(6001).TableRowGroup, obj5);
+  items[3] = callback3(_require(5687).TableRowGroup, obj5);
   obj2[0] = items;
   return callback3(closure_8, obj2);
 }
@@ -97,7 +97,7 @@ function InlineCheckbox(startChecked) {
   const onToggle = React.useCallback((arg0) => {
     _undefined(arg0);
   }, []);
-  return callback2(_require(9384).Checkbox, { label, description, required, checked, onToggle });
+  return callback2(_require(9429).Checkbox, { label, description, required, checked, onToggle });
 }
 function InlineCheckboxDemo() {
   const obj = { children: null };

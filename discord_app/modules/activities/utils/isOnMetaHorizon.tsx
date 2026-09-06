@@ -1,9 +1,9 @@
-// === Module 9433: isOnMetaHorizon ===
+// === Module 13018: isOnMetaHorizon ===
 
-// Module 9433 (isOnMetaHorizon)
+// Module 13018 (isOnMetaHorizon)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import items3 from "items3" /* 4506 */;
+import ME from "ME" /* 1074 */;
+import items3 from "items3" /* 1920 */;
 
 let closure_0 = items3.META_PRESENCE_APPLICATION_ID;
 const ActivityGamePlatforms = ME.ActivityGamePlatforms;

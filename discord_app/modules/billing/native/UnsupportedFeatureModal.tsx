@@ -1,6 +1,6 @@
-// === Module 10822: UnsupportedFeatureModal ===
+// === Module 10825: UnsupportedFeatureModal ===
 
-// Module 10822 (UnsupportedFeatureModal)
+// Module 10825 (UnsupportedFeatureModal)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -15,7 +15,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
   obj = { Unsupported: null };
   obj = {
     title: onDismiss.title,
-    headerLeft: onDismiss(5504).getHeaderCloseButton(() => {
+    headerLeft: onDismiss(5624).getHeaderCloseButton(() => {
       let arr = closure_1_1(closure_1_2[5]);
       arr = arr.pop();
       if (onDismiss != null) {
@@ -25,17 +25,17 @@ export default function UnsupportedFeatureModal(onDismiss) {
     render() {
       let obj = { style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }, children: null };
       obj = { variant: "text-lg/normal", color: "text-default", children: null };
-      const intl = onDismiss(1233).intl;
-      obj[2] = intl.string(onDismiss(1233).t.I22zuX);
-      obj[1] = callback(onDismiss(4474).Text, obj);
+      const intl = onDismiss(1114).intl;
+      obj[2] = intl.string(onDismiss(1114).t.I22zuX);
+      obj[1] = callback(onDismiss(4556).Text, obj);
       return callback(closure_3, obj);
     }
   };
   obj[0] = obj;
   obj[1] = obj;
-  return jsx(onDismiss(6017).Navigator, {
+  return jsx(onDismiss(7000).Navigator, {
     title: onDismiss.title,
-    headerLeft: onDismiss(5504).getHeaderCloseButton(() => {
+    headerLeft: onDismiss(5624).getHeaderCloseButton(() => {
       let arr = closure_1_1(closure_1_2[5]);
       arr = arr.pop();
       if (onDismiss != null) {
@@ -45,9 +45,9 @@ export default function UnsupportedFeatureModal(onDismiss) {
     render() {
       let obj = { style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }, children: null };
       obj = { variant: "text-lg/normal", color: "text-default", children: null };
-      const intl = onDismiss(1233).intl;
-      obj[2] = intl.string(onDismiss(1233).t.I22zuX);
-      obj[1] = callback(onDismiss(4474).Text, obj);
+      const intl = onDismiss(1114).intl;
+      obj[2] = intl.string(onDismiss(1114).t.I22zuX);
+      obj[1] = callback(onDismiss(4556).Text, obj);
       return callback(closure_3, obj);
     }
   });

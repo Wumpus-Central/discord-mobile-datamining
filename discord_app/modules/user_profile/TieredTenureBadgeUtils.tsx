@@ -1,9 +1,9 @@
-// === Module 7389: getTieredTenureBadgeData ===
+// === Module 7634: getTieredTenureBadgeData ===
 
-// Module 7389 (getTieredTenureBadgeData)
+// Module 7634 (getTieredTenureBadgeData)
 import set from "set" /* 2 */;
-import hooksDefault from "hooks" /* 4074 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+import hooksDefault from "hooks" /* 4153 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 
 ({ TENURE_BADGES: obj1, TIERED_TENURE_BADGE_ORDER: c3 } = GuildFeatures);
 const result = set.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");

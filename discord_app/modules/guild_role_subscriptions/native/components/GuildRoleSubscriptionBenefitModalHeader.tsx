@@ -1,20 +1,20 @@
-// === Module 17596: GuildRoleSubscriptionBenefitModalHeader ===
+// === Module 17756: GuildRoleSubscriptionBenefitModalHeader ===
 
-// Module 17596 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 17756 (GuildRoleSubscriptionBenefitModalHeader)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
-import renderDefault from "render" /* 9085 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15067 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
+import renderDefault from "render" /* 9050 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 15227 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "ME" /* 673 */;
+import { Fonts } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5470 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import importDefaultResult from "createTextStyle" /* 5524 */;
 
 require = arg1;
 noopAll;
@@ -75,7 +75,7 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   }
   const obj6 = { style: items4, children: null };
   items4[1] = disabledButton;
-  const intl2 = tmp4(1233).intl;
+  const intl2 = tmp4(1114).intl;
   obj6[1] = intl2.string(getSystemLocale.t["R3BPH+"]);
   obj5[4] = callback2(Button.LegacyText, obj6);
   items1[2] = callback2(renderDefault, obj5);

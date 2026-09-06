@@ -1,12 +1,12 @@
-// === Module 7955: isPublicSystemMessage ===
+// === Module 8034: isPublicSystemMessage ===
 
-// Module 7955 (isPublicSystemMessage)
+// Module 8034 (isPublicSystemMessage)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
-import isCrosspostDefault from "isCrosspost" /* 7957 */;
-import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 7956 */;
+import ME from "ME" /* 1074 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
+import isCrosspostDefault from "isCrosspost" /* 8036 */;
+import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8035 */;
 
 ({ PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: c3, PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: c4, ENABLE_COMMUNITY_FLOW_MODAL_KEY: c5 } = PUBLIC_SUCCESS_MODAL_SEEN_KEY);
 const AnalyticEvents = ME.AnalyticEvents;
@@ -27,7 +27,7 @@ export const isPublicSystemMessage = function isPublicSystemMessage(message) {
   return tmp;
 };
 export const getPublicSystemMessageAvatar = function getPublicSystemMessageAvatar() {
-  return importDefault(7958);
+  return importDefault(8037);
 };
 export const trackEnableCommunityFlow = function trackEnableCommunityFlow(fromStep) {
   let obj = expandEventPropertiesDefault;

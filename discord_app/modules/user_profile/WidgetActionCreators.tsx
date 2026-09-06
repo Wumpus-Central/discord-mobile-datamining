@@ -1,10 +1,10 @@
-// === Module 7383: ? ===
+// === Module 7628: ? ===
 
-// Module 7383
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 7628
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { Endpoints } from "ME" /* 673 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/WidgetActionCreators.tsx");
@@ -230,7 +230,7 @@ export default {
     ({ onProgress: importDefault, signal: dependencyMap } = obj);
     return callback(function*() {
       let upload_url = tmp2;
-      const HTTP2 = closure_1_0(527).HTTP;
+      const HTTP2 = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
       obj1[0] = closure_1_5.USER_PROFILE_WIDGET_CLIP_UPLOAD;
       const obj2 = { file_size: null };
@@ -239,12 +239,12 @@ export default {
       yield HTTP2.post(obj1);
       const body = arg1.body;
       upload_url = body.upload_url;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       const obj5 = { url: null, body: null, headers: null, onRequestProgress: null, signal: null, rejectWithError: true };
       obj5[0] = upload_url;
       obj5[1] = body;
       const obj6 = { "Content-Type": null };
-      obj6[0] = closure_1_0(7384).WIDGET_CLIP_CONTENT_TYPE;
+      obj6[0] = closure_1_0(7629).WIDGET_CLIP_CONTENT_TYPE;
       obj5[2] = obj6;
       obj5[3] = function onRequestProgress(direction) {
         let tmp = "upload" === direction.direction;
@@ -307,9 +307,9 @@ export default {
           } else if (1 === tmp7) {
             constants = 0;
             let callback = closure_4;
-            let obj4 = callback(706);
+            let obj4 = callback(573);
             obj4.dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" });
-            callback(1205).captureException(callback);
+            callback(1232).captureException(callback);
             throw callback;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -337,10 +337,10 @@ export default {
               tmp9 = null != prop;
             }
             if (!tmp9) {
-              obj = callback(1205);
+              obj = callback(1232);
               obj.captureMessage("Suggested games or wishlist games not found");
             }
-            obj1 = callback(706);
+            obj1 = callback(573);
             const body2 = closure_0.body;
             let suggested_games1;
             if (body2 != null) {

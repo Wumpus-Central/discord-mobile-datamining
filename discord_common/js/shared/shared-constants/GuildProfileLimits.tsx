@@ -1,6 +1,6 @@
-// === Module 5570: MAX_TRAITS ===
+// === Module 5549: MAX_TRAITS ===
 
-// Module 5570 (MAX_TRAITS)
+// Module 5549 (MAX_TRAITS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx");

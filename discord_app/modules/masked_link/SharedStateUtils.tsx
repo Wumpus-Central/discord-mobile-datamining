@@ -1,6 +1,6 @@
-// === Module 13048: useUrlParts ===
+// === Module 12951: useUrlParts ===
 
-// Module 13048 (useUrlParts)
+// Module 12951 (useUrlParts)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 12061: getDmHasMessageHistory ===
+// === Module 12265: getDmHasMessageHistory ===
 
-// Module 12061 (getDmHasMessageHistory)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 12265 (getDmHasMessageHistory)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const result = require("set").fileFinishedImporting("modules/channel/trackWaveCtaClicked.tsx");
 

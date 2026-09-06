@@ -1,13 +1,13 @@
-// === Module 12263: clearGuildMemberTimeout ===
+// === Module 12463: clearGuildMemberTimeout ===
 
-// Module 12263 (clearGuildMemberTimeout)
+// Module 12463 (clearGuildMemberTimeout)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4109 */;
-import initializeDefault from "initialize" /* 5495 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1991 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4188 */;
+import initializeDefault from "initialize" /* 7118 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 2021 */;
+import closure_5 from "trackCommunicationDisabled" /* 2021 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
 
 function clearGuildMemberTimeout(closure_2, closure_1) {
   member = member.getMember(closure_2, closure_1);

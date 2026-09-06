@@ -1,12 +1,12 @@
-// === Module 7933: createThreadStarterSystemMessage ===
+// === Module 8012: createThreadStarterSystemMessage ===
 
-// Module 7933 (createThreadStarterSystemMessage)
+// Module 8012 (createThreadStarterSystemMessage)
 import _modDef38 from "module_38" /* 38 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
-import closure_3 from "processMessage" /* 7350 */;
-import { ReferencedMessageState } from "processMessage" /* 7350 */;
-import { MessageTypes } from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import closure_3 from "processMessage" /* 7595 */;
+import { ReferencedMessageState } from "processMessage" /* 7595 */;
+import { MessageTypes } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx");

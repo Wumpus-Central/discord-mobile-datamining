@@ -1,12 +1,12 @@
-// === Module 15975: useFavoritesGuildResetAction ===
+// === Module 16139: useFavoritesGuildResetAction ===
 
-// Module 15975 (useFavoritesGuildResetAction)
-import messagesProxyDefault from "messagesProxy" /* 3178 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10333 */;
+// Module 16139 (useFavoritesGuildResetAction)
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import messagesProxyDefault from "messagesProxy" /* 3225 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4299 */;
-import { Routes } from "ME" /* 673 */;
+import closure_4 from "handleConnectionOpen" /* 4381 */;
+import { Routes } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
@@ -27,9 +27,9 @@ export default function useFavoritesGuildResetAction() {
     hasAccess = obj.useFavoritesAccess().hasAccess;
   }
   obj = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj[1] = intl.string(messagesProxyDefault.YkET6R);
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj[2] = intl2.string(messagesProxyDefault.ZzcwNk);
   obj[3] = callback;
   return obj;

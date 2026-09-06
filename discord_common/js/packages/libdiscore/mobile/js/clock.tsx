@@ -1,8 +1,8 @@
-// === Module 1918: monotonicNowMs ===
+// === Module 1354: monotonicNowMs ===
 
-// Module 1918 (monotonicNowMs)
+// Module 1354 (monotonicNowMs)
 import set from "set" /* 2 */;
-import typedGlobal from "typedGlobal" /* 1917 */;
+import typedGlobal from "typedGlobal" /* 1353 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/clock.tsx");
 

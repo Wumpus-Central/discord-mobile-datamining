@@ -1,9 +1,9 @@
-// === Module 17012: getConsoleColor ===
+// === Module 17176: getConsoleColor ===
 
-// Module 17012 (getConsoleColor)
+// Module 17176 (getConsoleColor)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import ThemesDefault from "Themes" /* 709 */;
+import ThemesDefault from "Themes" /* 576 */;
+import ME from "ME" /* 1074 */;
 
 const obj = { [XBOX]: ThemesDefault.unsafe_rawColors.PLATFORM_XBOX, [PLAYSTATION]: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION, [PLAYSTATION_STAGING]: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION };
 ({ XBOX, PLAYSTATION, PLAYSTATION_STAGING } = ME.PlatformTypes);

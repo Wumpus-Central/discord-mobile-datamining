@@ -1,10 +1,10 @@
-// === Module 9731: importDefaultResult1 ===
+// === Module 9744: importDefaultResult1 ===
 
-// Module 9731 (importDefaultResult1)
-import setDefault from "set" /* 684 */;
+// Module 9744 (importDefaultResult1)
+import setDefault from "set" /* 1090 */;
 import closure_4 from "noop" /* 19 */;
-import importDefaultResult1 from "addApplication" /* 4519 */;
-import initialize from "initialize" /* 586 */;
+import importDefaultResult1 from "addApplication" /* 4788 */;
+import initialize from "initialize" /* 504 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -26,7 +26,7 @@ initialize = {
         }
         return tmp2;
       });
-      found = mapped.filter(require(1470) /* isDiscordFrontendDevelopment */.isNotNullish);
+      found = mapped.filter(require(1369) /* isDiscordFrontendDevelopment */.isNotNullish);
     }
     return found;
   },

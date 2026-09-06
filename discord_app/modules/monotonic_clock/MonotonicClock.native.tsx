@@ -1,8 +1,8 @@
-// === Module 7220: monotonicNowMs ===
+// === Module 7464: monotonicNowMs ===
 
-// Module 7220 (monotonicNowMs)
+// Module 7464 (monotonicNowMs)
 import set from "set" /* 2 */;
-import monotonicNowMs from "monotonicNowMs" /* 1918 */;
+import monotonicNowMs from "monotonicNowMs" /* 1354 */;
 
 const result = set.fileFinishedImporting("modules/monotonic_clock/MonotonicClock.native.tsx");
 

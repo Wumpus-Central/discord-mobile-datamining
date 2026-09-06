@@ -1,19 +1,19 @@
-// === Module 6132: canReportMessageToMods ===
+// === Module 7276: canReportMessageToMods ===
 
-// Module 6132 (canReportMessageToMods)
-import fromStringAll from "fromString" /* 503 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import getContextForPermission from "getContextForPermission" /* 6121 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6122 */;
-import canReportUser from "canReportUser" /* 6144 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 6145 */;
-import isCurrentUserTeen from "isCurrentUserTeen" /* 6146 */;
-import closure_4 from "handleLoadThreadsSuccess" /* 6133 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "reinjectEphemerals" /* 4736 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import { ReportToModPermissions } from "ReportToModPermissions" /* 6143 */;
+// Module 7276 (canReportMessageToMods)
+import fromStringAll from "fromString" /* 1086 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import getContextForPermission from "getContextForPermission" /* 7265 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7266 */;
+import canReportUser from "canReportUser" /* 7289 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7290 */;
+import isCurrentUserTeen from "isCurrentUserTeen" /* 7291 */;
+import closure_4 from "handleLoadThreadsSuccess" /* 7277 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "createGuildRecordFromRust" /* 1979 */;
+import closure_7 from "reinjectEphemerals" /* 4781 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import { ReportToModPermissions } from "ReportToModPermissions" /* 7288 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
@@ -181,8 +181,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(6147).messageHasObscurableMediaForBitmask(firstMessage, tmp10(6150).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(6147);
+          tmp9 = !tmp10(7292).messageHasObscurableMediaForBitmask(firstMessage, tmp10(7295).ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = tmp10(7292);
         }
         return tmp9;
       } else {

@@ -1,9 +1,9 @@
-// === Module 12754: useUserProfileConnections ===
+// === Module 13082: useUserProfileConnections ===
 
-// Module 12754 (useUserProfileConnections)
+// Module 13082 (useUserProfileConnections)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 7376 */;
+import closure_4 from "createUserWidgetFromServer" /* 7621 */;
 
 const useMemo = noop.useMemo;
 let closure_5 = [];

@@ -1,21 +1,21 @@
-// === Module 12826: _sendGuildInvite ===
+// === Module 13098: _sendGuildInvite ===
 
-// Module 12826 (_sendGuildInvite)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
+// Module 13098 (_sendGuildInvite)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "comparator" /* 1981 */;
-import closure_6 from "handleInviteData" /* 4398 */;
-import closure_7 from "trackCommunicationDisabled" /* 1991 */;
-import closure_8 from "createGuildRecordFromRust" /* 1908 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_10 from "insertUnsortedGuilds" /* 5390 */;
-import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import { setSendState } from "setSendState" /* 12827 */;
-import { InviteSendStates } from "InviteSendStates" /* 7492 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "comparator" /* 2012 */;
+import closure_6 from "handleInviteData" /* 4480 */;
+import closure_7 from "trackCommunicationDisabled" /* 2021 */;
+import closure_8 from "createGuildRecordFromRust" /* 1979 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_10 from "insertUnsortedGuilds" /* 5438 */;
+import closure_11 from "mergeGuildAvatar" /* 1371 */;
+import { setSendState } from "setSendState" /* 13099 */;
+import { InviteSendStates } from "InviteSendStates" /* 7736 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function _sendGuildInvite() {
@@ -59,21 +59,21 @@ function _sendGuildInvite() {
               code = undefined;
               let defaultChannel = 1;
               closure_1_12(callback, callback2, closure_1_13.SENDING);
-              const AccessibilityAnnouncer2 = callback(1350).AccessibilityAnnouncer;
-              const intl2 = callback(1233).intl;
-              AccessibilityAnnouncer2.announce(intl2.string(callback(1233).t.kC3ZRG));
+              const AccessibilityAnnouncer2 = callback(4272).AccessibilityAnnouncer;
+              const intl2 = callback(1114).intl;
+              AccessibilityAnnouncer2.announce(intl2.string(callback(1114).t.kC3ZRG));
               defaultChannel = defaultChannel.getDefaultChannel(callback2, true, closure_1_14.CREATE_INSTANT_INVITE);
               if (null == defaultChannel) {
                 const _Error = Error;
                 throw Error();
               } else {
                 obj1 = { max_uses: null, max_age: null, unique: true };
-                obj1[0] = callback2(9937).INVITE_OPTIONS_ONCE.value;
-                obj1[1] = callback2(9937).INVITE_OPTIONS_7_DAYS.value;
+                obj1[0] = callback2(9822).INVITE_OPTIONS_ONCE.value;
+                obj1[1] = callback2(9822).INVITE_OPTIONS_7_DAYS.value;
                 c6 = 2;
                 c7 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback2(8668).createInvite(defaultChannel.id, obj1, tmp45);
+                obj2[0] = callback2(8378).createInvite(defaultChannel.id, obj1, tmp45);
                 return obj2;
               }
               tmp45 = dependencyMap;
@@ -82,19 +82,19 @@ function _sendGuildInvite() {
             if (1 === tmp7) {
               defaultChannel = 0;
               callback3(callback, callback2, constants.ERROR);
-              let AccessibilityAnnouncer = callback(1350).AccessibilityAnnouncer;
-              let intl = callback(1233).intl;
-              AccessibilityAnnouncer.announce(intl.string(callback(1233).t.fEptJP));
+              let AccessibilityAnnouncer = callback(4272).AccessibilityAnnouncer;
+              let intl = callback(1114).intl;
+              AccessibilityAnnouncer.announce(intl.string(callback(1114).t.fEptJP));
               c7 = 3;
             } else if (arg0 === 1) {
               c7 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
               code = arg1;
-              let obj4 = callback2(10012);
+              let obj4 = callback2(9895);
               const obj3 = { inviteKey: null, type: null, user: null, location: null, inviteAnalyticsMetadata: null };
               obj3[0] = code.code;
-              obj3[1] = callback(10012).InvitePropertiesType.USER;
+              obj3[1] = callback(9895).InvitePropertiesType.USER;
               obj3[2] = user.getUser(callback);
               obj3[3] = dependencyMap;
               obj4 = { source: null };
@@ -102,9 +102,9 @@ function _sendGuildInvite() {
               obj3[4] = obj4;
               obj4.enqueue(obj3, () => {
                 closure_1_12(callback, closure_1, closure_1_13.SENT);
-                const AccessibilityAnnouncer = callback(1350).AccessibilityAnnouncer;
-                const intl = callback(1233).intl;
-                AccessibilityAnnouncer.announce(intl.string(callback(1233).t.PuLLzP));
+                const AccessibilityAnnouncer = callback(4272).AccessibilityAnnouncer;
+                const intl = callback(1114).intl;
+                AccessibilityAnnouncer.announce(intl.string(callback(1114).t.PuLLzP));
               });
               defaultChannel = 0;
             }
@@ -143,7 +143,7 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   obj.track(constants.OPEN_POPOUT, obj);
   const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { recipientId: id, source: newestAnalyticsLocation };
-  obj3.openLazy(asyncRequireImpl(12828, dependencyMap.paths), "invite-to-guilds-" + id, obj);
+  obj3.openLazy(asyncRequireImpl(13100, dependencyMap.paths), "invite-to-guilds-" + id, obj);
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   const _require = id;

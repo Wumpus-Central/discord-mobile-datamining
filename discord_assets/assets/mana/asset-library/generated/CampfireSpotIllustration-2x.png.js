@@ -1,6 +1,6 @@
-// === Module 6398: metadata ===
+// === Module 5826: metadata ===
 
-// Module 6398 (metadata)
+// Module 5826 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CampfireSpotIllustration-2x.png.js");

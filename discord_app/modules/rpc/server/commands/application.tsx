@@ -1,14 +1,14 @@
-// === Module 14360: ? ===
+// === Module 14467: ? ===
 
-// Module 14360
-import sendRequest from "sendRequest" /* 527 */;
-import isTestModeForApplication from "isTestModeForApplication" /* 8514 */;
-import prototypeDefault from "prototype" /* 9520 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9523 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9525 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14361 */;
-import closure_3 from "addApplication" /* 4519 */;
-import ME from "ME" /* 673 */;
+// Module 14467
+import sendRequest from "sendRequest" /* 1272 */;
+import isTestModeForApplication from "isTestModeForApplication" /* 8854 */;
+import prototypeDefault from "prototype" /* 9554 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9559 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14468 */;
+import closure_3 from "addApplication" /* 4788 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ ApplicationFlags: c4, Endpoints: c5, RPCCommands, RPCErrors: closure_6 } = ME);
@@ -35,9 +35,9 @@ let obj = {
       const guildId = obj3.getGuildId();
     }
     application = application.getApplication(id);
-    let tmpResult = tmp(8449);
+    let tmpResult = tmp(8856);
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-      tmpResult = tmp(9473);
+      tmpResult = tmp(9518);
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
       obj = { activity_application_id: null, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
       obj[0] = id;
@@ -55,11 +55,11 @@ let obj = {
       obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(event_properties);
-      tmp5(695).track(args.event_name, obj);
+      tmp5(1242).track(args.event_name, obj);
     } else {
       obj1 = { errorCode: null };
       obj1[0] = constants2.INVALID_COMMAND;
-      const tmp12 = new tmp5(9520)(obj1, "This application cannot access this API");
+      const tmp12 = new tmp5(9554)(obj1, "This application cannot access this API");
       throw tmp12;
     }
   }

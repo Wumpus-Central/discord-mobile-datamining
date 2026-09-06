@@ -1,8 +1,8 @@
-// === Module 7361: addGlobalTag ===
+// === Module 7606: addGlobalTag ===
 
-// Module 7361 (addGlobalTag)
+// Module 7606 (addGlobalTag)
 import set from "set" /* 2 */;
-import DesignIds from "DesignIds" /* 670 */;
+import DesignIds from "DesignIds" /* 1345 */;
 
 const obj = { design_id: DesignIds.DesignIds.DESIGN_TABS_IA };
 const result = set.fileFinishedImporting("modules/monitoring/MonitoringAgentUtils.tsx");

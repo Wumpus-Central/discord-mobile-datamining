@@ -1,10 +1,10 @@
-// === Module 1916: LIBDISCORE_JSI ===
+// === Module 1352: LIBDISCORE_JSI ===
 
-// Module 1916 (LIBDISCORE_JSI)
+// Module 1352 (LIBDISCORE_JSI)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import typedGlobal from "typedGlobal" /* 1917 */;
-import monotonicNowMs from "monotonicNowMs" /* 1918 */;
+import typedGlobal from "typedGlobal" /* 1353 */;
+import monotonicNowMs from "monotonicNowMs" /* 1354 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 if (NativeModules.LibDiscoreModule) {

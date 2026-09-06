@@ -1,31 +1,31 @@
-// === Module 9449: JoinActivityButton ===
+// === Module 13032: JoinActivityButton ===
 
-// Module 9449 (JoinActivityButton)
+// Module 13032 (JoinActivityButton)
 import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import Button2 from "Button" /* 4929 */;
-import contextDefault from "context" /* 5962 */;
-import _isStreamingDefault from "_isStreaming" /* 8119 */;
-import getStreamURLDefault from "getStreamURL" /* 12703 */;
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import Button2 from "Button" /* 4975 */;
+import contextDefault from "context" /* 7162 */;
+import _isStreamingDefault from "_isStreaming" /* 8259 */;
+import getStreamURLDefault from "getStreamURL" /* 13036 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1385 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "set" /* 5234 */;
-import closure_7 from "handleInviteData" /* 4398 */;
-import closure_8 from "createGuildRecordFromRust" /* 1908 */;
-import closure_9 from "updateActivities" /* 9450 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_11 from "markAllUserIdListsStale" /* 4130 */;
-import closure_12 from "handleConnectionOpen" /* 1980 */;
-import closure_13 from "filterPlayingActivities" /* 5232 */;
-import closure_14 from "updateVoiceState" /* 4497 */;
-import ME from "ME" /* 673 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8630 */;
+import closure_4 from "participantFromServer" /* 1956 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "set" /* 5281 */;
+import closure_7 from "handleInviteData" /* 4480 */;
+import closure_8 from "createGuildRecordFromRust" /* 1979 */;
+import closure_9 from "updateActivities" /* 11457 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_11 from "markAllUserIdListsStale" /* 4209 */;
+import closure_12 from "handleConnectionOpen" /* 2011 */;
+import closure_13 from "filterPlayingActivities" /* 5279 */;
+import closure_14 from "updateVoiceState" /* 4579 */;
+import ME from "ME" /* 1074 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8340 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -106,17 +106,17 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(9457).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(9457).ActivityJoinability.JOINED) {
-        const intl2 = tmp(1233).intl;
-        let stringResult = intl2.string(tmp(1233).t.DPfdsq);
+    if (stateFromStores !== tmp(13034).ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === tmp(13034).ActivityJoinability.JOINED) {
+        const intl2 = tmp(1114).intl;
+        let stringResult = intl2.string(tmp(1114).t.DPfdsq);
       } else {
-        const intl = tmp(1233).intl;
-        stringResult = intl.string(tmp(1233).t.VJlc0S);
+        const intl = tmp(1114).intl;
+        stringResult = intl.string(tmp(1114).t.VJlc0S);
       }
       obj = { text: null, variant: "active", disabled: null, onPress: null };
       obj[0] = stringResult;
-      JOINED = tmp(9457).ActivityJoinability.JOINED;
+      JOINED = tmp(13034).ActivityJoinability.JOINED;
       obj[2] = stateFromStores === JOINED;
       obj[3] = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
@@ -125,7 +125,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
         const joined = obj.join(obj);
         closure_1_1(closure_1_2[28]).hideAllActionSheets();
       };
-      jsx(tmp(4929).Button, { text: null, variant: "active", disabled: null, onPress: null });
+      jsx(tmp(4975).Button, { text: null, variant: "active", disabled: null, onPress: null });
       const tmp6 = jsx;
     }
   }
@@ -136,7 +136,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   let sync_id;
   sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(9273)(activity)) {
+  if (sync_id(10891)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
@@ -146,7 +146,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
       obj[0] = intl.formatToPlainString(getSystemLocale.t.LEgD7t, obj);
       obj = { size: null, source: null, disableColor: true, style: null };
       obj[0] = Button.Icon.Sizes.SMALL;
-      obj[1] = sync_id(8063);
+      obj[1] = sync_id(8142);
       obj[3] = tmp.icon;
       obj[1] = jsx(Button.Icon, { size: null, source: null, disableColor: true, style: null });
       obj[3] = callback(function*() {

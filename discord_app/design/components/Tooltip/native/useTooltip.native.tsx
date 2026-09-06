@@ -1,8 +1,8 @@
-// === Module 8992: useTooltip ===
+// === Module 11128: useTooltip ===
 
-// Module 8992 (useTooltip)
+// Module 11128 (useTooltip)
 import timestampDefault from "timestamp" /* 3 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
@@ -132,7 +132,7 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
   const tmp = useWindowDimensionsDefault();
   closure_3 = tmp;
   closure_4 = context.useRef(tmp);
-  context = context.useContext(_require(5951).LayerContext);
+  context = context.useContext(_require(7157).LayerContext);
   closure_6 = context.useRef(null);
   const items = [context, ref];
   const effect = context.useEffect(() => {

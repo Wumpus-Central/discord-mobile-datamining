@@ -1,9 +1,9 @@
-// === Module 17679: AVErrorStreamSendHighPacketLossDefinition ===
+// === Module 17839: AVErrorStreamSendHighPacketLossDefinition ===
 
-// Module 17679 (AVErrorStreamSendHighPacketLossDefinition)
-import isStreamKey from "isStreamKey" /* 4544 */;
-import closure_2 from "reset" /* 4500 */;
-import closure_3 from "initialize" /* 4568 */;
+// Module 17839 (AVErrorStreamSendHighPacketLossDefinition)
+import isStreamKey from "isStreamKey" /* 4612 */;
+import closure_2 from "reset" /* 4582 */;
+import closure_3 from "initialize" /* 4599 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx");
@@ -25,18 +25,18 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
       if (null == mediaEngineConnectionId) {
         return null;
       } else {
-        let tmp8Result = tmp8(17677);
+        let tmp8Result = tmp8(17837);
         const accumulatedStatsWithMinDatapoints = tmp8Result.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
         let tmp6 = null;
         if (null != accumulatedStatsWithMinDatapoints) {
           if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
             obj = { type: null };
-            obj[0] = tmp8(9582).AVError.STREAM_SEND_HIGH_PACKET_LOSS;
-            tmp8Result = tmp8(17674);
-            const merged = Object.assign(tmp8Result.getStreamErrorContext(tmp8(4544).encodeStreamKey(currentUserActiveStream)));
+            obj[0] = tmp8(9110).AVError.STREAM_SEND_HIGH_PACKET_LOSS;
+            tmp8Result = tmp8(17834);
+            const merged = Object.assign(tmp8Result.getStreamErrorContext(tmp8(4612).encodeStreamKey(currentUserActiveStream)));
             const items = [obj];
             const tmp3 = items;
-            const tmp8Result1 = tmp8(4544);
+            const tmp8Result1 = tmp8(4612);
           }
           tmp6 = tmp3;
         }

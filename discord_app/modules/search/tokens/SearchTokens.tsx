@@ -1,69 +1,69 @@
-// === Module 12137: getShortcuts ===
+// === Module 12341: getShortcuts ===
 
-// Module 12137 (getShortcuts)
+// Module 12341 (getShortcuts)
 import applyDefault from "apply" /* 12 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import hooksDefault from "hooks" /* 4074 */;
-import NOOPDefault from "NOOP" /* 5394 */;
-import ANSWER_IN_REGEX from "ANSWER_IN_REGEX" /* 12140 */;
-import getMatch2 from "getMatch" /* 12142 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import hooksDefault from "hooks" /* 4153 */;
+import NOOPDefault from "NOOP" /* 5442 */;
+import ANSWER_IN_REGEX from "ANSWER_IN_REGEX" /* 12344 */;
+import getMatch2 from "getMatch" /* 12346 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import comparator from "comparator" /* 1981 */;
-import closure_7 from "comparator" /* 1981 */;
-import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "handleConnectionOpen" /* 1980 */;
-import closure_10 from "initialize" /* 4323 */;
-import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import closure_12 from "handleUserSearchResults" /* 12138 */;
-import closure_13 from "handleReset" /* 12139 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import comparator from "comparator" /* 2012 */;
+import closure_7 from "comparator" /* 2012 */;
+import closure_8 from "markAllUserIdListsStale" /* 4209 */;
+import closure_9 from "handleConnectionOpen" /* 2011 */;
+import closure_10 from "initialize" /* 4405 */;
+import closure_11 from "mergeGuildAvatar" /* 1371 */;
+import closure_12 from "handleUserSearchResults" /* 12342 */;
+import closure_13 from "handleReset" /* 12343 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function getShortcuts() {
   obj = {};
   const intl = getSystemLocale.intl;
   obj[intl.string(getSystemLocale.t.HYiVEQ)] = () => {
-    obj = callback(4074)();
-    const addResult = callback(4074)().startOf("day").add(0, "day");
+    obj = callback(4153)();
+    const addResult = callback(4153)().startOf("day").add(0, "day");
     const items = [addResult, ];
-    const startOfResult = callback(4074)().startOf("day");
+    const startOfResult = callback(4153)().startOf("day");
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
   const intl2 = getSystemLocale.intl;
   obj[intl2.string(getSystemLocale.t.cu86KC)] = () => {
-    obj = callback(4074)();
-    const addResult = callback(4074)().startOf("day").add(-1, "day");
+    obj = callback(4153)();
+    const addResult = callback(4153)().startOf("day").add(-1, "day");
     const items = [addResult, ];
-    const startOfResult = callback(4074)().startOf("day");
+    const startOfResult = callback(4153)().startOf("day");
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
   const intl3 = getSystemLocale.intl;
   obj[intl3.string(getSystemLocale.t["FvBj/6"])] = () => {
-    obj = callback(4074)();
-    const addResult = callback(4074)().startOf("week").add(0, "week");
+    obj = callback(4153)();
+    const addResult = callback(4153)().startOf("week").add(0, "week");
     const items = [addResult, ];
-    const startOfResult = callback(4074)().startOf("week");
+    const startOfResult = callback(4153)().startOf("week");
     items[1] = addResult.clone().add(1, "week");
     return items;
   };
   const intl4 = getSystemLocale.intl;
   obj[intl4.string(getSystemLocale.t["20uWCw"])] = () => {
-    obj = callback(4074)();
-    const addResult = callback(4074)().startOf("month").add(0, "month");
+    obj = callback(4153)();
+    const addResult = callback(4153)().startOf("month").add(0, "month");
     const items = [addResult, ];
-    const startOfResult = callback(4074)().startOf("month");
+    const startOfResult = callback(4153)().startOf("month");
     items[1] = addResult.clone().add(1, "month");
     return items;
   };
   const intl5 = getSystemLocale.intl;
   obj[intl5.string(getSystemLocale.t["dXC/hn"])] = () => {
-    obj = callback(4074)();
-    const addResult = callback(4074)().startOf("year").add(0, "year");
+    obj = callback(4153)();
+    const addResult = callback(4153)().startOf("year").add(0, "year");
     const items = [addResult, ];
-    const startOfResult = callback(4074)().startOf("year");
+    const startOfResult = callback(4153)().startOf("year");
     items[1] = addResult.clone().add(1, "year");
     return items;
   };
@@ -125,21 +125,21 @@ function dateValidator(getFullMatch) {
     const obj20 = hooksDefault;
     const set = new Set(hooksDefault.months().map((str) => str.toLowerCase()));
     if (set.has(formatted)) {
-      const localResult = tmp32(4074)(formatted, "MMMM").local();
+      const localResult = tmp32(4153)(formatted, "MMMM").local();
       const items = [localResult, ];
-      const obj17 = tmp32(4074)(formatted, "MMMM");
+      const obj17 = tmp32(4153)(formatted, "MMMM");
       items[1] = localResult.clone().add(1, "month");
       const cloneResult = localResult.clone();
       [obj9, obj10] = callback(items, 2);
       const tmp21 = callback(items, 2);
     } else {
       const _Set = Set;
-      let tmp32Result = tmp32(4074);
+      let tmp32Result = tmp32(4153);
       const set1 = new Set(tmp32Result.weekdays().map((str) => str.toLowerCase()));
       if (set1.has(formatted)) {
-        const localResult1 = tmp32(4074)(formatted, "dddd").local();
+        const localResult1 = tmp32(4153)(formatted, "dddd").local();
         const items1 = [localResult1, ];
-        const obj14 = tmp32(4074)(formatted, "dddd");
+        const obj14 = tmp32(4153)(formatted, "dddd");
         items1[1] = localResult1.clone().add(1, "day");
         const cloneResult1 = localResult1.clone();
         [obj9, obj10] = callback(items1, 2);
@@ -152,17 +152,17 @@ function dateValidator(getFullMatch) {
         tmp32Result = tmp32(12);
         const set2 = new Set(tmp32Result.range(2015, fullYear + 1).map((arg0) => arg0.toString()));
         if (set2.has(formatted)) {
-          const localResult2 = tmp32(4074)(formatted, "YYYY").local();
+          const localResult2 = tmp32(4153)(formatted, "YYYY").local();
           const items2 = [localResult2, ];
-          const obj11 = tmp32(4074)(formatted, "YYYY");
+          const obj11 = tmp32(4153)(formatted, "YYYY");
           items2[1] = localResult2.clone().add(1, "year");
           const cloneResult2 = localResult2.clone();
           [obj9, obj10] = callback(items2, 2);
           const tmp17 = callback(items2, 2);
         } else {
-          const localResult3 = tmp32(4074)(formatted, closure_16).local();
+          const localResult3 = tmp32(4153)(formatted, closure_16).local();
           const items3 = [localResult3, ];
-          const obj6 = tmp32(4074)(formatted, closure_16);
+          const obj6 = tmp32(4153)(formatted, closure_16);
           items3[1] = localResult3.clone().add(1, "day");
           const cloneResult3 = localResult3.clone();
           [obj9, obj10] = callback(items3, 2);
@@ -295,7 +295,7 @@ function isValidChannelAutocomplete(token, guildId) {
         flag = flag2;
       }
     }
-    obj2 = replaced(12136);
+    obj2 = replaced(12340);
   }
   return flag;
 }
@@ -570,7 +570,7 @@ function getChannelAutocompletions(arg0) {
     if ("#" === str2[0]) {
       substr1 = str2.substring(1);
     }
-    let obj2 = _require(12136);
+    let obj2 = _require(12340);
     if (obj2.isGuildLikeSearchContext(searchContext)) {
       const guildId = searchContext.guildId;
       _require = undefined;
@@ -579,8 +579,8 @@ function getChannelAutocompletions(arg0) {
       obj[0] = substr1;
       obj[1] = closure_5;
       obj[2] = guildId;
-      let tmpResult = tmp(5394);
-      obj[7] = tmpResult.getBoosterMap(tmp(9950).AutocompleterResultTypes.TEXT_CHANNEL);
+      let tmpResult = tmp(5442);
+      obj[7] = tmpResult.getBoosterMap(tmp(9835).AutocompleterResultTypes.TEXT_CHANNEL);
       const obj12 = NOOPDefault;
       const tmp7 = importDefault;
       const queryChannelsResult = NOOPDefault.queryChannels(obj);
@@ -588,8 +588,8 @@ function getChannelAutocompletions(arg0) {
       obj[0] = substr1;
       obj[1] = closure_6;
       obj[2] = guildId;
-      tmpResult = tmp(5394);
-      obj[6] = tmpResult.getBoosterMap(tmp(9950).AutocompleterResultTypes.VOICE_CHANNEL);
+      tmpResult = tmp(5442);
+      obj[6] = tmpResult.getBoosterMap(tmp(9835).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(NOOPDefault.queryChannels(obj));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -635,18 +635,18 @@ function getChannelAutocompletions(arg0) {
           obj1[0] = substr1;
           obj1[1] = maxResults;
           const obj4 = NOOPDefault;
-          obj1[3] = tmp(5394).getBoosterMap(tmp(9950).AutocompleterResultTypes.GROUP_DM);
-          const tmpResult1 = tmp(5394);
+          obj1[3] = tmp(5442).getBoosterMap(tmp(9835).AutocompleterResultTypes.GROUP_DM);
+          const tmpResult1 = tmp(5442);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj1);
           obj2 = { query: null, limit: null, boosters: null };
           obj2[0] = substr1;
           obj2[1] = maxResults;
           const obj8 = NOOPDefault;
-          obj2[2] = tmp(5394).getBoosterMap(tmp(9950).AutocompleterResultTypes.USER);
-          const tmpResult2 = tmp(5394);
+          obj2[2] = tmp(5442).getBoosterMap(tmp(9835).AutocompleterResultTypes.USER);
+          const tmpResult2 = tmp(5442);
           const queryDMChannelsResult = obj8.queryDMChannels(obj2);
           const tmp6 = applyDefault;
-          const sorted = applyDefault(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(9950).sortByMatchScore);
+          const sorted = applyDefault(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(9835).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             obj = { text: record.comparator, channel: record, key: null };
@@ -1091,12 +1091,12 @@ export const getLocalizedHasAnswer = function getLocalizedHasAnswer(str) {
 };
 export const getLocalizedAuthorTypeAnswer = function getLocalizedAuthorTypeAnswer(str) {
   obj = {};
-  const intl = substr(1233).intl;
-  obj[intl.string(substr(1233).t.tPZo4p)] = "user";
-  const intl2 = substr(1233).intl;
-  obj[intl2.string(substr(1233).t.JL7sRS)] = "bot";
-  const intl3 = substr(1233).intl;
-  obj[intl3.string(substr(1233).t.WjkIKU)] = "webhook";
+  const intl = substr(1114).intl;
+  obj[intl.string(substr(1114).t.tPZo4p)] = "user";
+  const intl2 = substr(1114).intl;
+  obj[intl2.string(substr(1114).t.JL7sRS)] = "bot";
+  const intl3 = substr(1114).intl;
+  obj[intl3.string(substr(1114).t.WjkIKU)] = "webhook";
   substr = undefined;
   const startsWithResult = str.startsWith("-");
   substr = str;
@@ -1159,17 +1159,17 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
     const items = ["filter:" + trimmed, trimmed];
     const token = new getMatch2.Token(items, tmp);
     if (SearchTokenTypes.ANSWER_HAS === tmp) {
-      let tmp7Result = tmp7(12140);
+      let tmp7Result = tmp7(12344);
       return tmp7Result.validateForMapWithNegation("has", getHasMap(), token);
     } else if (tmp15.ANSWER_AUTHOR_TYPE === tmp) {
-      tmp7Result = tmp7(12140);
+      tmp7Result = tmp7(12344);
       obj = {};
-      const intl = tmp7(1233).intl;
-      obj[intl.string(tmp7(1233).t.tPZo4p)] = "user";
-      const intl2 = tmp7(1233).intl;
-      obj[intl2.string(tmp7(1233).t.JL7sRS)] = "bot";
-      const intl3 = tmp7(1233).intl;
-      obj[intl3.string(tmp7(1233).t.WjkIKU)] = "webhook";
+      const intl = tmp7(1114).intl;
+      obj[intl.string(tmp7(1114).t.tPZo4p)] = "user";
+      const intl2 = tmp7(1114).intl;
+      obj[intl2.string(tmp7(1114).t.JL7sRS)] = "bot";
+      const intl3 = tmp7(1114).intl;
+      obj[intl3.string(tmp7(1114).t.WjkIKU)] = "webhook";
       return tmp7Result.validateForMapWithNegation("author_type", obj, token);
     } else if (tmp15.ANSWER_PINNED === tmp) {
       const match = token.getMatch(1);

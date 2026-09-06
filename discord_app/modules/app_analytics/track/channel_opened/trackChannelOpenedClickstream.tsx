@@ -1,10 +1,10 @@
-// === Module 7530: trackChannelOpenedClickstream ===
+// === Module 7775: trackChannelOpenedClickstream ===
 
-// Module 7530 (trackChannelOpenedClickstream)
-import isClickstreamEnabled from "isClickstreamEnabled" /* 7221 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import ME from "ME" /* 673 */;
-import { StaticChannelRoute } from "set" /* 1393 */;
+// Module 7775 (trackChannelOpenedClickstream)
+import isClickstreamEnabled from "isClickstreamEnabled" /* 7465 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import ME from "ME" /* 1074 */;
+import { StaticChannelRoute } from "set" /* 1964 */;
 
 require = arg1;
 ({ ChannelTypes: c3, AnalyticEvents: c4 } = ME);

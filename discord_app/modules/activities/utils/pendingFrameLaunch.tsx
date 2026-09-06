@@ -1,6 +1,6 @@
-// === Module 9489: stashPendingFrameLaunch ===
+// === Module 9524: stashPendingFrameLaunch ===
 
-// Module 9489 (stashPendingFrameLaunch)
+// Module 9524 (stashPendingFrameLaunch)
 import set from "set" /* 2 */;
 
 let closure_0 = {};

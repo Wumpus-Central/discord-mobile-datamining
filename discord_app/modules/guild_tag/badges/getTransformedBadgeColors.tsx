@@ -1,6 +1,6 @@
-// === Module 13896: getTransformedBadgeColors ===
+// === Module 13918: getTransformedBadgeColors ===
 
-// Module 13896 (getTransformedBadgeColors)
+// Module 13918 (getTransformedBadgeColors)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");

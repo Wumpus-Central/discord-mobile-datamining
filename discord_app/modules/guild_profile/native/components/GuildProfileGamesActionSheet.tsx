@@ -1,18 +1,18 @@
-// === Module 9043: GuildProfileGameRow ===
+// === Module 9201: GuildProfileGameRow ===
 
-// Module 9043 (GuildProfileGameRow)
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8820 */;
-import stylesDefault from "styles" /* 9038 */;
+// Module 9201 (GuildProfileGameRow)
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8675 */;
+import stylesDefault from "styles" /* 9196 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function GuildProfileGameRow(activityLevel) {
   const game = activityLevel.game;
   let _require;
-  let obj = { gameId: game.id, source: _require(8831).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
+  let obj = { gameId: game.id, source: _require(8686).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
   const tmpResult = useOpenGameProfileModalDefault(obj);
   _require = tmpResult;
   obj = { icon: jsx(stylesDefault, { game, activityLevel: activityLevel.activityLevel }), label: game.name, arrow: tmp3, onPress: null };
@@ -21,7 +21,7 @@ function GuildProfileGameRow(activityLevel) {
     fn = () => callback();
   }
   obj[3] = fn;
-  return jsx(_require(5608).TableRow, { icon: jsx(stylesDefault, { game, activityLevel: activityLevel.activityLevel }), label: game.name, arrow: tmp3, onPress: null });
+  return jsx(_require(5605).TableRow, { icon: jsx(stylesDefault, { game, activityLevel: activityLevel.activityLevel }), label: game.name, arrow: tmp3, onPress: null });
 }
 let closure_7 = createCacheKey.createStyles({ container: { padding: 16, paddingBottom: 48 } });
 const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx");
@@ -32,11 +32,11 @@ export default function GuildProfileGamesActionSheet(profile) {
   let gameActivity;
   id = profile.id;
   gameActivity = profile.gameActivity;
-  let obj = id(9042);
+  let obj = id(9200);
   const allGuildProfileGames = obj.useAllGuildProfileGames(profile);
-  obj1 = id(8091);
-  const intl = id(1233).intl;
-  let str = intl.format(id(1233).t.vuAVo7, { serverName: profile.name });
+  obj1 = id(8170);
+  const intl = id(1114).intl;
+  let str = intl.format(id(1114).t.vuAVo7, { serverName: profile.name });
   const items = [id];
   str = str.toString();
   const callback = React.useCallback(() => {
@@ -48,8 +48,8 @@ export default function GuildProfileGamesActionSheet(profile) {
   obj = { children: null };
   obj1 = { style: callback().container, children: null };
   const tmp = callback();
-  obj1[1] = jsx(id(6001).TableRowGroup, { title: str, hasIcons: true, children: allGuildProfileGames.map((game) => closure_1_5(closure_1_6, { game, activityLevel: gameActivity[game.id] }, game.id)) });
+  obj1[1] = jsx(id(5687).TableRowGroup, { title: str, hasIcons: true, children: allGuildProfileGames.map((game) => closure_1_5(closure_1_6, { game, activityLevel: gameActivity[game.id] }, game.id)) });
   obj[0] = <View style={callback().container}>{null}</View>;
-  obj[4] = jsx(id(5633).BottomSheetScrollView, { children: null });
-  return jsx(id(5631).BottomSheet, { children: null });
+  obj[4] = jsx(id(6627).BottomSheetScrollView, { children: null });
+  return jsx(id(7150).BottomSheet, { children: null });
 };

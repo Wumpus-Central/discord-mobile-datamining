@@ -1,8 +1,8 @@
-// === Module 1230: safeDispatch ===
+// === Module 1111: safeDispatch ===
 
-// Module 1230 (safeDispatch)
+// Module 1111 (safeDispatch)
 import set from "set" /* 2 */;
-import EventEmitter from "EventEmitter" /* 649 */;
+import EventEmitter from "EventEmitter" /* 568 */;
 
 let result = set.fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
 class ComponentDispatcher {

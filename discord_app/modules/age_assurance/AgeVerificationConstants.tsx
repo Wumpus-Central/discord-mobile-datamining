@@ -1,9 +1,9 @@
-// === Module 8702: set ===
+// === Module 8412: set ===
 
-// Module 8702 (set)
-import ME from "ME" /* 673 */;
-import messagesProxyDefault from "messagesProxy" /* 2918 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8703 */;
+// Module 8412 (set)
+import ME from "ME" /* 1074 */;
+import messagesProxyDefault from "messagesProxy" /* 2946 */;
+import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8413 */;
 import set from "set" /* 2 */;
 
 const HelpdeskArticles = ME.HelpdeskArticles;
@@ -22,22 +22,22 @@ export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;
 export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetStartedSteps(arg0) {
   const _require = arg0;
   let obj = { title: null, description: null };
-  const intl = _require(1233).intl;
-  obj[0] = intl.string(_require(1233).t.HphYKp);
-  const intl2 = _require(1233).intl;
-  obj[1] = intl2.string(_require(1233).t["GCZC+9"]);
+  const intl = _require(1114).intl;
+  obj[0] = intl.string(_require(1114).t.HphYKp);
+  const intl2 = _require(1114).intl;
+  obj[1] = intl2.string(_require(1114).t["GCZC+9"]);
   const items = [obj, , ];
   obj = { title: null, description: null };
-  const intl3 = _require(1233).intl;
-  obj[0] = intl3.string(_require(1233).t.nkO4L3);
-  const intl4 = _require(1233).intl;
-  obj[1] = intl4.string(_require(1233).t.rHZFsH);
+  const intl3 = _require(1114).intl;
+  obj[0] = intl3.string(_require(1114).t.nkO4L3);
+  const intl4 = _require(1114).intl;
+  obj[1] = intl4.string(_require(1114).t.rHZFsH);
   items[1] = obj;
   obj = { title: null, description: null };
-  const intl5 = _require(1233).intl;
-  obj[0] = intl5.string(_require(1233).t.aVwLfn);
-  const intl6 = _require(1233).intl;
-  obj[1] = intl6.format(_require(1233).t.n5vd1E, {
+  const intl5 = _require(1114).intl;
+  obj[0] = intl5.string(_require(1114).t.aVwLfn);
+  const intl6 = _require(1114).intl;
+  obj[1] = intl6.format(_require(1114).t.n5vd1E, {
     handleOnHelpUrlHook() {
       const obj = closure_1_1(closure_1_2[3]);
       obj.openUrl(closure_1_1(closure_1_2[4]).getArticleURL(closure_1_3.TIGGER_PAWTECT_SYSTEM_DMS));

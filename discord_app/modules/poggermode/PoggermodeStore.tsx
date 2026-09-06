@@ -1,14 +1,14 @@
-// === Module 7586: updateCombo ===
+// === Module 7831: updateCombo ===
 
-// Module 7586 (updateCombo)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getComboShakeIntensity from "getComboShakeIntensity" /* 7587 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "handleConnectionOpen" /* 1980 */;
-import closure_4 from "initialize" /* 7433 */;
-import ConfettiLocation from "ConfettiLocation" /* 7434 */;
-import { ComponentActions } from "ME" /* 673 */;
+// Module 7831 (updateCombo)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getComboShakeIntensity from "getComboShakeIntensity" /* 7832 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "handleConnectionOpen" /* 2011 */;
+import closure_4 from "initialize" /* 7678 */;
+import ConfettiLocation from "ConfettiLocation" /* 7679 */;
+import { ComponentActions } from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -50,7 +50,7 @@ function updateCombo(userId) {
     decayInterval = iter.decayInterval;
   }
   if (decayInterval == null) {
-    decayInterval = new obj(4362).Interval();
+    decayInterval = new obj(4447).Interval();
   }
   obj.decayInterval = decayInterval;
   const result = obj.set("" + userId.userId + "-" + userId.channelId, obj);
@@ -215,17 +215,17 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
             if (null != mentions) {
               if (null != mentions.find((id) => id.id === id)) {
                 if (null != value) {
-                  let num2 = id(7587).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
+                  let num2 = id(7832).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
                   if (num2 == null) {
                     num2 = 0.001;
                   }
                   let result = num2;
-                  const obj2 = id(7587);
+                  const obj2 = id(7832);
                 } else {
                   const _Math = Math;
                   result = 4 * Math.random();
                 }
-                const ComponentDispatch = id(1228).ComponentDispatch;
+                const ComponentDispatch = id(1109).ComponentDispatch;
                 obj = { duration: 1000, intensity: null };
                 obj[1] = result;
                 ComponentDispatch.dispatch(ComponentActions.SHAKE_APP, obj);

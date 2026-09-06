@@ -1,10 +1,10 @@
-// === Module 6801: MicrophoneAndKeyboardSpotIllustration ===
+// === Module 6237: MicrophoneAndKeyboardSpotIllustration ===
 
-// Module 6801 (MicrophoneAndKeyboardSpotIllustration)
+// Module 6237 (MicrophoneAndKeyboardSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6802 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6238 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MicrophoneAndKeyboardSpotIllustration.native.tsx");

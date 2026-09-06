@@ -1,9 +1,9 @@
-// === Module 14586: useAutoScrollToSearchResultSetting ===
+// === Module 14697: useAutoScrollToSearchResultSetting ===
 
-// Module 14586 (useAutoScrollToSearchResultSetting)
+// Module 14697 (useAutoScrollToSearchResultSetting)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 14580 */;
-import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11293 */;
+import closure_3 from "zustandStore" /* 14691 */;
+import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11469 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
@@ -12,7 +12,7 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   const _require = ref;
   dependencyMap = memo;
   let current = ref.useField("selected");
-  const navigation = _require(1498).useNavigation();
+  const navigation = _require(1483).useNavigation();
   ref = navigation.useRef(scrollTarget);
   if (current == null) {
     current = ref.current;
@@ -20,14 +20,14 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(14477).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(14582).getInitialScrollIndex(current, memo);
+    if (tmp(14584).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14693).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(14582);
+      const tmpResult = tmp(14693);
     }
   }
   const items = [memo, flag, ref, navigation, current];

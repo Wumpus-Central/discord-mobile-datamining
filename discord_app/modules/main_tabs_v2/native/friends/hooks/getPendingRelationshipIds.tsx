@@ -1,8 +1,8 @@
-// === Module 16614: filterFromPending ===
+// === Module 16779: filterFromPending ===
 
-// Module 16614 (filterFromPending)
-import closure_0 from "markAllUserIdListsStale" /* 4130 */;
-import { RelationshipTypes } from "ME" /* 673 */;
+// Module 16779 (filterFromPending)
+import closure_0 from "markAllUserIdListsStale" /* 4209 */;
+import { RelationshipTypes } from "ME" /* 1074 */;
 
 function filterFromPending(arg0) {
   return closure_0.isSpam(arg0) || closure_0.isIgnored(arg0);

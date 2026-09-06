@@ -1,6 +1,6 @@
-// === Module 7704: context ===
+// === Module 5685: context ===
 
-// Module 7704 (context)
+// Module 5685 (context)
 import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -49,7 +49,7 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
       return closure_3;
     }
   }), items);
-  jsx = obj.useContext(onChange(5607).RedesignCompatContext);
+  jsx = obj.useContext(onChange(5686).RedesignCompatContext);
   const items1 = [undefined !== value, onChange];
   callback = obj.useCallback((arg0) => {
     if (!closure_1) {
@@ -77,7 +77,7 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     })
   };
   Children = obj.Children;
-  obj[1] = jsx(onChange(6001).TableRowGroup, {
+  obj[1] = jsx(onChange(5687).TableRowGroup, {
     accessibilityRole: "radiogroup",
     accessibilityLabel,
     title,

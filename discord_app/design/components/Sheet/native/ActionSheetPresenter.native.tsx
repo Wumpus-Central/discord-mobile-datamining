@@ -1,11 +1,11 @@
-// === Module 14016: ActionSheetPresenter ===
+// === Module 14134: ActionSheetPresenter ===
 
-// Module 14016 (ActionSheetPresenter)
+// Module 14134 (ActionSheetPresenter)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "setContent" /* 4186 */;
-import { NOOP } from "ME" /* 673 */;
+import closure_6 from "setContent" /* 4251 */;
+import { NOOP } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -31,8 +31,8 @@ let closure_9 = importAllResult.forwardRef((sheetKey, ref) => {
   callback1 = callback.useCallback(() => {
     ref2.current();
   }, []);
-  let obj = { type: sheetKey(500).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
-  first(8911)(obj);
+  let obj = { type: sheetKey(1250).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
+  first(8768)(obj);
   const imperativeHandle = callback.useImperativeHandle(ref, () => ({
     componentDidEnter() {
       callback("visible");
@@ -61,9 +61,9 @@ let closure_9 = importAllResult.forwardRef((sheetKey, ref) => {
     callback2();
     return true;
   }, items2);
-  first(4926)(callback3);
-  obj = { value: memo, children: jsx(sheetKey(4912).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) };
-  return jsx(first(5944).Provider, { value: memo, children: jsx(sheetKey(4912).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
+  first(4972)(callback3);
+  obj = { value: memo, children: jsx(sheetKey(4958).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) };
+  return jsx(first(7152).Provider, { value: memo, children: jsx(sheetKey(4958).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
 });
 let result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetPresenter.native.tsx");
 
@@ -73,11 +73,11 @@ export const ActionSheetPresenter = function ActionSheetPresenter(appEntryKey) {
   const effect = importAllResult.useEffect(() => () => {
     const result = closure_1_1(closure_1_2[8]).resetActionSheetsForAppEntryKey(closure_0);
   }, items);
-  let obj = appEntryKey(586);
+  let obj = appEntryKey(504);
   const items1 = [closure_6];
   const stateFromStoresArray = obj.useStateFromStoresArray(items1, () => stack.getStack(), []);
   const found = stateFromStoresArray.filter((appEntryKey) => appEntryKey.appEntryKey === appEntryKey);
   const mapped = found.map((content) => callback(closure_9, { sheetKey: content.key, content: content.content, impressionName: content.impressionName, impressionProperties: content.impressionProperties, zIndex: content.zIndex }, content.key));
-  obj = { style: StyleSheet.absoluteFill, component: appEntryKey(4865).TransitionGroupOverlayView, children: mapped };
-  return jsx(appEntryKey(12223).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(4865).TransitionGroupOverlayView, children: mapped });
+  obj = { style: StyleSheet.absoluteFill, component: appEntryKey(4911).TransitionGroupOverlayView, children: mapped };
+  return jsx(appEntryKey(12423).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(4911).TransitionGroupOverlayView, children: mapped });
 };

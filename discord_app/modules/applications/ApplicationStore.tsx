@@ -1,10 +1,10 @@
-// === Module 4519: addApplication ===
+// === Module 4788: addApplication ===
 
-// Module 4519 (addApplication)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 4788 (addApplication)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "createExecutable" /* 4504 */;
+import closure_1 from "createExecutable" /* 1918 */;
 import set from "set" /* 2 */;
 
 function addApplication(fromServer) {

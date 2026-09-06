@@ -1,6 +1,6 @@
-// === Module 14079: append ===
+// === Module 1902: append ===
 
-// Module 14079 (append)
+// Module 1902 (append)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");

@@ -1,15 +1,15 @@
-// === Module 1983: initialize ===
+// === Module 2014: initialize ===
 
-// Module 1983 (initialize)
+// Module 2014 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import ImpersonateType from "ImpersonateType" /* 1989 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1990 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import { GuildSettingsSections } from "ME" /* 673 */;
-import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 682 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1933 */;
+import ImpersonateType from "ImpersonateType" /* 2020 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import { GuildSettingsSections } from "ME" /* 1074 */;
+import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 1084 */;
 
 require = arg1;
 let closure_8 = {};
@@ -146,8 +146,8 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
   } else {
     const type = tmp6.type;
     if (ImpersonateType.ImpersonateType.ROLES !== type) {
-      if (tmp7(1989).ImpersonateType.SERVER_SHOP !== type) {
-        if (tmp7(1989).ImpersonateType.NEW_MEMBER === type) {
+      if (tmp7(2020).ImpersonateType.SERVER_SHOP !== type) {
+        if (tmp7(2020).ImpersonateType.NEW_MEMBER === type) {
           return GuildSettingsSections.ONBOARDING;
         } else {
           return GuildSettingsSections.ROLES;
@@ -191,7 +191,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
     if (null != guildId) {
       if (null != dependencyMap[guildId]) {
         if (null != dependencyMap[guildId]) {
-          if (tmp6.type === overrides(1989).ImpersonateType.NEW_MEMBER) {
+          if (tmp6.type === overrides(2020).ImpersonateType.NEW_MEMBER) {
             optInChannels = tmp6.optInChannels;
             if (optInChannels == null) {
               const _Set = Set;
@@ -224,7 +224,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
     if (null != guildId) {
       if (null != dependencyMap[guildId]) {
         if (null != dependencyMap[guildId]) {
-          if (tmp9.type === onboardingResponses(1989).ImpersonateType.NEW_MEMBER) {
+          if (tmp9.type === onboardingResponses(2020).ImpersonateType.NEW_MEMBER) {
             onboardingResponses = tmp9.onboardingResponses;
             if (onboardingResponses == null) {
               const _Set = Set;
@@ -270,7 +270,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
         }
         let tmp3 = null != flags;
         if (tmp3) {
-          tmp3 = tmp2.type === guildId(1989).ImpersonateType.NEW_MEMBER;
+          tmp3 = tmp2.type === guildId(2020).ImpersonateType.NEW_MEMBER;
         }
         flag = true;
         if (tmp3) {

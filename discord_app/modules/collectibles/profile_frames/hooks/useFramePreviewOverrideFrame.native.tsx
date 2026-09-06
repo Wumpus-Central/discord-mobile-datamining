@@ -1,9 +1,9 @@
-// === Module 8551: useFramePreviewOverrideFrame ===
+// === Module 8202: useFramePreviewOverrideFrame ===
 
-// Module 8551 (useFramePreviewOverrideFrame)
+// Module 8202 (useFramePreviewOverrideFrame)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "fromServer" /* 7304 */;
-import { useFramePreviewOverrideStore as closure_4 } from "measure" /* 8552 */;
+import closure_3 from "fromServer" /* 7549 */;
+import { useFramePreviewOverrideStore as closure_4 } from "measure" /* 8203 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx");

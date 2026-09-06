@@ -1,6 +1,6 @@
-// === Module 1951: PaletteKeys ===
+// === Module 1891: PaletteKeys ===
 
-// Module 1951 (PaletteKeys)
+// Module 1891 (PaletteKeys)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/nameplates/types.tsx");

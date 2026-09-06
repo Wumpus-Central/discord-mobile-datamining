@@ -1,16 +1,16 @@
-// === Module 15763: DraggableContainer ===
+// === Module 15925: DraggableContainer ===
 
-// Module 15763 (DraggableContainer)
-import ThemesDefault from "Themes" /* 709 */;
-import _mod4217 from "module_4217" /* 4217 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 15417 */;
-import VisualEffectViewOverrideOverlay_Default from "VisualEffectViewOverrideOverlay_" /* 15764 */;
+// Module 15925 (DraggableContainer)
+import ThemesDefault from "Themes" /* 576 */;
+import _mod4296 from "module_4296" /* 4296 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 15575 */;
+import VisualEffectViewOverrideOverlay_Default from "VisualEffectViewOverrideOverlay_" /* 15926 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "initialize" /* 7475 */;
-import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 707 */;
+import closure_4 from "initialize" /* 7719 */;
+import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 574 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function DraggableContainer(children) {
@@ -153,9 +153,9 @@ let closure_16 = importAllResult.memo(() => {
 let result = require("set").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  let obj = _mod4217;
+  let obj = _mod4296;
   const sharedValue = obj.useSharedValue(closure_4.devWidgetPosition.x);
-  const sharedValue1 = _mod4217.useSharedValue(closure_4.devWidgetPosition.y);
+  const sharedValue1 = _mod4296.useSharedValue(closure_4.devWidgetPosition.y);
   obj = { children: null };
   const items = [callback(VisualEffectViewOverrideOverlay_Default, { x: sharedValue, y: sharedValue1 }), ];
   obj = {

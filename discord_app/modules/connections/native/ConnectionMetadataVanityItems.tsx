@@ -1,20 +1,20 @@
-// === Module 11400: PaypalVanityTag ===
+// === Module 11575: PaypalVanityTag ===
 
-// Module 11400 (PaypalVanityTag)
+// Module 11575 (PaypalVanityTag)
 import applyDefault from "apply" /* 12 */;
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1896 */;
-import Text from "Text" /* 4474 */;
-import officialApplicationIds from "officialApplicationIds" /* 5360 */;
-import registerAssetDefault from "registerAsset" /* 11401 */;
-import registerAssetDefault2 from "registerAsset" /* 11402 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1880 */;
+import Text from "Text" /* 4556 */;
+import officialApplicationIds from "officialApplicationIds" /* 5407 */;
+import registerAssetDefault from "registerAsset" /* 11576 */;
+import registerAssetDefault2 from "registerAsset" /* 11577 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import OperatorTypes from "OperatorTypes" /* 5361 */;
+import OperatorTypes from "OperatorTypes" /* 5408 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function PaypalVanityTag(style) {
@@ -37,13 +37,13 @@ function VanityMetric(label) {
   }
   const sum = result + str;
   if (typeof label === "string") {
-    const intl = tmp2(1233).intl;
+    const intl = tmp2(1114).intl;
     obj = { name: null, value: null };
     obj[0] = label;
     obj[1] = sum;
-    let children = intl.format(tmp2(1233).t.HLoinF, obj);
+    let children = intl.format(tmp2(1114).t.HLoinF, obj);
   } else {
-    const intl2 = tmp2(1233).intl;
+    const intl2 = tmp2(1114).intl;
     obj = { value: null };
     obj[0] = sum;
     children = intl2.format(label, obj);

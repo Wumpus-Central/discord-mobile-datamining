@@ -1,10 +1,10 @@
-// === Module 15876: usePrivateChannelWaveEligible ===
+// === Module 16038: usePrivateChannelWaveEligible ===
 
-// Module 15876 (usePrivateChannelWaveEligible)
-import closure_3 from "reinjectEphemerals" /* 4736 */;
-import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import { ChannelFlags } from "set" /* 1393 */;
-import { MessageTypes } from "ME" /* 673 */;
+// Module 16038 (usePrivateChannelWaveEligible)
+import closure_3 from "reinjectEphemerals" /* 4781 */;
+import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+import { ChannelFlags } from "set" /* 1964 */;
+import { MessageTypes } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
@@ -21,25 +21,25 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
     recipientId = isDM.getRecipientId();
   }
   const items = [closure_4];
-  const stateFromStores = _require(586).useStateFromStores(items, () => {
+  const stateFromStores = _require(504).useStateFromStores(items, () => {
     let isFriendResult = null != recipientId;
     if (isFriendResult) {
       isFriendResult = closure_1_4.isFriend(tmp);
     }
     return isFriendResult;
   });
-  const obj = _require(586);
+  const obj = _require(504);
   const items1 = [closure_4];
-  const stateFromStores1 = _require(586).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require(504).useStateFromStores(items1, () => {
     let isIgnoredResult = null != recipientId;
     if (isIgnoredResult) {
       isIgnoredResult = closure_1_4.isIgnored(tmp);
     }
     return isIgnoredResult;
   });
-  const obj2 = _require(586);
+  const obj2 = _require(504);
   const items2 = [closure_3];
-  const stateFromStores2 = _require(586).useStateFromStores(items2, () => {
+  const stateFromStores2 = _require(504).useStateFromStores(items2, () => {
     const messages = closure_1_3.getMessages(isDM.id);
     let tmp = 1 === messages.length;
     if (tmp) {
@@ -53,16 +53,16 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
     return tmp;
   });
   let hasFlagResult = isDM.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
-  const obj3 = _require(586);
+  const obj3 = _require(504);
   const items3 = [closure_3];
-  const stateFromStores3 = _require(586).useStateFromStores(items3, () => closure_1_3.hasCurrentUserSentWaveBlockingMessage(isDM.id));
-  const obj4 = _require(586);
+  const stateFromStores3 = _require(504).useStateFromStores(items3, () => closure_1_3.hasCurrentUserSentWaveBlockingMessage(isDM.id));
+  const obj4 = _require(504);
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
-  const obj6 = _require(4163);
-  const tmp9 = recipientId(4074)();
-  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(4074)(), recipientId(4074)(extractTimestampResult), 1814400000);
-  const strangerDangerWarning = _require(11225).useStrangerDangerWarning(isDM.id);
+  const obj6 = _require(4242);
+  const tmp9 = recipientId(4153)();
+  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(4153)(), recipientId(4153)(extractTimestampResult), 1814400000);
+  const strangerDangerWarning = _require(11364).useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;
   }

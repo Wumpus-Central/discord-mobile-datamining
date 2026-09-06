@@ -1,8 +1,8 @@
-// === Module 12362: handleModifyingAppliedBoostStart ===
+// === Module 12562: handleModifyingAppliedBoostStart ===
 
-// Module 12362 (handleModifyingAppliedBoostStart)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 12562 (handleModifyingAppliedBoostStart)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 function handleModifyingAppliedBoostStart() {
   c4 = true;

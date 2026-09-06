@@ -1,9 +1,9 @@
-// === Module 11922: useSortApplicationsViaFrecency ===
+// === Module 12121: useSortApplicationsViaFrecency ===
 
-// Module 11922 (useSortApplicationsViaFrecency)
+// Module 12121 (useSortApplicationsViaFrecency)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 8159 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
+import closure_4 from "handleUserSettingsProtoStoreChange" /* 9291 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 1084 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");

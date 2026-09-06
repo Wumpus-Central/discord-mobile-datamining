@@ -1,6 +1,6 @@
-// === Module 4294: metadata ===
+// === Module 4375: metadata ===
 
-// Module 4294 (metadata)
+// Module 4375 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/ThemeAwareNitroWishlistingWumpus.riv.js");

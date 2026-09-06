@@ -1,14 +1,14 @@
-// === Module 17326: handleVoiceStateUpdates ===
+// === Module 17486: handleVoiceStateUpdates ===
 
-// Module 17326 (handleVoiceStateUpdates)
-import initializeDefault from "initialize" /* 5495 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "reinjectEphemerals" /* 4736 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_7 from "handleConnectionOpen" /* 1980 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import { MessageFlags } from "ME" /* 673 */;
+// Module 17486 (handleVoiceStateUpdates)
+import initializeDefault from "initialize" /* 7118 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "reinjectEphemerals" /* 4781 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_7 from "handleConnectionOpen" /* 2011 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import { MessageFlags } from "ME" /* 1074 */;
 
 const require = arg1;
 initializeDefault;

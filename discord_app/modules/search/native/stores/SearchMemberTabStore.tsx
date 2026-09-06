@@ -1,12 +1,12 @@
-// === Module 12162: setAutocompleteOptions ===
+// === Module 12364: setAutocompleteOptions ===
 
-// Module 12162 (setAutocompleteOptions)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5465 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 9950 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import { Permissions } from "ME" /* 673 */;
+// Module 12364 (setAutocompleteOptions)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5519 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 9835 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import { Permissions } from "ME" /* 1074 */;
 
 const require = arg1;
 let closure_6 = [];
@@ -170,7 +170,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(dispatch
         }
       };
       let tmp4 = sortByMatchScoreDefault;
-      let items = [obj(9950).AutocompleterResultTypes.USER];
+      let items = [obj(9835).AutocompleterResultTypes.USER];
       tmp4 = new tmp4(onAutocompleterResultsChange, items, 50);
       obj.autocompleter = tmp4;
       const autocompleter = obj.autocompleter;

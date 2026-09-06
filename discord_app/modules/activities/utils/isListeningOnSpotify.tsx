@@ -1,10 +1,10 @@
-// === Module 9273: isListeningOnSpotify ===
+// === Module 10891: isListeningOnSpotify ===
 
-// Module 9273 (isListeningOnSpotify)
+// Module 10891 (isListeningOnSpotify)
 import set from "set" /* 2 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5236 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8630 */;
-import ME from "ME" /* 673 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5283 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8340 */;
+import ME from "ME" /* 1074 */;
 
 ({ ActivityTypes: obj1, PlatformTypes: c3 } = ME);
 const isSpotifyParty = SPOTIFY_APP_PROTOCOL.isSpotifyParty;

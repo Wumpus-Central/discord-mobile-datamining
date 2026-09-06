@@ -1,10 +1,10 @@
-// === Module 17035: useSoundboardConfig ===
+// === Module 17199: useSoundboardConfig ===
 
-// Module 17035 (useSoundboardConfig)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16873 */;
+// Module 17199 (useSoundboardConfig)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17037 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
 
 const require = arg1;
 let obj = { VOICE_CONTROLS: "call control drawer", VOICE_PANEL_CONTROLS: "voice panel controls" };
@@ -14,10 +14,10 @@ export default function useSoundboardConfig(arg0, arg1) {
   const _require = arg0;
   importDefault = arg1;
   let tmp2 = useIsConnectedToVoiceChannelDefault(arg0);
-  obj = _require(586);
+  obj = _require(504);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => deaf.isDeaf());
-  const obj2 = _require(4298);
+  const obj2 = _require(4380);
   if (tmp2) {
     if (obj.VOICE_CONTROLS === arg1) {
       let flag = true;
@@ -46,11 +46,11 @@ export default function useSoundboardConfig(arg0, arg1) {
   obj[2] = tmp8;
   let stringResult;
   if (stateFromStores) {
-    const intl = tmp3(1233).intl;
-    stringResult = intl.string(tmp3(1233).t.X1lQli);
+    const intl = tmp3(1114).intl;
+    stringResult = intl.string(tmp3(1114).t.X1lQli);
   }
   obj[3] = stringResult;
-  obj[4] = !_require(4298).useIsDismissibleContentDismissed_UNSAFE(_require(1372).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
+  obj[4] = !_require(4380).useIsDismissibleContentDismissed_UNSAFE(_require(1943).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
   return obj;
 };
 export const SoundboardButtonLocation = obj;

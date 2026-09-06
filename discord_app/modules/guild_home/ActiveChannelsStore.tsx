@@ -1,13 +1,13 @@
-// === Module 13596: truncateOldMessageData ===
+// === Module 13705: truncateOldMessageData ===
 
-// Module 13596 (truncateOldMessageData)
+// Module 13705 (truncateOldMessageData)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "handleConnectionOpen" /* 4299 */;
-import { isGuildHomeChannel } from "set" /* 1393 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "handleConnectionOpen" /* 4381 */;
+import { isGuildHomeChannel } from "set" /* 1964 */;
 
 function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {

@@ -1,21 +1,21 @@
-// === Module 16130: findGuildSectionIndex ===
+// === Module 16292: findGuildSectionIndex ===
 
-// Module 16130 (findGuildSectionIndex)
+// Module 16292 (findGuildSectionIndex)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5230 */;
-import closure_5 from "initialize" /* 4121 */;
-import closure_6 from "processChannel" /* 6075 */;
-import closure_7 from "processChannel" /* 6076 */;
-import closure_8 from "getGeoRestrictedGuilds" /* 13637 */;
-import closure_9 from "handleConnectionOpen" /* 4856 */;
-import closure_10 from "trackCommunicationDisabled" /* 1991 */;
-import closure_11 from "createGuildRecordFromRust" /* 1908 */;
-import closure_12 from "rebuildUnreads" /* 13645 */;
-import closure_13 from "handleConnectionOpen" /* 4299 */;
-import closure_14 from "insertUnsortedGuilds" /* 5390 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5390 */;
-import closure_16 from "withEqualityFn" /* 16122 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16123 */;
+import closure_4 from "_handleConnectionOpen" /* 5277 */;
+import closure_5 from "initialize" /* 4200 */;
+import closure_6 from "processChannel" /* 7219 */;
+import closure_7 from "processChannel" /* 7220 */;
+import closure_8 from "getGeoRestrictedGuilds" /* 13745 */;
+import closure_9 from "handleConnectionOpen" /* 4902 */;
+import closure_10 from "trackCommunicationDisabled" /* 2021 */;
+import closure_11 from "createGuildRecordFromRust" /* 1979 */;
+import closure_12 from "rebuildUnreads" /* 13753 */;
+import closure_13 from "handleConnectionOpen" /* 4381 */;
+import closure_14 from "insertUnsortedGuilds" /* 5438 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5438 */;
+import closure_16 from "withEqualityFn" /* 16284 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16285 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -466,11 +466,11 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((arg0) => {
             if ("unavailable-guilds" === arg0) {
-              return callback2(callback(16187), {}, arg0);
+              return callback2(callback(16349), {}, arg0);
             } else if ("empty-nux" === arg0) {
-              return callback2(callback(16188), {}, arg0);
+              return callback2(callback(16350), {}, arg0);
             } else if ("create-join-guild" === arg0) {
-              return callback2(callback(16190), {}, arg0);
+              return callback2(callback(16352), {}, arg0);
             }
           })
         };

@@ -1,11 +1,11 @@
-// === Module 8053: hasFetchedColors ===
+// === Module 8132: hasFetchedColors ===
 
-// Module 8053 (hasFetchedColors)
+// Module 8132 (hasFetchedColors)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import keys from "keys" /* 641 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import keys from "keys" /* 560 */;
 
 const require = arg1;
 function hasFetchedColors(game_name) {
@@ -150,7 +150,7 @@ function _fetchColors() {
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              callback(702).batchUpdates(() => closure_1_7.setState((fetching) => {
+              callback(1249).batchUpdates(() => closure_1_7.setState((fetching) => {
                 let obj = { fetching: null };
                 obj = {};
                 const merged = Object.assign(fetching.fetching);
@@ -158,15 +158,15 @@ function _fetchColors() {
                 obj[0] = obj;
                 return obj;
               }));
-              const obj4 = callback(702);
+              const obj4 = callback(1249);
             } else if (arg0 === 1) {
               c6 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
               table = arg1;
-              obj = callback(4326);
+              obj = callback(4409);
               dependencyMap = obj.getComplimentaryPaletteForColor(table[0]);
-              obj1 = callback(702);
+              obj1 = callback(1249);
               obj1.batchUpdates(() => {
                 closure_1_7.setState((fetching) => {
                   let obj = { fetching: null, palette: null };
@@ -235,7 +235,7 @@ export default function useAvatarColor(arg0, arg1) {
   });
   dependencyMap = tmp;
   const items = [closure_6];
-  stateFromStores = _require(586).useStateFromStores(items, () => {
+  stateFromStores = _require(504).useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;
@@ -315,7 +315,7 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
   });
   dependencyMap = tmp;
   const items = [closure_6];
-  stateFromStores = _require(586).useStateFromStores(items, () => {
+  stateFromStores = _require(504).useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;

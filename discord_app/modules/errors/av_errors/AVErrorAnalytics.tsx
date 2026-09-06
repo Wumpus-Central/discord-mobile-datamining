@@ -1,18 +1,18 @@
-// === Module 17692: getCurrentScreenshareCaptureMethod ===
+// === Module 17852: getCurrentScreenshareCaptureMethod ===
 
-// Module 17692 (getCurrentScreenshareCaptureMethod)
+// Module 17852 (getCurrentScreenshareCaptureMethod)
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "updateAveragedStatsHelper" /* 4567 */;
-import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo" /* 4551 */;
-import closure_6 from "ApplicationStreamPresets" /* 4572 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_9 from "createRTCConnection" /* 4554 */;
-import closure_10 from "initialize" /* 4575 */;
-import closure_11 from "handleConnectionOpen" /* 1980 */;
-import closure_12 from "initialize" /* 4568 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+import closure_4 from "updateAveragedStatsHelper" /* 4598 */;
+import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo" /* 4605 */;
+import closure_6 from "ApplicationStreamPresets" /* 4606 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_9 from "createRTCConnection" /* 4583 */;
+import closure_10 from "initialize" /* 4610 */;
+import closure_11 from "handleConnectionOpen" /* 2011 */;
+import closure_12 from "initialize" /* 4599 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 const require = arg1;
 function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {

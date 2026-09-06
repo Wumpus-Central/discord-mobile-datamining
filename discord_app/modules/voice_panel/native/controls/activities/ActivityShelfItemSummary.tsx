@@ -1,20 +1,20 @@
-// === Module 16984: ParticipantsSummary ===
+// === Module 17148: ParticipantsSummary ===
 
-// Module 16984 (ParticipantsSummary)
+// Module 17148 (ParticipantsSummary)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import _modDef4217 from "module_4217" /* 4217 */;
-import Text from "Text" /* 4474 */;
-import PillWrapper from "PillWrapper" /* 4939 */;
-import EllipsisCircle from "EllipsisCircle" /* 4945 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10163 */;
-import useActivityUsersDefault from "useActivityUsers" /* 16985 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import _modDef4296 from "module_4296" /* 4296 */;
+import Text from "Text" /* 4556 */;
+import PillWrapper from "PillWrapper" /* 4985 */;
+import EllipsisCircle from "EllipsisCircle" /* 4991 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10054 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17149 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
 
 require = arg1;
 function ParticipantsSummary(arg0) {
@@ -57,7 +57,7 @@ export default function ActivityShelfItemSummary(submitting) {
     tmp7Result = tmp7(EllipsisCircle.Ellipsis, { variant: "active", size: "md" });
   }
   obj2[1] = tmp7Result;
-  items[1] = closure_5(_modDef4217.View, obj2);
+  items[1] = closure_5(_modDef4296.View, obj2);
   obj[1] = items;
   const items2 = [closure_6(View, obj), closure_5(ParticipantsSummary, { channelId, applicationId })];
   obj[1] = items2;

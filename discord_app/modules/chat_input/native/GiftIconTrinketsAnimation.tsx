@@ -1,16 +1,16 @@
-// === Module 12046: GiftIconTrinketsAnimation ===
+// === Module 12250: GiftIconTrinketsAnimation ===
 
-// Module 12046 (GiftIconTrinketsAnimation)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import set from "set" /* 1234 */;
-import map from "map" /* 4197 */;
-import preloadDefault from "preload" /* 5502 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8534 */;
+// Module 12250 (GiftIconTrinketsAnimation)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import set from "set" /* 1115 */;
+import map from "map" /* 4262 */;
+import preloadDefault from "preload" /* 5587 */;
+import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8808 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;

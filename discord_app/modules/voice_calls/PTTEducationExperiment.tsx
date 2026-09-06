@@ -1,8 +1,8 @@
-// === Module 13729: apexExperiment ===
+// === Module 14001: apexExperiment ===
 
-// Module 13729 (apexExperiment)
+// Module 14001 (apexExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 let obj = { showPTTJoinTooltip: false, showPTTIconIndicator: false, showPTTNoKeybindWarning: false, showPTTSpeakingIndicator: false };
 obj = { name: "2025-12-09-ptt-education", kind: "user", defaultConfig: obj, variations: null };

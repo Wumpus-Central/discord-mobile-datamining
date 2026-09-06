@@ -1,9 +1,9 @@
-// === Module 8736: _requestGoogleWalletVerification ===
+// === Module 8448: _requestGoogleWalletVerification ===
 
-// Module 8736 (_requestGoogleWalletVerification)
+// Module 8448 (_requestGoogleWalletVerification)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import { Endpoints } from "ME" /* 673 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _requestGoogleWalletVerification() {
@@ -133,8 +133,8 @@ function _verifyGoogleWalletCredential() {
               obj[0] = arg1;
               return obj;
             } else {
-              const result = callback(8708).isCurrentUserSuspended();
-              const HTTP = callback(527).HTTP;
+              const result = callback(8418).isCurrentUserSuspended();
+              const HTTP = callback(1272).HTTP;
               const post = HTTP.post;
               obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
               if (result) {
@@ -159,7 +159,7 @@ function _verifyGoogleWalletCredential() {
                 obj5[0] = post(obj1);
                 return obj5;
               }
-              const obj9 = callback(8708);
+              const obj9 = callback(8418);
             }
           } else {
             if (1 === tmp4) {

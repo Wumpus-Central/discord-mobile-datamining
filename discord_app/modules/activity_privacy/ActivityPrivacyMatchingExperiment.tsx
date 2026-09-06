@@ -1,9 +1,9 @@
-// === Module 15749: useIsInActivityPrivacyCopyExperiment ===
+// === Module 15907: useIsInActivityPrivacyCopyExperiment ===
 
-// Module 15749 (useIsInActivityPrivacyCopyExperiment)
+// Module 15907 (useIsInActivityPrivacyCopyExperiment)
 import set from "set" /* 2 */;
-import apexExperiment from "apexExperiment" /* 12745 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import apexExperiment from "apexExperiment" /* 13075 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-02-activity-privacy-matching", kind: "user", defaultConfig: { copyChanges: false, upsell: false }, variations: { 0: { copyChanges: false, upsell: false }, 1: { copyChanges: true, upsell: false }, 2: { copyChanges: true, upsell: true } } });
 const result = set.fileFinishedImporting("modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx");

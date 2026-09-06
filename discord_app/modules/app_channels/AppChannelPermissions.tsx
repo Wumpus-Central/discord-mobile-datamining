@@ -1,9 +1,9 @@
-// === Module 4127: Permissions ===
+// === Module 4206: Permissions ===
 
-// Module 4127 (Permissions)
+// Module 4206 (Permissions)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import importAllResult from "fromString" /* 503 */;
+import ME from "ME" /* 1074 */;
+import importAllResult from "fromString" /* 1086 */;
 
 const Permissions = ME.Permissions;
 const items = [, , , , , , ];

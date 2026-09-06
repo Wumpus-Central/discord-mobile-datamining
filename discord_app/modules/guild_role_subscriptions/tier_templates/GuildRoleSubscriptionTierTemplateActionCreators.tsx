@@ -1,9 +1,9 @@
-// === Module 17629: _getTemplates ===
+// === Module 17789: _getTemplates ===
 
-// Module 17629 (_getTemplates)
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 17789 (_getTemplates)
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _getTemplates() {

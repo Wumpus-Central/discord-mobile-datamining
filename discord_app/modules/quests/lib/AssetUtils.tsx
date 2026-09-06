@@ -1,20 +1,20 @@
-// === Module 11146: resolveAsset ===
+// === Module 11285: resolveAsset ===
 
-// Module 11146 (resolveAsset)
+// Module 11285 (resolveAsset)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1894 */;
-import set2 from "set" /* 5403 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7464 */;
-import metadataDefault from "metadata" /* 11147 */;
-import metadataDefault2 from "metadata" /* 11148 */;
-import metadataDefault3 from "metadata" /* 11149 */;
-import metadataDefault4 from "metadata" /* 11150 */;
-import _getDefaultRewardName from "_getDefaultRewardName" /* 11151 */;
-import metadataDefault5 from "metadata" /* 11158 */;
-import metadataDefault6 from "metadata" /* 11159 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5396 */;
+import ME from "ME" /* 1074 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1878 */;
+import set2 from "set" /* 5452 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7708 */;
+import metadataDefault from "metadata" /* 11286 */;
+import metadataDefault2 from "metadata" /* 11287 */;
+import metadataDefault3 from "metadata" /* 11288 */;
+import metadataDefault4 from "metadata" /* 11289 */;
+import _getDefaultRewardName from "_getDefaultRewardName" /* 11290 */;
+import metadataDefault5 from "metadata" /* 11297 */;
+import metadataDefault6 from "metadata" /* 11298 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
 
 function resolveAsset(id, questBarHeroVideo) {
   if (questBarHeroVideo.startsWith("blob:")) {

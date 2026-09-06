@@ -1,9 +1,9 @@
-// === Module 13669: NUFVoiceChannelsTemplate ===
+// === Module 13777: NUFVoiceChannelsTemplate ===
 
-// Module 13669 (NUFVoiceChannelsTemplate)
+// Module 13777 (NUFVoiceChannelsTemplate)
 import noopAll from "noop" /* 19 */;
-import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 13670 */;
-import registerAssetDefault from "registerAsset" /* 13671 */;
+import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 13778 */;
+import registerAssetDefault from "registerAsset" /* 13779 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -13,13 +13,13 @@ let result = require("set").fileFinishedImporting("modules/nuf_channels/native/c
 export default function NUFVoiceChannelsTemplate(channel) {
   channel = channel.channel;
   let obj = { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null };
-  const intl = channel(1233).intl;
-  obj[0] = intl.string(channel(1233).t.w5HAll);
-  const intl2 = channel(1233).intl;
-  obj[1] = intl2.string(channel(1233).t.Ww4hhq);
+  const intl = channel(1114).intl;
+  obj[0] = intl.string(channel(1114).t.w5HAll);
+  const intl2 = channel(1114).intl;
+  obj[1] = intl2.string(channel(1114).t.Ww4hhq);
   obj[2] = registerAssetDefault;
-  const intl3 = channel(1233).intl;
-  obj[3] = intl3.string(channel(1233).t.eIi3Om);
+  const intl3 = channel(1114).intl;
+  obj[3] = intl3.string(channel(1114).t.eIi3Om);
   obj[4] = function onCTAPress() {
     const result = closure_1_1(closure_1_3[5]).handleVoiceChannelsOnboard();
     const obj = closure_1_1(closure_1_3[5]);

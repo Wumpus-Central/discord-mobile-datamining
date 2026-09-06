@@ -1,13 +1,13 @@
-// === Module 4679: resolveCreatingNotes ===
+// === Module 4718: resolveCreatingNotes ===
 
-// Module 4679 (resolveCreatingNotes)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 4680 */;
+// Module 4718 (resolveCreatingNotes)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 4719 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import closure_7 from "createRTCConnection" /* 4554 */;
-import closure_8 from "handleConnectionOpen" /* 1980 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import closure_7 from "createRTCConnection" /* 4583 */;
+import closure_8 from "handleConnectionOpen" /* 2011 */;
 
 require = arg1;
 function resolveCreatingNotes(roomId, objects) {

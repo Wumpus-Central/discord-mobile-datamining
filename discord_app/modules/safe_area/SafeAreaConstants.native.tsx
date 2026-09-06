@@ -1,10 +1,10 @@
-// === Module 1629: EMPTY_SAFE_AREA_INSETS ===
+// === Module 1613: EMPTY_SAFE_AREA_INSETS ===
 
-// Module 1629 (EMPTY_SAFE_AREA_INSETS)
+// Module 1613 (EMPTY_SAFE_AREA_INSETS)
 import set from "set" /* 2 */;
-import _mod1630 from "module_1630" /* 1630 */;
+import _mod1614 from "module_1614" /* 1614 */;
 
-const initialWindowMetrics = _mod1630.initialWindowMetrics;
+const initialWindowMetrics = _mod1614.initialWindowMetrics;
 let insets;
 if (initialWindowMetrics != null) {
   insets = initialWindowMetrics.insets;

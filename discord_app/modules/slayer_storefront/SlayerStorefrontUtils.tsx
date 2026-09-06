@@ -1,21 +1,21 @@
-// === Module 6082: getPrice ===
+// === Module 7226: getPrice ===
 
-// Module 6082 (getPrice)
+// Module 7226 (getPrice)
 import applyDefault from "apply" /* 12 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4756 */;
-import keysSorter from "keysSorter" /* 5407 */;
-import RewardRequirementType from "RewardRequirementType" /* 6086 */;
-import useSKUPrice from "useSKUPrice" /* 6087 */;
-import closure_3 from "addApplication" /* 4519 */;
-import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 6083 */;
-import closure_5 from "createExecutable" /* 4504 */;
-import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 6084 */;
-import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 6085 */;
-import ME from "ME" /* 673 */;
-import { CollectibleShopTab } from "items" /* 675 */;
-import { CurrencyCodes } from "sum" /* 502 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4802 */;
+import keysSorter from "keysSorter" /* 5456 */;
+import RewardRequirementType from "RewardRequirementType" /* 7230 */;
+import useSKUPrice from "useSKUPrice" /* 7231 */;
+import closure_3 from "addApplication" /* 4788 */;
+import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 7227 */;
+import closure_5 from "createExecutable" /* 1918 */;
+import closure_6 from "createGuildRecordFromRust" /* 1979 */;
+import closure_7 from "handleUserSettingsStoreUpdate" /* 7228 */;
+import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 7229 */;
+import ME from "ME" /* 1074 */;
+import { CollectibleShopTab } from "items" /* 1076 */;
+import { CurrencyCodes } from "sum" /* 1085 */;
 
 require = arg1;
 function getPrice(price) {
@@ -63,10 +63,8 @@ function hasSocialLayerStorefront(guild) {
       }
       applicationIdFromGuildId = first;
     }
-    const storefrontApplicationIds = obj.getStorefrontApplicationIds();
-    const tmp5 = null == applicationIdFromGuildId || !storefrontApplicationIds.has(applicationIdFromGuildId);
-    let tmp6 = !tmp5;
-    if (tmp5) {
+    let result = obj.hasStorefrontForApplicationId(applicationIdFromGuildId);
+    if (!result) {
       const features = guild.features;
       let flag;
       if (features != null) {
@@ -75,9 +73,9 @@ function hasSocialLayerStorefront(guild) {
       if (flag == null) {
         flag = false;
       }
-      tmp6 = flag;
+      result = flag;
     }
-    return tmp6;
+    return result;
   }
 }
 function transformRewardRequirementServer(type) {
@@ -450,7 +448,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
+          obj = { primaryIconAsset: "hash", primaryIconLabel: "call" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -463,7 +461,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
+  return { primaryIconAsset: "hash", primaryIconLabel: "call" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;
@@ -659,9 +657,9 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
 export const useGetSocialLayerStorefrontGuildIdAndApplication = function useGetSocialLayerStorefrontGuildIdAndApplication(applicationId) {
   const _require = applicationId;
   const items = [closure_7];
-  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
-  const obj = _require(586);
-  const application = _require(5968).useGetOrFetchApplication(applicationId);
+  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
+  const obj = _require(504);
+  const application = _require(7168).useGetOrFetchApplication(applicationId);
   let guildId = stateFromStores;
   if (stateFromStores == null) {
     guildId = undefined;
@@ -693,11 +691,11 @@ export const getSocialLayerStorefrontApplicationId = function getSocialLayerStor
 export const useGetSocialLayerStorefrontApplicationId = function useGetSocialLayerStorefrontApplicationId(arg0) {
   const _require = arg0;
   const items = [closure_7];
-  let stateFromStores = _require(586).useStateFromStores(items, () => closure_1_7.getApplicationIdFromGuildId(closure_0));
-  const obj = _require(586);
+  let stateFromStores = _require(504).useStateFromStores(items, () => closure_1_7.getApplicationIdFromGuildId(closure_0));
+  const obj = _require(504);
   const items1 = [closure_6];
   const items2 = [arg0];
-  const stateFromStores1 = _require(586).useStateFromStores(items1, () => closure_1_6.getGuild(closure_0), items2);
+  const stateFromStores1 = _require(504).useStateFromStores(items1, () => closure_1_6.getGuild(closure_0), items2);
   if (stateFromStores == null) {
     let length;
     if (stateFromStores1 != null) {

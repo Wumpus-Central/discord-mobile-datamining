@@ -1,10 +1,10 @@
-// === Module 12332: ScreenArrowIcon ===
+// === Module 12532: ScreenArrowIcon ===
 
-// Module 12332 (ScreenArrowIcon)
+// Module 12532 (ScreenArrowIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 10081 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 9972 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

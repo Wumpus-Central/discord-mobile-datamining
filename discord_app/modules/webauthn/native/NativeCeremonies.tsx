@@ -1,6 +1,6 @@
-// === Module 7734: _promptForRegisterCredential ===
+// === Module 6949: _promptForRegisterCredential ===
 
-// Module 7734 (_promptForRegisterCredential)
+// Module 6949 (_promptForRegisterCredential)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -126,7 +126,7 @@ let closure_4 = new timestampDefault("WebAuthnUtils");
 let obj = {};
 Object.defineProperty(obj, "hasAndroidPasskeySupport", {
   get: () => {
-    let isAndroidResult = require(1234) /* set */.isAndroid();
+    let isAndroidResult = require(1115) /* set */.isAndroid();
     if (isAndroidResult) {
       const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
       let registerPasskey;
@@ -141,10 +141,10 @@ Object.defineProperty(obj, "hasAndroidPasskeySupport", {
 });
 Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
   get: () => {
-    let isAndroidResult = require(1234) /* set */.isAndroid();
+    let isAndroidResult = require(1115) /* set */.isAndroid();
     if (isAndroidResult) {
-      isAndroidResult = !require(1623) /* isMetaQuest */.isMetaQuest();
-      const tmpResult = require(1623) /* isMetaQuest */;
+      isAndroidResult = !require(1608) /* isMetaQuest */.isMetaQuest();
+      const tmpResult = require(1608) /* isMetaQuest */;
     }
     return isAndroidResult;
   },
@@ -152,7 +152,7 @@ Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
 });
 obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   let authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticate;
-  let isAndroidResult = authenticatePasskey(1234).isAndroid();
+  let isAndroidResult = authenticatePasskey(1115).isAndroid();
   if (isAndroidResult) {
     const DCDSecurityKeyManager = tmp.DCDSecurityKeyManager;
     authenticatePasskey = undefined;

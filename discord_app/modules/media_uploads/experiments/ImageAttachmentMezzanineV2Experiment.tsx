@@ -1,8 +1,8 @@
-// === Module 5133: getImageAttachmentMezzanineV2Config ===
+// === Module 5180: getImageAttachmentMezzanineV2Config ===
 
-// Module 5133 (getImageAttachmentMezzanineV2Config)
+// Module 5180 (getImageAttachmentMezzanineV2Config)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2025-09-image-attachment-mezzanine-v2", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true, maxFileSizeBytes: 524288 }, 2: { enabled: true, maxFileSizeBytes: 262144 } } });
 const result = set.fileFinishedImporting("modules/media_uploads/experiments/ImageAttachmentMezzanineV2Experiment.tsx");

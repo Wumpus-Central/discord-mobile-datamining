@@ -1,17 +1,17 @@
-// === Module 15073: getUsedTemplateChannelsForGuild ===
+// === Module 15233: getUsedTemplateChannelsForGuild ===
 
-// Module 15073 (getUsedTemplateChannelsForGuild)
-import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 6116 */;
-import GuildFeatures2 from "GuildFeatures" /* 13871 */;
+// Module 15233 (getUsedTemplateChannelsForGuild)
+import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 7260 */;
+import GuildFeatures2 from "GuildFeatures" /* 13893 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { useMemo } from "noop" /* 19 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "makeGroupListingIndexSubscriptionListingTag" /* 4114 */;
-import { useEditStateStore } from "AllChannelAccessOptions" /* 15068 */;
-import closure_9 from "initialize" /* 15074 */;
-import { GuildFeatures } from "ME" /* 673 */;
-import { ChannelFlags } from "set" /* 1393 */;
-import importDefaultResult from "allSettled" /* 4757 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "makeGroupListingIndexSubscriptionListingTag" /* 4193 */;
+import { useEditStateStore } from "AllChannelAccessOptions" /* 15228 */;
+import closure_9 from "initialize" /* 15234 */;
+import { GuildFeatures } from "ME" /* 1074 */;
+import { ChannelFlags } from "set" /* 1964 */;
+import importDefaultResult from "allSettled" /* 4803 */;
 
 require = arg1;
 function getUsedTemplateChannelsForGuild(arg0) {
@@ -159,13 +159,13 @@ let result = require("set").fileFinishedImporting("modules/guild_role_subscripti
 export const useChannelWithTemplateFallback = function useChannelWithTemplateFallback(ref_id) {
   const _require = ref_id;
   const items = [closure_6];
-  const stateFromStores = _require(644).useStateFromStores(items, () => closure_1_6.getChannel(closure_0));
-  let obj = _require(644);
+  const stateFromStores = _require(563).useStateFromStores(items, () => closure_1_6.getChannel(closure_0));
+  let obj = _require(563);
   const items1 = [closure_9];
-  let stateFromStores1 = _require(644).useStateFromStores(items1, () => closure_1_9.getChannel(closure_0));
-  let obj3 = _require(644);
+  let stateFromStores1 = _require(563).useStateFromStores(items1, () => closure_1_9.getChannel(closure_0));
+  let obj3 = _require(563);
   const items2 = [closure_7];
-  const stateFromStores2 = _require(644).useStateFromStores(items2, () => closure_1_7.getBenefitChannel(closure_0));
+  const stateFromStores2 = _require(563).useStateFromStores(items2, () => closure_1_7.getBenefitChannel(closure_0));
   const items3 = [stateFromStores, stateFromStores2];
   let tmp3 = useMemo(() => {
     let obj = stateFromStores;
@@ -200,7 +200,7 @@ export const useChannelWithTemplateFallback = function useChannelWithTemplateFal
 export const useSuggestedUnusedPrices = function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
   const _require = guildId;
   const items = [closure_7];
-  const stateFromStores = _require(644).useStateFromStores(items, () => closure_1_7.getSubscriptionListingsForGuild(closure_0));
+  const stateFromStores = _require(563).useStateFromStores(items, () => closure_1_7.getSubscriptionListingsForGuild(closure_0));
   const arr3 = useEditStateStore((arg0) => arg0.editStateIdsForGroup[closure_0]);
   closure_1 = useEditStateStore((listings) => listings.listings);
   if (undefined !== price_tier) {

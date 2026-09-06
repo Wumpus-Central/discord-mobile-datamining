@@ -1,9 +1,9 @@
-// === Module 9248: useShouldShowMutualInfo ===
+// === Module 12994: useShouldShowMutualInfo ===
 
-// Module 9248 (useShouldShowMutualInfo)
-import initialize from "initialize" /* 586 */;
-import useIsUserProfileObfuscatedDefault from "useIsUserProfileObfuscated" /* 9249 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
+// Module 12994 (useShouldShowMutualInfo)
+import initialize from "initialize" /* 504 */;
+import useIsUserProfileObfuscatedDefault from "useIsUserProfileObfuscated" /* 12995 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useShouldShowMutualInfo.tsx");

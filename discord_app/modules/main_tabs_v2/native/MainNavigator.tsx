@@ -1,25 +1,25 @@
-// === Module 15778: getAuthComponent ===
+// === Module 15940: getAuthComponent ===
 
-// Module 15778 (getAuthComponent)
-import AccessibleNativeStackNavigatorDefault from "AccessibleNativeStackNavigator" /* 14055 */;
-import ChatPanelNativeStackNavigatorDefault from "ChatPanelNativeStackNavigator" /* 15780 */;
-import componentDidMount from "componentDidMount" /* 16570 */;
+// Module 15940 (getAuthComponent)
+import AccessibleNativeStackNavigatorDefault from "AccessibleNativeStackNavigator" /* 14173 */;
+import ChatPanelNativeStackNavigatorDefault from "ChatPanelNativeStackNavigator" /* 15942 */;
+import componentDidMount from "componentDidMount" /* 16736 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import { StackNavigationAnimationSettings as closure_7 } from "StackNavigationAnimationSettings" /* 15779 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import { StackNavigationAnimationSettings as closure_7 } from "StackNavigationAnimationSettings" /* 15941 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 1234 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import set from "set" /* 1115 */;
 
 require = arg1;
 function getAuthComponent() {
-  return require(15781) /* getInitialAuthRouteStack */.default;
+  return require(15943) /* getInitialAuthRouteStack */.default;
 }
 function getTabsComponent() {
-  return require(15840).default;
+  return require(16002).default;
 }
 function getChannelComponent() {
   return View;
@@ -28,37 +28,37 @@ function WrappedAutoAnalytics() {
   return callback2(componentDidMount.default, {});
 }
 function getMemberVerificationComponent() {
-  return require(16576) /* Loading */.default;
+  return require(16743) /* Loading */.default;
 }
 function getFriendsNavigatorComponent() {
-  return require(16579) /* RequestsSettingsModalButton */.default;
+  return require(16746) /* RequestsSettingsModalButton */.default;
 }
 function getYouComponent() {
-  return require(16617).default;
+  return require(16782).default;
 }
 function getChannelDetailsComponent() {
-  return require(16642) /* ConnectedCreateThreadHeaderButton */.default;
+  return require(16807) /* ConnectedCreateThreadHeaderButton */.default;
 }
 function getConversationsComponent() {
-  return require(7833) /* HeaderWithBorder */.default;
+  return require(7912) /* HeaderWithBorder */.default;
 }
 function getSearchComponent() {
-  return require(16699).default;
+  return require(16864).default;
 }
 function getContextMenuCommandNavigatorComponent() {
-  return require(16702) /* ContextMenuCommandNavigator */.default;
+  return require(16867) /* ContextMenuCommandNavigator */.default;
 }
 function getModalComponent() {
-  return require(16706) /* Modal */.default;
+  return require(16871) /* Modal */.default;
 }
 function getMessageRequestsComponent() {
-  return require(16708) /* MessageRequestsNavigator */.default;
+  return require(16873) /* MessageRequestsNavigator */.default;
 }
 function getSettingsComponent() {
-  return require(16737) /* Settings */.default;
+  return require(16902) /* Settings */.default;
 }
 function getAccountStanding() {
-  return require(16742) /* SuspendedUserSafetyHubPage */.default;
+  return require(16907) /* SuspendedUserSafetyHubPage */.default;
 }
 let c4 = importAllResult;
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: c9 } = ME);
@@ -73,7 +73,7 @@ if (set) {
 function getChannelScreen() {
   let animation = arg0;
   if (arg0 === undefined) {
-    animation = closure_7.animation;
+    animation = animation.animation;
   }
   obj = {
     name: "channel",
@@ -93,12 +93,12 @@ function getChannelScreen() {
   };
   obj = {
     beforeRemove(data) {
-      let obj = animation(4340);
+      let obj = animation(4425);
       if (null != obj.getBestActiveInput()) {
         obj = { type: null };
-        obj[0] = tmp(1625).KeyboardTypes.SYSTEM;
-        tmp(1496).setKeyboardType(obj);
-        const tmpResult = tmp(1496);
+        obj[0] = tmp(1609).KeyboardTypes.SYSTEM;
+        tmp(1481).setKeyboardType(obj);
+        const tmpResult = tmp(1481);
       }
       data = data.data;
       let type;
@@ -113,7 +113,7 @@ function getChannelScreen() {
       } else {
         SWIPE = constants2.SWIPE;
       }
-      callback(4701).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+      callback(4740).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
     }
   };
   return callback2(Screen.Screen, obj);
@@ -133,7 +133,7 @@ export default importAllResult.memo(function StackNavigator() {
   let obj2 = _require(first[31]);
   let items = [accessibilityNativeStackOptions];
   stateFromStores = _require(first[33]).useStateFromStores(items, () => null != accessibilityNativeStackOptions.getSessionId());
-  const tmp6 = callback(homeIndicatorStore.useState(closure_7.animation), 2);
+  const tmp6 = callback(homeIndicatorStore.useState(isMemberVerificationRouteDeprecated.animation), 2);
   first = tmp6[0];
   callback = tmp6[1];
   let obj3 = _require(first[33]);
@@ -141,22 +141,24 @@ export default importAllResult.memo(function StackNavigator() {
   const isChatBesideChannelList = stateFromStores(first[35])().isChatBesideChannelList;
   let obj4 = _require(first[34]);
   accessibilityNativeStackOptions = _require(first[36]).useAccessibilityNativeStackOptions();
-  let items1 = [tmp, stateFromStores, homeIndicatorStore, accessibilityNativeStackOptions, first, isChatBesideChannelList];
+  let obj5 = _require(first[36]);
+  isMemberVerificationRouteDeprecated = _require(first[37]).useIsMemberVerificationRouteDeprecated("MainNavigator");
+  let items1 = [tmp, stateFromStores, homeIndicatorStore, accessibilityNativeStackOptions, first, isChatBesideChannelList, isMemberVerificationRouteDeprecated];
   return homeIndicatorStore.useMemo(() => {
-    let obj = { profile: lib(first[37]).Profiles.MainNavigator, children: null };
+    let obj = { profile: lib(first[38]).Profiles.MainNavigator, children: null };
     obj = { style: lib.flex, nativeID: closure_1_13, collapsableChildren: false, children: null };
-    const tmp4 = stateFromStores(first[37]);
-    const tmp7 = stateFromStores(first[38]);
-    const tmp8 = stateFromStores(first[39]);
+    const tmp4 = stateFromStores(first[38]);
+    const tmp7 = stateFromStores(first[39]);
+    const tmp8 = stateFromStores(first[40]);
     let tmpResult = null;
-    const tmp9 = stateFromStores(first[40]);
+    const tmp9 = stateFromStores(first[41]);
     if (stateFromStores) {
       tmpResult = tmp(closure_1_21, {});
     }
     let items = [tmpResult, ];
     obj = { profile: null, children: null };
-    const tmp10 = stateFromStores(first[41]);
-    obj[0] = lib(first[37]).Profiles.StackNavigator;
+    const tmp10 = stateFromStores(first[42]);
+    obj[0] = lib(first[38]).Profiles.StackNavigator;
     obj1 = {
       id: "root",
       screenOptions() {
@@ -176,7 +178,7 @@ export default importAllResult.memo(function StackNavigator() {
               if (closure_15) {
                 str = "default";
               }
-              const merged = Object.assign(animation(7618).getDefaultStackHeaderProps(navigation.navigation));
+              const merged = Object.assign(animation(7863).getDefaultStackHeaderProps(navigation.navigation));
               const merged1 = Object.assign(closure_7);
               return { orientation: str, headerShown: false };
             },
@@ -184,15 +186,17 @@ export default importAllResult.memo(function StackNavigator() {
           };
           obj = { name: "tabs", getComponent: closure_1_19, options: closure_1_30 };
           const items = [closure_1_10(closure_1_17.Screen, obj), , ];
-          obj = {
-            name: "member-verification",
-            getId(params) {
+          let tmp4Result = null;
+          if (!closure_7) {
+            obj = { name: "member-verification", getId: null, getComponent: null, options: null };
+            obj[1] = function getId(params) {
               return params.params.guildId;
-            },
-            getComponent: closure_1_22,
-            options: { presentation: "transparentModal", animation: "slide_from_bottom" }
-          };
-          items[1] = closure_1_10(closure_1_17.Screen, obj);
+            };
+            obj[2] = closure_1_22;
+            obj[3] = { presentation: "transparentModal", animation: "slide_from_bottom" };
+            tmp4Result = tmp4(tmp3.Screen, obj);
+          }
+          items[1] = tmp4Result;
           let animation;
           if (animation != null) {
             animation = animation.animation;
@@ -221,7 +225,7 @@ export default importAllResult.memo(function StackNavigator() {
             getComponent: closure_1_20
           });
           obj[2] = items;
-          const items1 = [closure_1_11(closure_1_17.Navigator, obj), closure_1_0(closure_1_2[42]).APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO];
+          const items1 = [closure_1_11(closure_1_17.Navigator, obj), closure_1_0(closure_1_2[43]).APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO];
           obj1[0] = items1;
           return closure_1_11(closure_1_12, obj1);
         }
@@ -231,7 +235,7 @@ export default importAllResult.memo(function StackNavigator() {
         name: "conversations",
         getComponent: closure_1_26,
         options() {
-          return callback2(10887)();
+          return callback2(10925)();
         }
       }),
       closure_1_10(closure_1_16.Screen, { name: "auth", getComponent: closure_1_18, options: closure_1_30 }),
@@ -263,7 +267,7 @@ export default importAllResult.memo(function StackNavigator() {
           }
         }
         obj = {};
-        const merged = Object.assign(closure_1_1(closure_1_2[43])(obj));
+        const merged = Object.assign(closure_1_1(closure_1_2[44])(obj));
         tmp3Result = tmp3(tmp[8]);
         obj1 = undefined;
         if (tmp3Result.isAndroid()) {
@@ -293,7 +297,7 @@ export default importAllResult.memo(function StackNavigator() {
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(callback2(10887)({ presentation: str }));
+        const merged = Object.assign(callback2(10925)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -319,7 +323,7 @@ export default importAllResult.memo(function StackNavigator() {
             if (closure_15) {
               str = "default";
             }
-            const merged = Object.assign(animation(7618).getDefaultStackHeaderProps(navigation.navigation));
+            const merged = Object.assign(animation(7863).getDefaultStackHeaderProps(navigation.navigation));
             const merged1 = Object.assign(closure_7);
             return { orientation: str, headerShown: false };
           },
@@ -327,15 +331,17 @@ export default importAllResult.memo(function StackNavigator() {
         };
         obj = { name: "tabs", getComponent: closure_1_19, options: closure_1_30 };
         const items = [closure_1_10(closure_1_17.Screen, obj), , ];
-        obj = {
-          name: "member-verification",
-          getId(params) {
+        let tmp4Result = null;
+        if (!closure_7) {
+          obj = { name: "member-verification", getId: null, getComponent: null, options: null };
+          obj[1] = function getId(params) {
             return params.params.guildId;
-          },
-          getComponent: closure_1_22,
-          options: { presentation: "transparentModal", animation: "slide_from_bottom" }
-        };
-        items[1] = closure_1_10(closure_1_17.Screen, obj);
+          };
+          obj[2] = closure_1_22;
+          obj[3] = { presentation: "transparentModal", animation: "slide_from_bottom" };
+          tmp4Result = tmp4(tmp3.Screen, obj);
+        }
+        items[1] = tmp4Result;
         let animation;
         if (animation != null) {
           animation = animation.animation;
@@ -364,7 +370,7 @@ export default importAllResult.memo(function StackNavigator() {
           getComponent: closure_1_20
         });
         obj[2] = items;
-        const items1 = [closure_1_11(closure_1_17.Navigator, obj), closure_1_0(closure_1_2[42]).APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO];
+        const items1 = [closure_1_11(closure_1_17.Navigator, obj), closure_1_0(closure_1_2[43]).APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO];
         obj1[0] = items1;
         return closure_1_11(closure_1_12, obj1);
       }
@@ -374,7 +380,7 @@ export default importAllResult.memo(function StackNavigator() {
       name: "conversations",
       getComponent: closure_1_26,
       options() {
-        return callback2(10887)();
+        return callback2(10925)();
       }
     };
     const obj5 = { name: "auth", getComponent: closure_1_18, options: closure_1_30 };
@@ -394,7 +400,7 @@ export default importAllResult.memo(function StackNavigator() {
           }
         }
         obj = {};
-        const merged = Object.assign(closure_1_1(closure_1_2[43])(obj));
+        const merged = Object.assign(closure_1_1(closure_1_2[44])(obj));
         tmp3Result = tmp3(tmp[8]);
         obj1 = undefined;
         if (tmp3Result.isAndroid()) {
@@ -408,7 +414,7 @@ export default importAllResult.memo(function StackNavigator() {
       },
       getComponent: closure_1_24
     };
-    const tmp2Result = stateFromStores(first[37]);
+    const tmp2Result = stateFromStores(first[38]);
     let fn;
     if (!tmp5Result.isAndroid()) {
       fn = () => {
@@ -425,13 +431,13 @@ export default importAllResult.memo(function StackNavigator() {
     items1[7] = closure_1_10(closure_1_16.Screen, {
       name: "settings",
       options() {
-        let obj = callback(4457);
+        let obj = callback(4539);
         obj = undefined;
         if (obj.isIpadOS()) {
           obj = { presentation: "modal" };
         }
         obj = {};
-        const merged = Object.assign(callback2(10887)(obj));
+        const merged = Object.assign(callback2(10925)(obj));
         obj.animation = "slide_from_bottom";
         obj.fullScreenGestureEnabled = true;
         return obj;
@@ -442,19 +448,19 @@ export default importAllResult.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: closure_1_25,
       options() {
-        return callback2(10887)({ lockOrientation: false });
+        return callback2(10925)({ lockOrientation: false });
       }
     });
     const obj13 = {
       name: "settings",
       options() {
-        let obj = callback(4457);
+        let obj = callback(4539);
         obj = undefined;
         if (obj.isIpadOS()) {
           obj = { presentation: "modal" };
         }
         obj = {};
-        const merged = Object.assign(callback2(10887)(obj));
+        const merged = Object.assign(callback2(10925)(obj));
         obj.animation = "slide_from_bottom";
         obj.fullScreenGestureEnabled = true;
         return obj;
@@ -465,13 +471,13 @@ export default importAllResult.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: closure_1_25,
       options() {
-        return callback2(10887)({ lockOrientation: false });
+        return callback2(10925)({ lockOrientation: false });
       }
     };
     tmp5Result = lib(first[8]);
-    items1[9] = closure_1_10(closure_1_16.Screen, { name: "message-requests", options: stateFromStores(first[43])(), getComponent: closure_1_31 });
-    const obj15 = { name: "message-requests", options: stateFromStores(first[43])(), getComponent: closure_1_31 };
-    items1[10] = closure_1_10(closure_1_16.Screen, { name: "context-menu-commands", options: stateFromStores(first[43])(), getComponent: closure_1_28 });
+    items1[9] = closure_1_10(closure_1_16.Screen, { name: "message-requests", options: stateFromStores(first[44])(), getComponent: closure_1_31 });
+    const obj15 = { name: "message-requests", options: stateFromStores(first[44])(), getComponent: closure_1_31 };
+    items1[10] = closure_1_10(closure_1_16.Screen, { name: "context-menu-commands", options: stateFromStores(first[44])(), getComponent: closure_1_28 });
     items1[11] = closure_1_10(closure_1_16.Screen, {
       name: "modal",
       getId(params) {
@@ -493,7 +499,7 @@ export default importAllResult.memo(function StackNavigator() {
           }
           str2 = str3;
         }
-        const merged = Object.assign(callback2(10887)({ presentation: str2 }));
+        const merged = Object.assign(callback2(10925)({ presentation: str2 }));
         return obj;
       },
       getComponent: closure_1_29
@@ -504,7 +510,7 @@ export default importAllResult.memo(function StackNavigator() {
     obj12[0] = items;
     obj11[0] = closure_1_11(tmp10, obj12);
     obj10[0] = closure_1_10(tmp9, obj11);
-    const items2 = [closure_1_10(tmp8, obj10), lib(first[42]).APP_EXTRA_COMPONENTS, lib(first[42]).APP_EXTRA_COMPONENTS_NEVER_FREEZE, lib(first[42]).APP_EXTRA_COMPONENTS_EXTERNAL_PIP];
+    const items2 = [closure_1_10(tmp8, obj10), lib(first[43]).APP_EXTRA_COMPONENTS, lib(first[43]).APP_EXTRA_COMPONENTS_NEVER_FREEZE, lib(first[43]).APP_EXTRA_COMPONENTS_EXTERNAL_PIP];
     obj[3] = items2;
     obj[1] = closure_1_11(tmp7, obj);
     return closure_1_10(tmp4, obj);

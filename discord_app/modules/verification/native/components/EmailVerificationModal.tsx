@@ -1,18 +1,18 @@
-// === Module 7700: closeModal ===
+// === Module 5622: closeModal ===
 
-// Module 7700 (closeModal)
-import _modDef7699 from "module_7699" /* 7699 */;
+// Module 5622 (closeModal)
+import _modDef5621 from "module_5621" /* 5621 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { resetChangeEmailStore } from "ChangeEmailFields" /* 7701 */;
-import { VerificationModalScenes } from "ME" /* 673 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import { resetChangeEmailStore } from "ChangeEmailFields" /* 5623 */;
+import { VerificationModalScenes } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function closeModal() {
   resetChangeEmailStore();
-  _modDef7699.close();
+  _modDef5621.close();
 }
 const result = require("set").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
 

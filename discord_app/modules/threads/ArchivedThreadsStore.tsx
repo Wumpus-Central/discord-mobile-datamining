@@ -1,16 +1,16 @@
-// === Module 7521: listKey ===
+// === Module 7766: listKey ===
 
-// Module 7521 (listKey)
+// Module 7766 (listKey)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import set from "set" /* 1395 */;
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7522 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import set from "set" /* 1966 */;
+import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7767 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1390 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "generateOldThreadCutoff" /* 4493 */;
-import closure_7 from "storeThread" /* 4122 */;
+import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1961 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "generateOldThreadCutoff" /* 4575 */;
+import closure_7 from "storeThread" /* 4201 */;
 
 require = arg1;
 function listKey(channelId, sortOrder, tagFilter, tagSetting) {
@@ -109,7 +109,7 @@ function resortListState(value) {
     const mapped = sorted.map((id) => id.id);
     const tmp7Result = applyDefault(store.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
-  } else if (sortOrder === sortOrder(1395).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(1966).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = closure_6.lastMessageId(id);
   } else {
@@ -293,7 +293,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
     } else {
       return false;
     }
-    obj = channel(6161);
+    obj = channel(7307);
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     let flag = false;

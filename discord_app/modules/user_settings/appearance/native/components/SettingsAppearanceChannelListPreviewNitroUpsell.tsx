@@ -1,26 +1,26 @@
-// === Module 15141: SettingsAppearanceChannelListPreviewNitroUpsellComponent ===
+// === Module 15301: SettingsAppearanceChannelListPreviewNitroUpsellComponent ===
 
-// Module 15141 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4928 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4932 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8997 */;
+// Module 15301 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
+import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4978 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9969 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "module_4217" /* 4217 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import importDefaultResult from "module_4296" /* 4296 */;
 
 require = arg1;
 function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   theme = theme.theme;
   let analyticsLocations;
   const tmp = callback3();
-  let obj = theme(4217);
+  let obj = theme(4296);
   const fn = function l() {
     let num = 1;
     if (theme.theme === closure_1_9.LIGHT) {
@@ -31,12 +31,12 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
     obj.opacity = theme(closure_1_2[7]).withSpring(num, theme(closure_1_2[8]).springStandard);
     return obj;
   };
-  obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4928).withSpring, springStandard: theme(4932).springStandard };
+  obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4974).withSpring, springStandard: theme(4978).springStandard };
   fn.__closure = obj;
   fn.__workletHash = 16911565077998;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  analyticsLocations = analyticsLocations(5962)(analyticsLocations(5982).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(7162)(analyticsLocations(7182).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   obj = { style: tmp.nitroUpsell, children: null };
   const callback = importAllResult.useCallback(() => {
@@ -48,11 +48,11 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   }, items);
   const items1 = [callback(closure_12, { style: animatedStyle, importantForAccessibility: "no-hide-descendants", colors: closure_13 }), ];
   const obj2 = { text: null, icon: null, variant: "active", onPress: null, size: "md" };
-  const intl = theme(1233).intl;
-  obj2[0] = intl.string(theme(1233).t.pj0XBN);
-  obj2[1] = callback(theme(1296).NitroWheel, { style: tmp.nitroWheelIcon });
+  const intl = theme(1114).intl;
+  obj2[0] = intl.string(theme(1114).t.pj0XBN);
+  obj2[1] = callback(theme(1178).NitroWheel, { style: tmp.nitroWheelIcon });
   obj2[3] = callback;
-  items1[1] = callback(theme(4929).Button, obj2);
+  items1[1] = callback(theme(4975).Button, obj2);
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -74,7 +74,7 @@ animationEntering.__initData = { code: "function animationEntering_SettingsAppea
 let closure_15 = { code: "function SettingsAppearanceChannelListPreviewNitroUpsellTsx3(finished){const{cleanUp}=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);}" };
 function animationExiting(value, cleanUp) {
   const _require = cleanUp;
-  const obj = { opacity: _require(4928).withSpring(value, _require(4932).springStandard, "respect-motion-settings", fn) };
+  const obj = { opacity: _require(4974).withSpring(value, _require(4978).springStandard, "respect-motion-settings", fn) };
   fn = function s(arg0) {
     if (closure_0 != null) {
       tmp(arg0);

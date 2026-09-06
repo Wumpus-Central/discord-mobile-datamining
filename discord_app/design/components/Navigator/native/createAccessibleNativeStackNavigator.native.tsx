@@ -1,7 +1,7 @@
-// === Module 14055: AccessibleNativeStackNavigator ===
+// === Module 14173: AccessibleNativeStackNavigator ===
 
-// Module 14055 (AccessibleNativeStackNavigator)
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1499 */;
+// Module 14173 (AccessibleNativeStackNavigator)
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

@@ -1,17 +1,17 @@
-// === Module 15183: EffectTile ===
+// === Module 15343: EffectTile ===
 
-// Module 15183 (EffectTile)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2758 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8941 */;
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 8942 */;
-import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 8946 */;
+// Module 15343 (EffectTile)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 2786 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10899 */;
+import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 10900 */;
+import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 10902 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function EffectTile(arg0) {
@@ -76,10 +76,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   closure_6 = undefined;
   let callback2;
   let tmp = callback3();
-  let obj = userId(8091);
-  obj1 = userId(15178);
+  let obj = userId(8170);
+  obj1 = userId(15338);
   const visibleEffectOrder = obj1.useVisibleEffectOrder();
-  let obj2 = userId(15179);
+  let obj2 = userId(15339);
   const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   const tmp5 = callback(first.useState(selectedEffectId), 2);
@@ -97,17 +97,17 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     obj = { style: null, children: null };
     obj[0] = tmp.header;
     obj1 = { title: null, trailing: null };
-    const intl = tmp2(1233).intl;
-    obj1[0] = intl.string(onSelectEffect(2758).RVtMxT);
+    const intl = tmp2(1114).intl;
+    obj1[0] = intl.string(onSelectEffect(2786).RVtMxT);
     obj2 = { style: null, children: null };
     obj2[0] = tmp.headerTrailing;
     const obj3 = { text: null, onPress: null, variant: "primary", size: "sm" };
-    const intl2 = tmp2(1233).intl;
-    obj3[0] = intl2.string(tmp2(1233).t.XqMe3N);
+    const intl2 = tmp2(1114).intl;
+    obj3[0] = intl2.string(tmp2(1114).t.XqMe3N);
     obj3[1] = tmp8;
-    obj2[1] = callback2(tmp2(4929).Button, obj3);
+    obj2[1] = callback2(tmp2(4975).Button, obj3);
     obj1[1] = callback2(closure_5, obj2);
-    obj[1] = callback2(tmp2(5630).BottomSheetTitleHeader, obj1);
+    obj[1] = callback2(tmp2(7149).BottomSheetTitleHeader, obj1);
     obj[1] = callback2(closure_5, obj);
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.container;
@@ -130,10 +130,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
         }
       }, effectId);
     });
-    obj5[1] = callback2(tmp2(4927).Stack, obj6);
+    obj5[1] = callback2(tmp2(4973).Stack, obj6);
     obj4[1] = callback2(closure_5, obj5);
     obj[2] = callback2(closure_5, obj4);
-    tmp9 = callback2(tmp2(5631).BottomSheet, obj);
+    tmp9 = callback2(tmp2(7150).BottomSheet, obj);
   }
   return tmp9;
 };

@@ -1,12 +1,12 @@
-// === Module 4396: isInRange ===
+// === Module 4478: isInRange ===
 
-// Module 4396 (isInRange)
+// Module 4478 (isInRange)
 import IntegerDefault from "Integer" /* 14 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getGuild" /* 4397 */;
-import closure_4 from "handleInviteData" /* 4398 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import importDefaultResult from "MurmurHashV3" /* 1214 */;
+import closure_3 from "getGuild" /* 4479 */;
+import closure_4 from "handleInviteData" /* 4480 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import importDefaultResult from "MurmurHashV3" /* 1241 */;
 
 function isInRange(arg0, arg1, arg2) {
   try {
@@ -48,7 +48,7 @@ function getRangeData(arg0) {
     if (obj.v3("min_id") === tmp7) {
       min = tmp8;
     } else {
-      let tmp9Result = tmp9(1214);
+      let tmp9Result = tmp9(1241);
       if (tmp9Result.v3("max_id") === tmp7) {
         max = tmp8;
       }

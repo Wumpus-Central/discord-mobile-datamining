@@ -1,6 +1,6 @@
-// === Module 12885: GameProfileReportButton ===
+// === Module 8897: GameProfileReportButton ===
 
-// Module 12885 (GameProfileReportButton)
+// Module 8897 (GameProfileReportButton)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -20,8 +20,8 @@ export default function GameProfileReportButton(applicationId) {
     obj2.pushLazy(applicationId(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), obj, applicationId(closure_1_2[7]).MODAL_KEY);
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
-  const intl = applicationId(1233).intl;
-  obj[2] = intl.string(applicationId(1233).t.qP2cXd);
+  const intl = applicationId(1114).intl;
+  obj[2] = intl.string(applicationId(1114).t.qP2cXd);
   obj[3] = callback;
-  return jsx(applicationId(4929).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+  return jsx(applicationId(4975).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 };

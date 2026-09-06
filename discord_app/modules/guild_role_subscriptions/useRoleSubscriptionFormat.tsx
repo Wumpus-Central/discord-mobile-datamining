@@ -1,12 +1,12 @@
-// === Module 17560: useRoleSubscriptionFormat ===
+// === Module 17720: useRoleSubscriptionFormat ===
 
-// Module 17560 (useRoleSubscriptionFormat)
+// Module 17720 (useRoleSubscriptionFormat)
 import closure_2 from "noop" /* 19 */;
-import { hasPermission } from "GuildRoleRecordTypeTag" /* 1985 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import { GuildRoleSubscriptionFormat as closure_6 } from "MAX_SUBSCRIPTION_TIERS" /* 15045 */;
-import { Permissions } from "ME" /* 673 */;
+import { hasPermission } from "GuildRoleRecordTypeTag" /* 2016 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import { GuildRoleSubscriptionFormat as closure_6 } from "MAX_SUBSCRIPTION_TIERS" /* 15205 */;
+import { Permissions } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");

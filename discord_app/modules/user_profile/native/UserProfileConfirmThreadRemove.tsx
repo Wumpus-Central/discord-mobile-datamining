@@ -1,10 +1,10 @@
-// === Module 9101: UserProfileConfirmThreadRemove ===
+// === Module 12626: UserProfileConfirmThreadRemove ===
 
-// Module 9101 (UserProfileConfirmThreadRemove)
+// Module 12626 (UserProfileConfirmThreadRemove)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4864 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -20,17 +20,17 @@ export default function UserProfileConfirmThreadRemove(isForumPost) {
   const intl = getSystemLocale.intl;
   const t = getSystemLocale.t;
   obj = { title: intl.string(isForumPost ? t["8sKSjm"] : t.ZPm8jN), content: null, actions: null };
-  const intl2 = tmp4(1233).intl;
-  const t2 = tmp4(1233).t;
+  const intl2 = tmp4(1114).intl;
+  const t2 = tmp4(1114).t;
   obj[1] = intl2.formatToPlainString(isForumPost ? t2["6UGfnx"] : t2["hL+Znb"], { user: name });
   obj = { children: null };
   obj1 = { variant: "destructive", text: null, onPress: null };
-  const intl3 = tmp4(1233).intl;
+  const intl3 = tmp4(1114).intl;
   obj1[1] = intl3.string(getSystemLocale.t.N86XcP);
   obj1[2] = onConfirm;
   const items = [closure_3(getAlertModalItemKey.AlertActionButton, obj1, "remove-user-from-thread"), ];
   const obj2 = { variant: "secondary", text: null };
-  const intl4 = tmp4(1233).intl;
+  const intl4 = tmp4(1114).intl;
   obj2[1] = intl4.string(getSystemLocale.t.yNbnce);
   items[1] = closure_3(getAlertModalItemKey.AlertActionButton, obj2, "cancel-remove-user-from-thread");
   obj[0] = items;

@@ -1,6 +1,6 @@
-// === Module 8057: ContentInventoryTraitType ===
+// === Module 8136: ContentInventoryTraitType ===
 
-// Module 8057 (ContentInventoryTraitType)
+// Module 8136 (ContentInventoryTraitType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryTraitType.tsx");

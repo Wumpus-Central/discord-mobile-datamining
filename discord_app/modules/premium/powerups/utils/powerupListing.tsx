@@ -1,17 +1,17 @@
-// === Module 12316: orderPowerupListings ===
+// === Module 12516: orderPowerupListings ===
 
-// Module 12316 (orderPowerupListings)
+// Module 12516 (orderPowerupListings)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "calculateAppliedBoosts" /* 4364 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
+import closure_4 from "calculateAppliedBoosts" /* 4449 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
 
 const require = arg1;
 function orderPowerupListings(items) {
   const findIndexResult = items.findIndex((type) => {
     let tmp = "singlePerk" === type.type;
     if (tmp) {
-      tmp = type.powerup.skuId === callback(4368).GUILD_POWERUP_GUILD_THEME_SKU_ID;
+      tmp = type.powerup.skuId === callback(4453).GUILD_POWERUP_GUILD_THEME_SKU_ID;
     }
     return tmp;
   });
@@ -25,7 +25,7 @@ function orderPowerupListings(items) {
   const findIndexResult1 = obj.findIndex((type) => {
     let tmp = "singlePerk" === type.type;
     if (tmp) {
-      tmp = type.powerup.skuId === callback(4368).GUILD_POWERUP_TAG_SKU_ID;
+      tmp = type.powerup.skuId === callback(4453).GUILD_POWERUP_TAG_SKU_ID;
     }
     return tmp;
   });
@@ -52,7 +52,7 @@ function orderPowerupListings(items) {
         items1.splice(items1.findIndex((type) => {
           let tmp = "singlePerk" === type.type;
           if (tmp) {
-            tmp = type.powerup.skuId === callback(4368).GUILD_POWERUP_TAG_SKU_ID;
+            tmp = type.powerup.skuId === callback(4453).GUILD_POWERUP_TAG_SKU_ID;
           }
           return tmp;
         }) + 1, 0, callback(items1.splice(findIndexResult2, 1), 1)[0]);
@@ -144,7 +144,7 @@ export const useBuildGuildPowerupsSections = function useBuildGuildPowerupsSecti
   const _require = guildId;
   dependencyMap = gameServerEnabled;
   const items = [closure_4];
-  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
+  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
   let powerupCatalog;
   if (stateFromStores != null) {
     powerupCatalog = stateFromStores.powerupCatalog;

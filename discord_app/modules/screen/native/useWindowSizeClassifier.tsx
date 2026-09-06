@@ -1,9 +1,9 @@
-// === Module 4336: useWindowSizeClassifier ===
+// === Module 4421: useWindowSizeClassifier ===
 
-// Module 4336 (useWindowSizeClassifier)
+// Module 4421 (useWindowSizeClassifier)
 import set from "set" /* 2 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4337 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4337 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4422 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4422 */;
 
 let obj = { SMALL: 0, [0]: "SMALL", NORMAL: 1, [1]: "NORMAL", LARGE: 2, [2]: "LARGE", XLARGE: 3, [3]: "XLARGE" };
 const result = set.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");

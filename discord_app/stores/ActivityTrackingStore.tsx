@@ -1,21 +1,21 @@
-// === Module 13635: stopActivity ===
+// === Module 13743: stopActivity ===
 
-// Module 13635 (stopActivity)
-import initializeDefault from "initialize" /* 586 */;
-import Storage2 from "Storage" /* 592 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import removeExecutablePathPrefix from "removeExecutablePathPrefix" /* 4653 */;
-import _modDef11296 from "module_11296" /* 11296 */;
-import closure_3 from "initialize" /* 4501 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
-import closure_6 from "gameFromServer" /* 4514 */;
-import closure_7 from "setLibraryApplications" /* 4517 */;
-import closure_8 from "createRTCConnection" /* 4554 */;
-import closure_9 from "handleConnectionOpen" /* 1980 */;
-import { Distributors } from "ME" /* 673 */;
-import { Storage } from "Storage" /* 592 */;
+// Module 13743 (stopActivity)
+import initializeDefault from "initialize" /* 504 */;
+import Storage2 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import removeExecutablePathPrefix from "removeExecutablePathPrefix" /* 4689 */;
+import _modDef11472 from "module_11472" /* 11472 */;
+import closure_3 from "initialize" /* 1915 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1221 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
+import closure_6 from "gameFromServer" /* 1931 */;
+import closure_7 from "setLibraryApplications" /* 7397 */;
+import closure_8 from "createRTCConnection" /* 4583 */;
+import closure_9 from "handleConnectionOpen" /* 2011 */;
+import { Distributors } from "ME" /* 1074 */;
+import { Storage } from "Storage" /* 510 */;
 
 require = arg1;
 function stopActivity(applicationId, flag) {
@@ -48,7 +48,7 @@ function updateActivity(applicationId) {
   if (num > closure_12 + closure_13) {
     num = 0;
   }
-  obj = _require(4526);
+  obj = _require(7399);
   const result = obj.shouldShareApplicationActivity(applicationId.applicationId, closure_7);
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   sessionId = sessionId.getSessionId();
@@ -68,10 +68,10 @@ function updateActivity(applicationId) {
   obj[7] = voiceChannelId;
   obj[8] = sessionId;
   obj[9] = mediaSessionId;
-  _modDef11296.updateActivity(obj);
+  _modDef11472.updateActivity(obj);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4362).Interval();
+    const interval = new tmp3(4447).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       closure_1_18(closure_0);
@@ -79,7 +79,7 @@ function updateActivity(applicationId) {
   }
   if (!flag) {
     obj[applicationId.applicationId] = applicationId;
-    const Storage = tmp3(592).Storage;
+    const Storage = tmp3(510).Storage;
     const result1 = Storage.set(ActivityTrackingStore, obj);
   }
 }

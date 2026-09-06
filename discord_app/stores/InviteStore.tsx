@@ -1,11 +1,11 @@
-// === Module 4462: updateInvite ===
+// === Module 4544: updateInvite ===
 
-// Module 4462 (updateInvite)
+// Module 4544 (updateInvite)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import ME from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import readSnowflake from "readSnowflake" /* 4463 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
+import readSnowflake from "readSnowflake" /* 4545 */;
 
 function updateInvite(code, arg1) {
   let str = code;
@@ -116,6 +116,7 @@ const inviteStore = new InviteStore(dispatcherDefault, {
       arg0.target_channel_id = code.invite.target_channel_id;
       arg0.target_message_id = code.invite.target_message_id;
       arg0.liveliness = code.invite.liveliness;
+      arg0.guild_experiments = code.invite.guild_experiments;
     });
   },
   INVITE_RESOLVE_FAILURE: handleInviteResolveFailure,

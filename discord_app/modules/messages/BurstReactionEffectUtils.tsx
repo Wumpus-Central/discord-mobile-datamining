@@ -1,8 +1,8 @@
-// === Module 7577: replaceAnimationColors ===
+// === Module 7822: replaceAnimationColors ===
 
-// Module 7577 (replaceAnimationColors)
+// Module 7822 (replaceAnimationColors)
 import set from "set" /* 2 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
 import apply from "apply" /* 12 */;
 
 const memoizeResult = apply.memoize((str) => {

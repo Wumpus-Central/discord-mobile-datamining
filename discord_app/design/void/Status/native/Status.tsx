@@ -1,17 +1,17 @@
-// === Module 13987: Status ===
+// === Module 14105: Status ===
 
-// Module 13987 (Status)
+// Module 14105 (Status)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 13985 */;
-import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13986 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 14103 */;
+import STATUS_PADDINGDefault from "STATUS_PADDING" /* 14104 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { STATUS_PADDING } from "STATUS_PADDING" /* 1297 */;
-import { StatusTypes } from "ME" /* 673 */;
-import n from "n" /* 9446 */;
+import { STATUS_PADDING } from "STATUS_PADDING" /* 1179 */;
+import { StatusTypes } from "ME" /* 1074 */;
+import n from "n" /* 13029 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -45,7 +45,7 @@ let closure_14 = createCacheKey.createStyles((items) => {
     tmp5 = importDefault;
   }
   obj = { ellipsis: { backgroundColor: PRIMARY_400, borderRadius: height, height, width: statusTypingDimensions.width, paddingStart: 4, paddingEnd: 2, marginRight: 0 }, ellipsisDot: null };
-  obj = { width: dotSize, height: dotSize, backgroundColor: tmp5(709).colors.WHITE };
+  obj = { width: dotSize, height: dotSize, backgroundColor: tmp5(576).colors.WHITE };
   obj[1] = obj;
   return obj;
 });
@@ -71,23 +71,23 @@ export default function Status(isMobileOnline) {
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(13988);
+    let tmp4Result = tmp4(14106);
   } else if (flag2) {
-    tmp4Result = tmp4(13989);
+    tmp4Result = tmp4(14107);
   } else if (flag) {
-    tmp4Result = tmp4(13990);
+    tmp4Result = tmp4(14108);
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = tmp4(13991);
+    tmp4Result = tmp4(14109);
   } else if (tmp7.DND === status) {
-    tmp4Result = tmp4(13992);
+    tmp4Result = tmp4(14110);
   } else {
     if (tmp7.OFFLINE !== status) {
       if (tmp7.INVISIBLE !== status) {
         const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(13994);
+        tmp4Result = tmp4(14112);
       }
     }
-    tmp4Result = tmp4(13993);
+    tmp4Result = tmp4(14111);
   }
   obj[1] = tmp4Result;
   obj[1] = closure_11(closure_4, obj);

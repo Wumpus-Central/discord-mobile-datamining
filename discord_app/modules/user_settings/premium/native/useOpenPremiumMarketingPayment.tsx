@@ -1,9 +1,9 @@
-// === Module 13388: useOpenPremiumMarketingPayment ===
+// === Module 13494: useOpenPremiumMarketingPayment ===
 
-// Module 13388 (useOpenPremiumMarketingPayment)
+// Module 13494 (useOpenPremiumMarketingPayment)
 import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 673 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+import ME from "ME" /* 1074 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 
 const require = arg1;
 ({ AnalyticsPages, AnalyticsSections, AnalyticsObjectTypes } = ME);

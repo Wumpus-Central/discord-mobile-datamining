@@ -1,11 +1,11 @@
-// === Module 1932: validatePremiumType ===
+// === Module 1382: validatePremiumType ===
 
-// Module 1932 (validatePremiumType)
+// Module 1382 (validatePremiumType)
 import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
-import hasFlag from "hasFlag" /* 1398 */;
-import Environments2 from "Environments" /* 1933 */;
-import ME from "ME" /* 673 */;
+import Environments2 from "Environments" /* 1383 */;
+import hasFlag from "hasFlag" /* 1384 */;
+import ME from "ME" /* 1074 */;
 
 const Environments = Environments2.Environments;
 ({ PREMIUM_TYPE_NONE: c4, UserFlags: c5 } = ME);

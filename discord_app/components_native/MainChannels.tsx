@@ -1,18 +1,18 @@
-// === Module 15853: LeftPanelContent ===
+// === Module 16015: LeftPanelContent ===
 
-// Module 15853 (LeftPanelContent)
-import ThemesDefault from "Themes" /* 709 */;
-import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4338 */;
-import setLevels from "setLevels" /* 11358 */;
-import setLevelsDefault from "setLevels" /* 11358 */;
-import context from "context" /* 15861 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16199 */;
+// Module 16015 (LeftPanelContent)
+import ThemesDefault from "Themes" /* 576 */;
+import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4423 */;
+import setLevels from "setLevels" /* 11533 */;
+import setLevelsDefault from "setLevels" /* 11533 */;
+import context from "context" /* 16022 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16361 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function LeftPanelContent(panelStyles) {
@@ -44,11 +44,11 @@ function LeftPanelContent(panelStyles) {
   isChatBesideChannelList = tmp10(tmp3[9])().isChatBesideChannelList;
   top = tmp10(tmp3[10])().top;
   const items1 = [tmp, top];
-  const items2 = [tmp, isChatBesideChannelList];
   const memo = obj1.useMemo(() => {
     const items = [first.sideContainer, { marginTop: top }];
     return items;
   }, items1);
+  const items2 = [tmp, isChatBesideChannelList];
   const memo1 = obj1.useMemo(() => {
     const items = [first.side, ];
     let sideTablet = isChatBesideChannelList;
@@ -82,7 +82,7 @@ function LeftPanelContent(panelStyles) {
     let tmp16Result = tmp16(tmp18, obj1);
   } else {
     const obj2 = { style: null, pointerEvents: "box-none", nativeID: "messages-parent-view", children: null };
-    const items6 = [panelStyles, tmp.sideContainer];
+    const items6 = [memo, panelStyles];
     obj2[0] = items6;
     obj2[3] = tmp15Result;
     tmp16Result = tmp16(tmp10(tmp3[16]).View, obj2);

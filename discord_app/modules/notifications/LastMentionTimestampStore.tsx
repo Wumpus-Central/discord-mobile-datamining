@@ -1,11 +1,11 @@
-// === Module 5492: initialize ===
+// === Module 7115: initialize ===
 
-// Module 5492 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "trackCommunicationDisabled" /* 1991 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
+// Module 7115 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "trackCommunicationDisabled" /* 2021 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
 
 let c5 = null;
 let c6 = null;

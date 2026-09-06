@@ -1,14 +1,14 @@
-// === Module 10331: _addChannelToFavorites ===
+// === Module 10222: _addChannelToFavorites ===
 
-// Module 10331 (_addChannelToFavorites)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import messagesProxyDefault from "messagesProxy" /* 3178 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8107 */;
-import StarIcon from "StarIcon" /* 9199 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9201 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10336 */;
+// Module 10222 (_addChannelToFavorites)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import messagesProxyDefault from "messagesProxy" /* 3225 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10227 */;
+import StarIcon from "StarIcon" /* 10235 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10241 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -156,7 +156,7 @@ function _removeChannelFromFavorites() {
 }
 function openNoAccessUpsell() {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(10337, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
+  obj.openLazy(asyncRequireImpl(10228, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
 let result = require("set").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
 
@@ -201,8 +201,8 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
           let tmp15;
           if (tmp5) {
             obj1 = { size: null };
-            obj1[0] = tmp12(1296).BetaSizes.SMALL;
-            tmp15 = jsx(tmp12(1296).BetaTag, { size: null });
+            obj1[0] = tmp12(1178).BetaSizes.SMALL;
+            tmp15 = jsx(tmp12(1178).BetaTag, { size: null });
           }
           obj[2] = tmp15;
           obj[3] = function onPress() {

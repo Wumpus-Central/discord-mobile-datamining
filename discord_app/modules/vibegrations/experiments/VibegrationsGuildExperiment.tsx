@@ -1,9 +1,9 @@
-// === Module 6105: isVibegrationsGuildEnabled ===
+// === Module 7249: isVibegrationsGuildEnabled ===
 
-// Module 6105 (isVibegrationsGuildEnabled)
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 673 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+// Module 7249 (isVibegrationsGuildEnabled)
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 const require = arg1;
 function isVibegrationsGuildEnabled(guildId) {
@@ -47,7 +47,7 @@ export { isVibegrationsGuildEnabled };
 export { hasVibegrationsGuild };
 export const useHasVibegrationsGuild = function useHasVibegrationsGuild(arg0) {
   const _require = arg0;
-  const items = [closure_2, _require(1467).ApexExperimentStore];
+  const items = [closure_2, _require(1433).ApexExperimentStore];
   const items1 = [arg0];
-  return _require(586).useStateFromStores(items, () => closure_1_6(Object.values(closure_1_2.getGuilds()), closure_0), items1);
+  return _require(504).useStateFromStores(items, () => closure_1_6(Object.values(closure_1_2.getGuilds()), closure_0), items1);
 };

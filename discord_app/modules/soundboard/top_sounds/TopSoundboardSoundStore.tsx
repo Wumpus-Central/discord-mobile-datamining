@@ -1,8 +1,8 @@
-// === Module 4967: initialize ===
+// === Module 5013: initialize ===
 
-// Module 4967 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 5013 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 let obj = { topSoundboardSoundsByGuildId: {} };
 let closure_2 = {};
@@ -40,6 +40,9 @@ obj = {
     ({ guildId, topSoundsMetadata } = arg0);
     obj.topSoundboardSoundsByGuildId[guildId] = topSoundsMetadata.map((soundId) => soundId.soundId);
     closure_2[guildId] = false;
+  },
+  TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE: function handleTopSoundboardSoundsFetchFailure(guildId) {
+    closure_2[guildId.guildId] = false;
   }
 };
 const topSoundboardSoundStore = new TopSoundboardSoundStore(dispatcherDefault, obj);

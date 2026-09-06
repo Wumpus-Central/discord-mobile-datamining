@@ -1,19 +1,19 @@
-// === Module 6074: makeSortedChannel ===
+// === Module 7218: makeSortedChannel ===
 
-// Module 6074 (makeSortedChannel)
+// Module 7218 (makeSortedChannel)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import hooksDefault from "hooks" /* 4074 */;
-import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 6077 */;
-import closure_3 from "processChannel" /* 6075 */;
-import closure_4 from "processChannel" /* 6076 */;
-import { isPrivate } from "createChannelRecord" /* 1390 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "generateOldThreadCutoff" /* 4493 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import hooksDefault from "hooks" /* 4153 */;
+import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 7221 */;
+import closure_3 from "processChannel" /* 7219 */;
+import closure_4 from "processChannel" /* 7220 */;
+import { isPrivate } from "createChannelRecord" /* 1961 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "generateOldThreadCutoff" /* 4575 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 function makeSortedChannel(channel, id) {
@@ -80,7 +80,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function inde
 let closure_15 = [];
 let closure_16 = [];
 let closure_17 = [];
-const f37508 = () => {
+const f38615 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -93,7 +93,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f37508 !== "function") {
+  if (typeof f38615 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let values = secondaryIndexMap.values(constants.FAVORITE);

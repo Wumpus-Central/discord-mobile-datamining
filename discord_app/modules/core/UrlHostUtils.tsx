@@ -1,6 +1,6 @@
-// === Module 4513: getHostWithoutPort ===
+// === Module 1930: getHostWithoutPort ===
 
-// Module 4513 (getHostWithoutPort)
+// Module 1930 (getHostWithoutPort)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/core/UrlHostUtils.tsx");

@@ -1,12 +1,12 @@
-// === Module 1302: initialize ===
+// === Module 1184: initialize ===
 
-// Module 1302 (initialize)
+// Module 1184 (initialize)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import Storage4 from "Storage" /* 592 */;
-import ME from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 504 */;
+import Storage4 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
 
 const UserSettingsSections = ME.UserSettingsSections;
 let closure_4 = {};
@@ -55,12 +55,12 @@ const items = [
     if (obj == null) {
       obj = {};
     }
-    const Storage2 = tmp(592).Storage;
+    const Storage2 = tmp(510).Storage;
     let value = Storage2.get("UserSettingsStore");
     if (value == null) {
       value = {};
     }
-    const Storage3 = tmp(592).Storage;
+    const Storage3 = tmp(510).Storage;
     Storage3.remove("UserSettingsSync");
     obj = {};
     if (false === obj[UserSettingsSections.TEXT]) {

@@ -1,9 +1,9 @@
-// === Module 10821: SocialLayerStorefrontGiftModal ===
+// === Module 10824: SocialLayerStorefrontGiftModal ===
 
-// Module 10821 (SocialLayerStorefrontGiftModal)
+// Module 10824 (SocialLayerStorefrontGiftModal)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "addSku" /* 4527 */;
-import ME from "ME" /* 673 */;
+import closure_3 from "addSku" /* 5510 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

@@ -1,12 +1,12 @@
-// === Module 6475: DiscordNitroLockupLogo ===
+// === Module 5907: DiscordNitroLockupLogo ===
 
-// Module 6475 (DiscordNitroLockupLogo)
+// Module 5907 (DiscordNitroLockupLogo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 4197 */;
-import metadataDefault from "metadata" /* 6476 */;
+import ThemesDefault from "Themes" /* 576 */;
+import map from "map" /* 4262 */;
+import metadataDefault from "metadata" /* 5908 */;
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

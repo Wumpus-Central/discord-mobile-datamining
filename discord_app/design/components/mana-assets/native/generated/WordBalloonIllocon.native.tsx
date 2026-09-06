@@ -1,10 +1,10 @@
-// === Module 7139: WordBalloonIllocon ===
+// === Module 6579: WordBalloonIllocon ===
 
-// Module 7139 (WordBalloonIllocon)
+// Module 6579 (WordBalloonIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 7140 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6580 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WordBalloonIllocon.native.tsx");

@@ -1,8 +1,8 @@
-// === Module 4570: hasRichActivity ===
+// === Module 4601: hasRichActivity ===
 
-// Module 4570 (hasRichActivity)
+// Module 4601 (hasRichActivity)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");

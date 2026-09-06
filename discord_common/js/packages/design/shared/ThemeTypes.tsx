@@ -1,6 +1,6 @@
-// === Module 13291: items ===
+// === Module 13396: items ===
 
-// Module 13291 (items)
+// Module 13396 (items)
 import set from "set" /* 2 */;
 
 const obj = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" };

@@ -1,9 +1,9 @@
-// === Module 5984: useProfileThemeValues ===
+// === Module 7184: useProfileThemeValues ===
 
-// Module 5984 (useProfileThemeValues)
+// Module 7184 (useProfileThemeValues)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/user_profile/useProfileThemeValues.native.tsx");
@@ -11,7 +11,7 @@ const result = set.fileFinishedImporting("modules/user_profile/useProfileThemeVa
 export const useProfileThemeValues = function useProfileThemeValues(theme) {
   const _require = theme;
   const items = [closure_4];
-  const stateFromStores = _require(644).useStateFromStores(items, () => saturation.saturation);
+  const stateFromStores = _require(563).useStateFromStores(items, () => saturation.saturation);
   const items1 = [theme, stateFromStores];
   return useMemo(() => {
     if (null == theme) {

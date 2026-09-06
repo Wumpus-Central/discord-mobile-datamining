@@ -1,16 +1,16 @@
-// === Module 15148: toggle ===
+// === Module 15308: toggle ===
 
-// Module 15148 (toggle)
-import initialize from "initialize" /* 586 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 8226 */;
-import track from "track" /* 15149 */;
-import closure_3 from "reset" /* 4297 */;
-import closure_4 from "initialize" /* 1302 */;
-import closure_5 from "handleThemeChange" /* 1301 */;
-import closure_6 from "handleConnectionClosedOrResumed" /* 1339 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import createToggle from "createToggle" /* 11292 */;
+// Module 15308 (toggle)
+import initialize from "initialize" /* 504 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 9358 */;
+import track from "track" /* 15309 */;
+import closure_3 from "reset" /* 4379 */;
+import closure_4 from "initialize" /* 1184 */;
+import closure_5 from "handleThemeChange" /* 1183 */;
+import closure_6 from "handleConnectionClosedOrResumed" /* 1221 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {

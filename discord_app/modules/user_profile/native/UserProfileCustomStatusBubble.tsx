@@ -1,21 +1,22 @@
-// === Module 9104: StatusBubbleConnector ===
+// === Module 11112: StatusBubbleConnector ===
 
-// Module 9104 (StatusBubbleConnector)
-import ThemesDefault from "Themes" /* 709 */;
-import set from "set" /* 1234 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import Text from "Text" /* 4474 */;
-import preloadDefault from "preload" /* 5502 */;
-import EmojiDefault from "Emoji" /* 5594 */;
-import inlineStyles from "inlineStyles" /* 8254 */;
-import inlineStylesDefault from "inlineStyles" /* 8254 */;
+// Module 11112 (StatusBubbleConnector)
+import ThemesDefault from "Themes" /* 576 */;
+import set from "set" /* 1115 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import Text from "Text" /* 4556 */;
+import preloadDefault from "preload" /* 5587 */;
+import EmojiDefault from "Emoji" /* 7130 */;
+import inlineStyles from "inlineStyles" /* 8453 */;
+import inlineStylesDefault from "inlineStyles" /* 8453 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1374 */;
+import { Fonts } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function StatusBubbleConnector(arg0) {
@@ -34,7 +35,7 @@ function EmojiImage(id) {
   const setting = AnimateEmoji.useSetting();
   let obj = { style: items, source: null, resizeMode: "contain" };
   items = [{ height: size, width: size }, id.style];
-  const tmp2 = closure_8;
+  const tmp2 = closure_9;
   const tmp3 = preloadDefault;
   obj = { id: id.emojiId, animated: null, size: null };
   const obj2 = getAvatarURLDefault;
@@ -80,13 +81,13 @@ function TextStatusContent(arg0) {
       obj4[0] = obj5;
       items[1] = callback(closure_6, obj4);
       obj[0] = items;
-      let tmp7Result = tmp7(closure_10, obj);
+      let tmp8Result = tmp8(closure_11, obj);
     } else {
       let name;
       if (emoji != null) {
         name = emoji.name;
       }
-      tmp7Result = null;
+      tmp8Result = null;
       if (null != name) {
         const obj6 = { children: null };
         const items1 = [emoji.name, ];
@@ -96,15 +97,21 @@ function TextStatusContent(arg0) {
         obj7[0] = obj8;
         items1[1] = callback(closure_6, obj7);
         obj6[0] = items1;
-        tmp7Result = tmp7(closure_10, obj6);
+        tmp8Result = tmp8(closure_11, obj6);
       }
     }
-    const items2 = [tmp7Result, text];
+    const items2 = [tmp8Result, text];
     obj[5] = items2;
-    return closure_9(Text.Text, obj);
+    return closure_10(Text.Text, obj);
   } else {
     obj1 = set;
-    obj1.isAndroid() ? { fontFamily: "ggsans-NormalItalic, NotoSans-NormalItalic" } : { fontStyle: "italic" };
+    if (obj1.isAndroid()) {
+      const obj9 = { fontFamily: null };
+      obj9[0] = Fonts.PRIMARY_NORMAL_ITALIC;
+      let obj10 = obj9;
+    } else {
+      obj10 = { fontStyle: "italic" };
+    }
   }
 }
 function EmojiOnlyStatusContent(arg0) {
@@ -141,13 +148,13 @@ function EmojiOnlyStatusContent(arg0) {
     str = "";
   }
   obj1[3] = str;
-  obj[1] = closure_8(EmojiDefault, obj1);
-  return closure_8(tmp12, obj);
+  obj[1] = closure_9(EmojiDefault, obj1);
+  return closure_9(tmp12, obj);
 }
 let c4 = importAllResult;
 ({ PixelRatio: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles((arg0) => {
+({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
+let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { container: { position: "relative" }, bubble: null, statusBubble: null, statusBubbleMeasureable: null, smallCircle: null, largeCircle: null, addStatusIconSpacer: null, statusBubbleLeftAligned: null };
   const colors = ThemesDefault.colors;
   if (arg0) {
@@ -158,33 +165,33 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     tmp4 = tmp;
   }
   obj = { backgroundColor: BACKGROUND_SURFACE_HIGH, borderColor: null, borderWidth: 1 };
-  const colors2 = tmp4(709).colors;
+  const colors2 = tmp4(576).colors;
   obj[1] = arg0 ? colors2.BORDER_MUTED : colors2.BORDER_SUBTLE;
   obj[1] = obj;
-  obj = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", borderRadius: tmp4(709).radii.lg };
-  const merged = Object.assign(tmp4(709).shadows.SHADOW_LOW);
+  obj = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", borderRadius: tmp4(576).radii.lg };
+  const merged = Object.assign(tmp4(576).shadows.SHADOW_LOW);
   obj.top = -14;
   obj[2] = obj;
   obj[3] = { position: "absolute", top: 0, left: 0, opacity: 0 };
-  const merged1 = Object.assign(tmp4(709).shadows.SHADOW_LOW);
-  obj[4] = { position: "absolute", top: -30, width: 12, height: 12, borderRadius: tmp4(709).radii.round };
+  const merged1 = Object.assign(tmp4(576).shadows.SHADOW_LOW);
+  obj[4] = { position: "absolute", top: -30, width: 12, height: 12, borderRadius: tmp4(576).radii.round };
   obj[5] = { position: "absolute", top: -10, left: 12, width: 20, height: 11 };
   obj[6] = { width: 6 };
   obj[7] = { alignItems: "flex-start" };
   return obj;
 });
-let closure_13 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-let closure_14 = { [arg1(6010).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
-let closure_17 = createCacheKey.createStyles(() => ({ container: { alignItems: "center" } }));
+let closure_14 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
+let closure_15 = { [arg1(7208).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+let closure_18 = createCacheKey.createStyles(() => ({ container: { alignItems: "center" } }));
 const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   ({ customStatusActivity, themeType, hasCustomProfileTheme, editEnabled } = showFullStatus);
   showFullStatus = showFullStatus.showFullStatus;
   const _require = tmp2;
   ({ onPressTruncatedStatus, previewEmoji, previewText, placeholderText, prompt: importDefault } = showFullStatus);
   ({ style, emojiOnlyStyle } = showFullStatus);
-  const tmp3 = ref(hasCustomProfileTheme);
-  let obj = _require(textVariant[15]);
-  const colors = importDefault(textVariant[7]).colors;
+  const tmp3 = scaledTextLineHeight(hasCustomProfileTheme);
+  let obj = _require(textVariant[16]);
+  const colors = importDefault(textVariant[8]).colors;
   if (hasCustomProfileTheme) {
     let BACKGROUND_SURFACE_HIGH = colors.CUSTOM_STATUS_BUBBLE_BG;
     let tmp7 = tmp6;
@@ -195,20 +202,20 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
     tmp8 = tmp6;
   }
   const token = obj.useToken(BACKGROUND_SURFACE_HIGH);
-  let tmp4Result = tmp4(tmp5[15]);
-  const colors2 = tmp8(tmp5[7]).colors;
+  let tmp4Result = tmp4(tmp5[16]);
+  const colors2 = tmp8(tmp5[8]).colors;
   let tmp11;
   const token1 = tmp4Result.useToken(hasCustomProfileTheme ? colors2.BORDER_MUTED : colors2.BORDER_SUBTLE);
   if (null != themeType) {
     tmp11 = table[themeType];
   }
   if (tmp11 == null) {
-    tmp11 = closure_13;
+    tmp11 = closure_14;
   }
   textVariant = tmp11.textVariant;
   const emojiOnlyEmojiSize = tmp11.emojiOnlyEmojiSize;
   ({ statusBubblePaddingHorizontal, statusBubblePaddingVertical, textMinWidth } = tmp11);
-  tmp4Result = tmp4(tmp5[16]);
+  tmp4Result = tmp4(tmp5[17]);
   const trackUserProfileAction = tmp4Result.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (undefined === previewText) {
     let state;
@@ -217,7 +224,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
     }
     previewText = state;
   }
-  const gameMentionsAsPlainText = _require(textVariant[17]).useGameMentionsAsPlainText(previewText);
+  const gameMentionsAsPlainText = _require(textVariant[18]).useGameMentionsAsPlainText(previewText);
   let tmp15 = null != gameMentionsAsPlainText;
   if (tmp15) {
     tmp15 = "" !== gameMentionsAsPlainText;
@@ -253,7 +260,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   if (tmp20) {
     tmp20 = "" !== str4;
   }
-  closure_9 = tmp20;
+  const callback = tmp20;
   if (!tmp15) {
     tmp15 = tmp17;
   }
@@ -291,8 +298,8 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   obj = { top: statusBubblePaddingVertical, bottom: statusBubblePaddingVertical, left: statusBubblePaddingHorizontal, right: statusBubblePaddingHorizontal };
   ref = obj4.useRef(null);
   const imperativeHandle = obj4.useImperativeHandle(ref, () => ref.current);
-  const tmp4Result1 = _require(textVariant[17]);
-  const scaledTextLineHeight = _require(textVariant[18]).useScaledTextLineHeight(textVariant);
+  const tmp4Result1 = _require(textVariant[18]);
+  scaledTextLineHeight = _require(textVariant[19]).useScaledTextLineHeight(textVariant);
   if (!tmp15) {
     if (!tmp22) {
       return null;
@@ -315,7 +322,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   items1[1] = tmp30;
   const items2 = [, ];
   ({ bubble: arr3[0], smallCircle: arr3[1] } = tmp3);
-  const items3 = [str4(closure_6, { style: items2 }), , ];
+  const items3 = [callback(closure_6, { style: items2 }), , ];
   let tmp31Result;
   if (null != onPressTruncatedStatus) {
     if (!tmp2) {
@@ -332,7 +339,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
         obj4[2] = previewEmoji;
         obj4[3] = textVariant;
         obj4[4] = function onTextLayout(nativeEvent) {
-          callback2(nativeEvent.nativeEvent.lines.length > Math.ceil(2 * previewEmoji.getFontScale()));
+          callback3(nativeEvent.nativeEvent.lines.length > Math.ceil(2 * previewEmoji.getFontScale()));
         };
         obj4[5] = scaledTextLineHeight;
         obj3[1] = tmp31(TextStatusContent, obj4);
@@ -350,32 +357,32 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   }
   function handlePressAddOrEditStatus() {
     trackUserProfileAction({ action: "PRESS_EDIT_CUSTOM_STATUS" });
-    let obj = closure_1_1(textVariant[19]);
+    let obj = closure_1_1(textVariant[20]);
     obj.hideActionSheet();
     obj = { analyticsLocations: null, prompt: null };
-    const items = [closure_1_1(textVariant[21]).USER_PROFILE_CUSTOM_STATUS_BUBBLE];
+    const items = [closure_1_1(textVariant[22]).USER_PROFILE_CUSTOM_STATUS_BUBBLE];
     obj[0] = items;
     obj[1] = closure_1;
-    const result = callback(textVariant[20]).openEditCustomStatusModal(obj);
+    const result = callback(textVariant[21]).openEditCustomStatusModal(obj);
   }
   const obj5 = { style: items5, ref, children: null };
   items5[3] = statusBubbleLeftAligned;
-  const items6 = [str4(scaledTextLineHeight, { style: tmp3.largeCircle, backgroundColor: token, borderColor: token1 }), ];
+  const items6 = [callback(StatusBubbleConnector, { style: tmp3.largeCircle, backgroundColor: token, borderColor: token1 }), ];
   if (tmp22) {
     let stringResult = placeholderText;
     if (!tmp19) {
-      const intl3 = tmp4(tmp5[22]).intl;
-      stringResult = intl3.string(tmp4(tmp5[22]).t.Vq4UmS);
+      const intl3 = tmp4(tmp5[23]).intl;
+      stringResult = intl3.string(tmp4(tmp5[23]).t.Vq4UmS);
     }
     const obj7 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, hitSlop: null, children: null };
-    const intl4 = tmp4(tmp5[22]).intl;
-    obj7[1] = intl4.string(tmp4(tmp5[22]).t["zrpF/b"]);
+    const intl4 = tmp4(tmp5[23]).intl;
+    obj7[1] = intl4.string(tmp4(tmp5[23]).t["zrpF/b"]);
     let formatToPlainStringResult;
     if (tmp19) {
-      const intl5 = tmp4(tmp5[22]).intl;
+      const intl5 = tmp4(tmp5[23]).intl;
       const obj8 = { prompt: null };
       obj8[0] = placeholderText;
-      formatToPlainStringResult = intl5.formatToPlainString(tmp4(tmp5[22]).t.ioWOMP, obj8);
+      formatToPlainStringResult = intl5.formatToPlainString(tmp4(tmp5[23]).t.ioWOMP, obj8);
     }
     obj7[2] = formatToPlainStringResult;
     obj7[3] = handlePressAddOrEditStatus;
@@ -394,32 +401,38 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
       const merged = Object.assign(tmp19);
       obj9[3] = obj10;
       const obj11 = { color: null, size: "xs", style: null };
-      obj11[0] = tmp7(tmp5[7]).colors.CONTROL_SECONDARY_TEXT_DEFAULT;
-      let tmp43;
+      obj11[0] = tmp7(tmp5[8]).colors.CONTROL_SECONDARY_TEXT_DEFAULT;
+      let tmp44;
       if (tmp4Result3.isAndroid()) {
         const obj12 = { marginBottom: null };
         obj12[0] = 0.1 * -scaledTextLineHeight;
-        tmp43 = obj12;
+        tmp44 = obj12;
       }
       const obj13 = { children: null };
-      obj11[2] = tmp43;
-      obj13[0] = tmp31(tmp4(tmp5[24]).CirclePlusIcon, obj11);
+      obj11[2] = tmp44;
+      obj13[0] = tmp31(tmp4(tmp5[25]).CirclePlusIcon, obj11);
       const items7 = [tmp31(tmp29, obj13), , ];
       const obj14 = { style: null };
       obj14[0] = tmp3.addStatusIconSpacer;
       items7[1] = tmp31(tmp29, obj14);
       items7[2] = stringResult;
       obj9[4] = items7;
-      obj7[5] = tmp28(tmp4(tmp5[13]).Text, obj9);
-      tmp31Result = tmp31(tmp4(tmp5[23]).PressableOpacity, obj7);
-      tmp4Result3 = tmp4(tmp5[12]);
+      obj7[5] = tmp28(tmp4(tmp5[14]).Text, obj9);
+      tmp31Result = tmp31(tmp4(tmp5[24]).PressableOpacity, obj7);
+      tmp4Result3 = tmp4(tmp5[13]);
     } else {
-      tmp4(tmp5[12]).isAndroid() ? { fontFamily: "ggsans-NormalItalic, NotoSans-NormalItalic" } : { fontStyle: "italic" };
-      const tmp4Result4 = tmp4(tmp5[12]);
+      if (tmp4Result4.isAndroid()) {
+        const obj15 = { fontFamily: null };
+        obj15[0] = str4.PRIMARY_NORMAL_ITALIC;
+        let obj16 = obj15;
+      } else {
+        obj16 = { fontStyle: "italic" };
+      }
+      tmp4Result4 = tmp4(tmp5[13]);
     }
   } else {
     function renderStatusContent() {
-      if (closure_9) {
+      if (callback2) {
         let obj = { text: null, isPlaceholderText: null, emoji: null, textVariant: null, lineClamp: null, lineHeight: null };
         obj[0] = str4;
         obj[1] = closure_7;
@@ -432,31 +445,31 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
         }
         obj[4] = rounded;
         obj[5] = scaledTextLineHeight;
-        let tmp7Result = str4(closure_1_16, obj);
-        const tmp7 = str4;
-        const tmp8 = closure_1_16;
+        let tmp7Result = callback2(closure_1_17, obj);
+        const tmp7 = callback2;
+        const tmp8 = closure_1_17;
       } else if (closure_6) {
         obj = { emoji: null, size: null };
         obj[0] = previewEmoji;
         obj[1] = emojiOnlyEmojiSize;
-        tmp7Result = str4(closure_1_18, obj);
+        tmp7Result = callback2(closure_1_19, obj);
       }
       return tmp7Result;
     }
     if (tmp) {
-      const obj15 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, hitSlop: null, children: null };
-      const intl2 = tmp4(tmp5[22]).intl;
-      obj15[1] = intl2.string(tmp4(tmp5[22]).t.QdHxos);
-      obj15[2] = obj1;
-      obj15[3] = handlePressAddOrEditStatus;
-      obj15[4] = obj;
-      obj15[5] = renderStatusContent();
-      tmp31Result = tmp31(tmp4(tmp5[23]).PressableOpacity, obj15);
+      const obj17 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, hitSlop: null, children: null };
+      const intl2 = tmp4(tmp5[23]).intl;
+      obj17[1] = intl2.string(tmp4(tmp5[23]).t.QdHxos);
+      obj17[2] = obj1;
+      obj17[3] = handlePressAddOrEditStatus;
+      obj17[4] = obj;
+      obj17[5] = renderStatusContent();
+      tmp31Result = tmp31(tmp4(tmp5[24]).PressableOpacity, obj17);
     } else {
       if (null != onPressTruncatedStatus) {
         if (tmp23[0]) {
           if (!tmp19) {
-            const intl = tmp4(tmp5[22]).intl;
+            const intl = tmp4(tmp5[23]).intl;
             let str6;
             if (previewEmoji != null) {
               str6 = previewEmoji.name;
@@ -464,18 +477,18 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
             if (str6 == null) {
               str6 = "";
             }
-            const obj16 = { emoji: null, status: null };
-            obj16[0] = str6;
+            const obj18 = { emoji: null, status: null };
+            obj18[0] = str6;
             if (str4 == null) {
               str4 = "";
             }
-            const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-            obj16[1] = str4;
-            obj17[1] = intl.formatToPlainString(tmp4(tmp5[22]).t.UpF5Qa, obj16);
-            obj17[2] = onPressTruncatedStatus;
-            obj17[3] = obj;
-            obj17[4] = renderStatusContent();
-            tmp31Result = tmp31(tmp4(tmp5[23]).PressableOpacity, obj17);
+            const obj19 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+            obj18[1] = str4;
+            obj19[1] = intl.formatToPlainString(tmp4(tmp5[23]).t.UpF5Qa, obj18);
+            obj19[2] = onPressTruncatedStatus;
+            obj19[3] = obj;
+            obj19[4] = renderStatusContent();
+            tmp31Result = tmp31(tmp4(tmp5[24]).PressableOpacity, obj19);
           }
         }
       }
@@ -484,9 +497,9 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   }
   items6[1] = tmp31Result;
   obj5[2] = items6;
-  items3[2] = closure_9(closure_6, obj5);
+  items3[2] = closure_10(closure_6, obj5);
   obj2[1] = items3;
-  return closure_9(closure_6, obj2);
+  return closure_10(closure_6, obj2);
 });
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");
 

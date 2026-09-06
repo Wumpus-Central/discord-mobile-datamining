@@ -1,19 +1,19 @@
-// === Module 8085: setPendingChanges ===
+// === Module 8164: setPendingChanges ===
 
-// Module 8085 (setPendingChanges)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isEqualDefault from "isEqual" /* 4643 */;
-import guildHasTag from "guildHasTag" /* 8086 */;
-import closure_3 from "trackCommunicationDisabled" /* 1991 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "createUserWidgetFromServer" /* 7376 */;
+// Module 8164 (setPendingChanges)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isEqualDefault from "isEqual" /* 4679 */;
+import guildHasTag from "guildHasTag" /* 8165 */;
+import closure_3 from "trackCommunicationDisabled" /* 2021 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import closure_5 from "createUserWidgetFromServer" /* 7621 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
 
-export const setPendingChanges = function setPendingChanges(guildId) {
-  guildId = guildId.guildId;
-  const merged = Object.assign(guildId, Object.create(null));
+export const setPendingChanges = function setPendingChanges(closure_1) {
+  let guildId = closure_1.guildId;
+  const merged = Object.assign(closure_1, Object.create(null));
   currentUser = currentUser.getCurrentUser();
   if (null != currentUser) {
     userProfile = userProfile.getUserProfile(currentUser.id);

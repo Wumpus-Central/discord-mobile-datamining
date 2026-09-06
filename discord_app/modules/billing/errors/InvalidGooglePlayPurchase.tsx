@@ -1,7 +1,7 @@
-// === Module 10706: prototype ===
+// === Module 10704: prototype ===
 
-// Module 10706 (prototype)
-import setDefault from "set" /* 4161 */;
+// Module 10704 (prototype)
+import setDefault from "set" /* 4240 */;
 
 setDefault;
 const prototype = function InvalidGooglePlayPurchase() {

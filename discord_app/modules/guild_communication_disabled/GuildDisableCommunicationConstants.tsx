@@ -1,8 +1,8 @@
-// === Module 1993: getFriendlyDurationString ===
+// === Module 2023: getFriendlyDurationString ===
 
-// Module 1993 (getFriendlyDurationString)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import importDefaultResult from "combined" /* 1994 */;
+// Module 2023 (getFriendlyDurationString)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import importDefaultResult from "combined" /* 2024 */;
 
 require = arg1;
 function getFriendlyDurationString(arg0) {

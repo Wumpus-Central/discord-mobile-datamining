@@ -1,8 +1,8 @@
-// === Module 9019: SidebarVisibilityMethodStore ===
+// === Module 11195: SidebarVisibilityMethodStore ===
 
-// Module 9019 (SidebarVisibilityMethodStore)
+// Module 11195 (SidebarVisibilityMethodStore)
 import set from "set" /* 2 */;
-import keys from "keys" /* 641 */;
+import keys from "keys" /* 560 */;
 
 let obj = keys.create(() => ({}));
 const result = set.fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");

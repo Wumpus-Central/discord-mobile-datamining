@@ -1,10 +1,10 @@
-// === Module 10344: useCanShowFavoritesGuildOnboarding ===
+// === Module 10239: useCanShowFavoritesGuildOnboarding ===
 
-// Module 10344 (useCanShowFavoritesGuildOnboarding)
-import initialize from "initialize" /* 586 */;
-import coerceMainRoute from "coerceMainRoute" /* 4332 */;
-import closure_2 from "setContent" /* 4186 */;
-import closure_3 from "handleConnectionOpen" /* 1980 */;
+// Module 10239 (useCanShowFavoritesGuildOnboarding)
+import initialize from "initialize" /* 504 */;
+import coerceMainRoute from "coerceMainRoute" /* 4417 */;
+import closure_2 from "setContent" /* 4251 */;
+import closure_3 from "handleConnectionOpen" /* 2011 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");

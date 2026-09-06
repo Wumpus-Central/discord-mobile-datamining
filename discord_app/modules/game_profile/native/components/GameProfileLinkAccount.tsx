@@ -1,12 +1,12 @@
-// === Module 8878: GameProfileLinkAccount ===
+// === Module 8733: GameProfileLinkAccount ===
 
-// Module 8878 (GameProfileLinkAccount)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 8733 (GameProfileLinkAccount)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -80,7 +80,7 @@ export default function GameProfileLinkAccount(trackAction) {
               items4[2] = tmp13(tmp12, obj7);
               obj4[1] = items4;
               items3[1] = tmp11(tmp12, obj4);
-              const obj8 = { size: null, user: null, guildId: "accessible" };
+              const obj8 = { size: null, user: null, guildId: "Array" };
               obj8[0] = tmp5(tmp3[12]).AvatarSizes.LARGE_48;
               obj8[1] = stateFromStores;
               items3[2] = tmp13(tmp5(tmp3[12]).Avatar, obj8);

@@ -1,11 +1,11 @@
-// === Module 14342: inferImportanceFromBehavior ===
+// === Module 14448: inferImportanceFromBehavior ===
 
-// Module 14342 (inferImportanceFromBehavior)
+// Module 14448 (inferImportanceFromBehavior)
 import set from "set" /* 2 */;
-import _modDef1205 from "module_1205" /* 1205 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14343 */;
-import items2 from "items2" /* 14338 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import _modDef1232 from "module_1232" /* 1232 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14449 */;
+import items2 from "items2" /* 14444 */;
 
 function inferImportanceFromBehavior(visibility) {
   if (!("ringtone" in visibility)) {
@@ -55,7 +55,7 @@ function formatSetting(item10022, arg1) {
   }
 }
 function buildChannelsAndMapping() {
-  let obj = map(14344);
+  let obj = map(14450);
   const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {
@@ -180,7 +180,7 @@ export default {
         obj = { channels: null, inheritedImportances: null };
         obj[0] = channels.map((id) => id.id);
         const _Array = Array;
-        const tmpResult = _modDef1205;
+        const tmpResult = _modDef1232;
         obj[1] = Array.from(inheritedImportances.entries()).map((arg0) => {
           [tmp, tmp2] = arg0;
           return "NotifSettings#" + tmp + " -> " + tmp2;

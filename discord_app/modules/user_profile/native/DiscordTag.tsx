@@ -1,13 +1,13 @@
-// === Module 9797: DiscordTag ===
+// === Module 9803: DiscordTag ===
 
-// Module 9797 (DiscordTag)
+// Module 9803 (DiscordTag)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Text from "Text" /* 4474 */;
-import getBotLabelDefault from "getBotLabel" /* 8951 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Text from "Text" /* 4556 */;
+import getBotLabelDefault from "getBotLabel" /* 9438 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -44,7 +44,7 @@ export default function DiscordTag(arg0) {
         obj1[2] = discriminatorStyle;
         const items1 = ["#", user.discriminator];
         obj1[3] = items1;
-        tmp2Result = tmp2(tmp4(4474).Text, obj1);
+        tmp2Result = tmp2(tmp4(4556).Text, obj1);
       }
       items[1] = tmp2Result;
       obj[4] = items;

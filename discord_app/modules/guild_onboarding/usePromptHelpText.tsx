@@ -1,12 +1,12 @@
-// === Module 5589: usePromptHelpText ===
+// === Module 7125: usePromptHelpText ===
 
-// Module 5589 (usePromptHelpText)
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import { Permissions } from "ME" /* 673 */;
+// Module 7125 (usePromptHelpText)
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_5 from "markAllUserIdListsStale" /* 4209 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import { Permissions } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/usePromptHelpText.tsx");
@@ -19,7 +19,7 @@ export default function usePromptHelpText(arg0) {
   if (guild != null) {
     id = guild.id;
   }
-  let obj = selectedRoleIds(586);
+  let obj = selectedRoleIds(504);
   const items = [closure_3];
   const items1 = [id, selectedRoleIds];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -30,7 +30,7 @@ export default function usePromptHelpText(arg0) {
     }
     return manyRoles;
   }, items1);
-  obj1 = selectedRoleIds(586);
+  obj1 = selectedRoleIds(504);
   const items2 = [id, closure_6, closure_5, closure_4];
   const stateFromStoresArray1 = obj1.useStateFromStoresArray(items2, () => {
     const mapped = Array.from(closure_1).map((arg0) => channel.getChannel(arg0));
@@ -50,21 +50,21 @@ export default function usePromptHelpText(arg0) {
   }
   let str = "";
   if (!singleSelect) {
-    const intl = tmp2(1233).intl;
-    str = intl.string(tmp2(1233).t.JshhEl);
+    const intl = tmp2(1114).intl;
+    str = intl.string(tmp2(1114).t.JshhEl);
   }
   if (0 === stateFromStoresArray1.length) {
     if (mapped.length > 0) {
       let str6 = "";
       if (0 !== mapped.length) {
-        const intl4 = tmp2(1233).intl;
+        const intl4 = tmp2(1114).intl;
         obj = { count: null, extraCount: null, role1: null, role2: null, itemHook: null };
         obj[0] = mapped.length;
         const _Math3 = Math;
         obj[1] = Math.max(mapped.length - 2, 0);
         [obj6[2], obj6[3]] = mapped;
         obj[4] = itemHook;
-        str6 = intl4.format(tmp2(1233).t.Kj5GIT, obj);
+        str6 = intl4.format(tmp2(1114).t.Kj5GIT, obj);
       }
       str = str6;
       let str2 = "";
@@ -78,27 +78,27 @@ export default function usePromptHelpText(arg0) {
   if (stateFromStoresArray1.length > 0) {
     let str3 = "";
     if (0 !== stateFromStoresArray1.length) {
-      const intl2 = tmp2(1233).intl;
+      const intl2 = tmp2(1114).intl;
       obj1 = { count: null, extraCount: null, channel1: null, channel2: null, itemHook: null };
       obj1[0] = stateFromStoresArray1.length;
       const _Math = Math;
       obj1[1] = Math.max(stateFromStoresArray1.length - 2, 0);
       [obj4[2], obj4[3]] = stateFromStoresArray1;
       obj1[4] = itemHook;
-      str3 = intl2.format(tmp2(1233).t.Rj841R, obj1);
+      str3 = intl2.format(tmp2(1114).t.Rj841R, obj1);
     }
     let str4 = "";
     if (mapped.length > 0) {
       let str5 = "";
       if (0 !== mapped.length) {
-        const intl3 = tmp2(1233).intl;
+        const intl3 = tmp2(1114).intl;
         const obj2 = { count: null, extraCount: null, role1: null, role2: null, itemHook: null };
         obj2[0] = mapped.length;
         const _Math2 = Math;
         obj2[1] = Math.max(mapped.length - 2, 0);
         [obj5[2], obj5[3]] = mapped;
         obj2[4] = itemHook;
-        str5 = intl3.format(tmp2(1233).t.cJZxWf, obj2);
+        str5 = intl3.format(tmp2(1114).t.cJZxWf, obj2);
       }
       str4 = str5;
     }
@@ -114,7 +114,7 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
   if (guild != null) {
     id = guild.id;
   }
-  let obj = selectedRoleIds(586);
+  let obj = selectedRoleIds(504);
   const items = [closure_3];
   const items1 = [id, selectedRoleIds];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -125,7 +125,7 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
     }
     return manyRoles;
   }, items1);
-  obj1 = selectedRoleIds(586);
+  obj1 = selectedRoleIds(504);
   const items2 = [id, closure_6, closure_5, closure_4];
   const stateFromStoresArray1 = obj1.useStateFromStoresArray(items2, () => {
     const mapped = Array.from(closure_1).map((arg0) => channel.getChannel(arg0));
@@ -145,19 +145,19 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
   }
   let str = "";
   if (!singleSelect) {
-    const intl = tmp2(1233).intl;
-    str = intl.string(tmp2(1233).t.JshhEl);
+    const intl = tmp2(1114).intl;
+    str = intl.string(tmp2(1114).t.JshhEl);
   }
   if (0 === stateFromStoresArray1.length) {
     if (mapped.length > 0) {
-      const intl4 = tmp2(1233).intl;
+      const intl4 = tmp2(1114).intl;
       obj = { count: null, extraCount: null, role1: null, role2: null, itemHook: null };
       obj[0] = mapped.length;
       const _Math4 = Math;
       obj[1] = Math.max(mapped.length - 2, 0);
       [obj5[2], obj5[3]] = mapped;
       obj[4] = itemHook;
-      str = intl4.format(tmp2(1233).t.vdtNYa, obj);
+      str = intl4.format(tmp2(1114).t.vdtNYa, obj);
     }
     obj = { helpText: null, helpTextAdditional: "" };
     obj[0] = str;
@@ -165,18 +165,18 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
   }
   if (stateFromStoresArray1.length > 0) {
     if (0 === mapped.length) {
-      const intl3 = tmp2(1233).intl;
+      const intl3 = tmp2(1114).intl;
       obj1 = { count: null, extraCount: null, channel1: null, channel2: null, itemHook: null };
       obj1[0] = stateFromStoresArray1.length;
       const _Math3 = Math;
       obj1[1] = Math.max(stateFromStoresArray1.length - 2, 0);
       [obj4[2], obj4[3]] = stateFromStoresArray1;
       obj1[4] = itemHook;
-      str = intl3.format(tmp2(1233).t.ZKywGU, obj1);
+      str = intl3.format(tmp2(1114).t.ZKywGU, obj1);
     }
   }
   if (tmp5) {
-    const intl2 = tmp2(1233).intl;
+    const intl2 = tmp2(1114).intl;
     const obj2 = { channelCount: null, extraChannelCount: null, channel1: null, channel2: null, itemHook: null, roleCount: null, extraRoleCount: null, role1: null, role2: null };
     obj2[0] = stateFromStoresArray1.length;
     const _Math = Math;
@@ -187,6 +187,6 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
     const _Math2 = Math;
     obj2[6] = Math.max(mapped.length - 2, 0);
     [obj3[7], obj3[8]] = mapped;
-    str = intl2.format(tmp2(1233).t.WewRHM, obj2);
+    str = intl2.format(tmp2(1114).t.WewRHM, obj2);
   }
 };

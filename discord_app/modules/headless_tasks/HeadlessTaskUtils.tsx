@@ -1,8 +1,8 @@
-// === Module 17772: ? ===
+// === Module 17932: ? ===
 
-// Module 17772
+// Module 17932
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const TOKEN_KEY = ME.TOKEN_KEY;
 const result = set.fileFinishedImporting("modules/headless_tasks/HeadlessTaskUtils.tsx");
@@ -10,7 +10,7 @@ const result = set.fileFinishedImporting("modules/headless_tasks/HeadlessTaskUti
 export default {
   awaitStorage(arg0) {
     const _require = arg0;
-    const Storage = _require(592).Storage;
+    const Storage = _require(510).Storage;
     Storage.asyncGet(TOKEN_KEY, () => {
       callback();
     });

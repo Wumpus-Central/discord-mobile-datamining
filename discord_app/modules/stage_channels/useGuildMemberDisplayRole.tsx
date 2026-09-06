@@ -1,9 +1,9 @@
-// === Module 5381: getHighestHoistedRole ===
+// === Module 5429: getHighestHoistedRole ===
 
-// Module 5381 (getHighestHoistedRole)
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import closure_3 from "trackCommunicationDisabled" /* 1991 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+// Module 5429 (getHighestHoistedRole)
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import closure_3 from "trackCommunicationDisabled" /* 2021 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
 
 const require = arg1;
 function getHighestHoistedRole(arg0, arg1) {
@@ -38,7 +38,7 @@ export default function useGuildMemberDisplayRole(arg0, arg1) {
   closure_1 = arg1;
   let items = [closure_4, closure_3];
   const items1 = [arg0, arg1];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const items = [closure_1_4, closure_1_3];
     return closure_1_5(closure_0, closure_1, items);
   }, items1);

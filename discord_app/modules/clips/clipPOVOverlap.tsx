@@ -1,11 +1,11 @@
-// === Module 4547: getClipPOVWindow ===
+// === Module 13991: getClipPOVWindow ===
 
-// Module 4547 (getClipPOVWindow)
+// Module 13991 (getClipPOVWindow)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import hasFlag from "hasFlag" /* 1398 */;
-import result2 from "result" /* 4536 */;
-import getPOVExportTargetDefault from "getPOVExportTarget" /* 4548 */;
+import ME from "ME" /* 1074 */;
+import hasFlag from "hasFlag" /* 1384 */;
+import result2 from "result" /* 5132 */;
+import getPOVExportTargetDefault from "getPOVExportTarget" /* 13992 */;
 
 const ClipType = result2.ClipType;
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;

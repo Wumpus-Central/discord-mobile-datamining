@@ -1,8 +1,8 @@
-// === Module 16734: RESTRICTED_AVATAR_SIZE ===
+// === Module 16899: RESTRICTED_AVATAR_SIZE ===
 
-// Module 16734 (RESTRICTED_AVATAR_SIZE)
+// Module 16899 (RESTRICTED_AVATAR_SIZE)
 import set from "set" /* 2 */;
-import Button from "Button" /* 1296 */;
+import Button from "Button" /* 1178 */;
 
 const tmp2 = Button.AVATAR_SIZE_MAP[Button.AvatarSizes.NORMAL];
 const sum = tmp2 + 18;

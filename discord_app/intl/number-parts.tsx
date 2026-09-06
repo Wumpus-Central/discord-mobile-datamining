@@ -1,6 +1,6 @@
-// === Module 8453: numberParts ===
+// === Module 9413: numberParts ===
 
-// Module 8453 (numberParts)
+// Module 9413 (numberParts)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("intl/number-parts.tsx");

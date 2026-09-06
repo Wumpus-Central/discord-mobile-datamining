@@ -1,8 +1,8 @@
-// === Module 8111: flattenColorOverOpaqueBackground ===
+// === Module 8815: flattenColorOverOpaqueBackground ===
 
-// Module 8111 (flattenColorOverOpaqueBackground)
+// Module 8815 (flattenColorOverOpaqueBackground)
 import set from "set" /* 2 */;
-import nDefault from "n" /* 686 */;
+import nDefault from "n" /* 672 */;
 
 const result = set.fileFinishedImporting("design/utils/shared/colors.tsx");
 

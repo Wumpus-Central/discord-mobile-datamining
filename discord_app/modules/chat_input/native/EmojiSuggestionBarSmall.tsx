@@ -1,11 +1,11 @@
-// === Module 12231: EmojiSuggestionBarSmallAnimated ===
+// === Module 12431: EmojiSuggestionBarSmallAnimated ===
 
-// Module 12231 (EmojiSuggestionBarSmallAnimated)
-import ThemesDefault from "Themes" /* 709 */;
-import _modDef4217 from "module_4217" /* 4217 */;
+// Module 12431 (EmojiSuggestionBarSmallAnimated)
+import ThemesDefault from "Themes" /* 576 */;
+import _modDef4296 from "module_4296" /* 4296 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function EmojiSuggestionBarSmallAnimated(displayEmojis) {
@@ -13,7 +13,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: closure_3, transitionState } = displayEmojis);
   let suggestionBarHeight;
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
-  let obj = displayEmojis(12226);
+  let obj = displayEmojis(12426);
   suggestionBarHeight = obj.useSuggestionBarHeight(transitionState, cleanUp, closure_6, onOccupiedHeightChange);
   const tmp = callback(displayEmojis.anchorTop);
   class A {
@@ -26,11 +26,11 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       return obj;
     }
   }
-  obj = { interpolate: displayEmojis(4217).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT: closure_6 };
+  obj = { interpolate: displayEmojis(4296).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT: closure_6 };
   A.__closure = obj;
   A.__workletHash = 1856279964267;
   A.__initData = closure_8;
-  const animatedStyle = displayEmojis(4217).useAnimatedStyle(A);
+  const animatedStyle = displayEmojis(4296).useAnimatedStyle(A);
   obj = {
     style: items,
     children: displayEmojis.map((emoji, index) => {
@@ -49,7 +49,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
     })
   };
   items = [tmp.containerSmall, animatedStyle];
-  return suggestionBarHeight(_modDef4217.View, obj);
+  return suggestionBarHeight(_modDef4296.View, obj);
 }
 let c3 = importAllResult;
 const sum = require("IMAGE_SIZE").IMAGE_SIZE + 2 * ThemesDefault.space.PX_8 + 2;

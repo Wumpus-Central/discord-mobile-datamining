@@ -1,14 +1,14 @@
-// === Module 15570: FRAME_BUDGET_MS ===
+// === Module 15728: FRAME_BUDGET_MS ===
 
-// Module 15570 (FRAME_BUDGET_MS)
+// Module 15728 (FRAME_BUDGET_MS)
 import set from "set" /* 2 */;
-import FRAME_BUDGET_MS from "FRAME_BUDGET_MS" /* 15572 */;
-import useMountTimerDefault from "useMountTimer" /* 15573 */;
-import useFrameMonitorDefault from "useFrameMonitor" /* 15574 */;
-import useBenchmarkResultsDefault from "useBenchmarkResults" /* 15575 */;
-import BenchmarkResultsListDefault from "BenchmarkResultsList" /* 15576 */;
-import ScrollBenchmarkDefault from "ScrollBenchmark" /* 15577 */;
-import MountMeasureDefault from "MountMeasure" /* 15578 */;
+import FRAME_BUDGET_MS from "FRAME_BUDGET_MS" /* 15730 */;
+import useMountTimerDefault from "useMountTimer" /* 15731 */;
+import useFrameMonitorDefault from "useFrameMonitor" /* 15732 */;
+import useBenchmarkResultsDefault from "useBenchmarkResults" /* 15733 */;
+import BenchmarkResultsListDefault from "BenchmarkResultsList" /* 15734 */;
+import ScrollBenchmarkDefault from "ScrollBenchmark" /* 15735 */;
+import MountMeasureDefault from "MountMeasure" /* 15736 */;
 
 const result = set.fileFinishedImporting("modules/devtools/native/components/screens/performance/index.tsx");
 for (const key10018 in require("set")) {

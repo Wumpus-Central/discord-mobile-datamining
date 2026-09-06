@@ -1,19 +1,19 @@
-// === Module 16468: getSearchTokenLabel ===
+// === Module 16631: getSearchTokenLabel ===
 
-// Module 16468 (getSearchTokenLabel)
+// Module 16631 (getSearchTokenLabel)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import AtIcon from "AtIcon" /* 5044 */;
-import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 7632 */;
-import RobotIcon from "RobotIcon" /* 9392 */;
-import CalendarIcon from "CalendarIcon" /* 9781 */;
-import AttachmentIcon from "AttachmentIcon" /* 10221 */;
-import UserIcon from "UserIcon" /* 11626 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12005 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13821 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 16469 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7633 */;
-import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import AtIcon from "AtIcon" /* 5090 */;
+import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 7877 */;
+import RobotIcon from "RobotIcon" /* 9435 */;
+import CalendarIcon from "CalendarIcon" /* 9785 */;
+import AttachmentIcon from "AttachmentIcon" /* 10112 */;
+import UserIcon from "UserIcon" /* 11825 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12209 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13843 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 16632 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
+import ME from "ME" /* 1074 */;
 
 ({ EMPTY_SEARCH_QUERY_STRING: c3, SearchQueryTagTypes: c4 } = MessageEmbedTypes);
 const SearchFilterAddLocations = SearchEntrypointAnalyticsLocations.SearchFilterAddLocations;
@@ -209,7 +209,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(12137));
+  const keys = Object.keys(items(12341));
   const item = keys.forEach((type) => {
     let obj = textInputValue(closure_1_2[12]);
     if (obj.isSearchFilterTokenType(type)) {

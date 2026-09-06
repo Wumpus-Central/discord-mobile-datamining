@@ -1,8 +1,8 @@
-// === Module 15886: useMessagesScrollToTop ===
+// === Module 16048: useMessagesScrollToTop ===
 
-// Module 15886 (useMessagesScrollToTop)
+// Module 16048 (useMessagesScrollToTop)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx");
@@ -40,5 +40,5 @@ export default function useMessagesScrollToTop(listRef) {
       }
     }
   }), items));
-  const scrollToTop = listRef(1499).useScrollToTop(ref);
+  const scrollToTop = listRef(1484).useScrollToTop(ref);
 };

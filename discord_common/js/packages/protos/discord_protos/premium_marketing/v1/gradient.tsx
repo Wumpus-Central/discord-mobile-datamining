@@ -1,9 +1,9 @@
-// === Module 8474: create ===
+// === Module 10678: create ===
 
-// Module 8474 (create)
-import _mod1306 from "module_1306" /* 1306 */;
+// Module 10678 (create)
+import _mod1188 from "module_1188" /* 1188 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1306" /* 1306 */;
+import { MessageType } from "module_1188" /* 1188 */;
 
 require = arg1;
 class Gradient$Type extends MessageType {
@@ -21,10 +21,10 @@ prototype["create"] = function create(arr) {
   let obj = { colors: [], angle: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1306.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1306;
+    const result = _mod1188.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1188;
   }
   return obj;
 };
@@ -67,7 +67,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = _mod1306.UnknownFieldHandler.onRead;
+              onRead = _mod1188.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -88,20 +88,20 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, wri
     do {
       let tmp = require;
       let tmp2 = dependencyMap;
-      let tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
+      let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
       let stringResult = tagResult.string(colors.colors[num]);
       num = num + 1;
       length = colors.colors.length;
     } while (num < length);
   }
   if (0 !== colors.angle) {
-    tag.tag(2, _mod1306.WireType.Bit32).float(colors.angle);
-    const tagResult1 = tag.tag(2, _mod1306.WireType.Bit32);
+    tag.tag(2, _mod1188.WireType.Bit32).float(colors.angle);
+    const tagResult1 = tag.tag(2, _mod1188.WireType.Bit32);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1306.UnknownFieldHandler.onWrite;
+      onWrite = _mod1188.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, colors, tag);

@@ -1,10 +1,10 @@
-// === Module 6361: BananaSpotIllustration ===
+// === Module 5789: BananaSpotIllustration ===
 
-// Module 6361 (BananaSpotIllustration)
+// Module 5789 (BananaSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6362 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5790 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BananaSpotIllustration.native.tsx");

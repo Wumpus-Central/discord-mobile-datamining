@@ -1,7 +1,7 @@
-// === Module 9010: useCollapsibleFloatingActionButtonState ===
+// === Module 8910: useCollapsibleFloatingActionButtonState ===
 
-// Module 9010 (useCollapsibleFloatingActionButtonState)
-import _mod4217 from "module_4217" /* 4217 */;
+// Module 8910 (useCollapsibleFloatingActionButtonState)
+import _mod4296 from "module_4296" /* 4296 */;
 import closure_2 from "noop" /* 19 */;
 
 require = arg1;
@@ -9,7 +9,7 @@ let closure_3 = { code: "function CollapsibleFloatingActionButtonStateNativeTsx1
 let result = require("set").fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx");
 
 export const useCollapsibleFloatingActionButtonState = function useCollapsibleFloatingActionButtonState() {
-  const obj = { collapseText: _mod4217.useSharedValue(0) };
+  const obj = { collapseText: _mod4296.useSharedValue(0) };
   return obj;
 };
 export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState, UNDETERMINED) {

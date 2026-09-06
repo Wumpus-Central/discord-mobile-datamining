@@ -1,14 +1,14 @@
-// === Module 10817: items ===
+// === Module 10820: items ===
 
-// Module 10817 (items)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 3370 */;
-import closure_3 from "_getSystemLocale" /* 1995 */;
-import closure_4 from "handleUserSettingsStoreUpdate" /* 6084 */;
-import { MarketingURLs } from "ME" /* 673 */;
+// Module 10820 (items)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 3417 */;
+import closure_3 from "_getSystemLocale" /* 2025 */;
+import closure_4 from "handleUserSettingsStoreUpdate" /* 7228 */;
+import { MarketingURLs } from "ME" /* 1074 */;
 
 require = arg1;
-let closure_6 = { [arg1(10818).StorefrontPlatform.DESKTOP]: "PC", [arg1(10818).StorefrontPlatform.XBOX]: "Xbox", [arg1(10818).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10818).StorefrontPlatform.SWITCH]: "Switch", [arg1(10818).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10818).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10818).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
+let closure_6 = { [arg1(10821).StorefrontPlatform.DESKTOP]: "PC", [arg1(10821).StorefrontPlatform.XBOX]: "Xbox", [arg1(10821).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10821).StorefrontPlatform.SWITCH]: "Switch", [arg1(10821).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10821).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10821).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
 let items = [require("StorefrontPlatform").StorefrontPlatform.PLAYSTATION];
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx");
 
@@ -68,7 +68,7 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
   if (shouldAppendDisclaimer.shouldAppendDisclaimer) {
     let obj = { applicationName: null, platforms_info: null };
     obj[0] = str;
-    const intl2 = tmp(1233).intl;
+    const intl2 = tmp(1114).intl;
     let id;
     if (name != null) {
       id = name.id;
@@ -81,13 +81,13 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
     }
     let str2 = "";
     if (0 !== arr.length) {
-      const intl3 = tmp(1233).intl;
+      const intl3 = tmp(1114).intl;
       obj = { platforms: null, count: null };
       const _Intl = Intl;
       const listFormat = new Intl.ListFormat(closure_3.locale);
       obj[0] = listFormat.format(arr.map((arg0) => table[arg0]));
       obj[1] = arr.length;
-      str2 = intl3.formatToPlainString(tmp4(3370)["5h8p5P"], obj);
+      str2 = intl3.formatToPlainString(tmp4(3417)["5h8p5P"], obj);
     }
     obj1 = { platforms_info: null };
     obj1[0] = str2;
@@ -97,7 +97,7 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
   } else {
     obj = { applicationName: null };
     obj[0] = str;
-    formatResult = format(tmp(1233).t.CVITgq, obj);
+    formatResult = format(tmp(1114).t.CVITgq, obj);
   }
   return formatResult;
 };
@@ -126,19 +126,19 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
     }
     let str2 = "";
     if (0 !== arr2.length) {
-      const intl3 = tmp(1233).intl;
+      const intl3 = tmp(1114).intl;
       obj = { platforms: null, count: null };
       const _Intl = Intl;
       const listFormat = new Intl.ListFormat(closure_3.locale);
       obj[0] = listFormat.format(arr2.map((arg0) => table[arg0]));
       obj[1] = arr2.length;
-      str2 = intl3.formatToPlainString(tmp3(3370)["5h8p5P"], obj);
+      str2 = intl3.formatToPlainString(tmp3(3417)["5h8p5P"], obj);
     }
     obj = { platforms_info: null };
     obj[0] = str2;
     items = [format(tmp4.Q0dHYO, obj), ];
-    const intl2 = tmp(1233).intl;
-    items[1] = intl2.format(tmp3(3370).Ufm9XX, obj);
+    const intl2 = tmp(1114).intl;
+    items[1] = intl2.format(tmp3(3417).Ufm9XX, obj);
     let items1 = items;
   } else {
     items1 = [format(tmp4.Ufm9XX, obj)];
@@ -194,7 +194,7 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
     const listFormat = new Intl.ListFormat(closure_3.locale);
     obj[0] = listFormat.format(arr.map((arg0) => table[arg0]));
     obj[1] = arr.length;
-    str = intl2.formatToPlainString(tmp4(3370)["5h8p5P"], obj);
+    str = intl2.formatToPlainString(tmp4(3417)["5h8p5P"], obj);
   }
   obj[1] = str;
   return intl.format(vyAtfo, obj);

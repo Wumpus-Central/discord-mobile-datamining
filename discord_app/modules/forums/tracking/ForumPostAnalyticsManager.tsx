@@ -1,10 +1,10 @@
-// === Module 7528: handleThreadCreate ===
+// === Module 7773: handleThreadCreate ===
 
-// Module 7528 (handleThreadCreate)
-import initializeDefault from "initialize" /* 5495 */;
-import closure_3 from "handleThreadCreateOrUpdate" /* 5458 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
+// Module 7773 (handleThreadCreate)
+import initializeDefault from "initialize" /* 7118 */;
+import closure_3 from "handleThreadCreateOrUpdate" /* 5507 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
 
 let require = arg1;
 initializeDefault;

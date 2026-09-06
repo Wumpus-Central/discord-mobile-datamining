@@ -1,8 +1,8 @@
-// === Module 11873: getLastFetchTimeMs ===
+// === Module 12072: getLastFetchTimeMs ===
 
-// Module 11873 (getLastFetchTimeMs)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 12072 (getLastFetchTimeMs)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 let closure_0 = [];
 let c1 = null;

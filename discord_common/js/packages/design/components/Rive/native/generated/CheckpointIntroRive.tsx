@@ -1,8 +1,8 @@
-// === Module 4277: CheckpointIntroRive ===
+// === Module 4358: CheckpointIntroRive ===
 
-// Module 4277 (CheckpointIntroRive)
-import BaseRive from "BaseRive" /* 4211 */;
-import getDerivedStateFromError from "getDerivedStateFromError" /* 4266 */;
+// Module 4358 (CheckpointIntroRive)
+import BaseRive from "BaseRive" /* 4290 */;
+import getDerivedStateFromError from "getDerivedStateFromError" /* 4345 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -26,7 +26,7 @@ let closure_9 = {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
     const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = tmp(4211);
+    let tmpResult = tmp(4290);
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -36,7 +36,7 @@ let closure_9 = {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
     const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = tmp(4211);
+    tmpResult = tmp(4290);
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;
@@ -61,7 +61,7 @@ let closure_9 = {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
     const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = tmp(4211);
+    let tmpResult = tmp(4290);
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -71,7 +71,7 @@ let closure_9 = {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
     const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = tmp(4211);
+    tmpResult = tmp(4290);
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;

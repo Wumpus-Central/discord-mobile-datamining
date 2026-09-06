@@ -1,15 +1,15 @@
-// === Module 13958: ProductCatalogFeature ===
+// === Module 13980: ProductCatalogFeature ===
 
-// Module 13958 (ProductCatalogFeature)
+// Module 13980 (ProductCatalogFeature)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
-import create from "create" /* 1929 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7608 */;
-import getUserMaxFileSize from "getUserMaxFileSize" /* 8227 */;
-import setDefault from "set" /* 13960 */;
-import apexExperimentDefault from "apexExperiment" /* 13961 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
-import importDefaultResult1 from "set" /* 13959 */;
+import create from "create" /* 1379 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
+import getUserMaxFileSize from "getUserMaxFileSize" /* 9359 */;
+import setDefault from "set" /* 13982 */;
+import apexExperimentDefault from "apexExperiment" /* 13983 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
+import importDefaultResult1 from "set" /* 13981 */;
 
 let closure_0 = require;
 ({ PremiumSubscriptionSKUs, PremiumTypeToActivePremiumSubscriptionSKU: c3 } = GuildFeatures);
@@ -1163,14 +1163,14 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
     }
     if (null != perks) {
       const config = apexExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
-      if (config !== callback(13961).DenormalizedPerksReadConfig.CONTROL) {
+      if (config !== callback(13983).DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
-        const tmp9Result = tmp9(1927);
-        if (config === tmp9(13961).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        const tmp9Result = tmp9(1377);
+        if (config === tmp9(13983).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;

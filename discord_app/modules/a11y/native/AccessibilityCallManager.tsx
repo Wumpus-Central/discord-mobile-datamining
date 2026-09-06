@@ -1,12 +1,12 @@
-// === Module 14336: set ===
+// === Module 14442: set ===
 
-// Module 14336 (set)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import initializeDefault from "initialize" /* 4662 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
+// Module 14442 (set)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import initializeDefault from "initialize" /* 1898 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "markAllUserIdListsStale" /* 4209 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -26,21 +26,21 @@ class AccessibilityCallManager extends tmp4 {
           if (!obj2.isIOS()) {
             const channel = store2.getChannel(channelId);
             if (null != channel) {
-              const channelName = tmp4(4674).computeChannelName(channel, closure_6, closure_5);
+              const channelName = tmp4(4713).computeChannelName(channel, closure_6, closure_5);
               if (null != channelName) {
                 obj.add(channelId);
-                const AccessibilityAnnouncer = tmp4(1362).AccessibilityAnnouncer;
-                const intl = tmp4(1233).intl;
+                const AccessibilityAnnouncer = tmp4(4411).AccessibilityAnnouncer;
+                const intl = tmp4(1114).intl;
                 obj = { callLocation: null };
                 obj[0] = channelName;
-                AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1233).t["Bm0A/p"], obj), "assertive");
+                AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1114).t["Bm0A/p"], obj), "assertive");
               }
-              const tmp4Result = tmp4(4674);
+              const tmp4Result = tmp4(4713);
             }
           } else {
-            const NativePhoneIntegrationEnabled = tmp4(4166).NativePhoneIntegrationEnabled;
+            const NativePhoneIntegrationEnabled = tmp4(1935).NativePhoneIntegrationEnabled;
           }
-          obj2 = callback(1234);
+          obj2 = callback(1115);
         }
       }
     };
@@ -59,21 +59,21 @@ class AccessibilityCallManager extends tmp4 {
             if (!obj3.isIOS()) {
               const channel = store2.getChannel(channelId);
               if (null != channel) {
-                const channelName = tmp4(4674).computeChannelName(channel, closure_6, closure_5);
+                const channelName = tmp4(4713).computeChannelName(channel, closure_6, closure_5);
                 if (null != channelName) {
                   obj2.add(channelId);
-                  const AccessibilityAnnouncer = tmp4(1362).AccessibilityAnnouncer;
-                  const intl = tmp4(1233).intl;
+                  const AccessibilityAnnouncer = tmp4(4411).AccessibilityAnnouncer;
+                  const intl = tmp4(1114).intl;
                   obj = { callLocation: null };
                   obj[0] = channelName;
-                  AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1233).t["Bm0A/p"], obj), "assertive");
+                  AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1114).t["Bm0A/p"], obj), "assertive");
                 }
-                const tmp4Result = tmp4(4674);
+                const tmp4Result = tmp4(4713);
               }
             } else {
-              const NativePhoneIntegrationEnabled = tmp4(4166).NativePhoneIntegrationEnabled;
+              const NativePhoneIntegrationEnabled = tmp4(1935).NativePhoneIntegrationEnabled;
             }
-            obj3 = callback(1234);
+            obj3 = callback(1115);
           }
           obj2 = set;
         }

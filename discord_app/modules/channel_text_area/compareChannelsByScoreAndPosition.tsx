@@ -1,8 +1,8 @@
-// === Module 6190: compareChannelsByScoreAndPosition ===
+// === Module 7336: compareChannelsByScoreAndPosition ===
 
-// Module 6190 (compareChannelsByScoreAndPosition)
-import closure_0 from "ensureGuildLoaded" /* 1386 */;
-import { ChannelTypes } from "ME" /* 673 */;
+// Module 7336 (compareChannelsByScoreAndPosition)
+import closure_0 from "ensureGuildLoaded" /* 1957 */;
+import { ChannelTypes } from "ME" /* 1074 */;
 
 const result = require("set").fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
 

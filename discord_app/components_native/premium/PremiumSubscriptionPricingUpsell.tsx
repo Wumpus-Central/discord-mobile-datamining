@@ -1,21 +1,21 @@
-// === Module 13431: PricingSubheadingCopy ===
+// === Module 13537: PricingSubheadingCopy ===
 
-// Module 13431 (PricingSubheadingCopy)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 13312 */;
+// Module 13537 (PricingSubheadingCopy)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 13417 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1995 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import closure_8 from "addSubscriptionPlan" /* 4144 */;
-import closure_9 from "reset" /* 4145 */;
-import closure_10 from "updateProduct" /* 6093 */;
-import { CurrencyCodes } from "ME" /* 673 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+import closure_6 from "_getSystemLocale" /* 2025 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import closure_8 from "addSubscriptionPlan" /* 4223 */;
+import closure_9 from "reset" /* 4224 */;
+import closure_10 from "updateProduct" /* 7237 */;
+import { CurrencyCodes } from "ME" /* 1074 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function PricingSubheadingCopy() {

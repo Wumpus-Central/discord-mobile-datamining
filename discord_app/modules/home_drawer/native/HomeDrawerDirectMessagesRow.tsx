@@ -1,19 +1,19 @@
-// === Module 16147: HomeDrawerDMsRow ===
+// === Module 16309: HomeDrawerDMsRow ===
 
-// Module 16147 (HomeDrawerDMsRow)
+// Module 16309 (HomeDrawerDMsRow)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4338 */;
-import Text from "Text" /* 4474 */;
-import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 16143 */;
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4423 */;
+import Text from "Text" /* 4556 */;
+import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 16305 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "sortActivity" /* 4569 */;
-import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import { StatusTypes } from "ME" /* 673 */;
+import closure_4 from "sortActivity" /* 4600 */;
+import closure_5 from "markAllUserIdListsStale" /* 4209 */;
+import { StatusTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function HomeDrawerDMsRow() {
@@ -32,17 +32,17 @@ function HomeDrawerDMsRow() {
     obj[0] = tmp.onlineDot;
     const items1 = [callback(View, obj), ];
     obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
-    const intl = tmp2(1233).intl;
+    const intl = tmp2(1114).intl;
     const obj2 = { numFriends: null };
     obj2[0] = stateFromStores;
-    obj1[3] = intl.format(tmp2(1233).t.N5UIKr, obj2);
-    items1[1] = callback(tmp2(4474).Text, obj1);
+    obj1[3] = intl.format(tmp2(1114).t.N5UIKr, obj2);
+    items1[1] = callback(tmp2(4556).Text, obj1);
     obj[1] = items1;
     tmp5 = callback2(View, obj);
   }
   const obj3 = { title: null, subtitle: null };
   const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
-  const intl2 = tmp2(1233).intl;
+  const intl2 = tmp2(1114).intl;
   obj4[3] = intl2.string(getSystemLocale.t.YUU0RF);
   obj3[0] = callback(Text.Text, obj4);
   obj3[1] = tmp5;

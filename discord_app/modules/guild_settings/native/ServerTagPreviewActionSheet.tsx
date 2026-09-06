@@ -1,13 +1,13 @@
-// === Module 13890: ServerTagPreviewActionSheet ===
+// === Module 13912: ServerTagPreviewActionSheet ===
 
-// Module 13890 (ServerTagPreviewActionSheet)
-import ThemesDefault from "Themes" /* 709 */;
-import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 13891 */;
+// Module 13912 (ServerTagPreviewActionSheet)
+import ThemesDefault from "Themes" /* 576 */;
+import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 13913 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9027 */;
+import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9065 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -19,7 +19,7 @@ const result = require("set").fileFinishedImporting("modules/guild_settings/nati
 
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(9029);
+  let obj = guildId(9187);
   let guildProfile = obj.useGuildProfile(guildId);
   guildProfile = guildProfile.guildProfile;
   const items = [guildId];
@@ -39,28 +39,28 @@ export default function ServerTagPreviewActionSheet(guildId) {
     obj = { style: null, children: null };
     obj[0] = tmp.error;
     obj1 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const intl = tmp2(1233).intl;
-    obj1[2] = intl.string(tmp2(1233).t.tmGHjc);
-    const items1 = [callback(tmp2(4474).Text, obj1), ];
+    const intl = tmp2(1114).intl;
+    obj1[2] = intl.string(tmp2(1114).t.tmGHjc);
+    const items1 = [callback(tmp2(4556).Text, obj1), ];
     const obj2 = { variant: "secondary", text: null, onPress: null };
-    const intl2 = tmp2(1233).intl;
-    obj2[1] = intl2.string(tmp2(1233).t["5911Lb"]);
+    const intl2 = tmp2(1114).intl;
+    obj2[1] = intl2.string(tmp2(1114).t["5911Lb"]);
     obj2[2] = function onPress() {
       return guildId(closure_1_2[7]).getGuildProfile(guildId, true);
     };
-    items1[1] = callback(tmp2(4929).Button, obj2);
+    items1[1] = callback(tmp2(4975).Button, obj2);
     obj[1] = items1;
     tmp7 = callback2(View, obj);
     tmp8 = callback;
   } else {
-    tmp7 = callback(tmp2(6056).SceneLoadingIndicator, {});
+    tmp7 = callback(tmp2(7039).SceneLoadingIndicator, {});
     tmp8 = callback;
   }
   const obj3 = { children: null };
   const obj4 = { title: null };
-  const intl3 = tmp2(1233).intl;
-  obj4[0] = intl3.string(guildId(1233).t["2QmKZ2"]);
-  const items2 = [tmp8(guildId(5630).BottomSheetTitleHeader, obj4), tmp7];
+  const intl3 = tmp2(1114).intl;
+  obj4[0] = intl3.string(guildId(1114).t["2QmKZ2"]);
+  const items2 = [tmp8(guildId(7149).BottomSheetTitleHeader, obj4), tmp7];
   obj3[0] = items2;
-  return callback2(guildId(5998).ActionSheet, obj3);
+  return callback2(guildId(7198).ActionSheet, obj3);
 };

@@ -1,15 +1,15 @@
-// === Module 12476: ContactSyncBackToLanding ===
+// === Module 12702: ContactSyncBackToLanding ===
 
-// Module 12476 (ContactSyncBackToLanding)
+// Module 12702 (ContactSyncBackToLanding)
 import set from "set" /* 2 */;
 
 let result = set.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
 
 export default function ContactSyncBackToLanding(arg0) {
   const _require = arg0;
-  dependencyMap = _require(1498).useNavigation();
-  const obj = _require(1498);
-  return _require(5504).getHeaderBackButton(() => {
+  dependencyMap = _require(1483).useNavigation();
+  const obj = _require(1483);
+  return _require(5624).getHeaderBackButton(() => {
     if (null != lib.navigateToLandingPage) {
       const result = lib.navigateToLandingPage();
     } else {

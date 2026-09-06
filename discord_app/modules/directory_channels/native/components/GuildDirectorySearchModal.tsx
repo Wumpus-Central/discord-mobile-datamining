@@ -1,8 +1,8 @@
-// === Module 12097: GuildDirectorySearchModal ===
+// === Module 12301: GuildDirectorySearchModal ===
 
-// Module 12097 (GuildDirectorySearchModal)
+// Module 12301 (GuildDirectorySearchModal)
 import noopAll from "noop" /* 19 */;
-import useInitialValueDefault from "useInitialValue" /* 5950 */;
+import useInitialValueDefault from "useInitialValue" /* 5598 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/directory_channels/
 
 export default function GuildDirectorySearchModal(arg0) {
   const _require = arg0;
-  return jsx(_require(6017).Navigator, {
+  return jsx(_require(7000).Navigator, {
     screens: useInitialValueDefault(() => ({
       [closure_1_4]: {
         fullscreen: true,

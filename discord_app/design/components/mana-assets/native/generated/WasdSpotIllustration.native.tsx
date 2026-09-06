@@ -1,10 +1,10 @@
-// === Module 7123: WasdSpotIllustration ===
+// === Module 6563: WasdSpotIllustration ===
 
-// Module 7123 (WasdSpotIllustration)
+// Module 6563 (WasdSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 7124 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6564 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WasdSpotIllustration.native.tsx");

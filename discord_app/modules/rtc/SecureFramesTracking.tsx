@@ -1,11 +1,11 @@
-// === Module 9876: trackRTCPanelViewed ===
+// === Module 9161: trackRTCPanelViewed ===
 
-// Module 9876 (trackRTCPanelViewed)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4701 */;
-import getProfileProperties from "getProfileProperties" /* 8576 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 9161 (trackRTCPanelViewed)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
+import getProfileProperties from "getProfileProperties" /* 8191 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesTracking.tsx");

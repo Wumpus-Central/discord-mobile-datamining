@@ -1,10 +1,10 @@
-// === Module 9890: useIsStreamRTCConnectionEmpty ===
+// === Module 9173: useIsStreamRTCConnectionEmpty ===
 
-// Module 9890 (useIsStreamRTCConnectionEmpty)
-import initialize from "initialize" /* 586 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "createRTCConnection" /* 4554 */;
-import closure_4 from "initialize" /* 4568 */;
+// Module 9173 (useIsStreamRTCConnectionEmpty)
+import initialize from "initialize" /* 504 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "createRTCConnection" /* 4583 */;
+import closure_4 from "initialize" /* 4599 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsEmpt
 export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEmpty(stateFromStores4) {
   const _require = stateFromStores4;
   const items = [closure_4, closure_2];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     if (null == closure_0) {
       return true;
     } else {

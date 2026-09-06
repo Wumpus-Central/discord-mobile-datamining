@@ -1,10 +1,10 @@
-// === Module 11108: KeyboardIcon ===
+// === Module 11246: KeyboardIcon ===
 
-// Module 11108 (KeyboardIcon)
+// Module 11246 (KeyboardIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 11109 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 11247 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,8 +1,8 @@
-// === Module 11298: markChannelInvited ===
+// === Module 11474: markChannelInvited ===
 
-// Module 11298 (markChannelInvited)
+// Module 11474 (markChannelInvited)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const result = set.fileFinishedImporting("modules/activities/stores/RichPresenceInviteBarActionCreators.tsx");
 

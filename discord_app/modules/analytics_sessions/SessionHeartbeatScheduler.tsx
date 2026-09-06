@@ -1,24 +1,24 @@
-// === Module 7217: trackHeartbeat ===
+// === Module 7461: trackHeartbeat ===
 
-// Module 7217 (trackHeartbeat)
+// Module 7461 (trackHeartbeat)
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 586 */;
-import Storage2 from "Storage" /* 592 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import _modDef1205 from "module_1205" /* 1205 */;
-import isForegrounded2 from "isForegrounded" /* 7218 */;
-import isActiveUserRoute2 from "isActiveUserRoute" /* 7219 */;
-import monotonicNowMs from "monotonicNowMs" /* 7220 */;
-import result2 from "result" /* 7227 */;
+import initializeDefault from "initialize" /* 504 */;
+import Storage2 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import _modDef1232 from "module_1232" /* 1232 */;
+import isForegrounded2 from "isForegrounded" /* 7462 */;
+import isActiveUserRoute2 from "isActiveUserRoute" /* 7463 */;
+import monotonicNowMs from "monotonicNowMs" /* 7464 */;
+import result2 from "result" /* 7471 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5230 */;
-import importDefaultResult from "fetchFingerprint" /* 1215 */;
-import closure_6 from "checkIdleAFK" /* 5363 */;
-import importDefaultResult1 from "createRTCConnection" /* 4554 */;
-import ME from "ME" /* 673 */;
-import isForegrounded from "isForegrounded" /* 7218 */;
-import isActiveUserRoute from "isActiveUserRoute" /* 7219 */;
+import closure_4 from "_handleConnectionOpen" /* 5277 */;
+import importDefaultResult from "fetchFingerprint" /* 502 */;
+import closure_6 from "checkIdleAFK" /* 5410 */;
+import importDefaultResult1 from "createRTCConnection" /* 4583 */;
+import ME from "ME" /* 1074 */;
+import isForegrounded from "isForegrounded" /* 7462 */;
+import isActiveUserRoute from "isActiveUserRoute" /* 7463 */;
 
 require = arg1;
 function trackHeartbeat() {
@@ -91,7 +91,7 @@ function _trackHeartbeat() {
           dependencyMap = Date.now();
           let track = null;
           if (null != lib) {
-            obj1 = lib(1205);
+            obj1 = lib(1232);
             const obj3 = { category: null, message: "Tracking Heartbeat", data: null };
             obj3[0] = closure_14;
             const obj4 = { initialized: null };
@@ -100,7 +100,7 @@ function _trackHeartbeat() {
             obj1.addBreadcrumb(obj3);
             let obj5 = { client_heartbeat_initialization_timestamp: null, client_heartbeat_version: 31 };
             obj5[0] = lib.createdAtTimestamp;
-            obj5 = num2(7224);
+            obj5 = num2(7468);
             const merged = Object.assign(obj5.getClientHeartbeatPiggybackProperties());
             const idleSince = store.getIdleSince();
             num2 = idleSince;
@@ -114,15 +114,15 @@ function _trackHeartbeat() {
             obj6[4] = store.getSystemLocked();
             const merged1 = Object.assign(obj6);
             c4 = obj5;
-            tmp40 = lib(695);
+            tmp40 = lib(1242);
             track = tmp40.track;
             track(constants.CLIENT_HEARTBEAT, c4);
-            closure_19 = num2(7220).monotonicNowMs();
-            const obj8 = num2(7220);
-            num2 = num2(7221).drainClickstream();
-            const obj9 = num2(7221);
+            closure_19 = num2(7464).monotonicNowMs();
+            const obj8 = num2(7464);
+            num2 = num2(7465).drainClickstream();
+            const obj9 = num2(7465);
           } else {
-            obj = lib(1205);
+            obj = lib(1232);
             const _Error = Error;
             const _HermesInternal = HermesInternal;
             obj.captureException(Error("Null session when tracking session heartbeat. Waited " + dependencyMap - num2 + "ms"));
@@ -157,7 +157,7 @@ function isActive() {
   return items.length > 0;
 }
 function scheduleHeartbeatTracking() {
-  let obj = _modDef1205;
+  let obj = _modDef1232;
   obj = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` };
   obj.addBreadcrumb(obj);
   const items = [];
@@ -179,7 +179,7 @@ function scheduleHeartbeatTracking() {
       obj = { message: null };
       const _HermesInternal = HermesInternal;
       obj[0] = "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " + num / 1000 + " seconds. Scheduling Heartbeat";
-      _modDef1205.addBreadcrumb(obj);
+      _modDef1232.addBreadcrumb(obj);
       obj1 = { type: "timeout", id: null };
       const _setTimeout = setTimeout;
       obj1[1] = setTimeout(() => {
@@ -192,7 +192,7 @@ function scheduleHeartbeatTracking() {
         };
       }, num);
       _null = obj1;
-      const tmpResult = _modDef1205;
+      const tmpResult = _modDef1232;
     }
   } else if (null == _null) {
     // // eliminated: always false
@@ -235,7 +235,7 @@ function validateClientSession(version) {
     let tmp4 = version;
     if (version.version !== result2.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7227).CLIENT_SESSION_STORAGE_VERSION);
+      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7471).CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
     }
     tmp = tmp4;
@@ -596,7 +596,7 @@ const tmp3 = new timestampDefault("SessionHeartbeatScheduler");
 let result = require("set").fileFinishedImporting("modules/analytics_sessions/SessionHeartbeatScheduler.tsx");
 
 export const initSessionHeartbeatScheduler = function initSessionHeartbeatScheduler() {
-  let obj = _modDef1205;
+  let obj = _modDef1232;
   obj.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" });
   importDefaultResult1.addChangeListener(handleRTCStateChange);
   importDefaultResult.addChangeListener(handleAuthenticationChange);
@@ -615,15 +615,15 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
     obj[0] = setInterval(() => {
       let result = null != closure_24;
       if (result) {
-        result = callback(7225).shouldLogClientHeartbeatSkipped();
-        obj = callback(7225);
+        result = callback(7469).shouldLogClientHeartbeatSkipped();
+        obj = callback(7469);
       }
       if (result) {
         if (obj2.monotonicNowMs() - closure_19 > closure_11) {
-          callback2(695).track(constants.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 31 });
-          const obj3 = callback2(695);
+          callback2(1242).track(constants.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 31 });
+          const obj3 = callback2(1242);
         }
-        obj2 = callback(7220);
+        obj2 = callback(7464);
       }
     }, closure_11);
   }
@@ -638,9 +638,9 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     let tmp7 = null;
     if (null != value) {
       let tmp8 = value;
-      if (value.version !== tmp2(7227).CLIENT_SESSION_STORAGE_VERSION) {
+      if (value.version !== tmp2(7471).CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7227).CLIENT_SESSION_STORAGE_VERSION);
+        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7471).CLIENT_SESSION_STORAGE_VERSION);
         tmp8 = null;
       }
       tmp7 = tmp8;

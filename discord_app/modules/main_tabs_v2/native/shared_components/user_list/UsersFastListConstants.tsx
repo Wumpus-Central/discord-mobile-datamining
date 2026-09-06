@@ -1,7 +1,7 @@
-// === Module 10322: PX_24 ===
+// === Module 10213: PX_24 ===
 
-// Module 10322 (PX_24)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 10213 (PX_24)
+import ThemesDefault from "Themes" /* 576 */;
 
 const PX_24 = ThemesDefault.space.PX_24;
 const PX_8 = ThemesDefault.space.PX_8;

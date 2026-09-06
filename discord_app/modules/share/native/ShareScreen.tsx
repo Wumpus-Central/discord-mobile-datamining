@@ -1,21 +1,21 @@
-// === Module 13878: getAttachmentsRestriction ===
+// === Module 13900: getAttachmentsRestriction ===
 
-// Module 13878 (getAttachmentsRestriction)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+// Module 13900 (getAttachmentsRestriction)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import closure_9 from "ensureGuildLoaded" /* 1386 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
-import ME from "ME" /* 673 */;
-import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 11494 */;
-import { UserRowModes } from "UserRowModes" /* 10857 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import closure_9 from "ensureGuildLoaded" /* 1957 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
+import ME from "ME" /* 1074 */;
+import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 11683 */;
+import { UserRowModes } from "UserRowModes" /* 10860 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 1234 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import set from "set" /* 1115 */;
 
 require = arg1;
 function getAttachmentsRestriction(type) {
@@ -258,7 +258,7 @@ export default function ShareScreen(sharedContent) {
                               c4 = 3;
                               return { value: false, done: true };
                             } else {
-                              obj1 = callback(13880);
+                              obj1 = callback(13902);
                               obj1 = { attachments: null, channel: null, comment: null };
                               obj1[0] = closure_1_1;
                               obj1[1] = channel;
@@ -285,7 +285,7 @@ export default function ShareScreen(sharedContent) {
                           obj3[2] = channel.type;
                           obj3[3] = closure_1_1.length;
                           obj3[4] = closure_1_2;
-                          callback2(695).track(closure_3_11.SHARE_MESSAGE_SENT, obj3);
+                          callback2(1242).track(closure_3_11.SHARE_MESSAGE_SENT, obj3);
                           c4 = 3;
                           return { value: "HermesInternal", done: null };
                         }

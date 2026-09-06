@@ -1,6 +1,6 @@
-// === Module 6802: metadata ===
+// === Module 6238: metadata ===
 
-// Module 6802 (metadata)
+// Module 6238 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MicrophoneAndKeyboardSpotIllustration-2x.png.js");

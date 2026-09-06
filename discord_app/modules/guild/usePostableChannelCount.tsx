@@ -1,10 +1,10 @@
-// === Module 16574: useSendMessageChannelCount ===
+// === Module 16741: useSendMessageChannelCount ===
 
-// Module 16574 (useSendMessageChannelCount)
-import closure_3 from "comparator" /* 1981 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_4 } from "comparator" /* 1981 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
-import { Permissions } from "ME" /* 673 */;
+// Module 16741 (useSendMessageChannelCount)
+import closure_3 from "comparator" /* 2012 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_4 } from "comparator" /* 2012 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
+import { Permissions } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild/usePostableChannelCount.tsx");
@@ -13,7 +13,7 @@ export default function useSendMessageChannelCount(arg0) {
   const _require = arg0;
   let items = [closure_3];
   const items1 = [arg0];
-  const stateFromStores = _require(586).useStateFromStores(items, () => {
+  const stateFromStores = _require(504).useStateFromStores(items, () => {
     let items = closure_1_3.getChannels(closure_0)[closure_1_4];
     if (items == null) {
       items = [];

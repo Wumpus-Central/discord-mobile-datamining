@@ -1,10 +1,10 @@
-// === Module 5109: fromFileUri ===
+// === Module 5156: fromFileUri ===
 
-// Module 5109 (fromFileUri)
+// Module 5156 (fromFileUri)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 1270 */;
-import fromBlobDefault from "fromBlob" /* 5110 */;
+import enforcingDefault from "enforcing" /* 1152 */;
+import fromBlobDefault from "fromBlob" /* 5157 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 fromBlobDefault;
@@ -24,8 +24,8 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
       error = new Error("RTNFileManager doesn't exist?");
       let rejectResult = Promise.reject(error);
     } else {
-      rejectResult = tmp3(1270).getFileHash(uri, "md5", num);
-      const tmp3Result = tmp3(1270);
+      rejectResult = tmp3(1152).getFileHash(uri, "md5", num);
+      const tmp3Result = tmp3(1152);
     }
     tmp3 = importDefault;
   } else {

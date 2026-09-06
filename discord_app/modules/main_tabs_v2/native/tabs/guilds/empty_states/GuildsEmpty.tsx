@@ -1,29 +1,29 @@
-// === Module 16107: handleJoinGuild ===
+// === Module 16269: handleJoinGuild ===
 
-// Module 16107 (handleJoinGuild)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4927 */;
-import Button from "Button" /* 4929 */;
-import _modDef12482 from "module_12482" /* 12482 */;
-import registerAssetDefault from "registerAsset" /* 16108 */;
+// Module 16269 (handleJoinGuild)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import Stack from "Stack" /* 4973 */;
+import Button from "Button" /* 4975 */;
+import _modDef12708 from "module_12708" /* 12708 */;
+import registerAssetDefault from "registerAsset" /* 16270 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "fetchFingerprint" /* 1215 */;
-import closure_9 from "createGuildRecordFromRust" /* 1908 */;
-import closure_10 from "handleConnectionOpen" /* 4299 */;
-import ME from "ME" /* 673 */;
+import closure_8 from "fetchFingerprint" /* 502 */;
+import closure_9 from "createGuildRecordFromRust" /* 1979 */;
+import closure_10 from "handleConnectionOpen" /* 4381 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function handleJoinGuild() {
-  const result = _modDef12482.openGuildJoinServerScreen();
+  const result = _modDef12708.openGuildJoinServerScreen();
 }
 function handleCreateGuild() {
-  _modDef12482.openCreateGuildModal();
+  _modDef12708.openCreateGuildModal();
 }
 class GuildsEmptyContent {
   constructor(arg0) {
@@ -109,9 +109,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   selectedGuildId = undefined;
   ({ selectedGuildId, style } = arg0);
   const tmp = callback3();
-  let obj = navigation(1499);
+  let obj = navigation(1484);
   navigation = obj.useNavigation();
-  obj1 = navigation(644);
+  obj1 = navigation(563);
   const items = [closure_8];
   const stateFromStores = obj1.useStateFromStores(items, () => null != sessionId.getSessionId());
   let tmp6 = null;
@@ -119,8 +119,8 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
     tmp6 = selectedGuildId;
   }
   selectedGuildId = tmp6;
-  obj = { type: navigation(500).ImpressionTypes.VIEW, name: navigation(500).ImpressionNames.GUILDS_EMPTY_NUX };
-  selectedGuildId(8911)(obj);
+  obj = { type: navigation(1250).ImpressionTypes.VIEW, name: navigation(1250).ImpressionNames.GUILDS_EMPTY_NUX };
+  selectedGuildId(8768)(obj);
   const items1 = [tmp6, navigation];
   const effect = importAllResult.useEffect(() => {
     if (null != selectedGuildId) {
@@ -157,9 +157,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
       obj2 = closure_0;
     }
   }, items1);
-  let tmp2Result = tmp2(5080);
+  let tmp2Result = tmp2(5126);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(14942);
+  tmp2Result = tmp2(15100);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };
@@ -170,9 +170,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
     let obj2 = { style: null, children: null };
     obj2[0] = tmp.headerInner;
     let obj3 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
-    const intl = tmp2(1233).intl;
-    obj3[4] = intl.string(tmp2(1233).t["7hB4kg"]);
-    obj2[1] = callback(tmp2(4474).Text, obj3);
+    const intl = tmp2(1114).intl;
+    obj3[4] = intl.string(tmp2(1114).t["7hB4kg"]);
+    obj2[1] = callback(tmp2(4556).Text, obj3);
     obj1[1] = callback(closure_6, obj2);
     const items3 = [callback(closure_6, obj1), ];
     let tmp18;

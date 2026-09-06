@@ -1,23 +1,23 @@
-// === Module 8782: HeaderView ===
+// === Module 8636: HeaderView ===
 
-// Module 8782 (HeaderView)
-import ThemesDefault from "Themes" /* 709 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4433 */;
-import Text from "Text" /* 4474 */;
-import ArrowDefault from "Arrow" /* 8784 */;
+// Module 8636 (HeaderView)
+import ThemesDefault from "Themes" /* 576 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
+import Text from "Text" /* 4556 */;
+import ArrowDefault from "Arrow" /* 8638 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "getUserAgnosticState" /* 4477 */;
-import closure_9 from "ensureGuildLoaded" /* 1386 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
-import { REMEDIATION_ELEMENT_TYPES } from "REMEDIATION_ELEMENT_TYPES" /* 8783 */;
-import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8781 */;
-import ME from "ME" /* 673 */;
-import { Permissions } from "sum" /* 502 */;
+import closure_8 from "getUserAgnosticState" /* 4559 */;
+import closure_9 from "ensureGuildLoaded" /* 1957 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
+import { REMEDIATION_ELEMENT_TYPES } from "REMEDIATION_ELEMENT_TYPES" /* 8637 */;
+import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8635 */;
+import ME from "ME" /* 1074 */;
+import { Permissions } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function HeaderView(node) {
@@ -92,7 +92,7 @@ function ChildItem(child) {
   importDefault = Object.assign(child, Object.create(null));
   const tmp = callback4();
   [tmp3, tmp4] = callback(child, 2);
-  let obj = child(586);
+  let obj = child(504);
   const items = [closure_8];
   let stateFromStores = obj.useStateFromStores(items, () => closure_8.get("iar_show_report_sub_type_labels"));
   if (child.nodeMap[tmp4] != null) {
@@ -101,7 +101,7 @@ function ChildItem(child) {
   obj = { style: tmp.childButton, accessibilityRole: "button", onPress: callback(React.useState(() => () => closure_1.onPress(closure_0)), 1)[0], children: null };
   obj = { style: tmp.childContainer, children: null };
   obj1 = { style: tmp.childContent, children: null };
-  const items1 = [callback2(child(4474).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
+  const items1 = [callback2(child(4556).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
@@ -109,14 +109,14 @@ function ChildItem(child) {
     const obj3 = { style: null, variant: "text-xs/normal", color: "text-muted", children: null };
     obj3[0] = tmp.debugText;
     obj3[3] = report_type;
-    stateFromStores = tmp9(tmp5(4474).Text, obj3);
+    stateFromStores = tmp9(tmp5(4556).Text, obj3);
   }
   items1[1] = stateFromStores;
   obj1[1] = items1;
   const items2 = [closure_17(closure_6, obj1), callback2(ArrowDefault, {})];
   obj[1] = items2;
   obj[3] = closure_17(closure_6, obj);
-  return callback2(child(5077).PressableHighlight, obj);
+  return callback2(child(5123).PressableHighlight, obj);
 }
 function ChildrenView(node) {
   const children = node.node.children;

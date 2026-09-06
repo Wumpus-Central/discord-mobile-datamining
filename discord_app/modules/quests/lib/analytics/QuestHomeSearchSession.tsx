@@ -1,9 +1,9 @@
-// === Module 7490: getOrCreateQuestHomeSearchSession ===
+// === Module 7734: getOrCreateQuestHomeSearchSession ===
 
-// Module 7490 (getOrCreateQuestHomeSearchSession)
+// Module 7734 (getOrCreateQuestHomeSearchSession)
 import set from "set" /* 2 */;
-import v1 from "v1" /* 511 */;
-import result2 from "result" /* 7227 */;
+import v1 from "v1" /* 1256 */;
+import result2 from "result" /* 7471 */;
 
 let c2 = null;
 const result = set.fileFinishedImporting("modules/quests/lib/analytics/QuestHomeSearchSession.tsx");

@@ -1,9 +1,9 @@
-// === Module 13083: useMediaViewerClosePosition ===
+// === Module 12986: useMediaViewerClosePosition ===
 
-// Module 13083 (useMediaViewerClosePosition)
+// Module 12986 (useMediaViewerClosePosition)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { NOOP } from "ME" /* 673 */;
+import { NOOP } from "ME" /* 1074 */;
 
 const require = arg1;
 let closure_6 = { code: "function useMediaViewerClosePositionTsx1(){const{index}=this.__closure;return index.get();}" };

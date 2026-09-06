@@ -1,8 +1,8 @@
-// === Module 17384: getRuleDefaultActionsFromConfig ===
+// === Module 17544: getRuleDefaultActionsFromConfig ===
 
-// Module 17384 (getRuleDefaultActionsFromConfig)
+// Module 17544 (getRuleDefaultActionsFromConfig)
 import set from "set" /* 2 */;
-import AutomodEventType from "AutomodEventType" /* 11663 */;
+import AutomodEventType from "AutomodEventType" /* 11862 */;
 
 let AutomodActionType = AutomodEventType.AutomodActionType;
 const result = set.fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");

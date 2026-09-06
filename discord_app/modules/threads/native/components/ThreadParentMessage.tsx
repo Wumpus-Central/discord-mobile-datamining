@@ -1,14 +1,14 @@
-// === Module 16459: ThreadChannelStarterMessage ===
+// === Module 16622: ThreadChannelStarterMessage ===
 
-// Module 16459 (ThreadChannelStarterMessage)
+// Module 16622 (ThreadChannelStarterMessage)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 586 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import setOptionsDefault from "setOptions" /* 7853 */;
-import DCDChatItemDefault from "DCDChatItem" /* 8798 */;
-import closure_3 from "processMessage" /* 7350 */;
-import { ReferencedMessageState } from "processMessage" /* 7350 */;
-import closure_5 from "reinjectEphemerals" /* 4736 */;
+import initialize from "initialize" /* 504 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import setOptionsDefault from "setOptions" /* 7932 */;
+import DCDChatItemDefault from "DCDChatItem" /* 8652 */;
+import closure_3 from "processMessage" /* 7595 */;
+import { ReferencedMessageState } from "processMessage" /* 7595 */;
+import closure_5 from "reinjectEphemerals" /* 4781 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

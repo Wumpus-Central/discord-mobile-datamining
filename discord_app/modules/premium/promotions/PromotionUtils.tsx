@@ -1,17 +1,17 @@
-// === Module 13250: claimedOutboundPromotionCodeFromServer ===
+// === Module 13355: claimedOutboundPromotionCodeFromServer ===
 
-// Module 13250 (claimedOutboundPromotionCodeFromServer)
-import set2 from "set" /* 1234 */;
-import DismissibleContent from "DismissibleContent" /* 1372 */;
-import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1374 */;
-import CountryListMode from "CountryListMode" /* 8493 */;
+// Module 13355 (claimedOutboundPromotionCodeFromServer)
+import set2 from "set" /* 1115 */;
+import DismissibleContent from "DismissibleContent" /* 1943 */;
+import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1945 */;
+import CountryListMode from "CountryListMode" /* 10697 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_5 from "createFromServer" /* 8462 */;
-import closure_6 from "createEmptyPromotionsByType" /* 10700 */;
-import { PromotionFlags } from "GuildFeatures" /* 1923 */;
-import ME from "ME" /* 673 */;
-import { ActivityPlatform } from "items3" /* 4506 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1221 */;
+import closure_5 from "createFromServer" /* 10666 */;
+import closure_6 from "createEmptyPromotionsByType" /* 10665 */;
+import { PromotionFlags } from "GuildFeatures" /* 1373 */;
+import ME from "ME" /* 1074 */;
+import { ActivityPlatform } from "items3" /* 1920 */;
 
 require = arg1;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -74,10 +74,10 @@ function _claimOutboundPromotion() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = { url: null, rejectWithError: null };
               obj2[0] = closure_9.CLAIM_OUTBOUND_PROMOTION_CODE(callback);
-              obj2[1] = callback(527).rejectWithMigratedError();
+              obj2[1] = callback(1272).rejectWithMigratedError();
               body = 2;
               c6 = 1;
               const obj3 = { value: null, done: false };
@@ -101,7 +101,7 @@ function _claimOutboundPromotion() {
               ANDROID = tmp39.ANDROID;
             }
             c6 = ANDROID;
-            obj = callback2(695);
+            obj = callback2(1242);
             const obj5 = { platform: null, status: null, location_stack: null, promotion_id: null, name: null, partner: null };
             obj5[0] = c6;
             obj5[1] = closure_4.status;

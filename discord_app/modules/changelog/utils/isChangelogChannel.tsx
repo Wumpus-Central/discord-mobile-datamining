@@ -1,8 +1,8 @@
-// === Module 8664: isChangelogChannel ===
+// === Module 8374: isChangelogChannel ===
 
-// Module 8664 (isChangelogChannel)
-import closure_0 from "ensureGuildLoaded" /* 1386 */;
-import { SYSTEM_UPDATES_USER_ID } from "CHANGELOG_MODAL_KEY" /* 1979 */;
+// Module 8374 (isChangelogChannel)
+import closure_0 from "ensureGuildLoaded" /* 1957 */;
+import { SYSTEM_UPDATES_USER_ID } from "CHANGELOG_MODAL_KEY" /* 2010 */;
 
 const result = require("set").fileFinishedImporting("modules/changelog/utils/isChangelogChannel.tsx");
 

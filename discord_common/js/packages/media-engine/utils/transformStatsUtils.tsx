@@ -1,6 +1,6 @@
-// === Module 4642: formatSinkWantStat ===
+// === Module 4678: formatSinkWantStat ===
 
-// Module 4642 (formatSinkWantStat)
+// Module 4678 (formatSinkWantStat)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/transformStatsUtils.tsx");

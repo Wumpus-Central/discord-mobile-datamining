@@ -1,8 +1,8 @@
-// === Module 16999: areVoicePanelPreJoinContentPropsEqual ===
+// === Module 17163: areVoicePanelPreJoinContentPropsEqual ===
 
-// Module 16999 (areVoicePanelPreJoinContentPropsEqual)
+// Module 17163 (areVoicePanelPreJoinContentPropsEqual)
 import set from "set" /* 2 */;
-import shallowEqualDefault from "shallowEqual" /* 640 */;
+import shallowEqualDefault from "shallowEqual" /* 558 */;
 
 const result = set.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
 

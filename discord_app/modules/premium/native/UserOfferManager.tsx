@@ -1,10 +1,10 @@
-// === Module 17341: prototype ===
+// === Module 17501: prototype ===
 
-// Module 17341 (prototype)
-import initializeDefault from "initialize" /* 5495 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
-import closure_3 from "emitChanges" /* 7205 */;
-import { PaymentGateways } from "sum" /* 502 */;
+// Module 17501 (prototype)
+import initializeDefault from "initialize" /* 7118 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import closure_3 from "emitChanges" /* 7450 */;
+import { PaymentGateways } from "sum" /* 1085 */;
 
 let require = arg1;
 initializeDefault;

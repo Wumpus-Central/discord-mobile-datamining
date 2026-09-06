@@ -1,6 +1,6 @@
-// === Module 6434: metadata ===
+// === Module 5866: metadata ===
 
-// Module 6434 (metadata)
+// Module 5866 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CoinSlotSpotIllustration-2x.png.js");

@@ -1,8 +1,8 @@
-// === Module 9370: validateHandle ===
+// === Module 9284: validateHandle ===
 
-// Module 9370 (validateHandle)
+// Module 9284 (validateHandle)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const PlatformTypes = ME.PlatformTypes;
 const result = set.fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");

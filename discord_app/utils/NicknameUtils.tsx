@@ -1,11 +1,11 @@
-// === Module 4673: getNickname ===
+// === Module 4712: getNickname ===
 
-// Module 4673 (getNickname)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "trackCommunicationDisabled" /* 1991 */;
-import closure_5 from "markAllUserIdListsStale" /* 4130 */;
+// Module 4712 (getNickname)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "trackCommunicationDisabled" /* 2021 */;
+import closure_5 from "markAllUserIdListsStale" /* 4209 */;
 
 require = arg1;
 function getNickname(id, arg1, id) {
@@ -63,7 +63,7 @@ function useName(arg0, arg1, arg2) {
   closure_1 = arg1;
   dependencyMap = arg2;
   const items = [closure_4, closure_3, closure_5];
-  return _require(586).useStateFromStores(items, () => closure_1_6(closure_0, closure_1, closure_2));
+  return _require(504).useStateFromStores(items, () => closure_1_6(closure_0, closure_1, closure_2));
 }
 const result = require("set").fileFinishedImporting("utils/NicknameUtils.tsx");
 

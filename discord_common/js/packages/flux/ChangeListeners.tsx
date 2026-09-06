@@ -1,6 +1,6 @@
-// === Module 589: has ===
+// === Module 507: has ===
 
-// Module 589 (has)
+// Module 507 (has)
 import set2 from "set" /* 2 */;
 
 const result = set2.fileFinishedImporting("../discord_common/js/packages/flux/ChangeListeners.tsx");

@@ -1,13 +1,13 @@
-// === Module 16198: PreviewItem ===
+// === Module 16360: PreviewItem ===
 
-// Module 16198 (PreviewItem)
-import isIterable from "isIterable" /* 4105 */;
+// Module 16360 (PreviewItem)
+import isIterable from "isIterable" /* 4184 */;
 import importAllResult from "noop" /* 19 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5390 */;
-import closure_5 from "withEqualityFn" /* 16122 */;
-import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 16123 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5438 */;
+import closure_5 from "withEqualityFn" /* 16284 */;
+import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 16285 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function PreviewItem(dragRegion) {
@@ -134,7 +134,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "PX_16", name: "Array", color: "call", expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018511064740781746, children: 16661473071873657000000000000000000000000000000000000000000000000000000000000000000 };
+        const obj = { type: null, id: -1, parentId: "PX_16", name: "Array", color: "displayName", expanded: false, children: false };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -338,7 +338,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "VOICE_STATE_UPDATE", scrollPosition: null, dragRegion: "text-sm/medium", windowSize: "text-muted", dropComplete: false, listInsets: null };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "LongPressCommandMention", scrollPosition: null, dragRegion: true, windowSize: "button", dropComplete: null, listInsets: null };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;

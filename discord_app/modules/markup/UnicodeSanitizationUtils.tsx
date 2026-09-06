@@ -1,8 +1,8 @@
-// === Module 4956: safelyPartiallyDecodeURIComponent ===
+// === Module 5002: safelyPartiallyDecodeURIComponent ===
 
-// Module 4956 (safelyPartiallyDecodeURIComponent)
+// Module 5002 (safelyPartiallyDecodeURIComponent)
 import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
 
 function safelyPartiallyDecodeURIComponent(hash) {
   let substr;

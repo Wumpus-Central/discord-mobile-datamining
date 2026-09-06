@@ -1,8 +1,8 @@
-// === Module 5591: useGuildRoleMemberCounts ===
+// === Module 7127: useGuildRoleMemberCounts ===
 
-// Module 5591 (useGuildRoleMemberCounts)
+// Module 7127 (useGuildRoleMemberCounts)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getRoleMemberCount" /* 5592 */;
+import closure_4 from "getRoleMemberCount" /* 7128 */;
 
 const require = arg1;
 let closure_5 = {};
@@ -16,7 +16,7 @@ export default function useGuildRoleMemberCounts(arg0) {
   }
   const items = [closure_4];
   const items1 = [arg0, num];
-  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_4.getRoleMemberCount(closure_0));
+  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_4.getRoleMemberCount(closure_0));
   const effect = React.useEffect(() => {
     if (null != closure_0) {
       let tmp4 = null != tmp3;

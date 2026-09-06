@@ -1,9 +1,9 @@
-// === Module 15797: trackAgeGateSubmitted ===
+// === Module 15959: trackAgeGateSubmitted ===
 
-// Module 15797 (trackAgeGateSubmitted)
+// Module 15959 (trackAgeGateSubmitted)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import ME from "ME" /* 1074 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/auth/experiment/trackAgeGateSubmitted.tsx");

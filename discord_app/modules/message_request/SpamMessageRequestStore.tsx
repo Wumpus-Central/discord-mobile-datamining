@@ -1,8 +1,8 @@
-// === Module 6076: processChannel ===
+// === Module 7220: processChannel ===
 
-// Module 6076 (processChannel)
-import clearAllDefault from "clearAll" /* 1217 */;
-import prototype from "ensureGuildLoaded" /* 1386 */;
+// Module 7220 (processChannel)
+import clearAllDefault from "clearAll" /* 1073 */;
+import prototype from "ensureGuildLoaded" /* 1957 */;
 import set from "set" /* 2 */;
 
 function processChannel(isSpam) {

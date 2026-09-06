@@ -1,12 +1,12 @@
-// === Module 15657: block ===
+// === Module 15815: block ===
 
-// Module 15657 (block)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 15815 (block)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateCategoriesAndProducts" /* 7297 */;
+import closure_5 from "updateCategoriesAndProducts" /* 7542 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 createCacheKey = { shopBlockSpacing: null };

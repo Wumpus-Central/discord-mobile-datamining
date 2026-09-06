@@ -1,6 +1,6 @@
-// === Module 694: getGlobalObject ===
+// === Module 1357: getGlobalObject ===
 
-// Module 694 (getGlobalObject)
+// Module 1357 (getGlobalObject)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");

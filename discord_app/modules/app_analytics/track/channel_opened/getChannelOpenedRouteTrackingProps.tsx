@@ -1,9 +1,9 @@
-// === Module 16573: getChannelOpenedRouteTrackingProps ===
+// === Module 16740: getChannelOpenedRouteTrackingProps ===
 
-// Module 16573 (getChannelOpenedRouteTrackingProps)
-import transitionTo from "transitionTo" /* 1219 */;
-import collectThreadMetadata from "collectThreadMetadata" /* 7529 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
+// Module 16740 (getChannelOpenedRouteTrackingProps)
+import transitionTo from "transitionTo" /* 1100 */;
+import collectThreadMetadata from "collectThreadMetadata" /* 7774 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");

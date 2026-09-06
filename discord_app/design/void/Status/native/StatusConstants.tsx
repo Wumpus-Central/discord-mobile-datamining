@@ -1,6 +1,6 @@
-// === Module 1297: STATUS_PADDING ===
+// === Module 1179: STATUS_PADDING ===
 
-// Module 1297 (STATUS_PADDING)
+// Module 1179 (STATUS_PADDING)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("design/void/Status/native/StatusConstants.tsx");

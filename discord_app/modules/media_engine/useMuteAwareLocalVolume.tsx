@@ -1,8 +1,8 @@
-// === Module 10126: useMuteAwareLocalVolume ===
+// === Module 10017: useMuteAwareLocalVolume ===
 
-// Module 10126 (useMuteAwareLocalVolume)
+// Module 10017 (useMuteAwareLocalVolume)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
+import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_engine/useMuteAwareLocalVolume.tsx");
@@ -11,7 +11,7 @@ export default function useMuteAwareLocalVolume(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
   let obj = {
-    effectiveVolume: _require(586).useStateFromStores(items, () => {
+    effectiveVolume: _require(504).useStateFromStores(items, () => {
       let num = 0;
       if (null != closure_0) {
         num = 0;

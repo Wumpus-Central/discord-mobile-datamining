@@ -1,11 +1,11 @@
-// === Module 4373: _fetchAppliedGuildBoostsForGuild ===
+// === Module 4458: _fetchAppliedGuildBoostsForGuild ===
 
-// Module 4373 (_fetchAppliedGuildBoostsForGuild)
+// Module 4458 (_fetchAppliedGuildBoostsForGuild)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createFromServer" /* 4374 */;
-import closure_5 from "createFromServer" /* 4375 */;
-import closure_6 from "reset" /* 4145 */;
-import { Endpoints } from "ME" /* 673 */;
+import closure_4 from "createFromServer" /* 4459 */;
+import closure_5 from "createFromServer" /* 4460 */;
+import closure_6 from "reset" /* 4224 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchAppliedGuildBoostsForGuild() {
@@ -69,7 +69,7 @@ function _fetchAppliedGuildBoostsForGuild() {
               return obj2;
             } else {
               let obj4;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj3 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
               obj3[0] = closure_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(callback);
               if (flag) {
@@ -93,7 +93,7 @@ function _fetchAppliedGuildBoostsForGuild() {
           } else {
             body = body.body;
             dependencyMap = body.map((arg0) => c4.createFromServer(arg0));
-            obj = flag(706);
+            obj = flag(573);
             const obj7 = { type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS", guildId: null, appliedBoosts: null };
             obj7[1] = callback;
             obj7[2] = dependencyMap;
@@ -175,7 +175,7 @@ function _fetchAppliedGuildBoostsForUser() {
               obj1[0] = body;
               return obj1;
             } else {
-              const HTTP = flag(527).HTTP;
+              const HTTP = flag(1272).HTTP;
               const obj2 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
               obj2[0] = constants.USER_APPLIED_GUILD_BOOSTS;
               const obj3 = { paused: null };
@@ -198,7 +198,7 @@ function _fetchAppliedGuildBoostsForUser() {
           } else {
             body = body.body;
             callback = body.map((arg0) => c4.createFromServer(arg0));
-            obj = callback(706);
+            obj = callback(573);
             const obj6 = { type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: null };
             obj6[1] = callback;
             obj.dispatch(obj6);
@@ -240,16 +240,16 @@ function _fetchGuildBoostSlots() {
   const tmp = callback(function*() {
     const callback = tmp2;
     closure_0 = tmp5;
-    closure_1_1(706).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
-    const HTTP = closure_1_0(527).HTTP;
+    closure_1_1(573).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
+    const HTTP = closure_1_0(1272).HTTP;
     obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
     obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOTS;
-    const obj8 = closure_1_1(706);
-    obj1[2] = closure_1_0(527).rejectWithMigratedError();
+    const obj8 = closure_1_1(573);
+    obj1[2] = closure_1_0(1272).rejectWithMigratedError();
     yield HTTP.get(obj1);
     const body = arg1.body;
     closure_0 = body.map((subscription_id) => closure_5.createFromServer(subscription_id, subscriptionById.getSubscriptionById(subscription_id.subscription_id)));
-    const obj = callback(706);
+    const obj = callback(573);
     const obj4 = { type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS", guildBoostSlots: null };
     obj4[1] = closure_0;
     obj.dispatch(obj4);
@@ -311,12 +311,12 @@ function _fetchAppliedBoostsCooldown() {
           c3 = 0;
           lib = dependencyMap;
           if (404 === lib.status) {
-            let obj4 = lib(706);
+            let obj4 = lib(573);
             obj4.dispatch({ type: "APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS", endsAt: null });
             c5 = 3;
             return { value: null, done: true };
           } else {
-            const appliedGuildBoostError = new ends_at(4376).AppliedGuildBoostError(lib);
+            const appliedGuildBoostError = new ends_at(4461).AppliedGuildBoostError(lib);
             throw appliedGuildBoostError;
           }
         } else if (arg0 === 1) {
@@ -330,7 +330,7 @@ function _fetchAppliedBoostsCooldown() {
           return obj3;
         } else {
           ends_at = arg1.body.ends_at;
-          obj = lib(706);
+          obj = lib(573);
           obj4 = { type: "APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS", endsAt: null };
           obj4[1] = ends_at;
           obj.dispatch(obj4);
@@ -550,8 +550,8 @@ function _unapplyFromGuild() {
           } else if (1 === tmp7) {
             c5 = 0;
             dependencyMap = closure_4;
-            appliedGuildBoostError = new callback(4376).AppliedGuildBoostError(dependencyMap);
-            let obj3 = appliedGuildBoostError(706);
+            appliedGuildBoostError = new callback(4461).AppliedGuildBoostError(dependencyMap);
+            let obj3 = appliedGuildBoostError(573);
             obj3 = { type: "GUILD_UNAPPLY_BOOST_FAIL", error: null };
             obj3[1] = appliedGuildBoostError;
             obj3.dispatch(obj3);
@@ -568,7 +568,7 @@ function _unapplyFromGuild() {
           } else {
             callback3();
             c5 = 0;
-            obj = appliedGuildBoostError(706);
+            obj = appliedGuildBoostError(573);
             const obj5 = { type: "GUILD_UNAPPLY_BOOST_SUCCESS", boostId: null };
             obj5[1] = callback;
             obj.dispatch(obj5);

@@ -1,20 +1,20 @@
-// === Module 11214: _loop ===
+// === Module 11353: _loop ===
 
-// Module 11214 (_loop)
+// Module 11353 (_loop)
 import set from "set" /* 2 */;
-import context from "context" /* 1495 */;
-import APP_ENTRY_KEYS from "APP_ENTRY_KEYS" /* 1640 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9632 */;
-import module_4217 from "module_4217" /* 4217 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1627 */;
+import context from "context" /* 1480 */;
+import APP_ENTRY_KEYS from "APP_ENTRY_KEYS" /* 1624 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9646 */;
+import module_4296 from "module_4296" /* 4296 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1611 */;
 
 let obj = { main: null, share: null };
 obj = {};
 const merged = Object.assign(useSafeAreaInsets.getSafeAreaInsets("main"));
-obj[0] = module_4217.makeMutable(obj);
+obj[0] = module_4296.makeMutable(obj);
 obj = {};
 const merged1 = Object.assign(useSafeAreaInsets.getSafeAreaInsets("share"));
-obj[1] = module_4217.makeMutable(obj);
+obj[1] = module_4296.makeMutable(obj);
 function _loop(iter) {
   closure_0 = iter;
   subscribeToSafeAreaInsetsDefault((arg0) => {

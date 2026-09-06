@@ -1,12 +1,12 @@
-// === Module 12196: ApplicationSectionHeader ===
+// === Module 12396: ApplicationSectionHeader ===
 
-// Module 12196 (ApplicationSectionHeader)
+// Module 12396 (ApplicationSectionHeader)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
+import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "trackCommunicationDisabled" /* 1991 */;
+import closure_4 from "trackCommunicationDisabled" /* 2021 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -23,7 +23,7 @@ export default function ApplicationSectionHeader(section) {
   section = section.section;
   const guildId = section.guildId;
   const tmp = callback2();
-  let obj = section(586);
+  let obj = section(504);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != guildId) {
@@ -36,7 +36,7 @@ export default function ApplicationSectionHeader(section) {
       }
     }
   });
-  const applicationCommandsIconSource = section(12027).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(12231).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -47,16 +47,16 @@ export default function ApplicationSectionHeader(section) {
     name = section.name;
   }
   obj = { style: tmp.applicationHeaderWrapper, accessibilityLabel: null, children: null };
-  const intl = tmp2(1233).intl;
-  obj[1] = intl.formatToPlainString(section(1233).t["Ocw/sM"], { applicationName: name });
+  const intl = tmp2(1114).intl;
+  obj[1] = intl.formatToPlainString(section(1114).t["Ocw/sM"], { applicationName: name });
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     obj = { style: null, source: null };
     obj[0] = tmp.applicationIcon;
     obj[1] = applicationCommandsIconSource;
-    tmp9 = callback(guildId(5502), obj);
+    tmp9 = callback(guildId(5587), obj);
   }
-  const items1 = [tmp9, callback(section(4474).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
+  const items1 = [tmp9, callback(section(4556).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
   obj[2] = items1;
   return closure_6(View, obj);
 };

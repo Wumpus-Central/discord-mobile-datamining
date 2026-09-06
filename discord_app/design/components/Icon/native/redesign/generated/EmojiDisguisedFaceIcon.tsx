@@ -1,10 +1,10 @@
-// === Module 15211: EmojiDisguisedFaceIcon ===
+// === Module 15369: EmojiDisguisedFaceIcon ===
 
-// Module 15211 (EmojiDisguisedFaceIcon)
+// Module 15369 (EmojiDisguisedFaceIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15212 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 15370 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

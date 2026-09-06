@@ -1,14 +1,14 @@
-// === Module 12405: ChatBeginningRowJoinRequest ===
+// === Module 12631: ChatBeginningRowJoinRequest ===
 
-// Module 12405 (ChatBeginningRowJoinRequest)
+// Module 12631 (ChatBeginningRowJoinRequest)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
+import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { Permissions } from "ME" /* 673 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import { Permissions } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;

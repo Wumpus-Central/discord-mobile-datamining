@@ -1,15 +1,15 @@
-// === Module 13156: NewBadge ===
+// === Module 13256: NewBadge ===
 
-// Module 13156 (NewBadge)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
+// Module 13256 (NewBadge)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function NewBadge() {
@@ -35,17 +35,17 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   dependencyMap = undefined;
   ({ children, isLast } = arg0);
   const ref = React.useRef(null);
-  let obj = first(6261);
+  let obj = first(7388);
   const tmp3 = callback(obj.useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
   items = [tmp3[1], first];
   const memo = React.useMemo(() => {
     const obj = { title: null, description: null, position: "bottom", visible: null, onDismiss: null, renderImgComponent: null };
-    const intl = first(1233).intl;
-    obj[0] = intl.string(first(1233).t.UcQjDe);
-    const intl2 = first(1233).intl;
-    obj[1] = intl2.string(first(1233).t.QeJIbA);
+    const intl = first(1114).intl;
+    obj[0] = intl.string(first(1114).t.UcQjDe);
+    const intl2 = first(1114).intl;
+    obj[1] = intl2.string(first(1114).t.QeJIbA);
     obj[3] = first === closure_1_7;
     obj[4] = function onDismiss() {
       callback(closure_1_5.USER_DISMISS);
@@ -56,7 +56,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
     return obj;
   }, items);
   const tmp = callback2();
-  const coachmark = first(8991).useCoachmark(ref, memo);
+  const coachmark = first(11127).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   callback = React.useCallback(() => {

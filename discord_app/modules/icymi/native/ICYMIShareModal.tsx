@@ -1,21 +1,21 @@
-// === Module 16340: Screenshot ===
+// === Module 16502: Screenshot ===
 
-// Module 16340 (Screenshot)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 9770 */;
+// Module 16502 (Screenshot)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 9775 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import { DraftType } from "handleChanged" /* 4855 */;
-import closure_9 from "map" /* 4854 */;
-import { AbortCodes } from "ME" /* 673 */;
-import { UserRowModes } from "UserRowModes" /* 10857 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import { DraftType } from "handleChanged" /* 4901 */;
+import closure_9 from "map" /* 4900 */;
+import { AbortCodes } from "ME" /* 1074 */;
+import { UserRowModes } from "UserRowModes" /* 10860 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function Screenshot(setUri) {
@@ -40,26 +40,26 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  let obj = setUri(7627);
+  let obj = setUri(7872);
   obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
   obj = { style: items1, children: null };
-  items1 = [tmp.preview, { width: ref(1492)().width }];
+  items1 = [tmp.preview, { width: ref(1477)().width }];
   const clientThemesOverride = obj.useClientThemesOverride();
   obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
   const obj2 = { style: tmp.base, children: null };
-  const tmp4 = ref(4328)();
+  const tmp4 = ref(4413)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(16342);
-  obj4[0] = setUri(4296).OverlayOpacity.LEVEL_7;
-  obj4[1] = setUri(4296).OverlayOpacity.LEVEL_8;
+  const tmp6 = ref(16504);
+  obj4[0] = setUri(4378).OverlayOpacity.LEVEL_7;
+  obj4[1] = setUri(4378).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
-  const items2 = [callback3(ref(5079), obj3), ];
+  const items2 = [callback3(ref(5125), obj3), ];
   const obj5 = { gradient: tmp4, children: null };
-  const tmp7 = ref(5079);
+  const tmp7 = ref(5125);
   const items3 = [tmp.contentContainer, clientThemesOverride];
   obj5[1] = callback3(View, { style: items3, children: setUri.render() });
-  items2[1] = callback3(setUri(4204).ThemeContextProvider, obj5);
+  items2[1] = callback3(setUri(4271).ThemeContextProvider, obj5);
   obj2[1] = items2;
   obj1[2] = callback4(View, obj2);
   obj[1] = callback3(tmp6, obj1);
@@ -197,7 +197,7 @@ class ICYMIShareModal {
                     closure_0 = arg0;
                     c2 = 0;
                     c1 = 0;
-                    return (/* F125291 */ function*() { ... })();
+                    return (/* F125923 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;
@@ -363,8 +363,8 @@ export const GuildEventShareModal = function GuildEventShareModal(event) {
 export const GameShareModal = function GameShareModal(content) {
   let _require = content.content;
   let obj = { title: null, linkText: "", forwardToChannel: null };
-  let intl = _require(1233).intl;
-  obj[0] = intl.string(_require(1233).t["59CWHK"]);
+  let intl = _require(1114).intl;
+  obj[0] = intl.string(_require(1114).t["59CWHK"]);
   _require = undefined;
   _require = callback2((arg0) => {
     closure_0 = arg0;

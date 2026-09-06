@@ -1,16 +1,16 @@
-// === Module 9129: ToastEmoji ===
+// === Module 11124: ToastEmoji ===
 
-// Module 9129 (ToastEmoji)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import dispatcherDefault from "dispatcher" /* 4194 */;
-import Text from "Text" /* 4474 */;
+// Module 11124 (ToastEmoji)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import dispatcherDefault from "dispatcher" /* 4259 */;
+import Text from "Text" /* 4556 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1374 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 1234 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import set from "set" /* 1115 */;
 
 require = arg1;
 class ToastEmoji {
@@ -85,13 +85,13 @@ const result = set.fileFinishedImporting("modules/double_tap_to_react/native/Dou
 export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
-  let obj = emoji(4916);
+  let obj = emoji(4962);
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(1350).AccessibilityAnnouncer;
-    const intl = tmp(1233).intl;
+    const AccessibilityAnnouncer = tmp(4272).AccessibilityAnnouncer;
+    const intl = tmp(1114).intl;
     obj = { emojiName: null };
     obj[0] = emoji.name;
-    AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1233).t.nKY0Fl, obj));
+    AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1114).t.nKY0Fl, obj));
   } else {
     obj = { key: "DEFAULT_REACTION_EMOJI_UPDATED", icon: null, content: null, toastDurationMs: 3000 };
     obj[1] = function icon() {

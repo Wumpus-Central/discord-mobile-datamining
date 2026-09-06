@@ -1,13 +1,13 @@
-// === Module 12218: ? ===
+// === Module 12418: ? ===
 
-// Module 12218
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import NativeModulesDefault from "NativeModules" /* 9674 */;
-import createSoundForPack from "createSoundForPack" /* 10019 */;
+// Module 12418
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import NativeModulesDefault from "NativeModules" /* 9687 */;
+import createSoundForPack from "createSoundForPack" /* 9902 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { PermissionStateType } from "set" /* 12209 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import { PermissionStateType } from "set" /* 12409 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("utils/native/NotificationUtils.tsx");
@@ -27,8 +27,8 @@ export default {
   },
   requestPermission(arg0) {
     const _require = arg0;
-    let result = _require(12212).setPushPermissionState(PermissionStateType.REQUESTED);
-    let obj = _require(12212);
+    let result = _require(12412).setPushPermissionState(PermissionStateType.REQUESTED);
+    let obj = _require(12412);
     expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
     const obj2 = expandEventPropertiesDefault;
     const permissions = NativeModulesDefault.requestPermissions();

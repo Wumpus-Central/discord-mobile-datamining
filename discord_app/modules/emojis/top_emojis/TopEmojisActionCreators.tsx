@@ -1,21 +1,21 @@
-// === Module 9123: fetchTopEmojis ===
+// === Module 10279: fetchTopEmojis ===
 
-// Module 9123 (fetchTopEmojis)
+// Module 10279 (fetchTopEmojis)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisActionCreators.tsx");
 
 export const fetchTopEmojis = function fetchTopEmojis(guildId) {
   const _require = guildId;
-  let obj = _require(4317);
+  let obj = _require(4399);
   if (!obj.isPseudoGuildId(guildId)) {
     obj = { type: "TOP_EMOJIS_FETCH", guildId: null };
     obj[1] = guildId;
     dispatcherDefault.dispatch(obj);
-    const HTTP = _require(527).HTTP;
+    const HTTP = _require(1272).HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.TOP_EMOJIS_FOR_GUILD(guildId);
     const value = HTTP.get(obj);

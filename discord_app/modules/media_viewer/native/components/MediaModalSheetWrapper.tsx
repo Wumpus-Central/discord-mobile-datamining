@@ -1,8 +1,8 @@
-// === Module 8602: MediaModalSheetWrapper ===
+// === Module 8288: MediaModalSheetWrapper ===
 
-// Module 8602 (MediaModalSheetWrapper)
+// Module 8288 (MediaModalSheetWrapper)
 import closure_2 from "noop" /* 19 */;
-import { MEDIA_MODAL_KEY } from "ME" /* 673 */;
+import { MEDIA_MODAL_KEY } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");

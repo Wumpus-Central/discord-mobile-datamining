@@ -1,10 +1,10 @@
-// === Module 6131: useAvailableTags ===
+// === Module 7275: useAvailableTags ===
 
-// Module 6131 (useAvailableTags)
+// Module 7275 (useAvailableTags)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
-import { Permissions } from "sum" /* 502 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+import { Permissions } from "sum" /* 1085 */;
 
 const require = arg1;
 let closure_6 = [];
@@ -17,7 +17,7 @@ export const useAvailableTags = function useAvailableTags(parent_id) {
   }
   const items = [closure_3];
   const items1 = [parent_id];
-  return parent_id(586).useStateFromStoresObject(items, () => {
+  return parent_id(504).useStateFromStoresObject(items, () => {
     const channel = closure_1_3.getChannel(parent_id);
     let availableTags;
     if (channel != null) {

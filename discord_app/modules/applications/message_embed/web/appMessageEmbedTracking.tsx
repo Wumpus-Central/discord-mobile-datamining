@@ -1,9 +1,9 @@
-// === Module 7449: ClickArea ===
+// === Module 7694: ClickArea ===
 
-// Module 7449 (ClickArea)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+// Module 7694 (ClickArea)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTracking.tsx");
@@ -18,10 +18,10 @@ export const trackAppEmbedViewed = function trackAppEmbedViewed(arg0) {
   expandEventPropertiesDefault.track(AnalyticEvents.APP_EMBED_VIEWED, { application_id: appId, link_type: linkType, referrer_id: referrerId, custom_id: customId, guild_id: guildId, channel_id: channelId, message_id: messageId, app_embed_state: appEmbedState });
 };
 export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
-  _require = _require(7450).trackingConfigWithDefaults(id);
+  _require = _require(7695).trackingConfigWithDefaults(id);
   closure_1 = React.useRef(false);
-  let obj = _require(7450);
-  return _require(7451).useIsVisible((arg0) => {
+  let obj = _require(7695);
+  return _require(7696).useIsVisible((arg0) => {
     const current = ref.current;
     let tmp2 = !current;
     if (!current) {

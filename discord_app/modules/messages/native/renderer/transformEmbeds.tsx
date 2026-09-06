@@ -1,9 +1,9 @@
-// === Module 8027: transformEmbeds ===
+// === Module 8106: transformEmbeds ===
 
-// Module 8027 (transformEmbeds)
+// Module 8106 (transformEmbeds)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const processColor = get_ActivityIndicator.processColor;
 const MessageEmbedTypes = ME.MessageEmbedTypes;

@@ -1,8 +1,8 @@
-// === Module 8835: buildSteamStoreUrl ===
+// === Module 8690: buildSteamStoreUrl ===
 
-// Module 8835 (buildSteamStoreUrl)
-import closure_2 from "handleLoadMessages" /* 4502 */;
-import { Distributors } from "ME" /* 673 */;
+// Module 8690 (buildSteamStoreUrl)
+import closure_2 from "createGamesFromMessage" /* 1916 */;
+import { Distributors } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useSteamWebsiteUrl.tsx");
@@ -14,7 +14,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     if (null == id) {
       return null;
     } else {
@@ -26,7 +26,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
           return null;
         } else {
           const websites = game.websites;
-          const found = websites.find((category) => category.category === callback(8834).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          const found = websites.find((category) => category.category === callback(8689).ThirdPartyGameApplicationWebsiteCategory.STEAM);
           if (found != null) {
             const url = found.url;
           }
@@ -34,8 +34,8 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
           const found1 = thirdPartySkus.filter((distributor) => {
             let tmp = distributor.distributor === constants.STEAM;
             if (tmp) {
-              tmp = !callback(1901).isNullOrEmpty(distributor.id);
-              const obj = callback(1901);
+              tmp = !callback(1925).isNullOrEmpty(distributor.id);
+              const obj = callback(1925);
             }
             return tmp;
           });

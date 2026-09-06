@@ -1,25 +1,25 @@
-// === Module 12756: WishlistEmptyState ===
+// === Module 13084: WishlistEmptyState ===
 
-// Module 12756 (WishlistEmptyState)
+// Module 13084 (WishlistEmptyState)
 import timestampDefault from "timestamp" /* 3 */;
-import ThemesDefault from "Themes" /* 709 */;
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7297 */;
-import closure_7 from "initialize" /* 11003 */;
-import closure_8 from "get" /* 10683 */;
-import { isCollectiblesWishlistItemRecord as closure_9 } from "createCollectiblesItemFromServerResponse" /* 10686 */;
-import { getWishlistProductLines } from "fromServer" /* 10684 */;
-import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import closure_12 from "addSku" /* 4527 */;
-import closure_13 from "createUserWidgetFromServer" /* 7376 */;
-import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8573 */;
-import ME from "ME" /* 673 */;
-import { CollectiblesMobileShopScreen as closure_18 } from "items" /* 675 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7542 */;
+import closure_7 from "initialize" /* 11035 */;
+import closure_8 from "get" /* 8777 */;
+import { isCollectiblesWishlistItemRecord as closure_9 } from "createCollectiblesItemFromServerResponse" /* 8780 */;
+import { getWishlistProductLines } from "fromServer" /* 8778 */;
+import closure_11 from "mergeGuildAvatar" /* 1371 */;
+import closure_12 from "addSku" /* 5510 */;
+import closure_13 from "createUserWidgetFromServer" /* 7621 */;
+import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;
+import ME from "ME" /* 1074 */;
+import { CollectiblesMobileShopScreen as closure_18 } from "items" /* 1076 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 class WishlistEmptyState {
@@ -102,7 +102,7 @@ let closure_26 = createCacheKey.createStyles(() => {
   obj[3] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_16, justifyContent: "flex-start" };
   const space = ThemesDefault.space;
   const obj2 = { alignItems: "center", paddingTop: flag ? space.PX_24 : space.PX_48, paddingBottom: null, paddingHorizontal: null, gap: null };
-  const space2 = tmp(709).space;
+  const space2 = tmp(576).space;
   obj2[2] = flag ? space2.PX_12 : space2.PX_48;
   obj2[3] = ThemesDefault.space.PX_32;
   obj2[4] = ThemesDefault.space.PX_8;
@@ -348,7 +348,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                   throwTypeErrorResult = closure_2_18;
                                   obj2[2] = closure_2_18.FEATURED_PAGE;
                                   obj2[3] = function onNavigateAway(arg0) {
-                                    callback(8915)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
+                                    callback(8179)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
                                   };
                                   throwTypeErrorResult = lib(context[24]).openCollectiblesShopMobile(obj2);
                                   throwTypeErrorResult = lib;
@@ -499,7 +499,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                               throwTypeErrorResult = closure_2_19;
                               obj11[3] = closure_2_19.USER_PROFILE_WISHLIST;
                               obj11[4] = function onGiftModalDismiss(arg0) {
-                                callback(8915)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
+                                callback(8179)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
                               };
                               throwTypeErrorResult = lib(context[49]).openSocialLayerStorefrontGiftModal(obj11);
                               const obj55 = lib(context[49]);

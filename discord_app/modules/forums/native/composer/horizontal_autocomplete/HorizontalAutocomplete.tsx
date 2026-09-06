@@ -1,33 +1,33 @@
-// === Module 10642: HorizontalAutocompleteOption ===
+// === Module 10624: HorizontalAutocompleteOption ===
 
-// Module 10642 (HorizontalAutocompleteOption)
+// Module 10624 (HorizontalAutocompleteOption)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import _modDef4217 from "module_4217" /* 4217 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import Text from "Text" /* 4474 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4946 */;
-import preloadDefault from "preload" /* 5502 */;
-import RoleIconDefault from "RoleIcon" /* 5988 */;
-import registerAssetDefault from "registerAsset" /* 8045 */;
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import _modDef4296 from "module_4296" /* 4296 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import Text from "Text" /* 4556 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
+import preloadDefault from "preload" /* 5587 */;
+import RoleIconDefault from "RoleIcon" /* 7188 */;
+import registerAssetDefault from "registerAsset" /* 8124 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "markAllUserIdListsStale" /* 4209 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5470 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import importDefaultResult from "createTextStyle" /* 5524 */;
 
 require = arg1;
 function HorizontalAutocompleteOption(arg0) {
   let sharedValue;
   ({ children, onPress } = arg0);
-  let obj = sharedValue(4217);
+  let obj = sharedValue(4296);
   sharedValue = obj.useSharedValue(0);
   useMountLayoutEffectDefault(() => {
     const result = sharedValue.set(sharedValue(closure_1_2[14]).withTiming(1));
@@ -40,9 +40,9 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = closure_14;
   obj = { onPress, children: null };
-  const animatedStyle = sharedValue(4217).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4296).useAnimatedStyle(fn);
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
-  obj[1] = callback(_modDef4217.View, { style: items, children });
+  obj[1] = callback(_modDef4296.View, { style: items, children });
   return callback(closure_3, obj);
 }
 noopAll;
@@ -98,8 +98,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(5987).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(5987);
+      roleIconData = tmp2(7187).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(7187);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -136,21 +136,21 @@ let obj3 = {
   },
   Channel(channel) {
     channel = channel.channel;
-    channel(586);
+    channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAssetDefault;
     } else {
-      let tmp2Result = tmp2(4982);
+      let tmp2Result = tmp2(5028);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = callback3();
-    tmp2Result = tmp2(4674);
+    tmp2Result = tmp2(4713);
     let obj = { onPress: channel.onPress, children: null };
-    const items = [callback(channel(1296).Icon, { source: channelIconWithGuild }), ];
+    const items = [callback(channel(1178).Icon, { source: channelIconWithGuild }), ];
     const channelName = tmp2Result.computeChannelName(channel, closure_9, closure_8);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
-    items[1] = callback(channel(4474).Text, obj);
+    items[1] = callback(channel(4556).Text, obj);
     obj[1] = items;
     return callback2(HorizontalAutocompleteOption, obj);
   },

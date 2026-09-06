@@ -1,9 +1,9 @@
-// === Module 8189: apexExperiment ===
+// === Module 9321: apexExperiment ===
 
-// Module 8189 (apexExperiment)
+// Module 9321 (apexExperiment)
 import set from "set" /* 2 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7608 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-mobile-sticker-picker-upsell-restyle", kind: "user", defaultConfig: false, variations: { 0: false, 1: true } });
 const result = set.fileFinishedImporting("modules/premium/experiments/MobileStickerPickerUpsellRestyleExperiment.tsx");

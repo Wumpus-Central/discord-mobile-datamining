@@ -1,11 +1,11 @@
-// === Module 5478: useCanChannelBeDefault ===
+// === Module 7102: useCanChannelBeDefault ===
 
-// Module 5478 (useCanChannelBeDefault)
-import fromStringAll from "fromString" /* 503 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import closure_3 from "isSubscriptionGated" /* 1982 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import ME from "ME" /* 673 */;
+// Module 7102 (useCanChannelBeDefault)
+import fromStringAll from "fromString" /* 1086 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import closure_3 from "isSubscriptionGated" /* 2013 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ ChannelTypesSets: c5, Permissions: closure_6 } = ME);
@@ -15,7 +15,7 @@ export const useCanChannelBeDefault = function useCanChannelBeDefault(arg0, arg1
   const _require = arg0;
   closure_1 = arg1;
   const items = [closure_3, closure_4];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const channel = closure_1_4.getChannel(callback);
     if (null != channel) {
       const GUILD_VOCAL = closure_1_5.GUILD_VOCAL;

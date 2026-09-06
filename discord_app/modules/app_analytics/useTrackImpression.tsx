@@ -1,15 +1,15 @@
-// === Module 8911: trackImpression ===
+// === Module 8768: trackImpression ===
 
-// Module 8911 (trackImpression)
-import encodeProperties2 from "encodeProperties" /* 500 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
+// Module 8768 (trackImpression)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import encodeProperties2 from "encodeProperties" /* 1250 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import closure_6 from "handleConnectionOpen" /* 4299 */;
-import withEqualityFn from "withEqualityFn" /* 696 */;
-import encodeProperties from "encodeProperties" /* 500 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "handleConnectionOpen" /* 2011 */;
+import closure_6 from "handleConnectionOpen" /* 4381 */;
+import withEqualityFn from "withEqualityFn" /* 1243 */;
+import encodeProperties from "encodeProperties" /* 1250 */;
 
 require = arg1;
 function trackImpression(type, arg1, arg2) {
@@ -44,9 +44,9 @@ function trackImpression(type, arg1, arg2) {
   if (channel_id == null) {
     channel_id = channelId.getChannelId(guild_id);
   }
-  let tmpResult = tmp(695);
+  let tmpResult = tmp(1242);
   obj = { impression_type: type, location: callback3() };
-  tmpResult = tmp(4701);
+  tmpResult = tmp(4740);
   const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guild_id));
   const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
   const merged2 = Object.assign(properties);
@@ -55,9 +55,9 @@ function trackImpression(type, arg1, arg2) {
     callback2(null, null);
   } else {
     if (tmp15) {
-      tmp(695).debugLogEvent(name, result);
+      tmp(1242).debugLogEvent(name, result);
       callback5(name, result);
-      const tmpResult2 = tmp(695);
+      const tmpResult2 = tmp(1242);
     }
     callback2(name, result);
     tmp15 = null != name && null != type;
@@ -79,20 +79,20 @@ export default function useTrackImpression(arg0) {
   closure_4 = undefined;
   React = React.useRef(undefined);
   closure_4 = React.useRef(undefined);
-  obj(4946)(() => {
+  obj(4992)(() => {
     if (obj.trackOnInitialLoad) {
-      const tmp6 = obj(656)(ref.current, obj);
+      const tmp6 = obj(1332)(ref.current, obj);
       if (!tmp6) {
         ref.current = tmp5;
       }
-      const tmp10 = obj(656)(ref2.current, dependencyMap);
+      const tmp10 = obj(1332)(ref2.current, dependencyMap);
       if (!tmp10) {
         ref2.current = dependencyMap;
       }
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
-        obj.sequenceId = tmp2(4725)("impression_");
+        obj.sequenceId = tmp2(4764)("impression_");
         closure_1_13(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {
@@ -105,18 +105,18 @@ export default function useTrackImpression(arg0) {
   });
   const effect = React.useEffect(() => {
     if (!obj.trackOnInitialLoad) {
-      const tmp6 = obj(656)(ref.current, obj);
+      const tmp6 = obj(1332)(ref.current, obj);
       if (!tmp6) {
         ref.current = tmp5;
       }
-      const tmp10 = obj(656)(ref2.current, dependencyMap);
+      const tmp10 = obj(1332)(ref2.current, dependencyMap);
       if (!tmp10) {
         ref2.current = dependencyMap;
       }
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
-        obj.sequenceId = tmp2(4725)("impression_");
+        obj.sequenceId = tmp2(4764)("impression_");
         closure_1_13(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {

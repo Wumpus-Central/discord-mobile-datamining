@@ -1,6 +1,6 @@
-// === Module 6814: metadata ===
+// === Module 6250: metadata ===
 
-// Module 6814 (metadata)
+// Module 6250 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MushroomIllocon-2x.png.js");

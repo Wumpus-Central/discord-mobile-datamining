@@ -1,8 +1,8 @@
-// === Module 5090: _getAttachmentFile ===
+// === Module 5137: _getAttachmentFile ===
 
-// Module 5090 (_getAttachmentFile)
+// Module 5137 (_getAttachmentFile)
 import timestampDefault from "timestamp" /* 3 */;
-import openImagePickerUnhandled from "openImagePickerUnhandled" /* 5091 */;
+import openImagePickerUnhandled from "openImagePickerUnhandled" /* 5138 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;
@@ -74,13 +74,13 @@ function _getAttachmentFile() {
               return obj3;
             } else {
               closure_3 = arg1;
-              logger = lib(5083).getAttachmentPayload(lib, callback, closure_3.name);
+              logger = lib(5129).getAttachmentPayload(lib, callback, closure_3.name);
               c6 = 2;
-              const obj10 = lib(5083);
+              const obj10 = lib(5129);
               c7 = 4;
               c8 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = lib(5091).getFileSize(closure_3.uri);
+              obj4[0] = lib(5138).getFileSize(closure_3.uri);
               return obj4;
             }
           } else {

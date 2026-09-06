@@ -1,12 +1,12 @@
-// === Module 15991: ? ===
+// === Module 16155: ? ===
 
-// Module 15991
+// Module 16155
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "initialize" /* 4121 */;
-import { JoinGuildSources } from "ME" /* 673 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "initialize" /* 4200 */;
+import { JoinGuildSources } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

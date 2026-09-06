@@ -1,11 +1,11 @@
-// === Module 13177: getSavedMessagesForType ===
+// === Module 13282: getSavedMessagesForType ===
 
-// Module 13177 (getSavedMessagesForType)
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7615 */;
-import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13178 */;
+// Module 13282 (getSavedMessagesForType)
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7860 */;
+import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13283 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getTimeSafe" /* 11471 */;
+import closure_5 from "getTimeSafe" /* 11660 */;
 
 require = arg1;
 function getSavedMessagesForType(arg0) {
@@ -23,7 +23,7 @@ const result = require("set").fileFinishedImporting("modules/saved_messages/useS
 export default function useSavedMessagesForPage() {
   let ALL = arg0;
   if (arg0 === undefined) {
-    ALL = ALL(7615).SavedMessageSortTypes.ALL;
+    ALL = ALL(7860).SavedMessageSortTypes.ALL;
   }
   importDefault = undefined;
   dependencyMap = undefined;
@@ -103,7 +103,7 @@ export default function useSavedMessagesForPage() {
     return messageBookmarks.map((saveData) => saveData.saveData);
   }), 2);
   const items1 = [store];
-  return ALL(586).useStateFromStoresArray(items1, () => {
+  return ALL(504).useStateFromStoresArray(items1, () => {
     const mapped = _undefined.map((channelId) => savedMessage.getSavedMessage(channelId.channelId, channelId.messageId));
     return mapped.filter(ALL(_undefined2[6]).isNotNullish);
   });

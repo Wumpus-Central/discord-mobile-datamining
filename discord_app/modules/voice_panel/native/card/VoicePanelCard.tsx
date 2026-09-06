@@ -1,25 +1,25 @@
-// === Module 16968: SelfStreamCard ===
+// === Module 17132: SelfStreamCard ===
 
-// Module 16968 (SelfStreamCard)
-import ThemesDefault from "Themes" /* 709 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4928 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
+// Module 17132 (SelfStreamCard)
+import ThemesDefault from "Themes" /* 576 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4500 */;
-import closure_7 from "createRTCConnection" /* 4554 */;
-import closure_8 from "anyoneHasFlagInContext" /* 5372 */;
-import VoicePanelModes from "VoicePanelModes" /* 12069 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12067 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16924 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 12072 */;
-import { ApplicationStreamStates } from "ME" /* 673 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
-import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 12070 */;
+import closure_6 from "reset" /* 4582 */;
+import closure_7 from "createRTCConnection" /* 4583 */;
+import closure_8 from "anyoneHasFlagInContext" /* 5419 */;
+import VoicePanelModes from "VoicePanelModes" /* 12273 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12271 */;
+import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 17088 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 12276 */;
+import { ApplicationStreamStates } from "ME" /* 1074 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
+import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 12274 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4217" /* 4217 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import importDefaultResult from "module_4296" /* 4296 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function SelfStreamCard(sharedCoords) {
@@ -1175,13 +1175,13 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     str2 = "animate-never";
   }
   obj = { originX: obj.withSpring(originX.targetOriginX, SUBTLE_SPRING, str2), originY: null, width: null, height: null };
-  let tmpResult = tmp(4928);
+  let tmpResult = tmp(4974);
   let str3 = str;
   if (flag) {
     str3 = "animate-never";
   }
   obj[1] = tmpResult.withSpring(originX.targetOriginY, SUBTLE_SPRING, str3);
-  tmpResult = tmp(4928);
+  tmpResult = tmp(4974);
   let str4 = str;
   if (flag) {
     str4 = "animate-never";
@@ -1447,7 +1447,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "channel", layout: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001141953147857043, layoutPhysics: -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000013458295484790203 };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: 5480021339453484000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, layoutPhysics: -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007293463806579032 };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

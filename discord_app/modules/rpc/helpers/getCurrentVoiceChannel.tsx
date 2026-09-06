@@ -1,9 +1,9 @@
-// === Module 6227: getCurrentVoiceChannel ===
+// === Module 7373: getCurrentVoiceChannel ===
 
-// Module 6227 (getCurrentVoiceChannel)
-import closure_0 from "fetchFingerprint" /* 1215 */;
-import closure_1 from "ensureGuildLoaded" /* 1386 */;
-import closure_2 from "updateVoiceState" /* 4497 */;
+// Module 7373 (getCurrentVoiceChannel)
+import closure_0 from "fetchFingerprint" /* 502 */;
+import closure_1 from "ensureGuildLoaded" /* 1957 */;
+import closure_2 from "updateVoiceState" /* 4579 */;
 
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/getCurrentVoiceChannel.tsx");
 

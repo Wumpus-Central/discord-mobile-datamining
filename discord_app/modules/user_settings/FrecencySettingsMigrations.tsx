@@ -1,14 +1,14 @@
-// === Module 14349: readFavoriteGIFs ===
+// === Module 14456: readFavoriteGIFs ===
 
-// Module 14349 (readFavoriteGIFs)
+// Module 14456 (readFavoriteGIFs)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import Storage4 from "Storage" /* 592 */;
-import ME from "ME" /* 673 */;
-import create from "create" /* 1340 */;
-import b64ToProto from "b64ToProto" /* 1341 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
+import initializeDefault from "initialize" /* 504 */;
+import Storage4 from "Storage" /* 510 */;
+import ME from "ME" /* 1074 */;
+import create from "create" /* 1222 */;
+import b64ToProto from "b64ToProto" /* 1223 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
 
 function readFavoriteGIFs(arg0) {
   c0 = 1;
@@ -209,7 +209,7 @@ let items = [
     run(favoriteGifs) {
       let length3;
       if (null == favoriteGifs.favoriteGifs) {
-        const FavoriteGIFs = arr(1340).FavoriteGIFs;
+        const FavoriteGIFs = arr(1222).FavoriteGIFs;
         favoriteGifs.favoriteGifs = FavoriteGIFs.create();
       }
       if (null == favoriteGifs.favoriteGifs.gifs) {
@@ -226,7 +226,7 @@ let items = [
           arg0.order = sum;
           return sum;
         });
-        const FavoriteGIFs4 = arr(1340).FavoriteGIFs;
+        const FavoriteGIFs4 = arr(1222).FavoriteGIFs;
         let length = FavoriteGIFs4.toBinary(favoriteGifs.favoriteGifs).length;
         let num = 0;
         const iter = arr[Symbol.iterator]();
@@ -246,7 +246,7 @@ let items = [
           } else {
             let tmp11 = arr;
             let tmp12 = dependencyMap;
-            let FavoriteGIF = arr(1340).FavoriteGIF;
+            let FavoriteGIF = arr(1222).FavoriteGIF;
             let tmp13 = favorite;
             let tmp14 = url;
             let sum = FavoriteGIF.toBinary(tmp9).length + arr2.length + 7;
@@ -264,7 +264,7 @@ let items = [
           }
           continue;
         }
-        const FavoriteGIFs2 = arr(1340).FavoriteGIFs;
+        const FavoriteGIFs2 = arr(1222).FavoriteGIFs;
         const length2 = FavoriteGIFs2.toBinary(favoriteGifs.favoriteGifs).length;
         if (length2 > closure_4) {
           do {
@@ -285,7 +285,7 @@ let items = [
             }
             let tmp31 = arr;
             let tmp32 = dependencyMap;
-            let FavoriteGIFs3 = arr(1340).FavoriteGIFs;
+            let FavoriteGIFs3 = arr(1222).FavoriteGIFs;
             length3 = FavoriteGIFs3.toBinary(favoriteGifs.favoriteGifs).length;
             let tmp33 = length3;
             let tmp34 = closure_4;
@@ -327,7 +327,7 @@ let items = [
     version: 8,
     run(arg0) {
       const _require = arg0;
-      const PersistedStore = state(586).PersistedStore;
+      const PersistedStore = state(504).PersistedStore;
       state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
       if (null == state) {
         return false;
@@ -335,7 +335,7 @@ let items = [
         let tmpResult = tmp(12);
         let flag = false;
         if (tmpResult.size(state.favoriteSounds) > 0) {
-          const FavoriteSoundboardSounds = _require(1340).FavoriteSoundboardSounds;
+          const FavoriteSoundboardSounds = _require(1222).FavoriteSoundboardSounds;
           arg0.favoriteSoundboardSounds = FavoriteSoundboardSounds.create();
           tmpResult = tmp(11);
           const keys = tmpResult.keys(state.favoriteSounds);
@@ -405,7 +405,7 @@ let items = [
           const EmojiFrecency2 = create.EmojiFrecency;
           EmojiFrecency2.mergePartial(obj, emojiFrecency.emojiFrecency);
           if (null != emojiFrecency.emojiReactionFrecency) {
-            const EmojiFrecency3 = tmp3(1340).EmojiFrecency;
+            const EmojiFrecency3 = tmp3(1222).EmojiFrecency;
             EmojiFrecency3.mergePartial(obj, emojiFrecency.emojiReactionFrecency);
           }
           emojiFrecency.emojiReactionFrecency = obj;
@@ -451,7 +451,7 @@ let items = [
                   isMatch = obj.test(tmp9.src);
                 }
                 if (isMatch) {
-                  tmp9.format = tmp3(1340).GIFType.IMAGE;
+                  tmp9.format = tmp3(1222).GIFType.IMAGE;
                   flag = true;
                 }
                 flag3 = flag;

@@ -1,10 +1,10 @@
-// === Module 6148: getFpMessageInfo ===
+// === Module 7293: getFpMessageInfo ===
 
-// Module 6148 (getFpMessageInfo)
+// Module 7293 (getFpMessageInfo)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
 
 const require = arg1;
 let closure_3 = 14 * setDefault.Millis.DAY;
@@ -55,7 +55,7 @@ Object.defineProperty(prototype, "validContentScanVersion", {
       const _Math = Math;
       return Math.min(num2, 4);
     }
-    obj = require(6149) /* apexExperiment */;
+    obj = require(7294) /* apexExperiment */;
   },
   set: undefined
 });

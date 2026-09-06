@@ -1,6 +1,6 @@
-// === Module 7938: GuildIncidentActionSources ===
+// === Module 8017: GuildIncidentActionSources ===
 
-// Module 7938 (GuildIncidentActionSources)
+// Module 8017 (GuildIncidentActionSources)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidTypes.tsx");

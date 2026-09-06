@@ -1,6 +1,6 @@
-// === Module 7218: isForegrounded ===
+// === Module 7462: isForegrounded ===
 
-// Module 7218 (isForegrounded)
+// Module 7462 (isForegrounded)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

@@ -1,7 +1,7 @@
-// === Module 1977: deserializeChannels ===
+// === Module 2008: deserializeChannels ===
 
-// Module 1977 (deserializeChannels)
-import fromStringAll from "fromString" /* 503 */;
+// Module 2008 (deserializeChannels)
+import fromStringAll from "fromString" /* 1086 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 function deserializeChannels(arg0) {

@@ -1,16 +1,16 @@
-// === Module 15889: MessagesEmptyState ===
+// === Module 16053: MessagesEmptyState ===
 
-// Module 15889 (MessagesEmptyState)
-import encodeProperties from "encodeProperties" /* 500 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useNavigation from "useNavigation" /* 1498 */;
-import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4929 */;
+// Module 16053 (MessagesEmptyState)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import encodeProperties from "encodeProperties" /* 1250 */;
+import useNavigation from "useNavigation" /* 1483 */;
+import Text from "Text" /* 4556 */;
+import Button from "Button" /* 4975 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ View: c5, Image: closure_6, ScrollView: error } = get_ActivityIndicator);
@@ -20,7 +20,7 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/t
 
 export default function MessagesEmptyState() {
   const tmp = callback2();
-  let width = navigation(1492)().width;
+  let width = navigation(1477)().width;
   [tmp5, require] = callback(React.useState(0), 2);
   callback = React.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
@@ -36,14 +36,14 @@ export default function MessagesEmptyState() {
   const tmp4 = callback(React.useState(0), 2);
   obj[0] = encodeProperties.ImpressionTypes.VIEW;
   obj[1] = encodeProperties.ImpressionNames.MESSAGES_EMPTY_NUX;
-  navigation(8911)(obj);
+  navigation(8768)(obj);
   if (tmp5 > 0) {
     width = tmp5;
   }
   const result = 0.9 * width;
-  let tmp7Result = tmp7(5080);
+  let tmp7Result = tmp7(5126);
   const isScreenLandscape = tmp7Result.useIsScreenLandscape();
-  tmp7Result = tmp7(14942);
+  tmp7Result = tmp7(15100);
   const items1 = [tmp.scrollViewContentContainer, ];
   let tmp18;
   if (isScreenLandscape) {
@@ -56,12 +56,12 @@ export default function MessagesEmptyState() {
   const obj2 = { style: tmp.container, onLayout: callback, children: null };
   const obj3 = { style: tmp.innerContainer, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
-  const obj5 = { resizeMode: "contain", source: tmp2(15890), style: null };
+  const obj5 = { resizeMode: "contain", source: tmp2(16054), style: null };
   let num = 350;
   if (result < 622) {
     num = result / 622 * 350;
   }
-  const tmp10 = navigation(8911);
+  const tmp10 = navigation(8768);
   const tmp17 = closure_7;
   const tmp21 = closure_6;
   obj5[2] = { height: num, width: Math.min(result, 622) };
@@ -69,11 +69,11 @@ export default function MessagesEmptyState() {
   const items2 = [closure_8(closure_5, obj4), ];
   const obj7 = { style: tmp.textWrapper, children: null };
   const obj8 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
-  const intl = tmp7(1233).intl;
+  const intl = tmp7(1114).intl;
   obj8[3] = intl.string(getSystemLocale.t["8JZof8"]);
   const items3 = [closure_8(Text.Heading, obj8), ];
   const obj9 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
-  const intl2 = tmp7(1233).intl;
+  const intl2 = tmp7(1114).intl;
   obj9[3] = intl2.string(getSystemLocale.t["qm+H7x"]);
   items3[1] = closure_8(Text.Text, obj9);
   obj7[1] = items3;
@@ -82,7 +82,7 @@ export default function MessagesEmptyState() {
   const items4 = [closure_9(closure_5, obj3), ];
   const obj10 = { style: tmp.buttonWrapper, children: null };
   const obj11 = { text: null, onPress: null, size: "lg" };
-  const intl3 = tmp7(1233).intl;
+  const intl3 = tmp7(1114).intl;
   obj11[0] = intl3.string(getSystemLocale.t.zIJnA6);
   obj11[1] = callback1;
   obj10[1] = closure_8(Button.Button, obj11);

@@ -1,14 +1,14 @@
-// === Module 10853: LockedRecipientField ===
+// === Module 10856: LockedRecipientField ===
 
-// Module 10853 (LockedRecipientField)
+// Module 10856 (LockedRecipientField)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import Text from "Text" /* 4474 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import Text from "Text" /* 4556 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -25,7 +25,7 @@ export default function LockedRecipientField(user) {
   user = user.user;
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.avatar, user, guildId: "Array", size: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+  obj = { style: tmp.avatar, user, guildId: "Array", size: false };
   obj[3] = Button.AvatarSizes.NORMAL;
   const items = [callback(Button.Avatar, obj), ];
   obj = { variant: "text-md/semibold", children: nameFromUserDefault.getName(user) };

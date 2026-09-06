@@ -1,11 +1,11 @@
-// === Module 5472: shouldShowOnboarding ===
+// === Module 7096: shouldShowOnboarding ===
 
-// Module 5472 (shouldShowOnboarding)
+// Module 7096 (shouldShowOnboarding)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import ME2 from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME2 from "ME" /* 1074 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
 
 const ME = ME2.ME;
 let obj = { STARTED: "started", READY: "ready", COMPLETED: "completed", NOT_APPLICABLE: "not_applicable" };

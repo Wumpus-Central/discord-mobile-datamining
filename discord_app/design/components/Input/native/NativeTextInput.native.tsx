@@ -1,17 +1,17 @@
-// === Module 6242: useKeyboardBlurring ===
+// === Module 6624: useKeyboardBlurring ===
 
-// Module 6242 (useKeyboardBlurring)
+// Module 6624 (useKeyboardBlurring)
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "subscribeToKeyboardUIStore" /* 1494 */;
-import { KeyboardThemes } from "ME" /* 673 */;
+import closure_8 from "subscribeToKeyboardUIStore" /* 1479 */;
+import { KeyboardThemes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
 ({ Pressable: c4, TextInput: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
+const forwardRefResult = importAllResult.forwardRef((value, closure_1) => {
   const ref = importAllResult.useRef(null);
   const items = [ref];
   const effect = importAllResult.useEffect(() => {
@@ -79,11 +79,11 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
   ref(defaultValue[9]);
   if (null != value.keyboardAppearance) {
     obj = {};
-    obj = { value: "Array", defaultValue: "PX_16" };
+    obj = { value: "hash", defaultValue: "call" };
     let tmp6Result = tmp6(tmp3[10]);
     let merged = Object.assign(tmp6Result.mergeProps(value, tmp4, obj));
     tmp6Result = tmp6(tmp3[10]);
-    obj.ref = tmp6Result.mergeRefs(ref, ref2);
+    obj.ref = tmp6Result.mergeRefs(ref, closure_1);
     const tmp19 = callback(closure_5, obj);
     let tmp21Result = tmp19;
     if (!value.multiline) {

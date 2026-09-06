@@ -1,12 +1,12 @@
-// === Module 8388: FormSwitch ===
+// === Module 8605: FormSwitch ===
 
-// Module 8388 (FormSwitch)
+// Module 8605 (FormSwitch)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
+import ThemesDefault from "Themes" /* 576 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import { Switch } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;

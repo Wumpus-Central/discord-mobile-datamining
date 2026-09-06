@@ -1,18 +1,18 @@
-// === Module 17164: handleGuildCreate ===
+// === Module 17330: handleGuildCreate ===
 
-// Module 17164 (handleGuildCreate)
+// Module 17330 (handleGuildCreate)
 import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 684 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import initializeDefault from "initialize" /* 5495 */;
+import setDefault from "set" /* 1090 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "handleConnectionOpen" /* 4856 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "_handleConnectionOpen" /* 5230 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import { ChannelFlags } from "set" /* 1393 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "handleConnectionOpen" /* 4902 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "_handleConnectionOpen" /* 5277 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import { ChannelFlags } from "set" /* 1964 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -479,7 +479,7 @@ function _getResyncGuilds() {
 }
 function scheduleIntegrityCheck(guild_id) {
   const _require = guild_id;
-  let obj = _require(13562);
+  let obj = _require(13668);
   if (obj.isChannelMetadataIntegrityCheckEnabled("scheduleIntegrityCheck")) {
     if (null != dependencyMap3[guild_id]) {
       let _clearTimeout = clearTimeout;
@@ -494,14 +494,14 @@ function scheduleIntegrityCheck(guild_id) {
     if (null != dependencyMap[guild_id]) {
       let requestId = tmp15.requestId;
     } else {
-      const v4Result = _require(511).v4();
+      const v4Result = _require(1256).v4();
       obj = { guildId: null, requestId: null, source: "integrity_check", requestedUserId: null };
       obj[0] = guild_id;
       obj[1] = v4Result;
       obj[3] = id.getId();
       tmp14[guild_id] = obj;
       requestId = v4Result;
-      const tmp4Result = _require(511);
+      const tmp4Result = _require(1256);
     }
     if (!tmp8) {
       obj = { guild_id: null, request_id: null };

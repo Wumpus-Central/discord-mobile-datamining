@@ -1,13 +1,13 @@
-// === Module 8621: VideoComponent ===
+// === Module 8307: VideoComponent ===
 
-// Module 8621 (VideoComponent)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+// Module 8307 (VideoComponent)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 class VideoComponent {
@@ -138,7 +138,7 @@ class Video extends PureComponent {
 const prototype = Video.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
-  this._renderTask = self(6055).runAfterInteractions(() => {
+  this._renderTask = self(7038).runAfterInteractions(() => {
     self.setState({ postponeRender: false });
   });
 };

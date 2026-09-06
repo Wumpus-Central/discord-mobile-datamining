@@ -1,11 +1,11 @@
-// === Module 11471: getTimeSafe ===
+// === Module 11660: getTimeSafe ===
 
-// Module 11471 (getTimeSafe)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7615 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
+// Module 11660 (getTimeSafe)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7860 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -95,9 +95,9 @@ let c3 = 10000000000000;
 const secondaryIndexMap = new require("version").SecondaryIndexMap((saveData) => {
   const items = [SavedMessageSortTypes.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
-    let BOOKMARK = tmp(7615).SavedMessageSortTypes.REMINDER;
+    let BOOKMARK = tmp(7860).SavedMessageSortTypes.REMINDER;
   } else {
-    BOOKMARK = tmp(7615).SavedMessageSortTypes.BOOKMARK;
+    BOOKMARK = tmp(7860).SavedMessageSortTypes.BOOKMARK;
   }
   items[1] = BOOKMARK;
   return items;

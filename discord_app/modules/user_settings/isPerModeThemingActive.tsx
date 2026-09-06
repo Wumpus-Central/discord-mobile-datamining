@@ -1,9 +1,9 @@
-// === Module 1365: isPerModeThemingActive ===
+// === Module 4407: isPerModeThemingActive ===
 
-// Module 1365 (isPerModeThemingActive)
-import closure_0 from "handleThemeChange" /* 1301 */;
-import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
-import { SystemThemeState } from "SystemThemeState" /* 1304 */;
+// Module 4407 (isPerModeThemingActive)
+import closure_0 from "handleThemeChange" /* 1183 */;
+import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
+import { SystemThemeState } from "SystemThemeState" /* 1186 */;
 
 let result = require("set").fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
 

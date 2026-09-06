@@ -1,16 +1,16 @@
-// === Module 12017: NitroLimitUpsellBar ===
+// === Module 12221: NitroLimitUpsellBar ===
 
-// Module 12017 (NitroLimitUpsellBar)
+// Module 12221 (NitroLimitUpsellBar)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import WarningIcon from "WarningIcon" /* 8755 */;
-import _modDef8988 from "module_8988" /* 8988 */;
-import registerAssetDefault from "registerAsset" /* 9186 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import WarningIcon from "WarningIcon" /* 8588 */;
+import registerAssetDefault from "registerAsset" /* 9963 */;
+import _modDef9970 from "module_9970" /* 9970 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -48,12 +48,12 @@ export default function NitroLimitUpsellBar(isAtLimit) {
   obj1[3] = items1;
   items[1] = closure_6(Text.Text, obj1);
   if (isAtLimit) {
-    let Button = _modDef8988;
+    let Button = _modDef9970;
   } else {
-    Button = tmp12(4929).Button;
+    Button = tmp12(4975).Button;
   }
   const obj3 = { size: "sm", text: null, onPress: null, loading: null };
-  const intl2 = tmp12(1233).intl;
+  const intl2 = tmp12(1114).intl;
   obj3[1] = intl2.string(getSystemLocale.t["8x0jKT"]);
   obj3[2] = onPress;
   obj3[3] = loading;

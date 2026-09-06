@@ -1,8 +1,8 @@
-// === Module 11299: subscribe ===
+// === Module 11475: subscribe ===
 
-// Module 11299 (subscribe)
+// Module 11475 (subscribe)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const result = set.fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsActionCreators.tsx");
 

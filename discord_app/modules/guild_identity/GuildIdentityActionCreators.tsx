@@ -1,9 +1,9 @@
-// === Module 9052: _saveGuildIdentityChanges ===
+// === Module 9210: _saveGuildIdentityChanges ===
 
-// Module 9052 (_saveGuildIdentityChanges)
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 9210 (_saveGuildIdentityChanges)
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _saveGuildIdentityChanges() {
@@ -85,7 +85,7 @@ function _saveGuildIdentityChanges() {
                 const obj2 = { type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: null };
                 dispatchResult = callback;
                 obj2[1] = callback;
-                dispatchResult = callback2(706).dispatch(obj2);
+                dispatchResult = callback2(573).dispatch(obj2);
                 obj3 = { nick: null, avatar: null, avatar_description: null, avatar_id: null, avatar_decoration_sku_id: null, collectibles: null, display_name_font_id: null, display_name_effect_id: null, display_name_colors: null };
                 dispatchResult = callback2;
                 obj3[0] = callback2;
@@ -150,13 +150,13 @@ function _saveGuildIdentityChanges() {
                 }
                 obj3[8] = tmp57;
                 skuId2 = 1;
-                const HTTP = callback(527).HTTP;
+                const HTTP = callback(1272).HTTP;
                 const obj6 = { url: null, body: null, headers: null, oldFormErrors: true, rejectWithError: false };
                 obj6[0] = c4.SET_GUILD_MEMBER(callback);
                 obj6[1] = obj3;
-                let obj9 = callback2(5122);
+                let obj9 = callback2(5169);
                 const obj7 = {};
-                obj7[callback(7769).SafetyScannedUploadSurface.USER_GUILD_PROFILE_AVATAR] = c8;
+                obj7[callback(6985).SafetyScannedUploadSurface.USER_GUILD_PROFILE_AVATAR] = c8;
                 obj6[2] = obj9.buildHeadersForMd5(obj7);
                 c7 = 3;
                 c8 = 1;
@@ -177,7 +177,7 @@ function _saveGuildIdentityChanges() {
               body.nick = body.username;
               delete tmp6[tmp3];
             }
-            obj3 = callback2(706);
+            obj3 = callback2(573);
             obj9 = { type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", guildId: null, errors: null };
             obj9[1] = callback;
             obj9[2] = closure_13.body;
@@ -200,18 +200,18 @@ function _saveGuildIdentityChanges() {
             body = body.body;
             const obj12 = { type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS", guildId: null };
             obj12[1] = callback;
-            callback2(706).dispatch(obj12);
-            const obj16 = callback2(706);
+            callback2(573).dispatch(obj12);
+            const obj16 = callback2(573);
             const obj13 = { type: "GUILD_MEMBER_PROFILE_UPDATE", guildMember: null, guildId: null };
             obj13[1] = body;
             obj13[2] = callback;
-            callback2(706).dispatch(obj13);
+            callback2(573).dispatch(obj13);
             let tmp12 = null == dependencyMap;
             if (tmp12) {
               tmp12 = null == c4;
             }
             if (!tmp12) {
-              obj = callback2(706);
+              obj = callback2(573);
               obj.dispatch({ type: "RECENT_AVATARS_UPDATE" });
             }
             skuId2 = 0;

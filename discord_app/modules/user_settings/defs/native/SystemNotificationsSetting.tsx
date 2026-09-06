@@ -1,13 +1,13 @@
-// === Module 15328: _handleEnableSystemNotification ===
+// === Module 15486: _handleEnableSystemNotification ===
 
-// Module 15328 (_handleEnableSystemNotification)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+// Module 15486 (_handleEnableSystemNotification)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import { NotificationAuthorizationStatus as closure_6 } from "NativePermissionStatus" /* 4731 */;
-import EventActionType from "EventActionType" /* 12210 */;
-import createToggle from "createToggle" /* 11292 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import { NotificationAuthorizationStatus as closure_6 } from "NativePermissionStatus" /* 4770 */;
+import EventActionType from "EventActionType" /* 12410 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 function _handleEnableSystemNotification() {
@@ -60,7 +60,7 @@ function _handleEnableSystemNotification() {
         } else {
           closure_0 = arg1;
           if (closure_0 === constants2.UNDETERMINED) {
-            let obj3 = callback(12218);
+            let obj3 = callback(12418);
             const permission = obj3.requestPermission((permission_granted) => {
               let obj = tmp2(table[7]);
               obj = { action_type: constants2.ALLOW_TO_REQUEST, action_location: constants3.NOTIFICATION_SETTING, permission_granted };
@@ -71,7 +71,7 @@ function _handleEnableSystemNotification() {
               }
             });
           } else {
-            obj = callback(695);
+            obj = callback(1242);
             let num3 = 0;
             if (closure_0 === constants2.AUTHORIZED) {
               num3 = 1;
@@ -79,7 +79,7 @@ function _handleEnableSystemNotification() {
             obj3 = { setting_type: "os", current_status: null };
             obj3[1] = num3;
             obj.track(constants.NOTIFICATION_SETTINGS_CLICKED, obj3);
-            obj2 = callback(9674);
+            obj2 = callback(9687);
             let result = obj2.openNotificationSettings();
           }
           c3 = 3;

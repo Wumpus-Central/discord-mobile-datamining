@@ -1,10 +1,10 @@
-// === Module 4848: performRedirect ===
+// === Module 4894: performRedirect ===
 
-// Module 4848 (performRedirect)
-import _validatePaymentSourceBillingAddress from "_validatePaymentSourceBillingAddress" /* 4839 */;
+// Module 4894 (performRedirect)
+import _validatePaymentSourceBillingAddress from "_validatePaymentSourceBillingAddress" /* 4885 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 673 */;
-import { PaymentSourceTypes } from "sum" /* 502 */;
+import ME from "ME" /* 1074 */;
+import { PaymentSourceTypes } from "sum" /* 1085 */;
 
 require = arg1;
 ({ Endpoints: c4, REDIRECTED_PAYMENT_SOURCES: c5 } = ME);
@@ -120,7 +120,7 @@ prototype["getStripe"] = function getStripe() {
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1(4844).getStripe();
+              obj1[0] = closure_1_1(4890).getStripe();
               return obj1;
             }
           }
@@ -136,7 +136,7 @@ prototype["getStripe"] = function getStripe() {
           closure_0.stripe = arg1;
         }
         if (null == closure_0.stripe) {
-          let obj2 = closure_1_0(4839);
+          let obj2 = closure_1_0(4885);
           throw obj2.dispatchConfirmationError("Stripe cannot be null on a redirect.");
         } else {
           c3 = 3;

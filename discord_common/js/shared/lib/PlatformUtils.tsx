@@ -1,7 +1,7 @@
-// === Module 4755: isTablet ===
+// === Module 4801: isTablet ===
 
-// Module 4755 (isTablet)
-import importDefaultResult1 from "format" /* 666 */;
+// Module 4801 (isTablet)
+import importDefaultResult1 from "format" /* 1341 */;
 import set from "set" /* 2 */;
 
 let set = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]);

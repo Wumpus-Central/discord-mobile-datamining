@@ -1,6 +1,6 @@
-// === Module 12740: usePageHeights ===
+// === Module 13070: usePageHeights ===
 
-// Module 12740 (usePageHeights)
+// Module 13070 (usePageHeights)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -9,7 +9,7 @@ let closure_5 = { code: "function useSegmentedPagesHeightTsx1(){const{pageHeight
 let result = require("set").fileFinishedImporting("modules/user_profile/native/useSegmentedPagesHeight.tsx");
 
 export const usePageHeights = function usePageHeights() {
-  let obj = sharedValue(4217);
+  let obj = sharedValue(4296);
   sharedValue = obj.useSharedValue([]);
   closure_1 = React.useRef([]);
   let items = [sharedValue];
@@ -31,8 +31,8 @@ export const usePageHeights = function usePageHeights() {
   return obj;
 };
 export const usePagerFillHeight = function usePagerFillHeight() {
-  const height = bottom(1492)().height;
-  bottom = bottom(1627)().bottom;
+  const height = bottom(1477)().height;
+  bottom = bottom(1611)().bottom;
   const tmp = ref(React.useState(0), 2);
   dependencyMap = tmp[1];
   ref = React.useRef(null);

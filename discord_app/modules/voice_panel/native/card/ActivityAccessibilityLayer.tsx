@@ -1,13 +1,13 @@
-// === Module 16980: FocusedActivityAccessibilityLayer ===
+// === Module 17144: FocusedActivityAccessibilityLayer ===
 
-// Module 16980 (FocusedActivityAccessibilityLayer)
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4916 */;
+// Module 17144 (FocusedActivityAccessibilityLayer)
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4962 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { IS_IOS } from "VoicePanelModes" /* 12069 */;
+import { IS_IOS } from "VoicePanelModes" /* 12273 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function FocusedActivityAccessibilityLayer(activityName) {

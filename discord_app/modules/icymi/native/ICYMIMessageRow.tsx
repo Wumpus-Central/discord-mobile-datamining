@@ -1,20 +1,20 @@
-// === Module 16333: MessageRowContent ===
+// === Module 16495: MessageRowContent ===
 
-// Module 16333 (MessageRowContent)
-import ThemesDefault from "Themes" /* 709 */;
-import set from "set" /* 1234 */;
+// Module 16495 (MessageRowContent)
+import ThemesDefault from "Themes" /* 576 */;
+import set from "set" /* 1115 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import { ITEM_PADDING } from "ITEM_PADDING" /* 16328 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "trackCommunicationDisabled" /* 2021 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "markAllUserIdListsStale" /* 4209 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
+import { ITEM_PADDING } from "ITEM_PADDING" /* 16490 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16290 */;
+import createICYMIStyles from "createICYMIStyles" /* 16452 */;
 
 require = arg1;
 class MessageRowContent {
@@ -139,11 +139,11 @@ function ReplyMessageContent(message) {
   ({ channel, guild } = message);
   const tmp = callback3();
   let obj = importAllResult;
-  const context = importAllResult.useContext(message(16291).ICYMIContext);
-  obj1 = message(586);
+  const context = importAllResult.useContext(message(16453).ICYMIContext);
+  obj1 = message(504);
   const items = [closure_10];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_10.getUser(message.author.id));
-  let obj2 = message(586);
+  let obj2 = message(504);
   const items1 = [closure_6];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_6.getMember(guild.id, message.author.id));
   let colorString;
@@ -153,23 +153,23 @@ function ReplyMessageContent(message) {
   if (colorString == null) {
     colorString = closure_12;
   }
-  const width = obj.useContext(tmp2(16291).ICYMIContext).width;
+  const width = obj.useContext(tmp2(16453).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
     obj[0] = tmp.replyPreview;
     obj = { variant: "text-sm/semibold", color: "text-muted", style: null, children: null };
     obj[2] = { fontStyle: "italic" };
-    const intl = tmp2(1233).intl;
-    obj[3] = intl.string(tmp2(1233).t.mPPcez);
-    const items2 = [callback(tmp2(4474).Text, obj), ];
+    const intl = tmp2(1114).intl;
+    obj[3] = intl.string(tmp2(1114).t.mPPcez);
+    const items2 = [callback(tmp2(4556).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.replyInner;
     obj2 = { animate: false, guildId: null, user: null, size: null };
     obj2[1] = guild.id;
     obj2[2] = stateFromStores;
-    obj2[3] = tmp2(1296).AvatarSizes.SMALL;
-    const items3 = [callback(tmp2(1296).Avatar, obj2), ];
+    obj2[3] = tmp2(1178).AvatarSizes.SMALL;
+    const items3 = [callback(tmp2(1178).Avatar, obj2), ];
     const obj3 = { style: null, children: null };
     const obj4 = { gap: 4, width: null };
     obj4[1] = width - context.inset - 2 * ITEM_PADDING - 2 * PX_12 - 30 - PX_8 - 2;
@@ -178,8 +178,8 @@ function ReplyMessageContent(message) {
     const obj6 = { color: null };
     obj6[0] = colorString;
     obj5[1] = obj6;
-    obj5[3] = tmp2(4673).getName(guild.id, channel.id, stateFromStores);
-    const items4 = [callback(tmp2(4474).Text, obj5), ];
+    obj5[3] = tmp2(4712).getName(guild.id, channel.id, stateFromStores);
+    const items4 = [callback(tmp2(4556).Text, obj5), ];
     const obj7 = { value: null, children: null };
     const obj8 = { width: null, margin: null, inset: null };
     obj8[0] = width - 2 * PX_12 - 30 - PX_8 - 2;
@@ -190,14 +190,14 @@ function ReplyMessageContent(message) {
     obj9[1] = channel;
     obj9[2] = guild;
     obj7[1] = callback(MessageRowContent, obj9);
-    items4[1] = callback(tmp2(16291).ICYMIContext.Provider, obj7);
+    items4[1] = callback(tmp2(16453).ICYMIContext.Provider, obj7);
     obj3[1] = items4;
     items3[1] = callback2(View, obj3);
     obj1[1] = items3;
     items2[1] = callback2(View, obj1);
     obj[1] = items2;
     tmp8 = callback2(View, obj);
-    const tmp2Result = tmp2(4673);
+    const tmp2Result = tmp2(4712);
   }
   return tmp8;
 }
@@ -215,7 +215,7 @@ let closure_18 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   if (obj2.isAndroid()) {
     num = -2;
   }
-  obj = { marginTop: num, borderRadius: tmp(709).radii.md, gap: 0 };
+  obj = { marginTop: num, borderRadius: tmp(576).radii.md, gap: 0 };
   obj[1] = obj;
   obj[2] = { gap: ThemesDefault.space.PX_8, marginHorizontal: paddingLeft.margin, padding: PX_12, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, maxHeight: 132 };
   obj2 = { flexDirection: "row", gap: PX_8, overflow: "hidden" };
@@ -342,20 +342,20 @@ export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   let stateFromStores;
   ({ message, messageContext, visible } = arg0);
-  let obj = gravityMessage(8640);
+  let obj = gravityMessage(8350);
   gravityMessage = obj.useGravityMessage(message);
   const items = [closure_5];
-  stateFromStores = gravityMessage(586).useStateFromStores(items, () => closure_1_5.getChannel(gravityMessage.getChannelId()));
-  const obj2 = gravityMessage(586);
+  stateFromStores = gravityMessage(504).useStateFromStores(items, () => closure_1_5.getChannel(gravityMessage.getChannelId()));
+  const obj2 = gravityMessage(504);
   const items1 = [closure_7];
-  const stateFromStores1 = gravityMessage(586).useStateFromStores(items1, () => {
+  const stateFromStores1 = gravityMessage(504).useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
     return closure_1_7.getGuild(guild_id);
   });
-  gravityMessage(586);
+  gravityMessage(504);
   [][0] = closure_8;
   let tmp6 = null;
   if (null != stateFromStores) {

@@ -1,8 +1,8 @@
-// === Module 9823: getFilterImage ===
+// === Module 9106: getFilterImage ===
 
-// Module 9823 (getFilterImage)
+// Module 9106 (getFilterImage)
 import set from "set" /* 2 */;
-import VideoFilterType from "VideoFilterType" /* 7771 */;
+import VideoFilterType from "VideoFilterType" /* 6987 */;
 
 let closure_0 = VideoFilterType.BACKGROUND_REPLACEMENT_SIZE;
 const result = set.fileFinishedImporting("modules/video_backgrounds/getFilterImage.native.tsx");

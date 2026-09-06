@@ -1,12 +1,12 @@
-// === Module 15382: pressable ===
+// === Module 15540: pressable ===
 
-// Module 15382 (pressable)
+// Module 15540 (pressable)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4433 */;
-import createToggle from "createToggle" /* 11292 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import _modDef4255 from "module_4255" /* 4255 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
+import createToggle from "createToggle" /* 11468 */;
 
 const MarketingURLs = ME.MarketingURLs;
 const pressable = createToggle.createPressable({
@@ -17,7 +17,7 @@ const pressable = createToggle.createPressable({
   parent: null,
   IconComponent: CircleInformationIcon.CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    _modDef4190.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    _modDef4255.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 });
@@ -29,7 +29,7 @@ const obj = {
   parent: null,
   IconComponent: CircleInformationIcon.CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    _modDef4190.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    _modDef4255.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 };

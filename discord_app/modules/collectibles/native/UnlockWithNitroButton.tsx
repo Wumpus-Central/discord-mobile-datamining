@@ -1,14 +1,14 @@
-// === Module 12808: UnlockWithNitroButton ===
+// === Module 13163: UnlockWithNitroButton ===
 
-// Module 12808 (UnlockWithNitroButton)
+// Module 13163 (UnlockWithNitroButton)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 586 */;
-import CollapsingText from "CollapsingText" /* 4930 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8107 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12790 */;
-import closure_3 from "updateProduct" /* 6093 */;
-import closure_4 from "map" /* 7313 */;
-import { ShopCtaEnum } from "items" /* 675 */;
+import initialize from "initialize" /* 504 */;
+import CollapsingText from "CollapsingText" /* 4976 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13148 */;
+import closure_3 from "updateProduct" /* 7237 */;
+import closure_4 from "map" /* 7558 */;
+import { ShopCtaEnum } from "items" /* 1076 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -33,14 +33,14 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   });
   importDefault = useOpenNitroSubscribeActionSheetDefault();
   if (text == null) {
-    const intl = tmp(1233).intl;
-    text = intl.string(tmp(1233).t.sEAnVH);
+    const intl = tmp(1114).intl;
+    text = intl.string(tmp(1114).t.sEAnVH);
   }
   let tmp4Result;
   if (flag) {
     obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: null };
     obj[3] = text;
-    tmp4Result = tmp4(tmp(4474).Text, obj);
+    tmp4Result = tmp4(tmp(4556).Text, obj);
   }
   obj = { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null };
   let tmp6;

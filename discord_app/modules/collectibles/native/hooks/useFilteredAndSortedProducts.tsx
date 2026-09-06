@@ -1,9 +1,9 @@
-// === Module 14917: useFilteredAndSortedProducts ===
+// === Module 15074: useFilteredAndSortedProducts ===
 
-// Module 14917 (useFilteredAndSortedProducts)
+// Module 15074 (useFilteredAndSortedProducts)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 675 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 1076 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx");

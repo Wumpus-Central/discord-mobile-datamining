@@ -1,9 +1,9 @@
-// === Module 10376: PADDING_HORIZONTAL ===
+// === Module 10273: PADDING_HORIZONTAL ===
 
-// Module 10376 (PADDING_HORIZONTAL)
+// Module 10273 (PADDING_HORIZONTAL)
 import set from "set" /* 2 */;
-import StickerFormat from "StickerFormat" /* 5221 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1337 */;
+import StickerFormat from "StickerFormat" /* 5268 */;
+import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1219 */;
 
 const PADDING_VERTICAL = ExpressionPickerViewType.PADDING_VERTICAL;
 ({ PADDING_HORIZONTAL, MIN_MARGIN } = ExpressionPickerViewType);

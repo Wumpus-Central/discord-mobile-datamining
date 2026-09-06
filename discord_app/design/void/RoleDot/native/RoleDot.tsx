@@ -1,14 +1,14 @@
-// === Module 14005: RoleDot ===
+// === Module 14123: RoleDot ===
 
-// Module 14005 (RoleDot)
+// Module 14123 (RoleDot)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getFontScale from "getFontScale" /* 4936 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 4958 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getFontScale from "getFontScale" /* 4982 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5004 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -82,7 +82,7 @@ export const RoleDot = function RoleDot(background) {
         const obj5 = { colors: null, start: null, end: null, style: null };
         const items5 = [, , ];
         ({ primaryColor: arr7[0], secondaryColor: arr7[1], tertiaryColor: arr7[2] } = colors);
-        obj5[0] = items5.filter(tmp2(1470).isNotNullish);
+        obj5[0] = items5.filter(tmp2(1369).isNotNullish);
         obj5[1] = { x: 0, y: 0 };
         obj5[2] = { x: 1, y: 0 };
         const items6 = [tmp.dot, obj1];

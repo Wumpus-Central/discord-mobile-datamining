@@ -1,6 +1,6 @@
-// === Module 8009: isMessageNewerThanImprovedMarkdownEpoch ===
+// === Module 8088: isMessageNewerThanImprovedMarkdownEpoch ===
 
-// Module 8009 (isMessageNewerThanImprovedMarkdownEpoch)
+// Module 8088 (isMessageNewerThanImprovedMarkdownEpoch)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 

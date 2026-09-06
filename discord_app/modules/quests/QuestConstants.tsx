@@ -1,13 +1,14 @@
-// === Module 5396: QuestsExperimentLocations ===
+// === Module 5444: QuestsExperimentLocations ===
 
-// Module 5396 (QuestsExperimentLocations)
-import setDefault from "set" /* 684 */;
-import QuestVariants from "QuestVariants" /* 5397 */;
-import Quests from "Quests" /* 5398 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5399 */;
-import set4 from "set" /* 5403 */;
-import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5404 */;
-import sendRequest from "sendRequest" /* 527 */;
+// Module 5444 (QuestsExperimentLocations)
+import setDefault from "set" /* 1090 */;
+import QuestVariants from "QuestVariants" /* 5445 */;
+import Quests from "Quests" /* 5446 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
+import AdCreativeType from "AdCreativeType" /* 5451 */;
+import set5 from "set" /* 5452 */;
+import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5453 */;
+import sendRequest from "sendRequest" /* 1272 */;
 import apply from "apply" /* 12 */;
 import set from "set" /* 2 */;
 
@@ -23,17 +24,19 @@ if (-1 !== sendRequest.indexOf("localhost")) {
 }
 const text = `${str2}quests/`;
 const items1 = [QuestsVisibleMessagesChangedSource.AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA, QuestsVisibleMessagesChangedSource.AdPlacement.MOBILE_HOME_DOCK_AREA, QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_BANNER_DESKTOP, QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_MOBILE_CAROUSEL, QuestsVisibleMessagesChangedSource.AdPlacement.VIDEO_MODAL_MOBILE];
-const items2 = [set4.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, set4.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, set4.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+const items2 = [AdCreativeType.AdCreativeType.NO_FILL];
 const set1 = new Set(items1);
-const items3 = [set4.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, set4.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, set4.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+const items3 = [set5.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, set5.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, set5.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, set5.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, set5.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 const set2 = new Set(items2);
-const items4 = [set4.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, set4.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, set4.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+const items4 = [set5.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, set5.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, set5.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, set5.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, set5.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 const set3 = new Set(items3);
+const items5 = [set5.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, set5.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, set5.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, set5.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, set5.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+const set4 = new Set(items4);
 let obj = { VIDEO: "task_video", PLAY: "task_play" };
 obj = { VIRTUAL_CURRENCY: "reward_virtual_currency", COLLECTIBLE: "reward_collectible", IN_GAME: "reward_in_game" };
-const items5 = [{ group: "task", filter: obj.PLAY }, { group: "task", filter: obj.VIDEO }, { group: "reward", filter: obj.VIRTUAL_CURRENCY }, { group: "reward", filter: obj.COLLECTIBLE }, { group: "reward", filter: obj.IN_GAME }];
+const items6 = [{ group: "task", filter: obj.PLAY }, { group: "task", filter: obj.VIDEO }, { group: "reward", filter: obj.VIRTUAL_CURRENCY }, { group: "reward", filter: obj.COLLECTIBLE }, { group: "reward", filter: obj.IN_GAME }];
 let closure_2 = ["reward", "task"];
-const entries = Object.entries(apply.groupBy(items5, "group"));
+const entries = Object.entries(apply.groupBy(items6, "group"));
 const sorted = entries.sort((arg0, arg1) => {
   const index = closure_2.indexOf(arg0[0]);
   const index1 = closure_2.indexOf(arg1[0]);
@@ -81,9 +84,10 @@ export const DEFAULT_VIRTUAL_CURRENCY_QUEST_HOME_HERO_ID = "1496993616537587813"
 export const DEFAULT_GENERIC_QUEST_HOME_HERO_ID = "1496993616537587812";
 export const DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID = "1514687533122982012";
 export const BILLABLE_PLACEMENTS = set1;
-export const ACTIVE_NOW_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES = set2;
-export const CHANNEL_HEADER_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES = set3;
-export const MEMBER_LIST_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES = new Set(items4);
+export const NON_BILLABLE_CREATIVE_TYPES = set2;
+export const ACTIVE_NOW_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES = set3;
+export const CHANNEL_HEADER_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES = set4;
+export const MEMBER_LIST_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES = new Set(items5);
 export const EMPTY_AD_DECISION_DATA = { is_targeted: false };
 export const QuestHomeSortMethods = { SUGGESTED: "suggested", MOST_RECENT: "most_recent", EXPIRING_SOON: "expiring_soon", RECENTLY_ENROLLED: "recently_enrolled" };
 export const TaskFilterTypes = obj;

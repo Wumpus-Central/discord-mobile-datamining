@@ -1,10 +1,10 @@
-// === Module 13943: getReportRaidHelpArticleURL ===
+// === Module 13965: getReportRaidHelpArticleURL ===
 
-// Module 13943 (getReportRaidHelpArticleURL)
+// Module 13965 (getReportRaidHelpArticleURL)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import combinedDefault from "combined" /* 1994 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import combinedDefault from "combined" /* 2024 */;
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 const obj = { DM_SPAM: "DM_SPAM", MESSAGE_SPAM: "MESSAGE_SPAM", MENTION_SPAM: "MENTION_SPAM", SUSPICIOUS_USERS: "SUSPICIOUS_USERS", SETTINGS_SPAM: "SETTINGS_SPAM" };

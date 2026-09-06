@@ -1,11 +1,11 @@
-// === Module 13468: useFetchGuildBoostSlots ===
+// === Module 13574: useFetchGuildBoostSlots ===
 
-// Module 13468 (useFetchGuildBoostSlots)
+// Module 13574 (useFetchGuildBoostSlots)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "handleGuildBoostsUpdate" /* 4370 */;
-import closure_7 from "getState" /* 7167 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4455 */;
+import closure_7 from "getState" /* 1895 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");

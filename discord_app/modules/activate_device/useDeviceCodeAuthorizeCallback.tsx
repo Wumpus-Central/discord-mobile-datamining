@@ -1,6 +1,6 @@
-// === Module 13856: _createTwoWayLink ===
+// === Module 13878: _createTwoWayLink ===
 
-// Module 13856 (_createTwoWayLink)
+// Module 13878 (_createTwoWayLink)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -49,7 +49,7 @@ function _createTwoWayLink() {
               let url;
               c4 = undefined;
               state = undefined;
-              const result = callback(13855).clientIdToActivateDevicePlatform(callback);
+              const result = callback(13877).clientIdToActivateDevicePlatform(callback);
               dependencyMap = result;
               if (null == result) {
                 c9 = 1;
@@ -60,9 +60,9 @@ function _createTwoWayLink() {
               } else {
                 url = null;
                 c8 = 1;
-                let obj10 = callback2(5359);
+                let obj10 = callback2(5406);
                 const obj2 = { twoWayLinkType: null, userCode: null };
-                obj2[0] = callback(9328).TwoWayLinkType.DEVICE_CODE;
+                obj2[0] = callback(9231).TwoWayLinkType.DEVICE_CODE;
                 obj2[1] = tmp84;
                 c9 = 4;
                 c10 = 1;
@@ -70,7 +70,7 @@ function _createTwoWayLink() {
                 obj3[0] = obj10.authorize(result, obj2);
                 return obj3;
               }
-              const obj20 = callback(13855);
+              const obj20 = callback(13877);
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -126,18 +126,18 @@ function _createTwoWayLink() {
               c4 = null;
               c8 = 2;
               callback2(38)(null != url, "No URL in authorize response");
-              state = callback(5360).getCallbackParamsFromURL(url).state;
+              state = callback(5407).getCallbackParamsFromURL(url).state;
               callback2(38)(null != state, "Authorize URL state query parameter must be present");
               c4 = state;
               c8 = 3;
-              const obj17 = callback(5360);
+              const obj17 = callback(5407);
               const obj8 = { code: null, state: null };
               obj8[0] = callback;
               obj8[1] = c4;
               c9 = 8;
               c10 = 1;
               const obj9 = { value: null, done: false };
-              obj9[0] = callback2(5359).callback(dependencyMap, obj8);
+              obj9[0] = callback2(5406).callback(dependencyMap, obj8);
               return obj9;
             }
           } else if (5 === tmp9) {
@@ -332,7 +332,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                   c6 = 4;
                   c7 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = callback(9311).finishUserCode(tmp49.userCode, "granted");
+                  obj1[0] = callback(9244).finishUserCode(tmp49.userCode, "granted");
                   return obj1;
                 } else {
                   c5 = 3;
@@ -353,7 +353,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                 }
               } else {
                 c5 = 1;
-                let obj3 = callback(9311);
+                let obj3 = callback(9244);
                 c6 = 6;
                 c7 = 1;
                 obj3 = { value: null, done: false };

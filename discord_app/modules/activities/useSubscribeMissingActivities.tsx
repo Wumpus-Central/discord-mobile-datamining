@@ -1,10 +1,10 @@
-// === Module 11294: useSubscribeMissingActivities ===
+// === Module 11470: useSubscribeMissingActivities ===
 
-// Module 11294 (useSubscribeMissingActivities)
+// Module 11470 (useSubscribeMissingActivities)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpenOrResumed" /* 11295 */;
-import closure_5 from "sortActivity" /* 4569 */;
+import closure_4 from "handleConnectionOpenOrResumed" /* 11471 */;
+import closure_5 from "sortActivity" /* 4600 */;
 
 const require = arg1;
 let closure_6 = [];
@@ -45,7 +45,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   first = tmp[0];
   let items1 = [closure_5];
   const items2 = [first];
-  stateFromStoresArray = _require(586).useStateFromStoresArray(items1, () => {
+  stateFromStoresArray = _require(504).useStateFromStoresArray(items1, () => {
     let items = [];
     const item = first.forEach((author) => {
       items = author;

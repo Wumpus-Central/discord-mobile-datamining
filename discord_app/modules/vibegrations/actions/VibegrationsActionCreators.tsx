@@ -1,14 +1,14 @@
-// === Module 16430: reloadVibegrationsAppFrames ===
+// === Module 16592: reloadVibegrationsAppFrames ===
 
-// Module 16430 (reloadVibegrationsAppFrames)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9478 */;
-import vibegrationLocation from "vibegrationLocation" /* 16428 */;
+// Module 16592 (reloadVibegrationsAppFrames)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9507 */;
+import vibegrationLocation from "vibegrationLocation" /* 16590 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 9481 */;
-import closure_5 from "isProjectOwner" /* 16425 */;
-import { Endpoints } from "ME" /* 673 */;
-import { isLaunched } from "FrameLayoutModes" /* 9482 */;
+import closure_4 from "map" /* 9510 */;
+import closure_5 from "isProjectOwner" /* 16587 */;
+import { Endpoints } from "ME" /* 1074 */;
+import { isLaunched } from "FrameLayoutModes" /* 9511 */;
 
 require = arg1;
 function reloadVibegrationsAppFrames(application_id) {
@@ -129,7 +129,7 @@ function _listProjects() {
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              obj3 = body(706);
+              obj3 = body(573);
               obj3.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
             } else if (arg0 === 1) {
               constants = 3;
@@ -142,7 +142,7 @@ function _listProjects() {
               return obj4;
             } else {
               body = body.body;
-              obj = body(706);
+              obj = body(573);
               const obj5 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: null, guildId: null };
               obj5[1] = body;
               obj5[2] = callback;

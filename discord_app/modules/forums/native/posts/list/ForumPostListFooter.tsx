@@ -1,16 +1,16 @@
-// === Module 11826: ForumPostListFooter ===
+// === Module 12025: ForumPostListFooter ===
 
-// Module 11826 (ForumPostListFooter)
+// Module 12025 (ForumPostListFooter)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME from "GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME" /* 6128 */;
-import MaxForumPostReactions from "MaxForumPostReactions" /* 11272 */;
-import useTypingUserIds from "useTypingUserIds" /* 11767 */;
-import num2Default from "num2" /* 11819 */;
+import ThemesDefault from "Themes" /* 576 */;
+import GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME from "GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME" /* 7272 */;
+import MaxForumPostReactions from "MaxForumPostReactions" /* 11414 */;
+import useTypingUserIds from "useTypingUserIds" /* 11966 */;
+import num2Default from "num2" /* 12018 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticsObjects } from "ME" /* 673 */;
+import { AnalyticsObjects } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -34,7 +34,7 @@ export default function ForumPostListFooter(parentChannel) {
   if (isGameInvitesPost) {
     obj = { channel: null };
     obj[0] = thread;
-    isGameInvitesPost = tmp8(tmp9(11827), obj);
+    isGameInvitesPost = tmp8(tmp9(12026), obj);
   }
   items[1] = isGameInvitesPost;
   if (tmp6Result) {
@@ -46,7 +46,7 @@ export default function ForumPostListFooter(parentChannel) {
     obj3[0] = thread;
     obj3[1] = typingUserIds;
     obj3[2] = hasUnreads;
-    items1[1] = tmp8(tmp9(11820), obj3);
+    items1[1] = tmp8(tmp9(12019), obj3);
     obj1[0] = items1;
     tmp6Result = tmp6(closure_6, obj1);
   }

@@ -1,6 +1,6 @@
-// === Module 646: connectStores ===
+// === Module 565: connectStores ===
 
-// Module 646 (connectStores)
+// Module 565 (connectStores)
 import _objectWithoutPropertiesDefault from "_objectWithoutProperties" /* 109 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,11 +1,11 @@
-// === Module 13079: MediaViewerItem ===
+// === Module 12982: MediaViewerItem ===
 
-// Module 13079 (MediaViewerItem)
+// Module 12982 (MediaViewerItem)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 1234 */;
+import set from "set" /* 1115 */;
 
 const require = arg1;
 let c4 = importAllResult;

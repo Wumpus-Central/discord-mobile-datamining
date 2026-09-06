@@ -1,8 +1,8 @@
-// === Module 7680: MemberVerificationAlertIncomplete ===
+// === Module 7092: MemberVerificationAlertIncomplete ===
 
-// Module 7680 (MemberVerificationAlertIncomplete)
+// Module 7092 (MemberVerificationAlertIncomplete)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4300 */;
+import closure_4 from "handleGatewayJoinRequestUpdate" /* 4382 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -13,7 +13,7 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
   const merged = Object.assign(guildId, Object.create(null));
-  let obj = guildId(644);
+  let obj = guildId(563);
   const items = [closure_4];
   const items1 = [guildId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getJoinRequestGuild(guildId), items1);
@@ -42,30 +42,30 @@ export default function MemberVerificationAlertIncomplete(guildId) {
     name = stateFromStores.name;
   }
   if (null != name) {
-    let intl2 = tmp2(1233).intl;
+    let intl2 = tmp2(1114).intl;
     obj = { guildName: null };
     obj[0] = stateFromStores.name;
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1233).t.f5Jaw7, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.f5Jaw7, obj);
   } else {
-    let intl = tmp2(1233).intl;
-    formatToPlainStringResult = intl.string(tmp2(1233).t["0sTyEb"]);
+    let intl = tmp2(1114).intl;
+    formatToPlainStringResult = intl.string(tmp2(1114).t["0sTyEb"]);
   }
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = guildId(7681).ListViewIcon;
+  obj.icon = guildId(7093).ListViewIcon;
   obj.header = formatToPlainStringResult;
   obj1 = { children: null };
   const obj2 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = tmp2(1233).intl;
-  obj2[1] = intl3.string(guildId(1233).t.h3aGmv);
+  const intl3 = tmp2(1114).intl;
+  obj2[1] = intl3.string(guildId(1114).t.h3aGmv);
   obj2[2] = callback;
-  const items4 = [callback(guildId(4929).Button, obj2), ];
+  const items4 = [callback(guildId(4975).Button, obj2), ];
   const obj3 = { text: null, variant: "destructive", onPress: null };
-  const intl4 = tmp2(1233).intl;
-  obj3[0] = intl4.string(guildId(1233).t.OQFlFD);
+  const intl4 = tmp2(1114).intl;
+  obj3[0] = intl4.string(guildId(1114).t.OQFlFD);
   obj3[2] = callback1;
-  items4[1] = callback(guildId(4929).Button, obj3);
+  items4[1] = callback(guildId(4975).Button, obj3);
   obj1[0] = items4;
   obj.buttons = callback2(closure_6, obj1);
-  return callback(onClose(7669), obj);
+  return callback(onClose(5537), obj);
 };

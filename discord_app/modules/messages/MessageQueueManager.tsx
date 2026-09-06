@@ -1,8 +1,8 @@
-// === Module 17258: handleLogout ===
+// === Module 17424: handleLogout ===
 
-// Module 17258 (handleLogout)
-import initializeDefault from "initialize" /* 5495 */;
-import itemsDefault from "items" /* 7589 */;
+// Module 17424 (handleLogout)
+import initializeDefault from "initialize" /* 7118 */;
+import itemsDefault from "items" /* 7834 */;
 
 initializeDefault;
 class MessageQueueManager extends tmp2 {

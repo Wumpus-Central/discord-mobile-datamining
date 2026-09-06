@@ -1,16 +1,16 @@
-// === Module 12353: GuildPowerupsBoostInfo ===
+// === Module 12553: GuildPowerupsBoostInfo ===
 
-// Module 12353 (GuildPowerupsBoostInfo)
+// Module 12553 (GuildPowerupsBoostInfo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
-import Text from "Text" /* 4474 */;
-import apexExperiment from "apexExperiment" /* 8016 */;
-import BoostGemIcon from "BoostGemIcon" /* 8247 */;
-import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12354 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
+import Text from "Text" /* 4556 */;
+import apexExperiment from "apexExperiment" /* 8095 */;
+import BoostGemIcon from "BoostGemIcon" /* 9375 */;
+import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12554 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const View = get_ActivityIndicator.View;
 const BoostInfoType = BoostedGuildTiers.BoostInfoType;
@@ -50,7 +50,12 @@ export default function GuildPowerupsBoostInfo(arg0) {
   obj1[3] = count;
   items[1] = closure_5(Text.Text, obj1);
   obj[3] = items;
-  const items1 = [closure_6(View, obj), closure_5(Text.Text, { variant: "text-md/normal", color: "text-subtle", importantForAccessibility: "no-hide-descendants", children: guildPowerupsBoostInfoText })];
+  const items1 = [closure_6(View, obj), ];
+  let str3 = "text-md/normal";
+  if (manaTypeConsolidationExperiment) {
+    str3 = "text-sm/normal";
+  }
+  items1[1] = closure_5(Text.Text, { variant: str3, color: "text-subtle", importantForAccessibility: "no-hide-descendants", children: guildPowerupsBoostInfoText });
   obj[3] = items1;
   return closure_6(View, obj);
 };

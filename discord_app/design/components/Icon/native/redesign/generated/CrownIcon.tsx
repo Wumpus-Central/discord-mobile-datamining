@@ -1,10 +1,10 @@
-// === Module 10868: CrownIcon ===
+// === Module 10897: CrownIcon ===
 
-// Module 10868 (CrownIcon)
+// Module 10897 (CrownIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 10869 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 10898 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

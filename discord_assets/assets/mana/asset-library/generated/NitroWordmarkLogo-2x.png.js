@@ -1,6 +1,6 @@
-// === Module 6872: metadata ===
+// === Module 6308: metadata ===
 
-// Module 6872 (metadata)
+// Module 6308 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWordmarkLogo-2x.png.js");

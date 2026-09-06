@@ -1,8 +1,8 @@
-// === Module 11760: INITIAL_STATE ===
+// === Module 11959: INITIAL_STATE ===
 
-// Module 11760 (INITIAL_STATE)
+// Module 11959 (INITIAL_STATE)
 import set from "set" /* 2 */;
-import keys from "keys" /* 641 */;
+import keys from "keys" /* 560 */;
 
 let obj = { channelId: null, rolling: false, dismissing: false, diceCount: 1, diceSides: 6, results: null };
 obj = keys.create(() => obj);

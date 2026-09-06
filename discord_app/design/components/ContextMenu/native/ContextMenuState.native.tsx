@@ -1,16 +1,16 @@
-// === Module 8812: updateContextMenuState ===
+// === Module 8667: updateContextMenuState ===
 
-// Module 8812 (updateContextMenuState)
-import batchUpdates from "batchUpdates" /* 702 */;
-import _mod4217 from "module_4217" /* 4217 */;
-import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4446 */;
+// Module 8667 (updateContextMenuState)
+import batchUpdates from "batchUpdates" /* 1249 */;
+import _mod4296 from "module_4296" /* 4296 */;
+import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4528 */;
 import closure_2 from "noop" /* 19 */;
-import keys from "keys" /* 641 */;
+import keys from "keys" /* 560 */;
 
 require = arg1;
 keys = keys.create(() => ({ menu: null }));
-function updateContextMenuState(absoluteX, absoluteY, closure_17) {
-  ({ pan, itemMeasurements, activeIndex } = closure_17);
+function updateContextMenuState(absoluteX, absoluteY, closure_18) {
+  ({ pan, itemMeasurements, activeIndex } = closure_18);
   const result = pan.set(absoluteY);
   const value = itemMeasurements.get();
   let num = 0;
@@ -33,14 +33,14 @@ function updateContextMenuState(absoluteX, absoluteY, closure_17) {
     const result1 = num / 4;
     if (activeIndex.get() !== result1) {
       const result2 = activeIndex.set(result1);
-      const obj = _mod4217;
-      _mod4217.runOnJS(HapticFeedbackTypes.triggerHapticFeedback)(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_LIGHT);
-      const runOnJSResult = _mod4217.runOnJS(HapticFeedbackTypes.triggerHapticFeedback);
+      const obj = _mod4296;
+      _mod4296.runOnJS(HapticFeedbackTypes.triggerHapticFeedback)(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_LIGHT);
+      const runOnJSResult = _mod4296.runOnJS(HapticFeedbackTypes.triggerHapticFeedback);
     }
   }
   const result3 = activeIndex.set(-1);
 }
-keys = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUNDS_PAGE_Y_OFFSET: 1, INDEX_BOUNDS_PAGE_X_OFFSET: 0, INDEX_BOUNDS_OFFSET: 4, runOnJS: require("module_4217").runOnJS, triggerHapticFeedback: require("HapticFeedbackTypes").triggerHapticFeedback, HapticFeedbackTypes: require("HapticFeedbackTypes").HapticFeedbackTypes };
+keys = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUNDS_PAGE_Y_OFFSET: 1, INDEX_BOUNDS_PAGE_X_OFFSET: 0, INDEX_BOUNDS_OFFSET: 4, runOnJS: require("module_4296").runOnJS, triggerHapticFeedback: require("HapticFeedbackTypes").triggerHapticFeedback, HapticFeedbackTypes: require("HapticFeedbackTypes").HapticFeedbackTypes };
 updateContextMenuState.__closure = keys;
 updateContextMenuState.__workletHash = 10158111154044;
 updateContextMenuState.__initData = { code: "function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){const{INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);}" };
@@ -54,7 +54,7 @@ export const INDEX_BOUNDS_HEIGHT_OFFSET = 3;
 export const ContextMenuStore = keys;
 export const showContextMenu = function showContextMenu(arg0) {
   const _require = arg0;
-  _require(702).batchUpdates(() => closure_1_3.setState({ menu: closure_0 }));
+  _require(1249).batchUpdates(() => closure_1_3.setState({ menu: closure_0 }));
 };
 export const hideContextMenu = function hideContextMenu() {
   batchUpdates.batchUpdates(() => {

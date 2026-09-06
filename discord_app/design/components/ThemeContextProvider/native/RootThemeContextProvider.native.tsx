@@ -1,8 +1,8 @@
-// === Module 10184: RootThemeContextProvider ===
+// === Module 10075: RootThemeContextProvider ===
 
-// Module 10184 (RootThemeContextProvider)
+// Module 10075 (RootThemeContextProvider)
 import closure_2 from "noop" /* 19 */;
-import { ThemeTypes } from "sum" /* 502 */;
+import { ThemeTypes } from "sum" /* 1085 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -59,7 +59,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
 };
 export const DisableCustomTheme = function DisableCustomTheme(children) {
-  let obj = themeContext(4204);
+  let obj = themeContext(4271);
   themeContext = obj.useThemeContext();
   const items = [themeContext];
   const memo = React.useMemo(() => {
@@ -72,5 +72,5 @@ export const DisableCustomTheme = function DisableCustomTheme(children) {
     return obj.createThemedContext(obj);
   }, items);
   obj = { value: memo, children: children.children };
-  return jsx(themeContext(4204).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(4271).ThemeContext.Provider, { value: memo, children: children.children });
 };

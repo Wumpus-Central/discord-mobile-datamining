@@ -1,12 +1,12 @@
-// === Module 16452: FrameViewInner ===
+// === Module 16615: FrameViewInner ===
 
-// Module 16452 (FrameViewInner)
-import initialize from "initialize" /* 586 */;
+// Module 16615 (FrameViewInner)
+import initialize from "initialize" /* 504 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "map" /* 9481 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9482 */;
-import { ActivityPlatform } from "items3" /* 4506 */;
+import closure_5 from "map" /* 9510 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9511 */;
+import { ActivityPlatform } from "items3" /* 1920 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -107,7 +107,7 @@ export const InlineFrameView = function InlineFrameView(frameId) {
   frameId = frameId.frameId;
   let tmp = null;
   const merged = Object.assign(frameId, Object.create(null));
-  let obj = frameId(586);
+  let obj = frameId(504);
   const items = [closure_5];
   const items1 = [frameId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6(closure_1_5.getFrame(frameId)), items1);

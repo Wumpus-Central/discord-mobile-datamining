@@ -1,6 +1,6 @@
-// === Module 12837: CollectiblesSKUSourceType ===
+// === Module 13113: CollectiblesSKUSourceType ===
 
-// Module 12837 (CollectiblesSKUSourceType)
+// Module 13113 (CollectiblesSKUSourceType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesSKUSourceType.tsx");

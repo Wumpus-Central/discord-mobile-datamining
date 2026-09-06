@@ -1,9 +1,9 @@
-// === Module 8061: handleFetchEmbeddedActivityShelfSuccess ===
+// === Module 8140: handleFetchEmbeddedActivityShelfSuccess ===
 
-// Module 8061 (handleFetchEmbeddedActivityShelfSuccess)
+// Module 8140 (handleFetchEmbeddedActivityShelfSuccess)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 function handleFetchEmbeddedActivityShelfSuccess(assets) {
   assets = assets.assets;

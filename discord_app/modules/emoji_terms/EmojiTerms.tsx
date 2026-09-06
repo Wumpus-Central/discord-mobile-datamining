@@ -1,8 +1,8 @@
-// === Module 5418: ? ===
+// === Module 5467: ? ===
 
-// Module 5418
-import setParamsDefault from "setParams" /* 5419 */;
-import emojiTermsImporter from "emojiTermsImporter" /* 5420 */;
+// Module 5467
+import setParamsDefault from "setParams" /* 5468 */;
+import emojiTermsImporter from "emojiTermsImporter" /* 5469 */;
 
 require = arg1;
 let closure_2 = new setParamsDefault(function loadEmoji(arg0) {

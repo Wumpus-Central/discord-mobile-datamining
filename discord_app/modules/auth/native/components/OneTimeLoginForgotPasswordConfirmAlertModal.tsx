@@ -1,9 +1,9 @@
-// === Module 7732: OneTimeLoginForgotPasswordConfirmAlertModal ===
+// === Module 6947: OneTimeLoginForgotPasswordConfirmAlertModal ===
 
-// Module 7732 (OneTimeLoginForgotPasswordConfirmAlertModal)
+// Module 6947 (OneTimeLoginForgotPasswordConfirmAlertModal)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4864 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

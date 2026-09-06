@@ -1,6 +1,6 @@
-// === Module 5124: set ===
+// === Module 5171: set ===
 
-// Module 5124 (set)
+// Module 5171 (set)
 import set from "set" /* 2 */;
 
 let set = new Set(["image/heic", "image/heif", "image/heic-sequence", "image/heif-sequence"]);

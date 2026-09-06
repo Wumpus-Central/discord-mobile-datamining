@@ -1,9 +1,9 @@
-// === Module 7665: openMemberVerificationSuccessAlert ===
+// === Module 5527: openMemberVerificationSuccessAlert ===
 
-// Module 7665 (openMemberVerificationSuccessAlert)
+// Module 5527 (openMemberVerificationSuccessAlert)
 import noopAll from "noop" /* 19 */;
-import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1890 */;
-import _modDef4859 from "module_4859" /* 4859 */;
+import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1874 */;
+import _modDef4905 from "module_4905" /* 4905 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -29,7 +29,7 @@ export const openMemberVerificationSuccessAlert = function openMemberVerificatio
       });
     }
   };
-  _modDef4859.openLazy(obj);
+  _modDef4905.openLazy(obj);
 };
 export const openMemberVerificationPendingAlert = function openMemberVerificationPendingAlert(guildId) {
   closure_0 = guildId;
@@ -56,7 +56,7 @@ export const openMemberVerificationPendingAlert = function openMemberVerificatio
       });
     }
   };
-  _modDef4859.openLazy(obj);
+  _modDef4905.openLazy(obj);
 };
 export const openMemberVerificationCancelPendingAlert = function openMemberVerificationCancelPendingAlert(arg0) {
   ({ guildId: require, confirmText: importDefault, subtitleText: importAll, onClose: dependencyMap } = arg0);
@@ -84,7 +84,7 @@ export const openMemberVerificationCancelPendingAlert = function openMemberVerif
       });
     }
   };
-  _modDef4859.openLazy(obj);
+  _modDef4905.openLazy(obj);
 };
 export const openMemberVerificationRejectedAlert = function openMemberVerificationRejectedAlert(canWithdraw) {
   ({ guildId: onClose, onClose } = canWithdraw);
@@ -97,8 +97,8 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
   };
   if (canWithdraw.canWithdraw) {
     let obj = { text: null, variant: "destructive", onPress: null };
-    const intl2 = tmp2(1233).intl;
-    obj[0] = intl2.string(tmp2(1233).t.g9tK0o);
+    const intl2 = tmp2(1114).intl;
+    obj[0] = intl2.string(tmp2(1114).t.g9tK0o);
     obj[2] = function onPress() {
       if (typeof fn !== "function") {
         HermesBuiltin.throwTypeError();
@@ -133,13 +133,13 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
     };
   } else {
     obj = { text: null, onPress: null };
-    const intl = tmp2(1233).intl;
-    obj[0] = intl.string(tmp2(1233).t.BddRzS);
+    const intl = tmp2(1114).intl;
+    obj[0] = intl.string(tmp2(1114).t.BddRzS);
     obj[1] = fn;
   }
-  dependencyMap = jsx(onClose(4929).Button, obj);
-  let result = fn(1890).dismissGlobalKeyboard();
-  let obj3 = fn(1890);
+  dependencyMap = jsx(onClose(4975).Button, obj);
+  let result = fn(1874).dismissGlobalKeyboard();
+  let obj3 = fn(1874);
   const tmp = jsx;
   obj = {
     importer() {
@@ -162,7 +162,7 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
       });
     }
   };
-  onClose(4859).openLazy(obj);
+  onClose(4905).openLazy(obj);
 };
 export const openMemberVerificationUpdateAlert = function openMemberVerificationUpdateAlert() {
   let obj = dismissGlobalKeyboardAll;
@@ -178,7 +178,7 @@ export const openMemberVerificationUpdateAlert = function openMemberVerification
       });
     }
   };
-  _modDef4859.openLazy(obj);
+  _modDef4905.openLazy(obj);
 };
 export function closeMemberVerificationAlert(arg0) {
   closure_0 = arg0;
@@ -214,5 +214,5 @@ export const openMemberVerificationIncompleteAlert = function openMemberVerifica
       });
     }
   };
-  _modDef4859.openLazy(obj);
+  _modDef4905.openLazy(obj);
 };

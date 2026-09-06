@@ -1,6 +1,6 @@
-// === Module 4644: VADAggressiveness ===
+// === Module 4680: VADAggressiveness ===
 
-// Module 4644 (VADAggressiveness)
+// Module 4680 (VADAggressiveness)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/VoiceEngine.tsx");

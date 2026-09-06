@@ -1,10 +1,10 @@
-// === Module 6663: GemIllocon ===
+// === Module 6099: GemIllocon ===
 
-// Module 6663 (GemIllocon)
+// Module 6099 (GemIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6664 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6100 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GemIllocon.native.tsx");

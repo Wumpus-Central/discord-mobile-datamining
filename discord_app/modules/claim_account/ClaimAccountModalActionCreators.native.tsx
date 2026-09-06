@@ -1,6 +1,6 @@
-// === Module 9079: openNewUserAgeGateModal ===
+// === Module 9044: openNewUserAgeGateModal ===
 
-// Module 9079 (openNewUserAgeGateModal)
+// Module 9044 (openNewUserAgeGateModal)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/claim_account/ClaimAccountModalActionCreators.native.tsx");

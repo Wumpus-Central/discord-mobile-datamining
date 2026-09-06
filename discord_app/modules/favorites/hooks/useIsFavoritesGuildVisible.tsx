@@ -1,11 +1,11 @@
-// === Module 15165: computeIsFavoritesGuildVisible ===
+// === Module 15325: computeIsFavoritesGuildVisible ===
 
-// Module 15165 (computeIsFavoritesGuildVisible)
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10333 */;
-import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10343 */;
-import closure_2 from "handleConnectionOpen" /* 4299 */;
-import closure_3 from "initializeFromUserSettings" /* 1389 */;
+// Module 15325 (computeIsFavoritesGuildVisible)
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
+import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10238 */;
+import closure_2 from "handleConnectionOpen" /* 4381 */;
+import closure_3 from "initializeFromUserSettings" /* 1960 */;
 
 require = arg1;
 function computeIsFavoritesGuildVisible(closure_3, closure_2, isExperimentEnabled) {

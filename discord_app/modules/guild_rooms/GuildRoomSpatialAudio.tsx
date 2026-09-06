@@ -1,11 +1,11 @@
-// === Module 17210: GUILD_ROOM_SPATIAL_AUDIO_ENABLED ===
+// === Module 17376: GUILD_ROOM_SPATIAL_AUDIO_ENABLED ===
 
-// Module 17210 (GUILD_ROOM_SPATIAL_AUDIO_ENABLED)
-import initialize from "initialize" /* 586 */;
-import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4721 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "resolveCreatingNotes" /* 4679 */;
-import items from "items" /* 4683 */;
+// Module 17376 (GUILD_ROOM_SPATIAL_AUDIO_ENABLED)
+import initialize from "initialize" /* 504 */;
+import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4760 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "resolveCreatingNotes" /* 4718 */;
+import items from "items" /* 4722 */;
 
 require = arg1;
 ({ GUILD_ROOM_BACKGROUND_CONFIG: c4, GUILD_ROOM_SPATIAL_AUDIO_MODE } = items);

@@ -1,15 +1,15 @@
-// === Module 17135: prototype ===
+// === Module 17301: prototype ===
 
-// Module 17135 (prototype)
-import initializeDefault from "initialize" /* 5495 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "updateInvite" /* 4462 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
-import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7424 */;
-import ME from "ME" /* 673 */;
+// Module 17301 (prototype)
+import initializeDefault from "initialize" /* 7118 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "trackCommunicationDisabled" /* 2021 */;
+import closure_6 from "createGuildRecordFromRust" /* 1979 */;
+import closure_7 from "updateInvite" /* 4544 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4199 */;
+import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7671 */;
+import ME from "ME" /* 1074 */;
 
 let require = arg1;
 ({ InviteStates: c10, Permissions: unpackModuleId, Routes: closure_12 } = ME);
@@ -76,7 +76,7 @@ let prototype = function AcceptInviteManager() {
               applyArgumentsResult(closure_2_2[15]).acceptFriendInvite(invite, obj);
               const obj6 = applyArgumentsResult(closure_2_2[15]);
               const tmp34 = closure_2_2;
-              closure_2_1(closure_2_2[16]).wait(() => set(8883).clearDisplayedInvite());
+              closure_2_1(closure_2_2[16]).wait(() => set(8738).clearDisplayedInvite());
               flag = false;
               const obj8 = closure_2_1(closure_2_2[16]);
             }
@@ -130,7 +130,7 @@ let prototype = function AcceptInviteManager() {
           tmp40 = closure_2_2;
         }
         if (flag2) {
-          closure_2_1(closure_2_2[16]).wait(() => set(8883).clearDisplayedInvite());
+          closure_2_1(closure_2_2[16]).wait(() => set(8738).clearDisplayedInvite());
           flag = false;
           const obj5 = closure_2_1(closure_2_2[16]);
         } else {

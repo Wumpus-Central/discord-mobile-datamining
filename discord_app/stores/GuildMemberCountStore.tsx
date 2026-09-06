@@ -1,8 +1,8 @@
-// === Module 4398: handleInviteData ===
+// === Module 4480: handleInviteData ===
 
-// Module 4398 (handleInviteData)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 4480 (handleInviteData)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 function handleInviteData(invite) {
   ({ guild, approximate_presence_count } = invite.invite);

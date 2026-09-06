@@ -1,11 +1,11 @@
-// === Module 17471: isRolePowerful ===
+// === Module 17631: isRolePowerful ===
 
-// Module 17471 (isRolePowerful)
+// Module 17631 (isRolePowerful)
 import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 503 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1985 */;
-import getPermissionOptionsDefault from "getPermissionOptions" /* 16665 */;
-import ME from "ME" /* 673 */;
+import fromStringAll from "fromString" /* 1086 */;
+import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 2016 */;
+import getPermissionOptionsDefault from "getPermissionOptions" /* 16830 */;
+import ME from "ME" /* 1074 */;
 
 const hasPermission = GuildRoleRecordTypeTag.hasPermission;
 ({ ElevatedPermissions: c4, ElevatedPermissionsList: c5 } = ME);

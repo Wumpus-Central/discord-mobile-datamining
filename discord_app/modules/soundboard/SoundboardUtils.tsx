@@ -1,24 +1,24 @@
-// === Module 6198: hasPermissionToPlaySound ===
+// === Module 7344: hasPermissionToPlaySound ===
 
-// Module 6198 (hasPermissionToPlaySound)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4701 */;
-import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 6192 */;
-import getMuteStates from "getMuteStates" /* 6199 */;
-import VoiceChannelEffectSentLocation from "VoiceChannelEffectSentLocation" /* 6200 */;
+// Module 7344 (hasPermissionToPlaySound)
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
+import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 7338 */;
+import getMuteStates from "getMuteStates" /* 7345 */;
+import VoiceChannelEffectSentLocation from "VoiceChannelEffectSentLocation" /* 7346 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1339 */;
-import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_5 } from "createChannelRecord" /* 1390 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import closure_8 from "handleSoundCreateOrUpdate" /* 4966 */;
-import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4968 */;
-import ME from "ME" /* 673 */;
-import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1337 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1221 */;
+import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_5 } from "createChannelRecord" /* 1961 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import closure_8 from "handleSoundCreateOrUpdate" /* 5012 */;
+import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 5014 */;
+import ME from "ME" /* 1074 */;
+import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1219 */;
 
 require = arg1;
 function hasPermissionToPlaySound(guildId, guild_id) {
@@ -287,11 +287,11 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     const _Object = Object;
     const values = Object.values(guilds);
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
-      const result = tmp(4322).ageEligibleForPremiumUpsell(stateFromStores);
-      const tmpResult = tmp(4322);
+      const result = tmp(4404).ageEligibleForPremiumUpsell(stateFromStores);
+      const tmpResult = tmp(4404);
       const obj5 = getPremiumPlanItemDefault;
       if (tmp9) {
-        items1.push(tmp(1372).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
+        items1.push(tmp(1943).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
       }
       tmp9 = getPremiumPlanItemDefault.canUseCustomCallSounds(stateFromStores) || result;
     }
@@ -301,7 +301,7 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
 export const removeCustomJoinSound = function removeCustomJoinSound(closure_0) {
   const _require = closure_0;
   closure_1 = arg1;
-  const result = _require(1369).updateUserGuildSettings(closure_0, (arg0) => {
+  const result = _require(1940).updateUserGuildSettings(closure_0, (arg0) => {
     arg0.joinSound = undefined;
     let obj = { guildId: callback, changeType: callback(closure_1_2[22]).AnalyticsChangeType.REMOVED, soundType: callback(closure_1_2[22]).AnalyticsSoundType.ENTRY, location: callback2 };
     const guildId = obj.guildId;
@@ -317,13 +317,13 @@ export const removeCustomJoinSound = function removeCustomJoinSound(closure_0) {
     obj[3] = soundType;
     obj[4] = soundSource;
     callback2(closure_1_2[23]).track(closure_1_12.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj);
-  }, _require(1369).UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, _require(1940).UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const updateCustomJoinSound = function updateCustomJoinSound(closure_0) {
   const _require = closure_0;
   closure_1 = arg1;
   dependencyMap = arg2;
-  const result = _require(1369).updateUserGuildSettings(closure_0, (joinSound) => {
+  const result = _require(1940).updateUserGuildSettings(closure_0, (joinSound) => {
     const AnalyticsSoundSource = callback(table[22]).AnalyticsSoundSource;
     if (lib.guildId === closure_1_10) {
       let CUSTOM = AnalyticsSoundSource.DEFAULT;
@@ -352,7 +352,7 @@ export const updateCustomJoinSound = function updateCustomJoinSound(closure_0) {
     obj[3] = tmp6(tmp5[22]).AnalyticsSoundType.ENTRY;
     obj[4] = CUSTOM;
     obj.track(closure_1_12.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj);
-  }, _require(1369).UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, _require(1940).UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const trackCustomCallSoundExternallyDeleted = function trackCustomCallSoundExternallyDeleted(location_stack) {
   expandEventPropertiesDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, { location_stack: location_stack.location });

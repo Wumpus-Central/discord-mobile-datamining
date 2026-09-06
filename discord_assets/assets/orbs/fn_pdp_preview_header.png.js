@@ -1,6 +1,6 @@
-// === Module 12784: metadata ===
+// === Module 13142: metadata ===
 
-// Module 12784 (metadata)
+// Module 13142 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/orbs/fn_pdp_preview_header.png.js");

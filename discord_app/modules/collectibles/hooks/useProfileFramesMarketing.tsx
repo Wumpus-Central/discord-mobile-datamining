@@ -1,11 +1,11 @@
-// === Module 16781: deriveProfileFramesMarketing ===
+// === Module 16946: deriveProfileFramesMarketing ===
 
-// Module 16781 (deriveProfileFramesMarketing)
+// Module 16946 (deriveProfileFramesMarketing)
 import set from "set" /* 2 */;
-import apexExperimentDefault from "apexExperiment" /* 8561 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 12766 */;
-import apexExperiment from "apexExperiment" /* 12767 */;
-import apexExperimentDefault2 from "apexExperiment" /* 12767 */;
+import apexExperimentDefault from "apexExperiment" /* 8212 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8830 */;
+import apexExperiment from "apexExperiment" /* 8831 */;
+import apexExperimentDefault2 from "apexExperiment" /* 8831 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");
 

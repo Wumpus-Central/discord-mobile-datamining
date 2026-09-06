@@ -1,10 +1,10 @@
-// === Module 8129: premiumSince ===
+// === Module 8189: premiumSince ===
 
-// Module 8129 (premiumSince)
+// Module 8189 (premiumSince)
 import set from "set" /* 2 */;
-import getAvatarURL from "getAvatarURL" /* 1430 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
-import useAvatarsWithGuilds from "useAvatarsWithGuilds" /* 8087 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
+import getAvatarURL from "getAvatarURL" /* 1396 */;
+import useAvatarsWithGuilds from "useAvatarsWithGuilds" /* 8166 */;
 
 const PremiumTypes = GuildFeatures.PremiumTypes;
 const result = set.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
@@ -120,7 +120,7 @@ Object.defineProperty(prototype, "gameWidgets", {
     const widgets = this._userProfile.widgets;
     let found;
     if (widgets != null) {
-      found = widgets.filter(require(7378) /* items */.isGameWidget);
+      found = widgets.filter(require(7623) /* items */.isGameWidget);
     }
     return found;
   },
@@ -142,7 +142,7 @@ Object.defineProperty(prototype, "primaryColor", {
 });
 Object.defineProperty(prototype, "canUsePremiumProfileCustomization", {
   get: function canUsePremiumProfileCustomization() {
-    return importDefault(4139).isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
+    return importDefault(4218).isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
   },
   set: undefined
 });
@@ -153,7 +153,7 @@ Object.defineProperty(prototype, "canEditThemes", {
   set: undefined
 });
 Object.defineProperty(prototype, "application", {
-  get: function application(type, arg1) {
+  get: function application(channelId, arg1, action) {
     return this._userProfile.application;
   },
   set: undefined

@@ -1,9 +1,9 @@
-// === Module 15523: updateClientPremiumTypeOverride ===
+// === Module 15681: updateClientPremiumTypeOverride ===
 
-// Module 15523 (updateClientPremiumTypeOverride)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import createMessage from "createMessage" /* 7508 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
+// Module 15681 (updateClientPremiumTypeOverride)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import createMessage from "createMessage" /* 7752 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/OverridePremiumTypeActions.tsx");
@@ -17,11 +17,11 @@ export const updateClientPremiumTypeOverride = function updateClientPremiumTypeO
     currentUser = currentUser.getCurrentUser();
   }
   if (null != currentUser) {
-    let tmp2Result = tmp2(706);
+    let tmp2Result = tmp2(573);
     obj = { type: "UPDATE_CLIENT_PREMIUM_TYPE", user: null };
     obj[1] = currentUser;
     tmp2Result.dispatch(obj);
-    tmp2Result = tmp2(706);
+    tmp2Result = tmp2(573);
     obj1 = { type: "CURRENT_USER_UPDATE", user: null };
     obj1[1] = createMessage.userRecordToServer(currentUser);
     tmp2Result.dispatch(obj1);

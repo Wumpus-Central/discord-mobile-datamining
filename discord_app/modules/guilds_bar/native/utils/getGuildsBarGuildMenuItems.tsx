@@ -1,21 +1,21 @@
-// === Module 16124: getGuildsBarGuildMenuItems ===
+// === Module 16286: getGuildsBarGuildMenuItems ===
 
-// Module 16124 (getGuildsBarGuildMenuItems)
+// Module 16286 (getGuildsBarGuildMenuItems)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 4702 */;
-import { AnalyticsSections } from "ME" /* 673 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 4741 */;
+import { AnalyticsSections } from "ME" /* 1074 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx");
 
 export default function getGuildsBarGuildMenuItems(arg0) {
   const _require = arg0;
-  let obj = _require(10256);
+  let obj = _require(10147);
   let result = obj.shouldShowUseNewNotificationSystem("GuildPopoutMenu");
-  obj = { IconComponent: _require(7816).EnvelopeIcon, label: null, action: null };
-  const intl = _require(1233).intl;
-  obj[1] = intl.string(_require(1233).t.e6RscS);
+  obj = { IconComponent: _require(7081).EnvelopeIcon, label: null, action: null };
+  const intl = _require(1114).intl;
+  obj[1] = intl.string(_require(1114).t.e6RscS);
   obj[2] = function action() {
     return closure_1_3(function*() {
       if (paths === 2) {
@@ -73,16 +73,16 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     })();
   };
   let items = [obj, , ];
-  obj = { IconComponent: _require(9772).BellIcon, label: null, action: null };
-  const intl2 = _require(1233).intl;
-  obj[1] = intl2.string(_require(1233).t.HcoRu0);
+  obj = { IconComponent: _require(9776).BellIcon, label: null, action: null };
+  const intl2 = _require(1114).intl;
+  obj[1] = intl2.string(_require(1114).t.HcoRu0);
   obj[2] = function action() {
     closure_1_1(closure_1_2[10]).open(closure_0);
   };
   items[1] = obj;
-  obj1 = { IconComponent: _require(6250).SettingsIcon, label: null, action: null };
-  const intl3 = _require(1233).intl;
-  obj1[1] = intl3.string(_require(1233).t.PdRCRg);
+  obj1 = { IconComponent: _require(7380).SettingsIcon, label: null, action: null };
+  const intl3 = _require(1114).intl;
+  obj1[1] = intl3.string(_require(1114).t.PdRCRg);
   obj1[2] = function action() {
     const guild = closure_1_4.getGuild(closure_0);
     if (null != guild) {
@@ -94,9 +94,9 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     const splice = items.splice;
     const obj2 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj2[0] = tmp5(12176);
-      const intl5 = tmp(1233).intl;
-      obj2[1] = intl5.string(tmp(1233).t.De0BTC);
+      obj2[0] = tmp5(12378);
+      const intl5 = tmp(1114).intl;
+      obj2[1] = intl5.string(tmp(1114).t.De0BTC);
       obj2[2] = function action() {
         if (null != callback) {
           const result = closure_1_1(closure_1_2[10]).updateGuildNotificationSettings(tmp, { muted: false }, callback(closure_1_2[17]).NotificationLabels.Unmuted);
@@ -105,9 +105,9 @@ export default function getGuildsBarGuildMenuItems(arg0) {
       };
       splice(1, 0, obj2);
     } else {
-      obj2[0] = tmp5(12175);
-      const intl4 = tmp(1233).intl;
-      obj2[1] = intl4.string(tmp(1233).t.vRzp7P);
+      obj2[0] = tmp5(12377);
+      const intl4 = tmp(1114).intl;
+      obj2[1] = intl4.string(tmp(1114).t.vRzp7P);
       obj2[2] = function action() {
         let obj = closure_1_1(closure_1_2[14]);
         obj = { guildId: callback };

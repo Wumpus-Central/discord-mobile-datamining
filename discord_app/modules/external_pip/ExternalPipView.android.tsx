@@ -1,10 +1,10 @@
-// === Module 16836: FreezeAfterLayoutPipView ===
+// === Module 17000: FreezeAfterLayoutPipView ===
 
-// Module 16836 (FreezeAfterLayoutPipView)
-import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideoUnavailable" /* 16839 */;
+// Module 17000 (FreezeAfterLayoutPipView)
+import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideoUnavailable" /* 17003 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "module_8604" /* 8604 */;
+import closure_4 from "module_8290" /* 8290 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 function FreezeAfterLayoutPipView() {

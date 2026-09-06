@@ -1,15 +1,15 @@
-// === Module 4504: createExecutable ===
+// === Module 1918: createExecutable ===
 
-// Module 4504 (createExecutable)
+// Module 1918 (createExecutable)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import fromStringAll from "fromString" /* 503 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import toJSDefault from "toJS" /* 1935 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 4510 */;
-import closure_4 from "createFromServer" /* 4505 */;
-import closure_5 from "createdAt" /* 1934 */;
-import items3 from "items3" /* 4506 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4507 */;
+import fromStringAll from "fromString" /* 1086 */;
+import toJSDefault from "toJS" /* 1386 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 1923 */;
+import closure_4 from "createFromServer" /* 1919 */;
+import closure_5 from "createdAt" /* 1385 */;
+import items3 from "items3" /* 1920 */;
+import { ApplicationTypes } from "ApplicationTypes" /* 1350 */;
 
 require = arg1;
 function createExecutable(os) {
@@ -101,7 +101,7 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
 };
 Object.defineProperty(prototype, "connectionEntrypointUrl", {
   get: function connectionEntrypointUrl(arg0) {
-    const obj = require(4508) /* items */.APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
+    const obj = require(1921) /* items */.APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
     let prop;
     if (obj != null) {
       prop = obj.connectionEntrypointUrlOverride;
@@ -278,6 +278,11 @@ class ApplicationRecord extends BasicApplicationRecord {
       application_account_link_benefit_config = global.application_account_link_benefit_config;
     }
     tmp2.applicationAccountLinkBenefitConfig = application_account_link_benefit_config;
+    vibegrations_project_id = global.vibegrationsProjectId;
+    if (vibegrations_project_id == null) {
+      vibegrations_project_id = global.vibegrations_project_id;
+    }
+    tmp2.vibegrationsProjectId = vibegrations_project_id;
     parent_id = global.parentId;
     if (parent_id == null) {
       parent_id = global.parent_id;
@@ -357,7 +362,7 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
     });
   }
   obj.linkedGames = mapped2;
-  ({ deeplink_uri: obj.deepLinkUri, application_account_link_benefit_config: obj.applicationAccountLinkBenefitConfig, parent_id: obj.parentId } = bot);
+  ({ deeplink_uri: obj.deepLinkUri, application_account_link_benefit_config: obj.applicationAccountLinkBenefitConfig, vibegrations_project_id: obj.vibegrationsProjectId, parent_id: obj.parentId } = bot);
   return new ApplicationRecord(obj);
 };
 prototype2["getCanonicalGameId"] = function getCanonicalGameId() {
@@ -393,7 +398,7 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
   if (id == null) {
     id = self.id;
   }
-  let obj = { id, name: null, icon: null, splash: null, overlay: null, overlayWarn: null, overlayCompatibilityHook: null, overlayMethods: null, hook: null, aliases: null, publishers: null, developers: null, primarySkuId: null, storeListingSkuId: null, thirdPartySkus: null, guildId: null, guild: null, executables: null, hashes: null, description: null, eulaId: null, slug: null, coverImage: null, bot: null, flags: null, maxParticipants: null, tags: null, embeddedActivityConfig: null, type: null, team: null, roleConnectionsVerificationUrl: null, _connectionEntrypointUrl: null, integrationTypesConfig: null, isMonetized: null, storefront_available: null, termsOfServiceUrl: null, privacyPolicyUrl: null, isVerified: null, customInstallUrl: null, installParams: null, isDiscoverable: null, directoryEntry: null, categories: null, linkedGames: null, deepLinkUri: null, applicationAccountLinkBenefitConfig: null, contentClassification: null, parentId: null };
+  let obj = { id, name: null, icon: null, splash: null, overlay: null, overlayWarn: null, overlayCompatibilityHook: null, overlayMethods: null, hook: null, aliases: null, publishers: null, developers: null, primarySkuId: null, storeListingSkuId: null, thirdPartySkus: null, guildId: null, guild: null, executables: null, hashes: null, description: null, eulaId: null, slug: null, coverImage: null, bot: null, flags: null, maxParticipants: null, tags: null, embeddedActivityConfig: null, type: null, team: null, roleConnectionsVerificationUrl: null, _connectionEntrypointUrl: null, integrationTypesConfig: null, isMonetized: null, storefront_available: null, termsOfServiceUrl: null, privacyPolicyUrl: null, isVerified: null, customInstallUrl: null, installParams: null, isDiscoverable: null, directoryEntry: null, categories: null, linkedGames: null, deepLinkUri: null, applicationAccountLinkBenefitConfig: null, vibegrationsProjectId: null, contentClassification: null, parentId: null };
   let name = id.name;
   if (name == null) {
     name = self.name;
@@ -650,16 +655,21 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     applicationAccountLinkBenefitConfig = self.applicationAccountLinkBenefitConfig;
   }
   obj[45] = applicationAccountLinkBenefitConfig;
+  let vibegrationsProjectId = id.vibegrationsProjectId;
+  if (vibegrationsProjectId == null) {
+    vibegrationsProjectId = self.vibegrationsProjectId;
+  }
+  obj[46] = vibegrationsProjectId;
   let contentClassification = id.contentClassification;
   if (contentClassification == null) {
     contentClassification = self.contentClassification;
   }
-  obj[46] = contentClassification;
+  obj[47] = contentClassification;
   let parentId = id.parentId;
   if (parentId == null) {
     parentId = self.parentId;
   }
-  obj[47] = parentId;
+  obj[48] = parentId;
   return new ApplicationRecord(obj);
 };
 prototype2["getMaxParticipants"] = function getMaxParticipants() {

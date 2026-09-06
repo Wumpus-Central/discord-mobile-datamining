@@ -1,8 +1,8 @@
-// === Module 6110: useUnmountAbortSignal ===
+// === Module 7254: useUnmountAbortSignal ===
 
-// Module 6110 (useUnmountAbortSignal)
+// Module 7254 (useUnmountAbortSignal)
 import set from "set" /* 2 */;
-import useInitialValueDefault from "useInitialValue" /* 5950 */;
+import useInitialValueDefault from "useInitialValue" /* 5598 */;
 
 const result = set.fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");
 
@@ -12,7 +12,7 @@ export default function useUnmountAbortSignal() {
     return abortController;
   });
   const _require = tmp;
-  const unmountEffect = _require(4946).useUnmountEffect(() => {
+  const unmountEffect = _require(4992).useUnmountEffect(() => {
     closure_0.abort();
   });
   return tmp.signal;
@@ -24,7 +24,7 @@ export const useUnmountAbortSignalWithDelay = function useUnmountAbortSignalWith
     return abortController;
   });
   importDefault = tmp;
-  const unmountEffect = _require(4946).useUnmountEffect(() => {
+  const unmountEffect = _require(4992).useUnmountEffect(() => {
     const timerId = setTimeout(() => {
       closure_1.abort();
     }, closure_0);

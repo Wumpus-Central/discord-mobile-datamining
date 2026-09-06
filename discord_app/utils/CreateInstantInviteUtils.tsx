@@ -1,11 +1,11 @@
-// === Module 17634: getInvitableChannelForGuild ===
+// === Module 17794: getInvitableChannelForGuild ===
 
-// Module 17634 (getInvitableChannelForGuild)
+// Module 17794 (getInvitableChannelForGuild)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import comparator from "comparator" /* 1981 */;
-import closure_2 from "comparator" /* 1981 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
+import ME from "ME" /* 1074 */;
+import comparator from "comparator" /* 2012 */;
+import closure_2 from "comparator" /* 2012 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
 
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c0, GUILD_VOCAL_CHANNELS_KEY: closure_1 } = comparator);
 const Permissions = ME.Permissions;

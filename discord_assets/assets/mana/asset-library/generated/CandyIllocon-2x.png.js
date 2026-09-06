@@ -1,6 +1,6 @@
-// === Module 6400: metadata ===
+// === Module 5828: metadata ===
 
-// Module 6400 (metadata)
+// Module 5828 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CandyIllocon-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 11907: useTrackSearchItems ===
+// === Module 12106: useTrackSearchItems ===
 
-// Module 11907 (useTrackSearchItems)
+// Module 12106 (useTrackSearchItems)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
@@ -10,7 +10,7 @@ export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1
   const _require = callback3;
   dependencyMap = memo1;
   const React = first;
-  let obj = _require(9067);
+  let obj = _require(11215);
   const entrypoint = obj.useAppLauncherContext().entrypoint;
   closure_4 = React.useRef({});
   closure_5 = React.useRef(first);

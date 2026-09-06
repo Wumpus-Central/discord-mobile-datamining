@@ -1,12 +1,12 @@
-// === Module 1426: isValueEqual ===
+// === Module 1972: isValueEqual ===
 
-// Module 1426 (isValueEqual)
+// Module 1972 (isValueEqual)
 import _modDef38 from "module_38" /* 38 */;
-import shallowEqual from "shallowEqual" /* 640 */;
-import shallowEqualDefault from "shallowEqual" /* 640 */;
-import areSetsEqual from "areSetsEqual" /* 1428 */;
-import { TypeTag } from "TypeTag" /* 1427 */;
-import importDefaultResult from "TypeTag" /* 1427 */;
+import shallowEqual from "shallowEqual" /* 558 */;
+import shallowEqualDefault from "shallowEqual" /* 558 */;
+import areSetsEqual from "areSetsEqual" /* 1974 */;
+import { TypeTag } from "TypeTag" /* 1973 */;
+import importDefaultResult from "TypeTag" /* 1973 */;
 
 require = arg1;
 function isValueEqual(items, current) {

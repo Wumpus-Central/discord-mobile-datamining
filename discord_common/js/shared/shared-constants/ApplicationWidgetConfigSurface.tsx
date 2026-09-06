@@ -1,6 +1,6 @@
-// === Module 12985: ApplicationWidgetConfigSurface ===
+// === Module 9009: ApplicationWidgetConfigSurface ===
 
-// Module 12985 (ApplicationWidgetConfigSurface)
+// Module 9009 (ApplicationWidgetConfigSurface)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetConfigSurface.tsx");

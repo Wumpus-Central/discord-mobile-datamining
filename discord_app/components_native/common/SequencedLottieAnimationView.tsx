@@ -1,7 +1,7 @@
-// === Module 13516: componentDidMount ===
+// === Module 13622: componentDidMount ===
 
-// Module 13516 (componentDidMount)
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5954 */;
+// Module 13622 (componentDidMount)
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5530 */;
 import closure_3 from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

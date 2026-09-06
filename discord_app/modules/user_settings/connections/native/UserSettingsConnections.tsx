@@ -1,20 +1,20 @@
-// === Module 14802: ADD_CONNECTIONS_SHEET_SENTINEL ===
+// === Module 14958: ADD_CONNECTIONS_SHEET_SENTINEL ===
 
-// Module 14802 (ADD_CONNECTIONS_SHEET_SENTINEL)
-import ThemesDefault from "Themes" /* 709 */;
-import useThemeDefault from "useTheme" /* 4413 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12751 */;
-import EmptyStateCardDefault from "EmptyStateCard" /* 14803 */;
+// Module 14958 (ADD_CONNECTIONS_SHEET_SENTINEL)
+import ThemesDefault from "Themes" /* 576 */;
+import useThemeDefault from "useTheme" /* 4495 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 13081 */;
+import EmptyStateCardDefault from "EmptyStateCard" /* 14959 */;
 import closure_3 from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recomputeFromAppTokens" /* 5484 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5484 */;
-import closure_7 from "fetchFingerprint" /* 1215 */;
-import closure_8 from "set" /* 5234 */;
-import closure_9 from "_getSystemLocale" /* 1995 */;
-import { AnalyticsLocations } from "ME" /* 673 */;
+import closure_5 from "recomputeFromAppTokens" /* 7107 */;
+import { FetchState } from "recomputeFromAppTokens" /* 7107 */;
+import closure_7 from "fetchFingerprint" /* 502 */;
+import closure_8 from "set" /* 5281 */;
+import closure_9 from "_getSystemLocale" /* 2025 */;
+import { AnalyticsLocations } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
@@ -33,18 +33,18 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   let authorizedApps;
   const tmp = callback3();
   importDefault = useThemeDefault();
-  let obj = selectedPlatformType(586);
+  let obj = selectedPlatformType(504);
   const items = [closure_9];
   dependencyMap = obj.useStateFromStores(items, () => locale.locale);
-  obj1 = selectedPlatformType(586);
+  obj1 = selectedPlatformType(504);
   const items1 = [closure_8];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ fetching: closure_8.isFetching(), accounts: closure_8.getAccounts() }));
   ({ accounts, fetching } = stateFromStoresObject);
   const items2 = [closure_5];
-  const stateFromStoresObject1 = selectedPlatformType(586).useStateFromStoresObject(items2, () => ({ authorizedAppsFetchState: authStore.getFetchState(), authorizedApps: authStore.getNewestTokensForNonChildrenApplications() }));
+  const stateFromStoresObject1 = selectedPlatformType(504).useStateFromStoresObject(items2, () => ({ authorizedAppsFetchState: authStore.getFetchState(), authorizedApps: authStore.getNewestTokensForNonChildrenApplications() }));
   authorizedAppsFetchState = stateFromStoresObject1.authorizedAppsFetchState;
   authorizedApps = stateFromStoresObject1.authorizedApps;
-  const obj3 = selectedPlatformType(586);
+  const obj3 = selectedPlatformType(504);
   const tmp2 = importDefault;
   const tmp7Result = useConnectionFilteredAppIdentitiesDefault(id.getId(), { includeHidden: true });
   const prop = tmp7Result.filteredAppIdentities;
@@ -91,8 +91,8 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
         accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id))
       ];
       obj[1] = items5;
-      obj[1] = callback2(tmp4(4927).Stack, obj);
-      tmp14 = callback(tmp4(8376).Form, obj);
+      obj[1] = callback2(tmp4(4973).Stack, obj);
+      tmp14 = callback(tmp4(8593).Form, obj);
     }
     return tmp14;
   }

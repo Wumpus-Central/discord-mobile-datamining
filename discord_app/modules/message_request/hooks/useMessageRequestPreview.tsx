@@ -1,11 +1,11 @@
-// === Module 12394: loadMessageRequestData ===
+// === Module 12594: loadMessageRequestData ===
 
-// Module 12394 (loadMessageRequestData)
+// Module 12594 (loadMessageRequestData)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "reinjectEphemerals" /* 4736 */;
-import closure_5 from "generateOldThreadCutoff" /* 4493 */;
-import closure_6 from "isMessagePreviewEnabledForChannel" /* 12395 */;
-import { Endpoints } from "ME" /* 673 */;
+import closure_4 from "reinjectEphemerals" /* 4781 */;
+import closure_5 from "generateOldThreadCutoff" /* 4575 */;
+import closure_6 from "isMessagePreviewEnabledForChannel" /* 12595 */;
+import { Endpoints } from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -308,7 +308,7 @@ export const useMessageRequestPreview = function useMessageRequestPreview(channe
   }
   const items = [closure_6, closure_4, closure_5];
   const items1 = [id];
-  const stateFromStoresObject = id(586).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = id(504).useStateFromStoresObject(items, () => {
     const lastMessageIdResult = closure_1_5.lastMessageId(id);
     const messageRequestPreview = closure_1_6.getMessageRequestPreview(id);
     if (null == messageRequestPreview.message) {
@@ -324,10 +324,10 @@ export const useMessageRequestPreview = function useMessageRequestPreview(channe
     return messageRequestPreview;
   }, items1);
   ({ loaded, message, error } = stateFromStoresObject);
-  const obj2 = id(586);
+  const obj2 = id(504);
   const items2 = [closure_6];
   const items3 = [id];
-  const stateFromStores = id(586).useStateFromStores(items2, () => closure_1_6.shouldLoadMessageRequestPreview(id), items3);
+  const stateFromStores = id(504).useStateFromStores(items2, () => closure_1_6.shouldLoadMessageRequestPreview(id), items3);
   if (flag) {
     flag = !loaded;
   }

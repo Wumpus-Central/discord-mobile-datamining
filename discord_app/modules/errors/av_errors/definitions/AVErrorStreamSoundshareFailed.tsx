@@ -1,12 +1,12 @@
-// === Module 17682: AVErrorStreamSoundshareFailedDefinition ===
+// === Module 17842: AVErrorStreamSoundshareFailedDefinition ===
 
-// Module 17682 (AVErrorStreamSoundshareFailedDefinition)
-import isStreamKey from "isStreamKey" /* 4544 */;
-import mapped from "mapped" /* 9582 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17674 */;
-import closure_2 from "reset" /* 4500 */;
-import closure_3 from "getHookError" /* 4573 */;
-import { MediaEngineHookTypes } from "ME" /* 673 */;
+// Module 17842 (AVErrorStreamSoundshareFailedDefinition)
+import isStreamKey from "isStreamKey" /* 4612 */;
+import mapped from "mapped" /* 9110 */;
+import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17834 */;
+import closure_2 from "reset" /* 4582 */;
+import closure_3 from "getHookError" /* 4608 */;
+import { MediaEngineHookTypes } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx");

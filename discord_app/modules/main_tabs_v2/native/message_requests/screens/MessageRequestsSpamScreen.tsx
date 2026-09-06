@@ -1,6 +1,6 @@
-// === Module 16728: MessageRequestsScreen ===
+// === Module 16893: MessageRequestsScreen ===
 
-// Module 16728 (MessageRequestsScreen)
+// Module 16893 (MessageRequestsScreen)
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -10,5 +10,5 @@ export default function MessageRequestsScreen(navigation) {
   navigation = navigation.navigation;
   const items = [navigation];
   const goToMessageRequestPreview = React.useCallback((channelId) => navigation.push("preview", { channelId }), items);
-  return jsx(navigation(16726), { goToMessageRequestPreview });
+  return jsx(navigation(16891), { goToMessageRequestPreview });
 };

@@ -1,10 +1,10 @@
-// === Module 6365: BeeIllocon ===
+// === Module 5793: BeeIllocon ===
 
-// Module 6365 (BeeIllocon)
+// Module 5793 (BeeIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6366 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5794 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");

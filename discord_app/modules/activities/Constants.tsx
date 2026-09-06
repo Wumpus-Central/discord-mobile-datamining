@@ -1,8 +1,8 @@
-// === Module 4506: items3 ===
+// === Module 1920: items3 ===
 
-// Module 4506 (items3)
-import ME from "ME" /* 673 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+// Module 1920 (items3)
+import ME from "ME" /* 1074 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
 import set from "set" /* 2 */;
 
 const ChannelTypes = ME.ChannelTypes;

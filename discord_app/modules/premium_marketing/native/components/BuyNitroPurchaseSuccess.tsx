@@ -1,12 +1,12 @@
-// === Module 13286: presentBuyNitroPurchaseSuccess ===
+// === Module 13391: presentBuyNitroPurchaseSuccess ===
 
-// Module 13286 (presentBuyNitroPurchaseSuccess)
+// Module 13391 (presentBuyNitroPurchaseSuccess)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useAlertStore from "useAlertStore" /* 4860 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4864 */;
-import { reset } from "usePremiumPlanPurchasedStore" /* 7176 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import useAlertStore from "useAlertStore" /* 4906 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
+import { reset } from "usePremiumPlanPurchasedStore" /* 7421 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -19,18 +19,18 @@ export const presentBuyNitroPurchaseSuccess = function presentBuyNitroPurchaseSu
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["Q+BB2w"]);
   if (PremiumTypes.TIER_0 === premiumTier) {
-    const intl4 = tmp(1233).intl;
-    let stringResult = intl4.string(tmp(1233).t["6WWrVM"]);
+    const intl4 = tmp(1114).intl;
+    let stringResult = intl4.string(tmp(1114).t["6WWrVM"]);
   } else if (tmp4.TIER_1 === premiumTier) {
-    const intl3 = tmp(1233).intl;
-    stringResult = intl3.string(tmp(1233).t.LAAgsy);
+    const intl3 = tmp(1114).intl;
+    stringResult = intl3.string(tmp(1114).t.LAAgsy);
   } else {
-    const intl2 = tmp(1233).intl;
-    stringResult = intl2.string(tmp(1233).t.I7xNzI);
+    const intl2 = tmp(1114).intl;
+    stringResult = intl2.string(tmp(1114).t.I7xNzI);
   }
   obj[1] = stringResult;
   obj = { variant: "primary", text: null };
-  const intl5 = tmp(1233).intl;
+  const intl5 = tmp(1114).intl;
   obj[1] = intl5.string(getSystemLocale.t.TkTvBz);
   obj[2] = jsx(getAlertModalItemKey.AlertActionButton, { variant: "primary", text: null });
   obj.openAlert("BuyNitroPurchaseSuccess", jsx(getAlertModalItemKey.AlertModal, { variant: "primary", text: null }), reset);

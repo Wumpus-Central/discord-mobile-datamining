@@ -1,6 +1,6 @@
-// === Module 11575: metadata ===
+// === Module 11780: metadata ===
 
-// Module 11575 (metadata)
+// Module 11780 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js");

@@ -1,10 +1,10 @@
-// === Module 7141: WorldIllocon ===
+// === Module 6581: WorldIllocon ===
 
-// Module 7141 (WorldIllocon)
+// Module 6581 (WorldIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 7142 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6582 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WorldIllocon.native.tsx");

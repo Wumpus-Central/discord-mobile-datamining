@@ -1,15 +1,15 @@
-// === Module 8088: _saveProfileChanges ===
+// === Module 8167: _saveProfileChanges ===
 
-// Module 8088 (_saveProfileChanges)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1228 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1362 */;
+// Module 8167 (_saveProfileChanges)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4411 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 
 require = arg1;
 function _saveProfileChanges() {
@@ -237,9 +237,9 @@ export const setTryItOutAvatarDecoration = function setTryItOutAvatarDecoration(
   obj = { feature_name: constants4.AVATAR_DECORATION, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
-export const setTryItOutProfileEffect = function setTryItOutProfileEffect(profileEffect) {
+export const setTryItOutProfileEffect = function setTryItOutProfileEffect(purchasedItem) {
   let obj = dispatcherDefault;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect };
+  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect: purchasedItem };
   obj.dispatch(obj);
   obj = { feature_name: constants4.PROFILE_EFFECT, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);

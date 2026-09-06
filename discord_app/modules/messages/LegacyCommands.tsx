@@ -1,17 +1,17 @@
-// === Module 11797: action ===
+// === Module 11996: action ===
 
-// Module 11797 (action)
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4132 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4701 */;
-import trackInviteDefault from "trackInvite" /* 7211 */;
-import checkReactionResponse from "checkReactionResponse" /* 7519 */;
-import _modDef8171 from "module_8171" /* 8171 */;
+// Module 11996 (action)
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import MAX_REACTIONS from "MAX_REACTIONS" /* 4211 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
+import trackInviteDefault from "trackInvite" /* 7456 */;
+import checkReactionResponse from "checkReactionResponse" /* 7764 */;
+import _modDef9303 from "module_9303" /* 9303 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 5410 */;
-import closure_5 from "reinjectEphemerals" /* 4736 */;
-import ME from "ME" /* 673 */;
-import importDefaultResult from "t" /* 4192 */;
+import closure_4 from "getEmojiToGroupId" /* 5459 */;
+import closure_5 from "reinjectEphemerals" /* 4781 */;
+import ME from "ME" /* 1074 */;
+import importDefaultResult from "t" /* 4257 */;
 
 require = arg1;
 ({ AnalyticEvents: closure_6, MARKDOWN_SPOILER_WRAPPER: error, ME: closure_8 } = ME);
@@ -79,7 +79,7 @@ obj4 = {
   action(arg0, channel) {
     channel = channel.channel;
     if (null != channel.guild_id) {
-      obj = _modDef8171;
+      obj = _modDef9303;
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }

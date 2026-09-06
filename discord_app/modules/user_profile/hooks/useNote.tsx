@@ -1,10 +1,10 @@
-// === Module 12719: _fetchNote ===
+// === Module 13052: _fetchNote ===
 
-// Module 12719 (_fetchNote)
+// Module 13052 (_fetchNote)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getNote" /* 12720 */;
-import { Endpoints } from "ME" /* 673 */;
+import closure_5 from "getNote" /* 13053 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchNote() {
@@ -60,7 +60,7 @@ function _fetchNote() {
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              obj3 = body(706);
+              obj3 = body(573);
               const obj4 = { type: "USER_NOTE_UPDATE", id: null };
               obj4[1] = callback;
               obj3.dispatch(obj4);
@@ -77,7 +77,7 @@ function _fetchNote() {
             } else {
               body = body.body;
               if (body.note_user_id === callback) {
-                obj = body(706);
+                obj = body(573);
                 const obj6 = { type: "USER_NOTE_UPDATE", id: null, note: null };
                 obj6[1] = callback;
                 obj6[2] = body.note;
@@ -115,7 +115,7 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 export default function useNote(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  let stateFromStores = _require(586).useStateFromStores(items, () => closure_1_5.getNote(closure_0));
+  let stateFromStores = _require(504).useStateFromStores(items, () => closure_1_5.getNote(closure_0));
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {

@@ -1,9 +1,9 @@
-// === Module 12403: useProvisionalAccountExplanationText ===
+// === Module 12629: useProvisionalAccountExplanationText ===
 
-// Module 12403 (useProvisionalAccountExplanationText)
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12404 */;
+// Module 12629 (useProvisionalAccountExplanationText)
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12630 */;
 import closure_3 from "noop" /* 19 */;
-import { HelpdeskArticles } from "ME" /* 673 */;
+import { HelpdeskArticles } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx");

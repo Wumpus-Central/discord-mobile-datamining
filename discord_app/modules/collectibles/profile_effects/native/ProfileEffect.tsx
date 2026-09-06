@@ -1,16 +1,16 @@
-// === Module 8527: StaticEffect ===
+// === Module 8801: StaticEffect ===
 
-// Module 8527 (StaticEffect)
-import initialize from "initialize" /* 586 */;
-import sortEffectLayers from "sortEffectLayers" /* 8528 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8535 */;
+// Module 8801 (StaticEffect)
+import initialize from "initialize" /* 504 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8226 */;
+import sortEffectLayers from "sortEffectLayers" /* 8802 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_8 from "getState" /* 7167 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_8 from "getState" /* 1895 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function StaticEffect(useThumbnail) {
@@ -31,7 +31,7 @@ function StaticEffect(useThumbnail) {
   let obj = thumbnailUrlOverride;
   ({ thumbnailPreviewSrc, accessibilityLabel } = profileEffect);
   [tmp3, c0] = callback(thumbnailUrlOverride.useState(0), 2);
-  const height = reducedMotionSrc(1492)().height;
+  const height = reducedMotionSrc(1477)().height;
   callback = thumbnailUrlOverride.useCallback((nativeEvent) => {
     memo(nativeEvent.nativeEvent.layout.width);
   }, []);
@@ -77,8 +77,8 @@ function StaticEffect(useThumbnail) {
     obj3[2] = 0 - bannerAdjustment;
     items1[1] = obj3;
     obj1[7] = items1;
-    obj[3] = tmp10(tmp4(5502), obj1);
-    const tmp4Result = tmp4(5502);
+    obj[3] = tmp10(tmp4(5587), obj1);
+    const tmp4Result = tmp4(5587);
   }
   return <closure_5 {...obj} />;
 }
@@ -112,7 +112,7 @@ function ProfileEffect(profileEffect) {
   memo = undefined;
   const tmp2 = ref(React.useState(0), 2);
   memo = tmp2[1];
-  const height = memo1(1492)().height;
+  const height = memo1(1477)().height;
   React = tmp2[0];
   accessibilityLabel = profileEffect.accessibilityLabel;
   let items = [profileEffect.effects];
@@ -141,7 +141,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = React.useRef(-memo(8529).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = React.useRef(-memo(8803).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(React.useState([]), 2);
   closure_12 = React.useRef([]);
   closure_13 = React.useRef(false);
@@ -157,7 +157,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(React.useState([]), 2);
-  const tmp9Result = memo1(8532)(React.useCallback((arg0) => {
+  const tmp9Result = memo1(8806)(React.useCallback((arg0) => {
     if (ref.current) {
       if (!ref4.current) {
         tmp.current = true;
@@ -184,7 +184,7 @@ function ProfileEffect(profileEffect) {
   }, items4));
   stop = tmp9Result.stop;
   reset = tmp9Result.reset;
-  let obj = memo(586);
+  let obj = memo(504);
   const items5 = [closure_8];
   stateFromStores = obj.useStateFromStores(items5, () => state.getState());
   closure_18 = React.useRef(null);

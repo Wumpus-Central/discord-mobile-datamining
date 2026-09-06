@@ -1,16 +1,16 @@
-// === Module 17455: MemberRow ===
+// === Module 17615: MemberRow ===
 
-// Module 17455 (MemberRow)
-import ThemesDefault from "Themes" /* 709 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4205 */;
-import FormCheckbox from "FormCheckbox" /* 7696 */;
-import memoResult1Default from "memoResult1" /* 10904 */;
+// Module 17615 (MemberRow)
+import ThemesDefault from "Themes" /* 576 */;
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
+import FormCheckbox from "FormCheckbox" /* 5617 */;
+import memoResult1Default from "memoResult1" /* 10942 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_BULK_ROLE_MEMBERS_ADD } from "title" /* 17449 */;
+import { MAX_BULK_ROLE_MEMBERS_ADD } from "title" /* 17609 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function MemberRow(arg0) {
@@ -85,7 +85,7 @@ class AddMembersBody {
     tmp10 = closure_9;
     tmp11 = closure_8;
     obj2 = { placeholder: null, tags: null, onChangeText: null, onRemove: null, autoFocus: null, inActionSheet: null };
-    tmp4Result = require("module_9742");
+    tmp4Result = require("module_9755");
     intl = require("getSystemLocale").intl;
     obj2[0] = intl.string(require("getSystemLocale").t.vMiCaQ);
     values = Object.values(pendingAdditions);

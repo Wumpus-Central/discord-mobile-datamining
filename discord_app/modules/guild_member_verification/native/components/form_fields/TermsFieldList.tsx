@@ -1,14 +1,14 @@
-// === Module 5565: TermsFieldListItem ===
+// === Module 5601: TermsFieldListItem ===
 
-// Module 5565 (TermsFieldListItem)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
-import Text from "Text" /* 4474 */;
+// Module 5601 (TermsFieldListItem)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
+import Text from "Text" /* 4556 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function TermsFieldListItem(rowNumber) {
@@ -49,9 +49,9 @@ export default function TermsFieldList(rules) {
   dependencyMap = tmp;
   let obj = { children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = rules(1233).intl;
-  obj[4] = intl.string(rules(1233).t.prJqwT);
-  let items = [callback(rules(4474).Text, obj), ];
+  const intl = rules(1114).intl;
+  obj[4] = intl.string(rules(1114).t.prJqwT);
+  let items = [callback(rules(4556).Text, obj), ];
   obj = {
     accessibilityRole: "list",
     children: rules.map((rule) => {

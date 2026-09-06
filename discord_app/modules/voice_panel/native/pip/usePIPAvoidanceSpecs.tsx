@@ -1,10 +1,10 @@
-// === Module 16926: usePIPAvoidanceSpecs ===
+// === Module 17090: usePIPAvoidanceSpecs ===
 
-// Module 16926 (usePIPAvoidanceSpecs)
+// Module 17090 (usePIPAvoidanceSpecs)
 import set from "set" /* 2 */;
-import VoicePanelControlsModes2 from "VoicePanelControlsModes" /* 12067 */;
-import VoicePanelModes2 from "VoicePanelModes" /* 12069 */;
-import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 12070 */;
+import VoicePanelControlsModes2 from "VoicePanelControlsModes" /* 12271 */;
+import VoicePanelModes2 from "VoicePanelModes" /* 12273 */;
+import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 12274 */;
 
 const VoicePanelModes = VoicePanelModes2.VoicePanelModes;
 const VoicePanelControlsModes = VoicePanelControlsModes2.VoicePanelControlsModes;

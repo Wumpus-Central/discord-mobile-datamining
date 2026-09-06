@@ -1,10 +1,10 @@
-// === Module 11305: makeClientVariant ===
+// === Module 11481: makeClientVariant ===
 
-// Module 11305 (makeClientVariant)
-import create from "create" /* 7647 */;
+// Module 11481 (makeClientVariant)
+import create from "create" /* 7893 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import closure_5 from "initialize" /* 1209 */;
+import closure_5 from "initialize" /* 1236 */;
 
 require = arg1;
 function makeClientVariant(id) {

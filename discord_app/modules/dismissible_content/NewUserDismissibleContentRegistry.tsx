@@ -1,20 +1,20 @@
-// === Module 4320: useNewUserDismissibleContent ===
+// === Module 4402: useNewUserDismissibleContent ===
 
-// Module 4320 (useNewUserDismissibleContent)
+// Module 4402 (useNewUserDismissibleContent)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import useDcfNewUserCooldown from "useDcfNewUserCooldown" /* 4321 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "set" /* 1376 */;
+import useDcfNewUserCooldown from "useDcfNewUserCooldown" /* 4403 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import closure_4 from "set" /* 1947 */;
 
 require = arg1;
-let closure_5 = { [arg1(1372).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0, [arg1(1372).DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0, [arg1(1372).DismissibleContent.SEEN_LAUNCH_WELCOME]: 0, [arg1(1372).DismissibleContent.SEEN_OLD_DESIGN]: 0, [arg1(1372).DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0, [arg1(1372).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0, [arg1(1372).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0, [arg1(1372).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0, [arg1(1372).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0, [arg1(1372).DismissibleContent.WHATS_NEW_SERVER_PROFILE_FLIP]: 0, [arg1(1372).DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE]: 0, [arg1(1372).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD]: 0, [arg1(1372).DismissibleContent.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0, [arg1(1372).DismissibleContent.TRIAL_NUX_EMOJI_BUTTON]: 0, [arg1(1372).DismissibleContent.TRIAL_NUX_EMOJI_PICKER]: 0, [arg1(1372).DismissibleContent.TRIAL_NUX_STREAM_COACH_MARK]: 0, [arg1(1372).DismissibleContent.OVERLAY_OOP_SETTINGS_NUX]: 0, [arg1(1372).DismissibleContent.OVERLAY_OOP_WELCOME_NUX]: 0, [arg1(1372).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0, [arg1(1372).DismissibleContent.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0, [arg1(1372).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0, [arg1(1372).DismissibleContent.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0, [arg1(1372).DismissibleContent.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0, [arg1(1372).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0, [arg1(1372).DismissibleContent.BOGO_2025_ANNOUNCEMENT_MODAL]: 0, [arg1(1372).DismissibleContent.NITRO_DROP_REWARD]: 0, [arg1(1372).DismissibleContent.BOUNTIES_SWIPE_UP_NUX]: 0 };
+let closure_5 = { [arg1(1943).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0, [arg1(1943).DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0, [arg1(1943).DismissibleContent.SEEN_LAUNCH_WELCOME]: 0, [arg1(1943).DismissibleContent.SEEN_OLD_DESIGN]: 0, [arg1(1943).DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0, [arg1(1943).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0, [arg1(1943).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0, [arg1(1943).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0, [arg1(1943).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0, [arg1(1943).DismissibleContent.WHATS_NEW_SERVER_PROFILE_FLIP]: 0, [arg1(1943).DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE]: 0, [arg1(1943).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD]: 0, [arg1(1943).DismissibleContent.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0, [arg1(1943).DismissibleContent.TRIAL_NUX_EMOJI_BUTTON]: 0, [arg1(1943).DismissibleContent.TRIAL_NUX_EMOJI_PICKER]: 0, [arg1(1943).DismissibleContent.TRIAL_NUX_STREAM_COACH_MARK]: 0, [arg1(1943).DismissibleContent.OVERLAY_OOP_SETTINGS_NUX]: 0, [arg1(1943).DismissibleContent.OVERLAY_OOP_WELCOME_NUX]: 0, [arg1(1943).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0, [arg1(1943).DismissibleContent.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0, [arg1(1943).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0, [arg1(1943).DismissibleContent.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0, [arg1(1943).DismissibleContent.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0, [arg1(1943).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0, [arg1(1943).DismissibleContent.BOGO_2025_ANNOUNCEMENT_MODAL]: 0, [arg1(1943).DismissibleContent.NITRO_DROP_REWARD]: 0, [arg1(1943).DismissibleContent.BOUNTIES_SWIPE_UP_NUX]: 0 };
 const result = require("set").fileFinishedImporting("modules/dismissible_content/NewUserDismissibleContentRegistry.tsx");
 
 export const useNewUserDismissibleContent = function useNewUserDismissibleContent(arr) {
-  _require = _require(4321).useDcfNewUserCooldown();
-  let obj = _require(4321);
+  _require = _require(4403).useDcfNewUserCooldown();
+  let obj = _require(4403);
   const items = [closure_3, closure_4];
-  const stateFromStoresObject = _require(644).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _require(563).useStateFromStoresObject(items, () => {
     obj = { userId: id.getId(), newUserMinAgeRequiredOverridden: obj.newUserMinAgeRequiredOverridden };
     return obj;
   });

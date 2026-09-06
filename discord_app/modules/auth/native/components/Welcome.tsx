@@ -1,30 +1,30 @@
-// === Module 15786: InviteCard ===
+// === Module 15948: InviteCard ===
 
-// Module 15786 (InviteCard)
+// Module 15948 (InviteCard)
 import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import Text from "Text" /* 4474 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7730 */;
-import renderDefault from "render" /* 12433 */;
-import registerAssetDefault from "registerAsset" /* 13119 */;
-import registerAsset from "registerAsset" /* 13840 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import Text from "Text" /* 4556 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
+import renderDefault from "render" /* 12659 */;
+import registerAssetDefault from "registerAsset" /* 13219 */;
+import registerAsset from "registerAsset" /* 13862 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "isUnderageAnonymous" /* 15787 */;
-import closure_8 from "getHash" /* 4391 */;
-import closure_9 from "handleGuildTemplateResolveSuccess" /* 7213 */;
-import closure_10 from "initialize" /* 12213 */;
-import closure_11 from "createdAt" /* 1934 */;
-import closure_12 from "updateInvite" /* 4462 */;
-import closure_13 from "getDisplayedInviteCode" /* 8884 */;
-import ME from "ME" /* 673 */;
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6180 */;
-import { InviteTypes } from "InviteSendStates" /* 7492 */;
+import closure_7 from "isUnderageAnonymous" /* 15949 */;
+import closure_8 from "getHash" /* 4476 */;
+import closure_9 from "handleGuildTemplateResolveSuccess" /* 7457 */;
+import closure_10 from "initialize" /* 12413 */;
+import closure_11 from "createdAt" /* 1385 */;
+import closure_12 from "updateInvite" /* 4544 */;
+import closure_13 from "getDisplayedInviteCode" /* 8739 */;
+import ME from "ME" /* 1074 */;
+import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7326 */;
+import { InviteTypes } from "InviteSendStates" /* 7736 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function InviteCard(invite) {
@@ -45,7 +45,7 @@ function InviteCard(invite) {
       let tmp18 = callback;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "a" };
       const tmp12 = new closure_11(inviter);
       obj[0] = tmp12;
       tmp14 = callback(Button.Avatar, obj);
@@ -58,7 +58,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "a" };
       const tmp33 = new closure_11(inviter);
       obj[0] = tmp33;
       const intl3 = getSystemLocale.intl;
@@ -78,10 +78,10 @@ function InviteCard(invite) {
     obj2[0] = tmp.text;
     const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: null };
     obj3[2] = stringResult;
-    const items2 = [tmp18(tmp17(4474).Text, obj3), ];
+    const items2 = [tmp18(tmp17(4556).Text, obj3), ];
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[2] = name;
-    items2[1] = tmp18(tmp17(4474).Text, obj4);
+    items2[1] = tmp18(tmp17(4556).Text, obj4);
     obj2[1] = items2;
     items1[1] = callback2(closure_4, obj2);
     obj1[1] = items1;
@@ -124,7 +124,7 @@ function Centerpiece(inlineButtons) {
     num = 1;
   }
   obj1[1] = num;
-  const intl = tmp4(1233).intl;
+  const intl = tmp4(1114).intl;
   obj1[5] = intl.string(getSystemLocale.t["3S2xmm"]);
   const items2 = [callback(Text.Heading, obj1), , , ];
   const items3 = [tmp3.subHeader, ];
@@ -135,7 +135,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: items3, maxFontSizeMultiplier: 3, children: null };
   items3[1] = subHeaderWithInvite;
-  const intl2 = tmp4(1233).intl;
+  const intl2 = tmp4(1114).intl;
   obj2[4] = intl2.string(getSystemLocale.t.Gtcthl);
   items2[1] = callback(Text.Text, obj2);
   let tmp9Result = null;

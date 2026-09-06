@@ -1,6 +1,6 @@
-// === Module 9773: ThrottledButton ===
+// === Module 9777: ThrottledButton ===
 
-// Module 9773 (ThrottledButton)
+// Module 9777 (ThrottledButton)
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -65,7 +65,7 @@ export default function ThrottledButton(throttleMs) {
       }, closure_0);
     }
   };
-  return jsx(onPressOut(4929).Button, {});
+  return jsx(onPressOut(4975).Button, {});
 };
 export const useThrottledActionHandler = function useThrottledActionHandler() {
   let num = arg0;

@@ -1,24 +1,24 @@
-// === Module 17655: log ===
+// === Module 17815: log ===
 
-// Module 17655 (log)
-import privDefault from "priv" /* 1400 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import useAlertStore2 from "useAlertStore" /* 4860 */;
-import initializeDefault from "initialize" /* 5495 */;
-import getQuestLogger from "getQuestLogger" /* 7465 */;
+// Module 17815 (log)
+import privDefault from "priv" /* 1437 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
+import useAlertStore2 from "useAlertStore" /* 4906 */;
+import initializeDefault from "initialize" /* 7118 */;
+import getQuestLogger from "getQuestLogger" /* 7709 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "setContent" /* 4186 */;
-import closure_6 from "getParticipants" /* 4494 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 7631 */;
-import closure_9 from "withEqualityFn" /* 4729 */;
-import { isTextChannel } from "createChannelRecord" /* 1390 */;
-import closure_11 from "ensureGuildLoaded" /* 1386 */;
-import closure_12 from "handleConnectionOpen" /* 1980 */;
-import closure_13 from "getAlert" /* 11370 */;
-import closure_14 from "getState" /* 7167 */;
-import closure_15 from "initializeState" /* 7459 */;
-import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_16 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9020 */;
-import { MessageStates } from "ME" /* 673 */;
+import closure_5 from "setContent" /* 4251 */;
+import closure_6 from "getParticipants" /* 4576 */;
+import useChannelDetailsStore from "useChannelDetailsStore" /* 7876 */;
+import closure_9 from "withEqualityFn" /* 4768 */;
+import { isTextChannel } from "createChannelRecord" /* 1961 */;
+import closure_11 from "ensureGuildLoaded" /* 1957 */;
+import closure_12 from "handleConnectionOpen" /* 2011 */;
+import closure_13 from "getAlert" /* 11545 */;
+import closure_14 from "getState" /* 1895 */;
+import closure_15 from "initializeState" /* 7703 */;
+import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_16 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 11196 */;
+import { MessageStates } from "ME" /* 1074 */;
 
 require = arg1;
 ({ useChannelDetailsStore: error, getIsChannelDetailsSearchActive: closure_8 } = useChannelDetailsStore);
@@ -231,8 +231,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(10198).isChannelFocused();
-      applyArgumentsResult(4332);
+      let isChannelFocusedResult = applyArgumentsResult(10089).isChannelFocused();
+      applyArgumentsResult(4417);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

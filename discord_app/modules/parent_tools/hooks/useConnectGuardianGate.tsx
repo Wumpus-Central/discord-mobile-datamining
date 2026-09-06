@@ -1,11 +1,11 @@
-// === Module 17289: useConnectGuardianGate ===
+// === Module 17455: useConnectGuardianGate ===
 
-// Module 17289 (useConnectGuardianGate)
-import initialize from "initialize" /* 586 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4946 */;
+// Module 17455 (useConnectGuardianGate)
+import initialize from "initialize" /* 504 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7292 */;
+import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");

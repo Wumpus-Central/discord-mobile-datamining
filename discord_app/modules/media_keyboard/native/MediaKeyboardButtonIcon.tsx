@@ -1,9 +1,9 @@
-// === Module 12036: MediaKeyboardButtonIcon ===
+// === Module 12240: MediaKeyboardButtonIcon ===
 
-// Module 12036 (MediaKeyboardButtonIcon)
+// Module 12240 (MediaKeyboardButtonIcon)
 import noopAll from "noop" /* 19 */;
-import _modDef4217 from "module_4217" /* 4217 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4342 */;
+import _modDef4296 from "module_4296" /* 4296 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4427 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -19,7 +19,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     const merged = Object.assign(arg0, undefined);
     const tmp6 = useKeyboardTypeDefault();
     _require = tmp6;
-    let obj = _require(4217);
+    let obj = _require(4296);
     const fn = function s() {
       const tmp = callback;
       const tmp4 = callback === callback(closure_1_2[4]).KeyboardTypes.MEDIA || callback === callback(closure_1_2[4]).KeyboardTypes.APP_LAUNCHER;
@@ -35,9 +35,9 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     };
     obj = { keyboard: null, KeyboardTypes: null, withTiming: null, timingStandard: null };
     obj[0] = tmp6;
-    obj[1] = _require(1625).KeyboardTypes;
-    obj[2] = _require(4479).withTiming;
-    obj[3] = _require(4482).timingStandard;
+    obj[1] = _require(1609).KeyboardTypes;
+    obj[2] = _require(4561).withTiming;
+    obj[3] = _require(4564).timingStandard;
     fn.__closure = obj;
     fn.__workletHash = 10698563185643;
     fn.__initData = closure_4;
@@ -46,7 +46,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj[0] = animatedStyle;
     obj1 = {};
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(_require(10913).PlusLargeIcon, {});
-    return jsx(_modDef4217.View, { style: null, children: null });
+    obj[1] = jsx(_require(10951).PlusLargeIcon, {});
+    return jsx(_modDef4296.View, { style: null, children: null });
   }
 };

@@ -1,12 +1,12 @@
-// === Module 15615: UserSettingsDesignSystemSegmentedControl ===
+// === Module 15773: UserSettingsDesignSystemSegmentedControl ===
 
-// Module 15615 (UserSettingsDesignSystemSegmentedControl)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 15773 (UserSettingsDesignSystemSegmentedControl)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
@@ -60,7 +60,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     }
     return items;
   }, items);
-  let obj = first(9277);
+  let obj = first(9792);
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp[0], defaultIndex: 1 });
   obj = { children: null };
   obj = {
@@ -71,10 +71,10 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     children: null
   };
   obj1 = { spacing: 24, children: null };
-  let items1 = [callback3(first(9788).SegmentedControl, { state: segmentedControlState }), callback3(first(9285).SegmentedControlPages, { state: segmentedControlState }), ];
+  let items1 = [callback3(first(9793).SegmentedControl, { state: segmentedControlState }), callback3(first(12616).SegmentedControlPages, { state: segmentedControlState }), ];
   const obj2 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [
-    callback3(first(4929).Button, {
+    callback3(first(4975).Button, {
       text: "Add Tab",
       variant: "active",
       size: "sm",
@@ -86,7 +86,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         AccessibilityAnnouncer.announce("Tab added, " + sum + " tabs", "polite");
       }
     }),
-    callback3(first(4929).Button, {
+    callback3(first(4975).Button, {
       text: "Remove Tab",
       variant: "destructive",
       size: "sm",
@@ -100,9 +100,9 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     })
   ];
   obj2[2] = items2;
-  items1[2] = callback2(first(4927).Stack, obj2);
+  items1[2] = callback2(first(4973).Stack, obj2);
   obj1[1] = items1;
-  obj[2] = callback2(first(4927).Stack, obj1);
+  obj[2] = callback2(first(4973).Stack, obj1);
   obj[0] = callback3(closure_4, obj);
   return callback3(closure_5, obj);
 };

@@ -1,13 +1,13 @@
-// === Module 11983: AppLauncherUserOption ===
+// === Module 12184: AppLauncherUserOption ===
 
-// Module 11983 (AppLauncherUserOption)
-import ThemesDefault from "Themes" /* 709 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 11975 */;
+// Module 12184 (AppLauncherUserOption)
+import ThemesDefault from "Themes" /* 576 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12176 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 createCacheKey = { iconWrapper: null };
@@ -24,7 +24,7 @@ export default function AppLauncherUserOption(option) {
   let callback2;
   ({ style, autoFocus, hasError } = option);
   const guild_id = channel.guild_id;
-  let obj = option(586);
+  let obj = option(504);
   const items = [onPress];
   const stateFromStores = obj.useStateFromStores(items, () => onPress.useReducedMotion);
   const tmp = callback2();
@@ -85,27 +85,27 @@ export default function AppLauncherUserOption(option) {
     obj[0] = tmp8;
     obj[1] = guild_id;
     obj[2] = !stateFromStores;
-    obj[3] = tmp2(1296).AvatarSizes.REFRESH_MEDIUM_32;
-    let tmp9Result = tmp9(tmp2(1296).Avatar, obj);
+    obj[3] = tmp2(1178).AvatarSizes.REFRESH_MEDIUM_32;
+    let tmp9Result = tmp9(tmp2(1178).Avatar, obj);
   } else {
     obj1 = { icon: null, wrapperStyle: null };
-    obj1[0] = tmp9(tmp2(10880).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+    obj1[0] = tmp9(tmp2(10917).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
     obj1[1] = tmp.iconWrapper;
-    tmp9Result = tmp9(tmp10(11978), obj1);
-    const tmp10Result = tmp10(11978);
+    tmp9Result = tmp9(tmp10(12179), obj1);
+    const tmp10Result = tmp10(12179);
   }
   obj[5] = tmp9Result;
   if (null != tmp8) {
     let obj2 = { guildId: null, user: null };
     obj2[0] = guild_id;
     obj2[1] = tmp8;
-    tmp9Result = tmp9(tmp10(11981), obj2);
+    tmp9Result = tmp9(tmp10(12182), obj2);
   } else {
     tmp9Result = null;
     if (null != tmp6) {
       const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
       obj3[2] = tmp6;
-      tmp9Result = tmp9(tmp2(4474).Text, obj3);
+      tmp9Result = tmp9(tmp2(4556).Text, obj3);
     }
   }
   obj[6] = tmp9Result;

@@ -1,18 +1,18 @@
-// === Module 15869: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
+// === Module 16031: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
 
-// Module 15869 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 16031 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
+import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4569 */;
-import closure_6 from "generateOldThreadCutoff" /* 4493 */;
-import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "handleConnectionOpen" /* 1980 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import { ActivityTypes } from "ME" /* 673 */;
+import closure_5 from "sortActivity" /* 4600 */;
+import closure_6 from "generateOldThreadCutoff" /* 4575 */;
+import closure_7 from "markAllUserIdListsStale" /* 4209 */;
+import closure_8 from "handleConnectionOpen" /* 2011 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
+import { ActivityTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -75,7 +75,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = store.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "Array", activities: "PX_16" };
+      obj = { status: "hash", activities: "call" };
     }
     return obj;
   });

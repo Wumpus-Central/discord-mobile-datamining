@@ -1,17 +1,17 @@
-// === Module 12782: NameplateUser ===
+// === Module 13140: NameplateUser ===
 
-// Module 12782 (NameplateUser)
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import getNameplateData from "getNameplateData" /* 1946 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
-import TableRowInner from "TableRowInner" /* 5608 */;
-import firstAvatarDecoration from "firstAvatarDecoration" /* 8510 */;
+// Module 13140 (NameplateUser)
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import getNameplateData from "getNameplateData" /* 1886 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import TableRowInner from "TableRowInner" /* 5605 */;
+import firstAvatarDecoration from "firstAvatarDecoration" /* 8171 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function NameplateUser(arg0) {
@@ -47,7 +47,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = React.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "onAnimationFailureCapture", autoStatusCutout: "onAnimationFailure", "aria-hidden": "onAnimationLoadedCapture" };
+    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "unmarkNodeAsRemovable", autoStatusCutout: null, "aria-hidden": true };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
     obj[3] = closure_1;
     obj[4] = !stateFromStores;
@@ -97,10 +97,10 @@ export default function NameplateProductPreview(product) {
   if (null != nameplateData) {
     obj = { style: null, pointerEvents: "box-none", accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
     obj[0] = tmp.container;
-    const intl = tmp2(1233).intl;
+    const intl = tmp2(1114).intl;
     obj = { a11y_text: null };
     obj[0] = nameplateData.imgAlt;
-    obj[2] = intl.formatToPlainString(tmp2(1233).t.YJig7C, obj);
+    obj[2] = intl.formatToPlainString(tmp2(1114).t.YJig7C, obj);
     obj1 = { style: null, children: null };
     obj1[0] = tmp.memberListContainer;
     obj2 = { user: null, end: true };
@@ -108,10 +108,10 @@ export default function NameplateProductPreview(product) {
     const items = [callback(PlaceholderUser, obj2), , , , , , ];
     const obj3 = { maxFontSizeMultiplier: 2, variant: "text-sm/semibold", accessibilityRole: "header", color: "interactive-text-default", style: null, children: null };
     obj3[4] = tmp.memberListTitle;
-    const intl2 = tmp2(1233).intl;
-    const items1 = [intl2.string(tmp2(1233).t["yzW/fZ"]), " \u2014 3"];
+    const intl2 = tmp2(1114).intl;
+    const items1 = [intl2.string(tmp2(1114).t["yzW/fZ"]), " \u2014 3"];
     obj3[5] = items1;
-    items[1] = callback2(tmp2(4474).Text, obj3);
+    items[1] = callback2(tmp2(4556).Text, obj3);
     const obj4 = { user: null, start: true };
     obj4[0] = nameplateSampleUsers.phibi;
     items[2] = callback(PlaceholderUser, obj4);
@@ -124,10 +124,10 @@ export default function NameplateProductPreview(product) {
     items[4] = callback(PlaceholderUser, obj6);
     const obj7 = { maxFontSizeMultiplier: 2, variant: "text-sm/semibold", accessibilityRole: "header", color: "interactive-text-default", style: null, children: null };
     obj7[4] = tmp.memberListTitle;
-    const intl3 = tmp2(1233).intl;
-    const items2 = [intl3.string(tmp2(1233).t["NG43/6"]), " \u2014 12"];
+    const intl3 = tmp2(1114).intl;
+    const items2 = [intl3.string(tmp2(1114).t["NG43/6"]), " \u2014 12"];
     obj7[5] = items2;
-    items[5] = callback2(tmp2(4474).Text, obj7);
+    items[5] = callback2(tmp2(4556).Text, obj7);
     const obj8 = { user: null, start: true };
     obj8[0] = nameplateSampleUsers.boom;
     items[6] = callback(PlaceholderUser, obj8);

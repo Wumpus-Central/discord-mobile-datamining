@@ -1,10 +1,10 @@
-// === Module 6541: ExperimentalDuckTypingBubbleAbstractUI ===
+// === Module 5975: ExperimentalDuckTypingBubbleAbstractUI ===
 
-// Module 6541 (ExperimentalDuckTypingBubbleAbstractUI)
+// Module 5975 (ExperimentalDuckTypingBubbleAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6542 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5976 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ExperimentalDuckTypingBubbleAbstractUI.native.tsx");

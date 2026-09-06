@@ -1,12 +1,12 @@
-// === Module 10339: PromoSheet ===
+// === Module 10230: PromoSheet ===
 
-// Module 10339 (PromoSheet)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 10230 (PromoSheet)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 let closure_3 = ["title", "description", "illustration", "graphic", "gradientColor", "actions"];
@@ -38,7 +38,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(graphic);
     obj.style = tmp2.graphic;
-    let tmp4Result = tmp4(tmp5(9001).Graphic, obj);
+    let tmp4Result = tmp4(tmp5(10232).Graphic, obj);
   } else {
     tmp4Result = null;
     if (null != illustration) {
@@ -49,19 +49,19 @@ export const PromoSheet = function PromoSheet(arg0) {
     }
   }
   const items1 = [tmp4Result, , ];
-  const items2 = [closure_7(gradientColor(4474).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
+  const items2 = [closure_7(gradientColor(4556).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
   tmp4Result = null;
   if (null != description) {
     const obj2 = { variant: "redesign/heading-18/medium", color: "text-subtle", style: null, children: null };
     obj2[2] = tmp2.description;
     obj2[3] = description;
-    tmp4Result = tmp4(tmp5(4474).Text, obj2);
+    tmp4Result = tmp4(tmp5(4556).Text, obj2);
   }
   const obj3 = { spacing: 24, children: null };
   items2[1] = tmp4Result;
-  items1[1] = closure_8(gradientColor(4927).Stack, { children: items2 });
+  items1[1] = closure_8(gradientColor(4973).Stack, { children: items2 });
   items1[2] = actions;
   obj3[1] = items1;
-  obj.children = closure_8(gradientColor(4927).Stack, obj3);
-  return closure_7(gradientColor(5631).BottomSheet, obj);
+  obj.children = closure_8(gradientColor(4973).Stack, obj3);
+  return closure_7(gradientColor(7150).BottomSheet, obj);
 };

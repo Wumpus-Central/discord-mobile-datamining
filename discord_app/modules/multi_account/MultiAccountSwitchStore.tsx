@@ -1,14 +1,14 @@
-// === Module 13612: initialize ===
+// === Module 13629: initialize ===
 
-// Module 13612 (initialize)
+// Module 13629 (initialize)
 import timestampDefault from "timestamp" /* 3 */;
 import createFastConnectSocket from "createFastConnectSocket" /* 15 */;
-import initializeDefault from "initialize" /* 586 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 704 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_4 from "initialize" /* 12213 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setSecondaryTokenAll from "setSecondaryToken" /* 1099 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import closure_4 from "initialize" /* 12413 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 let closure_6 = new timestampDefault("MultiAccountSwitchStore");
@@ -32,6 +32,9 @@ prototype["getIsSwitchingAccount"] = function getIsSwitchingAccount() {
 };
 prototype["getSwitchResult"] = function getSwitchResult() {
   return c14;
+};
+prototype["getTargetUserId"] = function getTargetUserId() {
+  return c9;
 };
 MultiAccountSwitchStore.displayName = "MultiAccountSwitchStore";
 const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
@@ -101,8 +104,8 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
           obj.is_token_mismatch = tmp10;
           obj.is_user_mismatch = tmp8;
           logger.log("Token mismatch on account switch connection open", obj);
-          map(695).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, obj);
-          const obj6 = map(695);
+          map(1242).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, obj);
+          const obj6 = map(1242);
         }
       }
       let tmp26 = c8 !== user.id;
@@ -115,7 +118,7 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
       obj1[4] = users1.map((id) => id.id);
       obj1[5] = c12;
       obj1[6] = c10;
-      let tmp35 = map(695);
+      let tmp35 = map(1242);
       const track = tmp35.track;
       let obj2 = AnalyticEvents;
       if (tmp26) {
@@ -171,7 +174,7 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
             return tmp;
           });
           if (0 !== found.length) {
-            let tmp41Result = tmp41(704);
+            let tmp41Result = tmp41(1099);
             let tmp46 = tmp41Result.getToken(id2) === token2;
             let obj3 = {};
             obj4 = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
@@ -192,12 +195,12 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
             logger.log("setToken about to introduce per-user token collision", obj3);
             const obj17 = id(15);
             tmp60 = found.length >= 2;
-            map(695).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, obj3);
-            const obj12 = map(695);
+            map(1242).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, obj3);
+            const obj12 = map(1242);
           }
           obj11 = authStore;
         }
-        tmp41Result = tmp41(704);
+        tmp41Result = tmp41(1099);
         tmp41Result.setToken(token2, user.id);
       }
       id = user.id;
@@ -254,6 +257,17 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
       c12 = true;
       id = user.id;
     }
+  },
+  CONNECTION_CLOSED: function handleConnectionClosed(code) {
+    if (40004 === code.code) {
+      if (c11) {
+        c8 = null;
+        c9 = null;
+        c10 = null;
+        c13 = false;
+      }
+    }
+    return false;
   }
 });
 let obj = {
@@ -323,8 +337,8 @@ let obj = {
           obj.is_token_mismatch = tmp10;
           obj.is_user_mismatch = tmp8;
           logger.log("Token mismatch on account switch connection open", obj);
-          map(695).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, obj);
-          const obj6 = map(695);
+          map(1242).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, obj);
+          const obj6 = map(1242);
         }
       }
       let tmp26 = c8 !== user.id;
@@ -337,7 +351,7 @@ let obj = {
       obj1[4] = users1.map((id) => id.id);
       obj1[5] = c12;
       obj1[6] = c10;
-      let tmp35 = map(695);
+      let tmp35 = map(1242);
       const track = tmp35.track;
       let obj2 = AnalyticEvents;
       if (tmp26) {
@@ -393,7 +407,7 @@ let obj = {
             return tmp;
           });
           if (0 !== found.length) {
-            let tmp41Result = tmp41(704);
+            let tmp41Result = tmp41(1099);
             let tmp46 = tmp41Result.getToken(id2) === token2;
             let obj3 = {};
             obj4 = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
@@ -414,12 +428,12 @@ let obj = {
             logger.log("setToken about to introduce per-user token collision", obj3);
             const obj17 = id(15);
             tmp60 = found.length >= 2;
-            map(695).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, obj3);
-            const obj12 = map(695);
+            map(1242).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, obj3);
+            const obj12 = map(1242);
           }
           obj11 = authStore;
         }
-        tmp41Result = tmp41(704);
+        tmp41Result = tmp41(1099);
         tmp41Result.setToken(token2, user.id);
       }
       id = user.id;
@@ -476,6 +490,17 @@ let obj = {
       c12 = true;
       id = user.id;
     }
+  },
+  CONNECTION_CLOSED: function handleConnectionClosed(code) {
+    if (40004 === code.code) {
+      if (c11) {
+        c8 = null;
+        c9 = null;
+        c10 = null;
+        c13 = false;
+      }
+    }
+    return false;
   }
 };
 const tmp2 = new timestampDefault("MultiAccountSwitchStore");

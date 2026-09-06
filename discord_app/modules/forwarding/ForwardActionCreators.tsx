@@ -1,13 +1,13 @@
-// === Module 11498: ? ===
+// === Module 11687: ? ===
 
-// Module 11498
-import allSettledDefault from "allSettled" /* 4757 */;
+// Module 11687
+import allSettledDefault from "allSettled" /* 4803 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
-import { MessageFlags } from "ME" /* 673 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
+import { MessageFlags } from "ME" /* 1074 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
 
 const require = arg1;
 let obj = {
@@ -53,7 +53,7 @@ let obj = {
                 prop = tmp74.isICYMIGameContentForwarding;
               }
               if (prop) {
-                let guild_id = closure_1_0(8638).GAME_CONTENT_GUILD_ID;
+                let guild_id = closure_1_0(8348).GAME_CONTENT_GUILD_ID;
               } else if (channel1 != null) {
                 guild_id = channel1.guild_id;
               }
@@ -69,11 +69,11 @@ let obj = {
                 const error1 = new Error("Unable to find destination channel for message");
                 throw error1;
               } else {
-                const parsed = closure_1_1(7437).parse(channel, "");
+                const parsed = closure_1_1(7682).parse(channel, "");
                 obj1 = { guild_id: null, channel_id: null, message_id: null, type: null, forward_only: null };
                 obj1[0] = guild_id;
                 ({ channel_id: obj16[1], id: obj16[2] } = tmp72);
-                obj1[3] = closure_1_0(691).MessageReferenceTypes.FORWARD;
+                obj1[3] = closure_1_0(1096).MessageReferenceTypes.FORWARD;
                 let onlyAttachmentIds;
                 if (tmp74 != null) {
                   onlyAttachmentIds = tmp74.onlyAttachmentIds;
@@ -97,17 +97,17 @@ let obj = {
                 dependencyMap = withMessage;
                 let num9 = 0;
                 if (null != withMessage) {
-                  const tmp39 = v0(closure_1_1(7439)(withMessage), 2);
+                  const tmp39 = v0(closure_1_1(7684)(withMessage), 2);
                   num9 = 0;
                   if (tmp39[0]) {
                     dependencyMap = tmp39[1];
-                    const addFlagResult = closure_1_0(1398).addFlag(0, closure_1_7.SUPPRESS_NOTIFICATIONS);
+                    const addFlagResult = closure_1_0(1384).addFlag(0, closure_1_7.SUPPRESS_NOTIFICATIONS);
                     c1 = addFlagResult;
                     num9 = addFlagResult;
-                    const obj9 = closure_1_0(1398);
+                    const obj9 = closure_1_0(1384);
                   }
                 }
-                const obj10 = closure_1_1(7211);
+                const obj10 = closure_1_1(7456);
                 let obj3 = { messageReference: null, location: null, eagerDispatch: false, flags: null };
                 obj3[0] = obj1;
                 obj3[1] = closure_1_8.FORWARDING;
@@ -136,13 +136,13 @@ let obj = {
                   result = "" === dependencyMap;
                 }
                 if (!result) {
-                  obj1 = closure_1_0(11495);
+                  obj1 = closure_1_0(11684);
                   result = obj1.isRatelimitedInChannel(channel, closure_1_6);
                 }
                 if (!result) {
-                  obj2 = closure_1_1(7211);
+                  obj2 = closure_1_1(7456);
                   const id = channel.id;
-                  obj3 = closure_1_1(7437);
+                  obj3 = closure_1_1(7682);
                   const obj6 = { location: null, flags: null };
                   obj6[0] = closure_1_8.FORWARDING;
                   obj6[1] = c1;

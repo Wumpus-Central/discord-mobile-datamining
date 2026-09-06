@@ -1,7 +1,7 @@
-// === Module 4485: remapTypographyVariant ===
+// === Module 4567: remapTypographyVariant ===
 
-// Module 4485 (remapTypographyVariant)
-import map from "map" /* 4486 */;
+// Module 4567 (remapTypographyVariant)
+import map from "map" /* 4568 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 7506: _getDeviceState ===
+// === Module 7750: _getDeviceState ===
 
-// Module 7506 (_getDeviceState)
+// Module 7750 (_getDeviceState)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;

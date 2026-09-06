@@ -1,9 +1,9 @@
-// === Module 7883: formatUsernameOnClick ===
+// === Module 7962: formatUsernameOnClick ===
 
-// Module 7883 (formatUsernameOnClick)
-import processColorStrings from "processColorStrings" /* 7882 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7884 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
+// Module 7962 (formatUsernameOnClick)
+import processColorStrings from "processColorStrings" /* 7961 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7963 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");

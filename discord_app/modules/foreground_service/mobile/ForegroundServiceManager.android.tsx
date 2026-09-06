@@ -1,10 +1,10 @@
-// === Module 7512: initialize ===
+// === Module 7756: initialize ===
 
-// Module 7512 (initialize)
+// Module 7756 (initialize)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import setRequestedByAll from "setRequestedBy" /* 672 */;
-import initializeDefault from "initialize" /* 4662 */;
+import initializeDefault from "initialize" /* 1898 */;
+import setRequestedByAll from "setRequestedBy" /* 7757 */;
 
 let obj = importDefault;
 const NativeModules = get_ActivityIndicator.NativeModules;
@@ -74,7 +74,7 @@ prototype["updateServiceHandler"] = function updateServiceHandler(arg0, usesGate
       const result = serviceNotifications.set(arg0, usesGateway);
       self.handleChange();
     }
-    tmp16 = obj(656);
+    tmp16 = obj(1332);
   }
 };
 prototype["removeServiceHandler"] = function removeServiceHandler(arg0) {

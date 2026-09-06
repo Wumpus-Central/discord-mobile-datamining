@@ -1,12 +1,12 @@
-// === Module 12395: isMessagePreviewEnabledForChannel ===
+// === Module 12595: isMessagePreviewEnabledForChannel ===
 
-// Module 12395 (isMessagePreviewEnabledForChannel)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
-import closure_3 from "processChannel" /* 6075 */;
-import closure_4 from "processChannel" /* 6076 */;
+// Module 12595 (isMessagePreviewEnabledForChannel)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import closure_3 from "processChannel" /* 7219 */;
+import closure_4 from "processChannel" /* 7220 */;
 import set from "set" /* 2 */;
 
 require = arg1;

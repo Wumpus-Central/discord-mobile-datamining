@@ -1,6 +1,6 @@
-// === Module 13364: useScheduledForcedUpdate ===
+// === Module 13470: useScheduledForcedUpdate ===
 
-// Module 13364 (useScheduledForcedUpdate)
+// Module 13470 (useScheduledForcedUpdate)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

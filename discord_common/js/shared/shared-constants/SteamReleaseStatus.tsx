@@ -1,6 +1,6 @@
-// === Module 8836: SteamReleaseStatus ===
+// === Module 8691: SteamReleaseStatus ===
 
-// Module 8836 (SteamReleaseStatus)
+// Module 8691 (SteamReleaseStatus)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/SteamReleaseStatus.tsx");

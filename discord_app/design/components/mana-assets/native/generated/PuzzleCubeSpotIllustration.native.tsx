@@ -1,10 +1,10 @@
-// === Module 6937: PuzzleCubeSpotIllustration ===
+// === Module 6373: PuzzleCubeSpotIllustration ===
 
-// Module 6937 (PuzzleCubeSpotIllustration)
+// Module 6373 (PuzzleCubeSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6938 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6374 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PuzzleCubeSpotIllustration.native.tsx");

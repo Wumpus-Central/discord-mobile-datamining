@@ -1,8 +1,8 @@
-// === Module 7864: useIsFirstMessageInMediaPost ===
+// === Module 7943: useIsFirstMessageInMediaPost ===
 
-// Module 7864 (useIsFirstMessageInMediaPost)
+// Module 7943 (useIsFirstMessageInMediaPost)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_channel/useIsFirstMessageInMediaPost.tsx");
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/media_channel/useIs
 export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPost(arg0) {
   const _require = arg0;
   const items = [arg0];
-  return _require(644).useStateFromStores([], () => {
+  return _require(563).useStateFromStores([], () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       const channel_id = tmp.channel_id;

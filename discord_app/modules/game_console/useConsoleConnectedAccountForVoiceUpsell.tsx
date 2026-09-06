@@ -1,18 +1,18 @@
-// === Module 16959: useConsoleConnectedAccountForVoiceUpsell ===
+// === Module 17123: useConsoleConnectedAccountForVoiceUpsell ===
 
-// Module 16959 (useConsoleConnectedAccountForVoiceUpsell)
-import closure_3 from "set" /* 5234 */;
-import closure_4 from "filterPlayingActivities" /* 5232 */;
-import closure_5 from "set" /* 4495 */;
-import { CONSOLE_VOICE_PLATFORMS } from "XBOX_URL_BASE" /* 9330 */;
-import { ActivityTypes } from "ME" /* 673 */;
+// Module 17123 (useConsoleConnectedAccountForVoiceUpsell)
+import closure_3 from "set" /* 5281 */;
+import closure_4 from "filterPlayingActivities" /* 5279 */;
+import closure_5 from "set" /* 4577 */;
+import { CONSOLE_VOICE_PLATFORMS } from "XBOX_URL_BASE" /* 9233 */;
+import { ActivityTypes } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");
 
 export default function useConsoleConnectedAccountForVoiceUpsell() {
   const items = [closure_4];
-  const stateFromStores = found(586).useStateFromStores(items, () => activities.getActivities(true));
+  const stateFromStores = found(504).useStateFromStores(items, () => activities.getActivities(true));
   found = stateFromStores.filter((platform) => {
     platform = platform.platform;
     let hasItem = platform.type === constants.PLAYING;
@@ -24,12 +24,12 @@ export default function useConsoleConnectedAccountForVoiceUpsell() {
     }
     return hasItem;
   });
-  const obj = found(586);
+  const obj = found(504);
   const items1 = [closure_5];
-  const stateFromStores1 = found(586).useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo() || null != awaitingRemoteSessionInfo.getRemoteSessionId());
-  const obj2 = found(586);
+  const stateFromStores1 = found(504).useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo() || null != awaitingRemoteSessionInfo.getRemoteSessionId());
+  const obj2 = found(504);
   const items2 = [closure_3];
-  const stateFromStores2 = found(586).useStateFromStores(items2, () => {
+  const stateFromStores2 = found(504).useStateFromStores(items2, () => {
     const mapped = found.map((platform) => {
       platform = platform.platform;
       if (null == platform) {

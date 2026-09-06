@@ -1,12 +1,12 @@
-// === Module 14048: ContextMenuItem ===
+// === Module 14166: ContextMenuItem ===
 
-// Module 14048 (ContextMenuItem)
-import ThemesDefault from "Themes" /* 709 */;
-import CONTEXT_MENU_LONG_PRESS_DURATION_MS from "CONTEXT_MENU_LONG_PRESS_DURATION_MS" /* 8813 */;
+// Module 14166 (ContextMenuItem)
+import ThemesDefault from "Themes" /* 576 */;
+import CONTEXT_MENU_LONG_PRESS_DURATION_MS from "CONTEXT_MENU_LONG_PRESS_DURATION_MS" /* 8668 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "module_4217" /* 4217 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import importDefaultResult from "module_4296" /* 4296 */;
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -24,9 +24,9 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
   const obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
   if ("destructive" === arg0) {
-    let TEXT_STRONG = tmp2(709).colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_STRONG = tmp2(576).colors.TEXT_FEEDBACK_CRITICAL;
   } else {
-    TEXT_STRONG = tmp2(709).colors.TEXT_STRONG;
+    TEXT_STRONG = tmp2(576).colors.TEXT_STRONG;
   }
   obj[6] = { width: 20, height: 20, tintColor: TEXT_STRONG };
   obj[7] = { flexShrink: 1 };

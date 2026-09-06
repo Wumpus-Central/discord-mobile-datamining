@@ -1,10 +1,10 @@
-// === Module 6453: D20SpotIllustration ===
+// === Module 5885: D20SpotIllustration ===
 
-// Module 6453 (D20SpotIllustration)
+// Module 5885 (D20SpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6454 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5886 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/D20SpotIllustration.native.tsx");

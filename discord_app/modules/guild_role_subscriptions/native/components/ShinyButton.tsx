@@ -1,12 +1,12 @@
-// === Module 9156: ShinyButton ===
+// === Module 10301: ShinyButton ===
 
-// Module 9156 (ShinyButton)
+// Module 10301 (ShinyButton)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import CollapsingText from "CollapsingText" /* 4930 */;
-import registerAssetDefault from "registerAsset" /* 9157 */;
+import ThemesDefault from "Themes" /* 576 */;
+import CollapsingText from "CollapsingText" /* 4976 */;
+import registerAssetDefault from "registerAsset" /* 10302 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -33,7 +33,7 @@ export default function ShinyButton(style) {
   let tmp3Result;
   if (!loading) {
     obj = { size: null, source: null, style: null };
-    obj[0] = tmp4(1296).Icon.Sizes.REFRESH_SMALL_16;
+    obj[0] = tmp4(1178).Icon.Sizes.REFRESH_SMALL_16;
     obj[1] = registerAssetDefault;
     const items1 = [tmp2.sparkleIcon, ];
     if (disabled) {
@@ -41,7 +41,7 @@ export default function ShinyButton(style) {
     }
     items1[1] = disabled;
     obj[2] = items1;
-    tmp3Result = tmp3(tmp4(1296).Icon, obj);
+    tmp3Result = tmp3(tmp4(1178).Icon, obj);
   }
   obj[4] = tmp3Result;
   const merged1 = Object.assign(merged);

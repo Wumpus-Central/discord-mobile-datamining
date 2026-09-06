@@ -1,12 +1,12 @@
-// === Module 10019: createSoundForPack ===
+// === Module 9902: createSoundForPack ===
 
-// Module 10019 (createSoundForPack)
+// Module 9902 (createSoundForPack)
 import timestampDefault from "timestamp" /* 3 */;
-import getSoundPackDefault from "getSoundPack" /* 10022 */;
-import _createSound from "_createSound" /* 10023 */;
-import closure_3 from "Soundpacks" /* 10020 */;
-import closure_4 from "initialize" /* 4323 */;
-import { SoundOutputChannel } from "SoundOutputChannel" /* 9808 */;
+import getSoundPackDefault from "getSoundPack" /* 9905 */;
+import _createSound from "_createSound" /* 9906 */;
+import closure_3 from "Soundpacks" /* 9903 */;
+import closure_4 from "initialize" /* 4405 */;
+import { SoundOutputChannel } from "SoundOutputChannel" /* 9091 */;
 
 require = arg1;
 let closure_6 = new timestampDefault("SoundUtils");
@@ -94,7 +94,7 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
     if (flag === undefined) {
       flag = false;
     }
-    const mobileAudioSound = new _require(10023).MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
+    const mobileAudioSound = new _require(9906).MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
     if (null != arg2) {
       mobileAudioSound.playWithListener().then((arg0) => {
         if (arg0) {

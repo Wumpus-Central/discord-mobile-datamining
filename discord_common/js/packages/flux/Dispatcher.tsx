@@ -1,12 +1,12 @@
-// === Module 647: setDisplayName ===
+// === Module 566: setDisplayName ===
 
-// Module 647 (setDisplayName)
+// Module 566 (setDisplayName)
 import log from "log" /* 4 */;
 import _modDef38 from "module_38" /* 38 */;
-import loggerDefault from "logger" /* 590 */;
-import addAll from "add" /* 591 */;
-import logger2 from "logger" /* 648 */;
-import DepGraph from "DepGraph" /* 653 */;
+import loggerDefault from "logger" /* 508 */;
+import addAll from "add" /* 509 */;
+import logger2 from "logger" /* 567 */;
+import DepGraph from "DepGraph" /* 572 */;
 import set from "set" /* 2 */;
 
 function setDisplayName(arg0, displayName) {
@@ -291,7 +291,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
         throw Error("Dispatch loop detected, aborting");
       }
       self._processingWaitQueue = false;
-      tmp4(590).isDispatching = false;
+      tmp4(508).isDispatching = false;
     } catch (tmp25) {
       tmp2._processingWaitQueue = false;
       loggerDefault.isDispatching = false;
@@ -314,8 +314,8 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   const tmp2 = self(38);
   const tmp3 = null == this._currentDispatchActionType;
   const tmp8 = _require;
-  _require(652).mark(type.type);
-  const obj = _require(652);
+  _require(571).mark(type.type);
+  const obj = _require(571);
   addAll.add(type.type);
   const actionLogger = this.actionLogger;
   const logResult1 = actionLogger.log(type, (arg0) => {
@@ -334,7 +334,7 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   }
   try {
     const _HermesInternal3 = HermesInternal;
-    tmp8(652).measure("DISPATCH[" + type.type + "]", type.type);
+    tmp8(571).measure("DISPATCH[" + type.type + "]", type.type);
   } catch (err) {
   }
 };

@@ -1,8 +1,8 @@
-// === Module 1431: DECORATION_TO_AVATAR_RATIO ===
+// === Module 1397: DECORATION_TO_AVATAR_RATIO ===
 
-// Module 1431 (DECORATION_TO_AVATAR_RATIO)
+// Module 1397 (DECORATION_TO_AVATAR_RATIO)
 import set from "set" /* 2 */;
-import frozen from "frozen" /* 1432 */;
+import frozen from "frozen" /* 1398 */;
 
 const AvatarSizes = frozen.AvatarSizes;
 const result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx");

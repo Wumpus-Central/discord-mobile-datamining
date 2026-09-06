@@ -1,10 +1,10 @@
-// === Module 11663: AutomodEventType ===
+// === Module 11862: AutomodEventType ===
 
-// Module 11663 (AutomodEventType)
+// Module 11862 (AutomodEventType)
 import set from "set" /* 2 */;
-import AutomodTriggerType from "AutomodTriggerType" /* 11664 */;
-import AutomodEventType from "AutomodEventType" /* 11665 */;
-import AutomodActionType from "AutomodActionType" /* 11666 */;
+import AutomodTriggerType from "AutomodTriggerType" /* 11863 */;
+import AutomodEventType from "AutomodEventType" /* 11864 */;
+import AutomodActionType from "AutomodActionType" /* 11865 */;
 
 const items = [AutomodTriggerType.AutomodTriggerType.USER_PROFILE, AutomodTriggerType.AutomodTriggerType.SERVER_POLICY, AutomodTriggerType.AutomodTriggerType.MENTION_SPAM, AutomodTriggerType.AutomodTriggerType.ML_SPAM, AutomodTriggerType.AutomodTriggerType.DEFAULT_KEYWORD_LIST, AutomodTriggerType.AutomodTriggerType.KEYWORD];
 const result = set.fileFinishedImporting("modules/guild_automod/Constants.tsx");

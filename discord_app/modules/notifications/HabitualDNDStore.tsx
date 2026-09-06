@@ -1,12 +1,12 @@
-// === Module 13613: initialize ===
+// === Module 13721: initialize ===
 
-// Module 13613 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import closure_3 from "filterPlayingActivities" /* 5232 */;
-import { StatusTypes } from "ME" /* 673 */;
+// Module 13721 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import closure_3 from "filterPlayingActivities" /* 5279 */;
+import { StatusTypes } from "ME" /* 1074 */;
 
 require = arg1;
 let closure_5 = [];
@@ -49,7 +49,7 @@ const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
         arr = arr.push(Date.now());
         const found = arr.filter((arg0) => {
           const timestamp = Date.now();
-          return arg0 > timestamp - 5 * callback(684).Millis.DAY;
+          return arg0 > timestamp - 5 * callback(1090).Millis.DAY;
         });
         arr = found;
         let someResult = found.length >= 4;
@@ -62,7 +62,7 @@ const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
         if (someResult) {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            callback(706).dispatch({ type: "HABITUAL_DND_CLEAR" });
+            callback(573).dispatch({ type: "HABITUAL_DND_CLEAR" });
           }, 15 * setDefault.Millis.SECOND);
         }
       }

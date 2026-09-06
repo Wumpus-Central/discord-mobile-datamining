@@ -1,9 +1,9 @@
-// === Module 11874: getLastFetchTimeMs ===
+// === Module 12073: getLastFetchTimeMs ===
 
-// Module 11874 (getLastFetchTimeMs)
+// Module 12073 (getLastFetchTimeMs)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_3 = [];

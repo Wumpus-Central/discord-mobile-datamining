@@ -1,11 +1,11 @@
-// === Module 11492: trackForwardStart ===
+// === Module 11681: trackForwardStart ===
 
-// Module 11492 (trackForwardStart)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
+// Module 11681 (trackForwardStart)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");
@@ -36,9 +36,9 @@ export const trackForwardSent = function trackForwardSent(arg0) {
     }
     const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guild_id));
     const obj5 = collectGuildAnalyticsMetadata;
-    const merged1 = Object.assign(tmp13(4701).collectChannelAnalyticsMetadata(channel));
+    const merged1 = Object.assign(tmp13(4740).collectChannelAnalyticsMetadata(channel));
     tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-    const tmp13Result = tmp13(4701);
+    const tmp13Result = tmp13(4740);
   }
 };
 export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {

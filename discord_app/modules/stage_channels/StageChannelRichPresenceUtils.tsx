@@ -1,13 +1,13 @@
-// === Module 9274: unpackStageChannelParty ===
+// === Module 10892: unpackStageChannelParty ===
 
-// Module 9274 (unpackStageChannelParty)
+// Module 10892 (unpackStageChannelParty)
 import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "fetchFingerprint" /* 1215 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import closure_4 from "buildStageChannelUserRoles" /* 5374 */;
-import { STAGE_APPLICATION_ID } from "MAX_STAGE_TOPIC_LENGTH" /* 5367 */;
-import { GuildFeatures } from "ME" /* 673 */;
+import closure_1 from "fetchFingerprint" /* 502 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import closure_4 from "buildStageChannelUserRoles" /* 5421 */;
+import { STAGE_APPLICATION_ID } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
+import { GuildFeatures } from "ME" /* 1074 */;
 
 function unpackStageChannelParty(c17) {
   if (null != c17) {

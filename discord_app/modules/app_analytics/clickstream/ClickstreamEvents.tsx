@@ -1,8 +1,8 @@
-// === Module 7223: getClickstreamDrainEvent ===
+// === Module 7467: getClickstreamDrainEvent ===
 
-// Module 7223 (getClickstreamDrainEvent)
+// Module 7467 (getClickstreamDrainEvent)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamEvents.tsx");

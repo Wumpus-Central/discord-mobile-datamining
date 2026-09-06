@@ -1,8 +1,8 @@
-// === Module 7986: useIsInReverseTrial ===
+// === Module 8065: useIsInReverseTrial ===
 
-// Module 7986 (useIsInReverseTrial)
-import initialize from "initialize" /* 586 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
+// Module 8065 (useIsInReverseTrial)
+import initialize from "initialize" /* 504 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");

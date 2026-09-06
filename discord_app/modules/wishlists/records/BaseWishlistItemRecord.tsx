@@ -1,15 +1,15 @@
-// === Module 10685: fromServer ===
+// === Module 8779: fromServer ===
 
-// Module 10685 (fromServer)
-import toJSDefault from "toJS" /* 1935 */;
-import closure_0 from "createFromServer" /* 4521 */;
+// Module 8779 (fromServer)
+import toJSDefault from "toJS" /* 1386 */;
+import closure_0 from "createFromServer" /* 5511 */;
 
 toJSDefault;
 let prototype;
 prototype = function BaseWishlistItemRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
-  ({ sku_id: tmp.skuId, sku_product_line: tmp.skuProductLine, sku_name: tmp.skuName, is_owned: tmp.isOwned, gifter_user_id: tmp.gifterUserId, sku: tmp.sku } = arg0);
+  ({ sku_id: tmp.skuId, sku_product_line: tmp.skuProductLine, sku_name: tmp.skuName, is_owned: tmp.isOwned, gifter_user_id: tmp.gifterUserId, sku: tmp.sku, added_at: tmp.addedAt } = arg0);
   return tmp;
 }.prototype;
 class prototype extends tmp2 {
@@ -38,7 +38,7 @@ prototype["fromServer"] = function fromServer(sku) {
   }
   const tmp7 = new prototype(str, merged, obj);
   // ThrowIfThisInitialized (0x7c)
-  ({ sku_id: tmp7.skuId, sku_product_line: tmp7.skuProductLine, sku_name: tmp7.skuName, is_owned: tmp7.isOwned, gifter_user_id: tmp7.gifterUserId, sku: tmp7.sku } = obj);
+  ({ sku_id: tmp7.skuId, sku_product_line: tmp7.skuProductLine, sku_name: tmp7.skuName, is_owned: tmp7.isOwned, gifter_user_id: tmp7.gifterUserId, sku: tmp7.sku, added_at: tmp7.addedAt } = obj);
   return tmp7;
 };
 const result = require("set").fileFinishedImporting("modules/wishlists/records/BaseWishlistItemRecord.tsx");

@@ -1,8 +1,8 @@
-// === Module 13947: _fetchGuildForPopout ===
+// === Module 13969: _fetchGuildForPopout ===
 
-// Module 13947 (_fetchGuildForPopout)
+// Module 13969 (_fetchGuildForPopout)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchGuildForPopout() {
@@ -24,7 +24,7 @@ function _fetchGuildForPopout() {
       yield HTTP.get(obj2);
       if (1 === tmp7) {
         c4 = 0;
-        const obj3 = lib(706);
+        const obj3 = lib(573);
         const obj4 = { type: "GUILD_POPOUT_FETCH_FAILURE", guildId: null };
         obj4[1] = callback;
         obj3.dispatch(obj4);
@@ -34,7 +34,7 @@ function _fetchGuildForPopout() {
         throw arg1;
       } else if (arg0 !== 2) {
         lib = arg1;
-        const obj = lib(706);
+        const obj = lib(573);
         const obj5 = { type: "GUILD_POPOUT_FETCH_SUCCESS", guildId: null, guild: null };
         obj5[1] = callback;
         obj5[2] = lib.body;

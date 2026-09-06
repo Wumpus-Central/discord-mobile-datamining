@@ -1,8 +1,8 @@
-// === Module 4958: useHasEnhancedRoleColors ===
+// === Module 5004: useHasEnhancedRoleColors ===
 
-// Module 4958 (useHasEnhancedRoleColors)
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import { GuildFeatures } from "ME" /* 673 */;
+// Module 5004 (useHasEnhancedRoleColors)
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import { GuildFeatures } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx");
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/ho
 export default function useHasEnhancedRoleColors(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {
@@ -36,7 +36,7 @@ export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildI
 export const useHasEnhancedRoleColorsForRole = function useHasEnhancedRoleColorsForRole(guildId, role) {
   const _require = guildId;
   const items = [closure_2];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {

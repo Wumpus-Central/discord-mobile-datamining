@@ -1,8 +1,8 @@
-// === Module 7165: PremiumModal ===
+// === Module 7412: PremiumModal ===
 
-// Module 7165 (PremiumModal)
+// Module 7412 (PremiumModal)
 import noopAll from "noop" /* 19 */;
-import { UserSettingsSections } from "ME" /* 673 */;
+import { UserSettingsSections } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

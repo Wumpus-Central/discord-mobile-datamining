@@ -1,10 +1,10 @@
-// === Module 6229: canChannelUseSoundboard ===
+// === Module 7375: canChannelUseSoundboard ===
 
-// Module 6229 (canChannelUseSoundboard)
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_4 from "handleConnectionOpen" /* 1980 */;
-import ME from "ME" /* 673 */;
+// Module 7375 (canChannelUseSoundboard)
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_4 from "handleConnectionOpen" /* 2011 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ ChannelTypesSets: c5, Permissions: closure_6 } = ME);
@@ -43,7 +43,7 @@ export const useCanChannelUseSoundboard = function useCanChannelUseSoundboard(ar
   const _require = arg0;
   const items = [closure_3];
   const items1 = [arg0];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let flag = false;
     if (null != closure_0) {
       const CALLABLE = closure_1_5.CALLABLE;

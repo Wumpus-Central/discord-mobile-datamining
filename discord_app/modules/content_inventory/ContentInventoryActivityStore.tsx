@@ -1,12 +1,12 @@
-// === Module 9403: entryToKey ===
+// === Module 13001: entryToKey ===
 
-// Module 9403 (entryToKey)
+// Module 13001 (entryToKey)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_3 from "sortActivity" /* 4569 */;
-import closure_4 from "map" /* 8626 */;
-import { ActivityTypes } from "ME" /* 673 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_3 from "sortActivity" /* 4600 */;
+import closure_4 from "map" /* 8336 */;
+import { ActivityTypes } from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 let require = arg1;
@@ -19,7 +19,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(8646).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(8356).ContentInventoryAuthorType.USER) {
         activities = activities.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === closure_1_5.PLAYING) {
@@ -43,7 +43,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8056);
+    tmpResult = tmp(8135);
   }
   return tmp3;
 }

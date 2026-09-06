@@ -1,9 +1,9 @@
-// === Module 4671: urlMatchesFileExtension ===
+// === Module 4710: urlMatchesFileExtension ===
 
-// Module 4671 (urlMatchesFileExtension)
-import isIOSWithWebM from "isIOSWithWebM" /* 4672 */;
+// Module 4710 (urlMatchesFileExtension)
+import isIOSWithWebM from "isIOSWithWebM" /* 4711 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import set from "set" /* 1234 */;
+import set from "set" /* 1115 */;
 
 require = arg1;
 const re3 = /\.(png|jpe?g|jfif|webp|gif|heic|heif|dng|avif)$/i;

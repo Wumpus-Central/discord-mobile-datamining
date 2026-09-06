@@ -1,16 +1,16 @@
-// === Module 13625: handleChannelSelect ===
+// === Module 13733: handleChannelSelect ===
 
-// Module 13625 (handleChannelSelect)
-import setDefault from "set" /* 684 */;
-import keys from "keys" /* 688 */;
-import initializeDefault from "initialize" /* 5495 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13627 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13631 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "createRTCConnection" /* 4554 */;
-import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13626 */;
-import closure_10 from "init" /* 13624 */;
+// Module 13733 (handleChannelSelect)
+import setDefault from "set" /* 1090 */;
+import keys from "keys" /* 1093 */;
+import initializeDefault from "initialize" /* 7118 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13735 */;
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13739 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "createRTCConnection" /* 4583 */;
+import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13734 */;
+import closure_10 from "init" /* 13732 */;
 
 require = arg1;
 function handleChannelSelect(channelId) {

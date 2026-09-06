@@ -1,14 +1,14 @@
-// === Module 1491: getSrcWithWidthAndHeight ===
+// === Module 1476: getSrcWithWidthAndHeight ===
 
-// Module 1491 (getSrcWithWidthAndHeight)
-import getAvatarURL from "getAvatarURL" /* 1430 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1433 */;
-import items2 from "items" /* 1466 */;
-import parseDefault from "parse" /* 1482 */;
-import useWindowDimensions from "useWindowDimensions" /* 1492 */;
+// Module 1476 (getSrcWithWidthAndHeight)
+import getAvatarURL from "getAvatarURL" /* 1396 */;
+import ensureAvatarSource from "ensureAvatarSource" /* 1399 */;
+import items2 from "items" /* 1432 */;
+import parseDefault from "parse" /* 1471 */;
+import useWindowDimensions from "useWindowDimensions" /* 1477 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "ME" /* 673 */;
+import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "ME" /* 1074 */;
 
 require = arg1;
 function getSrcWithWidthAndHeight(animated) {
@@ -61,7 +61,7 @@ function getSrcWithWidthAndHeight(animated) {
       obj[2] = sourceWidth;
       obj[3] = sourceHeight;
       const obj2 = items2;
-      obj[4] = items2.getSnapDownMaxUpscale(tmp9, tmp2(1894)());
+      obj[4] = items2.getSnapDownMaxUpscale(tmp9, tmp2(1878)());
       size = obj2.snapAttachmentDimensions(obj);
       const obj4 = items2;
     }
@@ -77,7 +77,7 @@ function getSrcWithWidthAndHeight(animated) {
   let tmp2Result = tmp2(12);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    tmp2Result = tmp2(1482);
+    tmp2Result = tmp2(1471);
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;

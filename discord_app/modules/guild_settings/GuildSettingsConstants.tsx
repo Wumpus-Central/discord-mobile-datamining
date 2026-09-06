@@ -1,8 +1,8 @@
-// === Module 17445: MAX_SUBCATEGORIES ===
+// === Module 17605: MAX_SUBCATEGORIES ===
 
-// Module 17445 (MAX_SUBCATEGORIES)
+// Module 17605 (MAX_SUBCATEGORIES)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 const obj = {
   afk_channel_id() {

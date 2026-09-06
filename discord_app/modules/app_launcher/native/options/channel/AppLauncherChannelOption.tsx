@@ -1,9 +1,9 @@
-// === Module 11986: AppLauncherChannelOption ===
+// === Module 12190: AppLauncherChannelOption ===
 
-// Module 11986 (AppLauncherChannelOption)
+// Module 12190 (AppLauncherChannelOption)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

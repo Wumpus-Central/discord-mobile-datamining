@@ -1,17 +1,17 @@
-// === Module 5363: checkIdleAFK ===
+// === Module 5410: checkIdleAFK ===
 
-// Module 5363 (checkIdleAFK)
-import initializeDefault from "initialize" /* 586 */;
-import debounceDefault from "debounce" /* 633 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import set from "set" /* 1234 */;
-import setDefault2 from "set" /* 4103 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import _modDef5364 from "module_5364" /* 5364 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import ME from "ME" /* 673 */;
-import { SpeakingFlags } from "DesktopSources" /* 4542 */;
+// Module 5410 (checkIdleAFK)
+import initializeDefault from "initialize" /* 504 */;
+import debounceDefault from "debounce" /* 551 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import set from "set" /* 1115 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import setDefault2 from "set" /* 4182 */;
+import _modDef5411 from "module_5411" /* 5411 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import ME from "ME" /* 1074 */;
+import { SpeakingFlags } from "DesktopSources" /* 4585 */;
 
 require = arg1;
 function checkIdleAFK() {
@@ -44,14 +44,14 @@ function checkIdleAFK() {
             tmp17 = c12;
           }
           if (!tmp17) {
-            const tmp14Result = tmp14(1234);
-            tmp17 = tmp14(1234).isAndroid() && c13;
-            const tmp18 = tmp14(1234).isAndroid() && c13;
+            const tmp14Result = tmp14(1115);
+            tmp17 = tmp14(1115).isAndroid() && c13;
+            const tmp18 = tmp14(1115).isAndroid() && c13;
           }
           if (!tmp17) {
             if (c10) {
-              tmp28(706).dispatch({ type: "AFK", afk: false });
-              const tmp28Result = tmp28(706);
+              tmp28(573).dispatch({ type: "AFK", afk: false });
+              const tmp28Result = tmp28(573);
             }
           }
         }
@@ -95,7 +95,7 @@ if (require("set").isPlatformEmbedded) {
         }
       }
       if (null != getSystemIdleTimeMs) {
-        const powerMonitor2 = tmp(4103).powerMonitor;
+        const powerMonitor2 = tmp(4182).powerMonitor;
         const systemIdleTimeMs = powerMonitor2.getSystemIdleTimeMs();
         if (systemIdleTimeMs instanceof Promise) {
           systemIdleTimeMs.then(function handleIdleTime(arg0) {
@@ -126,7 +126,7 @@ if (require("set").isPlatformEmbedded) {
           }
           checkIdleAFK();
           const _setTimeout = setTimeout;
-          let timerId = setTimeout(checkNativeIdle, 10 * tmp(684).Millis.SECOND);
+          let timerId = setTimeout(checkNativeIdle, 10 * tmp(1090).Millis.SECOND);
         }
       }
     }
@@ -141,7 +141,7 @@ if (require("set").isPlatformEmbedded) {
       c11 = true;
       closure_3 = Date.now();
       checkIdleAFK();
-      _modDef5364.disconnect();
+      _modDef5411.disconnect();
     });
     const powerMonitor3 = setDefault2.powerMonitor;
     class IdleStore extends r10079 {

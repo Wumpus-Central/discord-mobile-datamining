@@ -1,10 +1,10 @@
-// === Module 11732: _handleForwardBreadcrumb ===
+// === Module 11931: _handleForwardBreadcrumb ===
 
-// Module 11732 (_handleForwardBreadcrumb)
+// Module 11931 (_handleForwardBreadcrumb)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 function _handleForwardBreadcrumb() {

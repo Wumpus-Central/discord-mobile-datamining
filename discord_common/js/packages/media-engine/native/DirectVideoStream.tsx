@@ -1,6 +1,6 @@
-// === Module 4585: addref ===
+// === Module 4621: addref ===
 
-// Module 4585 (addref)
+// Module 4621 (addref)
 import set from "set" /* 2 */;
 
 class RefCountedStream {
@@ -63,11 +63,11 @@ export const acquireDirectVideoStream = function acquireDirectVideoStream(curren
     } else {
       obj = Object.create(tmp);
       obj.stream = createDiscordStream(current);
-      let voiceEngine = _require(4531).getVoiceEngine();
+      let voiceEngine = _require(1910).getVoiceEngine();
       let result = voiceEngine.addDirectVideoOutputSink(current);
       const result1 = obj.set(current, obj);
       value = obj;
-      const obj4 = _require(4531);
+      const obj4 = _require(1910);
     }
   }
   dependencyMap = value;

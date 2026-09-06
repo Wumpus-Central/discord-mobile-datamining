@@ -1,12 +1,12 @@
-// === Module 5493: handleConnectionOpen ===
+// === Module 7116: handleConnectionOpen ===
 
-// Module 5493 (handleConnectionOpen)
-import setDefault from "set" /* 684 */;
-import initializeDefault from "initialize" /* 5495 */;
+// Module 7116 (handleConnectionOpen)
+import setDefault from "set" /* 1090 */;
+import initializeDefault from "initialize" /* 7118 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "incrementVersion" /* 5494 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import ME from "ME" /* 673 */;
+import closure_3 from "incrementVersion" /* 7117 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 function handleConnectionOpen() {

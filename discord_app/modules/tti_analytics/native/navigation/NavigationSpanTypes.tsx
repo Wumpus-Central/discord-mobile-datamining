@@ -1,6 +1,6 @@
-// === Module 17704: NavigationSpanStatus ===
+// === Module 17864: NavigationSpanStatus ===
 
-// Module 17704 (NavigationSpanStatus)
+// Module 17864 (NavigationSpanStatus)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationSpanTypes.tsx");

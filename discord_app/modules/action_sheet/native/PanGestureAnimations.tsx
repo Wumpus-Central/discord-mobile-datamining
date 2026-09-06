@@ -1,10 +1,10 @@
-// === Module 12555: getNearestValue ===
+// === Module 12781: getNearestValue ===
 
-// Module 12555 (getNearestValue)
+// Module 12781 (getNearestValue)
 import set from "set" /* 2 */;
-import Button from "Button" /* 1296 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4479 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4928 */;
+import Button from "Button" /* 1178 */;
+import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4561 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
 
 let obj = { damping: 30, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 obj = { duration: 500, easing: Button.STANDARD_EASING };

@@ -1,18 +1,18 @@
-// === Module 15957: AudienceItem ===
+// === Module 16121: AudienceItem ===
 
-// Module 15957 (AudienceItem)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7628 */;
-import map from "map" /* 9106 */;
-import getLayoutStyles from "getLayoutStyles" /* 10228 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 12330 */;
+// Module 16121 (AudienceItem)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7873 */;
+import map from "map" /* 10119 */;
+import getLayoutStyles from "getLayoutStyles" /* 10121 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 12530 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
+import closure_5 from "trackCommunicationDisabled" /* 2021 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function AudienceItem(arg0) {
@@ -45,7 +45,7 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     BACKGROUND_BASE_LOWEST = colors.BACKGROUND_BASE_LOWEST;
     tmp4 = tmp;
   }
-  const round = tmp4(709).radii.round;
+  const round = tmp4(576).radii.round;
   let obj = { listeners: { display: "flex", flexDirection: "row", alignItems: "center", padding: 4, marginTop: 4, marginLeft: -8 }, listenersCollapsed: { flexDirection: "row", alignItems: "center", backgroundColor: BACKGROUND_BASE_LOWEST, borderRadius: round, marginLeft: -16, marginTop: 4, paddingLeft: 2, paddingRight: 6 }, listenersIconWrapper: null, listenersText: null, userCollapsedOverlap: null, headphonesIcon: null };
   obj = { alignItems: "center", justifyContent: "center", backgroundColor: BACKGROUND_BASE_LOWEST, marginRight: 8, marginLeft: 4, borderRadius: round };
   const merged = Object.assign(getLayoutStyles.makeSizeStyle(20));
@@ -62,7 +62,7 @@ let closure_12 = importAllResult.memo((voiceState) => {
   ({ member, voiceState: voiceState2 } = voiceState);
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
-  let obj = user(586);
+  let obj = user(504);
   const items = [closure_5];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ storeMember: closure_1_5.getMember(channel.guild_id, user.id), isGuest: closure_1_5.isGuestOrLurker(channel.guild_id, user.id) }), items1);
@@ -77,7 +77,7 @@ let closure_12 = importAllResult.memo((voiceState) => {
   obj = { style: userCollapsedOverlap, children: null };
   obj = { user, member: null, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed: null, sessionId: null, channel: null, isGuest: null };
   const tmp = channel;
-  tmp3 = callback2(channel(7628)());
+  tmp3 = callback2(channel(7873)());
   const tmp6 = View;
   if (member == null) {
     member = storeMember;
@@ -88,7 +88,7 @@ let closure_12 = importAllResult.memo((voiceState) => {
   obj[9] = voiceState2.sessionId;
   obj[10] = channel;
   obj[11] = isGuest;
-  obj[1] = closure_6(channel(15958), obj, user.id);
+  obj[1] = closure_6(channel(16122), obj, user.id);
   return closure_6(tmp6, obj);
 });
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");

@@ -1,7 +1,7 @@
-// === Module 6007: getHigherContrastColor ===
+// === Module 7205: getHigherContrastColor ===
 
-// Module 6007 (getHigherContrastColor)
-import int2hslRaw from "int2hslRaw" /* 685 */;
+// Module 7205 (getHigherContrastColor)
+import int2hslRaw from "int2hslRaw" /* 1091 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;

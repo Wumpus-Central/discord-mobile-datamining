@@ -1,30 +1,30 @@
-// === Module 13586: showReviewRequestModal ===
+// === Module 13695: showReviewRequestModal ===
 
-// Module 13586 (showReviewRequestModal)
-import initializeDefault from "initialize" /* 586 */;
-import Storage2 from "Storage" /* 592 */;
-import keys from "keys" /* 688 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import sleep from "sleep" /* 4558 */;
-import apexExperiment from "apexExperiment" /* 13587 */;
-import _showAndroidRatingRequestDefault from "_showAndroidRatingRequest" /* 13588 */;
-import getFirstInstallTimeMillis from "getFirstInstallTimeMillis" /* 13590 */;
-import closure_4 from "getHash" /* 4391 */;
-import closure_5 from "initialize" /* 1209 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 13695 (showReviewRequestModal)
+import initializeDefault from "initialize" /* 504 */;
+import Storage2 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import keys from "keys" /* 1093 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
+import sleep from "sleep" /* 4589 */;
+import apexExperiment from "apexExperiment" /* 13696 */;
+import _showAndroidRatingRequestDefault from "_showAndroidRatingRequest" /* 13697 */;
+import getFirstInstallTimeMillis from "getFirstInstallTimeMillis" /* 13699 */;
+import closure_4 from "getHash" /* 4476 */;
+import closure_5 from "initialize" /* 1236 */;
+import closure_6 from "handleConnectionOpen" /* 2011 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 function showReviewRequestModal() {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
-    let tmpResult = tmp(4332);
+    let tmpResult = tmp(4417);
     tmp3 = null != tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
   }
-  tmpResult = tmp(6243);
+  tmpResult = tmp(6625);
   const keyboardIsOpen = tmpResult.getKeyboardIsOpen();
   const tmp5 = null != voiceChannelId.getVoiceChannelId();
   if (tmp3) {
@@ -32,7 +32,7 @@ function showReviewRequestModal() {
       if (!tmp5) {
         expandEventPropertiesDefault.track(AnalyticEvents.REVIEW_REQUEST_SHOW_ATTEMPTED);
         closure_9.revision = 1;
-        const Storage = tmp(592).Storage;
+        const Storage = tmp(510).Storage;
         const result = Storage.set(RequestReviewStore, closure_9);
         _showAndroidRatingRequestDefault();
         c10 = false;
@@ -47,7 +47,7 @@ function showReviewRequestModal() {
     clearTimeout(timeout);
     timeout = -1;
   }
-  const RequestReviewNoTTIExperiment = tmp(13587).RequestReviewNoTTIExperiment;
+  const RequestReviewNoTTIExperiment = tmp(13696).RequestReviewNoTTIExperiment;
   let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
   let tmp18 = c10;
   if (c10) {
@@ -62,7 +62,7 @@ function showReviewRequestModal() {
   }
   if (tmp18) {
     const _setTimeout = setTimeout;
-    timeout = setTimeout(showReviewRequestModal, tmp(4558).MS_PER_MINUTE);
+    timeout = setTimeout(showReviewRequestModal, tmp(4589).MS_PER_MINUTE);
   }
 }
 function handleConnectionClosedOrInterrupted() {
@@ -118,7 +118,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = tmp(13587).RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = tmp(13696).RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp13 = closure_10;
     if (closure_10) {
@@ -133,7 +133,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
     }
     if (tmp13) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, tmp(4558).MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, tmp(4589).MS_PER_MINUTE);
     }
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
@@ -194,7 +194,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
         clearTimeout(timeout);
         timeout = -1;
       }
-      const RequestReviewNoTTIExperiment = tmp(13587).RequestReviewNoTTIExperiment;
+      const RequestReviewNoTTIExperiment = tmp(13696).RequestReviewNoTTIExperiment;
       let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
       let tmp8 = c10;
       if (c10) {
@@ -209,7 +209,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
       }
       if (tmp8) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(showReviewRequestModal, tmp(4558).MS_PER_MINUTE);
+        timeout = setTimeout(showReviewRequestModal, tmp(4589).MS_PER_MINUTE);
       }
     } else if (-1 !== timeout) {
       const _clearTimeout2 = clearTimeout;

@@ -1,10 +1,10 @@
-// === Module 6933: PsychicIllocon ===
+// === Module 6369: PsychicIllocon ===
 
-// Module 6933 (PsychicIllocon)
+// Module 6369 (PsychicIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6934 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6370 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PsychicIllocon.native.tsx");

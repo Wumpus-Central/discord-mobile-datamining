@@ -1,8 +1,8 @@
-// === Module 1914: fluxApi ===
+// === Module 1985: fluxApi ===
 
-// Module 1914 (fluxApi)
+// Module 1985 (fluxApi)
 import set from "set" /* 2 */;
-import isBlockedDomain from "isBlockedDomain" /* 1915 */;
+import isBlockedDomain from "isBlockedDomain" /* 1351 */;
 
 isBlockedDomain = isBlockedDomain.getFluxApi();
 const result = set.fileFinishedImporting("modules/libdiscore/FluxApi.tsx");

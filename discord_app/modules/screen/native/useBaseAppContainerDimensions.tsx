@@ -1,8 +1,8 @@
-// === Module 4337: useBaseAppContainerDimensions ===
+// === Module 4422: useBaseAppContainerDimensions ===
 
-// Module 4337 (useBaseAppContainerDimensions)
-import useWindowDimensions from "useWindowDimensions" /* 1492 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1627 */;
+// Module 4422 (useBaseAppContainerDimensions)
+import useWindowDimensions from "useWindowDimensions" /* 1477 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1611 */;
 import closure_3 from "noop" /* 19 */;
 
 require = arg1;

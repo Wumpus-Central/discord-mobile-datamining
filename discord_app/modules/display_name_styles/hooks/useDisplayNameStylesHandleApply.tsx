@@ -1,8 +1,8 @@
-// === Module 15176: useDisplayNameStylesHandleApply ===
+// === Module 15336: useDisplayNameStylesHandleApply ===
 
-// Module 15176 (useDisplayNameStylesHandleApply)
+// Module 15336 (useDisplayNameStylesHandleApply)
 import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");

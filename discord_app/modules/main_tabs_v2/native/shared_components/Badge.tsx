@@ -1,10 +1,10 @@
-// === Module 7624: DEFAULT_BADGE_SIZE ===
+// === Module 7869: DEFAULT_BADGE_SIZE ===
 
-// Module 7624 (DEFAULT_BADGE_SIZE)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 7869 (DEFAULT_BADGE_SIZE)
+import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 let obj = { badge: null, badgeClassic: null, mask: null };

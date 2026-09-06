@@ -1,24 +1,24 @@
-// === Module 8132: GridAvatar ===
+// === Module 13176: GridAvatar ===
 
-// Module 8132 (GridAvatar)
+// Module 13176 (GridAvatar)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_4 from "sortActivity" /* 4569 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_4 from "sortActivity" /* 4600 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function GridAvatar(user) {
   user = user.user;
   ({ guildId, pendingAvatarSrc, pendingAvatarDecoration } = user);
   ({ size, showStatus } = user);
-  let obj = user(586);
+  let obj = user(504);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getStatus(user.id));
-  obj1 = user(586);
+  obj1 = user(504);
   const items1 = [closure_3];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   if (undefined === pendingAvatarDecoration) {
@@ -34,7 +34,7 @@ function GridAvatar(user) {
   obj[3] = size;
   if (undefined !== pendingAvatarSrc) {
     obj = { source: null };
-    const tmp2Result = tmp2(8120);
+    const tmp2Result = tmp2(8247);
     obj[0] = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj);
     obj1 = obj;
@@ -44,7 +44,7 @@ function GridAvatar(user) {
     obj1[1] = guildId;
     const merged1 = Object.assign(obj);
   }
-  return closure_5(user(1296).Avatar, obj1);
+  return closure_5(user(1178).Avatar, obj1);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

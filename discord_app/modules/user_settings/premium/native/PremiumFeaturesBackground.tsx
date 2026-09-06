@@ -1,13 +1,13 @@
-// === Module 8106: PremiumFeaturesBackground ===
+// === Module 8833: PremiumFeaturesBackground ===
 
-// Module 8106 (PremiumFeaturesBackground)
+// Module 8833 (PremiumFeaturesBackground)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
-import { Gradients } from "items" /* 7187 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+import ThemesDefault from "Themes" /* 576 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import { Gradients } from "items" /* 7432 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -39,8 +39,8 @@ export default function PremiumFeaturesBackground(opacity) {
   let obj = { style: items, colors: mapped, start: null, end: null };
   items = [callback().cardContainer, style];
   const tmp2 = callback();
-  obj[2] = num(688).HorizontalGradient.START;
-  obj[3] = num(688).HorizontalGradient.END;
+  obj[2] = num(1093).HorizontalGradient.START;
+  obj[3] = num(1093).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
   return jsx(LinearGradientDefault, { style: items, colors: mapped, start: null, end: null });

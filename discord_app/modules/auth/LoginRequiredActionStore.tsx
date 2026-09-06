@@ -1,8 +1,8 @@
-// === Module 1379: handleUpdateUser ===
+// === Module 1950: handleUpdateUser ===
 
-// Module 1379 (handleUpdateUser)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 1950 (handleUpdateUser)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 function handleUpdateUser(user) {
   const id = user.user.id;

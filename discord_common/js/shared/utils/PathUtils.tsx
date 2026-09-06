@@ -1,6 +1,6 @@
-// === Module 504: getAuthenticationPath ===
+// === Module 1083: getAuthenticationPath ===
 
-// Module 504 (getAuthenticationPath)
+// Module 1083 (getAuthenticationPath)
 import set from "set" /* 2 */;
 
 function getAuthenticationPath(login, arg1, flag, arg3) {

@@ -1,6 +1,6 @@
-// === Module 6508: metadata ===
+// === Module 5942: metadata ===
 
-// Module 6508 (metadata)
+// Module 5942 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiAngryExample-2x.png.js");

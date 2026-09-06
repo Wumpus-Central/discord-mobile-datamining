@@ -1,8 +1,8 @@
-// === Module 9439: useActivityTimer ===
+// === Module 13023: useActivityTimer ===
 
-// Module 9439 (useActivityTimer)
-import setDefault from "set" /* 684 */;
-import calculateTimestampDurations from "calculateTimestampDurations" /* 8056 */;
+// Module 13023 (useActivityTimer)
+import setDefault from "set" /* 1090 */;
+import calculateTimestampDurations from "calculateTimestampDurations" /* 8135 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
@@ -14,7 +14,7 @@ export default function useActivityTimer(start) {
   start = start.start;
   let first;
   importDefault = undefined;
-  const interval = new first(4362).Interval();
+  const interval = new first(4447).Interval();
   first = callback(callback3(interval), 1)[0];
   const tmp3 = callback(callback3(() => Date.now()), 2);
   importDefault = tmp3[1];

@@ -1,6 +1,6 @@
-// === Module 1383: ContentDismissActionType ===
+// === Module 1954: ContentDismissActionType ===
 
-// Module 1383 (ContentDismissActionType)
+// Module 1954 (ContentDismissActionType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/dismissible_content/DismissibleContentConstants.tsx");

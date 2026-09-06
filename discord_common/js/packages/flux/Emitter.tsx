@@ -1,8 +1,8 @@
-// === Module 590: logger ===
+// === Module 508: logger ===
 
-// Module 590 (logger)
+// Module 508 (logger)
 import log from "log" /* 4 */;
-import addAll from "add" /* 591 */;
+import addAll from "add" /* 509 */;
 import set from "set" /* 2 */;
 
 const logger = new log.Logger("Flux");
@@ -210,8 +210,8 @@ prototype["emitReactOnce"] = function emitReactOnce() {
   if (timestamp1 - timestamp > 100) {
     const _HermesInternal = HermesInternal;
     const combined = "Slow batch emitReactChanges took " + timestamp1 - timestamp + "ms recentActions:";
-    logger.verbose(combined, self(591).serialize());
-    const obj = self(591);
+    logger.verbose(combined, self(509).serialize());
+    const obj = self(509);
   }
 };
 let obj = Object.create(Emitter.prototype);

@@ -1,11 +1,11 @@
-// === Module 8509: useFetchCollectiblesProduct ===
+// === Module 11042: useFetchCollectiblesProduct ===
 
-// Module 8509 (useFetchCollectiblesProduct)
+// Module 11042 (useFetchCollectiblesProduct)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
-import closure_4 from "addSku" /* 4527 */;
-import closure_5 from "updateCategoriesAndProducts" /* 7297 */;
-import { SKUProductLines } from "ME" /* 673 */;
+import closure_4 from "addSku" /* 5510 */;
+import closure_5 from "updateCategoriesAndProducts" /* 7542 */;
+import { SKUProductLines } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
@@ -13,7 +13,7 @@ const result = require("set").fileFinishedImporting("modules/collectibles/hooks/
 export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, arg1) {
   const _require = skuId;
   dependencyMap = arg1;
-  let obj = _require(644);
+  let obj = _require(563);
   let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let value = null;
@@ -27,7 +27,7 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
     tmp4 = stateFromStores.productLine !== SKUProductLines.COLLECTIBLES;
   }
   const callback = tmp4;
-  let tmpResult = tmp(644);
+  let tmpResult = tmp(563);
   const items1 = [stateFromStores1];
   const tmp6 = callback(tmpResult.useStateFromStoresArray(items1, () => {
     const items = [stateFromStores1.getProduct(closure_0), stateFromStores1.getProductFetch(closure_0)];
@@ -35,7 +35,7 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
   }), 2);
   const first = tmp6[0];
   closure_4 = tmp8;
-  tmpResult = tmp(644);
+  tmpResult = tmp(563);
   const items2 = [stateFromStores1];
   stateFromStores1 = tmpResult.useStateFromStores(items2, () => stateFromStores1.isProductFetchBackedOff(closure_0));
   let tmp10 = true === arg1;
@@ -44,7 +44,7 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
     if (first != null) {
       type = first.type;
     }
-    tmp10 = type === tmp(1949).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(1889).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === first.items.length;

@@ -1,11 +1,11 @@
-// === Module 11342: useRefocusOrLaunchActivity ===
+// === Module 11518: useRefocusOrLaunchActivity ===
 
-// Module 11342 (useRefocusOrLaunchActivity)
+// Module 11518 (useRefocusOrLaunchActivity)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "map" /* 9481 */;
-import closure_6 from "participantFromServer" /* 1385 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9482 */;
+import closure_5 from "map" /* 9510 */;
+import closure_6 from "participantFromServer" /* 1956 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9511 */;
 
 const require = arg1;
 ({ MAIN_SURFACE: error, FrameLayoutModes: closure_8 } = FrameLayoutModes);
@@ -63,44 +63,47 @@ export default function useRefocusOrLaunchActivity(applicationId) {
               if (null != c4) {
                 let tmp9 = null != c5;
                 if (tmp9) {
-                  tmp9 = tmp43.applicationId === tmp41;
+                  tmp9 = tmp44.applicationId === tmp42;
                 }
                 if (null != closure_1_6) {
-                  if (tmp10.applicationId === tmp41) {
+                  if (tmp10.applicationId === tmp42) {
                     obj1 = { frameId: null, layoutMode: null };
                     obj1[0] = tmp10.id;
                     obj1[1] = closure_1_8.FOCUSED;
-                    const result = closure_1_1(9478).updateFrameLayoutMode(obj1);
-                    const obj9 = closure_1_1(9478);
+                    const result = closure_1_1(9507).updateFrameLayoutMode(obj1);
+                    const obj10 = closure_1_1(9507);
                   }
                 }
                 if (tmp9) {
-                  const _location = tmp43.location;
+                  const _location = tmp44.location;
                   let guild_id = null;
                   if ("guild_id" in _location) {
                     guild_id = _location.guild_id;
                   }
-                  closure_1_1(9536)(guild_id, _location);
-                  const tmp25 = closure_1_1(9536);
+                  closure_1_1(9535)(guild_id, _location);
+                  const tmp26 = closure_1_1(9535);
                 } else {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
                   c4 = 1;
                   if (closure_1_7) {
-                    let obj5 = closure_1_1(9478);
-                    let obj2 = { applicationId: null, surface: null };
-                    obj2[0] = tmp41;
+                    let obj5 = closure_1_1(9507);
+                    let obj2 = { applicationId: null, surface: null, analyticsContext: null };
+                    obj2[0] = tmp42;
                     obj2[1] = closure_1_7;
+                    const obj3 = { isStart: true, analyticsLocations: null };
+                    obj3[1] = closure_1_1;
+                    obj2[2] = obj3;
                     dependencyMap = 2;
                     c5 = 1;
-                    const obj3 = { value: null, done: false };
-                    obj3[0] = obj5.launchFrame(obj2);
-                    return obj3;
+                    const obj4 = { value: null, done: false };
+                    obj4[0] = obj5.launchFrame(obj2);
+                    return obj4;
                   } else {
                     let id;
-                    if (tmp42 != null) {
-                      const bot = tmp42.bot;
+                    if (tmp43 != null) {
+                      const bot = tmp43.bot;
                       if (bot != null) {
                         id = bot.id;
                       }
@@ -110,27 +113,27 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     }
                   }
                 }
-                obj2 = closure_1_0(11343);
-                const obj4 = { appId: null, botId: null, analyticsLocations: null };
-                obj4[0] = tmp41;
+                obj2 = closure_1_0(11519);
+                obj5 = { appId: null, botId: null, analyticsLocations: null };
+                obj5[0] = tmp42;
                 let id1;
-                if (tmp42 != null) {
-                  const bot2 = tmp42.bot;
+                if (tmp43 != null) {
+                  const bot2 = tmp43.bot;
                   if (bot2 != null) {
                     id1 = bot2.id;
                   }
                 }
-                obj4[1] = id1;
+                obj5[1] = id1;
                 closure_0 = closure_1_1;
                 if (closure_1_1 == null) {
                   closure_0 = [];
                 }
-                obj4[2] = closure_0;
+                obj5[2] = closure_0;
                 dependencyMap = 3;
                 c5 = 1;
-                obj5 = { value: null, done: false };
-                obj5[0] = obj2.launchActivityInBotDM(obj4);
-                return obj5;
+                const obj6 = { value: null, done: false };
+                obj6[0] = obj2.launchActivityInBotDM(obj5);
+                return obj6;
               }
             }
             c5 = 3;
@@ -144,9 +147,9 @@ export default function useRefocusOrLaunchActivity(applicationId) {
           } else if (arg0 === 2) {
             c4 = 0;
             c5 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
+            const obj7 = { value: null, done: true };
+            obj7[0] = arg1;
+            return obj7;
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -161,11 +164,11 @@ export default function useRefocusOrLaunchActivity(applicationId) {
         if (callback != null) {
           callback();
         }
-      } catch (tmp32) {
-        callback = tmp32;
+      } catch (tmp33) {
+        callback = tmp33;
         if (tmp4 === c4) {
           c5 = tmp2;
-          throw tmp32;
+          throw tmp33;
         } else {
           dependencyMap = tmp;
         }

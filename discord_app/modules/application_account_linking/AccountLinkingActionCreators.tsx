@@ -1,8 +1,8 @@
-// === Module 5971: accountLinkAuthorizationStarted ===
+// === Module 7171: accountLinkAuthorizationStarted ===
 
-// Module 5971 (accountLinkAuthorizationStarted)
+// Module 7171 (accountLinkAuthorizationStarted)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const result = set.fileFinishedImporting("modules/application_account_linking/AccountLinkingActionCreators.tsx");
 

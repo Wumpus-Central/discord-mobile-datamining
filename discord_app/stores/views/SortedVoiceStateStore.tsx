@@ -1,22 +1,22 @@
-// === Module 4555: getVoiceStatesForGuild ===
+// === Module 4584: getVoiceStatesForGuild ===
 
-// Module 4555 (getVoiceStatesForGuild)
+// Module 4584 (getVoiceStatesForGuild)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
-import version2 from "version" /* 4116 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
+import version2 from "version" /* 4195 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "initializeFromUserSettings" /* 1389 */;
-import closure_5 from "createdAt" /* 1934 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import closure_10 from "updateVoiceState" /* 4497 */;
-import { ME } from "ME" /* 673 */;
+import closure_4 from "initializeFromUserSettings" /* 1960 */;
+import closure_5 from "createdAt" /* 1385 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "trackCommunicationDisabled" /* 2021 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import closure_10 from "updateVoiceState" /* 4579 */;
+import { ME } from "ME" /* 1074 */;
 
 require = arg1;
 function getVoiceStatesForGuild(guildId) {
@@ -414,7 +414,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
         let tmp4 = nextResult;
         let tmp5 = callback;
         let tmp6 = dependencyMap;
-        if (favoriteChannels[nextResult].type !== callback(1305).FavoriteChannelType.CATEGORY) {
+        if (favoriteChannels[nextResult].type !== callback(1187).FavoriteChannelType.CATEGORY) {
           let tmp19 = channel;
           let tmp20 = nextResult;
           channel = channel.getChannel(tmp4);

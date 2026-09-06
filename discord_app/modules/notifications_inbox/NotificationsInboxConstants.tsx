@@ -1,10 +1,10 @@
-// === Module 8082: ANALYTICS_NAME ===
+// === Module 8161: ANALYTICS_NAME ===
 
-// Module 8082 (ANALYTICS_NAME)
+// Module 8161 (ANALYTICS_NAME)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import setDefault from "set" /* 684 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import ME from "ME" /* 1074 */;
+import setDefault from "set" /* 1090 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 const NOTIFICATIONS_INBOX = ME.NOTIFICATIONS_INBOX;
 let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
@@ -37,9 +37,9 @@ export const getNotificationsInboxGuild = function getNotificationsInboxGuild(ar
     const intl = getSystemLocale.intl;
     stringResult = intl.string(getSystemLocale.t.HcoRu0);
   }
-  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "patch" };
+  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "text-sm/normal" };
   obj[4] = [];
-  return tmp2(1425).fromGuildBasic(obj);
+  return tmp2(1971).fromGuildBasic(obj);
 };
 export const MessageCategory = obj;
 export const InboxFilters = obj;

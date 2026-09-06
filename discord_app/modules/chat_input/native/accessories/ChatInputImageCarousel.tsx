@@ -1,10 +1,10 @@
-// === Module 12030: ? ===
+// === Module 12234: ? ===
 
-// Module 12030
-import closure_3 from "handleInit" /* 7535 */;
-import { DraftType } from "handleChanged" /* 4855 */;
-import closure_5 from "map" /* 4854 */;
-import { useChatShowingAutoComplete as closure_6 } from "updateChatInputContainerHeight" /* 9551 */;
+// Module 12234
+import closure_3 from "handleInit" /* 7780 */;
+import { DraftType } from "handleChanged" /* 4901 */;
+import closure_5 from "map" /* 4900 */;
+import { useChatShowingAutoComplete as closure_6 } from "updateChatInputContainerHeight" /* 9485 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -15,7 +15,7 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
   dependencyMap = undefined;
   let tmp = callback(canUpload.screenIndex);
   dependencyMap = tmp;
-  let obj = canUpload(586);
+  let obj = canUpload(504);
   const items = [closure_5, closure_3];
   const items1 = [channelId, canUpload, tmp];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
     obj = { attachments: null, channelId: null };
     obj[0] = stateFromStores;
     obj[1] = channelId;
-    tmp4 = jsx(channelId(10649), { attachments: null, channelId: null });
+    tmp4 = jsx(channelId(10631), { attachments: null, channelId: null });
   }
   return tmp4;
 });

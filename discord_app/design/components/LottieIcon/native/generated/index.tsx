@@ -1,6 +1,6 @@
-// === Module 15867: ? ===
+// === Module 16029: ? ===
 
-// Module 15867
+// Module 16029
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("design/components/LottieIcon/native/generated/index.tsx");

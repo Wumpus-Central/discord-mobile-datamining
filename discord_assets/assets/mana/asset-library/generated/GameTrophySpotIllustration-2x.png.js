@@ -1,6 +1,6 @@
-// === Module 6658: metadata ===
+// === Module 6094: metadata ===
 
-// Module 6658 (metadata)
+// Module 6094 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameTrophySpotIllustration-2x.png.js");

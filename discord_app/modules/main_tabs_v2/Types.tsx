@@ -1,6 +1,6 @@
-// === Module 4357: CREATE_THREAD_SCREEN_KEY ===
+// === Module 4442: CREATE_THREAD_SCREEN_KEY ===
 
-// Module 4357 (CREATE_THREAD_SCREEN_KEY)
+// Module 4442 (CREATE_THREAD_SCREEN_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/Types.tsx");

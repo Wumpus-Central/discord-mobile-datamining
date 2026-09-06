@@ -1,14 +1,14 @@
-// === Module 4591: destroy ===
+// === Module 4627: destroy ===
 
-// Module 4591 (destroy)
-import onDefault from "on" /* 4582 */;
-import WantsVideoQuality from "WantsVideoQuality" /* 4592 */;
-import logger2 from "logger" /* 4594 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4595 */;
-import cloneDeepDefault from "cloneDeep" /* 4596 */;
-import flatRestDefault from "flatRest" /* 4625 */;
+// Module 4627 (destroy)
+import onDefault from "on" /* 4618 */;
+import WantsVideoQuality from "WantsVideoQuality" /* 4628 */;
+import logger2 from "logger" /* 4630 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4631 */;
+import cloneDeepDefault from "cloneDeep" /* 4632 */;
+import flatRestDefault from "flatRest" /* 4661 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 require = arg1;
 ({ ConnectionStates: c4, DEFAULT_VOICE_BITRATE: c5, MediaTypes: closure_6, ResolutionTypes: error, MediaEngineContextTypes: closure_8, VIDEO_QUALITY_FRAMERATE: c9, SIMULCAST_HQ_QUALITY: c10 } = DesktopSources);
@@ -125,13 +125,7 @@ prototype["setUseElectronVideo"] = function setUseElectronVideo(mediaEngine) {
 prototype["setClipRecordUser"] = function setClipRecordUser(arg0, arg1, arg2) {
 
 };
-prototype["setViewerSideClip"] = function setViewerSideClip(arg0) {
-
-};
 prototype["setRemoteAudioHistory"] = function setRemoteAudioHistory(arg0) {
-
-};
-prototype["setClipsKeyFrameInterval"] = function setClipsKeyFrameInterval(arg0) {
 
 };
 prototype["setQualityDecoupling"] = function setQualityDecoupling(arg0) {

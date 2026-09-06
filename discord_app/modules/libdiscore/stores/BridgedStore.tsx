@@ -1,8 +1,8 @@
-// === Module 1913: ensureValidMode ===
+// === Module 1984: ensureValidMode ===
 
-// Module 1913 (ensureValidMode)
+// Module 1984 (ensureValidMode)
 import set from "set" /* 2 */;
-import fluxApi from "fluxApi" /* 1914 */;
+import fluxApi from "fluxApi" /* 1985 */;
 
 const result = set.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 

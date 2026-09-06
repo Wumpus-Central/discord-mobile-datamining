@@ -1,15 +1,15 @@
-// === Module 15427: DevToolsLoggingFlagsScreen ===
+// === Module 15585: DevToolsLoggingFlagsScreen ===
 
-// Module 15427 (DevToolsLoggingFlagsScreen)
+// Module 15585 (DevToolsLoggingFlagsScreen)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
-import TableSwitchRow from "TableSwitchRow" /* 6002 */;
-import closure_3 from "refreshSourceMapCookie" /* 703 */;
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+import TableSwitchRow from "TableSwitchRow" /* 7201 */;
+import closure_3 from "refreshSourceMapCookie" /* 1347 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const ScrollView = get_ActivityIndicator.ScrollView;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -35,7 +35,7 @@ export default function DevToolsLoggingFlagsScreen() {
       subLabel: "Logs all gateway events to console, including content. Enable verbose logs to see them.",
       value: isLoggingGatewayEvents,
       onValueChange(logGatewayEvents) {
-        let obj = callback(705);
+        let obj = callback(1348);
         obj = { logGatewayEvents };
         return obj.setDeveloperOptionSettings(obj);
       }
@@ -45,7 +45,7 @@ export default function DevToolsLoggingFlagsScreen() {
       subLabel: "Logs all analytics events to the developer console.",
       value: isLoggingAnalyticsEvents,
       onValueChange(logAnalyticsEvents) {
-        let obj = callback(705);
+        let obj = callback(1348);
         obj = { logAnalyticsEvents };
         return obj.setDeveloperOptionSettings(obj);
       }
@@ -55,7 +55,7 @@ export default function DevToolsLoggingFlagsScreen() {
       subLabel: "Force trace all client requests with APM.",
       value: isTracingRequests,
       onValueChange(trace) {
-        let obj = callback(705);
+        let obj = callback(1348);
         obj = { trace };
         return obj.setDeveloperOptionSettings(obj);
       }

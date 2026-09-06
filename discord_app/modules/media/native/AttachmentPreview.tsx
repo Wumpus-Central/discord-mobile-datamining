@@ -1,29 +1,29 @@
-// === Module 10305: AttachmentIcon ===
+// === Module 10196: AttachmentIcon ===
 
-// Module 10305 (AttachmentIcon)
-import ThemesDefault from "Themes" /* 709 */;
-import set from "set" /* 1234 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import preloadDefault from "preload" /* 5502 */;
-import registerAssetDefault from "registerAsset" /* 10306 */;
-import registerAssetDefault2 from "registerAsset" /* 10307 */;
-import registerAssetDefault3 from "registerAsset" /* 10308 */;
-import registerAssetDefault4 from "registerAsset" /* 10309 */;
-import registerAssetDefault5 from "registerAsset" /* 10310 */;
-import registerAssetDefault6 from "registerAsset" /* 10311 */;
-import registerAssetDefault7 from "registerAsset" /* 10312 */;
-import registerAssetDefault8 from "registerAsset" /* 10313 */;
-import registerAssetDefault9 from "registerAsset" /* 10314 */;
-import registerAssetDefault10 from "registerAsset" /* 10315 */;
-import registerAssetDefault11 from "registerAsset" /* 10316 */;
-import registerAssetDefault12 from "registerAsset" /* 10317 */;
-import registerAssetDefault13 from "registerAsset" /* 10318 */;
-import registerAssetDefault14 from "registerAsset" /* 10319 */;
+// Module 10196 (AttachmentIcon)
+import ThemesDefault from "Themes" /* 576 */;
+import set from "set" /* 1115 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import preloadDefault from "preload" /* 5587 */;
+import registerAssetDefault from "registerAsset" /* 10197 */;
+import registerAssetDefault2 from "registerAsset" /* 10198 */;
+import registerAssetDefault3 from "registerAsset" /* 10199 */;
+import registerAssetDefault4 from "registerAsset" /* 10200 */;
+import registerAssetDefault5 from "registerAsset" /* 10201 */;
+import registerAssetDefault6 from "registerAsset" /* 10202 */;
+import registerAssetDefault7 from "registerAsset" /* 10203 */;
+import registerAssetDefault8 from "registerAsset" /* 10204 */;
+import registerAssetDefault9 from "registerAsset" /* 10205 */;
+import registerAssetDefault10 from "registerAsset" /* 10206 */;
+import registerAssetDefault11 from "registerAsset" /* 10207 */;
+import registerAssetDefault12 from "registerAsset" /* 10208 */;
+import registerAssetDefault13 from "registerAsset" /* 10209 */;
+import registerAssetDefault14 from "registerAsset" /* 10210 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 class AttachmentIcon {
@@ -124,12 +124,12 @@ let closure_13 = importAllResult.memo((borderRadius) => {
       isIOSResult = uri.startsWith("ph://");
     }
     if (!isIOSResult) {
-      let isAndroidResult = tmp2(1234).isAndroid();
+      let isAndroidResult = tmp2(1115).isAndroid();
       if (isAndroidResult) {
         isAndroidResult = uri.startsWith("content://");
       }
       isIOSResult = isAndroidResult;
-      const tmp2Result = tmp2(1234);
+      const tmp2Result = tmp2(1115);
     }
     isMatch = isIOSResult;
     const obj4 = set;
@@ -214,10 +214,10 @@ export default function AttachmentPreview(height) {
           const obj3 = { uri: null };
           obj3[0] = uri;
           obj1[1] = obj3;
-          obj[1] = callback(tmp7(8621).VideoComponent, obj1);
+          obj[1] = callback(tmp7(8307).VideoComponent, obj1);
           tmp9 = callback(closure_5, obj);
         }
-        tmp7Result = tmp7(1234);
+        tmp7Result = tmp7(1115);
       }
       tmp8 = dependencyMap;
     } else {
@@ -239,7 +239,7 @@ export default function AttachmentPreview(height) {
       const obj6 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj6[0] = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(10239).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(10132).CirclePlayIcon;
       tmp6 = callback(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj6[1] = tmp6;
       items[1] = callback(closure_5, obj6);

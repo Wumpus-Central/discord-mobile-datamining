@@ -1,13 +1,13 @@
-// === Module 14546: EditGuildIdentityAvatar ===
+// === Module 14653: EditGuildIdentityAvatar ===
 
-// Module 14546 (EditGuildIdentityAvatar)
+// Module 14653 (EditGuildIdentityAvatar)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 1991 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1923 */;
+import closure_4 from "trackCommunicationDisabled" /* 2021 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import { PremiumUpsellTypes } from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ AnalyticsSections: closure_6, AnalyticsObjects: error, UpsellTypes: closure_8 } = ME);

@@ -1,9 +1,9 @@
-// === Module 17479: importDefaultResult1 ===
+// === Module 17639: importDefaultResult1 ===
 
-// Module 17479 (importDefaultResult1)
-import importDefaultResult1 from "hasLoaded" /* 17480 */;
-import { Endpoints } from "ME" /* 673 */;
-import initialize from "initialize" /* 586 */;
+// Module 17639 (importDefaultResult1)
+import importDefaultResult1 from "hasLoaded" /* 17640 */;
+import { Endpoints } from "ME" /* 1074 */;
+import initialize from "initialize" /* 504 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;

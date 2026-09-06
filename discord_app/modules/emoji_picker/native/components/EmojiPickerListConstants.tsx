@@ -1,8 +1,8 @@
-// === Module 9119: IMAGE_SIZE ===
+// === Module 10290: IMAGE_SIZE ===
 
-// Module 9119 (IMAGE_SIZE)
+// Module 10290 (IMAGE_SIZE)
 import set from "set" /* 2 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1337 */;
+import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1219 */;
 
 const result = 2 * ExpressionPickerViewType.PADDING_VERTICAL;
 const result1 = set.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListConstants.tsx");

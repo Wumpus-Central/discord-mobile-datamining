@@ -1,8 +1,8 @@
-// === Module 11216: useSafeAreaBottomKeyboardInfoController ===
+// === Module 11355: useSafeAreaBottomKeyboardInfoController ===
 
-// Module 11216 (useSafeAreaBottomKeyboardInfoController)
+// Module 11355 (useSafeAreaBottomKeyboardInfoController)
 import closure_3 from "noop" /* 19 */;
-import isMetaQuest from "isMetaQuest" /* 1623 */;
+import isMetaQuest from "isMetaQuest" /* 1608 */;
 
 const require = arg1;
 isMetaQuest = isMetaQuest.isMetaQuest();

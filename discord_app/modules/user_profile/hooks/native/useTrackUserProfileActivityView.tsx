@@ -1,9 +1,9 @@
-// === Module 9437: useTrackUserProfileActivityView ===
+// === Module 13021: useTrackUserProfileActivityView ===
 
-// Module 9437 (useTrackUserProfileActivityView)
+// Module 13021 (useTrackUserProfileActivityView)
 import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import closure_5 from "map" /* 9436 */;
+import closure_5 from "map" /* 8791 */;
 
 const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);

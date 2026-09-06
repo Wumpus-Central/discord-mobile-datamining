@@ -1,19 +1,19 @@
-// === Module 4554: createRTCConnection ===
+// === Module 4583: createRTCConnection ===
 
-// Module 4554 (createRTCConnection)
+// Module 4583 (createRTCConnection)
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import sleep from "sleep" /* 4558 */;
-import updateVoiceStatesDefault from "updateVoiceStates" /* 13718 */;
-import useSpatialAudioControlState from "useSpatialAudioControlState" /* 13719 */;
-import trackVideoToggle from "trackVideoToggle" /* 13721 */;
-import closure_5 from "set" /* 4495 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import closure_7 from "getVoiceStatesForGuild" /* 4555 */;
-import ME from "ME" /* 673 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
-import promise from "expandEventProperties" /* 695 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sleep from "sleep" /* 4589 */;
+import updateVoiceStatesDefault from "updateVoiceStates" /* 13824 */;
+import useSpatialAudioControlState from "useSpatialAudioControlState" /* 13825 */;
+import trackVideoToggle from "trackVideoToggle" /* 13827 */;
+import closure_5 from "set" /* 4577 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import closure_7 from "getVoiceStatesForGuild" /* 4584 */;
+import ME from "ME" /* 1074 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
+import promise from "expandEventProperties" /* 1242 */;
 
 require = arg1;
 function createRTCConnection(arg0, arg1, arg2) {
@@ -30,12 +30,12 @@ function createRTCConnection(arg0, arg1, arg2) {
     obj[3] = arg1;
     obj[4] = c23;
     obj[5] = arg2;
-    _default = new _default(4556).default(obj);
-    _default.on(_default(4578).RTCConnectionEvent.State, (arg0, arg1, arg2) => {
+    _default = new _default(4587).default(obj);
+    _default.on(_default(4614).RTCConnectionEvent.State, (arg0, arg1, arg2) => {
       closure_0 = arg0;
       const callback = arg1;
       dependencyMap = arg2;
-      callback(706).wait(() => {
+      callback(573).wait(() => {
         let obj = callback(table[8]);
         obj = { type: "RTC_CONNECTION_STATE", state: closure_0 };
         const merged = Object.assign(callback);
@@ -43,7 +43,7 @@ function createRTCConnection(arg0, arg1, arg2) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4578).RTCConnectionEvent.Video, (arg0, arg1, arg2, arg3, arg4) => {
+    _default.on(_default(4614).RTCConnectionEvent.Video, (arg0, arg1, arg2, arg3, arg4) => {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
@@ -55,29 +55,29 @@ function createRTCConnection(arg0, arg1, arg2) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4578).RTCConnectionEvent.Ping, (arg0, arg1) => {
+    _default.on(_default(4614).RTCConnectionEvent.Ping, (arg0, arg1) => {
       closure_0 = arg0;
       const callback = arg1;
-      callback(706).wait(() => {
+      callback(573).wait(() => {
         let obj = callback(closure_1_2[8]);
         obj = { type: "RTC_CONNECTION_PING", pings: closure_0, quality: callback };
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4578).RTCConnectionEvent.OutboundLossRate, (arg0) => {
+    _default.on(_default(4614).RTCConnectionEvent.OutboundLossRate, (arg0) => {
       closure_0 = arg0;
-      callback(706).wait(() => {
+      callback(573).wait(() => {
         let obj = closure_1_1(closure_1_2[8]);
         obj = { type: "RTC_CONNECTION_LOSS_RATE", lossRate: closure_0 };
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4578).RTCConnectionEvent.Speaking, (userId, speaking) => {
+    _default.on(_default(4614).RTCConnectionEvent.Speaking, (userId, speaking) => {
       if (closure_17 != null) {
         closure_17.setSpeaking(userId, speaking);
       }
     });
-    _default.on(_default(4578).RTCConnectionEvent.Flags, (arg0, arg1) => {
+    _default.on(_default(4614).RTCConnectionEvent.Flags, (arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_1_1(closure_1_2[8]).wait(() => {
@@ -86,12 +86,12 @@ function createRTCConnection(arg0, arg1, arg2) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4578).RTCConnectionEvent.UsersMerged, (userIds, context) => {
-      let obj = callback(706);
+    _default.on(_default(4614).RTCConnectionEvent.UsersMerged, (userIds, context) => {
+      let obj = callback(573);
       obj = { type: "RTC_CONNECTION_USERS_MERGED", userIds, context };
       obj.dispatch(obj);
     });
-    _default.on(_default(4578).RTCConnectionEvent.ClientConnect, (arg0) => {
+    _default.on(_default(4614).RTCConnectionEvent.ClientConnect, (arg0) => {
       closure_0 = arg0;
       closure_1_1(closure_1_2[8]).wait(() => {
         let obj = closure_2_1(closure_2_2[8]);
@@ -99,7 +99,7 @@ function createRTCConnection(arg0, arg1, arg2) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4578).RTCConnectionEvent.ClientDisconnect, (arg0) => {
+    _default.on(_default(4614).RTCConnectionEvent.ClientDisconnect, (arg0) => {
       closure_0 = arg0;
       closure_1_1(closure_1_2[8]).wait(() => {
         let obj = closure_2_1(closure_2_2[8]);
@@ -107,24 +107,24 @@ function createRTCConnection(arg0, arg1, arg2) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4578).RTCConnectionEvent.Platform, (arg0, arg1, arg2) => {
+    _default.on(_default(4614).RTCConnectionEvent.Platform, (arg0, arg1, arg2) => {
       closure_0 = arg0;
       const callback = arg1;
       dependencyMap = arg2;
-      callback(706).wait(() => {
+      callback(573).wait(() => {
         let obj = callback(table[8]);
         obj = { type: "RTC_CONNECTION_PLATFORM", platform: callback, userId: closure_0, channelId: table };
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4578).RTCConnectionEvent.SecureFramesUpdate, () => {
-      callback(706).wait(() => {
+    _default.on(_default(4614).RTCConnectionEvent.SecureFramesUpdate, () => {
+      callback(573).wait(() => {
         callback(table[8]).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
       });
     });
-    _default.on(_default(4578).RTCConnectionEvent.RosterMapUpdate, (arg0) => {
+    _default.on(_default(4614).RTCConnectionEvent.RosterMapUpdate, (arg0) => {
       closure_0 = arg0;
-      callback(706).wait(() => {
+      callback(573).wait(() => {
         let obj = closure_1_1(closure_1_2[8]);
         obj = { type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: closure_0 };
         obj.dispatch(obj);
@@ -600,7 +600,7 @@ const rTCConnectionStore = new RTCConnectionStore(dispatcherDefault, {
       _null2 = null;
     }
     if (null != channelId.channelId) {
-      timeout = new _require(4362).Timeout();
+      timeout = new _require(4447).Timeout();
       timeout.start(30000, () => {
         closure_1_12.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", { joinVoiceId: channelId.joinVoiceId, channelId: channelId.channelId, guildId: channelId.guildId });
         c24 = null;
@@ -896,7 +896,7 @@ let obj = {
       _null2 = null;
     }
     if (null != channelId.channelId) {
-      timeout = new _require(4362).Timeout();
+      timeout = new _require(4447).Timeout();
       timeout.start(30000, () => {
         closure_1_12.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", { joinVoiceId: channelId.joinVoiceId, channelId: channelId.channelId, guildId: channelId.guildId });
         c24 = null;

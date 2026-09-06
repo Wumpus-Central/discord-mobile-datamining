@@ -1,11 +1,11 @@
-// === Module 17304: clearPendingRetry ===
+// === Module 17464: clearPendingRetry ===
 
-// Module 17304 (clearPendingRetry)
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 17464 (clearPendingRetry)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 14711 */;
-import importDefaultResult from "fails" /* 581 */;
+import closure_4 from "initialize" /* 14867 */;
+import importDefaultResult from "fails" /* 559 */;
 
 const require = arg1;
 function clearPendingRetry() {
@@ -159,7 +159,7 @@ function fetchWarning() {
   } else {
     return Promise.resolve();
   }
-  obj = _require(17305);
+  obj = _require(17465);
 }
 function maybeFetchWarning() {
   const self = this;

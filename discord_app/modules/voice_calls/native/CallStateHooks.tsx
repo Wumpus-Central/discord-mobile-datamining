@@ -1,17 +1,17 @@
-// === Module 13687: id ===
+// === Module 13795: id ===
 
-// Module 13687 (id)
-import closure_3 from "getParticipants" /* 4494 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "callConnect" /* 5231 */;
-import closure_6 from "createRTCConnection" /* 4554 */;
-import ME from "ME" /* 673 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
+// Module 13795 (id)
+import closure_3 from "getParticipants" /* 4576 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "callConnect" /* 5278 */;
+import closure_6 from "createRTCConnection" /* 4583 */;
+import ME from "ME" /* 1074 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: error, RTCConnectionStates: closure_8 } = ME);
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "r" });
+const merged = Object.assign({ initialized: false, callId: "PX_16" });
 obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
 const result = require("set").fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 
@@ -33,7 +33,7 @@ export default function _default() {
   dependencyMap = undefined;
   let stateFromStores;
   id = id.getId();
-  obj = _require(586);
+  obj = _require(504);
   const items = [closure_5];
   const items1 = [tmp, id];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -59,14 +59,14 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(9667)();
+  const tmp3 = id(9215)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
-  stateFromStores = _require(586).useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
-  const obj2 = _require(586);
+  stateFromStores = _require(504).useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
+  const obj2 = _require(504);
   const items3 = [getRTCConnectionId];
   const items4 = [stateFromStores, tmp3, tmp];
-  const stateFromStores1 = _require(586).useStateFromStores(items3, () => {
+  const stateFromStores1 = _require(504).useStateFromStores(items3, () => {
     let channelId;
     if (channelId != null) {
       channelId = channelId.channelId;

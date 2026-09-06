@@ -1,8 +1,8 @@
-// === Module 10942: useTrackFavoritesGuildAddModalOpened ===
+// === Module 10980: useTrackFavoritesGuildAddModalOpened ===
 
-// Module 10942 (useTrackFavoritesGuildAddModalOpened)
+// Module 10980 (useTrackFavoritesGuildAddModalOpened)
 import closure_2 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const result = require("set").fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildAddModalOpened.tsx");
 

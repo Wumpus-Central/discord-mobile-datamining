@@ -1,17 +1,17 @@
-// === Module 16224: AvatarDefault ===
+// === Module 16386: AvatarDefault ===
 
-// Module 16224 (AvatarDefault)
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import map from "map" /* 4197 */;
-import SolidCutout from "SolidCutout" /* 8109 */;
-import SolidCutoutDefault from "SolidCutout" /* 8109 */;
-import ReactionIcon from "ReactionIcon" /* 8241 */;
+// Module 16386 (AvatarDefault)
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import map from "map" /* 4262 */;
+import ReactionIcon from "ReactionIcon" /* 8757 */;
+import SolidCutout from "SolidCutout" /* 8813 */;
+import SolidCutoutDefault from "SolidCutout" /* 8813 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14940 */;
-import { StatusTypes } from "ME" /* 673 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15098 */;
+import { StatusTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -26,11 +26,11 @@ function AvatarDefault() {
   }
   const tmp7 = Button.AVATAR_SIZE_MAP[closure_5];
   const result = num / 2;
-  const sum = result + tmp2(1296).STATUS_PADDING;
+  const sum = result + tmp2(1178).STATUS_PADDING;
   const diff = tmp7 - sum - num / 4 * 2;
-  obj = { shape: tmp2(8109).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
+  obj = { shape: tmp2(8813).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
   obj = { style: null, children: null };
-  obj1 = { height: tmp2(1296).AVATAR_SIZE_MAP[tmp6], width: tmp2(1296).AVATAR_SIZE_MAP[tmp6], position: "relative" };
+  obj1 = { height: tmp2(1178).AVATAR_SIZE_MAP[tmp6], width: tmp2(1178).AVATAR_SIZE_MAP[tmp6], position: "relative" };
   obj[0] = obj1;
   const obj2 = { cutouts: items, children: null };
   items = [obj];

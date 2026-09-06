@@ -1,13 +1,13 @@
-// === Module 11407: UserProfileSection ===
+// === Module 11582: UserProfileSection ===
 
-// Module 11407 (UserProfileSection)
+// Module 11582 (UserProfileSection)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import ManaContext from "ManaContext" /* 4204 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 5984 */;
+import ThemesDefault from "Themes" /* 576 */;
+import ManaContext from "ManaContext" /* 4271 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7184 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -32,8 +32,8 @@ export default function UserProfileSection(title) {
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
-      let borderColor = tmp3(4326).hexOpacityToRgba(tmp3(8382).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
-      const tmp3Result = tmp3(4326);
+      let borderColor = tmp3(4409).hexOpacityToRgba(tmp3(8599).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
+      const tmp3Result = tmp3(4409);
     }
     obj.borderColor = borderColor;
     obj = { style: null };
@@ -48,7 +48,7 @@ export default function UserProfileSection(title) {
       obj2[0] = tmp2.title;
       const obj3 = { variant: "eyebrow", accessibilityRole: "header", children: null };
       obj3[2] = title;
-      const items1 = [callback(tmp3(4474).Text, obj3), headerIcon];
+      const items1 = [callback(tmp3(4556).Text, obj3), headerIcon];
       obj2[1] = items1;
       const items2 = [tmp8(tmp9, obj2), trailingIcon];
       obj1[1] = items2;

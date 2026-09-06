@@ -1,14 +1,14 @@
-// === Module 8060: updateAssets ===
+// === Module 8139: updateAssets ===
 
-// Module 8060 (updateAssets)
+// Module 8139 (updateAssets)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import sendRequest from "sendRequest" /* 527 */;
-import handleImageLoad from "handleImageLoad" /* 1464 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import handleImageLoad from "handleImageLoad" /* 1430 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 8061 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 8140 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function updateAssets(closure_0) {

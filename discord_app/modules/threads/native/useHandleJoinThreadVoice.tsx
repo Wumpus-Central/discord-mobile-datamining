@@ -1,8 +1,8 @@
-// === Module 7657: useHandleJoinThreadVoice ===
+// === Module 7903: useHandleJoinThreadVoice ===
 
-// Module 7657 (useHandleJoinThreadVoice)
+// Module 7903 (useHandleJoinThreadVoice)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "storeThread" /* 4122 */;
+import closure_4 from "storeThread" /* 4201 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/threads/native/useHandleJoinThreadVoice.tsx");

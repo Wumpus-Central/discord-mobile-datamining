@@ -1,9 +1,9 @@
-// === Module 11191: ChannelPickerActionSheet ===
+// === Module 11330: ChannelPickerActionSheet ===
 
-// Module 11191 (ChannelPickerActionSheet)
+// Module 11330 (ChannelPickerActionSheet)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "markAllUserIdListsStale" /* 4130 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import closure_3 from "markAllUserIdListsStale" /* 4209 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -32,14 +32,14 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
     obj[1] = tmp4;
     tmp3 = callback(_require(tmp2[7]).BottomSheetTitleHeader, obj);
   }
-  let tmp9;
+  let items;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
     obj = { value: "", label: null, icon: null };
     obj[1] = noChannelOptionLabel.noChannelOptionLabel;
     obj1 = { source: null };
     obj1[0] = importDefault(tmp2[10]);
     obj[2] = callback(_require(tmp2[9]).TableRowIcon, obj1);
-    tmp9 = callback(_require(tmp2[8]).TableRadioRow, obj);
+    items = callback(_require(tmp2[8]).TableRadioRow, obj);
   }
   let obj2 = { scrollable: true, header: tmp3, children: null };
   const obj3 = { contentContainerStyle: { paddingBottom: importDefault(channels[4])().bottom }, children: null };
@@ -72,8 +72,11 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
       const obj2 = closure_1_1(channels[6]);
     }
   };
-  const items = [
-    tmp9,
+  if (items == null) {
+    items = [];
+  }
+  const items1 = [
+    items,
     channels.map((id) => {
       let obj = noChannelOptionLabel(channels[14]);
       const channelIconWithGuild = obj.getChannelIconWithGuild(id, closure_1);
@@ -88,7 +91,7 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
       return closure_1_5(noChannelOptionLabel(channels[8]).TableRadioRow, obj, id.id);
     })
   ];
-  obj4[4] = items;
+  obj4[4] = items1;
   obj3[1] = closure_6(_require(channels[13]).TableRadioGroup, obj4);
   obj2[2] = callback(_require(channels[12]).BottomSheetScrollView, obj3);
   return callback(_require(channels[11]).ActionSheet, obj2);

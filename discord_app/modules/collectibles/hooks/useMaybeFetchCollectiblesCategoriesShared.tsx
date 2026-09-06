@@ -1,11 +1,11 @@
-// === Module 8098: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 10737: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 8098 (useMaybeFetchCollectiblesCategoriesShared)
+// Module 10737 (useMaybeFetchCollectiblesCategoriesShared)
 import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import closure_5 from "getHash" /* 4391 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7297 */;
-import items from "items" /* 675 */;
+import closure_5 from "getHash" /* 4476 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7542 */;
+import items from "items" /* 1076 */;
 
 const require = arg1;
 ({ useEffect: c3, useCallback: c4 } = noop);
@@ -26,11 +26,11 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
   closure_7 = undefined;
   closure_8 = undefined;
   closure_9 = undefined;
-  let obj = _require(586);
+  let obj = _require(504);
   let items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_6];
-  const tmp2 = callback(_require(586).useStateFromStoresArray(items1, () => {
+  const tmp2 = callback(_require(504).useStateFromStoresArray(items1, () => {
     const items = [, , , , , , ];
     ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = closure_6);
     if (lastErrorTimestamp == null) {

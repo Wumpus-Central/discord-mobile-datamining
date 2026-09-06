@@ -1,6 +1,6 @@
-// === Module 1926: GiftIntentType ===
+// === Module 1376: GiftIntentType ===
 
-// Module 1926 (GiftIntentType)
+// Module 1376 (GiftIntentType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_intent_type.tsx");

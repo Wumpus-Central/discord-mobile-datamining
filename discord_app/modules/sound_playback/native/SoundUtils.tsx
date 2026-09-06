@@ -1,9 +1,9 @@
-// === Module 10023: _createSound ===
+// === Module 9906: _createSound ===
 
-// Module 10023 (_createSound)
+// Module 9906 (_createSound)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import isMetaQuest from "isMetaQuest" /* 1623 */;
+import isMetaQuest from "isMetaQuest" /* 1608 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let c3 = 0;

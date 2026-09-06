@@ -1,12 +1,12 @@
-// === Module 15151: slider ===
+// === Module 15311: slider ===
 
-// Module 15151 (slider)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+// Module 15311 (slider)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 import closure_2 from "noop" /* 19 */;
-import { useFontScaleStore } from "DEFAULT_FONT_SCALE_STORE_STATE" /* 15103 */;
-import { FontScales } from "MAX_FAVORITES" /* 682 */;
+import { useFontScaleStore } from "DEFAULT_FONT_SCALE_STORE_STATE" /* 15263 */;
+import { FontScales } from "MAX_FAVORITES" /* 1084 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11292 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {

@@ -1,12 +1,12 @@
-// === Module 16901: useSortedGuildIdsForSoundboard ===
+// === Module 17065: useSortedGuildIdsForSoundboard ===
 
-// Module 16901 (useSortedGuildIdsForSoundboard)
+// Module 17065 (useSortedGuildIdsForSoundboard)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_5 from "insertUnsortedGuilds" /* 5390 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 673 */;
-import { Permissions } from "sum" /* 502 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_5 from "insertUnsortedGuilds" /* 5438 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
+import { Permissions } from "sum" /* 1085 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/soundboard/useSortedGuildIdsForSoundboard.tsx");

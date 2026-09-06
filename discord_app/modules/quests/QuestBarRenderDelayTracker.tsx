@@ -1,12 +1,12 @@
-// === Module 11160: clearTimeoutTimer ===
+// === Module 11299: clearTimeoutTimer ===
 
-// Module 11160 (clearTimeoutTimer)
+// Module 11299 (clearTimeoutTimer)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import setDefault from "set" /* 7357 */;
-import set2 from "set" /* 7362 */;
-import _modDef11161 from "module_11161" /* 11161 */;
+import ME from "ME" /* 1074 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import setDefault from "set" /* 7602 */;
+import set2 from "set" /* 7607 */;
+import _modDef11300 from "module_11300" /* 11300 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let c4 = 30000;
@@ -71,7 +71,7 @@ prototype["stopTracking"] = function stopTracking(arg0) {
         const _Math2 = Math;
         self.sendMetric(arg0, flag, Math.min(rounded, c4));
       }
-      obj = _modDef11161;
+      obj = _modDef11300;
     }
   }
 };

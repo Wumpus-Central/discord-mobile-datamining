@@ -1,14 +1,14 @@
-// === Module 10251: MuteSettings ===
+// === Module 10144: MuteSettings ===
 
-// Module 10251 (MuteSettings)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
+// Module 10144 (MuteSettings)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "markAllUserIdListsStale" /* 4130 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import { UserNotificationSettings } from "ME" /* 673 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "markAllUserIdListsStale" /* 4209 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import { UserNotificationSettings } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -123,7 +123,7 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
     const intl4 = getSystemLocale.intl;
     obj1 = { mutedHook: null };
     obj1[0] = function mutedHook(children) {
-      return callback2(callback(4474).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
+      return callback2(callback(4556).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
     };
     obj[2] = intl4.format(getSystemLocale.t.O34r15, obj1);
     tmp3 = callback(Text.Text, obj);
@@ -132,7 +132,7 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
     const intl3 = getSystemLocale.intl;
     const obj3 = { notificationHook: null };
     obj3[0] = function notificationHook(children) {
-      return callback2(callback(4474).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
+      return callback2(callback(4556).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
     };
     obj2[2] = intl3.format(getSystemLocale.t.nRwUIL, obj3);
     tmp3 = callback(Text.Text, obj2);
@@ -142,11 +142,11 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
     }
     obj = dependencyMap;
     if (guildMessageNotifications === tmp2.ALL_MESSAGES) {
-      const intl2 = tmp5(1233).intl;
-      let stringResult = intl2.string(tmp5(1233).t.mUbulW);
+      const intl2 = tmp5(1114).intl;
+      let stringResult = intl2.string(tmp5(1114).t.mUbulW);
     } else {
-      const intl = tmp5(1233).intl;
-      stringResult = intl.string(tmp5(1233).t.GGAdHV);
+      const intl = tmp5(1114).intl;
+      stringResult = intl.string(tmp5(1114).t.GGAdHV);
     }
     obj = { variant: "text-sm/medium", color: "text-default", children: null };
     obj[2] = stringResult;

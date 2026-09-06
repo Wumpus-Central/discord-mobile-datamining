@@ -1,9 +1,9 @@
-// === Module 11071: BalanceCounter ===
+// === Module 11098: BalanceCounter ===
 
-// Module 11071 (BalanceCounter)
-import context from "context" /* 1355 */;
-import _mod4217 from "module_4217" /* 4217 */;
-import Text from "Text" /* 4474 */;
+// Module 11098 (BalanceCounter)
+import context from "context" /* 4279 */;
+import _mod4296 from "module_4296" /* 4296 */;
+import Text from "Text" /* 4556 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import closure_8 from "noop" /* 19 */;
@@ -39,7 +39,7 @@ class BalanceCounter {
     closure_2 = closure_6(null);
     tmp2 = closure_2;
     tmp = closure_0;
-    obj = require("module_4217");
+    obj = require("module_4296");
     sharedValue = require("module_0");
     closure_3 = sharedValue;
     closure_4 = closure_6(null);
@@ -110,7 +110,7 @@ class BalanceCounter {
         ref.current = tmp;
       }
     }, items);
-    tmp12 = require("module_4217");
+    tmp12 = require("module_4296");
     class F {
       constructor() {
         if (closure_8) {
@@ -120,10 +120,10 @@ class BalanceCounter {
           str = Math.round(closure_3.get());
           tmp3 = value;
           tmp4 = closure_2;
-          obj = require("module_4217");
+          obj = require("module_4296");
           tmp5 = closure_6;
           tmp6 = obj.runOnJS(closure_6)(str);
-          obj2 = require("module_4217");
+          obj2 = require("module_4296");
           tmp7 = closure_7;
           runOnJSResult = obj2.runOnJS(closure_7);
           tmp8Result = runOnJSResult(str.toString().length);
@@ -131,7 +131,7 @@ class BalanceCounter {
         return {};
       }
     }
-    obj = { isAnimating: first, animatedValue: sharedValue, runOnJS: require("module_4217").runOnJS, setDisplayValue: tmp5, setMaxDigits: tmp7 };
+    obj = { isAnimating: first, animatedValue: sharedValue, runOnJS: require("module_4296").runOnJS, setDisplayValue: tmp5, setMaxDigits: tmp7 };
     F.__closure = obj;
     F.__workletHash = 4408542396979;
     F.__initData = clearAnimationTimeout;
@@ -151,7 +151,7 @@ class BalanceCounter {
       obj3[1] = style;
       obj3[3] = require("module_0");
       obj1[1] = closure_9(require("Text").Text, obj3);
-      tmp14 = closure_9(require("module_4217").View, obj1);
+      tmp14 = closure_9(require("module_4296").View, obj1);
     }
     return tmp14;
   }

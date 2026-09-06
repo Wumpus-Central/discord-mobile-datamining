@@ -1,12 +1,12 @@
-// === Module 12042: FadeTransitionItem ===
+// === Module 12246: FadeTransitionItem ===
 
-// Module 12042 (FadeTransitionItem)
-import ManaContext from "ManaContext" /* 4204 */;
-import _modDef4217 from "module_4217" /* 4217 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12043 */;
+// Module 12246 (FadeTransitionItem)
+import ManaContext from "ManaContext" /* 4271 */;
+import _modDef4296 from "module_4296" /* 4296 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12247 */;
 import closure_3 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta" /* 11763 */;
+import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta" /* 11962 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -89,7 +89,7 @@ function BounceTransitionItem(state) {
   obj[2] = str2;
   const merged = Object.assign(obj);
   obj.children = children;
-  return jsx(_modDef4217.View, { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null });
+  return jsx(_modDef4296.View, { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null });
 }
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}" };

@@ -1,15 +1,15 @@
-// === Module 17307: isChannelEligible ===
+// === Module 17467: isChannelEligible ===
 
-// Module 17307 (isChannelEligible)
-import set2 from "set" /* 689 */;
-import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9965 */;
-import onPostConnectionOpenDefault from "onPostConnectionOpen" /* 17308 */;
-import closure_2 from "recomputeAffinities" /* 7414 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "reinjectEphemerals" /* 4736 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import closure_6 from "getCurrentTime" /* 7999 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+// Module 17467 (isChannelEligible)
+import set2 from "set" /* 1094 */;
+import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9848 */;
+import onPostConnectionOpenDefault from "onPostConnectionOpen" /* 17468 */;
+import closure_2 from "recomputeAffinities" /* 7659 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "reinjectEphemerals" /* 4781 */;
+import closure_5 from "handleConnectionOpen" /* 2011 */;
+import closure_6 from "getCurrentTime" /* 8078 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 
 require = arg1;
 ({ GiftIntentSecondaryAction: error, GiftIntentType: closure_8 } = GuildFeatures);
@@ -25,19 +25,19 @@ prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
   self = this;
   dependencyMap = id;
   const _require = closure_0;
-  const EnableFriendAnniversaryNotifications = _require(4166).EnableFriendAnniversaryNotifications;
+  const EnableFriendAnniversaryNotifications = _require(1935).EnableFriendAnniversaryNotifications;
   if (EnableFriendAnniversaryNotifications.getSetting()) {
     if (!closure_6.isGiftIntentMessageInCooldown(closure_0)) {
       if (id === store.getChannelId()) {
         if (ready.isReady(id)) {
           if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, closure_0, constants.SEND_MESSAGE)) {
-            let tmpResult = tmp(10742);
+            let tmpResult = tmp(10744);
             const result = tmpResult.logMessageGiftIntentShown(closure_0);
             const userAffinity = self.getUserAffinity(closure_0);
-            tmpResult = tmp(8911);
+            tmpResult = tmp(8768);
             let obj = { name: null, type: null, properties: null };
-            obj[0] = tmp(500).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION;
-            obj[1] = tmp(500).ImpressionTypes.VIEW;
+            obj[0] = tmp(1250).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION;
+            obj[1] = tmp(1250).ImpressionTypes.VIEW;
             obj = { gift_intent_type: null, dm_affinity: null, channel_id: null };
             obj[0] = tmp6.FRIEND_ANNIVERSARY;
             let dmProbability;

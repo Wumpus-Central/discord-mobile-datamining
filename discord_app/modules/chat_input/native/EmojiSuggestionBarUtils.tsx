@@ -1,10 +1,10 @@
-// === Module 12226: MAX_SUGGESTIONS_LARGE ===
+// === Module 12426: MAX_SUGGESTIONS_LARGE ===
 
-// Module 12226 (MAX_SUGGESTIONS_LARGE)
+// Module 12426 (MAX_SUGGESTIONS_LARGE)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { UpsellTypes } from "ME" /* 673 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import { UpsellTypes } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -93,7 +93,7 @@ export const useSuggestionBarHeight = function useSuggestionBarHeight(transition
   closure_1 = cleanUp;
   dependencyMap = closure_6;
   closure_3 = onOccupiedHeightChange;
-  const sharedValue = _require(4217).useSharedValue(0);
+  const sharedValue = _require(4296).useSharedValue(0);
   const items = [transitionState, sharedValue, cleanUp, closure_6, onOccupiedHeightChange];
   const effect = sharedValue.useEffect(() => {
     if (transitionState === transitionState(table[8]).TransitionStates.YEETED) {

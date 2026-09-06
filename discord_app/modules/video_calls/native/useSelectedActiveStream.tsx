@@ -1,8 +1,8 @@
-// === Module 13685: useSelectedActiveStream ===
+// === Module 13793: useSelectedActiveStream ===
 
-// Module 13685 (useSelectedActiveStream)
-import closure_2 from "getParticipants" /* 4494 */;
-import closure_3 from "reset" /* 4500 */;
+// Module 13793 (useSelectedActiveStream)
+import closure_2 from "getParticipants" /* 4576 */;
+import closure_3 from "reset" /* 4582 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/video_calls/native/
 export default function useSelectedActiveStream(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const selectedParticipantId = closure_1_2.getSelectedParticipantId(id.id);
     let activeStreamForStreamKey = null;
     if (null != selectedParticipantId) {

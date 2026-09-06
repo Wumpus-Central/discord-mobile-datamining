@@ -1,8 +1,8 @@
-// === Module 8566: PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO ===
+// === Module 8222: PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO ===
 
-// Module 8566 (PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO)
+// Module 8222 (PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO)
 import set from "set" /* 2 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8556 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8207 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 12762: navigateToPremiumHomePage ===
+// === Module 11597: navigateToPremiumHomePage ===
 
-// Module 12762 (navigateToPremiumHomePage)
+// Module 11597 (navigateToPremiumHomePage)
 import set from "set" /* 2 */;
-import transitionTo from "transitionTo" /* 1219 */;
-import openUserSettings from "openUserSettings" /* 6255 */;
-import pushLayer from "pushLayer" /* 7342 */;
-import ME from "ME" /* 673 */;
+import transitionTo from "transitionTo" /* 1100 */;
+import openUserSettings from "openUserSettings" /* 7382 */;
+import pushLayer from "pushLayer" /* 7587 */;
+import ME from "ME" /* 1074 */;
 
 ({ Routes: obj1, UserSettingsSections: c3 } = ME);
 const result = set.fileFinishedImporting("modules/premium/PremiumMarketingUtil.tsx");

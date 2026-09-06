@@ -1,26 +1,26 @@
-// === Module 6134: handleConnectionOpenOrResumed ===
+// === Module 7278: handleConnectionOpenOrResumed ===
 
-// Module 6134 (handleConnectionOpenOrResumed)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
-import _enqueueDefault from "_enqueue" /* 6139 */;
+// Module 7278 (handleConnectionOpenOrResumed)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
+import _enqueueDefault from "_enqueue" /* 7284 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "getHash" /* 4391 */;
-import closure_6 from "initialize" /* 4121 */;
-import closure_7 from "upsertAccount" /* 5233 */;
-import closure_8 from "fetchFingerprint" /* 1215 */;
-import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 6135 */;
-import closure_10 from "handlePermissionsChange" /* 6136 */;
-import closure_11 from "ensureGuildLoaded" /* 1386 */;
-import closure_12 from "handleConnectionOpen" /* 4856 */;
-import closure_13 from "trackCommunicationDisabled" /* 1991 */;
-import closure_14 from "createGuildRecordFromRust" /* 1908 */;
-import closure_15 from "createRTCConnection" /* 4554 */;
-import closure_16 from "markAllUserIdListsStale" /* 4130 */;
-import closure_17 from "handleConnectionOpen" /* 1980 */;
-import closure_18 from "handleConnectionOpen" /* 4299 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "getHash" /* 4476 */;
+import closure_6 from "initialize" /* 4200 */;
+import closure_7 from "upsertAccount" /* 5280 */;
+import closure_8 from "fetchFingerprint" /* 502 */;
+import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 7279 */;
+import closure_10 from "toggleSection" /* 7280 */;
+import closure_11 from "ensureGuildLoaded" /* 1957 */;
+import closure_12 from "handleConnectionOpen" /* 4902 */;
+import closure_13 from "trackCommunicationDisabled" /* 2021 */;
+import closure_14 from "createGuildRecordFromRust" /* 1979 */;
+import closure_15 from "createRTCConnection" /* 4583 */;
+import closure_16 from "markAllUserIdListsStale" /* 4209 */;
+import closure_17 from "handleConnectionOpen" /* 2011 */;
+import closure_18 from "handleConnectionOpen" /* 4381 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function handleConnectionOpenOrResumed(type) {
@@ -64,8 +64,8 @@ function handleConnectionOpenOrResumed(type) {
     if (!obj1.isEmpty(obj)) {
       obj = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: null };
       obj[1] = obj;
-      tmp3(706).dispatch(obj);
-      const tmp3Result = tmp3(706);
+      tmp3(573).dispatch(obj);
+      const tmp3Result = tmp3(573);
     }
     tmp3 = set;
   }
@@ -88,7 +88,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     store4.subscribeToGuild(tmp11);
-    obj5 = obj(1911);
+    obj5 = obj(1982);
   }
   obj = {};
   set = new Set(closure_6.lurkingGuildIds());
@@ -109,8 +109,8 @@ function handleConnectionOpenOrResumed(type) {
   if (!obj8.isEmpty(obj)) {
     obj1 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: null };
     obj1[1] = obj;
-    set(706).dispatch(obj1);
-    const tmp18Result = set(706);
+    set(573).dispatch(obj1);
+    const tmp18Result = set(573);
   }
 }
 function handleChannelSelect(arg0) {

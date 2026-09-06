@@ -1,10 +1,10 @@
-// === Module 6999: ServerIconStaffServerExample ===
+// === Module 6437: ServerIconStaffServerExample ===
 
-// Module 6999 (ServerIconStaffServerExample)
+// Module 6437 (ServerIconStaffServerExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 7000 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6438 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconStaffServerExample.native.tsx");

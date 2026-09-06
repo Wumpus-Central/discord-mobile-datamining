@@ -1,6 +1,6 @@
-// === Module 4684: GuildRoomBackgrounds ===
+// === Module 4723: GuildRoomBackgrounds ===
 
-// Module 4684 (GuildRoomBackgrounds)
+// Module 4723 (GuildRoomBackgrounds)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildRoomBackgrounds.tsx");

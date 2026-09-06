@@ -1,9 +1,9 @@
-// === Module 17029: getBadgeLeft ===
+// === Module 17193: getBadgeLeft ===
 
-// Module 17029 (getBadgeLeft)
-import inlineStyles from "inlineStyles" /* 8254 */;
-import inlineStylesDefault from "inlineStyles" /* 8254 */;
-import CircleWithCutout from "CircleWithCutout" /* 9564 */;
+// Module 17193 (getBadgeLeft)
+import inlineStyles from "inlineStyles" /* 8453 */;
+import inlineStylesDefault from "inlineStyles" /* 8453 */;
+import CircleWithCutout from "CircleWithCutout" /* 9499 */;
 import { PixelRatio } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

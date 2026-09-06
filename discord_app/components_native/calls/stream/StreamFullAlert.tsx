@@ -1,12 +1,12 @@
-// === Module 17695: StreamFullAlert ===
+// === Module 17855: StreamFullAlert ===
 
-// Module 17695 (StreamFullAlert)
+// Module 17855 (StreamFullAlert)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import componentDidMountDefault from "componentDidMount" /* 4948 */;
-import mapped from "mapped" /* 9582 */;
-import registerAssetDefault from "registerAsset" /* 17696 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import componentDidMountDefault from "componentDidMount" /* 4994 */;
+import mapped from "mapped" /* 9110 */;
+import registerAssetDefault from "registerAsset" /* 17856 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -23,14 +23,14 @@ export default function StreamFullAlert(arg0) {
   if (errorInfo != null) {
     errorCode = errorInfo.errorCode;
   }
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj = {};
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.ejOT95, { errorCode });
   const merged = Object.assign(arg0);
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj.title = intl2.string(getSystemLocale.t.GzjdO5);
   obj = { variant: "text-md/normal", style: closure_6.body, children: null };
-  const intl3 = tmp(1233).intl;
+  const intl3 = tmp(1114).intl;
   obj[2] = intl3.string(getSystemLocale.t.VVZDBL);
   const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult }), ];
   obj1 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult };

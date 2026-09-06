@@ -1,10 +1,10 @@
-// === Module 7172: useBlockedPaymentsConfig ===
+// === Module 7417: useBlockedPaymentsConfig ===
 
-// Module 7172 (useBlockedPaymentsConfig)
+// Module 7417 (useBlockedPaymentsConfig)
 import set from "set" /* 2 */;
-import useGeoForUserDefault from "useGeoForUser" /* 7173 */;
-import createExperiment from "createExperiment" /* 4389 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import useGeoForUserDefault from "useGeoForUser" /* 7418 */;
+import createExperiment from "createExperiment" /* 4474 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 const items = [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: true } }];
 let closure_2 = createExperiment.createExperiment({ kind: "user", id: "2022-03_block_russian_purchases", label: "Block purchases based on country", defaultConfig: { paymentsBlocked: false }, treatments: items });

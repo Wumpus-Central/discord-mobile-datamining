@@ -1,10 +1,10 @@
-// === Module 15680: MenuIcon ===
+// === Module 15838: MenuIcon ===
 
-// Module 15680 (MenuIcon)
+// Module 15838 (MenuIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15681 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 15839 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

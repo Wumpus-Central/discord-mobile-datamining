@@ -1,6 +1,6 @@
-// === Module 15572: FRAME_BUDGET_MS ===
+// === Module 15730: FRAME_BUDGET_MS ===
 
-// Module 15572 (FRAME_BUDGET_MS)
+// Module 15730 (FRAME_BUDGET_MS)
 import set from "set" /* 2 */;
 
 let c0 = 16.666666666666668;

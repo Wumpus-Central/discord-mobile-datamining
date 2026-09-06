@@ -1,13 +1,13 @@
-// === Module 8075: createMessageFailedEmbed ===
+// === Module 8154: createMessageFailedEmbed ===
 
-// Module 8075 (createMessageFailedEmbed)
+// Module 8154 (createMessageFailedEmbed)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Changeset from "Changeset" /* 7854 */;
-import frozen from "frozen" /* 7867 */;
-import registerAssetDefault from "registerAsset" /* 8076 */;
-import registerAssetDefault2 from "registerAsset" /* 8077 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Changeset from "Changeset" /* 7933 */;
+import frozen from "frozen" /* 7946 */;
+import registerAssetDefault from "registerAsset" /* 8155 */;
+import registerAssetDefault2 from "registerAsset" /* 8156 */;
 
 const MessageFailureState = Changeset.MessageFailureState;
 const MessageEmbedTypes = ME.MessageEmbedTypes;
@@ -37,8 +37,8 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       let str = "";
       if (0 !== uploaderFile.currentSize) {
         const _HermesInternal = HermesInternal;
-        str = " (" + tmp6(5087).sizeString(uploaderFile.currentSize) + ")";
-        const tmp6Result = tmp6(5087);
+        str = " (" + tmp6(5134).sizeString(uploaderFile.currentSize) + ")";
+        const tmp6Result = tmp6(5134);
       }
       obj[3] = "" + str;
       obj[4] = colors.embedBodyTextColor;

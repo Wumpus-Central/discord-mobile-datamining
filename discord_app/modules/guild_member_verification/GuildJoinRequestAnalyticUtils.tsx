@@ -1,10 +1,10 @@
-// === Module 7674: trackMemberApplicationViewed ===
+// === Module 5543: trackMemberApplicationViewed ===
 
-// Module 7674 (trackMemberApplicationViewed)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "trackCommunicationDisabled" /* 1991 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 5543 (trackMemberApplicationViewed)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "trackCommunicationDisabled" /* 2021 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestAnalyticUtils.tsx");
 

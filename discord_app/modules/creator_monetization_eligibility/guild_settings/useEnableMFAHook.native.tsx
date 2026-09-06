@@ -1,6 +1,6 @@
-// === Module 17529: passthrough ===
+// === Module 17689: passthrough ===
 
-// Module 17529 (passthrough)
+// Module 17689 (passthrough)
 import set from "set" /* 2 */;
 
 function passthrough(arg0) {

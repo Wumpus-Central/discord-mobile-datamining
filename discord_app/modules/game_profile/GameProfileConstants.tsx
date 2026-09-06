@@ -1,6 +1,6 @@
-// === Module 8896: MAX_VISIBLE_ANNOUNCEMENTS ===
+// === Module 8751: MAX_VISIBLE_ANNOUNCEMENTS ===
 
-// Module 8896 (MAX_VISIBLE_ANNOUNCEMENTS)
+// Module 8751 (MAX_VISIBLE_ANNOUNCEMENTS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/game_profile/GameProfileConstants.tsx");

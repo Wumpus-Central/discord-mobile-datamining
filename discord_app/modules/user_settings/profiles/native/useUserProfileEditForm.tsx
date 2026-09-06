@@ -1,33 +1,33 @@
-// === Module 14497: useUserProfileEditForm ===
+// === Module 14604: useUserProfileEditForm ===
 
-// Module 14497 (useUserProfileEditForm)
+// Module 14604 (useUserProfileEditForm)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
-import closure_7 from "handleFormOpen" /* 8081 */;
-import closure_8 from "createUserWidgetFromServer" /* 7376 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import { FormStates } from "ME" /* 673 */;
+import closure_7 from "handleFormOpen" /* 8160 */;
+import closure_8 from "createUserWidgetFromServer" /* 7621 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import { FormStates } from "ME" /* 1074 */;
 
 const require = arg1;
 let closure_3 = ["bannerOriginalMd5"];
 let result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
 
 export default function useUserProfileEditForm() {
-  let obj = pendingChanges(586);
+  let obj = pendingChanges(504);
   const items = [closure_7];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ pendingChanges: store.getPendingChanges(), tryItOutChanges: store.getTryItOutChanges(), errors: store.getErrors() }));
   pendingChanges = stateFromStoresObject.pendingChanges;
   ({ tryItOutChanges, errors } = stateFromStoresObject);
   const items1 = [closure_8, closure_7];
-  const stateFromStores = pendingChanges(586).useStateFromStores(items1, () => {
+  const stateFromStores = pendingChanges(504).useStateFromStores(items1, () => {
     let isSubmitting = store.getFormState() === constants.SUBMITTING;
     if (!isSubmitting) {
       isSubmitting = isSubmitting.isSubmitting;
     }
     return isSubmitting;
   });
-  const effect = React.useEffect(() => () => callback2(706).wait(callback(7768).resetAllPending), []);
+  const effect = React.useEffect(() => () => callback2(573).wait(callback(6984).resetAllPending), []);
   const items2 = [stateFromStores, pendingChanges];
   callback = React.useCallback(callback(() => {
     c6 = 0;
@@ -578,7 +578,7 @@ export default function useUserProfileEditForm() {
               if (closure_1_1) {
                 c3 = 3;
               } else {
-                let obj2 = closure_1_0(7768);
+                let obj2 = closure_1_0(6984);
                 obj1 = { avatarDecoration: null };
                 obj1[0] = closure_1_0.pendingAvatarDecoration;
                 dependencyMap = 1;
@@ -598,7 +598,7 @@ export default function useUserProfileEditForm() {
               ok = ok.ok;
             }
             if (ok) {
-              obj = closure_1_0(7768);
+              obj = closure_1_0(6984);
               const result = obj.resetPendingAccountChanges();
             }
           }
@@ -612,7 +612,7 @@ export default function useUserProfileEditForm() {
         }
       }
     }), items3),
-    resetPending: pendingChanges(7768).resetAllPending
+    resetPending: pendingChanges(6984).resetAllPending
   };
   const merged = Object.assign(pendingChanges);
   const merged1 = Object.assign(tryItOutChanges);

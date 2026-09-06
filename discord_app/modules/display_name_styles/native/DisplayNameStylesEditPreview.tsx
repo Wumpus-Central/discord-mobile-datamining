@@ -1,17 +1,17 @@
-// === Module 15193: ChatPreview ===
+// === Module 15353: ChatPreview ===
 
-// Module 15193 (ChatPreview)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import messagesProxyDefault from "messagesProxy" /* 2758 */;
-import Text from "Text" /* 4474 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8941 */;
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 8942 */;
+// Module 15353 (ChatPreview)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import messagesProxyDefault from "messagesProxy" /* 2786 */;
+import Text from "Text" /* 4556 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10899 */;
+import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 10900 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function ChatPreview(arg0) {

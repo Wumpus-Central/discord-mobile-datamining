@@ -1,24 +1,24 @@
-// === Module 12172: useEventsButtonProps ===
+// === Module 12374: useEventsButtonProps ===
 
-// Module 12172 (useEventsButtonProps)
-import useGuildEventsDefault from "useGuildEvents" /* 9648 */;
+// Module 12374 (useEventsButtonProps)
+import useGuildEventsDefault from "useGuildEvents" /* 9662 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "generateOldThreadCutoff" /* 4493 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 4702 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 4703 */;
+import closure_4 from "generateOldThreadCutoff" /* 4575 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 4741 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 4742 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
 export default function useEventsButtonProps(id) {
   const _require = id;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_4];
   const items1 = [id.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_4.hasUnread(id.id, closure_1_6.GUILD_EVENT), mentionCount: closure_1_4.getMentionCount(id.id, closure_1_6.GUILD_EVENT) }), items1);
   ({ hasUnread, mentionCount } = stateFromStoresObject);
   const items2 = [closure_5];
-  const eventsMuted = _require(586).useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
+  const eventsMuted = _require(504).useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
   const arr4 = useGuildEventsDefault(id.id);
   const items3 = [id];
   const items4 = [id.id];
@@ -38,21 +38,21 @@ export default function useEventsButtonProps(id) {
     obj.openLazy(id(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), "UpcomingEventsLongPress-" + id.id, obj);
   }, items4);
   if (arr4.length > 0) {
-    const intl2 = tmp(1233).intl;
+    const intl2 = tmp(1114).intl;
     obj = { number: null };
     obj[0] = arr4.length;
-    let name = intl2.formatToPlainString(tmp(1233).t.IBdqSu, obj);
+    let name = intl2.formatToPlainString(tmp(1114).t.IBdqSu, obj);
   } else {
-    const intl = tmp(1233).intl;
-    name = intl.string(tmp(1233).t.tlopTM);
+    const intl = tmp(1114).intl;
+    name = intl.string(tmp(1114).t.tlopTM);
   }
-  let mode = tmp(12177).ChannelModes.DEFAULT;
+  let mode = tmp(12379).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12177).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12379).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 };

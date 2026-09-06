@@ -1,7 +1,7 @@
-// === Module 13482: CONTROL_RESOLUTION ===
+// === Module 13588: CONTROL_RESOLUTION ===
 
-// Module 13482 (CONTROL_RESOLUTION)
-import getUnitIdDefault from "getUnitId" /* 1468 */;
+// Module 13588 (CONTROL_RESOLUTION)
+import getUnitIdDefault from "getUnitId" /* 1434 */;
 
 const obj = { 1: null };
 obj[1] = { streamQualityMarketingResolution: "1440p" };

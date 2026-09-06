@@ -1,14 +1,14 @@
-// === Module 16541: ? ===
+// === Module 16707: ? ===
 
-// Module 16541
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 12034 */;
+// Module 16707
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import registerAssetDefault from "registerAsset" /* 12238 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -39,9 +39,9 @@ const memoResult = importAllResult.memo((onCreateThreadPress) => {
   if (tmp4Result) {
     const obj3 = { onPress: null, text: null };
     obj3[0] = onCreateThreadPress;
-    const intl3 = tmp5(1233).intl;
-    obj3[1] = intl3.string(tmp5(1233).t.rBIGBL);
-    tmp4Result = callback(tmp5(4929).Button, obj3);
+    const intl3 = tmp5(1114).intl;
+    obj3[1] = intl3.string(tmp5(1114).t.rBIGBL);
+    tmp4Result = callback(tmp5(4975).Button, obj3);
   }
   items[3] = tmp4Result;
   obj[1] = items;

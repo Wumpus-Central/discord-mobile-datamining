@@ -1,8 +1,8 @@
-// === Module 9506: _selectAndWaitForVoiceChannelJoin ===
+// === Module 9545: _selectAndWaitForVoiceChannelJoin ===
 
-// Module 9506 (_selectAndWaitForVoiceChannelJoin)
+// Module 9545 (_selectAndWaitForVoiceChannelJoin)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "handleConnectionOpen" /* 1980 */;
+import closure_3 from "handleConnectionOpen" /* 2011 */;
 
 function _selectAndWaitForVoiceChannelJoin() {
   const self = this;

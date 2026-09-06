@@ -1,10 +1,10 @@
-// === Module 4651: Video ===
+// === Module 4687: Video ===
 
-// Module 4651 (Video)
+// Module 4687 (Video)
 import set from "set" /* 2 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
-import onDefault from "on" /* 4582 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
+import onDefault from "on" /* 4618 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 function Video() {
   return null;
@@ -131,17 +131,14 @@ prototype["setClipsModulePath"] = function setClipsModulePath() {
 prototype["setClipsDataPath"] = function setClipsDataPath() {
 
 };
-prototype["setClipsV3Enabled"] = function setClipsV3Enabled() {
-
+prototype["hasClipsV3Support"] = function hasClipsV3Support() {
+  return false;
 };
 prototype["setClipsV3MLEnabled"] = function setClipsV3MLEnabled() {
 
 };
 prototype["setClipsRecordingEnabled"] = function setClipsRecordingEnabled() {
 
-};
-prototype["hasSetClipsRecordingEnabled"] = function hasSetClipsRecordingEnabled() {
-  return false;
 };
 prototype["setClipsUIActive"] = function setClipsUIActive() {
 
@@ -159,13 +156,6 @@ prototype["saveClipEx"] = function saveClipEx() {
 prototype["updateClipMetadata"] = function updateClipMetadata() {
   error = new Error("UNSUPPORTED");
   return Promise.reject(error);
-};
-prototype["exportClip"] = function exportClip() {
-  error = new Error("UNSUPPORTED");
-  return Promise.reject(error);
-};
-prototype["hasExportClipToFile"] = function hasExportClipToFile() {
-  return false;
 };
 prototype["exportClipToFile"] = function exportClipToFile() {
   error = new Error("UNSUPPORTED");

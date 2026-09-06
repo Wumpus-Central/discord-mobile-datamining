@@ -1,14 +1,14 @@
-// === Module 15871: ? ===
+// === Module 16033: ? ===
 
-// Module 15871
-import getFontScale from "getFontScale" /* 4936 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7624 */;
-import getLayoutStyles from "getLayoutStyles" /* 10228 */;
+// Module 16033
+import getFontScale from "getFontScale" /* 4982 */;
+import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7869 */;
+import getLayoutStyles from "getLayoutStyles" /* 10121 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10227 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10118 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -34,14 +34,14 @@ const memoResult = importAllResult.memo(function ChannelUnreadBadge(panelVariant
     const unreadBadge = layoutStyles.unreadBadge;
     obj = { style: null, children: null };
     items[2] = isThread ? unreadBadge.positionThread : unreadBadge.position;
-    items[3] = tmp2(10228).makeSizeStyle(layoutStyles.unreadBadge.size);
+    items[3] = tmp2(10121).makeSizeStyle(layoutStyles.unreadBadge.size);
     obj[0] = items;
     obj = { classic: null, size: null, badgeStyle: null };
     obj[0] = flag;
-    const tmp2Result = tmp2(10228);
+    const tmp2Result = tmp2(10121);
     const tmp9 = View;
     const _Math = Math;
-    obj[1] = tmp2(7624).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
+    obj[1] = tmp2(7869).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {

@@ -1,7 +1,7 @@
-// === Module 12190: isMentionAnchorValid ===
+// === Module 12390: isMentionAnchorValid ===
 
-// Module 12190 (isMentionAnchorValid)
-import AutocompleteFormDivider from "AutocompleteFormDivider" /* 10365 */;
+// Module 12390 (isMentionAnchorValid)
+import AutocompleteFormDivider from "AutocompleteFormDivider" /* 10262 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 
@@ -84,7 +84,7 @@ export default function useMentionAnchor(arr) {
           }
         }
         tmp19 = tmp22;
-        obj5 = _require(10365);
+        obj5 = _require(10262);
       }
       if (null != tmp19) {
         obj = { kind: "pending", anchor: null, seenText: null };

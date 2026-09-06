@@ -1,9 +1,9 @@
-// === Module 11425: useAppChannelApplication ===
+// === Module 11611: useAppChannelApplication ===
 
-// Module 11425 (useAppChannelApplication)
+// Module 11611 (useAppChannelApplication)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import fetchApplication from "fetchApplication" /* 5963 */;
+import ME from "ME" /* 1074 */;
+import fetchApplication from "fetchApplication" /* 7163 */;
 
 const ChannelTypes = ME.ChannelTypes;
 const result = set.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");

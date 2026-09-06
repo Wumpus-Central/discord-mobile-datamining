@@ -1,23 +1,23 @@
-// === Module 16424: newMessage ===
+// === Module 16586: newMessage ===
 
-// Module 16424 (newMessage)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 3500 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import createSoundForPack from "createSoundForPack" /* 10019 */;
-import _modDef16426 from "module_16426" /* 16426 */;
+// Module 16586 (newMessage)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import messagesProxyDefault from "messagesProxy" /* 3547 */;
+import createSoundForPack from "createSoundForPack" /* 9902 */;
+import _modDef16588 from "module_16588" /* 16588 */;
 import closure_6 from "_slicedToArray" /* 32 */;
 import closure_7 from "_objectWithoutProperties" /* 109 */;
-import closure_8 from "freshTeenActivityWithMap" /* 7292 */;
-import closure_9 from "DesktopNotificationTypes" /* 10190 */;
-import closure_10 from "handleConnectionOpen" /* 1980 */;
-import closure_11 from "handleConnectionOpen" /* 4299 */;
-import closure_12 from "filterPlayingActivities" /* 5232 */;
-import closure_13 from "isProjectOwner" /* 16425 */;
-import ME from "ME" /* 673 */;
-import { StaticChannelRoute } from "set" /* 1393 */;
+import closure_8 from "freshTeenActivityWithMap" /* 7537 */;
+import closure_9 from "DesktopNotificationTypes" /* 10081 */;
+import closure_10 from "handleConnectionOpen" /* 2011 */;
+import closure_11 from "handleConnectionOpen" /* 4381 */;
+import closure_12 from "filterPlayingActivities" /* 5279 */;
+import closure_13 from "isProjectOwner" /* 16587 */;
+import ME from "ME" /* 1074 */;
+import { StaticChannelRoute } from "set" /* 1964 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -329,7 +329,7 @@ function recordThinkingTransition(projectId) {
       }
       const project = store.getProject(projectId);
       if (null != project) {
-        result = _modDef16426.areTurnNotificationsDisabled();
+        result = _modDef16588.areTurnNotificationsDisabled();
         if (!result) {
           result = status.getStatus() === constants.DND;
         }
@@ -355,8 +355,8 @@ function recordThinkingTransition(projectId) {
             isWindowFocusedResult = channelId.getChannelId() === StaticChannelRoute.VIBEGRATIONS;
           }
           if (isWindowFocusedResult) {
-            isWindowFocusedResult = tmp68(16426).isWindowFocused();
-            const tmp68Result = tmp68(16426);
+            isWindowFocusedResult = tmp68(16588).isWindowFocused();
+            const tmp68Result = tmp68(16588);
           }
           if (guild_id == null) {
             guild_id = project.guild_id;
@@ -446,12 +446,12 @@ function recordThinkingTransition(projectId) {
                 tmp58 = bit_message1;
               }
               obj[5] = tmp58;
-              const result3 = _modDef16426.presentTurnNotification(obj);
-              const obj7 = _modDef16426;
+              const result3 = _modDef16588.presentTurnNotification(obj);
+              const obj7 = _modDef16588;
             }
           }
         }
-        const obj10 = _modDef16426;
+        const obj10 = _modDef16588;
         tmp68 = importDefault;
       }
       obj5 = store;
@@ -1101,8 +1101,8 @@ const vibegrationsChatStore = new VibegrationsChatStore(dispatcherDefault, {
                 obj.provisionalTodo = undefined;
                 const items = [];
                 obj = { type: "step", kind: "terminal_error", message: null };
-                const intl = callback(1233).intl;
-                obj[2] = intl.string(callback2(3500)["wjWm+/"]);
+                const intl = callback(1114).intl;
+                obj[2] = intl.string(callback2(3547)["wjWm+/"]);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj;
                 obj.steps = items;
                 tmp2 = obj;

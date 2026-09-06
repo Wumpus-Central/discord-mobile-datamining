@@ -1,15 +1,15 @@
-// === Module 14958: maybeRefreshAd ===
+// === Module 15116: maybeRefreshAd ===
 
-// Module 14958 (maybeRefreshAd)
+// Module 15116 (maybeRefreshAd)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 684 */;
-import _modDef11161 from "module_11161" /* 11161 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11308 */;
+import setDefault from "set" /* 1090 */;
+import _modDef11300 from "module_11300" /* 11300 */;
+import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11484 */;
 import noop from "noop" /* 19 */;
-import closure_5 from "map" /* 7455 */;
-import closure_6 from "initializeState" /* 7459 */;
+import closure_5 from "map" /* 7700 */;
+import closure_6 from "initializeState" /* 7703 */;
 
-function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
+function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA) {
   let isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     let tmp5 = null != fetchedAt;
@@ -22,20 +22,20 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
   }
   if (isEligibleForQuests) {
     if ("active" === obj2.getState()) {
-      if (!fetchingAdToDeliverByPlacement.isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
-        if (obj4.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
-          let tmpResult = tmp(11137);
+      if (!fetchingAdToDeliverByPlacement.isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA)) {
+        if (obj4.canRefreshAd(MOBILE_HOME_DOCK_AREA)) {
+          let tmpResult = tmp(11276);
           const currentQuests = tmpResult.fetchCurrentQuests();
-          tmpResult = tmp(11137);
-          const questToDeliver = tmpResult.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
+          tmpResult = tmp(11276);
+          const questToDeliver = tmpResult.fetchQuestToDeliver(MOBILE_HOME_DOCK_AREA, arg2);
         }
       }
       obj4 = fetchingAdToDeliverByPlacement;
     } else if (null != fetchedAt) {
-      tmp(11137).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
-      const tmpResult1 = tmp(11137);
+      tmp(11276).clearQuestAdDecision(MOBILE_HOME_DOCK_AREA, fetchedAt.ttlMillis);
+      const tmpResult1 = tmp(11276);
     }
-    obj2 = _modDef11161;
+    obj2 = _modDef11300;
   }
 }
 ({ useEffect: c3, useRef: c4 } = noop);
@@ -128,7 +128,7 @@ export const useAdDecisionForPlacement = function useAdDecisionForPlacement(MOBI
   const _require = MOBILE_HOME_DOCK_AREA;
   const items = [closure_5];
   const items1 = [MOBILE_HOME_DOCK_AREA];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
     let value = deliveryAdDecisionByPlacement.get(closure_0);
     if (value == null) {

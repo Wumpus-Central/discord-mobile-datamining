@@ -1,16 +1,16 @@
-// === Module 7405: getAsync ===
+// === Module 7650: getAsync ===
 
-// Module 7405 (getAsync)
+// Module 7650 (getAsync)
 import timestampDefault from "timestamp" /* 3 */;
-import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1425 */;
-import fromServerArrayAll from "fromServerArray" /* 1986 */;
-import compareGuildRolesAll from "compareGuildRoles" /* 1988 */;
+import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
+import fromServerArrayAll from "fromServerArray" /* 2017 */;
+import compareGuildRolesAll from "compareGuildRoles" /* 2019 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { updateJoinedAt } from "GuildNSFWContentLevel" /* 1429 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
-import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_8 from "createGuildRecordFromRust" /* 1908 */;
+import { updateJoinedAt } from "GuildNSFWContentLevel" /* 1975 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
+import closure_6 from "trackCommunicationDisabled" /* 2021 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_8 from "createGuildRecordFromRust" /* 1979 */;
 import set from "set" /* 2 */;
 
 let set = importDefault;
@@ -110,12 +110,12 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
           filterRoleDeletesResult = obj.fromServerArray(tmp2.id, tmp2.roles);
           tmp7 = importAll;
         }
-        let tmp7Result = tmp7(1425);
-        tmp7Result = tmp7(1425);
+        let tmp7Result = tmp7(1971);
+        tmp7Result = tmp7(1971);
         let tmp13 = nextResult;
         let tmp14 = guild;
         let fromBackgroundSyncResult = tmp7Result.fromBackgroundSync(tmp2, tmp22);
-        let tmp7Result1 = tmp7(1986);
+        let tmp7Result1 = tmp7(2017);
         let tmp17 = store2;
         let result = tmp7Result1.toSerializedPartition(filterRoleDeletesResult);
         let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, store2.getSelfMember(tmp2.id)), arg1);
@@ -127,8 +127,8 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
   const items = [...unavailableGuilds.unavailableGuilds];
-  const obj = set(1955);
-  set(1955).guildsTransaction(database).deleteAllExcept(items);
+  const obj = set(1986);
+  set(1986).guildsTransaction(database).deleteAllExcept(items);
   for (const item10027 of tmp2) {
     let putOneResult = self.putOne(item10027, arg1);
     continue;
@@ -244,12 +244,12 @@ prototype["putOne"] = function putOne(members) {
   }
 };
 prototype["put"] = function put(arg0, database) {
-  const obj = set(1955);
-  set(1955).guildsTransaction(database).put(arg0);
+  const obj = set(1986);
+  set(1986).guildsTransaction(database).put(arg0);
 };
 prototype["delete"] = function delete(arg0, database) {
-  const obj = set(1955);
-  set(1955).guildsTransaction(database).delete(arg0);
+  const obj = set(1986);
+  set(1986).guildsTransaction(database).delete(arg0);
 };
 set = Object.create(Guilds.prototype);
 set.actions = {

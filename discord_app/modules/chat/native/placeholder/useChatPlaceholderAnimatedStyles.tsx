@@ -1,7 +1,7 @@
-// === Module 12413: useChatPlaceholderAnimatedStyles ===
+// === Module 12639: useChatPlaceholderAnimatedStyles ===
 
-// Module 12413 (useChatPlaceholderAnimatedStyles)
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+// Module 12639 (useChatPlaceholderAnimatedStyles)
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 
 const require = arg1;
 let obj = { duration: 1300, easing: require("Button").STANDARD_EASING };

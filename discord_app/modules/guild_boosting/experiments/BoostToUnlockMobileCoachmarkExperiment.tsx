@@ -1,7 +1,7 @@
-// === Module 12302: getUnitId ===
+// === Module 12502: getUnitId ===
 
-// Module 12302 (getUnitId)
-import getUnitIdDefault from "getUnitId" /* 1468 */;
+// Module 12502 (getUnitId)
+import getUnitIdDefault from "getUnitId" /* 1434 */;
 
 const tmp2 = getUnitIdDefault({ name: "2026-03-boost-to-unlock-mobile-coachmark", kind: "user", defaultConfig: { showCoachmark: false }, variations: { 0: { showCoachmark: false }, 1: { showCoachmark: true } } });
 const result = require("set").fileFinishedImporting("modules/guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx");

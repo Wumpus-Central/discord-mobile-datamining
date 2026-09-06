@@ -1,8 +1,8 @@
-// === Module 12289: items ===
+// === Module 12489: items ===
 
-// Module 12289 (items)
+// Module 12489 (items)
 import set from "set" /* 2 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
 
 const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;
 let obj = { type: GuildPowerupType.LEVEL, skuId: "1", title: "Lorem ipsum", cost: 1, dependencies: [], features: { additional_emoji_slots: 50, additional_sound_slots: 50, additional_sticker_slots: 50, total_emoji_slots: 50, total_sound_slots: 50, total_sticker_slots: 50, features: [] } };

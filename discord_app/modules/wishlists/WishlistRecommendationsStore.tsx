@@ -1,9 +1,9 @@
 // === Module 10793: handleUserSettingsStoreUpdate ===
 
 // Module 10793 (handleUserSettingsStoreUpdate)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_0 from "_getSystemLocale" /* 1995 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_0 from "_getSystemLocale" /* 2025 */;
 
 function handleUserSettingsStoreUpdate() {
   if (locale === closure_0.locale) {

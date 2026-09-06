@@ -1,12 +1,12 @@
-// === Module 15651: useMaybeFetchCollectiblesShopHome ===
+// === Module 15809: useMaybeFetchCollectiblesShopHome ===
 
-// Module 15651 (useMaybeFetchCollectiblesShopHome)
+// Module 15809 (useMaybeFetchCollectiblesShopHome)
 import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import closure_6 from "getHash" /* 4391 */;
-import closure_7 from "updateCategoriesAndProducts" /* 7297 */;
-import closure_8 from "map" /* 7341 */;
-import items from "items" /* 675 */;
+import closure_6 from "getHash" /* 4476 */;
+import closure_7 from "updateCategoriesAndProducts" /* 7542 */;
+import closure_8 from "map" /* 7586 */;
+import items from "items" /* 1076 */;
 
 const require = arg1;
 ({ useEffect: c3, useCallback: c4, useMemo: c5 } = noop);
@@ -34,14 +34,14 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   closure_13 = undefined;
   let hasExpiredShopBlocks;
   closure_15 = undefined;
-  let obj = _require(586);
+  let obj = _require(504);
   let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_7];
-  stateFromStores1 = _require(586).useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
-  const obj2 = _require(586);
+  stateFromStores1 = _require(504).useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
+  const obj2 = _require(504);
   const items2 = [closure_8];
-  const tmp3 = callback(_require(586).useStateFromStoresArray(items2, () => {
+  const tmp3 = callback(_require(504).useStateFromStoresArray(items2, () => {
     const items = [store.getShopBlocks(closure_0), , , , , , , ];
     let num = store.getLastSuccessfulFetch(closure_0);
     if (num == null) {
@@ -72,7 +72,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   const tmp13 = callback2(() => {
     const obj = {};
     const merged = Object.assign(dependencyMap);
-    obj.variantsReturnStyle = HOME(7344).ShopVariantsReturnStyle.VARIANTS_GROUP;
+    obj.variantsReturnStyle = HOME(7589).ShopVariantsReturnStyle.VARIANTS_GROUP;
     obj.includeBundles = true;
     obj.includeDynamicBlocks = true;
     obj.shopHomeConfig = closure_11;
@@ -81,15 +81,15 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   }, items3);
   closure_12 = tmp13;
   const items4 = [tmp3[3], tmp13];
-  const tmp14 = callback2(() => !HOME(7296).areRequestOptionsEqual(closure_7, closure_12), items4);
+  const tmp14 = callback2(() => !HOME(7541).areRequestOptionsEqual(closure_7, closure_12), items4);
   closure_13 = tmp14;
-  const obj3 = _require(586);
+  const obj3 = _require(504);
   const tmp12 = callback2;
   let flag2 = tmp9;
   if (tmp3[5] == null) {
     flag2 = false;
   }
-  hasExpiredShopBlocks = _require(15652).useHasExpiredShopBlocks(tmp4, flag2, flag);
+  hasExpiredShopBlocks = _require(15810).useHasExpiredShopBlocks(tmp4, flag2, flag);
   const items5 = [tmp5, hasExpiredShopBlocks];
   const tmp12Result = tmp12(() => {
     let tmp = !hasExpiredShopBlocks;
@@ -114,8 +114,8 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
             tmp8 = closure_10;
           }
           if (tmp8) {
-            const collectiblesShopHome = HOME(7296).fetchCollectiblesShopHome(HOME, closure_12, closure_2);
-            const obj = HOME(7296);
+            const collectiblesShopHome = HOME(7541).fetchCollectiblesShopHome(HOME, closure_12, closure_2);
+            const obj = HOME(7541);
           }
         }
         tmp7 = null != closure_8 && Date.now() - closure_6 < closure_10;
@@ -128,7 +128,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
     fetchShopHomeError: tmp8,
     shopBlocks: tmp4,
     refreshShopHome: stateFromStores1(() => {
-      const collectiblesShopHome = HOME(7296).fetchCollectiblesShopHome(HOME, closure_12, closure_2);
+      const collectiblesShopHome = HOME(7541).fetchCollectiblesShopHome(HOME, closure_12, closure_2);
     }, items7)
   };
   return obj;

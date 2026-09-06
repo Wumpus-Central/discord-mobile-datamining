@@ -1,6 +1,6 @@
-// === Module 1360: ClientThemeType ===
+// === Module 4286: ClientThemeType ===
 
-// Module 1360 (ClientThemeType)
+// Module 4286 (ClientThemeType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeTypes.tsx");

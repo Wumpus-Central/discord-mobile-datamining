@@ -1,8 +1,8 @@
-// === Module 7643: checkSpoilerEmbeds ===
+// === Module 7889: checkSpoilerEmbeds ===
 
-// Module 7643 (checkSpoilerEmbeds)
-import getEffectiveVideoProvider from "getEffectiveVideoProvider" /* 4851 */;
-import ME from "ME" /* 673 */;
+// Module 7889 (checkSpoilerEmbeds)
+import getEffectiveVideoProvider from "getEffectiveVideoProvider" /* 4897 */;
+import ME from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 function checkSpoilerEmbeds(ast, inline) {
@@ -40000,8 +40000,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4393).isBuildOverrideLink(type.target);
-      const obj = callback(4393);
+      tmp = !callback(1362).isBuildOverrideLink(type.target);
+      const obj = callback(1362);
     }
     return tmp;
   });
@@ -40010,8 +40010,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(7644).isExperimentEmbedURL(type.target);
-      const obj = callback(7644);
+      tmp = !callback(7890).isExperimentEmbedURL(type.target);
+      const obj = callback(7890);
     }
     return tmp;
   });
@@ -40167,7 +40167,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
             if (obj3.isEmbedInline(first1)) {
               items2 = [];
             }
-            obj3 = _require(4851);
+            obj3 = _require(4897);
           }
         } else {
           items2 = arr;
@@ -40271,16 +40271,16 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr4.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4393).isBuildOverrideLink(type.target);
-        const obj = callback(4393);
+        tmp = !callback(1362).isBuildOverrideLink(type.target);
+        const obj = callback(1362);
       }
       return tmp;
     });
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(7644).isExperimentEmbedURL(type.target);
-        const obj = callback(7644);
+        tmp = !callback(7890).isExperimentEmbedURL(type.target);
+        const obj = callback(7890);
       }
       return tmp;
     });

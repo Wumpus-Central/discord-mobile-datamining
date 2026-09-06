@@ -1,9 +1,9 @@
-// === Module 7826: apexExperiment ===
+// === Module 7905: apexExperiment ===
 
-// Module 7826 (apexExperiment)
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import { GuildFeatures } from "ME" /* 673 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+// Module 7905 (apexExperiment)
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import { GuildFeatures } from "ME" /* 1074 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 const require = arg1;
 ApexExperiment = { 1: null, 2: { enabled: false } };

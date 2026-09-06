@@ -1,29 +1,29 @@
-// === Module 9755: handleFormInit ===
+// === Module 9064: handleFormInit ===
 
-// Module 9755 (handleFormInit)
+// Module 9064 (handleFormInit)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import sendRequest from "sendRequest" /* 527 */;
-import initializeDefault from "initialize" /* 586 */;
-import Storage2 from "Storage" /* 592 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1425 */;
-import isValueEqual from "isValueEqual" /* 1426 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
-import hooksDefault from "hooks" /* 4074 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID2 from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9756 */;
-import canUseMobileServerTagSettings from "canUseMobileServerTagSettings" /* 9757 */;
-import fetchVanityUrl from "fetchVanityUrl" /* 9759 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9760 */;
-import _fetchGuildIntegrationsApplications from "_fetchGuildIntegrationsApplications" /* 9761 */;
-import closure_14 from "handleUpdateStart" /* 9027 */;
-import closure_17 from "createFromServer" /* 8670 */;
-import closure_18 from "createdAt" /* 1934 */;
-import closure_19 from "createGuildRecordFromRust" /* 1908 */;
-import closure_20 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 7956 */;
+import initializeDefault from "initialize" /* 504 */;
+import Storage2 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
+import isValueEqual from "isValueEqual" /* 1972 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
+import hooksDefault from "hooks" /* 4153 */;
+import DEFAULT_DISCOVERY_CATEGORY_ID2 from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9066 */;
+import canUseMobileServerTagSettings from "canUseMobileServerTagSettings" /* 9067 */;
+import fetchVanityUrl from "fetchVanityUrl" /* 9069 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9070 */;
+import _fetchGuildIntegrationsApplications from "_fetchGuildIntegrationsApplications" /* 9071 */;
+import closure_14 from "handleUpdateStart" /* 9065 */;
+import closure_17 from "createFromServer" /* 8380 */;
+import closure_18 from "createdAt" /* 1385 */;
+import closure_19 from "createGuildRecordFromRust" /* 1979 */;
+import closure_20 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8035 */;
 import set from "set" /* 2 */;
 
 function handleFormInit(location) {

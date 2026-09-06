@@ -1,13 +1,13 @@
-// === Module 7897: useCanReplyToMessage ===
+// === Module 7976: useCanReplyToMessage ===
 
-// Module 7897 (useCanReplyToMessage)
-import useCanStartPrivateThread from "useCanStartPrivateThread" /* 6125 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7898 */;
+// Module 7976 (useCanReplyToMessage)
+import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7977 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import { Permissions } from "sum" /* 502 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import { Permissions } from "sum" /* 1085 */;
 
 require = arg1;
 ({ MessageFlags: c5, MessageStates: closure_6 } = ME);
@@ -16,16 +16,16 @@ const result = require("set").fileFinishedImporting("modules/replies/canReplyToM
 export const useCanReplyToMessage = function useCanReplyToMessage(channel, message) {
   const _require = channel;
   dependencyMap = message;
-  const canUnarchiveThread = _require(6125).useCanUnarchiveThread(channel);
-  const obj = _require(6125);
+  const canUnarchiveThread = _require(7269).useCanUnarchiveThread(channel);
+  const obj = _require(7269);
   let tmp = _require;
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  const obj2 = _require(7898);
+  const obj2 = _require(7977);
   const items = [closure_3];
-  let stateFromStores = tmp(586).useStateFromStores(items, () => {
+  let stateFromStores = tmp(504).useStateFromStores(items, () => {
     let tmp = null != channel;
     if (tmp) {
       tmp = null != message;
@@ -79,7 +79,7 @@ export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
     const tmp4 = Permissions;
   }
   if (hasItem) {
-    const REPLYABLE = tmp(683).MessageTypesSets.REPLYABLE;
+    const REPLYABLE = tmp(1089).MessageTypesSets.REPLYABLE;
     hasItem = REPLYABLE.has(type.type);
   }
   currentUser = currentUser.getCurrentUser();

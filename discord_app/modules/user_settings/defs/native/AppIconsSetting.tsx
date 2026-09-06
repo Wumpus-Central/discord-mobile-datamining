@@ -1,17 +1,17 @@
-// === Module 15363: dismissiblePremiumNewBadgeRouteProps ===
+// === Module 15521: dismissibleBadgeRouteProps ===
 
-// Module 15363 (dismissiblePremiumNewBadgeRouteProps)
+// Module 15521 (dismissibleBadgeRouteProps)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import DismissibleContent from "DismissibleContent" /* 1372 */;
-import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 13258 */;
-import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 15364 */;
-import createDismissiblePremiumNewBadgeRouteProps from "createDismissiblePremiumNewBadgeRouteProps" /* 15195 */;
-import createToggle from "createToggle" /* 11292 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import DismissibleContent from "DismissibleContent" /* 1943 */;
+import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 13363 */;
+import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 15522 */;
+import useAlwaysShow from "useAlwaysShow" /* 14719 */;
+import createToggle from "createToggle" /* 11468 */;
 
-const dismissiblePremiumNewBadgeRouteProps = createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(DismissibleContent.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE);
-({ useTrailing, usePreNavigationAction } = dismissiblePremiumNewBadgeRouteProps);
+const dismissibleBadgeRouteProps = useAlwaysShow.createDismissibleBadgeRouteProps(DismissibleContent.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE);
+({ useTrailing, usePreNavigationAction } = dismissibleBadgeRouteProps);
 obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -29,7 +29,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.APP_ICONS,
   getComponent() {
-    return require(15366).default;
+    return require(15524).default;
   }
 };
 const route = createToggle.createRoute(obj);

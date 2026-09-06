@@ -1,62 +1,62 @@
-// === Module 11282: MessagesConnected ===
+// === Module 11424: MessagesConnected ===
 
-// Module 11282 (MessagesConnected)
+// Module 11424 (MessagesConnected)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "participantFromServer" /* 1385 */;
-import closure_7 from "handleFetchEmbeddedActivityShelfSuccess" /* 8061 */;
-import closure_8 from "addApplication" /* 4519 */;
-import closure_9 from "getCurrentBuildOverride" /* 11283 */;
-import closure_10 from "handleClearCaches" /* 7231 */;
-import closure_11 from "getParticipants" /* 4494 */;
-import closure_12 from "_toTimestampMs" /* 11169 */;
-import closure_13 from "getEmojiToGroupId" /* 5410 */;
-import closure_14 from "getHash" /* 4391 */;
-import closure_15 from "getFpMessageInfo" /* 6148 */;
-import closure_16 from "set" /* 5964 */;
-import closure_17 from "getGuild" /* 7876 */;
-import closure_18 from "handleMessageSendFailedAutomod" /* 7859 */;
-import closure_19 from "scheduledEventSort" /* 7281 */;
-import closure_20 from "handleGuildTemplateResolveSuccess" /* 7213 */;
-import closure_21 from "getInteractionComponentStates" /* 8034 */;
-import closure_22 from "deleteNonce" /* 7862 */;
-import closure_23 from "getMediaPostEmbed" /* 11284 */;
-import closure_24 from "set" /* 7863 */;
-import closure_25 from "recomputeFromAppTokens" /* 5484 */;
-import closure_26 from "initialize" /* 4735 */;
-import useMessagePollInteractions from "useMessagePollInteractions" /* 8140 */;
-import closure_29 from "emitChanges" /* 7207 */;
-import closure_30 from "initialize" /* 11285 */;
-import closure_31 from "getState" /* 7435 */;
-import closure_32 from "processMessage" /* 7350 */;
-import closure_33 from "handleQuickSwitcherUpdate" /* 11206 */;
-import closure_34 from "storeThread" /* 4122 */;
-import closure_35 from "updateState" /* 6160 */;
-import closure_36 from "_getSystemLocale" /* 1995 */;
-import closure_37 from "handleThemeChange" /* 1301 */;
-import closure_38 from "fetchFingerprint" /* 1215 */;
-import closure_39 from "ensureGuildLoaded" /* 1386 */;
-import closure_40 from "initialize" /* 7436 */;
-import closure_41 from "updateGiftCode" /* 8460 */;
-import closure_42 from "trackCommunicationDisabled" /* 1991 */;
-import closure_43 from "createGuildRecordFromRust" /* 1908 */;
-import closure_44 from "recomputeGuild" /* 5366 */;
-import closure_45 from "updateInvite" /* 4462 */;
-import closure_46 from "reinjectEphemerals" /* 4736 */;
-import closure_47 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_48 from "sortActivity" /* 4569 */;
-import closure_49 from "createRTCConnection" /* 4554 */;
-import closure_50 from "generateOldThreadCutoff" /* 4493 */;
-import closure_51 from "handleUpdate" /* 4496 */;
-import closure_52 from "initialize" /* 7593 */;
-import closure_53 from "mergeGuildAvatar" /* 1921 */;
-import closure_54 from "updateVoiceState" /* 4497 */;
-import closure_55 from "addSku" /* 4527 */;
-import closure_56 from "handleActivityStateChanged" /* 11286 */;
-import closure_57 from "getVoiceStatesForGuild" /* 4555 */;
-import ME from "ME" /* 673 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_6 from "participantFromServer" /* 1956 */;
+import closure_7 from "handleFetchEmbeddedActivityShelfSuccess" /* 8140 */;
+import closure_8 from "addApplication" /* 4788 */;
+import closure_9 from "getCurrentBuildOverride" /* 11425 */;
+import closure_10 from "handleClearCaches" /* 7476 */;
+import closure_11 from "getParticipants" /* 4576 */;
+import closure_12 from "_toTimestampMs" /* 11308 */;
+import closure_13 from "getEmojiToGroupId" /* 5459 */;
+import closure_14 from "getHash" /* 4476 */;
+import closure_15 from "getFpMessageInfo" /* 7293 */;
+import closure_16 from "set" /* 7164 */;
+import closure_17 from "getGuild" /* 7955 */;
+import closure_18 from "handleMessageSendFailedAutomod" /* 7938 */;
+import closure_19 from "scheduledEventSort" /* 7526 */;
+import closure_20 from "handleGuildTemplateResolveSuccess" /* 7457 */;
+import closure_21 from "getInteractionComponentStates" /* 8113 */;
+import closure_22 from "deleteNonce" /* 7941 */;
+import closure_23 from "getMediaPostEmbed" /* 11426 */;
+import closure_24 from "set" /* 7942 */;
+import closure_25 from "recomputeFromAppTokens" /* 7107 */;
+import closure_26 from "initialize" /* 4774 */;
+import useMessagePollInteractions from "useMessagePollInteractions" /* 11427 */;
+import closure_29 from "emitChanges" /* 7452 */;
+import closure_30 from "initialize" /* 11428 */;
+import closure_31 from "getState" /* 7680 */;
+import closure_32 from "processMessage" /* 7595 */;
+import closure_33 from "handleQuickSwitcherUpdate" /* 11345 */;
+import closure_34 from "storeThread" /* 4201 */;
+import closure_35 from "updateState" /* 7306 */;
+import closure_36 from "_getSystemLocale" /* 2025 */;
+import closure_37 from "handleThemeChange" /* 1183 */;
+import closure_38 from "fetchFingerprint" /* 502 */;
+import closure_39 from "ensureGuildLoaded" /* 1957 */;
+import closure_40 from "initialize" /* 7681 */;
+import closure_41 from "updateGiftCode" /* 11429 */;
+import closure_42 from "trackCommunicationDisabled" /* 2021 */;
+import closure_43 from "createGuildRecordFromRust" /* 1979 */;
+import closure_44 from "recomputeGuild" /* 5413 */;
+import closure_45 from "updateInvite" /* 4544 */;
+import closure_46 from "reinjectEphemerals" /* 4781 */;
+import closure_47 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_48 from "sortActivity" /* 4600 */;
+import closure_49 from "createRTCConnection" /* 4583 */;
+import closure_50 from "generateOldThreadCutoff" /* 4575 */;
+import closure_51 from "handleUpdate" /* 4578 */;
+import closure_52 from "initialize" /* 7838 */;
+import closure_53 from "mergeGuildAvatar" /* 1371 */;
+import closure_54 from "updateVoiceState" /* 4579 */;
+import closure_55 from "addSku" /* 5510 */;
+import closure_56 from "handleActivityStateChanged" /* 11456 */;
+import closure_57 from "getVoiceStatesForGuild" /* 4584 */;
+import ME from "ME" /* 1074 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -411,18 +411,24 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const stateFromStoresObject5 = result44.useStateFromStoresObject(items56, () => {
     if (null != closure_3) {
       if (null != application_id) {
-        const obj = {};
+        let obj = {};
         const item = arr.forEach((author) => {
-          author = author.author;
-          let id;
-          if (author != null) {
-            id = author.id;
-          }
-          if (null != id) {
-            const member = closure_2_42.getMember(closure_1_3, author.author.id);
+          obj = stateFromStores(memo1[74]);
+          const messageAuthorMemberUserIds = obj.getMessageAuthorMemberUserIds(author);
+          const iter = messageAuthorMemberUserIds[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let tmp4 = closure_2_42;
+            let tmp5 = closure_1_3;
+            let tmp3 = nextResult;
+            let member = closure_2_42.getMember(closure_1_3, nextResult);
             if (null != member) {
-              obj[author.author.id] = member;
+              let tmp8 = obj;
+              let tmp9 = nextResult;
+              let tmp10 = member;
+              obj[tmp3] = tmp7;
             }
+            continue;
           }
         });
         return obj;
@@ -434,7 +440,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result45 = shouldDisableInteractiveComponents(tmp2[57]);
   const items58 = [tmp52];
   const stateFromStores25 = result45.useStateFromStores(items58, () => closure_1_47.can(closure_1_62.MODERATE_MEMBERS, stateFromStores1));
-  const result46 = shouldDisableInteractiveComponents(tmp2[74]);
+  const result46 = shouldDisableInteractiveComponents(tmp2[75]);
   id = undefined;
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
@@ -442,7 +448,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result47 = shouldDisableInteractiveComponents(tmp2[57]);
   const items59 = [closure_36];
   const stateFromStores26 = result47.useStateFromStores(items59, () => locale.locale);
-  const result48 = shouldDisableInteractiveComponents(tmp2[75]);
+  const result48 = shouldDisableInteractiveComponents(tmp2[76]);
   const isPaymentsBlocked = result48.useIsPaymentsBlocked();
   const result49 = shouldDisableInteractiveComponents(tmp2[57]);
   const items60 = [closure_34];
@@ -462,7 +468,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result52 = shouldDisableInteractiveComponents(tmp2[57]);
   const items63 = [closure_10];
   const stateFromStores30 = result52.useStateFromStores(items63, () => lazyCacheStatus.getLazyCacheStatus());
-  const result53 = shouldDisableInteractiveComponents(tmp2[76]);
+  const result53 = shouldDisableInteractiveComponents(tmp2[77]);
   const messageJumpAndroidKeyboardHeight = result53.useMessageJumpAndroidKeyboardHeight();
   const tmp66 = callback(result37.useStateFromStores(items51, () => {
     const items = [store3.getInteractionComponentStates(), store3.getInteractionComponentStateVersion()];
@@ -470,7 +476,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }, [], shouldDisableInteractiveComponents(tmp2[71]).isVersionEqual), 2);
   const tmp74 = null != stateFromStores && stateFromStores.cached;
   const tmp75 = null != stateFromStores && stateFromStores.ready && !stateFromStores.loadingMore;
-  const result54 = shouldDisableInteractiveComponents(tmp2[78]);
+  const result54 = shouldDisableInteractiveComponents(tmp2[79]);
   channelSummariesExperiment = result54.useChannelSummariesExperiment(channel);
   const result55 = shouldDisableInteractiveComponents(tmp2[57]);
   const items64 = [closure_33];
@@ -497,31 +503,31 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       hasMoreAfter = arr.hasMoreAfter;
     }
     if (!hasMoreAfter) {
-      const obj = application_id(memo1[79]);
+      const obj = application_id(memo1[80]);
       const _Date = Date;
       const result = obj.updateChannelDimensions(stateFromStores.id, Date.now(), 1, 1, 0);
     }
   }, items66);
-  const result56 = shouldDisableInteractiveComponents(tmp2[80]);
+  const result56 = shouldDisableInteractiveComponents(tmp2[81]);
   const shouldTrackAnnouncementMessageViews = result56.useShouldTrackAnnouncementMessageViews({ guild: stateFromStores1, channel, messages: stateFromStores, isMessagesReady: tmp72 });
-  const result57 = shouldDisableInteractiveComponents(tmp2[80]);
+  const result57 = shouldDisableInteractiveComponents(tmp2[81]);
   const shouldTrackRichPresenceInviteEmbedViews = result57.useShouldTrackRichPresenceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp72 });
-  const result58 = shouldDisableInteractiveComponents(tmp2[80]);
+  const result58 = shouldDisableInteractiveComponents(tmp2[81]);
   const shouldTrackOfficialMessageViews = result58.useShouldTrackOfficialMessageViews({ guild: stateFromStores1, messages: stateFromStores, isMessagesReady: tmp72 });
-  const result59 = shouldDisableInteractiveComponents(tmp2[80]);
+  const result59 = shouldDisableInteractiveComponents(tmp2[81]);
   const shouldTrackVoiceInviteEmbedViews = result59.useShouldTrackVoiceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp72 });
-  const result60 = shouldDisableInteractiveComponents(tmp2[81]);
+  const result60 = shouldDisableInteractiveComponents(tmp2[82]);
   const shouldDisplaySpoilerObscurity = result60.useShouldDisplaySpoilerObscurity(channel);
-  const result61 = shouldDisableInteractiveComponents(tmp2[82]);
+  const result61 = shouldDisableInteractiveComponents(tmp2[83]);
   const items67 = [id, guildId];
   const isAgeVerified = result61.useIsAgeVerified();
   const effect2 = obj6.useEffect(() => {
-    application_id(memo1[83]).handleChannelSelect();
+    application_id(memo1[84]).handleChannelSelect();
     return () => {
-      callback(table[83]).handleChannelSelect();
+      callback(table[84]).handleChannelSelect();
     };
   }, items67);
-  const result62 = shouldDisableInteractiveComponents(tmp2[84]);
+  const result62 = shouldDisableInteractiveComponents(tmp2[85]);
   shouldDisableInteractiveComponents = result62.useShouldDisableInteractiveComponents(channel.id);
   items68 = [];
   shouldDisableInteractiveComponents = callback2(channel.id);
@@ -543,8 +549,8 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result64 = shouldDisableInteractiveComponents(tmp2[57]);
   const items71 = [closure_26];
   shouldDisableInteractiveComponents = result64.useStateFromStores(items71, () => pendingConnection.getPendingConnection());
-  shouldDisableInteractiveComponents = tmp24(tmp2[85])();
-  shouldDisableInteractiveComponents = tmp24(tmp2[86])(stateFromStores);
+  shouldDisableInteractiveComponents = tmp24(tmp2[86])();
+  shouldDisableInteractiveComponents = tmp24(tmp2[87])(stateFromStores);
   ({ unloadedContentEntryMessageIds, unloadableContentEntryMessageIds } = shouldDisableInteractiveComponents);
   const result65 = shouldDisableInteractiveComponents(tmp2[57]);
   const items72 = [closure_53];
@@ -562,7 +568,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result66 = shouldDisableInteractiveComponents(tmp2[57]);
   const items73 = [closure_17];
   shouldDisableInteractiveComponents = result66.useStateFromStores(items73, () => version.getVersion());
-  const result67 = shouldDisableInteractiveComponents(tmp2[87]);
+  const result67 = shouldDisableInteractiveComponents(tmp2[88]);
   shouldDisableInteractiveComponents = result67.useColorStore((palette) => Object.keys(palette.palette).length);
   const result68 = shouldDisableInteractiveComponents(tmp2[57]);
   const items74 = [closure_13];
@@ -575,7 +581,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       return null;
     } else {
       const voiceStates = closure_1_54.getVoiceStates(tmp);
-      return stateFromStores(memo1[88]).getVoiceStateChannelSummaryFromVoiceStates(voiceStates);
+      return stateFromStores(memo1[74]).getVoiceStateChannelSummaryFromVoiceStates(voiceStates);
     }
   }, items76);
   const result70 = shouldDisableInteractiveComponents(tmp2[57]);
@@ -696,7 +702,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   obj[78] = "initializing" !== stateFromStores30;
   obj[79] = messageJumpAndroidKeyboardHeight;
   obj[80] = stateFromStores31;
-  obj[81] = application_id(tmp2[77])();
+  obj[81] = application_id(tmp2[78])();
   obj[82] = shouldTrackAnnouncementMessageViews;
   obj[83] = shouldTrackRichPresenceInviteEmbedViews;
   obj[84] = shouldTrackOfficialMessageViews;

@@ -1,15 +1,15 @@
-// === Module 4855: handleChanged ===
+// === Module 4901: handleChanged ===
 
-// Module 4855 (handleChanged)
+// Module 4901 (handleChanged)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isDraftCommandValidForText from "isDraftCommandValidForText" /* 4857 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isDraftCommandValidForText from "isDraftCommandValidForText" /* 4903 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "handleConnectionOpen" /* 4856 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "handleConnectionOpen" /* 4902 */;
 
 require = arg1;
 function handleChanged(type) {
@@ -246,14 +246,14 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1470).isNotNullish);
+    }).pickBy(_require(1369).isNotNullish);
     const mapped = applyDefault(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1470).isNotNullish).toPairs().map((arg0) => {
+    }).pickBy(_require(1369).isNotNullish).toPairs().map((arg0) => {
       [tmp, ] = arg0;
       return { channelId, timestamp, draft };
     });
@@ -263,7 +263,7 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1470).isNotNullish).toPairs();
+    }).pickBy(_require(1369).isNotNullish).toPairs();
     return mapped.sortBy((timestamp) => -timestamp.timestamp).value();
   }
 };

@@ -1,11 +1,11 @@
-// === Module 17208: isExperimentEnabled ===
+// === Module 17374: isExperimentEnabled ===
 
-// Module 17208 (isExperimentEnabled)
-import _guildRoomConnect from "_guildRoomConnect" /* 4677 */;
-import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4721 */;
-import initializeDefault from "initialize" /* 5495 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "resolveCreatingNotes" /* 4679 */;
+// Module 17374 (isExperimentEnabled)
+import _guildRoomConnect from "_guildRoomConnect" /* 4716 */;
+import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4760 */;
+import initializeDefault from "initialize" /* 7118 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "resolveCreatingNotes" /* 4718 */;
 
 require = arg1;
 let c4 = null;

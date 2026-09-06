@@ -1,12 +1,12 @@
-// === Module 10279: NotificationSettingsMessageUnreadChannelActionSheet ===
+// === Module 10168: NotificationSettingsMessageUnreadChannelActionSheet ===
 
-// Module 10279 (NotificationSettingsMessageUnreadChannelActionSheet)
+// Module 10168 (NotificationSettingsMessageUnreadChannelActionSheet)
 import noopAll from "noop" /* 19 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10278 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4702 */;
-import { UserNotificationSettings } from "ME" /* 673 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
-import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 682 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10167 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;
+import { UserNotificationSettings } from "ME" /* 1074 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
+import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 1084 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -15,14 +15,14 @@ let result = require("set").fileFinishedImporting("modules/notifications/setting
 
 export default function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
   const _require = channel;
-  let obj = _require(10258);
+  let obj = _require(10149);
   const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
   ({ unread, notification } = channelPresetSettings);
   obj = { value: unread, disabledMentionOnlyWithReason: null, onChange: null };
   let stringResult;
   if (notification === UserNotificationSettings.ALL_MESSAGES) {
-    const intl = tmp(1233).intl;
-    stringResult = intl.string(tmp(1233).t.eP8yWU);
+    const intl = tmp(1114).intl;
+    stringResult = intl.string(tmp(1114).t.eP8yWU);
   }
   obj[1] = stringResult;
   obj[2] = function onChange(ONLY_MENTIONS) {

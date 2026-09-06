@@ -1,6 +1,6 @@
-// === Module 10954: useAutocompleter ===
+// === Module 10992: useAutocompleter ===
 
-// Module 10954 (useAutocompleter)
+// Module 10992 (useAutocompleter)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 
@@ -11,7 +11,7 @@ export default function useAutocompleter(searchOptions) {
   dependencyMap = undefined;
   let callback;
   [tmp2, c1] = callback(React.useState({ results: [], query: "" }), 2);
-  const tmp3 = searchOptions(5950)(() => {
+  const tmp3 = searchOptions(5598)(() => {
     const obj = new searchOptions(_undefined[3])((results, query) => {
       callback({ results, query });
     });

@@ -1,19 +1,19 @@
-// === Module 7618: GenericHeaderTitle ===
+// === Module 7863: GenericHeaderTitle ===
 
-// Module 7618 (GenericHeaderTitle)
-import shallowEqualDefault from "shallowEqual" /* 640 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import map from "map" /* 4197 */;
-import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import Background from "Background" /* 5511 */;
-import JoinCallIconDefault from "JoinCallIcon" /* 7630 */;
+// Module 7863 (GenericHeaderTitle)
+import shallowEqualDefault from "shallowEqual" /* 558 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import map from "map" /* 4262 */;
+import Text from "Text" /* 4556 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import Background from "Background" /* 5631 */;
+import JoinCallIconDefault from "JoinCallIcon" /* 7875 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT" /* 7619 */;
+import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT" /* 7864 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 class GenericHeaderTitle {
@@ -271,11 +271,11 @@ export function getRenderBackImage(navigation) {
 }
 export const getRenderModalBackImage = function getRenderModalBackImage(navigation) {
   const _require = navigation;
-  return _require(1234).isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0 }));
+  return _require(1115).isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0 }));
 };
 export const getRenderModalCloseImage = function getRenderModalCloseImage(navigation) {
   const _require = navigation;
-  return _require(1234).isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0, type: "close" }));
+  return _require(1115).isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0, type: "close" }));
 };
 export const Header = memoResult;
 export function getDefaultStackHeaderProps(navigation) {

@@ -1,13 +1,13 @@
-// === Module 5382: StageBoostingActionSheet ===
+// === Module 5430: StageBoostingActionSheet ===
 
-// Module 5382 (StageBoostingActionSheet)
+// Module 5430 (StageBoostingActionSheet)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5367 */;
-import ME from "ME" /* 673 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
+import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
+import ME from "ME" /* 1074 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -22,11 +22,11 @@ export default function StageBoostingActionSheet(channel) {
   let stateFromStores2;
   dependencyMap = undefined;
   closure_3 = undefined;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_4];
   const items1 = [channel.guild_id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id), items1);
-  obj1 = channel(586);
+  obj1 = channel(504);
   const items2 = [closure_3];
   let num;
   const stateFromStores1 = obj1.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
@@ -53,19 +53,19 @@ export default function StageBoostingActionSheet(channel) {
       tmp9 = num <= closure_10;
     }
   }
-  let tmpResult = tmp(586);
+  let tmpResult = tmp(504);
   const items3 = [closure_5];
   const items4 = [channel];
-  stateFromStores2 = tmpResult.useStateFromStores(items3, () => closure_1_5.can(channel(1394).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel), items4);
+  stateFromStores2 = tmpResult.useStateFromStores(items3, () => closure_1_5.can(channel(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel), items4);
   if (hasItem) {
     let premiumTier1;
     if (stateFromStores != null) {
       premiumTier1 = stateFromStores.premiumTier;
     }
     if (premiumTier1 === closure_8.TIER_3) {
-      const intl2 = tmp(1233).intl;
+      const intl2 = tmp(1114).intl;
       const string2 = intl2.string;
-      let tJmOuw = tmp(1233).t;
+      let tJmOuw = tmp(1114).t;
       if (tmp9) {
         tJmOuw = tJmOuw.tJmOuw;
         let string2Result = string2(tJmOuw);
@@ -74,17 +74,17 @@ export default function StageBoostingActionSheet(channel) {
       }
     }
   }
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   const string = intl.string;
-  const t = tmp(1233).t;
+  const t = tmp(1114).t;
   if (tmp9) {
     let stringResult = string(t["8/uDSF"]);
   } else {
     stringResult = string(t["7FHbPG"]);
   }
-  const intl3 = tmp(1233).intl;
+  const intl3 = tmp(1114).intl;
   const string3 = intl3.string;
-  T_zF9M = tmp(1233).t;
+  T_zF9M = tmp(1114).t;
   if (stateFromStores2) {
     if (tmp9) {
       T_zF9M = T_zF9M["T+zF9M"];
@@ -94,17 +94,17 @@ export default function StageBoostingActionSheet(channel) {
     }
   } else {
     function handleClose() {
-      let obj = stateFromStores2(4445);
+      let obj = stateFromStores2(4527);
       obj.hideActionSheet(closure_1_6);
       obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
-      stateFromStores2(695).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
+      stateFromStores2(1242).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
     }
-    tmpResult = tmp(5383);
+    tmpResult = tmp(5431);
     dependencyMap = tmpResult.useActualStageSpeakerCount(channel.id);
     const string3Result1 = string3(T_zF9M.pqPQL0);
-    closure_3 = tmp(5383).useStageParticipantsCount(channel.id, tmp(5377).StageChannelParticipantNamedIndex.AUDIENCE);
-    stateFromStores2(4946)(() => {
-      let obj = stateFromStores2(695);
+    closure_3 = tmp(5431).useStageParticipantsCount(channel.id, tmp(5425).StageChannelParticipantNamedIndex.AUDIENCE);
+    stateFromStores2(4992)(() => {
+      let obj = stateFromStores2(1242);
       obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, listener_count: dependencyMap + closure_3 };
       obj.track(closure_1_7.BOOSTING_UPSELL_VIEWED, obj);
     });
@@ -112,57 +112,57 @@ export default function StageBoostingActionSheet(channel) {
       obj = { size: "lg", children: null };
       obj = { variant: "experimental_premium-primary", size: "lg", shiny: null, text: null, onPress: null };
       obj[2] = !stateFromStores1;
-      const intl6 = tmp(1233).intl;
-      obj[3] = intl6.string(tmp(1233).t.Uj0md3);
+      const intl6 = tmp(1114).intl;
+      obj[3] = intl6.string(tmp(1114).t.Uj0md3);
       obj[4] = function onPress() {
-        let obj = stateFromStores2(4445);
+        let obj = stateFromStores2(4527);
         obj.hideActionSheet(closure_1_6);
         obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
-        stateFromStores2(695).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
-        const obj2 = stateFromStores2(695);
-        channel(5386).openApplyBoostModal(channel.guild_id);
-        const obj4 = channel(5386);
+        stateFromStores2(1242).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
+        const obj2 = stateFromStores2(1242);
+        channel(5434).openApplyBoostModal(channel.guild_id);
+        const obj4 = channel(5434);
         obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.BOOST };
-        stateFromStores2(695).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
+        stateFromStores2(1242).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
       };
-      const items5 = [callback(tmp(4929).Button, obj), ];
+      const items5 = [callback(tmp(4975).Button, obj), ];
       obj1 = { variant: "secondary", size: "lg", text: null, onPress: null };
-      const intl7 = tmp(1233).intl;
-      obj1[2] = intl7.string(tmp(1233).t.f3Pet9);
+      const intl7 = tmp(1114).intl;
+      obj1[2] = intl7.string(tmp(1114).t.f3Pet9);
       obj1[3] = handleClose;
-      items5[1] = callback(tmp(4929).Button, obj1);
+      items5[1] = callback(tmp(4975).Button, obj1);
       obj[1] = items5;
-      let tmp23Result = callback2(tmp(5385).ButtonGroup, obj);
+      let tmp23Result = callback2(tmp(5433).ButtonGroup, obj);
       let tmp23 = callback;
     } else {
       tmp23 = callback;
       if (stateFromStores2) {
         let obj2 = { variant: "secondary", size: "lg", text: null, onPress: null };
-        const intl5 = tmp(1233).intl;
-        obj2[2] = intl5.string(tmp(1233).t.WAI6xu);
+        const intl5 = tmp(1114).intl;
+        obj2[2] = intl5.string(tmp(1114).t.WAI6xu);
         obj2[3] = handleClose;
         let obj3 = obj2;
       } else {
         obj3 = { variant: "primary", size: "lg", text: null, onPress: null };
-        const intl4 = tmp(1233).intl;
-        obj3[2] = intl4.string(tmp(1233).t["NX+WJN"]);
+        const intl4 = tmp(1114).intl;
+        obj3[2] = intl4.string(tmp(1114).t["NX+WJN"]);
         obj3[3] = handleClose;
       }
-      tmp23Result = tmp23(tmp(4929).Button, obj3);
+      tmp23Result = tmp23(tmp(4975).Button, obj3);
     }
     let obj4 = { title: null, description: null, illustration: null, actions: null };
     obj4[0] = string3Result1;
     obj4[1] = stringResult;
     if (tmp9) {
-      tmp23Result = tmp23(tmp(6266).HoldingGemSpotIllustration, { accessible: false });
+      tmp23Result = tmp23(tmp(5692).HoldingGemSpotIllustration, { accessible: false });
     } else {
       const obj5 = { source: null };
-      obj5[0] = tmp21(8759);
-      tmp23Result = tmp23(tmp21(5502), obj5);
-      const tmp21Result = tmp21(5502);
+      obj5[0] = tmp21(8592);
+      tmp23Result = tmp23(tmp21(5587), obj5);
+      const tmp21Result = tmp21(5587);
     }
     obj4[2] = tmp23Result;
     obj4[3] = tmp23Result;
-    return tmp23(tmp(10339).PromoSheet, obj4);
+    return tmp23(tmp(10230).PromoSheet, obj4);
   }
 };

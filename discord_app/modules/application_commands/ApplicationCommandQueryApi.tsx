@@ -1,16 +1,16 @@
-// === Module 8456: findCommandInSection ===
+// === Module 9416: findCommandInSection ===
 
-// Module 8456 (findCommandInSection)
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7278 */;
-import ScoreMethod from "ScoreMethod" /* 8166 */;
-import getOptionValue from "getOptionValue" /* 8168 */;
+// Module 9416 (findCommandInSection)
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
+import ScoreMethod from "ScoreMethod" /* 9298 */;
+import getOptionValue from "getOptionValue" /* 9300 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import getIndexKey from "getIndexKey" /* 8158 */;
-import closure_10 from "getIndexKey" /* 8158 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4953 */;
-import { NOOP } from "ME" /* 673 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import getIndexKey from "getIndexKey" /* 9290 */;
+import closure_10 from "getIndexKey" /* 9290 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4999 */;
+import { NOOP } from "ME" /* 1074 */;
 
 require = arg1;
 function findCommandInSection(found, commandId) {
@@ -35,7 +35,7 @@ function findCommandInSection(found, commandId) {
       }
       let command;
       if (null != rootCommand) {
-        obj = _require(7276);
+        obj = _require(7521);
         obj = { rootCommand: null, command: null, applicationId: null };
         obj[0] = rootCommand;
         obj[1] = rootCommand;
@@ -62,7 +62,7 @@ let result = require("set").fileFinishedImporting("modules/application_commands/
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "Array", command: "HermesInternal", section: "r" };
+    return { application: "Array", command: "call", section: "o" };
   } else {
     const userState = authStore.getUserState();
     const result2 = userState.result;
@@ -119,7 +119,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "Array", command: "HermesInternal", section: "r" };
+    return { application: "Array", command: "call", section: "o" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -195,7 +195,7 @@ export const useCachedResults = function useCachedResults(arg0, CHAT, text) {
     }, items),
     text
   };
-  obj = { scoreMethod: _require(8166).ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
+  obj = { scoreMethod: _require(9298).ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
   const tmp = callback2(arg0, obj, obj);
   obj = { commands: tmp.commands, sections: tmp.descriptors };
   return obj;
@@ -453,7 +453,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "PX_16" };
+    return { command: "hash", application: "call" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

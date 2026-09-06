@@ -1,14 +1,14 @@
-// === Module 1425: fromGuildPropertiesWithAdditionalFields ===
+// === Module 1971: fromGuildPropertiesWithAdditionalFields ===
 
-// Module 1425 (fromGuildPropertiesWithAdditionalFields)
+// Module 1971 (fromGuildPropertiesWithAdditionalFields)
 import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
-import ME from "ME" /* 673 */;
-import areSetsEqual from "areSetsEqual" /* 1428 */;
-import fromServerGuildIncidentsData from "fromServerGuildIncidentsData" /* 1906 */;
-import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1907 */;
-import isValueEqual from "isValueEqual" /* 1426 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
+import ME from "ME" /* 1074 */;
+import areSetsEqual from "areSetsEqual" /* 1974 */;
+import fromServerGuildIncidentsData from "fromServerGuildIncidentsData" /* 1977 */;
+import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1978 */;
+import isValueEqual from "isValueEqual" /* 1972 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
 
 function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildTheme) {
   let obj = { id: properties.id, joinedAt: joinedAt.joinedAt, premiumSubscriberCount: joinedAt.premiumSubscriberCount, name: properties.name, description: null, icon: null, splash: null, banner: null, homeHeader: null, features: null, preferredLocale: null, ownerId: null, application_id: null, afkChannelId: null, afkTimeout: null, systemChannelId: null, verificationLevel: null, explicitContentFilter: null, defaultMessageNotifications: null, mfaLevel: null, vanityURLCode: null, premiumTier: null, premiumProgressBarEnabled: null, premiumProgressBarEnabledUserUpdatedAt: null, systemChannelFlags: null, discoverySplash: null, rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, maxStageVideoChannelUsers: null, maxVideoChannelUsers: null, maxMembers: null, nsfwLevel: null, ownerConfiguredContentLevel: null, hubType: null, latestOnboardingQuestionId: null, profile: null, guildTheme: null, premiumFeatures: null, moderatorReporting: null, guildSpaceSettings: null, verificationRoleId: null, gameApplicationIds: null, officialMessageColor: null, incidentsData: null };
@@ -172,7 +172,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   } else {
     tmp35 = null;
     if (null != theme) {
-      let tmp8Result = tmp8(1907);
+      let tmp8Result = tmp8(1978);
       let fromServerGuildThemeResult = tmp8Result.fromServerGuildTheme(theme);
       if (fromServerGuildThemeResult == null) {
         fromServerGuildThemeResult = { enabled: false, themeSettings: null };
@@ -215,7 +215,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
     prop4 = null;
   }
   obj[43] = prop4;
-  tmp8Result = tmp8(1906);
+  tmp8Result = tmp8(1977);
   obj[44] = tmp8Result.fromServerGuildIncidentsData(properties.incidents_data);
   return closure_6(closure_8, guildTheme, obj);
 }

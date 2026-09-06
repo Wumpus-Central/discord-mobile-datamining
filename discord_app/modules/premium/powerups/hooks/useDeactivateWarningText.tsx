@@ -1,10 +1,10 @@
-// === Module 12342: useDeactivateWarningText ===
+// === Module 12542: useDeactivateWarningText ===
 
-// Module 12342 (useDeactivateWarningText)
+// Module 12542 (useDeactivateWarningText)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 4398 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import closure_4 from "handleInviteData" /* 4480 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_6 from "createGuildRecordFromRust" /* 1979 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useDeactivateWarningText.tsx");

@@ -1,6 +1,6 @@
-// === Module 8666: set ===
+// === Module 8376: set ===
 
-// Module 8666 (set)
+// Module 8376 (set)
 import set from "set" /* 2 */;
 
 const re0 = /^([\w-+]+(?:\.[\w-+]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,63}(?:\.[a-z]{2})?)$/i;

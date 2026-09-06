@@ -1,10 +1,10 @@
-// === Module 7493: getEstablishedDate ===
+// === Module 7737: getEstablishedDate ===
 
-// Module 7493 (getEstablishedDate)
+// Module 7737 (getEstablishedDate)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1425 */;
+import ME from "ME" /* 1074 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
 
 let closure_2 = createChannelRecord.createChannelRecordFromInvite;
 const GuildFeatures = ME.GuildFeatures;

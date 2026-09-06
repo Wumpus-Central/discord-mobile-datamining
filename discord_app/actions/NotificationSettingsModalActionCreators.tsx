@@ -1,17 +1,17 @@
-// === Module 5496: ? ===
+// === Module 7119: ? ===
 
-// Module 5496
+// Module 7119
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1362 */;
-import UserNotificationSettings from "UserNotificationSettings" /* 5491 */;
-import handleConnectionOpenDefault from "handleConnectionOpen" /* 5493 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4411 */;
+import UserNotificationSettings from "UserNotificationSettings" /* 7114 */;
+import handleConnectionOpenDefault from "handleConnectionOpen" /* 7116 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4702 */;
-import { Endpoints } from "ME" /* 673 */;
-import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags" /* 4133 */;
-import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 682 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 4741 */;
+import { Endpoints } from "ME" /* 1074 */;
+import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags" /* 4212 */;
+import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 1084 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
@@ -42,17 +42,17 @@ export default {
     closure_3 = location;
     let obj = DISCORD_EPOCHDefault;
     const keys = obj.keys(channel_overrides.channel_overrides);
-    const currentGuildSettings = _require(5491).getCurrentGuildSettings(guildId);
-    const obj2 = _require(5491);
-    const manyCurrentChannelSettings = _require(5491).getManyCurrentChannelSettings(guildId, keys);
-    const obj3 = _require(5491);
+    const currentGuildSettings = _require(7114).getCurrentGuildSettings(guildId);
+    const obj2 = _require(7114);
+    const manyCurrentChannelSettings = _require(7114).getManyCurrentChannelSettings(guildId, keys);
+    const obj3 = _require(7114);
     let result = handleConnectionOpenDefault.saveUserGuildSettings(guildId, channel_overrides);
     const obj4 = handleConnectionOpenDefault;
     obj = { type: "USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE", guildId, settings: channel_overrides };
     dispatcherDefault.dispatch(obj);
     const obj5 = dispatcherDefault;
-    const result1 = _require(5491).trackGuildNotificationSettingsUpdate(guildId, channel_overrides, currentGuildSettings, OptedIn, location);
-    const obj7 = _require(5491);
+    const result1 = _require(7114).trackGuildNotificationSettingsUpdate(guildId, channel_overrides, currentGuildSettings, OptedIn, location);
+    const obj7 = _require(7114);
     const keys1 = DISCORD_EPOCHDefault.keys(channel_overrides.channel_overrides);
     const item = keys1.forEach((channelId) => {
       const value = closure_4.get(channelId);
@@ -83,8 +83,8 @@ export default {
     closure_3 = arg3;
     let obj = DISCORD_EPOCHDefault;
     const keys = obj.keys(channel_overrides);
-    const manyCurrentChannelSettings = _require(5491).getManyCurrentChannelSettings(guildId, keys);
-    const obj2 = _require(5491);
+    const manyCurrentChannelSettings = _require(7114).getManyCurrentChannelSettings(guildId, keys);
+    const obj2 = _require(7114);
     obj = { channel_overrides };
     const result = handleConnectionOpenDefault.saveUserGuildSettings(guildId, obj);
     const obj3 = handleConnectionOpenDefault;
@@ -157,16 +157,16 @@ export default {
               closure_1 = tmp2;
               c0 = tmp5;
               c0 = undefined;
-              const setFlagResult = closure_1_0(1398).setFlag(closure_1_4.accountNotificationSettings.flags, closure_1_0, closure_1_1);
+              const setFlagResult = closure_1_0(1384).setFlag(closure_1_4.accountNotificationSettings.flags, closure_1_0, closure_1_1);
               c0 = setFlagResult;
-              const HTTP = closure_1_0(527).HTTP;
+              const HTTP = closure_1_0(1272).HTTP;
               obj1 = { url: null, body: null, rejectWithError: null };
               obj1[0] = closure_1_5.ACCOUNT_NOTIFICATION_SETTINGS;
               const obj2 = { flags: null };
               obj2[0] = setFlagResult;
               obj1[1] = obj2;
-              const obj10 = closure_1_0(1398);
-              obj1[2] = closure_1_0(527).rejectWithMigratedError();
+              const obj10 = closure_1_0(1384);
+              obj1[2] = closure_1_0(1272).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj3 = { value: null, done: false };
@@ -183,7 +183,7 @@ export default {
               obj4[0] = arg1;
               return obj4;
             } else {
-              obj1 = closure_1_1(706);
+              obj1 = closure_1_1(573);
               const obj5 = { type: "NOTIFICATION_SETTINGS_UPDATE", settings: null };
               const obj6 = { flags: null };
               obj6[0] = c0;

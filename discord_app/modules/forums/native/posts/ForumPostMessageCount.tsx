@@ -1,16 +1,16 @@
-// === Module 11819: num2 ===
+// === Module 12018: num2 ===
 
-// Module 11819 (num2)
+// Module 12018 (num2)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import ChatIcon from "ChatIcon" /* 5025 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7639 */;
-import AnimatedCountDefault from "AnimatedCount" /* 11177 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import ChatIcon from "ChatIcon" /* 5071 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7885 */;
+import AnimatedCountDefault from "AnimatedCount" /* 11316 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 1234 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import set from "set" /* 1115 */;
 
 require = arg1;
 noopAll;
@@ -47,7 +47,7 @@ export default function ForumPostMessageCount(hasUnreads) {
   }
   obj = { style: items, accessibilityLabel: null, children: null };
   items = [tmp.container, containerStyle];
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj[1] = intl.formatToPlainString(getSystemLocale.t["8M0DrB"], { count: messageCountText });
   obj = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
   let str2 = "icon-muted";
@@ -60,7 +60,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     obj1 = { variant: "text-sm/semibold", color: null, children: null };
     obj1[1] = str;
     obj1[2] = messageCountText;
-    let tmp7Result = tmp7(tmp2(4474).Text, obj1);
+    let tmp7Result = tmp7(tmp2(4556).Text, obj1);
   } else {
     const obj2 = { count: null, textVariant: "text-sm/semibold", textColor: null, animate: false };
     obj2[0] = messageCount;
@@ -72,12 +72,12 @@ export default function ForumPostMessageCount(hasUnreads) {
   if (tmp5Result) {
     const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: null, children: null };
     obj3[2] = tmp.messageUnreadCount;
-    const intl2 = tmp2(1233).intl;
+    const intl2 = tmp2(1114).intl;
     const obj4 = { count: null };
     obj4[0] = unreadCount;
-    const items2 = ["(", intl2.format(tmp2(1233).t.z3PEth, obj4), ")"];
+    const items2 = ["(", intl2.format(tmp2(1114).t.z3PEth, obj4), ")"];
     obj3[3] = items2;
-    tmp5Result = tmp5(tmp2(4474).Text, obj3);
+    tmp5Result = tmp5(tmp2(4556).Text, obj3);
   }
   items1[2] = tmp5Result;
   obj[2] = items1;

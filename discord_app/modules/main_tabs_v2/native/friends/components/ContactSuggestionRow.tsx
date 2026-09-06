@@ -1,9 +1,9 @@
-// === Module 16606: ContactSuggestionRow ===
+// === Module 16771: ContactSuggestionRow ===
 
-// Module 16606 (ContactSuggestionRow)
+// Module 16771 (ContactSuggestionRow)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

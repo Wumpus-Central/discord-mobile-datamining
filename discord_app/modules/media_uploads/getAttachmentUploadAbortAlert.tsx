@@ -1,9 +1,9 @@
-// === Module 8407: getAttachmentUploadAbortAlertContent ===
+// === Module 9393: getAttachmentUploadAbortAlertContent ===
 
-// Module 8407 (getAttachmentUploadAbortAlertContent)
+// Module 9393 (getAttachmentUploadAbortAlertContent)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 const AbortCodes = ME.AbortCodes;
 const result = set.fileFinishedImporting("modules/media_uploads/getAttachmentUploadAbortAlert.tsx");
@@ -14,22 +14,22 @@ export const getAttachmentUploadAbortAlertContent = function getAttachmentUpload
   if (AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE === code) {
     let obj = { title: null, body: null };
     obj[0] = stringResult;
-    const intl4 = tmp(1233).intl;
+    const intl4 = tmp(1114).intl;
     obj = { maxSizeMb: null };
-    obj[0] = tmp(5083).MAX_TOTAL_ATTACHMENT_SIZE_MB;
-    obj[1] = intl4.formatToPlainString(tmp(1233).t.DYFPg2, obj);
+    obj[0] = tmp(5129).MAX_TOTAL_ATTACHMENT_SIZE_MB;
+    obj[1] = intl4.formatToPlainString(tmp(1114).t.DYFPg2, obj);
     return obj;
   } else if (tmp4.CLOUD_UPLOAD_NOT_FOUND === code) {
     obj1 = { title: null, body: null };
     obj1[0] = stringResult;
-    const intl3 = tmp(1233).intl;
-    obj1[1] = intl3.string(tmp(1233).t.bQldfH);
+    const intl3 = tmp(1114).intl;
+    obj1[1] = intl3.string(tmp(1114).t.bQldfH);
     return obj1;
   } else if (tmp4.INVALID_PERMISSIONS === code) {
     obj = { title: null, body: null };
     obj[0] = stringResult;
-    const intl2 = tmp(1233).intl;
-    obj[1] = intl2.string(tmp(1233).t.zl4Weq);
+    const intl2 = tmp(1114).intl;
+    obj[1] = intl2.string(tmp(1114).t.zl4Weq);
     return obj;
   } else {
     return null;

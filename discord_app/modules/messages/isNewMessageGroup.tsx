@@ -1,11 +1,11 @@
-// === Module 11753: isNewMessageGroup ===
+// === Module 11952: isNewMessageGroup ===
 
-// Module 11753 (isNewMessageGroup)
+// Module 11952 (isNewMessageGroup)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 684 */;
-import resetCache from "resetCache" /* 4163 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6126 */;
-import ME from "ME" /* 673 */;
+import setDefault from "set" /* 1090 */;
+import resetCache from "resetCache" /* 4242 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
+import ME from "ME" /* 1074 */;
 
 function isNewMessageGroup(isForumPost, content, hasFlag) {
   let type = hasFlag;
@@ -54,7 +54,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                     const isSameDayResult = resetCache.isSameDay(content.timestamp, type.timestamp);
                     let tmp20 = !isSameDayResult;
                     if (isSameDayResult) {
-                      const isWithinIntervalResult = tmp18(4163).isWithinInterval(content.timestamp, type.timestamp, closure_6);
+                      const isWithinIntervalResult = tmp18(4242).isWithinInterval(content.timestamp, type.timestamp, closure_6);
                       let tmp23 = !isWithinIntervalResult;
                       if (isWithinIntervalResult) {
                         const hasFlagResult3 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
@@ -102,7 +102,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                         tmp23 = tmp26;
                       }
                       tmp20 = tmp23;
-                      const tmp18Result = tmp18(4163);
+                      const tmp18Result = tmp18(4242);
                     }
                     tmp17 = tmp20;
                     const obj2 = resetCache;

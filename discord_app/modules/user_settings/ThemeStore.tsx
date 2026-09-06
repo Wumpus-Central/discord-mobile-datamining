@@ -1,18 +1,18 @@
-// === Module 1301: handleThemeChange ===
+// === Module 1183: handleThemeChange ===
 
-// Module 1301 (handleThemeChange)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1338 */;
-import resolveThemeDefault from "resolveTheme" /* 1344 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 1368 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1369 */;
-import closure_3 from "initialize" /* 1302 */;
-import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
-import closure_5 from "handleConnectionClosedOrResumed" /* 1339 */;
-import SystemThemeState from "SystemThemeState" /* 1304 */;
-import { UserSettingsDelay } from "MAX_FAVORITES" /* 682 */;
-import { ThemeTypes } from "ME" /* 673 */;
+// Module 1183 (handleThemeChange)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
+import resolveThemeDefault from "resolveTheme" /* 1227 */;
+import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 14084 */;
+import closure_3 from "initialize" /* 1184 */;
+import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
+import closure_5 from "handleConnectionClosedOrResumed" /* 1221 */;
+import SystemThemeState from "SystemThemeState" /* 1186 */;
+import { UserSettingsDelay } from "MAX_FAVORITES" /* 1084 */;
+import { ThemeTypes } from "ME" /* 1074 */;
 
 require = arg1;
 function handleThemeChange() {
@@ -152,7 +152,7 @@ obj = {
       let flag = tmp7 !== closure_13;
       if (flag) {
         closure_13 = tmp7;
-        tmp2(1368)(closure_13);
+        tmp2(14084)(closure_13);
         flag = true;
       }
       tmp = flag;

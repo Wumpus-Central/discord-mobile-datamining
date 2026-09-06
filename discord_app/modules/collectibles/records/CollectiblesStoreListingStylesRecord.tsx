@@ -1,7 +1,7 @@
-// === Module 7317: fromServer ===
+// === Module 7562: fromServer ===
 
-// Module 7317 (fromServer)
-import toJSDefault from "toJS" /* 1935 */;
+// Module 7562 (fromServer)
+import toJSDefault from "toJS" /* 1386 */;
 
 const require = arg1;
 toJSDefault;
@@ -17,16 +17,16 @@ class prototype extends tmp2 {
 prototype["fromServer"] = function fromServer(arg0) {
   ({ background_colors, button_colors, confetti_colors } = arg0);
   const mapped = background_colors.map((color) => {
-    const tmp = callback2(7307);
-    return tmp(callback(685).int2hex(color));
+    const tmp = callback2(7552);
+    return tmp(callback(1091).int2hex(color));
   });
   const mapped1 = button_colors.map((color) => {
-    const tmp = callback2(7307);
-    return tmp(callback(685).int2hex(color));
+    const tmp = callback2(7552);
+    return tmp(callback(1091).int2hex(color));
   });
   const mapped2 = confetti_colors.map((color) => {
-    const tmp = callback2(7307);
-    return tmp(callback(685).int2hex(color));
+    const tmp = callback2(7552);
+    return tmp(callback(1091).int2hex(color));
   });
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();

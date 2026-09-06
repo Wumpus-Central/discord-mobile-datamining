@@ -1,6 +1,6 @@
-// === Module 5464: sortByMatchScore ===
+// === Module 5518: sortByMatchScore ===
 
-// Module 5464 (sortByMatchScore)
+// Module 5518 (sortByMatchScore)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");

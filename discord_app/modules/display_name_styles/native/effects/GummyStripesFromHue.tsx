@@ -1,10 +1,10 @@
-// === Module 15188: AnimatedStripe ===
+// === Module 15348: AnimatedStripe ===
 
-// Module 15188 (AnimatedStripe)
+// Module 15348 (AnimatedStripe)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function AnimatedStripe(hue) {
@@ -45,7 +45,7 @@ let result = require("set").fileFinishedImporting("modules/display_name_styles/n
 export default function GummyStripesFromHue(hue) {
   hue = hue.hue;
   const obj = { children: null };
-  const GUMMY_STRIPES = hue(1937).GUMMY_STRIPES;
+  const GUMMY_STRIPES = hue(1388).GUMMY_STRIPES;
   obj[0] = GUMMY_STRIPES.map((hueShift) => closure_1_4(closure_1_8, { hue, shift: hueShift.hueShift, saturation: hueShift.saturation, lightness: hueShift.lightness, overlap: arg1 > 0 }, arg1));
   return callback(closure_5, obj);
 };

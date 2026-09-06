@@ -1,10 +1,10 @@
-// === Module 14737: useSelectedTeenUser ===
+// === Module 14893: useSelectedTeenUser ===
 
-// Module 14737 (useSelectedTeenUser)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8792 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import closure_4 from "getSettings" /* 7295 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7292 */;
+// Module 14893 (useSelectedTeenUser)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import closure_4 from "getSettings" /* 7540 */;
+import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/
 export const useSelectedTeenUser = function useSelectedTeenUser() {
   const _require = useIsInAdultAgeGroupDefault();
   const items = [closure_5, closure_3];
-  return _require(644).useStateFromStores(items, () => {
+  return _require(563).useStateFromStores(items, () => {
     if (true !== closure_0) {
       return closure_1_3.getCurrentUser();
     } else {
@@ -28,7 +28,7 @@ export const useSelectedTeenUser = function useSelectedTeenUser() {
 export const useTeenUserForId = function useTeenUserForId(gifterUserId) {
   const _require = gifterUserId;
   const items = [closure_3];
-  return _require(644).useStateFromStores(items, () => {
+  return _require(563).useStateFromStores(items, () => {
     const user = closure_1_3.getUser(closure_0);
     return null != user ? user : undefined;
   });
@@ -36,7 +36,7 @@ export const useTeenUserForId = function useTeenUserForId(gifterUserId) {
 export const useShouldLoadSettingsForSelectedTeenUser = function useShouldLoadSettingsForSelectedTeenUser() {
   selectedTeenId = selectedTeenId.getSelectedTeenId();
   const items = [closure_4];
-  const stateFromStoresObject = selectedTeenId(644).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = selectedTeenId(563).useStateFromStoresObject(items, () => {
     let hasSettingsForUserResult = null != selectedTeenId;
     if (hasSettingsForUserResult) {
       hasSettingsForUserResult = closure_1_4.hasSettingsForUser(tmp);

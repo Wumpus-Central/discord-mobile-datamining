@@ -1,9 +1,9 @@
-// === Module 9491: trackApplicationOpen ===
+// === Module 9570: trackApplicationOpen ===
 
-// Module 9491 (trackApplicationOpen)
+// Module 9570 (trackApplicationOpen)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import ME from "ME" /* 1074 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/activities/utils/trackApplicationOpen.tsx");

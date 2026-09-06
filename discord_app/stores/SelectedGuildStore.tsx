@@ -1,16 +1,16 @@
-// === Module 4299: handleConnectionOpen ===
+// === Module 4381: handleConnectionOpen ===
 
-// Module 4299 (handleConnectionOpen)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import transitionTo from "transitionTo" /* 1219 */;
-import matchPath from "matchPath" /* 4304 */;
-import RouteParam2 from "RouteParam" /* 4317 */;
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4300 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "initialize" /* 4303 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import ME from "ME" /* 673 */;
+// Module 4381 (handleConnectionOpen)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import transitionTo from "transitionTo" /* 1100 */;
+import matchPath from "matchPath" /* 4386 */;
+import RouteParam2 from "RouteParam" /* 4399 */;
+import closure_2 from "handleGatewayJoinRequestUpdate" /* 4382 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import closure_4 from "initialize" /* 4385 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function handleConnectionOpen() {

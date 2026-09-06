@@ -1,13 +1,13 @@
-// === Module 15908: HappeningNowCardUnifiedVC ===
+// === Module 16072: HappeningNowCardUnifiedVC ===
 
-// Module 15908 (HappeningNowCardUnifiedVC)
+// Module 16072 (HappeningNowCardUnifiedVC)
 import noopAll from "noop" /* 19 */;
-import IconOrPreviewDefault from "IconOrPreview" /* 15909 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 15921 */;
-import formatVoiceActivityTitleDefault from "formatVoiceActivityTitle" /* 15922 */;
-import closure_3 from "participantFromServer" /* 1385 */;
-import closure_4 from "reset" /* 4500 */;
-import closure_5 from "markAllUserIdListsStale" /* 4130 */;
+import IconOrPreviewDefault from "IconOrPreview" /* 16073 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16085 */;
+import formatVoiceActivityTitleDefault from "formatVoiceActivityTitle" /* 16086 */;
+import closure_3 from "participantFromServer" /* 1956 */;
+import closure_4 from "reset" /* 4582 */;
+import closure_5 from "markAllUserIdListsStale" /* 4209 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -21,7 +21,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     panelVariant = false;
   }
   const channelId = voiceState.channelId;
-  let obj = channelId(644);
+  let obj = channelId(563);
   const items = [closure_3, closure_4, closure_5];
   const items1 = [channelId];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
@@ -88,7 +88,7 @@ export const useCallActivityData = function useCallActivityData(channel_id) {
   const _require = channel_id;
   const items = [closure_3, closure_4, closure_5];
   const items1 = [channel_id];
-  return _require(644).useStateFromStoresObject(items, () => {
+  return _require(563).useStateFromStoresObject(items, () => {
     if (null == channelId) {
       return {};
     } else {

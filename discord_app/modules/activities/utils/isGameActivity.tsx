@@ -1,8 +1,8 @@
-// === Module 9266: isGameActivity ===
+// === Module 10886: isGameActivity ===
 
-// Module 9266 (isGameActivity)
+// Module 10886 (isGameActivity)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/activities/utils/isGameActivity.tsx");

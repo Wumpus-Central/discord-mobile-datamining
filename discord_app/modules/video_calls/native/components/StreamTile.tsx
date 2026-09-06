@@ -1,21 +1,21 @@
-// === Module 9579: StreamTextOverlay ===
+// === Module 9594: StreamTextOverlay ===
 
-// Module 9579 (StreamTextOverlay)
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import useVideoStreamErrorDefault from "useVideoStreamError" /* 9580 */;
-import registerAssetDefault from "registerAsset" /* 9607 */;
+// Module 9594 (StreamTextOverlay)
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import useVideoStreamErrorDefault from "useVideoStreamError" /* 9595 */;
+import registerAssetDefault from "registerAsset" /* 9621 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4500 */;
-import closure_7 from "fetchFingerprint" /* 1215 */;
-import { ApplicationStreamStates } from "ME" /* 673 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
+import closure_6 from "reset" /* 4582 */;
+import closure_7 from "fetchFingerprint" /* 502 */;
+import { ApplicationStreamStates } from "ME" /* 1074 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
 
 require = arg1;
 class StreamTextOverlay {
@@ -71,7 +71,7 @@ let closure_15 = importAllResult.memo((participant) => {
   importDefault = undefined;
   ({ streamId, resizeMode, gestureEnabled } = participant);
   importDefault = callback2();
-  let obj = participant(586);
+  let obj = participant(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getActiveStreamForStreamKey(participant.id));
   const tmp5 = useVideoStreamErrorDefault(MediaEngineContextTypes.STREAM, participant.user.id);
@@ -82,8 +82,8 @@ let closure_15 = importAllResult.memo((participant) => {
       obj[0] = stateFromStores;
       obj[1] = removeEmptyStateButton;
       obj[2] = removeEmptyStateImage;
-      let tmp4Result = tmp4(9583);
-      obj[3] = tmp(9583).VideoEmptyTypes.STREAM_FAILED;
+      let tmp4Result = tmp4(9597);
+      obj[3] = tmp(9597).VideoEmptyTypes.STREAM_FAILED;
       obj[4] = StyleSheet.absoluteFill;
       return callback(tmp4Result, obj);
     } else if (tmp6.ENDED === state) {
@@ -91,28 +91,28 @@ let closure_15 = importAllResult.memo((participant) => {
       obj[0] = stateFromStores;
       obj[1] = removeEmptyStateButton;
       obj[2] = removeEmptyStateImage;
-      tmp4Result = tmp4(9583);
-      obj[3] = tmp(9583).VideoEmptyTypes.STREAM_ENDED;
+      tmp4Result = tmp4(9597);
+      obj[3] = tmp(9597).VideoEmptyTypes.STREAM_ENDED;
       obj[4] = StyleSheet.absoluteFill;
       return callback(tmp4Result, obj);
     } else {
       if (tmp6.RECONNECTING === state) {
         obj1 = { title: null };
-        const intl = tmp(1233).intl;
-        obj1[0] = intl.string(tmp(1233).t["pdFFK+"]);
+        const intl = tmp(1114).intl;
+        obj1[0] = intl.string(tmp(1114).t["pdFFK+"]);
         let tmp9 = callback(StreamTextOverlay, obj1);
       } else {
         tmp9 = null;
         if (tmp6.PAUSED === state) {
           const obj2 = { title: null, subtext: null };
-          const intl2 = tmp(1233).intl;
-          obj2[0] = intl2.string(tmp(1233).t["5q17w5"]);
-          const intl3 = tmp(1233).intl;
+          const intl2 = tmp(1114).intl;
+          obj2[0] = intl2.string(tmp(1114).t["5q17w5"]);
+          const intl3 = tmp(1114).intl;
           const obj3 = { username: null };
-          obj3[0] = tmp4(4673).getName(stateFromStores.guildId, stateFromStores.channelId, user);
-          obj2[1] = intl3.formatToPlainString(tmp(1233).t.meVVlb, obj3);
+          obj3[0] = tmp4(4712).getName(stateFromStores.guildId, stateFromStores.channelId, user);
+          obj2[1] = intl3.formatToPlainString(tmp(1114).t.meVVlb, obj3);
           tmp9 = callback(StreamTextOverlay, obj2);
-          const tmp4Result1 = tmp4(4673);
+          const tmp4Result1 = tmp4(4712);
         }
       }
       if (null != tmp5) {
@@ -120,10 +120,10 @@ let closure_15 = importAllResult.memo((participant) => {
         obj4[0] = stateFromStores;
         obj4[1] = removeEmptyStateButton;
         obj4[2] = removeEmptyStateImage;
-        obj4[3] = tmp(9583).VideoEmptyTypes.STREAM_FAILED;
+        obj4[3] = tmp(9597).VideoEmptyTypes.STREAM_FAILED;
         obj4[4] = StyleSheet.absoluteFill;
         obj4[5] = tmp5;
-        return callback(tmp4(9583), obj4);
+        return callback(tmp4(9597), obj4);
       } else {
         id = id.getId();
         const obj5 = { resizeMode: null, streamId: null, gestureEnabled: null, renderTag: null, videoSpinnerContext: null, userId: null, paused: null };
@@ -134,15 +134,15 @@ let closure_15 = importAllResult.memo((participant) => {
           return closure_1_10(lib(closure_1_2[18]), { style: lib.liveTag, participant });
         };
         if (stateFromStores.ownerId === id) {
-          let REMOTE_STREAM = tmp(9593).VideoSpinnerContext.SELF_STREAM;
+          let REMOTE_STREAM = tmp(9607).VideoSpinnerContext.SELF_STREAM;
         } else {
-          REMOTE_STREAM = tmp(9593).VideoSpinnerContext.REMOTE_STREAM;
+          REMOTE_STREAM = tmp(9607).VideoSpinnerContext.REMOTE_STREAM;
         }
         const obj6 = { children: null };
         obj5[4] = REMOTE_STREAM;
         obj5[5] = user.id;
         obj5[6] = stateFromStores.state === tmp6.PAUSED;
-        const items1 = [callback(tmp4(9590), obj5), tmp9];
+        const items1 = [callback(tmp4(9604), obj5), tmp9];
         obj6[0] = items1;
         return closure_11(closure_12, obj6);
       }

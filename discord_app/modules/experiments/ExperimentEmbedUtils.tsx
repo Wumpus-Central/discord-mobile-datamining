@@ -1,10 +1,10 @@
-// === Module 7644: regExp ===
+// === Module 7890: regExp ===
 
-// Module 7644 (regExp)
+// Module 7890 (regExp)
 import set from "set" /* 2 */;
-import trackExposureToExperiment from "trackExposureToExperiment" /* 4399 */;
-import getFirstEligibleUserExperimentDefault from "getFirstEligibleUserExperiment" /* 7645 */;
-import getExperimentVariantsForDevTools from "getExperimentVariantsForDevTools" /* 7646 */;
+import trackExposureToExperiment from "trackExposureToExperiment" /* 4481 */;
+import getFirstEligibleUserExperimentDefault from "getFirstEligibleUserExperiment" /* 7891 */;
+import getExperimentVariantsForDevTools from "getExperimentVariantsForDevTools" /* 7892 */;
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
 const result = set.fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");
@@ -52,7 +52,7 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
       const system2 = system.system;
       if (trackExposureToExperiment.ExperimentSystem.LEGACY === system2) {
         return getFirstEligibleUserExperimentDefault.getExperimentBucketName(experimentServerAssignment.bucket);
-      } else if (tmp4(4399).ExperimentSystem.APEX === system2) {
+      } else if (tmp4(4481).ExperimentSystem.APEX === system2) {
         const _HermesInternal = HermesInternal;
         return "Variant " + experimentServerAssignment.variantId;
       } else {

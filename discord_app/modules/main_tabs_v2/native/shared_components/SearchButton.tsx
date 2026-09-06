@@ -1,14 +1,14 @@
-// === Module 12168: SEARCH_BAR_HEIGHT ===
+// === Module 12370: SEARCH_BAR_HEIGHT ===
 
-// Module 12168 (SEARCH_BAR_HEIGHT)
+// Module 12370 (SEARCH_BAR_HEIGHT)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6245 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7051 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;

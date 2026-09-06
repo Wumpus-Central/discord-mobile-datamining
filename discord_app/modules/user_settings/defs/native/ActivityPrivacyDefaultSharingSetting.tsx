@@ -1,12 +1,12 @@
-// === Module 15748: radio ===
+// === Module 15906: radio ===
 
-// Module 15748 (radio)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import useIsInActivityPrivacyCopyExperiment from "useIsInActivityPrivacyCopyExperiment" /* 15749 */;
+// Module 15906 (radio)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import useIsInActivityPrivacyCopyExperiment from "useIsInActivityPrivacyCopyExperiment" /* 15907 */;
 import closure_3 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 11292 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {
@@ -20,21 +20,21 @@ createToggle = {
   },
   useOptions() {
     return React.useMemo(() => {
-      let obj = { value: callback(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
-      const intl = callback(1233).intl;
-      obj[1] = intl.string(callback(1233).t.FzgQna);
-      const intl2 = callback(1233).intl;
-      obj[2] = intl2.string(callback(1233).t.SQxoyc);
+      let obj = { value: callback(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
+      const intl = callback(1114).intl;
+      obj[1] = intl.string(callback(1114).t.FzgQna);
+      const intl2 = callback(1114).intl;
+      obj[2] = intl2.string(callback(1114).t.SQxoyc);
       const items = [obj, , ];
-      obj = { value: callback(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
-      const intl3 = callback(1233).intl;
-      obj[1] = intl3.string(callback(1233).t["1hvuGH"]);
-      const intl4 = callback(1233).intl;
-      obj[2] = intl4.string(callback(1233).t.odUCPE);
+      obj = { value: callback(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
+      const intl3 = callback(1114).intl;
+      obj[1] = intl3.string(callback(1114).t["1hvuGH"]);
+      const intl4 = callback(1114).intl;
+      obj[2] = intl4.string(callback(1114).t.odUCPE);
       items[1] = obj;
-      obj = { value: callback(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
-      const intl5 = callback(1233).intl;
-      obj[1] = intl5.string(callback(1233).t.fQc5la);
+      obj = { value: callback(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
+      const intl5 = callback(1114).intl;
+      obj[1] = intl5.string(callback(1114).t.fQc5la);
       items[2] = obj;
       return items;
     }, []);
@@ -51,15 +51,15 @@ createToggle = {
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
     let obj = useIsInActivityPrivacyCopyExperiment;
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
-      let tmp2Result = tmp2(14695);
+      let tmp2Result = tmp2(14851);
       const affectedGuilds = tmp2Result.computeAffectedGuilds(setting, NumberResult);
       if (null != affectedGuilds) {
-        tmp2Result = tmp2(14695);
+        tmp2Result = tmp2(14851);
         const activityRestrictionSettingName = tmp2Result.getActivityRestrictionSettingName(NumberResult);
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5[0], affectedGuildIds: obj5[1] } = affectedGuilds);
         obj[2] = activityRestrictionSettingName;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(2008)(15750, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(1896)(15908, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }

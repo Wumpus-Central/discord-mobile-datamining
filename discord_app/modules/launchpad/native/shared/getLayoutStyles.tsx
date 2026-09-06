@@ -1,11 +1,11 @@
-// === Module 16813: getLayoutStyle ===
+// === Module 16977: getLayoutStyle ===
 
-// Module 16813 (getLayoutStyle)
+// Module 16977 (getLayoutStyle)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import GameIcon from "GameIcon" /* 5972 */;
-import GuildIconSizes from "GuildIconSizes" /* 6013 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import GuildIconSizes from "GuildIconSizes" /* 5584 */;
+import GameIcon from "GameIcon" /* 7172 */;
 
 let obj = { layout: { margin: { marginLeft: 8, marginRight: 8, marginVertical: 0 } }, container: null, voiceUsers: null, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };
 obj = { borderRadius: ThemesDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 } };

@@ -1,17 +1,17 @@
-// === Module 11599: renderIcon ===
+// === Module 11798: renderIcon ===
 
-// Module 11599 (renderIcon)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
-import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import registerAssetDefault from "registerAsset" /* 11602 */;
-import registerAssetDefault2 from "registerAsset" /* 11603 */;
+// Module 11798 (renderIcon)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import Text from "Text" /* 4556 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import registerAssetDefault from "registerAsset" /* 11801 */;
+import registerAssetDefault2 from "registerAsset" /* 11802 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleThemeChange" /* 1301 */;
+import closure_5 from "handleThemeChange" /* 1183 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -52,16 +52,16 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1[0] = items1;
     if (obj6.isThemeDark(theme.theme)) {
-      let tmp13Result = tmp13(11600);
+      let tmp13Result = tmp13(11799);
     } else {
-      tmp13Result = tmp13(11601);
+      tmp13Result = tmp13(11800);
     }
     obj = { source: null };
     obj[0] = tmp13Result;
     const items2 = [callback(closure_4, obj), ];
     const obj2 = { style: null, variant: "text-xs/bold", color: "text-default", children: null };
     obj2[0] = tmp.emptyGuildIconText;
-    const intl = tmp10(1233).intl;
+    const intl = tmp10(1114).intl;
     obj6 = AccessibilityAnnouncer;
     const tmp6 = closure_7;
     const tmp7 = closure_3;
@@ -110,11 +110,11 @@ prototype["render"] = function render() {
   const tmp = callback3(this.context);
   ({ style, onPress, icon } = this.props);
   if (null != icon) {
-    const intl2 = tmp3(1233).intl;
-    let stringResult = intl2.string(tmp3(1233).t.VATxfe);
+    const intl2 = tmp3(1114).intl;
+    let stringResult = intl2.string(tmp3(1114).t.VATxfe);
   } else {
-    const intl = tmp3(1233).intl;
-    stringResult = intl.string(tmp3(1233).t["MsUY/S"]);
+    const intl = tmp3(1114).intl;
+    stringResult = intl.string(tmp3(1114).t["MsUY/S"]);
   }
   let obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress, children: null };
   obj = { style: items, children: null };

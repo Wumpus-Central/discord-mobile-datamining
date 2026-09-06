@@ -1,6 +1,6 @@
-// === Module 11302: hasUpdates ===
+// === Module 11478: hasUpdates ===
 
-// Module 11302 (hasUpdates)
+// Module 11478 (hasUpdates)
 import set2 from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

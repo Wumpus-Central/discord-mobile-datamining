@@ -1,12 +1,12 @@
-// === Module 1485: isDiscordProxiedAssetUrl ===
+// === Module 1365: isDiscordProxiedAssetUrl ===
 
-// Module 1485 (isDiscordProxiedAssetUrl)
+// Module 1365 (isDiscordProxiedAssetUrl)
 import applyDefault from "apply" /* 12 */;
-import ME from "ME" /* 673 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
-import ipDefault from "ip" /* 1486 */;
-import UrlAll from "Url" /* 1487 */;
+import ME from "ME" /* 1074 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
+import ipDefault from "ip" /* 1366 */;
+import UrlAll from "Url" /* 1367 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import set from "set" /* 2 */;
 
 function isDiscordProxiedAssetUrl(url, arg1, arg2) {

@@ -1,19 +1,19 @@
-// === Module 9954: getTransformedUser ===
+// === Module 9839: getTransformedUser ===
 
-// Module 9954 (getTransformedUser)
+// Module 9839 (getTransformedUser)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import _modDef1205 from "module_1205" /* 1205 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import hasFlagAll from "hasFlag" /* 1398 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import initializeDefault from "initialize" /* 5495 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9955 */;
-import closure_5 from "createdAt" /* 1934 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "trackCommunicationDisabled" /* 1991 */;
-import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 1074 */;
+import _modDef1232 from "module_1232" /* 1232 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import hasFlagAll from "hasFlag" /* 1384 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import initializeDefault from "initialize" /* 7118 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9840 */;
+import closure_5 from "createdAt" /* 1385 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "trackCommunicationDisabled" /* 2021 */;
+import closure_8 from "markAllUserIdListsStale" /* 4209 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
 
 function getTransformedUser(author) {
   if (null != author) {
@@ -922,7 +922,7 @@ prototype2["updateUsers"] = function updateUsers(arr) {
       if (null == id) {
         let tmp20 = importDefault;
         let tmp21 = dependencyMap;
-        let obj3 = _modDef1205;
+        let obj3 = _modDef1232;
         let obj = { action: null, userFields: null };
         obj[0] = arg1;
         obj = { userIsNull: null, idIsNull: true, usernameIsNull: null, isBot: null, isFriend: null, isProvisional: null, globalNameIsNull: null, usersArrayLength: null };
@@ -1010,7 +1010,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(handleUserSea
       }
     };
     obj._worker = _worker;
-    obj._uuid = obj(511).v4();
+    obj._uuid = obj(1256).v4();
     obj._callback = handleUserSearchResults;
     obj._limit = num;
     obj._currentQuery = null;

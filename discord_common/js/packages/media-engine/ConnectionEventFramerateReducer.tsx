@@ -1,9 +1,9 @@
-// === Module 4594: logger ===
+// === Module 4630: logger ===
 
-// Module 4594 (logger)
+// Module 4630 (logger)
 import set from "set" /* 2 */;
 import log from "log" /* 4 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 ({ SpeakingFlags: obj1, VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: c3 } = DesktopSources);
 const logger = new log.Logger("ConnectionEventFramerateReducer");

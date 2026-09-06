@@ -1,6 +1,6 @@
-// === Module 681: GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID ===
+// === Module 1082: GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID ===
 
-// Module 681 (GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID)
+// Module 1082 (GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/global_discovery_apps/GlobalDiscoveryAppsConstants.tsx");

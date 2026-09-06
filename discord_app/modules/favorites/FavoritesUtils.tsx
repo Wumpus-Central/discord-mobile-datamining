@@ -1,10 +1,10 @@
-// === Module 1911: getFavoritesAwareGuildName ===
+// === Module 1982: getFavoritesAwareGuildName ===
 
-// Module 1911 (getFavoritesAwareGuildName)
+// Module 1982 (getFavoritesAwareGuildName)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import date from "date" /* 1424 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import date from "date" /* 1970 */;
 
 const FAVORITES_RAW_GUILD_ID = date.FAVORITES_RAW_GUILD_ID;
 const FAVORITES = ME.FAVORITES;

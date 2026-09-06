@@ -1,15 +1,15 @@
-// === Module 5365: getChannelSelectionOrigin ===
+// === Module 5412: getChannelSelectionOrigin ===
 
-// Module 5365 (getChannelSelectionOrigin)
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "recomputeGuild" /* 5366 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_7 from "handleConnectionOpen" /* 1980 */;
-import closure_8 from "handleConnectionOpen" /* 4299 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import closure_10 from "updateVoiceState" /* 4497 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5367 */;
+// Module 5412 (getChannelSelectionOrigin)
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "recomputeGuild" /* 5413 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_7 from "handleConnectionOpen" /* 2011 */;
+import closure_8 from "handleConnectionOpen" /* 4381 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import closure_10 from "updateVoiceState" /* 4579 */;
+import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");

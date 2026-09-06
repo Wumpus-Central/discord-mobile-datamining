@@ -1,9 +1,9 @@
-// === Module 10158: useIsGuestOrLurker ===
+// === Module 10049: useIsGuestOrLurker ===
 
-// Module 10158 (useIsGuestOrLurker)
-import closure_2 from "trackCommunicationDisabled" /* 1991 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import { GuildFeatures } from "ME" /* 673 */;
+// Module 10049 (useIsGuestOrLurker)
+import closure_2 from "trackCommunicationDisabled" /* 2021 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import { GuildFeatures } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");
@@ -13,7 +13,7 @@ export default function useIsGuestOrLurker(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_3, closure_2];
   const items1 = [arg0, arg1];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const guild = closure_1_3.getGuild(closure_0);
     let hasItem;
     if (guild != null) {

@@ -1,24 +1,24 @@
-// === Module 11719: RowGroup ===
+// === Module 11918: RowGroup ===
 
-// Module 11719 (RowGroup)
+// Module 11918 (RowGroup)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2368 */;
-import UserPlusIcon from "UserPlusIcon" /* 4415 */;
-import ClockIcon from "ClockIcon" /* 4441 */;
-import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4927 */;
-import ForumIcon from "ForumIcon" /* 5042 */;
-import XSmallIcon from "XSmallIcon" /* 5560 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
-import SettingsIcon from "SettingsIcon" /* 6250 */;
-import FlagIcon from "FlagIcon" /* 8809 */;
-import ServerIcon from "ServerIcon" /* 9372 */;
-import GiftIcon from "GiftIcon" /* 10998 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11720 */;
-import PhoneIcon from "PhoneIcon" /* 11721 */;
-import CreditCardIcon from "CreditCardIcon" /* 11723 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 11725 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 2396 */;
+import UserPlusIcon from "UserPlusIcon" /* 4497 */;
+import ClockIcon from "ClockIcon" /* 4523 */;
+import Text from "Text" /* 4556 */;
+import Stack from "Stack" /* 4973 */;
+import ForumIcon from "ForumIcon" /* 5088 */;
+import XSmallIcon from "XSmallIcon" /* 5680 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+import SettingsIcon from "SettingsIcon" /* 7380 */;
+import FlagIcon from "FlagIcon" /* 8664 */;
+import ServerIcon from "ServerIcon" /* 9286 */;
+import GiftIcon from "GiftIcon" /* 11030 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11919 */;
+import PhoneIcon from "PhoneIcon" /* 11920 */;
+import CreditCardIcon from "CreditCardIcon" /* 11922 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 11924 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -36,8 +36,8 @@ function RowGroup(children) {
       if (true === negative) {
         str = "text-status-dnd";
       }
-      obj[2] = closure_3(callback(5608).TableRow.Icon, { variant: str, IconComponent });
-      return closure_3(callback(5608).TableRow, obj, header);
+      obj[2] = closure_3(callback(5605).TableRow.Icon, { variant: str, IconComponent });
+      return closure_3(callback(5605).TableRow, obj, header);
     })
   };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);

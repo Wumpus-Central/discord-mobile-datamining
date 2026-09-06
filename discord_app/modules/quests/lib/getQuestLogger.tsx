@@ -1,9 +1,9 @@
-// === Module 7465: getQuestLogger ===
+// === Module 7709: getQuestLogger ===
 
-// Module 7465 (getQuestLogger)
+// Module 7709 (getQuestLogger)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "refreshSourceMapCookie" /* 703 */;
-import { NOOP } from "sum" /* 502 */;
+import closure_2 from "refreshSourceMapCookie" /* 1347 */;
+import { NOOP } from "sum" /* 1085 */;
 
 const result = require("set").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 

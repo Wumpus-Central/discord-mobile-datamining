@@ -1,14 +1,14 @@
-// === Module 12071: getTargetCardSize ===
+// === Module 12275: getTargetCardSize ===
 
-// Module 12071 (getTargetCardSize)
-import shallowEqualDefault from "shallowEqual" /* 640 */;
+// Module 12275 (getTargetCardSize)
+import shallowEqualDefault from "shallowEqual" /* 558 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { PixelRatio } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4494 */;
-import VoicePanelModes from "VoicePanelModes" /* 12069 */;
-import CARD_SIZE from "CARD_SIZE" /* 12072 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
+import closure_6 from "getParticipants" /* 4576 */;
+import VoicePanelModes from "VoicePanelModes" /* 12273 */;
+import CARD_SIZE from "CARD_SIZE" /* 12276 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -817,7 +817,7 @@ prototype["emitLayoutChanges"] = function emitLayoutChanges() {
   self = this;
   if (tmp) {
     self.emitItemChanges = false;
-    self(702).batchUpdates(() => {
+    self(1249).batchUpdates(() => {
       for (const item10006 of tmp) {
         let item10006Result = item10006();
         continue;
@@ -827,7 +827,7 @@ prototype["emitLayoutChanges"] = function emitLayoutChanges() {
         continue;
       }
     });
-    const obj = self(702);
+    const obj = self(1249);
   }
 };
 prototype["deferredLayoutChange"] = function deferredLayoutChange() {

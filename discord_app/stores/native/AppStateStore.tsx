@@ -1,13 +1,13 @@
-// === Module 7167: getState ===
+// === Module 1895: getState ===
 
-// Module 7167 (getState)
+// Module 1895 (getState)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initializeDefault from "initialize" /* 586 */;
-import ME from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import promise from "expandEventProperties" /* 695 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import promise from "expandEventProperties" /* 1242 */;
 
 const AppStates = ME.AppStates;
 const currentState = get_ActivityIndicator.AppState.currentState;

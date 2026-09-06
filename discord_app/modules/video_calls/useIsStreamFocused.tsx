@@ -1,8 +1,8 @@
-// === Module 9640: useIsStreamFocused ===
+// === Module 9654: useIsStreamFocused ===
 
-// Module 9640 (useIsStreamFocused)
-import closure_2 from "getParticipants" /* 4494 */;
-import { isStreamParticipant } from "ParticipantTypes" /* 4499 */;
+// Module 9654 (useIsStreamFocused)
+import closure_2 from "getParticipants" /* 4576 */;
+import { isStreamParticipant } from "ParticipantTypes" /* 4581 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/video_calls/useIsSt
 export const useIsStreamFocused = function useIsStreamFocused(id) {
   const _require = id;
   const items = [closure_2];
-  const stateFromStores = _require(586).useStateFromStores(items, () => {
+  const stateFromStores = _require(504).useStateFromStores(items, () => {
     let selectedParticipant = null;
     if (null != closure_0) {
       selectedParticipant = closure_1_2.getSelectedParticipant(tmp);

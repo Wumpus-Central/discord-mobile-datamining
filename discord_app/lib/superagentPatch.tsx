@@ -1,15 +1,15 @@
-// === Module 17113: isAnalyticsEndpoint ===
+// === Module 17279: isAnalyticsEndpoint ===
 
-// Module 17113 (isAnalyticsEndpoint)
+// Module 17279 (isAnalyticsEndpoint)
 import reportAll from "report" /* 7 */;
-import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 528 */;
-import getTimeZoneDefault from "getTimeZone" /* 17116 */;
-import closure_4 from "getHash" /* 4391 */;
-import { AbortCodes } from "ME" /* 673 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1273 */;
+import getTimeZoneDefault from "getTimeZone" /* 17282 */;
+import closure_4 from "getHash" /* 4476 */;
+import { AbortCodes } from "ME" /* 1074 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import sendRequest from "sendRequest" /* 527 */;
-import importDefaultResult1 from "dispatcher" /* 706 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import importDefaultResult1 from "dispatcher" /* 573 */;
 
 let closure_0 = arg1;
 function isAnalyticsEndpoint(pathname) {
@@ -49,12 +49,12 @@ let result = sendRequest.setRejectWithMigratedError(function isRejectWithMigrate
 ApexExperiment = {
   prepareRequest(promise) {
     const callback = promise;
-    const _default = callback(1215).default;
-    const _default2 = callback(703).default;
-    const _default3 = callback(1921).default;
+    const _default = callback(502).default;
+    const _default2 = callback(1347).default;
+    const _default3 = callback(1371).default;
     importDefault = performance.now();
     if ("/" === promise.url[0]) {
-      let tmpResult = tmp(527);
+      let tmpResult = tmp(1272);
       promise.url = tmpResult.getAPIBaseURL() + promise.url;
       let tmp3 = "Authorization" in promise.header;
       if (!tmp3) {
@@ -63,7 +63,7 @@ ApexExperiment = {
       if (!tmp3) {
         const result = promise.set("Authorization", _default.getToken());
       }
-      tmpResult = tmp(17115);
+      tmpResult = tmp(17281);
       const result1 = tmpResult.updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
@@ -85,10 +85,10 @@ ApexExperiment = {
       if (tmp13) {
         const result4 = promise.set("X-Installation-ID", installationForTracking);
       }
-      if (callback(1234).isPlatformEmbedded) {
+      if (callback(1115).isPlatformEmbedded) {
         const tmpResult1 = tmp(17);
         if (tmpResult2.isAndroid()) {
-          let LocalizationManager = tmp(663).default;
+          let LocalizationManager = tmp(1117).default;
         } else {
           LocalizationManager = tmpResult1.NativeModules.LocalizationManager;
         }
@@ -114,9 +114,9 @@ ApexExperiment = {
           }, []);
           return reduced.join(",");
         })(items));
-        tmpResult2 = tmp(1234);
+        tmpResult2 = tmp(1115);
       }
-      const result6 = promise.set("X-Discord-Locale", callback(1995).default.locale);
+      const result6 = promise.set("X-Discord-Locale", callback(2025).default.locale);
       const tmp19 = getTimeZoneDefault();
       if (null != tmp19) {
         const result7 = promise.set("X-Discord-Timezone", tmp19);
@@ -171,7 +171,7 @@ ApexExperiment = {
     importAll = (function shouldTrackHttpRequest(url) {
       return !callback3(url);
     })(promise.url);
-    _default4 = callback(695).default;
+    _default4 = callback(1242).default;
     reportAll.report("Network", "Sending " + promise.method + " to " + promise.url);
     promise.on("response", (status) => {
       let text = null;
@@ -275,7 +275,7 @@ ApexExperiment = {
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [callback(2008)(17120, dependencyMap.paths), callback(2008)(11138, dependencyMap.paths)];
+        const items = [callback(1896)(17286, dependencyMap.paths), callback(1896)(11277, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((arg0) => {
           const iter = arg0[Symbol.iterator]();
@@ -374,12 +374,12 @@ ApexExperiment = {
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = callback(2008)(15506, dependencyMap.paths);
-          callback(2008)(15506, dependencyMap.paths).then((openMFAModal) => {
+          const promise4 = callback(1896)(15664, dependencyMap.paths);
+          callback(1896)(15664, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           }).catch(arg2);
           flag = true;
-          const nextPromise2 = callback(2008)(15506, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = callback(1896)(15664, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -391,11 +391,11 @@ ApexExperiment = {
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(2008)(5468, tmp8.paths).then((arg0) => {
+      tmp7(1896)(5522, tmp8.paths).then((arg0) => {
         arg0.default();
       });
       flag = false;
-      const promise3 = tmp7(2008)(5468, tmp8.paths);
+      const promise3 = tmp7(1896)(5522, tmp8.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -403,7 +403,7 @@ ApexExperiment = {
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(2008)(13808, tmp8.paths).then((arg0) => {
+        tmp7(1896)(13830, tmp8.paths).then((arg0) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -412,7 +412,7 @@ ApexExperiment = {
           arg0.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(2008)(13808, tmp8.paths);
+        const promise2 = tmp7(1896)(13830, tmp8.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -424,14 +424,14 @@ ApexExperiment = {
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(2008)(17127, tmp8.paths).then((openRestrictedHoursModal) => {
+          tmp7(1896)(17293, tmp8.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(2008)(17127, tmp8.paths);
+          const promise = tmp7(1896)(17293, tmp8.paths);
         }
       }
-      tmp7Result = tmp7(17126);
+      tmp7Result = tmp7(17292);
     }
   }
 };
@@ -480,10 +480,10 @@ closure_0 = importDefaultResult((arg0) => {
               dependencyMap = 1;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = tmp25(1472).awaitOnline();
+              obj1[0] = tmp25(1461).awaitOnline();
               return obj1;
             }
-            obj8 = closure_1_1(1472);
+            obj8 = closure_1_1(1461);
           }
         } else if (arg0 === 1) {
           c4 = 3;

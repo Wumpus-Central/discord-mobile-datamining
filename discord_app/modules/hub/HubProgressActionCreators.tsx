@@ -1,9 +1,9 @@
-// === Module 9945: setHubProgressActionComplete ===
+// === Module 9830: setHubProgressActionComplete ===
 
-// Module 9945 (setHubProgressActionComplete)
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import { HUB_PROGRESS_STEP_ORDER } from "items" /* 9946 */;
-import { GuildFeatures } from "ME" /* 673 */;
+// Module 9830 (setHubProgressActionComplete)
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import { HUB_PROGRESS_STEP_ORDER } from "items" /* 9831 */;
+import { GuildFeatures } from "ME" /* 1074 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
@@ -18,7 +18,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
     }
     if (hasItem) {
       const items = [JOIN_GUILD];
-      const result = items(1369).updateUserGuildSettings(guildId, (hubProgress) => {
+      const result = items(1940).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {
           let tmp = item10008;
@@ -34,14 +34,14 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
           continue;
         }
         return flag;
-      }, items(1369).UserSettingsDelay.INFREQUENT_USER_ACTION);
-      const obj = items(1369);
+      }, items(1940).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      const obj = items(1940);
     }
   }
 };
 export const skipHubProgress = function skipHubProgress(id) {
   const _require = HUB_PROGRESS_STEP_ORDER;
-  const result = _require(1369).updateUserGuildSettings(id, (hubProgress) => {
+  const result = _require(1940).updateUserGuildSettings(id, (hubProgress) => {
     let flag = false;
     for (const item10008 of closure_0) {
       let tmp = item10008;
@@ -57,5 +57,5 @@ export const skipHubProgress = function skipHubProgress(id) {
       continue;
     }
     return flag;
-  }, _require(1369).UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, _require(1940).UserSettingsDelay.INFREQUENT_USER_ACTION);
 };

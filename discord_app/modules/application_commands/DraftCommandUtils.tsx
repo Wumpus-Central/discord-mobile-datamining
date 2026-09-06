@@ -1,10 +1,10 @@
-// === Module 11795: toDraftCommand ===
+// === Module 11994: toDraftCommand ===
 
-// Module 11795 (toDraftCommand)
+// Module 11994 (toDraftCommand)
 import set from "set" /* 2 */;
-import isDraftCommandValidForText from "isDraftCommandValidForText" /* 4857 */;
-import regExp from "regExp" /* 4954 */;
-import findCommandInSectionAll from "findCommandInSection" /* 8456 */;
+import isDraftCommandValidForText from "isDraftCommandValidForText" /* 4903 */;
+import regExp from "regExp" /* 5000 */;
+import findCommandInSectionAll from "findCommandInSection" /* 9416 */;
 
 const COMMAND_SENTINEL = regExp.COMMAND_SENTINEL;
 const result = set.fileFinishedImporting("modules/application_commands/DraftCommandUtils.tsx");

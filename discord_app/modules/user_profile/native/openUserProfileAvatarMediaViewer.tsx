@@ -1,9 +1,9 @@
-// === Module 8584: openUserProfileAvatarMediaViewer ===
+// === Module 8260: openUserProfileAvatarMediaViewer ===
 
-// Module 8584 (openUserProfileAvatarMediaViewer)
-import _openMediaModal from "_openMediaModal" /* 8585 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { AVATAR_MAX_SIZE } from "ME" /* 673 */;
+// Module 8260 (openUserProfileAvatarMediaViewer)
+import _openMediaModal from "_openMediaModal" /* 8261 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import { AVATAR_MAX_SIZE } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");

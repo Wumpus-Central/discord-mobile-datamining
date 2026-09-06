@@ -1,10 +1,10 @@
-// === Module 16161: MentionSubtitle ===
+// === Module 16323: MentionSubtitle ===
 
-// Module 16161 (MentionSubtitle)
+// Module 16323 (MentionSubtitle)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import styles from "styles" /* 16162 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import styles from "styles" /* 16324 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -20,17 +20,17 @@ export default function MentionSubtitle(channel) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(4982).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(4982);
+    channelIconComponentWithGuild = tmp(5028).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(5028);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(5034).TextIcon;
+    channelIconComponentWithGuild = tmp(5080).TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
   const items = [callback(channelIconComponentWithGuild, obj), ];
   obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj1[4] = intl.format(getSystemLocale.t.L9YdGH, {
     channelName,
     count: count - 1,

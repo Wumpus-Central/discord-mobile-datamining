@@ -1,20 +1,20 @@
-// === Module 9109: ClearInputButton ===
+// === Module 11114: ClearInputButton ===
 
-// Module 9109 (ClearInputButton)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import registerAssetDefault from "registerAsset" /* 7725 */;
+// Module 11114 (ClearInputButton)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import registerAssetDefault from "registerAsset" /* 6940 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import { STATUS_MAX_LENGTH } from "StatusTypes" /* 9110 */;
-import ME from "ME" /* 673 */;
-import { EmojiIntention } from "set" /* 1924 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import { STATUS_MAX_LENGTH } from "StatusTypes" /* 11115 */;
+import ME from "ME" /* 1074 */;
+import { EmojiIntention } from "set" /* 1374 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function ClearInputButton(onPress) {
@@ -111,9 +111,9 @@ function EditCustomStatusWithPreview(navigation) {
   const callback1 = obj.useCallback(() => {
     onClose(analyticsLocations[21])();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
-      const intl = callback(1233).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1233).t.YdUwBS));
+      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
+      const intl = callback(1114).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1114).t.YdUwBS));
     }, 300);
     onClose();
   }, items3);
@@ -359,9 +359,9 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj[0] = intl.string(analyticsLocations(closure_1_2[11]).t.Iuzg8R);
     obj[1] = function headerTitle() {
       const obj = { title: null };
-      const intl = callback(1233).intl;
-      obj[0] = intl.string(callback(1233).t.Iuzg8R);
-      return callback3(callback(7618).GenericHeaderTitle, obj);
+      const intl = callback(1114).intl;
+      obj[0] = intl.string(callback(1114).t.Iuzg8R);
+      return callback3(callback(7863).GenericHeaderTitle, obj);
     };
     obj[2] = analyticsLocations(closure_1_2[30]).getHeaderCloseButton(_prompt(closure_1_2[43]).pop);
     obj[4] = function render(arg0, navigation) {
@@ -371,7 +371,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     return obj;
   }, items);
   let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: 12, headerStyle: null };
-  const obj2 = analyticsLocations(1235);
+  const obj2 = analyticsLocations(1116);
   const tmp2 = closure_13;
   const tmp3 = analyticsLocations;
   obj = undefined;
@@ -379,5 +379,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj = { height: 56 };
   }
   obj[3] = obj;
-  return tmp2(analyticsLocations(6017).Navigator, obj);
+  return tmp2(analyticsLocations(7000).Navigator, obj);
 };

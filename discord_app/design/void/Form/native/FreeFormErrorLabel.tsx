@@ -1,6 +1,6 @@
-// === Module 7726: Label ===
+// === Module 6941: Label ===
 
-// Module 7726 (Label)
+// Module 6941 (Label)
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("design/void/Form/native/Fre
 export default function Label(style) {
   const children = style.children;
   let nodeText;
-  nodeText = nodeText(4199).getNodeText(children);
+  nodeText = nodeText(4264).getNodeText(children);
   const items = [nodeText];
   const effect = React.useEffect(() => {
     let tmp2 = null != nodeText;
@@ -22,5 +22,5 @@ export default function Label(style) {
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);
-  return jsx(nodeText(4474).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
+  return jsx(nodeText(4556).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
 };

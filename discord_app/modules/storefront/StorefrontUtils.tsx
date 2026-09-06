@@ -1,15 +1,15 @@
-// === Module 6087: useSKUPrice ===
+// === Module 7231: useSKUPrice ===
 
-// Module 6087 (useSKUPrice)
+// Module 7231 (useSKUPrice)
 import applyDefault from "apply" /* 12 */;
-import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 6089 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6090 */;
+import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 7233 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 7234 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1995 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import closure_6 from "resetStoreState" /* 6088 */;
-import ME from "ME" /* 673 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+import closure_4 from "_getSystemLocale" /* 2025 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import closure_6 from "resetStoreState" /* 7232 */;
+import ME from "ME" /* 1074 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 
 require = arg1;
 function useSKUPrice(sku) {
@@ -81,7 +81,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "channel", purchaseType: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001141953147857043, storeHasPrice: -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000013458295484790203 };
+    obj = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: 307090161, storeHasPrice: 1359167559 };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;
@@ -271,15 +271,15 @@ export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableO
         num = 0;
       }
       if (obj.isIOS()) {
-        let tmpResult = tmp(1398);
+        let tmpResult = tmp(1384);
         let hasFlagResult = tmpResult.hasFlag(num, constants2.AVAILABLE_ON_IOS);
       } else {
-        tmpResult = tmp(1235);
+        tmpResult = tmp(1116);
         const isAndroidResult = tmpResult.isAndroid();
         hasFlagResult = !isAndroidResult;
         if (isAndroidResult) {
-          hasFlagResult = tmp(1398).hasFlag(num, constants2.AVAILABLE_ON_ANDROID);
-          const tmpResult1 = tmp(1398);
+          hasFlagResult = tmp(1384).hasFlag(num, constants2.AVAILABLE_ON_ANDROID);
+          const tmpResult1 = tmp(1384);
         }
       }
       return hasFlagResult;
@@ -297,14 +297,14 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   const _require = tmp2;
   let stateFromStores;
   const items = [closure_4];
-  stateFromStores = _require(586).useStateFromStores(items, () => locale.locale);
+  stateFromStores = _require(504).useStateFromStores(items, () => locale.locale);
   const items1 = [tmp2, stateFromStores];
   return React.useMemo(() => closure_1_14(closure_0, stateFromStores), items1);
 };
 export const useFormatSKUPrice = function useFormatSKUPrice(arg0) {
   const _require = arg0;
   const items = [closure_4];
-  const stateFromStores = _require(586).useStateFromStores(items, () => locale.locale);
+  const stateFromStores = _require(504).useStateFromStores(items, () => locale.locale);
   const items1 = [arg0, stateFromStores];
   return React.useMemo(() => closure_1_14(closure_0, stateFromStores), items1);
 };
@@ -377,7 +377,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "channel", purchaseType: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001141953147857043, storeHasPrice: -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000013458295484790203 };
+    obj = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: 307090161, storeHasPrice: 1359167559 };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;

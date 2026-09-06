@@ -1,10 +1,10 @@
-// === Module 10050: HandRequestDenyIcon ===
+// === Module 9933: HandRequestDenyIcon ===
 
-// Module 10050 (HandRequestDenyIcon)
+// Module 9933 (HandRequestDenyIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 10051 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 9934 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 9028: BannerPalettePresets ===
+// === Module 9186: BannerPalettePresets ===
 
-// Module 9028 (BannerPalettePresets)
+// Module 9186 (BannerPalettePresets)
 import set from "set" /* 2 */;
 
 let obj = { BOULDER: "Boulder", CASCADE: "Cascade", THUNDER: "Thunder", SOUL: "Soul", MARSH: "Marsh", VOLCANO: "Volcano", EARTH: "Earth", ZEPHYR: "Zephyr", RISING: "Rising" };

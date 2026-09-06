@@ -1,8 +1,8 @@
-// === Module 7358: isStable ===
+// === Module 7603: isStable ===
 
-// Module 7358 (isStable)
-import getConstantsAll from "getConstants" /* 1624 */;
-import set from "set" /* 1234 */;
+// Module 7603 (isStable)
+import getConstantsAll from "getConstants" /* 1364 */;
+import set from "set" /* 1115 */;
 
 const ReleaseChannel = getConstantsAll.getConstants().ReleaseChannel;
 set = set.isAndroid();

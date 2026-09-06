@@ -1,6 +1,6 @@
-// === Module 11341: QuestConsoleStartError ===
+// === Module 11517: QuestConsoleStartError ===
 
-// Module 11341 (QuestConsoleStartError)
+// Module 11517 (QuestConsoleStartError)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestConsoleStartError.tsx");

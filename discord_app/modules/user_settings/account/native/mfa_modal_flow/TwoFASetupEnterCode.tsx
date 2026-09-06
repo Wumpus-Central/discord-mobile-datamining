@@ -1,23 +1,23 @@
-// === Module 14633: TwoFASetupEnterCode ===
+// === Module 14789: TwoFASetupEnterCode ===
 
-// Module 14633 (TwoFASetupEnterCode)
+// Module 14789 (TwoFASetupEnterCode)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getState" /* 7167 */;
-import { TwoFAModalSetupSections } from "frozen" /* 14627 */;
+import closure_5 from "getState" /* 1895 */;
+import { TwoFAModalSetupSections } from "frozen" /* 14783 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
 
-export default function TwoFASetupEnterCode(stateFromStores) {
-  const _require = stateFromStores;
+export default function TwoFASetupEnterCode(first) {
+  const _require = first;
   let obj = _require(navigation[6]);
   const twoFASetupStyles = obj.useTwoFASetupStyles();
-  importDefault = ref.useRef(stateFromStores);
+  importDefault = ref.useRef(first);
   const effect = ref.useEffect(() => {
     closure_1.current = closure_0;
   });
@@ -25,15 +25,15 @@ export default function TwoFASetupEnterCode(stateFromStores) {
   navigation = obj1.useNavigation();
   let obj2 = _require(navigation[8]);
   const items = [ref1];
-  stateFromStores = obj2.useStateFromStores(items, () => ref1.getState());
+  const stateFromStores = obj2.useStateFromStores(items, () => ref1.getState());
   const tmp6 = callback(ref.useState(false), 2);
   callback = tmp6[1];
   ref = ref.useRef(null);
   ref1 = ref.useRef(null);
   const items1 = [navigation];
   callback = ref.useCallback((code) => {
-    let obj = stateFromStores(navigation[9]);
-    callback(true);
+    let obj = callback(navigation[9]);
+    callback2(true);
     const encodeTotpSecretResult = obj.encodeTotpSecret(ref.current.totpSecret);
     obj = { code, secret: encodeTotpSecretResult };
     const obj2 = ref(navigation[10]);

@@ -1,11 +1,11 @@
-// === Module 11787: useScheduledMessageDraftCoachmarkState ===
+// === Module 11986: useScheduledMessageDraftCoachmarkState ===
 
-// Module 11787 (useScheduledMessageDraftCoachmarkState)
+// Module 11986 (useScheduledMessageDraftCoachmarkState)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5230 */;
-import closure_5 from "handleChanged" /* 4855 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import closure_4 from "_handleConnectionOpen" /* 5277 */;
+import closure_5 from "handleChanged" /* 4901 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 
 const require = arg1;
 let closure_7 = require("DismissibleContent").DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
@@ -19,14 +19,14 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   let first;
   closure_4 = undefined;
   let isCoachmarkVisible;
-  let result = channel(4298).useIsDismissibleContentDismissed_UNSAFE(closure_7);
+  let result = channel(4380).useIsDismissibleContentDismissed_UNSAFE(closure_7);
   dependencyMap = result;
-  let obj = channel(4298);
+  let obj = channel(4380);
   const items = [isCoachmarkVisible];
-  const stateFromStores = channel(586).useStateFromStores(items, () => null != isCoachmarkVisible.getScheduledMessage(channel.id));
-  let obj2 = channel(586);
+  const stateFromStores = channel(504).useStateFromStores(items, () => null != isCoachmarkVisible.getScheduledMessage(channel.id));
+  let obj2 = channel(504);
   const items1 = [closure_4];
-  const stateFromStores1 = channel(586).useStateFromStores(items1, () => connected.isConnected());
+  const stateFromStores1 = channel(504).useStateFromStores(items1, () => connected.isConnected());
   if (isEligible) {
     isEligible = draftText.trim().length > 10;
   }
@@ -43,7 +43,7 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   if (first) {
     isCoachmarkVisible = isEligible;
   }
-  const obj3 = channel(586);
+  const obj3 = channel(504);
   const tmp4 = isEligible;
   if (tmp4Result[0] !== channel.id) {
     tmp10(channel.id);

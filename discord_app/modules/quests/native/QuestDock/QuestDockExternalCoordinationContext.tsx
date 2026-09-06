@@ -1,14 +1,14 @@
-// === Module 14941: QuestDockMode ===
+// === Module 15099: QuestDockMode ===
 
-// Module 14941 (QuestDockMode)
-import setDefault from "set" /* 684 */;
+// Module 15099 (QuestDockMode)
+import setDefault from "set" /* 1090 */;
 import importAllResult from "noop" /* 19 */;
-import closure_3 from "QuestDockMode" /* 14935 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 5396 */;
-import { QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD as closure_5 } from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14937 */;
+import closure_3 from "QuestDockMode" /* 15093 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 5444 */;
+import { QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD as closure_5 } from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 7809 */;
-import set from "set" /* 1234 */;
+import createFakeSharedValue from "createFakeSharedValue" /* 7074 */;
+import set from "set" /* 1115 */;
 
 const require = arg1;
 const SECOND = setDefault.Millis.SECOND;

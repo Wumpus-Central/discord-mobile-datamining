@@ -1,10 +1,10 @@
-// === Module 7282: handleConnectionOpen ===
+// === Module 7527: handleConnectionOpen ===
 
-// Module 7282 (handleConnectionOpen)
+// Module 7527 (handleConnectionOpen)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
 
 function handleConnectionOpen() {
   obj = DISCORD_EPOCHDefault;

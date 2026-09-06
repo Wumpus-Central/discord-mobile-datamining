@@ -1,6 +1,6 @@
-// === Module 6157: ReservedTagIds ===
+// === Module 7303: ReservedTagIds ===
 
-// Module 6157 (ReservedTagIds)
+// Module 7303 (ReservedTagIds)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/forums/ForumChannelTypes.tsx");

@@ -1,14 +1,14 @@
-// === Module 6121: getContextForPermission ===
+// === Module 7265: getContextForPermission ===
 
-// Module 6121 (getContextForPermission)
-import fromStringAll from "fromString" /* 503 */;
+// Module 7265 (getContextForPermission)
+import fromStringAll from "fromString" /* 1086 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1429 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyPagePermissions" /* 4124 */;
-import ME from "ME" /* 673 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1975 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyPagePermissions" /* 4203 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ GuildFeatures: c9, Permissions: c10 } = ME);
@@ -76,7 +76,7 @@ export const useCanAccessMemberSafetyPage = function useCanAccessMemberSafetyPag
   const _require = id;
   const items = [closure_5, closure_7];
   const items1 = [id];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const items = [closure_1_5, closure_1_7];
     [obj, obj2] = closure_1_3(items, 2);
     const guild = obj.getGuild(closure_0);
@@ -88,14 +88,14 @@ export const useCanAccessBulkBanningFeature = function useCanAccessBulkBanningFe
   const _require = arg0;
   let items = [closure_5, closure_7];
   const items1 = [arg0];
-  let stateFromStores = _require(586).useStateFromStores(items, () => {
+  let stateFromStores = _require(504).useStateFromStores(items, () => {
     const items = [closure_1_5, closure_1_7];
     [obj, obj2] = closure_1_3(items, 2);
     const guild = obj.getGuild(closure_0);
     const currentUser = obj2.getCurrentUser();
     return false;
   }, items1);
-  const obj = _require(586);
+  const obj = _require(504);
   const items2 = [closure_5, closure_7];
   const items3 = [arg0];
   if (stateFromStores) {
@@ -113,7 +113,7 @@ export const useCanAccessInviteCodeFeature = function useCanAccessInviteCodeFeat
   const _require = arg0;
   const items = [closure_5, closure_6];
   const items1 = [arg0];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const guild = closure_1_5.getGuild(closure_0);
     let canResult = null != guild;
     if (canResult) {
@@ -128,7 +128,7 @@ export const useCanBulkBanUser = function useCanBulkBanUser(arg0, arg1, arg2) {
   dependencyMap = arg2;
   const items = [closure_6, closure_5];
   const items1 = [arg1, arg0, arg2];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const guild = closure_1_5.getGuild(closure_0);
     let tmp2 = null != guild;
     if (tmp2) {

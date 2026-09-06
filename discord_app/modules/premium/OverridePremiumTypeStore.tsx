@@ -1,12 +1,12 @@
-// === Module 1922: setActualFromUser ===
+// === Module 1372: setActualFromUser ===
 
-// Module 1922 (setActualFromUser)
+// Module 1372 (setActualFromUser)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1927 */;
-import validatePremiumType from "validatePremiumType" /* 1932 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1377 */;
+import validatePremiumType from "validatePremiumType" /* 1382 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 
 function setActualFromUser(user) {
   user = user.user;

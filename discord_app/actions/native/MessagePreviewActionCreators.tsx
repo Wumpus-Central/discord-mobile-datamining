@@ -1,9 +1,9 @@
-// === Module 16481: ? ===
+// === Module 16644: ? ===
 
-// Module 16481
+// Module 16644
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
 
 ({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: c4 } = ME);
 const result = set.fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
@@ -12,7 +12,7 @@ export default {
   fetchMessages(channelId, around) {
     const _require = channelId;
     closure_1 = around;
-    const HTTP = _require(527).HTTP;
+    const HTTP = _require(1272).HTTP;
     obj = { url: closure_3.MESSAGES(channelId), query: obj, retries: 2, oldFormErrors: true, rejectWithError: true };
     obj = { limit: closure_4, around };
     const value = HTTP.get(obj);

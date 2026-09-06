@@ -1,27 +1,27 @@
-// === Module 5233: upsertAccount ===
+// === Module 5280: upsertAccount ===
 
-// Module 5233 (upsertAccount)
+// Module 5280 (upsertAccount)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import failsDefault from "fails" /* 581 */;
-import initializeDefault from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import start2 from "start" /* 4362 */;
-import updateAssets from "updateAssets" /* 8060 */;
-import apiRequest from "apiRequest" /* 9409 */;
-import useIsSpeaking from "useIsSpeaking" /* 9509 */;
-import closure_6 from "initialize" /* 4501 */;
-import closure_7 from "fetchFingerprint" /* 1215 */;
-import closure_8 from "set" /* 5234 */;
-import closure_9 from "checkIdleAFK" /* 5363 */;
-import closure_10 from "sortActivity" /* 4569 */;
-import closure_11 from "anyoneHasFlagInContext" /* 5372 */;
-import closure_12 from "updateVoiceState" /* 4497 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8630 */;
-import ME from "ME" /* 673 */;
-import importDefaultResult from "getPlatformUserUrl" /* 5236 */;
+import initializeDefault from "initialize" /* 504 */;
+import failsDefault from "fails" /* 559 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import start2 from "start" /* 4447 */;
+import updateAssets from "updateAssets" /* 8139 */;
+import useIsSpeaking from "useIsSpeaking" /* 9478 */;
+import apiRequest from "apiRequest" /* 11751 */;
+import closure_6 from "initialize" /* 1915 */;
+import closure_7 from "fetchFingerprint" /* 502 */;
+import closure_8 from "set" /* 5281 */;
+import closure_9 from "checkIdleAFK" /* 5410 */;
+import closure_10 from "sortActivity" /* 4600 */;
+import closure_11 from "anyoneHasFlagInContext" /* 5419 */;
+import closure_12 from "updateVoiceState" /* 4579 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8340 */;
+import ME from "ME" /* 1074 */;
+import importDefaultResult from "getPlatformUserUrl" /* 5283 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -66,7 +66,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4362).Interval();
+    const interval = new obj(4447).Interval();
     obj.pingInterval = interval;
     const tmp15 = new failsDefault(undefined, MINUTE);
     obj.backoff = tmp15;
@@ -452,7 +452,7 @@ function updatePlayerState(arg0, arg1, device) {
         if (context.type === tmp12.ALBUM) {
           resolved = Promise.resolve(context);
         } else {
-          const SpotifyAPI = _require(9409).SpotifyAPI;
+          const SpotifyAPI = _require(11751).SpotifyAPI;
           const obj2 = { url: null };
           obj2[0] = context.href;
           const value = SpotifyAPI.get(arg0, arg1, obj2);
@@ -633,7 +633,7 @@ prototype["connect"] = function connect() {
     self._requestedDisconnect = false;
     self._requestedConnect = true;
     ({ accountId, accessToken } = self);
-    const SpotifyAPI = accountId(9409).SpotifyAPI;
+    const SpotifyAPI = accountId(11751).SpotifyAPI;
     let obj = { url: null, query: null, onlyRetryOnAuthorizationErrors: true };
     obj[0] = constants.PLAYER;
     obj = { additional_types: null };
@@ -765,9 +765,9 @@ prototype["handleOpen"] = function handleOpen() {
   backoff.succeed();
   const pingInterval = this.pingInterval;
   pingInterval.start(closure_23, () => self.ping());
-  const profile = self(9409).getProfile(this.accountId, this.accessToken);
-  const obj = self(9409);
-  const devices = self(9409).getDevices(this.accountId, this.accessToken);
+  const profile = self(11751).getProfile(this.accountId, this.accessToken);
+  const obj = self(11751);
+  const devices = self(11751).getDevices(this.accountId, this.accessToken);
 };
 prototype["handleMessage"] = function handleMessage(data) {
   data = data.data;
@@ -1202,7 +1202,7 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
           const arr3 = id[accountId];
         } else {
           flag2 = false;
-          if (!account(640)(found, device)) {
+          if (!account(558)(found, device)) {
             const _Object = Object;
             const merged = Object.assign(found, device);
             flag2 = true;
@@ -1286,7 +1286,7 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_35.stop(), false);
-        obj9 = device(9509);
+        obj9 = device(9478);
       }
       if (null != tmp10) {
         if (!tmp22) {
@@ -1320,12 +1320,12 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
               }
             }
             if (null != tmp10) {
-              let tmp25Result = tmp25(706);
+              let tmp25Result = tmp25(573);
               obj1 = { type: "SPOTIFY_NEW_TRACK", track: null, connectionId: null };
               obj1[1] = tmp10;
               obj1[2] = accountId;
               tmp25Result.dispatch(obj1);
-              tmp25Result = tmp25(695);
+              tmp25Result = tmp25(1242);
               obj2 = { party_platform: null, track_id: null, has_images: true, details: null, state: null, album_id: null, author_ids: null, author_names: null };
               obj2[0] = PlatformTypes.SPOTIFY;
               obj2[1] = tmp10.id;

@@ -1,6 +1,6 @@
-// === Module 10104: set ===
+// === Module 9995: set ===
 
-// Module 10104 (set)
+// Module 9995 (set)
 import set from "set" /* 2 */;
 
 const deep_noise_suppression = "deep_noise_suppression";
@@ -9,7 +9,7 @@ const result = set.fileFinishedImporting("modules/noise_cancellation/getEffectiv
 
 export default function getEffectiveNoiseCancellation(arg0, arg1) {
   if (!obj.isIOS()) {
-    let tmpResult = tmp(1234);
+    let tmpResult = tmp(1115);
     if (!tmpResult.isMac()) {
       let tmp3 = arg0;
       if (arg0) {
@@ -18,15 +18,15 @@ export default function getEffectiveNoiseCancellation(arg0, arg1) {
           tmp5 = "" === arg1;
         }
         if (!tmp5) {
-          tmpResult = tmp(1234);
+          tmpResult = tmp(1115);
           tmp5 = !tmpResult.isWindows();
         }
         if (!tmp5) {
           tmp5 = arg1 !== deep_noise_suppression;
         }
         if (!tmp5) {
-          tmp5 = !tmp(10105).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" }).preferSystemEffects;
-          const tmpResult1 = tmp(10105);
+          tmp5 = !tmp(9996).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" }).preferSystemEffects;
+          const tmpResult1 = tmp(9996);
         }
         if (tmp5) {
           tmp5 = arg0;

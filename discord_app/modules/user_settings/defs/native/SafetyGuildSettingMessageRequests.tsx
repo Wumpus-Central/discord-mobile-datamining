@@ -1,34 +1,34 @@
-// === Module 15720: showMessageRequestRestrictionModal ===
+// === Module 15878: showMessageRequestRestrictionModal ===
 
-// Module 15720 (showMessageRequestRestrictionModal)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import setDefault from "set" /* 4858 */;
-import componentDidMountDefault from "componentDidMount" /* 4948 */;
-import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 6252 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8701 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8703 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14668 */;
-import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15718 */;
-import shouldAgeVerifyForDMDefaultOff from "shouldAgeVerifyForDMDefaultOff" /* 15721 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15711 */;
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11293 */;
-import createToggle from "createToggle" /* 11292 */;
+// Module 15878 (showMessageRequestRestrictionModal)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import setDefault from "set" /* 4904 */;
+import componentDidMountDefault from "componentDidMount" /* 4994 */;
+import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 6995 */;
+import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
+import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8413 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14824 */;
+import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15876 */;
+import shouldAgeVerifyForDMDefaultOff from "shouldAgeVerifyForDMDefaultOff" /* 15879 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15869 */;
+import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11469 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 function showMessageRequestRestrictionModal(arg0) {
   const _require = arg0;
   let obj = setDefault;
   obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
-  const intl = _require(1233).intl;
-  obj[0] = intl.string(_require(1233).t.yAfu1p);
-  const intl2 = _require(1233).intl;
-  obj[1] = intl2.string(_require(1233).t.Ry2z74);
-  const intl3 = _require(1233).intl;
-  obj[2] = intl3.string(_require(1233).t.p89ACt);
-  const intl4 = _require(1233).intl;
-  obj[3] = intl4.string(_require(1233).t.gm1Vej);
+  const intl = _require(1114).intl;
+  obj[0] = intl.string(_require(1114).t.yAfu1p);
+  const intl2 = _require(1114).intl;
+  obj[1] = intl2.string(_require(1114).t.Ry2z74);
+  const intl3 = _require(1114).intl;
+  obj[2] = intl3.string(_require(1114).t.p89ACt);
+  const intl4 = _require(1114).intl;
+  obj[3] = intl4.string(_require(1114).t.gm1Vej);
   obj[4] = componentDidMountDefault.Colors.RED;
   obj[5] = function onConfirm() {
     const MessageRequestRestrictedDefault = callback(closure_1_2[4]).MessageRequestRestrictedDefault;
@@ -74,9 +74,9 @@ createToggle = {
       }
       tmp7 = hasItem;
     }
-    const MessageRequestRestrictedDefault = tmp(4166).MessageRequestRestrictedDefault;
+    const MessageRequestRestrictedDefault = tmp(1935).MessageRequestRestrictedDefault;
     const obj3 = useParentalControlledExplicitContentSettings;
-    const MessageRequestRestrictedGuildIds = tmp(4166).MessageRequestRestrictedGuildIds;
+    const MessageRequestRestrictedGuildIds = tmp(1935).MessageRequestRestrictedGuildIds;
     const setting1 = MessageRequestRestrictedGuildIds.useSetting();
     let tmp9 = !setting1.includes(selectedGuildId);
     let tmp10 = !tmp7;

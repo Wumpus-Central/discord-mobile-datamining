@@ -1,11 +1,11 @@
-// === Module 8899: ImagePlaceholderVersions ===
+// === Module 8755: ImagePlaceholderVersions ===
 
-// Module 8899 (ImagePlaceholderVersions)
+// Module 8755 (ImagePlaceholderVersions)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8900 */;
+import preloadDefault from "preload" /* 5587 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8756 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 1234 */;
+import set from "set" /* 1115 */;
 
 ({ View: obj1, requireNativeComponent } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;

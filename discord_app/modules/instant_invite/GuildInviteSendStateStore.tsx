@@ -1,8 +1,8 @@
-// === Module 12827: setSendState ===
+// === Module 13099: setSendState ===
 
-// Module 12827 (setSendState)
+// Module 13099 (setSendState)
 import set from "set" /* 2 */;
-import keys from "keys" /* 641 */;
+import keys from "keys" /* 560 */;
 
 let obj = keys.create(() => ({}));
 const result = set.fileFinishedImporting("modules/instant_invite/GuildInviteSendStateStore.tsx");
@@ -11,7 +11,7 @@ export const setSendState = function setSendState(arg0, arg1, arg2) {
   const _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
-  _require(702).batchUpdates(() => {
+  _require(1249).batchUpdates(() => {
     state.setState((arg0) => {
       obj = {};
       const merged = Object.assign(arg0);

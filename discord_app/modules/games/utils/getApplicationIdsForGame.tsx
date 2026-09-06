@@ -1,8 +1,8 @@
-// === Module 11340: getApplicationIdsForGame ===
+// === Module 11516: getApplicationIdsForGame ===
 
-// Module 11340 (getApplicationIdsForGame)
-import closure_0 from "addApplication" /* 4519 */;
-import closure_1 from "handleLoadMessages" /* 4502 */;
+// Module 11516 (getApplicationIdsForGame)
+import closure_0 from "addApplication" /* 4788 */;
+import closure_1 from "createGamesFromMessage" /* 1916 */;
 
 const result = require("set").fileFinishedImporting("modules/games/utils/getApplicationIdsForGame.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 16060: handlePress ===
+// === Module 16224: handlePress ===
 
-// Module 16060 (handlePress)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import dispatcherDefault from "dispatcher" /* 4194 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4433 */;
-import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import getChannelModeDefault from "getChannelMode" /* 15952 */;
+// Module 16224 (handlePress)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import dispatcherDefault from "dispatcher" /* 4259 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
+import computeChannelNameDefault from "computeChannelName" /* 4713 */;
+import getChannelModeDefault from "getChannelMode" /* 16116 */;
 import importAllResult from "noop" /* 19 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function handlePress() {
@@ -36,8 +36,8 @@ const memoResult = importAllResult.memo((channel) => {
   }, items);
   const obj = { onPress: handlePress, onLongPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null };
   const tmp2 = computeChannelNameDefault(channel);
-  const intl = channel(1233).intl;
-  obj[4] = intl.formatToPlainString(channel(1233).t.yjQ9P8, { channelName: tmp2 });
+  const intl = channel(1114).intl;
+  obj[4] = intl.formatToPlainString(channel(1114).t.yjQ9P8, { channelName: tmp2 });
   obj[5] = { selected };
   obj[6] = channel;
   obj[7] = selected;

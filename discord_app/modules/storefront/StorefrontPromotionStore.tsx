@@ -1,8 +1,8 @@
-// === Module 10692: handleReset ===
+// === Module 8787: handleReset ===
 
-// Module 10692 (handleReset)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 8787 (handleReset)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 function handleReset() {
   closure_0 = {};

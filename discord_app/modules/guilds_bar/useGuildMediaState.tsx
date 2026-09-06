@@ -1,20 +1,20 @@
-// === Module 16168: canConnectToChannel ===
+// === Module 16330: canConnectToChannel ===
 
-// Module 16168 (canConnectToChannel)
-import set from "set" /* 689 */;
-import closure_3 from "participantFromServer" /* 1385 */;
-import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
-import { isVoiceChannel } from "createChannelRecord" /* 1390 */;
-import closure_6 from "reset" /* 4500 */;
-import closure_7 from "fetchFingerprint" /* 1215 */;
-import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import closure_9 from "createGuildRecordFromRust" /* 1908 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_11 from "markAllUserIdListsStale" /* 4130 */;
-import closure_12 from "handleConnectionOpen" /* 1980 */;
-import closure_13 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_14 from "updateVoiceState" /* 4497 */;
-import { BasicPermissions } from "ME" /* 673 */;
+// Module 16330 (canConnectToChannel)
+import set from "set" /* 1094 */;
+import closure_3 from "participantFromServer" /* 1956 */;
+import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
+import { isVoiceChannel } from "createChannelRecord" /* 1961 */;
+import closure_6 from "reset" /* 4582 */;
+import closure_7 from "fetchFingerprint" /* 502 */;
+import closure_8 from "ensureGuildLoaded" /* 1957 */;
+import closure_9 from "createGuildRecordFromRust" /* 1979 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_11 from "markAllUserIdListsStale" /* 4209 */;
+import closure_12 from "handleConnectionOpen" /* 2011 */;
+import closure_13 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_14 from "updateVoiceState" /* 4579 */;
+import { BasicPermissions } from "ME" /* 1074 */;
 
 require = arg1;
 function canConnectToChannel(type) {

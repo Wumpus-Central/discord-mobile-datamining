@@ -1,6 +1,6 @@
-// === Module 13249: MarketingComponentPlatform ===
+// === Module 13354: MarketingComponentPlatform ===
 
-// Module 13249 (MarketingComponentPlatform)
+// Module 13354 (MarketingComponentPlatform)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingComponentPlatform.tsx");

@@ -1,6 +1,6 @@
-// === Module 6122: getGuildModeratorReportingEnabled ===
+// === Module 7266: getGuildModeratorReportingEnabled ===
 
-// Module 6122 (getGuildModeratorReportingEnabled)
+// Module 7266 (getGuildModeratorReportingEnabled)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportingEnabled.tsx");

@@ -1,23 +1,23 @@
-// === Module 5232: filterPlayingActivities ===
+// === Module 5279: filterPlayingActivities ===
 
-// Module 5232 (filterPlayingActivities)
+// Module 5279 (filterPlayingActivities)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 656 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import hasFlag from "hasFlag" /* 1398 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 9273 */;
-import closure_3 from "upsertAccount" /* 5233 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_5 from "gameFromServer" /* 4514 */;
-import closure_6 from "checkIdleAFK" /* 5363 */;
-import closure_7 from "setLibraryApplications" /* 4517 */;
-import closure_8 from "updateActivities" /* 9450 */;
-import closure_9 from "sortActivity" /* 4569 */;
-import { sortActivity } from "sortActivity" /* 4569 */;
-import closure_11 from "handleUpdate" /* 4496 */;
-import ME from "ME" /* 673 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 1332 */;
+import hasFlag from "hasFlag" /* 1384 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10891 */;
+import closure_3 from "upsertAccount" /* 5280 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1221 */;
+import closure_5 from "gameFromServer" /* 1931 */;
+import closure_6 from "checkIdleAFK" /* 5410 */;
+import closure_7 from "setLibraryApplications" /* 7397 */;
+import closure_8 from "updateActivities" /* 11457 */;
+import closure_9 from "sortActivity" /* 4600 */;
+import { sortActivity } from "sortActivity" /* 4600 */;
+import closure_11 from "handleUpdate" /* 4578 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function filterPlayingActivities(arg0) {
@@ -68,22 +68,22 @@ function shouldShowActivity(flags) {
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          let tmpResult = tmp(4526);
+          let tmpResult = tmp(7399);
           shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(flags.application_id, closure_7);
         }
       }
       return shouldShowActivityResult;
     } else if (tmp3.PLAYING === type) {
       if (null != flags.application_id) {
-        tmpResult = tmp(4526);
+        tmpResult = tmp(7399);
         let result = tmpResult.shouldShareApplicationActivity(flags.application_id, closure_7);
       } else {
         const searchGamesByNameResult = closure_5.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
-          result = tmp(4526).shouldShareApplicationActivity(searchGamesByNameResult[0], closure_7);
-          const tmpResult1 = tmp(4526);
+          result = tmp(7399).shouldShareApplicationActivity(searchGamesByNameResult[0], closure_7);
+          const tmpResult1 = tmp(7399);
         } else {
-          const ShowCurrentGame = tmp(4166).ShowCurrentGame;
+          const ShowCurrentGame = tmp(1935).ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
         }
       }
@@ -94,8 +94,8 @@ function shouldShowActivity(flags) {
       }
       let result1 = null == flags.application_id;
       if (!result1) {
-        result1 = tmp(4526).shouldShareApplicationActivity(flags.application_id, closure_7);
-        const tmpResult2 = tmp(4526);
+        result1 = tmp(7399).shouldShareApplicationActivity(flags.application_id, closure_7);
+        const tmpResult2 = tmp(7399);
       }
       return result1;
     }

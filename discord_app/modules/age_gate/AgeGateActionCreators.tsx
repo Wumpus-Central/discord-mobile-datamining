@@ -1,12 +1,12 @@
-// === Module 15798: submitDateOfBirth ===
+// === Module 15960: submitDateOfBirth ===
 
-// Module 15798 (submitDateOfBirth)
+// Module 15960 (submitDateOfBirth)
 import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import result2 from "result" /* 1218 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15797 */;
-import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import result2 from "result" /* 1098 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15959 */;
+import ME from "ME" /* 1074 */;
 
 const AgeGateAnalyticAction = result2.AgeGateAnalyticAction;
 ({ AnalyticEvents: c4, Endpoints: c5 } = ME);
@@ -18,7 +18,7 @@ export const submitDateOfBirth = function submitDateOfBirth(c0, closure_1_2) {
   let obj = expandEventPropertiesDefault;
   obj = { source: closure_1_2, action: AgeGateAnalyticAction.AGE_GATE_SUBMITTED };
   obj.track(constants.AGE_GATE_ACTION, obj);
-  const HTTP = _require(527).HTTP;
+  const HTTP = _require(1272).HTTP;
   obj = { url: constants2.ME, oldFormErrors: true, body: { date_of_birth: c0.format("YYYY-MM-DD") }, rejectWithError: false };
   obj1 = { date_of_birth: c0.format("YYYY-MM-DD") };
   return HTTP.patch(obj).then((user) => {

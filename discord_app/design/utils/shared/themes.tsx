@@ -1,8 +1,8 @@
-// === Module 1363: isThemeLight ===
+// === Module 4269: isThemeLight ===
 
-// Module 1363 (isThemeLight)
+// Module 4269 (isThemeLight)
 import set from "set" /* 2 */;
-import sum from "sum" /* 502 */;
+import sum from "sum" /* 1085 */;
 
 const ThemeTypes = sum.ThemeTypes;
 const result = set.fileFinishedImporting("design/utils/shared/themes.tsx");

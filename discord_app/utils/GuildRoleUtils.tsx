@@ -1,11 +1,11 @@
-// === Module 1988: compareGuildRoles ===
+// === Module 2019: compareGuildRoles ===
 
-// Module 1988 (compareGuildRoles)
+// Module 2019 (compareGuildRoles)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import int2hslRaw from "int2hslRaw" /* 685 */;
-import fromServerArrayAll from "fromServerArray" /* 1986 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1987 */;
+import int2hslRaw from "int2hslRaw" /* 1091 */;
+import fromServerArrayAll from "fromServerArray" /* 2017 */;
+import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 2018 */;
 
 function compareGuildRoles(guildId, id) {
   guildId = guildId.guildId;

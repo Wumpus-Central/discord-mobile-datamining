@@ -1,9 +1,9 @@
-// === Module 6100: _safeTransitionTo ===
+// === Module 7244: _safeTransitionTo ===
 
-// Module 6100 (_safeTransitionTo)
+// Module 7244 (_safeTransitionTo)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import { Routes } from "ME" /* 673 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import { Routes } from "ME" /* 1074 */;
 
 const require = arg1;
 function _safeTransitionTo() {

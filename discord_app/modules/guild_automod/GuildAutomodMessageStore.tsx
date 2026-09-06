@@ -1,15 +1,15 @@
-// === Module 7859: handleMessageSendFailedAutomod ===
+// === Module 7938: handleMessageSendFailedAutomod ===
 
-// Module 7859 (handleMessageSendFailedAutomod)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
-import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7263 */;
-import items from "items" /* 7589 */;
-import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7860 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "reinjectEphemerals" /* 4736 */;
-import ME from "ME" /* 673 */;
+// Module 7938 (handleMessageSendFailedAutomod)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
+import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7508 */;
+import items from "items" /* 7834 */;
+import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7939 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "reinjectEphemerals" /* 4781 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function handleMessageSendFailedAutomod(messageData) {
@@ -134,13 +134,13 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault,
       const tmp = require;
       let result = getDecisionOutcomeFromMessage.isAutomodMessageRecord(messageRecord);
       if (result) {
-        let flag = tmp(7263).isAutomodNotification(messageRecord);
+        let flag = tmp(7508).isAutomodNotification(messageRecord);
         if (flag) {
           closure_11[guildId] = messageRecord.id;
           flag = true;
         }
         result = flag;
-        const tmpResult = tmp(7263);
+        const tmpResult = tmp(7508);
       }
       return result;
     }

@@ -1,11 +1,11 @@
-// === Module 17377: getTargetType ===
+// === Module 17537: getTargetType ===
 
-// Module 17377 (getTargetType)
+// Module 17537 (getTargetType)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import _modDef1205 from "module_1205" /* 1205 */;
-import toJSDefault from "toJS" /* 1935 */;
-import hooksDefault from "hooks" /* 4074 */;
-import ME from "ME" /* 673 */;
+import _modDef1232 from "module_1232" /* 1232 */;
+import toJSDefault from "toJS" /* 1386 */;
+import hooksDefault from "hooks" /* 4153 */;
+import ME from "ME" /* 1074 */;
 
 function getTargetType(action) {
   if (action === constants2.ALL) {
@@ -75,9 +75,9 @@ function getTargetType(action) {
                               CHANNEL = constants.GUILD;
                             } else {
                               const _HermesInternal = HermesInternal;
-                              _modDef1205.captureMessage("Unknown target type for: " + action);
+                              _modDef1232.captureMessage("Unknown target type for: " + action);
                               CHANNEL = constants.UNKNOWN;
-                              const obj = _modDef1205;
+                              const obj = _modDef1232;
                             }
                           }
                         }

@@ -1,9 +1,9 @@
-// === Module 16023: useActiveEventOrStageInstanceChannel ===
+// === Module 16187: useActiveEventOrStageInstanceChannel ===
 
-// Module 16023 (useActiveEventOrStageInstanceChannel)
-import useGuildEvents from "useGuildEvents" /* 9648 */;
-import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16022 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
+// Module 16187 (useActiveEventOrStageInstanceChannel)
+import useGuildEvents from "useGuildEvents" /* 9662 */;
+import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16186 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");

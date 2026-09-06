@@ -1,6 +1,6 @@
-// === Module 6263: useOverlayTrackedGames ===
+// === Module 7390: useOverlayTrackedGames ===
 
-// Module 6263 (useOverlayTrackedGames)
+// Module 7390 (useOverlayTrackedGames)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
@@ -13,4 +13,8 @@ export function useAnyOverlayRendering() {
 }
 export function useAnyOverlayRenderingLocked() {
   return false;
+}
+export function useOverlayLockState() {
+  const items = [false, null];
+  return items;
 }

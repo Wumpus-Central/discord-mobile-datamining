@@ -1,11 +1,11 @@
-// === Module 9918: getConsoleIcon ===
+// === Module 9463: getConsoleIcon ===
 
-// Module 9918 (getConsoleIcon)
+// Module 9463 (getConsoleIcon)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import ParticipantTypes from "ParticipantTypes" /* 4499 */;
-import registerAssetDefault from "registerAsset" /* 9335 */;
-import registerAssetDefault2 from "registerAsset" /* 9919 */;
+import ME from "ME" /* 1074 */;
+import ParticipantTypes from "ParticipantTypes" /* 4581 */;
+import registerAssetDefault from "registerAsset" /* 9442 */;
+import registerAssetDefault2 from "registerAsset" /* 9464 */;
 
 const VoicePlatforms = ParticipantTypes.VoicePlatforms;
 const obj = { [XBOX]: registerAssetDefault, [PLAYSTATION]: registerAssetDefault2, [PLAYSTATION_STAGING]: registerAssetDefault2 };

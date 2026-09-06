@@ -1,14 +1,14 @@
-// === Module 11300: useMessageAuthorActivities ===
+// === Module 11476: useMessageAuthorActivities ===
 
-// Module 11300 (useMessageAuthorActivities)
+// Module 11476 (useMessageAuthorActivities)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_toTimestampMs" /* 11169 */;
-import { updateShouldShowJumpToPresentButton as closure_7 } from "updateChatInputContainerHeight" /* 9551 */;
-import closure_8 from "handleConnectionOpen" /* 4856 */;
-import closure_9 from "createGuildRecordFromRust" /* 1908 */;
-import closure_10 from "sortActivity" /* 4569 */;
+import closure_6 from "_toTimestampMs" /* 11308 */;
+import { updateShouldShowJumpToPresentButton as closure_7 } from "updateChatInputContainerHeight" /* 9485 */;
+import closure_8 from "handleConnectionOpen" /* 4902 */;
+import closure_9 from "createGuildRecordFromRust" /* 1979 */;
+import closure_10 from "sortActivity" /* 4600 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
@@ -27,7 +27,7 @@ export const useMessageAuthorActivities = function useMessageAuthorActivities(ar
   }, items);
   const items1 = [closure_10];
   const items2 = [memo];
-  return _require(586).useStateFromStoresObject(items1, () => memo(closure_1_2[9]).mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
+  return _require(504).useStateFromStoresObject(items1, () => memo(closure_1_2[9]).mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
 };
 export const useFetchMessageApplications = function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
@@ -58,7 +58,7 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
   const _require = stateFromStores4;
   const items = [closure_9, closure_8];
   const items1 = [stateFromStores4];
-  const stateFromStoresObject = _require(586).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _require(504).useStateFromStoresObject(items, () => {
     const obj = {};
     const values = stateFromStores4.values();
     const iter = values[Symbol.iterator]();

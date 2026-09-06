@@ -1,8 +1,8 @@
-// === Module 13986: STATUS_PADDING ===
+// === Module 14104: STATUS_PADDING ===
 
-// Module 13986 (STATUS_PADDING)
+// Module 14104 (STATUS_PADDING)
 import set from "set" /* 2 */;
-import STATUS_PADDING from "STATUS_PADDING" /* 1297 */;
+import STATUS_PADDING from "STATUS_PADDING" /* 1179 */;
 
 STATUS_PADDING = STATUS_PADDING.STATUS_PADDING;
 const StatusSizes = STATUS_PADDING.StatusSizes;

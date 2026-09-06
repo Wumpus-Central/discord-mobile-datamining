@@ -1,18 +1,18 @@
-// === Module 16657: init ===
+// === Module 16822: init ===
 
-// Module 16657 (init)
+// Module 16822 (init)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import Storage2 from "Storage" /* 592 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import getAppChannelBotUserIdFromApplication from "getAppChannelBotUserIdFromApplication" /* 11424 */;
-import closure_6 from "addApplication" /* 4519 */;
-import closure_7 from "normalizeChannelPropertyForCompare" /* 8772 */;
-import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import ME from "ME" /* 673 */;
-import { ADVANCED_MODE_ON_KEY } from "RowType" /* 8691 */;
-import { Storage } from "Storage" /* 592 */;
+import initializeDefault from "initialize" /* 504 */;
+import Storage2 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import getAppChannelBotUserIdFromApplication from "getAppChannelBotUserIdFromApplication" /* 11610 */;
+import closure_6 from "addApplication" /* 4788 */;
+import closure_7 from "normalizeChannelPropertyForCompare" /* 8626 */;
+import closure_8 from "ensureGuildLoaded" /* 1957 */;
+import ME from "ME" /* 1074 */;
+import { ADVANCED_MODE_ON_KEY } from "RowType" /* 8401 */;
+import { Storage } from "Storage" /* 510 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -90,7 +90,7 @@ function syncChannelUpdates(id) {
           }
           const obj5 = applyOverwritesAll;
           tmp = null != guildId1 && null == obj[guildId1];
-          closure_4 = obj5.areChannelsLocked(channel, category, obj(11424).getAppChannelBotUserId(channel));
+          closure_4 = obj5.areChannelsLocked(channel, category, obj(11610).getAppChannelBotUserId(channel));
           return true;
         }
       }

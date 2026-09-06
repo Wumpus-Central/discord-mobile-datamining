@@ -1,10 +1,10 @@
-// === Module 4403: useGuildPowerupBoostLevelProgress ===
+// === Module 4485: useGuildPowerupBoostLevelProgress ===
 
-// Module 4403 (useGuildPowerupBoostLevelProgress)
-import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4384 */;
-import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4384 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import ME from "ME" /* 673 */;
+// Module 4485 (useGuildPowerupBoostLevelProgress)
+import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4469 */;
+import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4469 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c4, BoostedGuildTiers: c5, GuildFeatures: closure_6 } = ME);
@@ -14,7 +14,7 @@ export default function useGuildPowerupBoostLevelProgress(arg0) {
   const _require = arg0;
   const tmp = useGuildAppliedBoostCountDefault(arg0);
   const items = [closure_3];
-  const stateFromStores = _require(586).useStateFromStores(items, () => {
+  const stateFromStores = _require(504).useStateFromStores(items, () => {
     const guild = closure_1_3.getGuild(closure_0);
     let premiumTier;
     if (guild != null) {
@@ -25,7 +25,7 @@ export default function useGuildPowerupBoostLevelProgress(arg0) {
     }
     return premiumTier;
   });
-  const obj = _require(586);
+  const obj = _require(504);
   const items1 = [closure_3];
   let num = 0;
   if (!obj2.useStateFromStores(items1, () => {

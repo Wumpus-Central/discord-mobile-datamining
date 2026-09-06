@@ -1,6 +1,6 @@
-// === Module 9468: shouldOpenActivityInPopoutWindow ===
+// === Module 9534: shouldOpenActivityInPopoutWindow ===
 
-// Module 9468 (shouldOpenActivityInPopoutWindow)
+// Module 9534 (shouldOpenActivityInPopoutWindow)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/ActivityPopoutUtils.native.tsx");

@@ -1,10 +1,10 @@
-// === Module 6513: EmojiDuckSweatExample ===
+// === Module 5947: EmojiDuckSweatExample ===
 
-// Module 6513 (EmojiDuckSweatExample)
+// Module 5947 (EmojiDuckSweatExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6514 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5948 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiDuckSweatExample.native.tsx");

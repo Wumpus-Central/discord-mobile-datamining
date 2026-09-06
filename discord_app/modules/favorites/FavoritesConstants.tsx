@@ -1,8 +1,8 @@
-// === Module 1424: date ===
+// === Module 1970: date ===
 
-// Module 1424 (date)
+// Module 1970 (date)
 import set from "set" /* 2 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1425 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
 
 const obj = { id: "373", name: "Favorites", description: "The place for all your favorite channels!", joinedAt: new Date(), maxMembers: 500000 };
 const result = fromGuildPropertiesWithAdditionalFields.constructFromPartialGuildRecord(obj);

@@ -1,7 +1,7 @@
-// === Module 12300: getGuildPowerupFormattedDateString ===
+// === Module 12500: getGuildPowerupFormattedDateString ===
 
-// Module 12300 (getGuildPowerupFormattedDateString)
-import closure_0 from "_getSystemLocale" /* 1995 */;
+// Module 12500 (getGuildPowerupFormattedDateString)
+import closure_0 from "_getSystemLocale" /* 2025 */;
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx");
 

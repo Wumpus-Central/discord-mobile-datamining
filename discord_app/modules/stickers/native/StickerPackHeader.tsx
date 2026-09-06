@@ -1,18 +1,18 @@
-// === Module 10414: ? ===
+// === Module 10396: ? ===
 
-// Module 10414
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4853 */;
-import registerAssetDefault from "registerAsset" /* 10415 */;
-import registerAssetDefault2 from "registerAsset" /* 10416 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 10417 */;
+// Module 10396
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;
+import registerAssetDefault from "registerAsset" /* 10397 */;
+import registerAssetDefault2 from "registerAsset" /* 10398 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 10399 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10376 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10273 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -56,9 +56,9 @@ const memoResult = importAllResult.memo((withDescription) => {
     const obj2 = { source: null, style: null, size: null, color: null };
     obj2[0] = registerAssetDefault;
     obj2[1] = tmp.animatedIcon;
-    obj2[2] = tmp6(1296).Icon.Sizes.EXTRA_SMALL;
+    obj2[2] = tmp6(1178).Icon.Sizes.EXTRA_SMALL;
     obj2[3] = tmp.icon.color;
-    obj1[1] = tmp4(tmp6(1296).Icon, obj2);
+    obj1[1] = tmp4(tmp6(1178).Icon, obj2);
     result = tmp4(tmp5, obj1);
   }
   items[1] = result;
@@ -73,12 +73,12 @@ const memoResult = importAllResult.memo((withDescription) => {
   if (flag) {
     const obj5 = { variant: "text-sm/medium", children: null };
     obj5[1] = stickerPack.description;
-    flag = tmp4(tmp6(4474).Text, obj5);
+    flag = tmp4(tmp6(4556).Text, obj5);
   }
   const obj6 = { children: null };
   items1[1] = flag;
   const obj7 = { lineClamp: 1, variant: "text-xs/medium", color: "text-default", children: null };
-  const intl = tmp6(1233).intl;
+  const intl = tmp6(1114).intl;
   obj7[3] = intl.format(getSystemLocale.t["0S3JpO"], { numStickers: stickerPack.stickers.length });
   items1[2] = callback(Text.Text, obj7);
   obj6[0] = items1;
@@ -96,7 +96,7 @@ const memoResult = importAllResult.memo((withDescription) => {
     obj10[0] = items3;
     obj10[1] = onPress;
     obj10[3] = tmp2Result;
-    let tmp4Result = tmp4(tmp6(5077).PressableOpacity, obj10);
+    let tmp4Result = tmp4(tmp6(5123).PressableOpacity, obj10);
   } else {
     const obj11 = { style: null, children: null };
     const items4 = [tmp.section, style];

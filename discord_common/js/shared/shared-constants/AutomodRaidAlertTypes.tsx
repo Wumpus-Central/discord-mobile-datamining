@@ -1,6 +1,6 @@
-// === Module 7935: AutomodRaidAlertTypes ===
+// === Module 8014: AutomodRaidAlertTypes ===
 
-// Module 7935 (AutomodRaidAlertTypes)
+// Module 8014 (AutomodRaidAlertTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodRaidAlertTypes.tsx");

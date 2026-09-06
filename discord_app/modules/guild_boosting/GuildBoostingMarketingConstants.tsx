@@ -1,11 +1,11 @@
-// === Module 12366: BoostedGuildTiers ===
+// === Module 12566: BoostedGuildTiers ===
 
-// Module 12366 (BoostedGuildTiers)
+// Module 12566 (BoostedGuildTiers)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4369 */;
-import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
+import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4454 */;
+import ME from "ME" /* 1074 */;
 
 const BoostedGuildTiers = ME.BoostedGuildTiers;
 let closure_3 = ME.MAX_STAGE_VIDEO_USER_LIMIT_TIER3;

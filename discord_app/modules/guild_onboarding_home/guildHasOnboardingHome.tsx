@@ -1,9 +1,9 @@
-// === Module 4710: guildHasOnboardingHome ===
+// === Module 4749: guildHasOnboardingHome ===
 
-// Module 4710 (guildHasOnboardingHome)
+// Module 4749 (guildHasOnboardingHome)
 import set from "set" /* 2 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
-import ME from "ME" /* 673 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
+import ME from "ME" /* 1074 */;
 
 ({ GuildFeatures: obj1, ME: c3 } = ME);
 const result = set.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");

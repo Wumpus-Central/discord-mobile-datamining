@@ -1,25 +1,25 @@
-// === Module 4193: presentAddedFriendToast ===
+// === Module 4258: presentAddedFriendToast ===
 
-// Module 4193 (presentAddedFriendToast)
+// Module 4258 (presentAddedFriendToast)
 import set from "set" /* 2 */;
-import v1 from "v1" /* 511 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import dispatcherDefault from "dispatcher" /* 4194 */;
-import FriendsIcon from "FriendsIcon" /* 4195 */;
-import UserPlatformIcon from "UserPlatformIcon" /* 4417 */;
-import UserMinusIcon from "UserMinusIcon" /* 4419 */;
-import LinkIcon from "LinkIcon" /* 4421 */;
-import SendMessageIcon from "SendMessageIcon" /* 4423 */;
-import CopyIcon from "CopyIcon" /* 4425 */;
-import DownloadIcon from "DownloadIcon" /* 4427 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4429 */;
-import XLargeIcon2 from "XLargeIcon" /* 4431 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4433 */;
-import TrashIcon from "TrashIcon" /* 4436 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4438 */;
-import ClockIcon from "ClockIcon" /* 4441 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import v1 from "v1" /* 1256 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import dispatcherDefault from "dispatcher" /* 4259 */;
+import FriendsIcon from "FriendsIcon" /* 4260 */;
+import UserPlatformIcon from "UserPlatformIcon" /* 4499 */;
+import UserMinusIcon from "UserMinusIcon" /* 4501 */;
+import LinkIcon from "LinkIcon" /* 4503 */;
+import SendMessageIcon from "SendMessageIcon" /* 4505 */;
+import CopyIcon from "CopyIcon" /* 4507 */;
+import DownloadIcon from "DownloadIcon" /* 4509 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4511 */;
+import XLargeIcon2 from "XLargeIcon" /* 4513 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
+import TrashIcon from "TrashIcon" /* 4518 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
+import ClockIcon from "ClockIcon" /* 4523 */;
 
 const VerificationCriteria = ME.VerificationCriteria;
 const result = set.fileFinishedImporting("modules/toast/native/ToastUtils.tsx");
@@ -45,7 +45,7 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
     obj[0] = username.username;
     stringResult = intl.formatToPlainString(getSystemLocale.t.b3eoD4, obj);
   }
-  obj = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4415).UserPlusIcon, iconColor: "status-positive" };
+  obj = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4497).UserPlusIcon, iconColor: "status-positive" };
   obj.open(obj);
 };
 export const presentGameFriendRequestAcceptedToast = function presentGameFriendRequestAcceptedToast() {
@@ -181,9 +181,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   obj = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {
-    let XLargeIcon = tmp4(4429).CheckmarkLargeIcon;
+    let XLargeIcon = tmp4(4511).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4431).XLargeIcon;
+    XLargeIcon = tmp4(4513).XLargeIcon;
   }
   obj[2] = XLargeIcon;
   let str = "icon-feedback-critical";
@@ -365,9 +365,9 @@ export const presentGuildMemberBio = function presentGuildMemberBio(guildName) {
   const _require = arg1;
   let obj = dispatcherDefault;
   obj = { key: "GUILD_IDENTITY_BIO_TOAST", content: null, icon: null };
-  const intl = _require(1233).intl;
+  const intl = _require(1114).intl;
   obj = { guildName };
-  obj[1] = intl.formatToPlainString(_require(1233).t.pOy2tm, obj);
+  obj[1] = intl.formatToPlainString(_require(1114).t.pOy2tm, obj);
   obj[2] = function icon() {
     return closure_0;
   };
@@ -377,9 +377,9 @@ export const presentGuildMemberPronouns = function presentGuildMemberPronouns(gu
   const _require = arg1;
   let obj = dispatcherDefault;
   obj = { key: "GUILD_IDENTITY_PRONOUNS_TOAST", content: null, icon: null };
-  const intl = _require(1233).intl;
+  const intl = _require(1114).intl;
   obj = { guildName };
-  obj[1] = intl.formatToPlainString(_require(1233).t.gPVLS0, obj);
+  obj[1] = intl.formatToPlainString(_require(1114).t.gPVLS0, obj);
   obj[2] = function icon() {
     return closure_0;
   };

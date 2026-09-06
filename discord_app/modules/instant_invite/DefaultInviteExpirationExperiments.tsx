@@ -1,10 +1,10 @@
-// === Module 9939: getDefaultInviteExpiration ===
+// === Module 9824: getDefaultInviteExpiration ===
 
-// Module 9939 (getDefaultInviteExpiration)
-import isGuildMemberDefault from "isGuildMember" /* 9937 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import ME from "ME" /* 673 */;
-import createExperiment from "createExperiment" /* 4389 */;
+// Module 9824 (getDefaultInviteExpiration)
+import isGuildMemberDefault from "isGuildMember" /* 9822 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import ME from "ME" /* 1074 */;
+import createExperiment from "createExperiment" /* 4474 */;
 
 const require = arg1;
 function getDefaultInviteExpiration(arg0) {
@@ -74,7 +74,7 @@ export const useDefaultInviteExpiration = function useDefaultInviteExpiration(gu
   if (defaultMaxAge !== closure_6) {
     experiment1 = experiment;
   }
-  guildId(644);
+  guildId(563);
   [][0] = closure_3;
   let tmp7 = null;
   if (null != guildId) {

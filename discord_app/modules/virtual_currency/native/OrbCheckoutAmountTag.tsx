@@ -1,13 +1,13 @@
-// === Module 10977: OrbCheckoutAmountTag ===
+// === Module 11012: OrbCheckoutAmountTag ===
 
-// Module 10977 (OrbCheckoutAmountTag)
+// Module 11012 (OrbCheckoutAmountTag)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Text from "Text" /* 4474 */;
-import OrbsIcon from "OrbsIcon" /* 10978 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Text from "Text" /* 4556 */;
+import OrbsIcon from "OrbsIcon" /* 8837 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
@@ -25,13 +25,13 @@ export default function OrbCheckoutAmountTag(orbAmount) {
   obj = { size: "custom", color: "icon-strong", style: tmp.orbsIcon };
   const items = [callback(OrbsIcon.OrbsIcon, obj), ];
   if (null == orbAmount) {
-    const intl2 = tmp5(1233).intl;
-    let stringResult = intl2.string(tmp5(1233).t.pfChQr);
+    const intl2 = tmp5(1114).intl;
+    let stringResult = intl2.string(tmp5(1114).t.pfChQr);
   } else {
-    const intl = tmp5(1233).intl;
+    const intl = tmp5(1114).intl;
     obj = { orbAmount: null };
     obj[0] = orbAmount;
-    stringResult = intl.formatToPlainString(tmp5(1233).t.W4DfeF, obj);
+    stringResult = intl.formatToPlainString(tmp5(1114).t.W4DfeF, obj);
   }
   obj1 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
   let str = "--";

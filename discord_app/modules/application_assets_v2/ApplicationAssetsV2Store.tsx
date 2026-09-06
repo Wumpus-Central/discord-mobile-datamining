@@ -1,8 +1,8 @@
-// === Module 12998: handleFeaturedOrDeveloperFetchSuccess ===
+// === Module 9022: handleFeaturedOrDeveloperFetchSuccess ===
 
-// Module 12998 (handleFeaturedOrDeveloperFetchSuccess)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 9022 (handleFeaturedOrDeveloperFetchSuccess)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const require = arg1;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {

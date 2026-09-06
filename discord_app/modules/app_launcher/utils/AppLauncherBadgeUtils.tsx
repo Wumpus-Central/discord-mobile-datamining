@@ -1,6 +1,6 @@
-// === Module 13965: getNewestBadgeableVersion ===
+// === Module 13987: getNewestBadgeableVersion ===
 
-// Module 13965 (getNewestBadgeableVersion)
+// Module 13987 (getNewestBadgeableVersion)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");

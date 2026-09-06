@@ -1,9 +1,9 @@
-// === Module 9478: _launchFrameOnNative ===
+// === Module 9507: _launchFrameOnNative ===
 
-// Module 9478 (_launchFrameOnNative)
-import _launchFrameAll from "_launchFrame" /* 9480 */;
+// Module 9507 (_launchFrameOnNative)
+import _launchFrameAll from "_launchFrame" /* 9509 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateVoiceState" /* 4497 */;
+import closure_4 from "updateVoiceState" /* 4579 */;
 
 function _launchFrameOnNative() {
   const self = this;

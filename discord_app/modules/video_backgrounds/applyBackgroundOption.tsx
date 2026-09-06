@@ -1,14 +1,14 @@
-// === Module 9812: _getFilterBlob ===
+// === Module 9095: _getFilterBlob ===
 
-// Module 9812 (_getFilterBlob)
-import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9815 */;
-import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9817 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9824 */;
+// Module 9095 (_getFilterBlob)
+import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9098 */;
+import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9100 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9107 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "handleSyncedStoresUpdate" /* 9813 */;
-import VideoFilterType from "VideoFilterType" /* 7771 */;
-import { NOOP } from "ME" /* 673 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import closure_5 from "handleSyncedStoresUpdate" /* 9096 */;
+import VideoFilterType from "VideoFilterType" /* 6987 */;
+import { NOOP } from "ME" /* 1074 */;
 
 require = arg1;
 function _getFilterBlob() {
@@ -94,31 +94,31 @@ function _applyBackgroundOption() {
               c5 = undefined;
               closure_3 = false;
               if (null == source) {
-                closure_1_10(tmp59, tmp60, callback(4579).FilterSettingsGraph.NONE);
+                closure_1_10(tmp59, tmp60, callback(4615).FilterSettingsGraph.NONE);
                 c9 = 3;
                 return { value: "HermesInternal", done: null };
               } else if (tmp61 === c7) {
-                closure_1_10(tmp59, tmp60, callback(4579).FilterSettingsGraph.BACKGROUND_BLUR);
+                closure_1_10(tmp59, tmp60, callback(4615).FilterSettingsGraph.BACKGROUND_BLUR);
                 c9 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
                 if (typeof tmp61 !== "string") {
                   if (typeof tmp61 !== "number") {
                     const asset = tmp61.asset;
-                    let isAnimatedIconHashResult = callback(1430).isAnimatedIconHash(asset);
+                    let isAnimatedIconHashResult = callback(1396).isAnimatedIconHash(asset);
                     if (!isAnimatedIconHashResult) {
-                      let obj3 = callback(1430);
+                      let obj3 = callback(1396);
                       isAnimatedIconHashResult = obj3.isVideoAssetHash(asset);
                     }
                     closure_3 = isAnimatedIconHashResult;
-                    let obj4 = callback(1430);
+                    let obj4 = callback(1396);
                     obj1 = { userId: null, assetId: null, assetHash: null, size: null };
                     ({ user_id: obj6[0], id: obj6[1] } = tmp61);
                     obj1[2] = asset;
                     obj1[3] = closure_1_6.width;
                     let videoFilterAssetURL = obj4.getVideoFilterAssetURL(obj1);
                     source = videoFilterAssetURL;
-                    const obj11 = callback(1430);
+                    const obj11 = callback(1396);
                   }
                   if (null != videoFilterAssetURL) {
                     c7 = 1;
@@ -149,12 +149,12 @@ function _applyBackgroundOption() {
                       c8 = 2;
                       c9 = 1;
                       obj3 = { value: null, done: false };
-                      obj3[0] = callback2(9823)(videoFilterAssetURL);
+                      obj3[0] = callback2(9106)(videoFilterAssetURL);
                       return obj3;
                     }
                   }
                 }
-                const tmp24 = callback2(9818)()[tmp61];
+                const tmp24 = callback2(9101)()[tmp61];
                 const isVideo = tmp24.isVideo;
                 closure_3 = isVideo;
                 if (isVideo == null) {

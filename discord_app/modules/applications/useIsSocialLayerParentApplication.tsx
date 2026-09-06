@@ -1,9 +1,9 @@
-// === Module 9310: useIsSocialLayerParentApplication ===
+// === Module 9243: useIsSocialLayerParentApplication ===
 
-// Module 9310 (useIsSocialLayerParentApplication)
-import getApplicationFlags from "getApplicationFlags" /* 8449 */;
+// Module 9243 (useIsSocialLayerParentApplication)
+import getApplicationFlags from "getApplicationFlags" /* 8856 */;
 import closure_2 from "noop" /* 19 */;
-import { ApplicationFlags } from "ME" /* 673 */;
+import { ApplicationFlags } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");

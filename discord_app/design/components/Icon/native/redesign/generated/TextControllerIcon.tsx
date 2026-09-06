@@ -1,10 +1,10 @@
-// === Module 5033: TextControllerIcon ===
+// === Module 5079: TextControllerIcon ===
 
-// Module 5033 (TextControllerIcon)
+// Module 5079 (TextControllerIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 5017 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 5063 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// === Module 9722: useCreateChannelSubmit ===
+// === Module 9735: useCreateChannelSubmit ===
 
-// Module 9722 (useCreateChannelSubmit)
+// Module 9735 (useCreateChannelSubmit)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ ChannelTypes: error, Permissions: closure_8 } = ME);

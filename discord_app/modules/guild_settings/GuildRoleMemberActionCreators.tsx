@@ -1,10 +1,10 @@
-// === Module 5593: _fetchMemberCountsFromBackend ===
+// === Module 7129: _fetchMemberCountsFromBackend ===
 
-// Module 5593 (_fetchMemberCountsFromBackend)
-import privDefault from "priv" /* 1400 */;
+// Module 7129 (_fetchMemberCountsFromBackend)
+import privDefault from "priv" /* 1437 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getRoleMemberCount" /* 5592 */;
-import { Endpoints } from "ME" /* 673 */;
+import closure_4 from "getRoleMemberCount" /* 7128 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchMemberCountsFromBackend() {
@@ -26,7 +26,7 @@ function _fetchMemberCountsFromBackend() {
       yield HTTP.get(obj2);
       if (1 === tmp7) {
         c4 = 0;
-        const obj3 = body(706);
+        const obj3 = body(573);
         const obj4 = { type: "GUILD_ROLE_MEMBER_COUNT_FETCH_FAILURE", guildId: null };
         obj4[1] = callback;
         obj3.dispatch(obj4);
@@ -36,7 +36,7 @@ function _fetchMemberCountsFromBackend() {
         throw body;
       } else if (arg0 !== 2) {
         body = body.body;
-        const obj = body(706);
+        const obj = body(573);
         const obj5 = { type: "GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS", guildId: null, roleMemberCount: null };
         obj5[1] = callback;
         obj5[2] = body;
@@ -162,8 +162,8 @@ export const requestMembersForRole = function requestMembersForRole(closure_0, c
   }
   const result = store.set(combined, true);
   const _require = closure_0;
-  const HTTP = _require(527).HTTP;
-  const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: _require(527).rejectWithMigratedError() };
+  const HTTP = _require(1272).HTTP;
+  const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: _require(1272).rejectWithMigratedError() };
   const value = HTTP.get(obj);
   resolved = value.then((body) => {
     const membersById = closure_1_1(closure_1_2[6]).requestMembersById(closure_0, body.body, false);

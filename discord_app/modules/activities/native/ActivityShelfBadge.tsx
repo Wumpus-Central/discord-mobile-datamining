@@ -1,13 +1,13 @@
-// === Module 11887: ActivityShelfBadge ===
+// === Module 12086: ActivityShelfBadge ===
 
-// Module 11887 (ActivityShelfBadge)
+// Module 12086 (ActivityShelfBadge)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import ThemesDefault from "Themes" /* 576 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import Button from "Button" /* 1296 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import Button from "Button" /* 1178 */;
 
 require = arg1;
 noopAll;
@@ -36,22 +36,22 @@ export default function ActivityShelfBadge(arg0) {
     obj[0] = items;
     obj = { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null };
     obj[1] = tmp.badgeText;
-    const intl = tmp2(1233).intl;
-    obj[3] = intl.string(tmp2(1233).t.y2b7CA);
-    obj[1] = jsx(tmp2(4474).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
+    const intl = tmp2(1114).intl;
+    obj[3] = intl.string(tmp2(1114).t.y2b7CA);
+    obj[1] = jsx(tmp2(4556).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
     let tmp6 = <View variant="text-xs/semibold" style={null} color="text-overlay-light">{null}</View>;
   } else {
     tmp6 = null;
-    if (labelType === tmp2(1954).EmbeddedActivityLabelTypes.UPDATED) {
+    if (labelType === tmp2(1894).EmbeddedActivityLabelTypes.UPDATED) {
       obj = { style: null, children: null };
       const items1 = [replacementStyles, , ];
       ({ updatedBadge: arr2[1], elevationShadow: arr2[2] } = tmp);
       obj[0] = items1;
       obj1 = { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null };
       obj1[1] = tmp.badgeText;
-      const intl2 = tmp2(1233).intl;
-      obj1[3] = intl2.string(tmp2(1233).t["/qdhkk"]);
-      obj[1] = jsx(tmp2(4474).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
+      const intl2 = tmp2(1114).intl;
+      obj1[3] = intl2.string(tmp2(1114).t["/qdhkk"]);
+      obj[1] = jsx(tmp2(4556).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
       tmp6 = <View style={null}>{null}</View>;
     }
   }

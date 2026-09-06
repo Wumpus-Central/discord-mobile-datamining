@@ -1,10 +1,10 @@
-// === Module 8817: MoreHorizontalIcon ===
+// === Module 8672: MoreHorizontalIcon ===
 
-// Module 8817 (MoreHorizontalIcon)
+// Module 8672 (MoreHorizontalIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 8818 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 8673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

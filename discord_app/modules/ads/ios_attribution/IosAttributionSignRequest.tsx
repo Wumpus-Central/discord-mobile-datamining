@@ -1,8 +1,8 @@
-// === Module 11319: _fetchIosAttributionSignedPayloads ===
+// === Module 11495: _fetchIosAttributionSignedPayloads ===
 
-// Module 11319 (_fetchIosAttributionSignedPayloads)
+// Module 11495 (_fetchIosAttributionSignedPayloads)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchIosAttributionSignedPayloads() {
@@ -61,7 +61,7 @@ function _fetchIosAttributionSignedPayloads() {
               return obj1;
             } else {
               c5 = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               let obj2 = { url: null, body: null, failImmediatelyWhenRateLimited: true, rejectWithError: true, timeout: 5000, signal: null };
               obj2[0] = constants.ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD;
               const obj3 = { metadata_sealed: null, impression_id: null, specs: null };
@@ -78,7 +78,7 @@ function _fetchIosAttributionSignedPayloads() {
             }
           } else if (2 === tmp8) {
             c5 = 0;
-            obj2 = callback2(1205);
+            obj2 = callback2(1232);
             const obj5 = { tags: null };
             obj5[0] = { app_context: "ios_attribution" };
             obj2.captureException(constants, obj5);

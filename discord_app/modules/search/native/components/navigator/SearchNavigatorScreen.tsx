@@ -1,16 +1,16 @@
-// === Module 16700: SearchNavigatorScreen ===
+// === Module 16865: SearchNavigatorScreen ===
 
-// Module 16700 (SearchNavigatorScreen)
-import ThemesDefault from "Themes" /* 709 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4337 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5079 */;
-import _modDef16464 from "module_16464" /* 16464 */;
-import SearchFreezeContainerDefault from "SearchFreezeContainer" /* 16473 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16701 */;
+// Module 16865 (SearchNavigatorScreen)
+import ThemesDefault from "Themes" /* 576 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4422 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
+import _modDef16627 from "module_16627" /* 16627 */;
+import SearchFreezeContainerDefault from "SearchFreezeContainer" /* 16636 */;
+import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16866 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
@@ -30,7 +30,7 @@ export default function SearchNavigatorScreen(navigation) {
   importDefault = undefined;
   const tmp = callback3();
   importDefault = tmp;
-  let obj = navigation(16462);
+  let obj = navigation(16625);
   const searchSuggestionsGesture = obj.useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
@@ -50,12 +50,12 @@ export default function SearchNavigatorScreen(navigation) {
   obj = { gesture, children: null };
   obj1 = { style: items2, children: null };
   items2 = [tmp.wrapper, { paddingTop: useSearchLayoutInsetTopDefault() }];
-  const items3 = [callback(_modDef16464, { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
+  const items3 = [callback(_modDef16627, { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
   const tmp3 = useSearchLayoutInsetTopDefault();
   items3[1] = callback(View, { style: tmp.tabs, children: callback(SearchFreezeContainerDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
   obj1[1] = items3;
   obj[1] = callback2(View, obj1);
-  items1[1] = callback(navigation(16199).NonCollapsableGestureDetector, obj);
+  items1[1] = callback(navigation(16361).NonCollapsableGestureDetector, obj);
   obj[0] = items1;
   return callback2(closure_7, obj);
 };

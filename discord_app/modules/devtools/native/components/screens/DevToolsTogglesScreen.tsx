@@ -1,17 +1,17 @@
-// === Module 15548: fuzzySearchToggle ===
+// === Module 15706: fuzzySearchToggle ===
 
-// Module 15548 (fuzzySearchToggle)
-import ThemesDefault from "Themes" /* 709 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5463 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5603 */;
+// Module 15706 (fuzzySearchToggle)
+import ThemesDefault from "Themes" /* 576 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5517 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getUserAgnosticState" /* 5507 */;
-import closure_7 from "getUserAgnosticState" /* 4477 */;
-import { CATEGORY_LABELS } from "getUserAgnosticState" /* 4477 */;
+import closure_6 from "getUserAgnosticState" /* 5627 */;
+import closure_7 from "getUserAgnosticState" /* 4559 */;
+import { CATEGORY_LABELS } from "getUserAgnosticState" /* 4559 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function fuzzySearchToggle(str, str2, str3) {
@@ -21,8 +21,8 @@ function fuzzySearchToggle(str, str2, str3) {
     let tmp3ResultResult = fuzzysearchDefault(formatted, str2.toLowerCase());
     if (!tmp3ResultResult) {
       const formatted1 = str.toLowerCase();
-      tmp3ResultResult = tmp3(5463)(formatted1, str3.toLowerCase());
-      const tmp3Result = tmp3(5463);
+      tmp3ResultResult = tmp3(5517)(formatted1, str3.toLowerCase());
+      const tmp3Result = tmp3(5517);
     }
     tmp = tmp3ResultResult;
     tmp3 = importDefault;
@@ -34,7 +34,7 @@ function ToggleTableRow(toggleName) {
   toggleName = toggleName.toggleName;
   const description = toggleName.description;
   ({ value, onValueChange } = toggleName);
-  return callback2(toggleName(5608).TableRow, {
+  return callback2(toggleName(5605).TableRow, {
     label: description,
     labelLineClamp: 1,
     subLabel: toggleName,
@@ -44,18 +44,18 @@ function ToggleTableRow(toggleName) {
       obj = { content: description, key: toggleName };
       obj.open(obj);
     },
-    trailing: callback2(toggleName(6003).FormSwitch, { value, onValueChange })
+    trailing: callback2(toggleName(7202).FormSwitch, { value, onValueChange })
   }, toggleName);
 }
 function DevTogglesForCategory(title) {
   ({ category, query } = title);
-  let obj = category(586);
+  let obj = category(504);
   const items = [closure_7];
   const items1 = [query, category];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.allByCategory(category).filter((arg0) => {
     [tmp, , ] = arg0;
     return closure_1_11(closure_1, tmp, tmp2);
-  }), items1, category(586).statesWillNeverBeEqual);
+  }), items1, category(504).statesWillNeverBeEqual);
   let tmp3 = null;
   if (0 !== stateFromStores.length) {
     obj = { title: null, hasIcons: false, children: null };
@@ -71,7 +71,7 @@ function DevTogglesForCategory(title) {
         }
       }, tmp);
     });
-    tmp3 = callback2(category(6001).TableRowGroup, obj);
+    tmp3 = callback2(category(5687).TableRowGroup, obj);
   }
   return tmp3;
 }
@@ -88,9 +88,9 @@ export default function DevToolsTogglesScreen() {
   let tmp = callback4();
   let tmp3 = callback(React.useState(""), 2);
   const first = tmp3[0];
-  let obj = first(15549);
+  let obj = first(15707);
   const manaTextMigrationHighlightRestartNotice = obj.useManaTextMigrationHighlightRestartNotice();
-  obj1 = first(586);
+  obj1 = first(504);
   const items = [closure_6];
   const items1 = [first];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.allWithDescriptions().filter((arg0) => {
@@ -110,7 +110,7 @@ export default function DevToolsTogglesScreen() {
       const tmp4 = closure_1_1(closure_1_2[6]);
     }
     return tmp;
-  }), items1, first(586).statesWillNeverBeEqual);
+  }), items1, first(504).statesWillNeverBeEqual);
   obj = { style: tmp.wrap, contentContainerStyle: null, children: null };
   const items2 = [tmp.container, ];
   obj = { paddingBottom: ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom };
@@ -118,20 +118,20 @@ export default function DevToolsTogglesScreen() {
   obj[1] = items2;
   obj1 = { title: "Actions", hasIcons: false, children: null };
   const items3 = [
-    callback2(first(5608).TableRow, {
+    callback2(first(5605).TableRow, {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(15550).clearAll();
-        const obj = first(15550);
-        first(15532).clearAll();
+        first(15708).clearAll();
+        const obj = first(15708);
+        first(15690).clearAll();
       },
       arrow: true
     }),
-    callback2(first(5608).TableRow, { label: callback2(first(6231).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] }) })
+    callback2(first(5605).TableRow, { label: callback2(first(7050).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] }) })
   ];
   obj1[2] = items3;
-  const items4 = [callback3(first(6001).TableRowGroup, obj1), , ];
+  const items4 = [callback3(first(5687).TableRowGroup, obj1), , ];
   let tmp7Result = null;
   if (stateFromStores.length > 0) {
     const obj4 = { title: "Design Toggles", hasIcons: false, children: null };
@@ -146,7 +146,7 @@ export default function DevToolsTogglesScreen() {
         }
       }, tmp);
     });
-    tmp7Result = tmp7(first(6001).TableRowGroup, obj4);
+    tmp7Result = tmp7(first(5687).TableRowGroup, obj4);
   }
   const obj5 = { spacing: 16, children: null };
   items4[1] = tmp7Result;
@@ -156,6 +156,6 @@ export default function DevToolsTogglesScreen() {
     return closure_1_9(closure_1_14, { category: parseInt(tmp), title: tmp2, query: first }, tmp);
   });
   obj5[1] = items4;
-  obj[2] = callback3(first(4927).Stack, obj5);
+  obj[2] = callback3(first(4973).Stack, obj5);
   return callback2(ScrollView, obj);
 };

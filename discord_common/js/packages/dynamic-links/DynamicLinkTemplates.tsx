@@ -1,6 +1,6 @@
-// === Module 13033: getInviteDynamicLinkTemplate ===
+// === Module 12936: getInviteDynamicLinkTemplate ===
 
-// Module 13033 (getInviteDynamicLinkTemplate)
+// Module 12936 (getInviteDynamicLinkTemplate)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");

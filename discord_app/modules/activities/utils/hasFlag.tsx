@@ -1,9 +1,9 @@
-// === Module 6167: hasFlag ===
+// === Module 7313: hasFlag ===
 
-// Module 6167 (hasFlag)
+// Module 7313 (hasFlag)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import hasFlag from "hasFlag" /* 1398 */;
+import ME from "ME" /* 1074 */;
+import hasFlag from "hasFlag" /* 1384 */;
 
 const ActivityFlags = ME.ActivityFlags;
 const result = set.fileFinishedImporting("modules/activities/utils/hasFlag.tsx");

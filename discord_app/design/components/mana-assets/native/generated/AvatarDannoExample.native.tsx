@@ -1,10 +1,10 @@
-// === Module 6329: AvatarDannoExample ===
+// === Module 5757: AvatarDannoExample ===
 
-// Module 6329 (AvatarDannoExample)
+// Module 5757 (AvatarDannoExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6330 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5758 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarDannoExample.native.tsx");

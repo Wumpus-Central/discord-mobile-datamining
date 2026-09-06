@@ -1,8 +1,8 @@
-// === Module 9022: apexExperiment ===
+// === Module 11198: apexExperiment ===
 
-// Module 9022 (apexExperiment)
+// Module 11198 (apexExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 const obj = { 1: null, 2: { enabled: true, tenureBadgeHideable: true } };
 obj[2] = { enabled: true, tenureBadgeHideable: false };

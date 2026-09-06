@@ -1,17 +1,17 @@
-// === Module 10431: EmptyStateSticker ===
+// === Module 10413: EmptyStateSticker ===
 
-// Module 10431 (EmptyStateSticker)
-import StickerDefault from "Sticker" /* 10287 */;
-import useStickerPackCategories from "useStickerPackCategories" /* 10405 */;
+// Module 10413 (EmptyStateSticker)
+import StickerDefault from "Sticker" /* 10176 */;
+import useStickerPackCategories from "useStickerPackCategories" /* 10387 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "loadSavedGuildStickers" /* 5453 */;
-import { EMPTY_STATE_STICKERS } from "STICKER_PICKER_TAB_PANEL_ID" /* 4169 */;
-import ME from "ME" /* 673 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1923 */;
+import closure_6 from "loadSavedGuildStickers" /* 5502 */;
+import { EMPTY_STATE_STICKERS } from "STICKER_PICKER_TAB_PANEL_ID" /* 1938 */;
+import ME from "ME" /* 1074 */;
+import { PremiumUpsellTypes } from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function EmptyStateSticker(sticker) {
@@ -33,16 +33,16 @@ let result = require("set").fileFinishedImporting("modules/stickers/native/Stick
 export default function _default() {
   const tmp = callback4();
   const _require = tmp;
-  let obj = _require(10405);
+  let obj = _require(10387);
   const fetchStickerPacks = obj.useFetchStickerPacks();
-  analyticsLocations = analyticsLocations(5962)(analyticsLocations(5982).EMPTY_STATE).analyticsLocations;
-  obj1 = _require(586);
+  analyticsLocations = analyticsLocations(7162)(analyticsLocations(7182).EMPTY_STATE).analyticsLocations;
+  obj1 = _require(504);
   const items = [closure_6];
   const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const mapped = closure_7.map((arg0) => stickerById.getStickerById(arg0));
     return mapped.filter((arg0) => null != arg0);
   });
-  const tmp3 = analyticsLocations(5962);
+  const tmp3 = analyticsLocations(7162);
   [dependencyMap, closure_3] = callback(React.useState(null), 2);
   const items1 = [analyticsLocations];
   const effect = React.useEffect(() => {
@@ -53,13 +53,13 @@ export default function _default() {
   }, items1);
   obj = { children: null };
   obj = { style: tmp.header, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = _require(1233).intl;
-  obj[4] = intl.string(_require(1233).t.HEm04J);
-  const items2 = [callback2(_require(4474).Text, obj), , , ];
+  const intl = _require(1114).intl;
+  obj[4] = intl.string(_require(1114).t.HEm04J);
+  const items2 = [callback2(_require(4556).Text, obj), , , ];
   obj1 = { style: tmp.blurb, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = _require(1233).intl;
-  obj1[3] = intl2.string(_require(1233).t.FnNud4);
-  items2[1] = callback2(_require(4474).Text, obj1);
+  const intl2 = _require(1114).intl;
+  obj1[3] = intl2.string(_require(1114).t.FnNud4);
+  items2[1] = callback2(_require(4556).Text, obj1);
   const tmp4 = callback(React.useState(null), 2);
   items2[2] = callback2(View, {
     style: tmp.stickersRow,
@@ -108,15 +108,15 @@ export default function _default() {
       return closure_1_11(lib(closure_1_2[17]).PressableOpacity, obj, id);
     })
   };
-  obj5[0] = analyticsLocations(8228);
+  obj5[0] = analyticsLocations(9360);
   obj5[1] = tmp.nitroWheel;
-  obj4[0] = callback2(analyticsLocations(5502), obj5);
-  const intl3 = _require(1233).intl;
-  obj4[1] = intl3.string(_require(1233).t.pj0XBN);
+  obj4[0] = callback2(analyticsLocations(5587), obj5);
+  const intl3 = _require(1114).intl;
+  obj4[1] = intl3.string(_require(1114).t.pj0XBN);
   obj4[4] = function onPress() {
     return analyticsLocations(table[23])({ section: constants.EXPRESSION_PICKER });
   };
-  obj3[1] = callback2(_require(4929).Button, obj4);
+  obj3[1] = callback2(_require(4975).Button, obj4);
   items2[3] = callback2(View, obj3);
   obj[0] = items2;
   return callback3(View, obj);

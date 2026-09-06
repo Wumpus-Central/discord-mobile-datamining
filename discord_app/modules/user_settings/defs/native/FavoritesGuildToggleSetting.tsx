@@ -1,14 +1,14 @@
-// === Module 15164: toggle ===
+// === Module 15324: toggle ===
 
-// Module 15164 (toggle)
+// Module 15324 (toggle)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 3178 */;
-import MobileUserSettings from "MobileUserSettings" /* 7896 */;
-import getNextPositionFromChannels from "getNextPositionFromChannels" /* 10332 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10333 */;
-import computeIsFavoritesGuildVisibleDefault from "computeIsFavoritesGuildVisible" /* 15165 */;
-import createToggle from "createToggle" /* 11292 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 3225 */;
+import MobileUserSettings from "MobileUserSettings" /* 7975 */;
+import getNextPositionFromChannels from "getNextPositionFromChannels" /* 10223 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
+import computeIsFavoritesGuildVisibleDefault from "computeIsFavoritesGuildVisible" /* 15325 */;
+import createToggle from "createToggle" /* 11468 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {

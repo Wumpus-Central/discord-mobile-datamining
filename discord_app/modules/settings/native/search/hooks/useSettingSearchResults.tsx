@@ -1,10 +1,10 @@
-// === Module 14587: useSettingSearchResults ===
+// === Module 14698: useSettingSearchResults ===
 
-// Module 14587 (useSettingSearchResults)
+// Module 14698 (useSettingSearchResults)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "zustandStore" /* 14580 */;
-import closure_6 from "zustandStore" /* 14476 */;
+import closure_5 from "zustandStore" /* 14691 */;
+import closure_6 from "zustandStore" /* 14583 */;
 
 const require = arg1;
 let closure_7 = [];
@@ -12,8 +12,8 @@ const result = require("set").fileFinishedImporting("modules/settings/native/sea
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
-    let tmp = callback(14588);
-    tmp = new tmp(memo(14582).getSettingSearchableTitles());
+    let tmp = callback(14699);
+    tmp = new tmp(memo(14693).getSettingSearchableTitles());
     return tmp;
   }, []);
   const settings = callback(memo1.useState(closure_7), 2);
@@ -23,7 +23,7 @@ export const useSettingSearchResults = function useSettingSearchResults() {
   const placeholderCount = callback(memo1.useState(10), 2);
   callback = placeholderCount[1];
   const items = [memo];
-  memo1 = memo1.useMemo(() => callback(633)((arg0) => {
+  memo1 = memo1.useMemo(() => callback(551)((arg0) => {
     let scoredSearchResults = closure_1_6.getField("blocklist");
     scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
     const found = scoredSearchResults.filter((setting) => {

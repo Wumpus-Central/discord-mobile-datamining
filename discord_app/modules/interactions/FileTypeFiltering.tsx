@@ -1,10 +1,10 @@
-// === Module 11957: fileTypesFormattedStringHelper ===
+// === Module 12158: fileTypesFormattedStringHelper ===
 
-// Module 11957 (fileTypesFormattedStringHelper)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+// Module 12158 (fileTypesFormattedStringHelper)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "_getSystemLocale" /* 1995 */;
+import closure_5 from "_getSystemLocale" /* 2025 */;
 
 require = arg1;
 function fileTypesFormattedStringHelper(arr, locale) {
@@ -49,7 +49,7 @@ const result = require("set").fileFinishedImporting("modules/interactions/FileTy
 export const useFileTypesFormattedString = function useFileTypesFormattedString(fileTypes) {
   const _require = fileTypes;
   const items = [closure_5];
-  const stateFromStores = _require(586).useStateFromStores(items, () => locale.locale);
+  const stateFromStores = _require(504).useStateFromStores(items, () => locale.locale);
   const items1 = [fileTypes, stateFromStores];
   return React.useMemo(() => closure_1_11(closure_0, stateFromStores), items1);
 };

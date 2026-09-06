@@ -1,8 +1,8 @@
-// === Module 11003: initialize ===
+// === Module 11035: initialize ===
 
-// Module 11003 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 11035 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_0 from "_slicedToArray" /* 32 */;
 
 let closure_1 = { sentGifts: {} };

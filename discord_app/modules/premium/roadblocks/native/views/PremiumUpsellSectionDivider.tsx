@@ -1,16 +1,16 @@
-// === Module 9161: PremiumUpsellSectionDivider ===
+// === Module 10306: PremiumUpsellSectionDivider ===
 
-// Module 9161 (PremiumUpsellSectionDivider)
+// Module 10306 (PremiumUpsellSectionDivider)
 import noopAll from "noop" /* 19 */;
-import keys from "keys" /* 688 */;
-import ThemesDefault from "Themes" /* 709 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
-import LockIcon2 from "LockIcon" /* 5049 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9162 */;
+import ThemesDefault from "Themes" /* 576 */;
+import keys from "keys" /* 1093 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import LockIcon2 from "LockIcon" /* 5095 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10307 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { Gradients } from "items" /* 7187 */;
+import { Gradients } from "items" /* 7432 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -81,15 +81,15 @@ export default function PremiumUpsellSectionDivider(arg0) {
     obj2[3] = useTier0UpsellContent ? tmp6.PREMIUM_TIER_0 : tmp6.PREMIUM_TIER_2_TRI_COLOR;
     LockIcon = LockIcon2.LockIcon;
     const obj3 = { color: null, style: null };
-    WHITE = tmp4(709).colors.WHITE;
+    WHITE = tmp4(576).colors.WHITE;
     obj3[0] = WHITE;
     lock = lock.lock;
     obj3[1] = lock;
     obj2[4] = tmp3(LockIcon, obj3);
-    obj2 = tmp3(tmp4(4941), obj2);
+    obj2 = tmp3(tmp4(4987), obj2);
     obj1[1] = obj2;
     tmp3(tmp2, obj1);
-    const tmp4Result = tmp4(4941);
+    const tmp4Result = tmp4(4987);
   }
 };
 export const PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT = 28;

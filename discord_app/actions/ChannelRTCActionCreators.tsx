@@ -1,11 +1,11 @@
-// === Module 4722: ? ===
+// === Module 4761: ? ===
 
-// Module 4722
+// Module 4761
 import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
-import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
+import ME from "ME" /* 1074 */;
 
 ({ AppContext: c3, AnalyticEvents: c4, ComponentActions: c5 } = ME);
 const result = set.fileFinishedImporting("actions/ChannelRTCActionCreators.tsx");
@@ -74,7 +74,7 @@ export default {
         ComponentDispatch.dispatch(closure_1_5.FOCUS_CHANNEL_TEXT_AREA, { channelId: id });
       }, 0);
     } else {
-      let ComponentDispatch = _require(1228).ComponentDispatch;
+      let ComponentDispatch = _require(1109).ComponentDispatch;
       ComponentDispatch.dispatch(constants3.FOCUS_CHAT_BUTTON);
     }
   },

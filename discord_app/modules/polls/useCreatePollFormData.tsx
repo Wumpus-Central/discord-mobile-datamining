@@ -1,12 +1,12 @@
-// === Module 11998: createPollCreationImageForMedia ===
+// === Module 12202: createPollCreationImageForMedia ===
 
-// Module 11998 (createPollCreationImageForMedia)
-import getPollVoteEventPropertiesDefault from "getPollVoteEventProperties" /* 11525 */;
-import useRequestDefault from "useRequest" /* 11999 */;
+// Module 12202 (createPollCreationImageForMedia)
+import getPollVoteEventPropertiesDefault from "getPollVoteEventProperties" /* 11714 */;
+import useRequestDefault from "useRequest" /* 12203 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7584 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7829 */;
 
 const require = arg1;
 function createPollCreationImageForMedia(mediaURL, status) {
@@ -180,11 +180,11 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
               const callback = closure_1;
               closure_1 = callback2;
               closure_1_20(callback, closure_1);
-              closure_1_19(first3(callback2, callback(12002).PollMediaUploadAttachmentStatus.PREPARING), closure_1);
+              closure_1_19(first3(callback2, callback(12206).PollMediaUploadAttachmentStatus.PREPARING), closure_1);
               table = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback2(12000).handlePollGifAttachmentAdd(callback, table[closure_1].localCreationAnswerId, callback2);
+              obj1[0] = callback2(12204).handlePollGifAttachmentAdd(callback, table[closure_1].localCreationAnswerId, callback2);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -197,9 +197,9 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
             return obj;
           } else {
             if (null != arg1) {
-              closure_1_19(first3(closure_1, callback(12002).PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), callback);
+              closure_1_19(first3(closure_1, callback(12206).PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), callback);
             } else {
-              closure_1_19(first3(closure_1, callback(12002).PollMediaUploadAttachmentStatus.ERROR), callback);
+              closure_1_19(first3(closure_1, callback(12206).PollMediaUploadAttachmentStatus.ERROR), callback);
             }
             c6 = 3;
           }

@@ -1,9 +1,9 @@
-// === Module 11269: useUnreadSettingNotice ===
+// === Module 11411: useUnreadSettingNotice ===
 
-// Module 11269 (useUnreadSettingNotice)
+// Module 11411 (useUnreadSettingNotice)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING as closure_5 } from "createChannelRecord" /* 1390 */;
+import { CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING as closure_5 } from "createChannelRecord" /* 1961 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx");

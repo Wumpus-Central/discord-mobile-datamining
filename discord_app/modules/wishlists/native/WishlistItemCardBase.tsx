@@ -1,15 +1,15 @@
-// === Module 11005: SourceIcon ===
+// === Module 8773: SourceIcon ===
 
-// Module 11005 (SourceIcon)
+// Module 8773 (SourceIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import map from "map" /* 4197 */;
-import ManaContext from "ManaContext" /* 4204 */;
-import useUserProfileColors from "useUserProfileColors" /* 8549 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import map from "map" /* 4262 */;
+import ManaContext from "ManaContext" /* 4271 */;
+import useUserProfileColors from "useUserProfileColors" /* 8238 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function SourceIcon(toastText) {
@@ -27,7 +27,7 @@ function SourceIcon(toastText) {
     children: null
   };
   obj = { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-  obj[5] = callback(toastText(9222).HeartIcon, obj);
+  obj[5] = callback(toastText(8774).HeartIcon, obj);
   return callback(closure_3, obj);
 }
 noopAll;
@@ -92,27 +92,27 @@ export default function WishlistItemCardBase(username) {
     obj[0] = size;
   }
   items[2] = obj;
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.p3RmJF, { username: username.recipientName });
   const items1 = [accessibilityLabel, , ];
   if (obj4.OWNED === overlay) {
-    const intl3 = tmp2(1233).intl;
-    let stringResult = intl3.string(tmp2(1233).t["6cfuDj"]);
+    const intl3 = tmp2(1114).intl;
+    let stringResult = intl3.string(tmp2(1114).t["6cfuDj"]);
   } else {
     stringResult = null;
     if (tmp7.LOCKED === overlay) {
-      const intl2 = tmp2(1233).intl;
-      stringResult = intl2.string(tmp2(1233).t.wu4gyV);
+      const intl2 = tmp2(1114).intl;
+      stringResult = intl2.string(tmp2(1114).t.wu4gyV);
     }
   }
-  let tmp14Result1 = source === tmp2(10682).WishlistItemSource.WISHLIST;
+  let tmp14Result1 = source === tmp2(8776).WishlistItemSource.WISHLIST;
   items1[1] = stringResult;
   let tmp10 = null;
   if (tmp14Result1) {
     tmp10 = formatToPlainStringResult;
   }
   items1[2] = tmp10;
-  const found = items1.filter(tmp2(1470).isNotNullish);
+  const found = items1.filter(tmp2(1369).isNotNullish);
   const joined = found.join(", ");
   const items2 = [tmp.previewWrap, ];
   let dimmedPreview = overlay === tmp7.OWNED;
@@ -127,9 +127,9 @@ export default function WishlistItemCardBase(username) {
     obj2 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
     obj2[0] = tmp.overlayContainer;
     const obj3 = { color: null, size: "custom", style: null };
-    obj3[0] = tmp5(709).colors.WHITE;
+    obj3[0] = tmp5(576).colors.WHITE;
     obj3[2] = { width: 40, height: 40 };
-    obj2[4] = tmp14(tmp2(9886).CheckmarkLargeBoldIcon, obj3);
+    obj2[4] = tmp14(tmp2(8795).CheckmarkLargeBoldIcon, obj3);
     tmp14Result = tmp14(tmp15, obj2);
   }
   items3[1] = tmp14Result;
@@ -138,9 +138,9 @@ export default function WishlistItemCardBase(username) {
     obj4 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
     obj4[0] = tmp.lockBadge;
     const obj5 = { color: null, size: "custom", style: null };
-    obj5[0] = tmp5(709).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
+    obj5[0] = tmp5(576).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
     obj5[2] = { width: 18, height: 18 };
-    obj4[4] = tmp14(tmp2(5049).LockIcon, obj5);
+    obj4[4] = tmp14(tmp2(5095).LockIcon, obj5);
     tmp14Result = tmp14(tmp15, obj4);
   }
   items3[2] = tmp14Result;

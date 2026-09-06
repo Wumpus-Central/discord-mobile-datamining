@@ -1,14 +1,14 @@
-// === Module 9897: ? ===
+// === Module 9182: ? ===
 
-// Module 9897
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import _modDef5364 from "module_5364" /* 5364 */;
-import useCanRingToGuildVoiceChannel from "useCanRingToGuildVoiceChannel" /* 9891 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+// Module 9182
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import _modDef5411 from "module_5411" /* 5411 */;
+import useCanRingToGuildVoiceChannel from "useCanRingToGuildVoiceChannel" /* 9174 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ Endpoints: closure_6, AnalyticEvents: error, ChannelTypesSets: closure_8, ChannelTypes: c9 } = ME);
@@ -26,7 +26,7 @@ export default {
     if (null != arg3) {
       if (!blocked.isBlocked(arg3)) {
         const _require = user.getUser(arg3);
-        const HTTP = _require(527).HTTP;
+        const HTTP = _require(1272).HTTP;
         let obj = { url: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = self.CALL(id);
         const value = HTTP.get(obj);
@@ -35,7 +35,7 @@ export default {
           if (closure_3) {
             ringable = body.body.ringable;
           }
-          const voiceChannel = id(5364).selectVoiceChannel(id, dependencyMap);
+          const voiceChannel = id(5411).selectVoiceChannel(id, dependencyMap);
           if (ringable) {
             self.ring(tmp2);
           }
@@ -43,31 +43,31 @@ export default {
             callback(tmp2);
           }
         }, () => {
-          let obj = id(695);
+          let obj = id(1242);
           obj.track(closure_1_7.OPEN_POPOUT, { type: "Not Friend", source: "Call" });
           obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-          const intl = lib(1233).intl;
-          obj[0] = intl.string(lib(1233).t.My50nf);
-          const intl2 = lib(1233).intl;
+          const intl = lib(1114).intl;
+          obj[0] = intl.string(lib(1114).t.My50nf);
+          const intl2 = lib(1114).intl;
           let str = "";
           if (null != lib) {
             str = lib.username;
           }
-          obj[1] = intl2.format(lib(1233).t.IdKo2z, { username: str });
-          const intl3 = tmp3(1233).intl;
-          obj[2] = intl3.string(lib(1233).t["PMsq/b"]);
-          const intl4 = tmp3(1233).intl;
-          obj[3] = intl4.string(lib(1233).t.BddRzS);
+          obj[1] = intl2.format(lib(1114).t.IdKo2z, { username: str });
+          const intl3 = tmp3(1114).intl;
+          obj[2] = intl3.string(lib(1114).t["PMsq/b"]);
+          const intl4 = tmp3(1114).intl;
+          obj[3] = intl4.string(lib(1114).t.BddRzS);
           obj[4] = function onConfirm() {
             let obj = closure_1_1(closure_1_2[9]);
             obj = { userId: closure_4, context: { location: "Call" } };
             obj.addRelationship(obj);
           };
-          id(4858).show(obj);
+          id(4904).show(obj);
         });
       }
     } else {
-      obj = _modDef5364;
+      obj = _modDef5411;
       let voiceChannel = obj.selectVoiceChannel(id, c1);
       if (arg2) {
         self.ring(id);
@@ -84,7 +84,7 @@ export default {
       const CALLABLE = constants.CALLABLE;
       const result = obj.canRingUsersInChannel(channel);
       if (result) {
-        const HTTP = tmp3(527).HTTP;
+        const HTTP = tmp3(1272).HTTP;
         obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = closure_6.CALL_RING(channelId);
         obj = { recipients: null, analytics_location: null };

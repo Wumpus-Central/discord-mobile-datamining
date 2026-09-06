@@ -1,9 +1,9 @@
-// === Module 13564: getInitialState ===
+// === Module 13670: getInitialState ===
 
-// Module 13564 (getInitialState)
-import shouldCommitDefault from "shouldCommit" /* 13565 */;
-import rateLimitDefault from "rateLimit" /* 13566 */;
-import closure_2 from "filterPlayingActivities" /* 5232 */;
+// Module 13670 (getInitialState)
+import shouldCommitDefault from "shouldCommit" /* 13671 */;
+import rateLimitDefault from "rateLimit" /* 13672 */;
+import closure_2 from "filterPlayingActivities" /* 5279 */;
 
 shouldCommitDefault;
 class LocalPresenceStateManager extends tmp2 {

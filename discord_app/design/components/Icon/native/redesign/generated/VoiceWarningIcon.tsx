@@ -1,10 +1,10 @@
-// === Module 5053: VoiceWarningIcon ===
+// === Module 5099: VoiceWarningIcon ===
 
-// Module 5053 (VoiceWarningIcon)
+// Module 5099 (VoiceWarningIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 4995 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 5041 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

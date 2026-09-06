@@ -1,16 +1,16 @@
-// === Module 17473: RolePermissionTemplatesActionSheet ===
+// === Module 17633: RolePermissionTemplatesActionSheet ===
 
-// Module 17473 (RolePermissionTemplatesActionSheet)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
-import ActionSheet from "ActionSheet" /* 5998 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 17453 */;
+// Module 17633 (RolePermissionTemplatesActionSheet)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
+import ActionSheet from "ActionSheet" /* 7198 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 17613 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);

@@ -1,18 +1,18 @@
-// === Module 5504: HeaderBackImage ===
+// === Module 5624: HeaderBackImage ===
 
-// Module 5504 (HeaderBackImage)
+// Module 5624 (HeaderBackImage)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text from "Text" /* 4474 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5501 */;
-import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 5505 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5508 */;
-import Background from "Background" /* 5511 */;
+import ThemesDefault from "Themes" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import Text from "Text" /* 4556 */;
+import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 5625 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5628 */;
+import Background from "Background" /* 5631 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5682 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 class HeaderBackImage {
@@ -57,7 +57,7 @@ function CloseButton(onPress) {
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.create(null));
-  let obj = onPress(5510);
+  let obj = onPress(5630);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -71,7 +71,7 @@ function CustomHeaderBackButton(onPress) {
   obj.backImage = function backImage() {
     return callback(closure_9, {});
   };
-  return callback(onPress(5511).HeaderBackButton, obj);
+  return callback(onPress(5631).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;

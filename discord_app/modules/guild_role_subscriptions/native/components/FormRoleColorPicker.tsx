@@ -1,10 +1,10 @@
-// === Module 17608: FormRoleColorPicker ===
+// === Module 17768: FormRoleColorPicker ===
 
-// Module 17608 (FormRoleColorPicker)
+// Module 17768 (FormRoleColorPicker)
 import closure_3 from "noop" /* 19 */;
-import { DEFAULT_ROLE_COLOR } from "ME" /* 673 */;
+import { DEFAULT_ROLE_COLOR } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles({ rowColorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 } });
@@ -29,9 +29,9 @@ export default function FormRoleColorPicker(color) {
   let obj = { leading: null, label: null, disabled: null, onPress: null };
   const tmp = callback();
   obj = { color, style: tmp.rowColorBlock, onSelect: callback };
-  obj[0] = jsx(onChange(14490), { color, style: tmp.rowColorBlock, onSelect: callback });
-  const tmp3 = onChange(13874);
-  obj[1] = color(685).int2hex(color);
+  obj[0] = jsx(onChange(14597), { color, style: tmp.rowColorBlock, onSelect: callback });
+  const tmp3 = onChange(13896);
+  obj[1] = color(1091).int2hex(color);
   obj[2] = flag;
   obj[3] = callback;
   return <tmp3 color={color} style={tmp.rowColorBlock} onSelect={callback} />;

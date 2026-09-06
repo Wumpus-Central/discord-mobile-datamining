@@ -1,10 +1,10 @@
-// === Module 11056: useHandleUseNow ===
+// === Module 11085: useHandleUseNow ===
 
-// Module 11056 (useHandleUseNow)
+// Module 11085 (useHandleUseNow)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { isExternalProduct } from "items" /* 675 */;
+import { isExternalProduct } from "items" /* 1076 */;
 
 let require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useHandleUseNow.tsx");

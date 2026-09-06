@@ -1,10 +1,10 @@
-// === Module 6463: DevQuestsTallAbstractUI ===
+// === Module 5895: DevQuestsTallAbstractUI ===
 
-// Module 6463 (DevQuestsTallAbstractUI)
+// Module 5895 (DevQuestsTallAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6464 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5896 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DevQuestsTallAbstractUI.native.tsx");

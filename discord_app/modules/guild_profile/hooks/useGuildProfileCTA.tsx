@@ -1,14 +1,14 @@
-// === Module 9047: useGuildProfileCTA ===
+// === Module 9205: useGuildProfileCTA ===
 
-// Module 9047 (useGuildProfileCTA)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9048 */;
+// Module 9205 (useGuildProfileCTA)
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9206 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "updateInvite" /* 4462 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "trackCommunicationDisabled" /* 2021 */;
+import closure_6 from "createGuildRecordFromRust" /* 1979 */;
+import closure_7 from "updateInvite" /* 4544 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ InviteStates: c9, GuildFeatures: c10 } = ME);
@@ -22,19 +22,19 @@ export default function useGuildProfileCTA(id) {
   dependencyMap = arg2;
   id = id.id;
   const features = id.features;
-  obj = _require(586);
+  obj = _require(504);
   const items = [features];
   const stateFromStores = obj.useStateFromStores(items, () => features.getId());
   const items1 = [stateFromStores1];
-  stateFromStores1 = _require(586).useStateFromStores(items1, () => stateFromStores1.getGuild(id));
-  let obj2 = _require(586);
+  stateFromStores1 = _require(504).useStateFromStores(items1, () => stateFromStores1.getGuild(id));
+  let obj2 = _require(504);
   const items2 = [stateFromStores3];
   const items3 = [stateFromStores];
-  const stateFromStores2 = _require(586).useStateFromStores(items2, () => stateFromStores3.getUser(stateFromStores), items3);
-  const obj3 = _require(586);
+  const stateFromStores2 = _require(504).useStateFromStores(items2, () => stateFromStores3.getUser(stateFromStores), items3);
+  const obj3 = _require(504);
   const items4 = [stateFromStores];
   const items5 = [id, stateFromStores];
-  stateFromStores3 = _require(586).useStateFromStores(items4, () => {
+  stateFromStores3 = _require(504).useStateFromStores(items4, () => {
     let member = null;
     if (null != id) {
       member = stateFromStores.getMember(tmp, stateFromStores);
@@ -45,10 +45,10 @@ export default function useGuildProfileCTA(id) {
     }
     return null != joinedAt;
   }, items5);
-  const obj4 = _require(586);
+  const obj4 = _require(504);
   const items6 = [stateFromStores2];
   const items7 = [id, arg2];
-  const stateFromStoresObject = _require(586).useStateFromStoresObject(items6, () => {
+  const stateFromStoresObject = _require(504).useStateFromStoresObject(items6, () => {
     let inviteKeyForGuildId = dependencyMap;
     if (dependencyMap == null) {
       inviteKeyForGuildId = stateFromStores2.getInviteKeyForGuildId(id);
@@ -66,9 +66,9 @@ export default function useGuildProfileCTA(id) {
           if (num == null) {
             num = 0;
           }
-          obj[1] = id(1398).hasFlag(num, id(8682).GuildInviteFlags.IS_APPLICATION_BYPASS);
+          obj[1] = id(1384).hasFlag(num, id(8392).GuildInviteFlags.IS_APPLICATION_BYPASS);
           obj[2] = invite.roles;
-          const obj2 = id(1398);
+          const obj2 = id(1384);
           const tmp6 = id;
         }
         return obj;
@@ -215,18 +215,18 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
       flag = false;
       tmp11 = null;
       if (invite.state !== tmp12.EXPIRED) {
-        obj = set(1398);
+        obj = set(1384);
         let num = invite.flags;
         if (num == null) {
           num = 0;
         }
-        flag = obj.hasFlag(num, set(8682).GuildInviteFlags.IS_APPLICATION_BYPASS);
+        flag = obj.hasFlag(num, set(8392).GuildInviteFlags.IS_APPLICATION_BYPASS);
         tmp11 = inviteKeyForGuildId;
         const tmp13 = set;
       }
     }
   }
-  const pendingFolderGuildIds = set(9048).getPendingFolderGuildIds();
+  const pendingFolderGuildIds = set(9206).getPendingFolderGuildIds();
   if (tmp7) {
     let roles;
     if (invite != null) {
@@ -288,7 +288,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     }
     return APPLY_TO_JOIN;
   }
-  const obj2 = set(9048);
+  const obj2 = set(9206);
   const tmp15 = set;
   tmp7 = null != joinedAt;
 };

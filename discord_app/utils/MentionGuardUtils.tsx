@@ -1,12 +1,12 @@
-// === Module 10361: parsedItemUsesEveryoneRole ===
+// === Module 10258: parsedItemUsesEveryoneRole ===
 
-// Module 10361 (parsedItemUsesEveryoneRole)
+// Module 10258 (parsedItemUsesEveryoneRole)
 import _modDef38 from "module_38" /* 38 */;
-import rebuildDefault from "rebuild" /* 7437 */;
+import rebuildDefault from "rebuild" /* 7682 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getMemberListId" /* 6135 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
-import ME from "ME" /* 673 */;
+import closure_3 from "getMemberListId" /* 7279 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+import ME from "ME" /* 1074 */;
 
 function parsedItemUsesEveryoneRole(content) {
   if (typeof content.content === "string") {

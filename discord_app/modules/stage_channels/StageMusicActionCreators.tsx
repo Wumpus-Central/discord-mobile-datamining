@@ -1,8 +1,8 @@
-// === Module 10028: updateStageMusicMuted ===
+// === Module 9913: updateStageMusicMuted ===
 
-// Module 10028 (updateStageMusicMuted)
+// Module 9913 (updateStageMusicMuted)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const result = set.fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");
 

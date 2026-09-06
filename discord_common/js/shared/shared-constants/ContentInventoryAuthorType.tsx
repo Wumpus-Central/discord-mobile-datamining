@@ -1,6 +1,6 @@
-// === Module 8646: ContentInventoryAuthorType ===
+// === Module 8356: ContentInventoryAuthorType ===
 
-// Module 8646 (ContentInventoryAuthorType)
+// Module 8356 (ContentInventoryAuthorType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx");

@@ -1,29 +1,29 @@
-// === Module 8700: StageChannelAgeVerificationNoticeContent ===
+// === Module 8410: StageChannelAgeVerificationNoticeContent ===
 
-// Module 8700 (StageChannelAgeVerificationNoticeContent)
+// Module 8410 (StageChannelAgeVerificationNoticeContent)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4433 */;
-import Text2 from "Text" /* 4474 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4734 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5375 */;
-import WarningIcon2 from "WarningIcon" /* 8755 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
+import Text2 from "Text" /* 4556 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
+import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5422 */;
+import WarningIcon2 from "WarningIcon" /* 8588 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 673 */;
+import { HelpdeskArticles } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
   closure_1 = undefined;
   closure_1 = callback2();
-  let obj = onConfirmPress(4734);
+  let obj = onConfirmPress(4773);
   const isVerifiedTeen = obj.useIsVerifiedTeen();
-  const intl = onConfirmPress(1233).intl;
+  const intl = onConfirmPress(1114).intl;
   const format = intl.format;
-  const t = onConfirmPress(1233).t;
+  const t = onConfirmPress(1114).t;
   if (isVerifiedTeen) {
     obj = { hook: null };
     obj[0] = function hook(children) {

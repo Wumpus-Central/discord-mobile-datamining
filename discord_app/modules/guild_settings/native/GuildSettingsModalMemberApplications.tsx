@@ -1,15 +1,15 @@
-// === Module 16415: memoResult1 ===
+// === Module 16577: memoResult1 ===
 
-// Module 16415 (memoResult1)
-import ThemesDefault from "Themes" /* 709 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import Text from "Text" /* 4474 */;
+// Module 16577 (memoResult1)
+import ThemesDefault from "Themes" /* 576 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import Text from "Text" /* 4556 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateSubmittedGuildJoinRequestTotal" /* 7212 */;
+import closure_6 from "updateSubmittedGuildJoinRequestTotal" /* 5542 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -61,15 +61,15 @@ let closure_12 = importAllResult.memo((joinRequest) => {
       obj = { arrow: true, icon: null, label: null, onPress: null, start: null, end: null };
       obj = { source: null, size: null };
       obj[0] = userAvatarSource;
-      obj[1] = joinRequest(1296).AvatarSizes.SMALL;
-      obj[1] = callback(joinRequest(1296).Avatar, obj);
+      obj[1] = joinRequest(1178).AvatarSizes.SMALL;
+      obj[1] = callback(joinRequest(1178).Avatar, obj);
       obj1 = { user: null };
       obj1[0] = user;
       obj[2] = callback(closure_11, obj1);
       obj[3] = tmp;
       obj[4] = start;
       obj[5] = end;
-      return callback(joinRequest(5608).TableRow, obj);
+      return callback(joinRequest(5605).TableRow, obj);
     }
   }
 });

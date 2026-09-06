@@ -1,6 +1,6 @@
-// === Module 9074: IGNORE_CONFIRMATION_ACTION_SHEET_KEY ===
+// === Module 11382: IGNORE_CONFIRMATION_ACTION_SHEET_KEY ===
 
-// Module 9074 (IGNORE_CONFIRMATION_ACTION_SHEET_KEY)
+// Module 11382 (IGNORE_CONFIRMATION_ACTION_SHEET_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/relationships/native/RestrictionConfirmationConstants.tsx");

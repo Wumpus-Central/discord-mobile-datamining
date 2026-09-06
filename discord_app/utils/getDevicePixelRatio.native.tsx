@@ -1,6 +1,6 @@
-// === Module 1894: getDevicePixelRatio ===
+// === Module 1878: getDevicePixelRatio ===
 
-// Module 1894 (getDevicePixelRatio)
+// Module 1878 (getDevicePixelRatio)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

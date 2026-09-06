@@ -1,11 +1,11 @@
-// === Module 11155: getDurationStringOfFractionalPremium ===
+// === Module 11294: getDurationStringOfFractionalPremium ===
 
-// Module 11155 (getDurationStringOfFractionalPremium)
+// Module 11294 (getDurationStringOfFractionalPremium)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 684 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
-import resetCache from "resetCache" /* 4163 */;
+import setDefault from "set" /* 1090 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
+import resetCache from "resetCache" /* 4242 */;
 
 const result = set.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
@@ -13,15 +13,15 @@ export const getDurationStringOfFractionalPremium = function getDurationStringOf
   let obj = getPremiumPlanItem;
   const fractionalPremiumUnitsHoursFromSkuIds = obj.getFractionalPremiumUnitsHoursFromSkuIds(arr.map((skuId) => skuId.skuId));
   if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
-    const intl2 = tmp(1233).intl;
+    const intl2 = tmp(1114).intl;
     obj = { days: null };
     obj[0] = fractionalPremiumUnitsHoursFromSkuIds / 24;
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1233).t.Cz1G97, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.Cz1G97, obj);
   } else {
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     obj = { hours: null };
     obj[0] = fractionalPremiumUnitsHoursFromSkuIds;
-    formatToPlainStringResult = intl.formatToPlainString(tmp(1233).t.J9Lu4h, obj);
+    formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.J9Lu4h, obj);
   }
   return formatToPlainStringResult;
 };

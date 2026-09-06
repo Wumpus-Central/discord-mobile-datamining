@@ -1,8 +1,8 @@
-// === Module 13363: apexExperiment ===
+// === Module 13469: apexExperiment ===
 
-// Module 13363 (apexExperiment)
+// Module 13469 (apexExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-bogo-promotion-gate-v2", kind: "user", defaultConfig: false, variations: { 1: true } });
 const result = set.fileFinishedImporting("modules/premium/experiments/BogoPromotionExperiment.tsx");

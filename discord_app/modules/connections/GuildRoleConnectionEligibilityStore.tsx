@@ -1,8 +1,8 @@
-// === Module 11621: map ===
+// === Module 11820: map ===
 
-// Module 11621 (map)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 11820 (map)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

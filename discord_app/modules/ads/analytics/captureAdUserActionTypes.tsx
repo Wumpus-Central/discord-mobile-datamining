@@ -1,6 +1,6 @@
-// === Module 9021: AdUserActionType ===
+// === Module 11197: AdUserActionType ===
 
-// Module 9021 (AdUserActionType)
+// Module 11197 (AdUserActionType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/ads/analytics/captureAdUserActionTypes.tsx");

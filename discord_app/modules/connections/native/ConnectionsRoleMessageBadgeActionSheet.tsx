@@ -1,26 +1,26 @@
-// === Module 11620: PopoutCheck ===
+// === Module 11819: PopoutCheck ===
 
-// Module 11620 (PopoutCheck)
+// Module 11819 (PopoutCheck)
 import applyDefault from "apply" /* 12 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useThemeDefault from "useTheme" /* 4413 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4429 */;
-import Text from "Text" /* 4474 */;
-import officialApplicationIds2 from "officialApplicationIds" /* 5360 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import useThemeDefault from "useTheme" /* 4495 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4511 */;
+import Text from "Text" /* 4556 */;
+import officialApplicationIds2 from "officialApplicationIds" /* 5407 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createdAt" /* 1934 */;
-import closure_8 from "fetchFingerprint" /* 1215 */;
-import closure_9 from "trackCommunicationDisabled" /* 1991 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_11 from "createGuildRecordFromRust" /* 1908 */;
-import closure_12 from "map" /* 11621 */;
-import { OperatorTypes } from "OperatorTypes" /* 5361 */;
-import ME from "ME" /* 673 */;
+import closure_7 from "createdAt" /* 1385 */;
+import closure_8 from "fetchFingerprint" /* 502 */;
+import closure_9 from "trackCommunicationDisabled" /* 2021 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_11 from "createGuildRecordFromRust" /* 1979 */;
+import closure_12 from "map" /* 11820 */;
+import { OperatorTypes } from "OperatorTypes" /* 5408 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function PopoutCheck(arg0) {
@@ -145,7 +145,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj3 = { style: null, user: null, size: null, guildId: "PX_16" };
+                const obj3 = { style: null, user: null, size: null, guildId: "Array" };
                 obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
                 obj3[1] = tmp7;
                 obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;

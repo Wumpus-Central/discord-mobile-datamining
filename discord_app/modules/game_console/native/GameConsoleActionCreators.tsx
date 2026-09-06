@@ -1,6 +1,6 @@
-// === Module 9911: _transferToPlaystationWithAlert ===
+// === Module 9455: _transferToPlaystationWithAlert ===
 
-// Module 9911 (_transferToPlaystationWithAlert)
+// Module 9455 (_transferToPlaystationWithAlert)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -18,17 +18,17 @@ function _transferToPlaystationWithAlert() {
       closure_3 = tmp5;
       const lib = lib2;
       c6 = 1;
-      yield lib(9904).transferToPlayStation(lib, lib2.id, dependencyMap);
+      yield lib(9448).transferToPlayStation(lib, lib2.id, dependencyMap);
       if (1 === tmp8) {
         c6 = 0;
-        obj1 = lib2(4858);
+        obj1 = lib2(4904);
         const obj2 = { title: null, body: null };
-        const intl = lib(1233).intl;
-        obj2[0] = intl.string(lib(1233).t.QL1y93);
-        const intl2 = lib(1233).intl;
+        const intl = lib(1114).intl;
+        obj2[0] = intl.string(lib(1114).t.QL1y93);
+        const intl2 = lib(1114).intl;
         const obj3 = { deviceName: null };
         obj3[0] = lib.name;
-        obj2[1] = intl2.formatToPlainString(lib(1233).t["6ZyNH/"], obj3);
+        obj2[1] = intl2.formatToPlainString(lib(1114).t["6ZyNH/"], obj3);
         obj1.show(obj2);
         c8 = 3;
       } else if (arg0 === 1) {

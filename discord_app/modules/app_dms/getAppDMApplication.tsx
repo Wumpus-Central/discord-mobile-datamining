@@ -1,9 +1,9 @@
-// === Module 11992: getAppDMApplication ===
+// === Module 12196: getAppDMApplication ===
 
-// Module 11992 (getAppDMApplication)
-import closure_0 from "addApplication" /* 4519 */;
-import closure_1 from "createUserWidgetFromServer" /* 7376 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
+// Module 12196 (getAppDMApplication)
+import closure_0 from "addApplication" /* 4788 */;
+import closure_1 from "createUserWidgetFromServer" /* 7621 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
 
 const result = require("set").fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 

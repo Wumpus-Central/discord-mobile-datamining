@@ -1,24 +1,32 @@
-// === Module 7751: SplitTextInput ===
+// === Module 6966: SplitTextInput ===
 
-// Module 7751 (SplitTextInput)
-import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 4206 */;
-import Input from "Input" /* 7718 */;
-import SplitTextField from "SplitTextField" /* 7752 */;
+// Module 6966 (SplitTextInput)
+import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 4278 */;
+import Input from "Input" /* 6607 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 6608 */;
+import SplitTextField from "SplitTextField" /* 6967 */;
 import closure_3 from "_objectWithoutProperties" /* 109 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
-let closure_2 = ["labelId"];
-const forwardRefResult = importAllResult.forwardRef((size, ref) => {
+let closure_2 = ["labelId", "accessibilityLabel"];
+const forwardRefResult = importAllResult.forwardRef((required, ref) => {
   let obj = useFieldLabelA11yNative;
-  const fieldLabelA11yNative = obj.useFieldLabelA11yNative(size);
+  const fieldLabelA11yNative = obj.useFieldLabelA11yNative(required);
+  const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
   obj = {};
-  const merged = Object.assign(size);
+  const merged = Object.assign(required);
   obj.labelId = fieldLabelA11yNative.labelId;
   obj = { ref };
-  const merged1 = Object.assign(size);
+  const merged1 = Object.assign(required);
   const merged2 = Object.assign(callback(fieldLabelA11yNative, closure_2));
+  const tmp2 = callback(fieldLabelA11yNative, closure_2);
+  let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(accessibilityLabel, required.required);
+  if (requiredFieldA11yName == null) {
+    requiredFieldA11yName = accessibilityLabel;
+  }
+  obj.accessibilityLabel = requiredFieldA11yName;
   obj.children = jsx(SplitTextField.SplitTextField, { ref });
   return jsx(Input.Input, { ref });
 });

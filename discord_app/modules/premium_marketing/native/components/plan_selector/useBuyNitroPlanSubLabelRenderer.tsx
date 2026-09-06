@@ -1,8 +1,8 @@
-// === Module 13300: useBuyNitroPlanSubLabelRenderer ===
+// === Module 13405: useBuyNitroPlanSubLabelRenderer ===
 
-// Module 13300 (useBuyNitroPlanSubLabelRenderer)
+// Module 13405 (useBuyNitroPlanSubLabelRenderer)
 import closure_2 from "noop" /* 19 */;
-import { PRICE_PLACEHOLDER } from "GuildFeatures" /* 1923 */;
+import { PRICE_PLACEHOLDER } from "GuildFeatures" /* 1373 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanSubLabelRenderer.tsx");

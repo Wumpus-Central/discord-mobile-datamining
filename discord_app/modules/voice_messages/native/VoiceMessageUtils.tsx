@@ -1,18 +1,18 @@
-// === Module 12052: _startAudioRecording ===
+// === Module 12256: _startAudioRecording ===
 
-// Module 12052 (_startAudioRecording)
+// Module 12256 (_startAudioRecording)
 import timestampDefault from "timestamp" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import set from "set" /* 1234 */;
-import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4446 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 12053 */;
+import set from "set" /* 1115 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4528 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
+import downsampleWaveformDefault from "downsampleWaveform" /* 12257 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
-import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11761 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11762 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
+import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11960 */;
+import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11961 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 import importDefaultResult from "apply" /* 12 */;
 
 require = arg1;

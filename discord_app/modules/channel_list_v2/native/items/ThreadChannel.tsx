@@ -1,25 +1,25 @@
-// === Module 15949: ThreadChannel ===
+// === Module 16113: ThreadChannel ===
 
-// Module 15949 (ThreadChannel)
-import ThemesDefault from "Themes" /* 709 */;
-import inlineStyles from "inlineStyles" /* 8254 */;
-import inlineStylesDefault from "inlineStyles" /* 8254 */;
+// Module 16113 (ThreadChannel)
+import ThemesDefault from "Themes" /* 576 */;
+import inlineStyles from "inlineStyles" /* 8453 */;
+import inlineStylesDefault from "inlineStyles" /* 8453 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "storeThread" /* 4122 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_8 from "generateOldThreadCutoff" /* 4493 */;
-import closure_9 from "handleConnectionOpen" /* 1980 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import closure_11 from "updateVoiceState" /* 4497 */;
-import closure_12 from "getVoiceStatesForGuild" /* 4555 */;
-import hairlineWidth from "hairlineWidth" /* 10227 */;
-import { Permissions } from "ME" /* 673 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
-import { OpenThreadAnalyticsLocations as closure_16 } from "AbortCodes" /* 1232 */;
+import closure_5 from "storeThread" /* 4201 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_8 from "generateOldThreadCutoff" /* 4575 */;
+import closure_9 from "handleConnectionOpen" /* 2011 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
+import closure_11 from "updateVoiceState" /* 4579 */;
+import closure_12 from "getVoiceStatesForGuild" /* 4584 */;
+import hairlineWidth from "hairlineWidth" /* 10118 */;
+import { Permissions } from "ME" /* 1074 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
+import { OpenThreadAnalyticsLocations as closure_16 } from "AbortCodes" /* 1113 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function ThreadChannel(channel) {
@@ -230,7 +230,7 @@ const result = require("set").fileFinishedImporting("modules/channel_list_v2/nat
 export default function ConnectedThreadChannel(threadId) {
   threadId = threadId.threadId;
   ({ threadIndex, threadCount, selected } = threadId);
-  let obj = threadId(586);
+  let obj = threadId(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(threadId));
   let tmp2 = null;

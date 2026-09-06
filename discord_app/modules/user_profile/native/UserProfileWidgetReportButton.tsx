@@ -1,10 +1,10 @@
-// === Module 8808: UserProfileWidgetReportButton ===
+// === Module 8663: UserProfileWidgetReportButton ===
 
-// Module 8808 (UserProfileWidgetReportButton)
+// Module 8663 (UserProfileWidgetReportButton)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import FlagIcon from "FlagIcon" /* 8809 */;
-import ContextMenu from "ContextMenu" /* 8811 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import FlagIcon from "FlagIcon" /* 8664 */;
+import ContextMenu from "ContextMenu" /* 8666 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -30,10 +30,10 @@ export default function UserProfileWidgetReportButton(arg0) {
       const merged = Object.assign(Object.assign(ref, Object.create(null)));
       obj.hitSlop = closure_5;
       obj.accessibilityRole = "button";
-      const intl = callback(1233).intl;
-      obj.accessibilityLabel = intl.string(callback(1233).t.xpSHSk);
-      obj = { size: "sm", color: callback2(709).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8817).MoreHorizontalIcon, obj);
+      const intl = callback(1114).intl;
+      obj.accessibilityLabel = intl.string(callback(1114).t.xpSHSk);
+      obj = { size: "sm", color: callback2(576).colors.TEXT_MUTED };
+      obj.children = callback3(callback(8672).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     }
   };
@@ -44,10 +44,10 @@ export default function UserProfileWidgetReportButton(arg0) {
       const merged = Object.assign(Object.assign(ref, Object.create(null)));
       obj.hitSlop = closure_5;
       obj.accessibilityRole = "button";
-      const intl = callback(1233).intl;
-      obj.accessibilityLabel = intl.string(callback(1233).t.xpSHSk);
-      obj = { size: "sm", color: callback2(709).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8817).MoreHorizontalIcon, obj);
+      const intl = callback(1114).intl;
+      obj.accessibilityLabel = intl.string(callback(1114).t.xpSHSk);
+      obj = { size: "sm", color: callback2(576).colors.TEXT_MUTED };
+      obj.children = callback3(callback(8672).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     }
   });

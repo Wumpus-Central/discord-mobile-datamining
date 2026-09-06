@@ -1,9 +1,9 @@
-// === Module 9631: useStableSafeAreaInsets ===
+// === Module 9645: useStableSafeAreaInsets ===
 
-// Module 9631 (useStableSafeAreaInsets)
-import context from "context" /* 1495 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1627 */;
-import enforcingDefault from "enforcing" /* 1639 */;
+// Module 9645 (useStableSafeAreaInsets)
+import context from "context" /* 1480 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1611 */;
+import enforcingDefault from "enforcing" /* 1623 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -11,7 +11,7 @@ require = arg1;
 const result = require("set").fileFinishedImporting("modules/safe_area/useStableSafeAreaInsets.native.tsx");
 
 export default function useStableSafeAreaInsets() {
-  appEntryKey = appEntryKey(1495).useAppEntryKey();
+  appEntryKey = appEntryKey(1480).useAppEntryKey();
   const tmp2 = callback(React.useState(() => {
     let DEFAULT_APP_ENTRY_KEY = appEntryKey;
     if (appEntryKey === undefined) {

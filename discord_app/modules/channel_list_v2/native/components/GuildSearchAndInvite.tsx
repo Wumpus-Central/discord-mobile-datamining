@@ -1,20 +1,20 @@
-// === Module 12093: handleInviteDisabledPress ===
+// === Module 12297: handleInviteDisabledPress ===
 
-// Module 12093 (handleInviteDisabledPress)
-import ThemesDefault from "Themes" /* 709 */;
-import useAlertStore from "useAlertStore" /* 4860 */;
-import setDefault from "set" /* 7749 */;
-import useEventsButtonPropsDefault from "useEventsButtonProps" /* 12172 */;
+// Module 12297 (handleInviteDisabledPress)
+import ThemesDefault from "Themes" /* 576 */;
+import useAlertStore from "useAlertStore" /* 4906 */;
+import setDefault from "set" /* 6964 */;
+import useEventsButtonPropsDefault from "useEventsButtonProps" /* 12374 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "comparator" /* 1981 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "handleConnectionOpen" /* 1980 */;
-import { SEARCH_BAR_MARGIN_BOTTOM } from "hairlineWidth" /* 10227 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "comparator" /* 2012 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "handleConnectionOpen" /* 2011 */;
+import { SEARCH_BAR_MARGIN_BOTTOM } from "hairlineWidth" /* 10118 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function handleInviteDisabledPress() {
@@ -128,11 +128,11 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: SEARCH_BAR_MARGIN_BOTTOM, flexDirection: "row", gap: null };
   let num = 10;
   if (arg0) {
-    num = tmp(709).space.PX_12;
+    num = tmp(576).space.PX_12;
   }
   obj = { container: obj, search: { flex: 1 }, badge: null };
   obj[3] = num;
-  obj = { position: "absolute", right: 0, top: 0, width: 8, height: 8, borderRadius: tmp(709).radii.round, backgroundColor: tmp(709).colors.BACKGROUND_BRAND };
+  obj = { position: "absolute", right: 0, top: 0, width: 8, height: 8, borderRadius: tmp(576).radii.round, backgroundColor: tmp(576).colors.BACKGROUND_BRAND };
   obj[2] = obj;
   return obj;
 });
@@ -146,7 +146,7 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let obj = guild(586);
+  let obj = guild(504);
   const items = [closure_6];
   const items1 = [guild];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -158,8 +158,8 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
     const channels = closure_1_6.getChannels(guild.id);
     const result = guild(closure_1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, closure_1_11.GUILD_HEADER);
   });
-  const shouldShowInvitesDisabledNotif = guild(12169).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(12169);
+  const shouldShowInvitesDisabledNotif = guild(12371).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(12371);
   const tmp5 = useEventsButtonPropsDefault(guild);
   obj = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
   if (flag2) {

@@ -1,11 +1,11 @@
-// === Module 16998: useVoiceChannelGames ===
+// === Module 17162: useVoiceChannelGames ===
 
-// Module 16998 (useVoiceChannelGames)
+// Module 17162 (useVoiceChannelGames)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "sortActivity" /* 4569 */;
-import closure_6 from "filterPlayingActivities" /* 5232 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "sortActivity" /* 4600 */;
+import closure_6 from "filterPlayingActivities" /* 5279 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoiceChannelGames.tsx");
@@ -16,7 +16,7 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
   dependencyMap = arg2;
   let items = [stateFromStores, closure_6, closure_5];
   const items1 = [arg0, arg1, arg2];
-  const stateFromStoresArray = _require(586).useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = _require(504).useStateFromStoresArray(items, () => {
     if (closure_2) {
       const _Set = Set;
       const id = stateFromStores.getId();
@@ -48,11 +48,11 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
       return [];
     }
   }, items1);
-  const obj = _require(586);
-  const getGamesForAppIds = _require(9896).useGetGamesForAppIds(stateFromStoresArray);
-  let obj2 = _require(9896);
+  const obj = _require(504);
+  const getGamesForAppIds = _require(9181).useGetGamesForAppIds(stateFromStoresArray);
+  let obj2 = _require(9181);
   const items2 = [closure_7];
-  stateFromStores = _require(586).useStateFromStores(items2, () => {
+  stateFromStores = _require(504).useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {

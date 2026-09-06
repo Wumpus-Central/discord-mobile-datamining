@@ -1,19 +1,19 @@
-// === Module 16116: EmptyBody ===
+// === Module 16278: EmptyBody ===
 
-// Module 16116 (EmptyBody)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 3178 */;
-import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4927 */;
-import ChatIcon from "ChatIcon" /* 5025 */;
-import TextIcon from "TextIcon" /* 5034 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5055 */;
+// Module 16278 (EmptyBody)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 3225 */;
+import Text from "Text" /* 4556 */;
+import Stack from "Stack" /* 4973 */;
+import ChatIcon from "ChatIcon" /* 5071 */;
+import TextIcon from "TextIcon" /* 5080 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 16038 */;
+import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 16202 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function EmptyBody() {
@@ -90,9 +90,9 @@ export default function FavoritesGuildSidebarHeader() {
     tmp7 = callback2(View, obj);
   }
   const items = [tmp7, , ];
-  obj = { spacing: tmp6(709).space.PX_8, style: tmp.copy, children: null };
+  obj = { spacing: tmp6(576).space.PX_8, style: tmp.copy, children: null };
   obj1 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp4(1233).intl;
+  const intl = tmp4(1114).intl;
   obj1[2] = intl.string(messagesProxyDefault["1n0TGE"]);
   const items1 = [callback2(Text.Heading, obj1), callback2(EmptyBody, {})];
   obj[2] = items1;

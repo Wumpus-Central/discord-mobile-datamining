@@ -1,14 +1,14 @@
-// === Module 15052: useFetchListingsForGuild ===
+// === Module 15212: useFetchListingsForGuild ===
 
-// Module 15052 (useFetchListingsForGuild)
-import _fetchSubscriptionsSettingsAll from "_fetchSubscriptionsSettings" /* 6111 */;
-import useRequestDefault from "useRequest" /* 11999 */;
+// Module 15212 (useFetchListingsForGuild)
+import _fetchSubscriptionsSettingsAll from "_fetchSubscriptionsSettings" /* 7255 */;
+import useRequestDefault from "useRequest" /* 12203 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
-import closure_7 from "_handleConnectionOpen" /* 5230 */;
-import closure_8 from "makeGroupListingIndexSubscriptionListingTag" /* 4114 */;
-import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4114 */;
+import closure_7 from "_handleConnectionOpen" /* 5277 */;
+import closure_8 from "makeGroupListingIndexSubscriptionListingTag" /* 4193 */;
+import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4193 */;
 
 const require = arg1;
 function useFetchListingsForGuild(guildId) {
@@ -316,7 +316,7 @@ export const useSubscriptionListingsForGroup = function useSubscriptionListingsF
   }
   const items = [closure_8];
   const items1 = [id, flag, flag2];
-  return _require(586).useStateFromStoresArray(items, () => {
+  return _require(504).useStateFromStoresArray(items, () => {
     if (null == stateFromStoresArray) {
       return [];
     } else {
@@ -359,7 +359,7 @@ export const useSubscriptionListingsForGroup = function useSubscriptionListingsF
 export const useSubscriptionListing = function useSubscriptionListing(editStateId) {
   const _require = editStateId;
   const items = [closure_8];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let subscriptionListing = null;
     if (null != closure_0) {
       subscriptionListing = closure_1_8.getSubscriptionListing(tmp);
@@ -370,7 +370,7 @@ export const useSubscriptionListing = function useSubscriptionListing(editStateI
 export const useSubscriptionGroupListing = function useSubscriptionGroupListing(arg0) {
   const _require = arg0;
   const items = [closure_8];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let subscriptionGroupListing = null;
     if (null != closure_0) {
       subscriptionGroupListing = closure_1_8.getSubscriptionGroupListing(tmp);
@@ -380,10 +380,10 @@ export const useSubscriptionGroupListing = function useSubscriptionGroupListing(
 };
 export const useGroupListingsForGuild = function useGroupListingsForGuild(guildId) {
   const _require = guildId;
-  closure_1 = _require(15053).useGroupListingsFetchContext("useGroupListingsForGuild");
-  const obj = _require(15053);
+  closure_1 = _require(15213).useGroupListingsFetchContext("useGroupListingsForGuild");
+  const obj = _require(15213);
   const items = [closure_8];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     if (null != closure_0) {
       if (closure_1) {
         let subscriptionGroupListingsForGuild = closure_1_8.getSubscriptionGroupListingsForGuild(tmp);
@@ -401,7 +401,7 @@ export const useSubscriptionListingsForGuild = function useSubscriptionListingsF
   }
   useFetchListingsForGuild(guildId);
   const items = [closure_8];
-  return _require(586).useStateFromStoresArray(items, () => {
+  return _require(504).useStateFromStoresArray(items, () => {
     let tmp = stateFromStoresArray;
     if (null != stateFromStoresArray) {
       let subscriptionGroupListingsForGuild = closure_1_8.getSubscriptionGroupListingsForGuild(tmp);
@@ -710,7 +710,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
 export const useSubscriptionsSettings = function useSubscriptionsSettings(guildId) {
   const _require = guildId;
   const items = [closure_8];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let subscriptionSettings;
     if (null != closure_0) {
       subscriptionSettings = closure_1_8.getSubscriptionSettings(tmp);
@@ -1148,7 +1148,7 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
 export const useSubscriptionTrial = function useSubscriptionTrial(editStateId) {
   const _require = editStateId;
   const items = [closure_8];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let subscriptionTrial = null;
     if (null != closure_0) {
       subscriptionTrial = closure_1_8.getSubscriptionTrial(tmp);
@@ -1169,7 +1169,7 @@ export const useSubscriptionTrialsForGroup = function useSubscriptionTrialsForGr
   }
   let items = [closure_8];
   const items1 = [arg0, flag, flag2];
-  stateFromStoresArray = stateFromStoresArray(586).useStateFromStoresArray(items, () => {
+  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
     if (null == stateFromStoresArray) {
       return [];
     } else {
@@ -1208,10 +1208,10 @@ export const useSubscriptionTrialsForGroup = function useSubscriptionTrialsForGr
       }
     }
   }, items1);
-  const obj2 = stateFromStoresArray(586);
+  const obj2 = stateFromStoresArray(504);
   const items2 = [closure_8];
   const items3 = [stateFromStoresArray];
-  return stateFromStoresArray(586).useStateFromStoresArray(items2, () => {
+  return stateFromStoresArray(504).useStateFromStoresArray(items2, () => {
     const mapped = stateFromStoresArray.map((id) => subscriptionTrial.getSubscriptionTrial(id.id));
     return mapped.filter(stateFromStoresArray(closure_1_3[11]).isNotNullish);
   }, items3);
@@ -1221,7 +1221,7 @@ export const useSubscriptionTrialsForGuild = function useSubscriptionTrialsForGu
   closure_1 = { includeSoftDeleted: false, sortDeletedListingsLast: false };
   useFetchListingsForGuild(guildId);
   const items = [closure_8];
-  stateFromStoresArray = stateFromStoresArray(586).useStateFromStoresArray(items, () => {
+  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
     let tmp = stateFromStoresArray;
     if (null != stateFromStoresArray) {
       let subscriptionGroupListingsForGuild = closure_1_8.getSubscriptionGroupListingsForGuild(tmp);
@@ -1231,10 +1231,10 @@ export const useSubscriptionTrialsForGuild = function useSubscriptionTrialsForGu
     tmp = subscriptionGroupListingsForGuild;
     subscriptionGroupListingsForGuild[Symbol.iterator]();
   });
-  const obj = stateFromStoresArray(586);
+  const obj = stateFromStoresArray(504);
   const items1 = [closure_8];
   const items2 = [stateFromStoresArray];
-  return stateFromStoresArray(586).useStateFromStoresArray(items1, () => {
+  return stateFromStoresArray(504).useStateFromStoresArray(items1, () => {
     const mapped = stateFromStoresArray.map((id) => subscriptionTrial.getSubscriptionTrial(id.id));
     return mapped.filter(stateFromStoresArray(closure_1_3[11]).isNotNullish);
   }, items2);

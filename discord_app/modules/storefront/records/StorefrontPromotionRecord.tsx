@@ -1,7 +1,7 @@
-// === Module 10693: parseSkuIds ===
+// === Module 8788: parseSkuIds ===
 
-// Module 10693 (parseSkuIds)
-import toJSDefault from "toJS" /* 1935 */;
+// Module 8788 (parseSkuIds)
+import toJSDefault from "toJS" /* 1386 */;
 import closure_0 from "_slicedToArray" /* 32 */;
 
 function parseSkuIds(sku_ids) {

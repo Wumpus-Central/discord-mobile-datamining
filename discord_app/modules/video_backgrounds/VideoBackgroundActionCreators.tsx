@@ -1,11 +1,11 @@
-// === Module 9815: _fetchVideoFilterAssets ===
+// === Module 9098: _fetchVideoFilterAssets ===
 
-// Module 9815 (_fetchVideoFilterAssets)
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 9098 (_fetchVideoFilterAssets)
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { Endpoints } from "ME" /* 673 */;
+import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchVideoFilterAssets() {
@@ -53,7 +53,7 @@ function _fetchVideoFilterAssets() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = dependencyMap;
-          let obj4 = callback(706);
+          let obj4 = callback(573);
           const obj3 = { type: "VIDEO_FILTER_ASSETS_FETCH_FAILURE", error: null };
           obj3[1] = callback;
           obj4.dispatch(obj3);
@@ -69,7 +69,7 @@ function _fetchVideoFilterAssets() {
           return obj4;
         } else {
           body = arg1;
-          obj = callback(706);
+          obj = callback(573);
           const obj5 = { type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS", assets: null };
           obj5[1] = body.body;
           obj.dispatch(obj5);
@@ -139,7 +139,7 @@ function _uploadVideoFilterAsset() {
               closure_3 = tmp7;
               let lib;
               let constants = 1;
-              const HTTP = lib(527).HTTP;
+              const HTTP = lib(1272).HTTP;
               obj1 = { url: null, body: null, rejectWithError: false };
               obj1[0] = constants.VIDEO_FILTER_ASSETS;
               const obj2 = { type: null, asset: null, last_used: null };
@@ -160,7 +160,7 @@ function _uploadVideoFilterAsset() {
           } else if (1 === tmp7) {
             constants = 0;
             callback = closure_5;
-            const tmp24 = new callback(9816)(callback);
+            const tmp24 = new callback(9099)(callback);
             throw tmp24;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -173,7 +173,7 @@ function _uploadVideoFilterAsset() {
             return obj4;
           } else {
             lib = arg1;
-            obj = callback(706);
+            obj = callback(573);
             const obj5 = { type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS", videoFilterAsset: null };
             obj5[1] = lib.body;
             obj.dispatch(obj5);
@@ -258,16 +258,16 @@ function _deleteVideoFilterAsset() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            lib2 = lib(9817).getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
-            const obj7 = lib(9817);
-            let result = lib(9814).isCustomBackgroundOption(lib2);
+            lib2 = lib(9100).getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
+            const obj7 = lib(9100);
+            let result = lib(9097).isCustomBackgroundOption(lib2);
             if (result) {
               result = lib2.id === lib.id;
             }
             if (result) {
               callback(null);
             }
-            obj = lib2(706);
+            obj = lib2(573);
             const obj4 = { type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: null };
             obj4[1] = lib;
             obj.dispatch(obj4);
@@ -323,7 +323,7 @@ function _saveLastUsedBackgroundOption() {
           return obj2;
         } else {
           if (obj12.isCustomBackgroundOption(lib)) {
-            const HTTP = lib(527).HTTP;
+            const HTTP = lib(1272).HTTP;
             let obj3 = { url: null, rejectWithError: false };
             obj3[0] = closure_6.VIDEO_FILTER_ASSET_LAST_USED(lib.id);
             c3 = 2;
@@ -332,20 +332,20 @@ function _saveLastUsedBackgroundOption() {
             obj4[0] = HTTP.post(obj3);
             return obj4;
           } else {
-            obj3 = lib2(706);
+            obj3 = lib2(573);
             const obj5 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: null };
             obj5[1] = lib;
             obj3.dispatch(obj5);
             c4 = 3;
           }
-          obj12 = lib(9814);
+          obj12 = lib(9097);
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
         lib2 = arg1;
-        const obj = lib2(706);
+        const obj = lib2(573);
         const obj6 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: null };
         obj6[1] = lib2.body;
         obj.dispatch(obj6);

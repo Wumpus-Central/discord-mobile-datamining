@@ -1,10 +1,10 @@
-// === Module 13024: _initialize ===
+// === Module 12927: _initialize ===
 
-// Module 13024 (_initialize)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import initializeDefault from "initialize" /* 4662 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "handleConnectionOpen" /* 4299 */;
+// Module 12927 (_initialize)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import initializeDefault from "initialize" /* 1898 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "handleConnectionOpen" /* 4381 */;
 
 let require = arg1;
 initializeDefault;
@@ -30,7 +30,7 @@ class StageLurkingManager extends tmp2 {
     applyArgumentsResult.handleDisconnectFromStageChannel = function handleDisconnectFromStageChannel(arg0) {
       guildId = guildId.getGuildId();
       const items = [guildId, arg0];
-      applyArgumentsResult(6175).stopLurkingAll(items.filter(applyArgumentsResult(1470).isNotNullish));
+      applyArgumentsResult(7321).stopLurkingAll(items.filter(applyArgumentsResult(1369).isNotNullish));
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       applyArgumentsResult.terminate();

@@ -1,6 +1,6 @@
-// === Module 7406: getAll ===
+// === Module 7651: getAll ===
 
-// Module 7406 (getAll)
+// Module 7651 (getAll)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import set from "set" /* 2 */;
 
@@ -103,9 +103,9 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(guilds, databa
   const found = guilds.filter((unableToSyncDeletes) => unableToSyncDeletes.unableToSyncDeletes);
   const mapped = found.map((id) => ({ id: id.id }));
   if (mapped.length > 0) {
-    const result = set(1955).guildsRequiringDeletedIdsSyncTransaction(database);
+    const result = set(1986).guildsRequiringDeletedIdsSyncTransaction(database);
     result.putAll(mapped);
-    const obj = set(1955);
+    const obj = set(1986);
   }
 };
 prototype["handleBackgroundSync"] = function handleBackgroundSync(guilds, database) {
@@ -113,15 +113,15 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(guilds, databa
   const found = guilds.filter((data_mode) => "partial" === data_mode.data_mode && data_mode.unable_to_sync_deletes);
   const mapped = found.map((id) => ({ id: id.id }));
   if (mapped.length > 0) {
-    const result = set(1955).guildsRequiringDeletedIdsSyncTransaction(database);
+    const result = set(1986).guildsRequiringDeletedIdsSyncTransaction(database);
     result.putAll(mapped);
-    const obj = set(1955);
+    const obj = set(1986);
   }
 };
 prototype["handleGuildCreate"] = function handleGuildCreate(guild, database) {
   guild = guild.guild;
   if (guild.unableToSyncDeletes) {
-    let obj = set(1955);
+    let obj = set(1986);
     const result = obj.guildsRequiringDeletedIdsSyncTransaction(database);
     obj = { id: null };
     obj[0] = guild.id;
@@ -129,7 +129,7 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild, database) {
   }
 };
 prototype["handleDeletedEntityIds"] = function handleDeletedEntityIds(guild_id, database) {
-  const result = set(1955).guildsRequiringDeletedIdsSyncTransaction(database);
+  const result = set(1986).guildsRequiringDeletedIdsSyncTransaction(database);
   result.delete(guild_id.guild_id);
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {

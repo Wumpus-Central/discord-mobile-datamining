@@ -1,9 +1,9 @@
-// === Module 16715: useMutualGuildsForMessageRequests ===
+// === Module 16880: useMutualGuildsForMessageRequests ===
 
-// Module 16715 (useMutualGuildsForMessageRequests)
+// Module 16880 (useMutualGuildsForMessageRequests)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 7376 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import closure_4 from "createUserWidgetFromServer" /* 7621 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_request/hooks/useMutualGuilds.tsx");

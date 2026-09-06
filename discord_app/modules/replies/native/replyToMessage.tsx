@@ -1,15 +1,15 @@
-// === Module 11490: longPressMessageHandleReply ===
+// === Module 11679: longPressMessageHandleReply ===
 
-// Module 11490 (longPressMessageHandleReply)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
-import trackInviteDefault from "trackInvite" /* 7211 */;
-import handleEdit from "handleEdit" /* 11478 */;
-import createPendingReply from "createPendingReply" /* 11480 */;
-import closure_3 from "initialize" /* 7436 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "getState" /* 7435 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 11679 (longPressMessageHandleReply)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
+import trackInviteDefault from "trackInvite" /* 7456 */;
+import handleEdit from "handleEdit" /* 11667 */;
+import createPendingReply from "createPendingReply" /* 11669 */;
+import closure_3 from "initialize" /* 7681 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import closure_5 from "getState" /* 7680 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/replies/native/replyToMessage.tsx");
@@ -39,7 +39,7 @@ export default function longPressMessageHandleReply(arg0) {
       if (null != pendingReply) {
         if (pendingReply.message.id === message.id) {
           const currentUser1 = authStore.getCurrentUser();
-          let tmp3Result = tmp3(695);
+          let tmp3Result = tmp3(1242);
           obj = { message_id: null, channel_id: null, guild_id: null, context_action: "reply", reason: "swipe_reply_undo", is_own_message: null };
           obj[0] = message.id;
           ({ id: obj8[1], guild_id: obj8[2] } = channel);
@@ -70,7 +70,7 @@ export default function longPressMessageHandleReply(arg0) {
       }
     }
   }
-  tmp3Result = tmp3(695);
+  tmp3Result = tmp3(1242);
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(channel.guild_id));
   obj1 = { source: actionSource };
   const obj4 = collectGuildAnalyticsMetadata;

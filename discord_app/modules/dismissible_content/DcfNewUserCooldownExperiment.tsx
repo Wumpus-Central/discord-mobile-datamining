@@ -1,9 +1,9 @@
-// === Module 4321: useDcfNewUserCooldown ===
+// === Module 4403: useDcfNewUserCooldown ===
 
-// Module 4321 (useDcfNewUserCooldown)
+// Module 4403 (useDcfNewUserCooldown)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 684 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import setDefault from "set" /* 1090 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 let obj = { name: "2026-08-dcf-new-user-cooldown", kind: "user", defaultConfig: null, variations: null };
 obj = { newUserCooldownMs: setDefault.Millis.DAY };

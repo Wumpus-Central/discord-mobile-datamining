@@ -1,35 +1,35 @@
-// === Module 1433: ensureAvatarSource ===
+// === Module 1399: ensureAvatarSource ===
 
-// Module 1433 (ensureAvatarSource)
-import registerAssetDefault from "registerAsset" /* 1434 */;
-import registerAssetDefault2 from "registerAsset" /* 1435 */;
-import registerAssetDefault3 from "registerAsset" /* 1436 */;
-import registerAssetDefault4 from "registerAsset" /* 1437 */;
-import registerAssetDefault5 from "registerAsset" /* 1438 */;
-import registerAssetDefault6 from "registerAsset" /* 1439 */;
-import registerAssetDefault7 from "registerAsset" /* 1440 */;
-import registerAssetDefault8 from "registerAsset" /* 1441 */;
-import registerAssetDefault9 from "registerAsset" /* 1442 */;
-import registerAssetDefault10 from "registerAsset" /* 1443 */;
-import registerAssetDefault11 from "registerAsset" /* 1444 */;
-import registerAssetDefault12 from "registerAsset" /* 1445 */;
-import registerAssetDefault13 from "registerAsset" /* 1446 */;
-import registerAssetDefault14 from "registerAsset" /* 1447 */;
-import registerAssetDefault15 from "registerAsset" /* 1448 */;
-import registerAssetDefault16 from "registerAsset" /* 1449 */;
-import registerAssetDefault17 from "registerAsset" /* 1450 */;
-import registerAssetDefault18 from "registerAsset" /* 1451 */;
-import registerAssetDefault19 from "registerAsset" /* 1452 */;
-import registerAssetDefault20 from "registerAsset" /* 1453 */;
-import registerAssetDefault21 from "registerAsset" /* 1454 */;
-import registerAssetDefault22 from "registerAsset" /* 1455 */;
-import registerAssetDefault23 from "registerAsset" /* 1456 */;
-import registerAssetDefault24 from "registerAsset" /* 1457 */;
-import registerAssetDefault25 from "registerAsset" /* 1458 */;
-import registerAssetDefault26 from "registerAsset" /* 1459 */;
-import registerAssetDefault27 from "registerAsset" /* 1460 */;
-import registerAssetDefault28 from "registerAsset" /* 1461 */;
-import registerAssetDefault29 from "registerAsset" /* 1463 */;
+// Module 1399 (ensureAvatarSource)
+import registerAssetDefault from "registerAsset" /* 1400 */;
+import registerAssetDefault2 from "registerAsset" /* 1401 */;
+import registerAssetDefault3 from "registerAsset" /* 1402 */;
+import registerAssetDefault4 from "registerAsset" /* 1403 */;
+import registerAssetDefault5 from "registerAsset" /* 1404 */;
+import registerAssetDefault6 from "registerAsset" /* 1405 */;
+import registerAssetDefault7 from "registerAsset" /* 1406 */;
+import registerAssetDefault8 from "registerAsset" /* 1407 */;
+import registerAssetDefault9 from "registerAsset" /* 1408 */;
+import registerAssetDefault10 from "registerAsset" /* 1409 */;
+import registerAssetDefault11 from "registerAsset" /* 1410 */;
+import registerAssetDefault12 from "registerAsset" /* 1411 */;
+import registerAssetDefault13 from "registerAsset" /* 1412 */;
+import registerAssetDefault14 from "registerAsset" /* 1413 */;
+import registerAssetDefault15 from "registerAsset" /* 1414 */;
+import registerAssetDefault16 from "registerAsset" /* 1415 */;
+import registerAssetDefault17 from "registerAsset" /* 1416 */;
+import registerAssetDefault18 from "registerAsset" /* 1417 */;
+import registerAssetDefault19 from "registerAsset" /* 1418 */;
+import registerAssetDefault20 from "registerAsset" /* 1419 */;
+import registerAssetDefault21 from "registerAsset" /* 1420 */;
+import registerAssetDefault22 from "registerAsset" /* 1421 */;
+import registerAssetDefault23 from "registerAsset" /* 1422 */;
+import registerAssetDefault24 from "registerAsset" /* 1423 */;
+import registerAssetDefault25 from "registerAsset" /* 1424 */;
+import registerAssetDefault26 from "registerAsset" /* 1425 */;
+import registerAssetDefault27 from "registerAsset" /* 1426 */;
+import registerAssetDefault28 from "registerAsset" /* 1427 */;
+import registerAssetDefault29 from "registerAsset" /* 1429 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set from "set" /* 2 */;
 
@@ -66,5 +66,5 @@ export const DEFAULT_AVATARS_SMALL_MAX_SIZE = 24;
 export const DEFAULT_PROVISIONAL_AVATARS = items2;
 export { ensureAvatarSource };
 export const getAutomodAvatarURL = function getAutomodAvatarURL() {
-  return importDefault(1462);
+  return importDefault(1428);
 };

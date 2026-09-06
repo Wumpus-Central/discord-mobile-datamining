@@ -1,9 +1,9 @@
-// === Module 14865: useBountiesModalVideoAnalytics ===
+// === Module 15021: useBountiesModalVideoAnalytics ===
 
-// Module 14865 (useBountiesModalVideoAnalytics)
+// Module 15021 (useBountiesModalVideoAnalytics)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionInfoChange" /* 4574 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_4 from "handleConnectionInfoChange" /* 4609 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 let closure_6 = [25, 50, 75];

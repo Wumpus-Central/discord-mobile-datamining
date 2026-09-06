@@ -1,12 +1,12 @@
-// === Module 1972: databaseName ===
+// === Module 2003: databaseName ===
 
-// Module 1972 (databaseName)
+// Module 2003 (databaseName)
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 586 */;
-import getUserIdAll from "getUserId" /* 1973 */;
+import initializeDefault from "initialize" /* 504 */;
+import getUserIdAll from "getUserId" /* 2004 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
-import importDefaultResult from "dispatcher" /* 706 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
+import importDefaultResult from "dispatcher" /* 573 */;
 
 let closure_0 = arg1;
 function databaseName(arg0) {
@@ -254,7 +254,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== callback(1956).DatabaseState.Open;
+    tmp3 = stateResult !== callback(1987).DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);

@@ -1,6 +1,6 @@
-// === Module 15782: setRegistrationHandoff ===
+// === Module 15944: setRegistrationHandoff ===
 
-// Module 15782 (setRegistrationHandoff)
+// Module 15944 (setRegistrationHandoff)
 import set from "set" /* 2 */;
 
 let c0 = false;

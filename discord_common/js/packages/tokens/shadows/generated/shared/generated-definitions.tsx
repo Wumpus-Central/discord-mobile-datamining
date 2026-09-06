@@ -1,8 +1,8 @@
-// === Module 715: _private ===
+// === Module 582: _private ===
 
-// Module 715 (_private)
+// Module 582 (_private)
 import set from "set" /* 2 */;
-import items from "items" /* 710 */;
+import items from "items" /* 577 */;
 
 const Themes = items._private.Themes;
 const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/shadows/generated/shared/generated-definitions.tsx");

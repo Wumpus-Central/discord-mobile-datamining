@@ -1,11 +1,11 @@
-// === Module 8078: getDecorationSizeForAvatarSize ===
+// === Module 8157: getDecorationSizeForAvatarSize ===
 
-// Module 8078 (getDecorationSizeForAvatarSize)
+// Module 8157 (getDecorationSizeForAvatarSize)
 import set from "set" /* 2 */;
-import Button from "Button" /* 1296 */;
-import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1431 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
+import Button from "Button" /* 1178 */;
+import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1397 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 
 let closure_3 = DECORATION_TO_AVATAR_RATIO.DECORATION_TO_AVATAR_RATIO;
 let result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
@@ -28,7 +28,7 @@ export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutFo
       inset = 0;
     }
     obj[2] = inset + arg1;
-    obj[3] = _require(1296).CutoutType.RECTANGULAR;
+    obj[3] = _require(1178).CutoutType.RECTANGULAR;
     const nativeCutouts = memo.nativeCutouts;
     let mapped;
     if (nativeCutouts != null) {
@@ -49,5 +49,5 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8079, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8158, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

@@ -1,11 +1,11 @@
-// === Module 16090: useIsGuildEligibleForRoleSubscriptionsUpsell ===
+// === Module 16252: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
-// Module 16090 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 16252 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 1074 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
 
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 const GuildFeatures = ME.GuildFeatures;
@@ -14,16 +14,16 @@ const result = set.fileFinishedImporting("modules/guild_role_subscriptions/useIs
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_3.getGuild(closure_0));
-  _require(586);
+  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_3.getGuild(closure_0));
+  _require(504);
   [][0] = closure_4;
   let tmp6 = null != stateFromStores;
   if (tmp6) {
     tmp6 = isGuildOwner(stateFromStores, tmp5);
   }
-  const obj = _require(586);
+  const obj = _require(504);
   const tmp = _require;
-  const isUserInCreatorMonetizationEligibleCountry = _require(6117).useIsUserInCreatorMonetizationEligibleCountry();
+  const isUserInCreatorMonetizationEligibleCountry = _require(7261).useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;
     if (stateFromStores != null) {

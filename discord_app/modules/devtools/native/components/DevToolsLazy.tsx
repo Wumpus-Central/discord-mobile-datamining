@@ -1,14 +1,14 @@
-// === Module 14472: NativeModules ===
+// === Module 14579: NativeModules ===
 
-// Module 14472 (NativeModules)
-import enforcingDefault from "enforcing" /* 14473 */;
+// Module 14579 (NativeModules)
+import enforcingDefault from "enforcing" /* 14580 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "init" /* 7476 */;
-import closure_6 from "initialize" /* 7475 */;
+import closure_5 from "init" /* 7720 */;
+import closure_6 from "initialize" /* 7719 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 1234 */;
+import set from "set" /* 1115 */;
 
 const require = arg1;
 if (set.isAndroid()) {
@@ -82,11 +82,11 @@ let result = set.fileFinishedImporting("modules/devtools/native/components/DevTo
 
 export default function DevToolsLazy() {
   items = [closure_5];
-  stateFromStores = stateFromStores(586).useStateFromStores(items, () => isDeveloper.isDeveloper);
-  const obj = stateFromStores(586);
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => isDeveloper.isDeveloper);
+  const obj = stateFromStores(504);
   const tmp = stateFromStores;
   const items1 = [closure_6];
-  const stateFromStores1 = stateFromStores(586).useStateFromStores(items1, () => showDevWidget.showDevWidget);
+  const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => showDevWidget.showDevWidget);
   const effect = React.useEffect(() => {
     if (obj.isIOS()) {
       closure_1_5.addChangeListener(() => {
@@ -97,11 +97,11 @@ export default function DevToolsLazy() {
       });
     }
   });
-  const obj2 = stateFromStores(586);
-  const keyCommands = stateFromStores(14468).useKeyCommands(stateFromStores ? items : []);
+  const obj2 = stateFromStores(504);
+  const keyCommands = stateFromStores(14575).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15763).default, {});
+      return jsx(tmp(15925).default, {});
     }
   }
   return null;

@@ -1,9 +1,9 @@
-// === Module 14846: BOUNTIES_MODAL_KEY ===
+// === Module 15002: BOUNTIES_MODAL_KEY ===
 
-// Module 14846 (BOUNTIES_MODAL_KEY)
+// Module 15002 (BOUNTIES_MODAL_KEY)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import _modDef4724 from "module_4724" /* 4724 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import _modDef4763 from "module_4763" /* 4763 */;
 
 const BOUNTIES_MODAL = "BOUNTIES_MODAL";
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx");
@@ -11,10 +11,10 @@ const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/Bo
 export default {
   showModal(arg0) {
     ({ bountyId, sourceQuestContent } = arg0);
-    _modDef4724.pushLazy(asyncRequireImpl(14847, dependencyMap.paths), { bountyId, sourceQuestContent }, BOUNTIES_MODAL);
+    _modDef4763.pushLazy(asyncRequireImpl(15003, dependencyMap.paths), { bountyId, sourceQuestContent }, BOUNTIES_MODAL);
   },
   hideModal() {
-    _modDef4724.popWithKey(BOUNTIES_MODAL);
+    _modDef4763.popWithKey(BOUNTIES_MODAL);
   }
 };
 export const BOUNTIES_MODAL_KEY = "BOUNTIES_MODAL";

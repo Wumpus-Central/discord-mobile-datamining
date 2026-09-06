@@ -1,8 +1,8 @@
-// === Module 11388: request ===
+// === Module 11563: request ===
 
-// Module 11388 (request)
+// Module 11563 (request)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "addApplication" /* 4519 */;
+import closure_4 from "addApplication" /* 4788 */;
 import set from "set" /* 2 */;
 
 let set = arg1;
@@ -108,7 +108,7 @@ export const useGetOrFetchApplicationBatched = function useGetOrFetchApplication
   }, items);
   const items1 = [closure_4];
   const items2 = [applicationId];
-  return applicationId(586).useStateFromStores(items1, () => {
+  return applicationId(504).useStateFromStores(items1, () => {
     let application = null;
     if (null != closure_0) {
       application = null;

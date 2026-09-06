@@ -1,7 +1,7 @@
-// === Module 17240: _initialize ===
+// === Module 17406: _initialize ===
 
-// Module 17240 (_initialize)
-import initializeDefault from "initialize" /* 5495 */;
+// Module 17406 (_initialize)
+import initializeDefault from "initialize" /* 7118 */;
 
 initializeDefault;
 class DiskUsageManager extends tmp2 {

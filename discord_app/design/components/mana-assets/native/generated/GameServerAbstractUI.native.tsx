@@ -1,10 +1,10 @@
-// === Module 6655: GameServerAbstractUI ===
+// === Module 6091: GameServerAbstractUI ===
 
-// Module 6655 (GameServerAbstractUI)
+// Module 6091 (GameServerAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6656 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6092 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameServerAbstractUI.native.tsx");

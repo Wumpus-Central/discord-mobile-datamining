@@ -1,63 +1,63 @@
-// === Module 13347: SharedUser ===
+// === Module 13452: SharedUser ===
 
-// Module 13347 (SharedUser)
+// Module 13452 (SharedUser)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 673 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import combinedDefault from "combined" /* 1994 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
+import ThemesDefault from "Themes" /* 576 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import combinedDefault from "combined" /* 2024 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 function SharedUser(user) {
   user = user.user;
   const tmp = callback3();
   let obj = nameFromUserDefault;
   const name = obj.getName(user);
-  const tmp6 = user.trialCreationResult === user(7208).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(7453).CreateReferralStatus.FAIL;
   obj = { style: tmp.recipientRow, children: null };
   const items = [tmp.avatarContainer, ];
   let erroredAvatar = tmp6;
   if (tmp6) {
     erroredAvatar = tmp.erroredAvatar;
   }
-  obj = { style: items, size: tmp5(1296).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "PX_16" };
+  obj = { style: items, size: tmp5(1178).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
   items[1] = erroredAvatar;
-  const items1 = [closure_5(user(1296).Avatar, obj), , ];
+  const items1 = [closure_5(user(1178).Avatar, obj), , ];
   if (tmp6) {
     obj1 = { children: null };
     const obj2 = { variant: "text-md/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.recipientDisplayName;
     obj2[3] = name;
-    const items2 = [tmp9(tmp5(4474).Text, obj2), ];
+    const items2 = [tmp9(tmp5(4556).Text, obj2), ];
     const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const intl = tmp5(1233).intl;
+    const intl = tmp5(1114).intl;
     const obj4 = { userName: null };
     obj4[0] = name;
-    obj3[2] = intl.format(tmp5(1233).t.RO3T4B, obj4);
-    items2[1] = tmp9(tmp5(4474).Text, obj3);
+    obj3[2] = intl.format(tmp5(1114).t.RO3T4B, obj4);
+    items2[1] = tmp9(tmp5(4556).Text, obj3);
     obj1[0] = items2;
     let tmp9Result = tmp7(closure_6, obj1);
   } else {
     const obj5 = { variant: "text-md/medium", color: "text-strong", style: null, children: null };
     obj5[2] = tmp.recipientDisplayName;
     obj5[3] = name;
-    tmp9Result = tmp9(tmp5(4474).Text, obj5);
+    tmp9Result = tmp9(tmp5(4556).Text, obj5);
   }
   items1[1] = tmp9Result;
   const obj6 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
-  const intl2 = tmp5(1233).intl;
-  obj6[2] = intl2.string(user(1233).t["g33r/P"]);
-  obj6[3] = closure_5(user(5025).ChatIcon, { size: "xs", color: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
+  const intl2 = tmp5(1114).intl;
+  obj6[2] = intl2.string(user(1114).t["g33r/P"]);
+  obj6[3] = closure_5(user(5071).ChatIcon, { size: "xs", color: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
   obj6[4] = function onPress() {
     let obj = closure_1_1(closure_1_2[12]);
     obj.hideActionSheet();
     obj = { recipientIds: user.id };
     closure_1_1(closure_1_2[13]).openPrivateChannel(obj);
   };
-  items1[2] = closure_5(user(4929).Button, obj6);
+  items1[2] = closure_5(user(4975).Button, obj6);
   obj[1] = items1;
   return closure_7(View, obj);
 }
@@ -95,22 +95,22 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     stringResult = intl.string(getSystemLocale.t.tKCltd);
     tmp5 = require;
   }
-  const intl3 = tmp5(1233).intl;
+  const intl3 = tmp5(1114).intl;
   let obj = { helpdeskArticle: null };
   obj1 = combinedDefault;
   obj[0] = obj1.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
-  obj = { startExpanded: true, contentStyles: tmp.content, header: callback(tmp5(5630).BottomSheetTitleHeader, { title: null }), children: null };
+  obj = { startExpanded: true, contentStyles: tmp.content, header: callback(tmp5(7149).BottomSheetTitleHeader, { title: null }), children: null };
   obj = { children: null };
-  obj1 = { style: tmp.headerAsset, children: callback(tmp5(6266).FistBumpSpotIllustration, {}) };
-  const items = [callback(View, obj1), callback(tmp5(4474).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), , ];
-  const formatResult = intl3.format(tmp5(1233).t.AwGSWl, obj);
+  obj1 = { style: tmp.headerAsset, children: callback(tmp5(5692).FistBumpSpotIllustration, {}) };
+  const items = [callback(View, obj1), callback(tmp5(4556).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), , ];
+  const formatResult = intl3.format(tmp5(1114).t.AwGSWl, obj);
   const obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };
-  items[2] = callback(tmp5(4474).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: intl3.format(tmp5(1233).t.AwGSWl, obj) });
+  items[2] = callback(tmp5(4556).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: intl3.format(tmp5(1114).t.AwGSWl, obj) });
   const obj4 = { style: tmp.recipientContainer, children: null };
   arr = Array.from(trialCreationResult.selectedUsers);
   obj4[1] = arr.map((id) => closure_1_5(closure_1_9, { user: id, trialCreationResult: trialCreationResult.get(id.id) }, id.id));
   items[3] = callback(View, obj4);
   obj[0] = items;
-  obj[3] = callback2(tmp5(4927).Stack, obj);
-  return callback(tmp5(5631).BottomSheet, obj);
+  obj[3] = callback2(tmp5(4973).Stack, obj);
+  return callback(tmp5(7150).BottomSheet, obj);
 };

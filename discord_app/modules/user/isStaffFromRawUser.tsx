@@ -1,8 +1,8 @@
-// === Module 12215: isStaff ===
+// === Module 12415: isStaff ===
 
-// Module 12215 (isStaff)
+// Module 12415 (isStaff)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const UserFlags = ME.UserFlags;
 const result = set.fileFinishedImporting("modules/user/isStaffFromRawUser.tsx");

@@ -1,9 +1,9 @@
-// === Module 10440: useHorizontalAutocompleteResults ===
+// === Module 10422: useHorizontalAutocompleteResults ===
 
-// Module 10440 (useHorizontalAutocompleteResults)
+// Module 10422 (useHorizontalAutocompleteResults)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ AutoCompleteResultTypes: c4, ChannelTypes: c5 } = ME);

@@ -1,11 +1,11 @@
-// === Module 9774: useSelectStage ===
+// === Module 9778: useSelectStage ===
 
-// Module 9774 (useSelectStage)
+// Module 9778 (useSelectStage)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "handleConnectionOpen" /* 2011 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");

@@ -1,10 +1,10 @@
-// === Module 14370: VoiceCapabilities ===
+// === Module 14477: VoiceCapabilities ===
 
-// Module 14370 (VoiceCapabilities)
+// Module 14477 (VoiceCapabilities)
 import set from "set" /* 2 */;
-import set2 from "set" /* 8629 */;
-import RPCCommands from "RPCCommands" /* 14371 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14372 */;
+import set2 from "set" /* 8339 */;
+import RPCCommands from "RPCCommands" /* 14478 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14479 */;
 
 function VoiceCapabilities(boolean) {
   let obj = { available: boolean.boolean().required(), connected: null, participant_updates: null, binary_speaking: null, spatial: null };
@@ -832,7 +832,7 @@ export const RPCCommandSchemas = {
       obj[1] = string.string().min(0).max(1024);
       return obj;
     },
-    response: "Array"
+    response: "a"
   },
   [RPCCommands.RPCCommand.GET_USER]: {
     request(string) {

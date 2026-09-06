@@ -1,14 +1,14 @@
-// === Module 9442: getChannelA11yLabel ===
+// === Module 9770: getChannelA11yLabel ===
 
-// Module 9442 (getChannelA11yLabel)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import nameFromUser from "nameFromUser" /* 4322 */;
-import computeChannelName from "computeChannelName" /* 4674 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5016 */;
-import calculateTimestampDurations from "calculateTimestampDurations" /* 8056 */;
-import closure_3 from "markAllUserIdListsStale" /* 4130 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+// Module 9770 (getChannelA11yLabel)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import nameFromUser from "nameFromUser" /* 4404 */;
+import computeChannelName from "computeChannelName" /* 4713 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
+import calculateTimestampDurations from "calculateTimestampDurations" /* 8135 */;
+import closure_3 from "markAllUserIdListsStale" /* 4209 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ ChannelTypes: c5, StatusTypes: closure_6 } = ME);

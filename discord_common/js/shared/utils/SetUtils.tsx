@@ -1,6 +1,6 @@
-// === Module 1428: areSetsEqual ===
+// === Module 1974: areSetsEqual ===
 
-// Module 1428 (areSetsEqual)
+// Module 1974 (areSetsEqual)
 import set2 from "set" /* 2 */;
 
 const result = set2.fileFinishedImporting("../discord_common/js/shared/utils/SetUtils.tsx");

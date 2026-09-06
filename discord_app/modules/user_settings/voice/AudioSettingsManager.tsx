@@ -1,17 +1,17 @@
-// === Module 17153: handleConnectionOpen ===
+// === Module 17319: handleConnectionOpen ===
 
-// Module 17153 (handleConnectionOpen)
-import Storage2 from "Storage" /* 592 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1369 */;
-import initializeDefault from "initialize" /* 5495 */;
-import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9810 */;
-import getPendingAudioSettings from "getPendingAudioSettings" /* 13798 */;
+// Module 17319 (handleConnectionOpen)
+import Storage2 from "Storage" /* 510 */;
+import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
+import initializeDefault from "initialize" /* 7118 */;
+import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9093 */;
+import getPendingAudioSettings from "getPendingAudioSettings" /* 14071 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "set" /* 4495 */;
-import closure_5 from "handleSoundCreateOrUpdate" /* 4966 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4529 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
+import closure_4 from "set" /* 4577 */;
+import closure_5 from "handleSoundCreateOrUpdate" /* 5012 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import closure_7 from "_detectH265HardwareDecode" /* 1908 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
 import importDefaultResult from "apply" /* 12 */;
 
 require = arg1;
@@ -22,7 +22,7 @@ function handleConnectionOpen() {
     HermesBuiltin.throwTypeError();
   }
   if (!Storage.get("AudioContextSettingsMigrated:" + id)) {
-    const PreloadedUserSettingsActionCreators = tmp(1369).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = tmp(1940).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", (arg0) => {
       let flag = false;
       const entries = Object.entries(state.getState().settingsByContext);
@@ -34,7 +34,7 @@ function handleConnectionOpen() {
         let tmp8 = tmp5[1];
         let tmp9 = callback;
         let tmp10 = dependencyMap;
-        let obj = callback(9809);
+        let obj = callback(9092);
         let result = obj.coerceAudioContextForProto(first);
         if (null != result) {
           let tmp52 = result;
@@ -79,7 +79,7 @@ function handleConnectionOpen() {
             let merged = Object.assign(obj[first1]);
             let tmp31 = callback;
             let tmp32 = dependencyMap;
-            let obj4 = callback(9809);
+            let obj4 = callback(9092);
             let tmp33 = first;
             obj1.volume = obj4.snapVolumeToDefault(tmp25[1], tmp7);
             obj[first1] = obj1;
@@ -121,10 +121,10 @@ function handleConnectionOpen() {
         }
         continue;
       }
-      const Storage = callback(592).Storage;
+      const Storage = callback(510).Storage;
       const result1 = Storage.set(callback3(id.getId()), true);
       return flag;
-    }, tmp(1369).UserSettingsDelay.AUTOMATED);
+    }, tmp(1940).UserSettingsDelay.AUTOMATED);
   }
 }
 function handleSetLocalVolume(arg0) {

@@ -1,10 +1,10 @@
-// === Module 17321: _initialize ===
+// === Module 17481: _initialize ===
 
-// Module 17321 (_initialize)
+// Module 17481 (_initialize)
 import set from "set" /* 2 */;
-import _setAppLocale from "_setAppLocale" /* 1996 */;
-import initializeDefault from "initialize" /* 5495 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 12136 */;
+import _setAppLocale from "_setAppLocale" /* 2026 */;
+import initializeDefault from "initialize" /* 7118 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 12340 */;
 
 let closure_2 = _setAppLocale.subscribeToIntlLoadingSuccess;
 initializeDefault;

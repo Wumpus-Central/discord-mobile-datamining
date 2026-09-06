@@ -1,8 +1,8 @@
-// === Module 4582: on ===
+// === Module 4618: on ===
 
-// Module 4582 (on)
+// Module 4618 (on)
 import set from "set" /* 2 */;
-import EventEmitter from "EventEmitter" /* 649 */;
+import EventEmitter from "EventEmitter" /* 568 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
 class TypedEventEmitter {

@@ -1,6 +1,6 @@
-// === Module 7430: ElectronProcessType ===
+// === Module 1360: ElectronProcessType ===
 
-// Module 7430 (ElectronProcessType)
+// Module 1360 (ElectronProcessType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("utils/ProcessUtilsBase.tsx");

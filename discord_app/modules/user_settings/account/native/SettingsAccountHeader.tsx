@@ -1,19 +1,19 @@
-// === Module 14575: RestrictedAccountRedirect ===
+// === Module 14686: RestrictedAccountRedirect ===
 
-// Module 14575 (RestrictedAccountRedirect)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import handleOpenEmailVerification from "handleOpenEmailVerification" /* 7778 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14576 */;
+// Module 14686 (RestrictedAccountRedirect)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import handleOpenEmailVerification from "handleOpenEmailVerification" /* 6998 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14687 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import { AnalyticsSections } from "ME" /* 673 */;
-import { SafetySettingsNoticeType } from "SafetyToastType" /* 8689 */;
+import closure_5 from "markAllUserIdListsStale" /* 4209 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import { AnalyticsSections } from "ME" /* 1074 */;
+import { SafetySettingsNoticeType } from "SafetyToastType" /* 8399 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function RestrictedAccountRedirect() {
@@ -62,8 +62,8 @@ const memoResult = importAllResult.memo(() => {
       obj1 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6[0], button: obj6[1] } = bannerText);
       obj1[2] = callback;
-      obj[4] = callback(tmp2(4929).Button, obj1);
-      tmp14 = callback(tmp2(5608).TableRow, obj);
+      obj[4] = callback(tmp2(4975).Button, obj1);
+      tmp14 = callback(tmp2(5605).TableRow, obj);
     }
     items2[1] = tmp14;
     obj[1] = items2;

@@ -1,15 +1,15 @@
-// === Module 7168: useStoreConnectionErrorAlert ===
+// === Module 7414: useStoreConnectionErrorAlert ===
 
-// Module 7168 (useStoreConnectionErrorAlert)
+// Module 7414 (useStoreConnectionErrorAlert)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateProduct" /* 6093 */;
+import closure_4 from "updateProduct" /* 7237 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");
 
 export default function useStoreConnectionErrorAlert() {
   const items = [closure_4];
-  stateFromStores = stateFromStores(586).useStateFromStores(items, () => closure_4.hasConnectionError());
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => closure_4.hasConnectionError());
   const items1 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (stateFromStores) {

@@ -1,8 +1,8 @@
-// === Module 12751: useConnectionFilteredAppIdentities ===
+// === Module 13081: useConnectionFilteredAppIdentities ===
 
-// Module 12751 (useConnectionFilteredAppIdentities)
+// Module 13081 (useConnectionFilteredAppIdentities)
 import closure_2 from "noop" /* 19 */;
-import { APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS as closure_3 } from "items" /* 4508 */;
+import { APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS as closure_3 } from "items" /* 1921 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx");

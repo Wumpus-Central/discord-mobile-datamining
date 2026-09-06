@@ -1,10 +1,10 @@
-// === Module 13719: useSpatialAudioControlState ===
+// === Module 13825: useSpatialAudioControlState ===
 
-// Module 13719 (useSpatialAudioControlState)
-import apexExperimentDefault from "apexExperiment" /* 13720 */;
+// Module 13825 (useSpatialAudioControlState)
+import apexExperimentDefault from "apexExperiment" /* 13826 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 const require = arg1;
 ({ Features: c5, SpatialAudioStatus: closure_6 } = DesktopSources);

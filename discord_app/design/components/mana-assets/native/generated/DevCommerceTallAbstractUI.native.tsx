@@ -1,10 +1,10 @@
-// === Module 6455: DevCommerceTallAbstractUI ===
+// === Module 5887: DevCommerceTallAbstractUI ===
 
-// Module 6455 (DevCommerceTallAbstractUI)
+// Module 5887 (DevCommerceTallAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6456 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5888 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DevCommerceTallAbstractUI.native.tsx");

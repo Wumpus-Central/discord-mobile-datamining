@@ -1,9 +1,9 @@
-// === Module 9824: isVideoBackgroundSupported ===
+// === Module 9107: isVideoBackgroundSupported ===
 
-// Module 9824 (isVideoBackgroundSupported)
-import apexExperimentDefault from "apexExperiment" /* 9825 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
-import { Features } from "DesktopSources" /* 4542 */;
+// Module 9107 (isVideoBackgroundSupported)
+import apexExperimentDefault from "apexExperiment" /* 9108 */;
+import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
+import { Features } from "DesktopSources" /* 4585 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");

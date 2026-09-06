@@ -1,12 +1,12 @@
-// === Module 6116: computeGuildRoleSubscriptionSettingsVisibility ===
+// === Module 7260: computeGuildRoleSubscriptionSettingsVisibility ===
 
-// Module 6116 (computeGuildRoleSubscriptionSettingsVisibility)
+// Module 7260 (computeGuildRoleSubscriptionSettingsVisibility)
 import set from "set" /* 2 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
-import set2 from "set" /* 6117 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
+import set2 from "set" /* 7261 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 function computeGuildRoleSubscriptionSettingsVisibility(guild) {
   const features = guild.guild.features;
@@ -50,7 +50,7 @@ function computeGuildRoleSubscriptionSettingsVisibility(guild) {
 }
 function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   const _require = stateFromStores;
-  obj = _require(586);
+  obj = _require(504);
   const items = [closure_3];
   const items1 = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => {
@@ -61,16 +61,16 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
     return canResult;
   }, items1);
   const items2 = [closure_4];
-  const stateFromStores1 = _require(586).useStateFromStores(items2, () => {
+  const stateFromStores1 = _require(504).useStateFromStores(items2, () => {
     let tmp3 = null != closure_0;
     if (tmp3) {
       tmp3 = closure_1_2(tmp2, tmp);
     }
     return tmp3;
   });
-  const obj2 = _require(586);
-  const isUserInCreatorMonetizationEligibleCountry = _require(6117).useIsUserInCreatorMonetizationEligibleCountry();
-  _require(6109);
+  const obj2 = _require(504);
+  const isUserInCreatorMonetizationEligibleCountry = _require(7261).useIsUserInCreatorMonetizationEligibleCountry();
+  _require(7253);
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -158,7 +158,7 @@ export const useCanManageGuildRoleSubscriptions = function useCanManageGuildRole
   const _require = guild;
   const items = [closure_3];
   const items1 = [guild];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_3.can(closure_1_6.ADMINISTRATOR, tmp);

@@ -1,21 +1,21 @@
-// === Module 9738: RemoveIcon ===
+// === Module 9751: RemoveIcon ===
 
-// Module 9738 (RemoveIcon)
+// Module 9751 (RemoveIcon)
 import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1296 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4205 */;
-import Text from "Text" /* 4474 */;
-import TableRowInner from "TableRowInner" /* 5608 */;
-import FormCheckbox from "FormCheckbox" /* 7696 */;
-import getRoleRowDataAll from "getRoleRowData" /* 9725 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9739 */;
-import registerAssetDefault from "registerAsset" /* 9740 */;
-import registerAssetDefault2 from "registerAsset" /* 9741 */;
+import Button from "Button" /* 1178 */;
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
+import Text from "Text" /* 4556 */;
+import TableRowInner from "TableRowInner" /* 5605 */;
+import FormCheckbox from "FormCheckbox" /* 5617 */;
+import getRoleRowDataAll from "getRoleRowData" /* 9738 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9752 */;
+import registerAssetDefault from "registerAsset" /* 9753 */;
+import registerAssetDefault2 from "registerAsset" /* 9754 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { RowType } from "RowType" /* 8691 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import { RowType } from "RowType" /* 8401 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function RemoveIcon(item) {
@@ -26,8 +26,8 @@ function RemoveIcon(item) {
   if (null != channelId) {
     let obj = { disabled: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     obj[0] = item.disabled;
-    let intl = item(1233).intl;
-    obj[2] = intl.string(item(1233).t.N86XcP);
+    let intl = item(1114).intl;
+    obj[2] = intl.string(item(1114).t.N86XcP);
     obj[3] = function onPress() {
       if (null != closure_2) {
         return tmp(id);
@@ -61,8 +61,8 @@ function RemoveIcon(item) {
     }
     obj = { style: null };
     obj[0] = prop;
-    obj[4] = closure_7(item(6235).CircleXIcon, obj);
-    tmp3Result = tmp3(item(5077).PressableOpacity, obj);
+    obj[4] = closure_7(item(6616).CircleXIcon, obj);
+    tmp3Result = tmp3(item(5123).PressableOpacity, obj);
   }
   return tmp3Result;
 }
@@ -106,10 +106,10 @@ function MemberItem(arg0) {
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
     obj = { size: null, source: null, disableColor: true, style: null };
-    obj[0] = tmp5(1296).Icon.Sizes.REFRESH_SMALL_16;
+    obj[0] = tmp5(1178).Icon.Sizes.REFRESH_SMALL_16;
     obj[1] = registerAssetDefault;
     obj[3] = tmp.ownerIcon;
-    tmp4Result = tmp4(tmp5(1296).Icon, obj);
+    tmp4Result = tmp4(tmp5(1178).Icon, obj);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;

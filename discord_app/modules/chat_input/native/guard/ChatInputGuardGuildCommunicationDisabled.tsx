@@ -1,11 +1,11 @@
-// === Module 12261: ? ===
+// === Module 12461: ? ===
 
-// Module 12261
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 11654 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12248 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12262 */;
-import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString" /* 1993 */;
+// Module 12461
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 11853 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12448 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12462 */;
+import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString" /* 2023 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -23,9 +23,9 @@ const memoResult = importAllResult.memo(function CommunicationDisabledNoticeForG
     date = new Date(communicationDisabledUntil);
   }
   obj = { type: "simple-action", icon: jsx(ClockWarningIcon.ClockWarningIcon, {}), message: null, subtext: null, countdown: null };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj[2] = intl.string(getSystemLocale.t.VSpdzK);
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj = { link: closure_3 };
   obj[3] = intl2.format(getSystemLocale.t["4ZwD5G"], obj);
   obj[4] = date;

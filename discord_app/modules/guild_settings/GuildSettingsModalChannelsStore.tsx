@@ -1,15 +1,15 @@
-// === Module 15979: sortCategoryList ===
+// === Module 16143: sortCategoryList ===
 
-// Module 15979 (sortCategoryList)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 5489 */;
+// Module 16143 (sortCategoryList)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 7112 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import comparator from "comparator" /* 1981 */;
-import closure_9 from "comparator" /* 1981 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
-import ME from "ME" /* 673 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import comparator from "comparator" /* 2012 */;
+import closure_9 from "comparator" /* 2012 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
+import ME from "ME" /* 1074 */;
 import importDefaultResult from "apply" /* 12 */;
 
 const require = arg1;
@@ -122,7 +122,7 @@ let closure_23 = importDefaultResult.debounce(() => {
       closure_19[channel.id] = channel;
       return channel;
     });
-    _require = _require(1911).isFavoritesGuildId(c13);
+    _require = _require(1982).isFavoritesGuildId(c13);
     const item2 = channels[constants.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       let canResult = "null" === channel.id || closure_0;
@@ -137,7 +137,7 @@ let closure_23 = importDefaultResult.debounce(() => {
     const arr = channels[closure_7];
     const arr2 = channels[closure_8];
     const arr3 = channels[constants.GUILD_CATEGORY];
-    const obj = _require(1911);
+    const obj = _require(1982);
   }
   guildSettingsModalChannelsStoreClass.emitChange();
 }, 500);
@@ -169,7 +169,7 @@ prototype["initGuild"] = function initGuild(closure_6) {
       closure_19[channel.id] = channel;
       return channel;
     });
-    _require = _require(1911).isFavoritesGuildId(closure_13);
+    _require = _require(1982).isFavoritesGuildId(closure_13);
     const item2 = channels[constants.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       let canResult = "null" === channel.id || closure_0;
@@ -184,7 +184,7 @@ prototype["initGuild"] = function initGuild(closure_6) {
     const arr = channels[closure_7];
     const arr2 = channels[closure_8];
     const arr3 = channels[constants.GUILD_CATEGORY];
-    const obj = _require(1911);
+    const obj = _require(1982);
   }
 };
 Object.defineProperty(prototype, "channels", {

@@ -1,16 +1,16 @@
-// === Module 11914: EmptyState ===
+// === Module 12113: EmptyState ===
 
-// Module 11914 (EmptyState)
+// Module 12113 (EmptyState)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
-import useThemeDefault from "useTheme" /* 4413 */;
-import Text from "Text" /* 4474 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 11852 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import useThemeDefault from "useTheme" /* 4495 */;
+import Text from "Text" /* 4556 */;
+import handleApplicationSelected from "handleApplicationSelected" /* 12051 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -28,13 +28,13 @@ export default function EmptyState() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 11915 : 11916);
-  const logAppLauncherEmptyStateView = handleApplicationSelected.useLogAppLauncherEmptyStateView(tmp2(8448).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
+  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12114 : 12115);
+  const logAppLauncherEmptyStateView = handleApplicationSelected.useLogAppLauncherEmptyStateView(tmp2(9409).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };
   const items = [callback(closure_4, obj), ];
   obj1 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj1[3] = intl.string(getSystemLocale.t.uDnXXj);
   items[1] = callback(Text.Text, obj1);
   obj[1] = items;

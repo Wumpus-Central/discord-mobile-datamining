@@ -1,8 +1,8 @@
-// === Module 7504: getStats ===
+// === Module 7748: getStats ===
 
-// Module 7504 (getStats)
-import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 7429 */;
-import getSamples from "getSamples" /* 7498 */;
+// Module 7748 (getStats)
+import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 1359 */;
+import getSamples from "getSamples" /* 7742 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;

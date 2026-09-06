@@ -1,13 +1,13 @@
-// === Module 14638: getSMSBackupDisabledMessage ===
+// === Module 14794: getSMSBackupDisabledMessage ===
 
-// Module 14638 (getSMSBackupDisabledMessage)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import _crypto from "_crypto" /* 7736 */;
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+// Module 14794 (getSMSBackupDisabledMessage)
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import _crypto from "_crypto" /* 6951 */;
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ GuildFeatures: c5, Permissions: closure_6, UserFlags: error } = ME);
@@ -87,7 +87,7 @@ export const use2FARemoveDisableReason = function use2FARemoveDisableReason() {
     flag = false;
   }
   const items = [closure_2, closure_3, closure_4];
-  return flag(644).useStateFromStores(items, () => {
+  return flag(563).useStateFromStores(items, () => {
     const currentUser = closure_1_4.getCurrentUser();
     let hasAnyStaffLevelResult;
     if (currentUser != null) {

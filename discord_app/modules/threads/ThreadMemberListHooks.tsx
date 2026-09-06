@@ -1,10 +1,10 @@
-// === Module 16524: useThreadMemberListSections ===
+// === Module 16687: useThreadMemberListSections ===
 
-// Module 16524 (useThreadMemberListSections)
+// Module 16687 (useThreadMemberListSections)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_5 from "handleUserUpdate" /* 9952 */;
-import { StatusTypes } from "sum" /* 502 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_5 from "handleUserUpdate" /* 9837 */;
+import { StatusTypes } from "sum" /* 1085 */;
 
 const require = arg1;
 let closure_7 = [];

@@ -1,25 +1,25 @@
-// === Module 10798: HeroMedia ===
+// === Module 10799: HeroMedia ===
 
-// Module 10798 (HeroMedia)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1901 */;
-import Text from "Text" /* 4474 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4756 */;
-import preloadDefault from "preload" /* 5502 */;
-import VideoComponent from "VideoComponent" /* 8621 */;
-import useFormattedSKUPrice from "useFormattedSKUPrice" /* 10801 */;
-import NativePaymentContextProvider from "NativePaymentContextProvider" /* 10819 */;
+// Module 10799 (HeroMedia)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import isNullOrEmpty from "isNullOrEmpty" /* 1925 */;
+import Text from "Text" /* 4556 */;
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4802 */;
+import preloadDefault from "preload" /* 5587 */;
+import VideoComponent from "VideoComponent" /* 8307 */;
+import useFormattedSKUPrice from "useFormattedSKUPrice" /* 10802 */;
+import NativePaymentContextProvider from "NativePaymentContextProvider" /* 10822 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "addSku" /* 4527 */;
-import closure_9 from "handleUserSettingsStoreUpdate" /* 6084 */;
-import { SlayerShopPDPCTAType } from "SlayerShopCardCTAType" /* 10799 */;
-import ME from "ME" /* 673 */;
+import closure_8 from "addSku" /* 5510 */;
+import closure_9 from "handleUserSettingsStoreUpdate" /* 7228 */;
+import { SlayerShopPDPCTAType } from "SlayerShopCardCTAType" /* 10800 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "n" /* 686 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import importDefaultResult from "n" /* 672 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import alphaResult1 from "module_0" /* 0 */;
 
 require = arg1;
@@ -179,18 +179,18 @@ function SKUNameAndDescriptionSection(sku) {
     obj[0] = tmp.section;
     obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     obj[2] = sku.name;
-    const items = [callback(tmp2(4474).Heading, obj), ];
-    const isNullOrEmptyResult = tmp2(1901).isNullOrEmpty(sku.description);
+    const items = [callback(tmp2(4556).Heading, obj), ];
+    const isNullOrEmptyResult = tmp2(1925).isNullOrEmpty(sku.description);
     let tmp7Result = !isNullOrEmptyResult;
     if (!isNullOrEmptyResult) {
       obj1 = { variant: "text-md/medium", color: "text-muted", children: null };
       obj1[2] = sku.description;
-      tmp7Result = tmp7(tmp2(4474).Text, obj1);
+      tmp7Result = tmp7(tmp2(4556).Text, obj1);
     }
     items[1] = tmp7Result;
     obj[1] = items;
     tmp5Result = closure_15(closure_7, obj);
-    const tmp2Result = tmp2(1901);
+    const tmp2Result = tmp2(1925);
     const tmp5 = closure_15;
     const tmp6 = closure_7;
     tmp7 = callback;
@@ -219,9 +219,9 @@ function ItemDetailsSection(selectedItem) {
   }
   obj1 = isNullOrEmpty;
   if (obj1.isNullOrEmpty(trimmed)) {
-    let tmp8Result = tmp8(1901);
+    let tmp8Result = tmp8(1925);
     if (tmp8Result.isNullOrEmpty(trimmed1)) {
-      tmp8Result = tmp8(1901);
+      tmp8Result = tmp8(1925);
       let tmp11Result = null;
     }
     return tmp11Result;
@@ -232,7 +232,7 @@ function ItemDetailsSection(selectedItem) {
   if (!isNullOrEmptyResult) {
     obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
     obj[2] = trimmed;
-    tmp14 = callback(tmp8(4474).Heading, obj);
+    tmp14 = callback(tmp8(4556).Heading, obj);
   }
   const items = [tmp14, , ];
   const tmp8Result1 = isNullOrEmpty;
@@ -253,7 +253,7 @@ function ItemDetailsSection(selectedItem) {
     const items1 = [tmp18, ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj4[2] = trimmed1;
-    items1[1] = callback(tmp8(4474).Text, obj4);
+    items1[1] = callback(tmp8(4556).Text, obj4);
     obj1[1] = items1;
     tmp11Result = tmp11(tmp12, obj1);
   }
@@ -264,7 +264,7 @@ function ItemDetailsSection(selectedItem) {
   if (!isNullOrEmptyResult2) {
     const obj5 = { variant: "text-md/medium", color: "text-default", children: null };
     obj5[2] = trimmed2;
-    tmp23 = callback(tmp8(4474).Text, obj5);
+    tmp23 = callback(tmp8(4556).Text, obj5);
   }
   items[2] = tmp23;
   obj[1] = items;
@@ -287,27 +287,27 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   closure_13 = undefined;
   const tmp = callback3();
   dependencyMap = tmp;
-  const rect = analyticsLocations(1627)();
-  let obj = analyticsLocations(8234);
+  const rect = analyticsLocations(1611)();
+  let obj = analyticsLocations(9366);
   storeFront = obj.useNativeIAPPayments().storeFront;
-  obj1 = skuId(586);
+  obj1 = skuId(504);
   let items = [callback];
   stateFromStores = obj1.useStateFromStores(items, () => callback.get(skuId));
-  let obj2 = skuId(586);
+  let obj2 = skuId(504);
   let items1 = [callback];
   stateFromStores1 = obj2.useStateFromStores(items1, () => callback.isFetching(skuId) || callback.didFetchingSkuFail(skuId));
-  let obj3 = skuId(5968);
+  let obj3 = skuId(7168);
   let applicationId;
   if (stateFromStores != null) {
     applicationId = stateFromStores.applicationId;
   }
   const getOrFetchApplication = obj3.useGetOrFetchApplication(applicationId);
   let tmp10 = getOrFetchApplication;
-  let tmp2Result = tmp2(5965);
+  let tmp2Result = tmp2(7165);
   if (getOrFetchApplication == null) {
     tmp10 = null;
   }
-  let tmp4Result = tmp4(586);
+  let tmp4Result = tmp4(504);
   const items2 = [closure_9];
   stateFromStores2 = tmp4Result.useStateFromStores(items2, () => skuAssets.getSkuAssets());
   let obj5 = stateFromStores;
@@ -324,7 +324,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     const items1 = [...items, analyticsLocations(closeButtonIcon[27]).SLAYER_STOREFRONT_NATIVE_PDP];
     return items1;
   }, items4);
-  analyticsLocations(4946)(() => {
+  analyticsLocations(4992)(() => {
     let obj = analyticsLocations(closeButtonIcon[29]);
     obj = { location_stack: memo1, type: skuId(closeButtonIcon[30]).SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY, sku_id: skuId, application_id: null };
     let applicationId;
@@ -343,7 +343,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   items5[2] = memo1;
   callback = stateFromStores.useCallback((arg0) => {
     let obj = analyticsLocations(closeButtonIcon[29]);
-    obj = { slayer_storefront_session_id: "Array", sku_id: "a", guild_id: true, application_id: true, cta_type: "onAnimationFailureCapture", location_stack: "onAnimationFailure" };
+    obj = { slayer_storefront_session_id: "Array", sku_id: "a", guild_id: true, application_id: true, cta_type: "unmarkNodeAsRemovable", location_stack: null };
     obj[1] = skuId;
     let applicationId;
     if (stateFromStores != null) {
@@ -515,9 +515,9 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const tmp4Result = analyticsLocations(closeButtonIcon[34])(obj);
     }
   }, items9);
-  const OTPACOMOrderExperiment = tmp4(8233).OTPACOMOrderExperiment;
+  const OTPACOMOrderExperiment = tmp4(9365).OTPACOMOrderExperiment;
   let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
-  tmp4Result = tmp4(1234);
+  tmp4Result = tmp4(1115);
   if (tmp4Result.isIOS()) {
     let GOOGLE = tmp38.APPLE_ADVANCED_COMMERCE;
     let tmp39 = tmp38;
@@ -529,7 +529,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   if (tmp28) {
     obj = { headless: true, paymentGateway: null, orderRequired: null, skuIds: null, isGift: false, activeSubscription: null, onOrderRetryCancellation: null, checkoutAnalyticsFields: null, children: null };
     obj[1] = GOOGLE;
-    tmp2Result = tmp2(10803);
+    tmp2Result = tmp2(10804);
     if (enabled) {
       enabled = GOOGLE === tmp39.APPLE_ADVANCED_COMMERCE;
     }
@@ -563,20 +563,20 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     obj1[3] = memo1;
     obj1[4] = callback2;
     obj1[5] = callback1;
-    obj[8] = callback(tmp4(10812).HeadlessSlayerStorefrontPurchaseRunner, obj1);
+    obj[8] = callback(tmp4(10813).HeadlessSlayerStorefrontPurchaseRunner, obj1);
     tmp41Result = tmp41(tmp2Result, obj, skuId);
   }
   const items11 = [skuId, memo1, callback];
   if (null == stateFromStores) {
     return null;
   } else {
-    let result = tmp4(6087).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
-    const intl4 = tmp4(1233).intl;
-    const stringResult = intl4.string(tmp4(1233).t.boqtTA);
-    const tmp4Result1 = tmp4(6087);
-    let result1 = tmp4(4152).isSocialLayerStorefrontGiftingSupported();
+    let result = tmp4(7231).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
+    const intl4 = tmp4(1114).intl;
+    const stringResult = intl4.string(tmp4(1114).t.boqtTA);
+    const tmp4Result1 = tmp4(7231);
+    let result1 = tmp4(4231).isSocialLayerStorefrontGiftingSupported();
     const items12 = [tmp.container, ];
-    const tmp4Result2 = tmp4(4152);
+    const tmp4Result2 = tmp4(4231);
     let num3 = 0;
     if (!tmp4Result3.isIOS()) {
       num3 = rect.top;
@@ -594,9 +594,9 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     obj5[1] = function backImage() {
       return closure_1_14(skuId(closeButtonIcon[40]).XSmallIcon, { size: "md", style: closeButtonIcon.closeButtonIcon });
     };
-    const intl = tmp4(1233).intl;
-    obj5[2] = intl.string(tmp4(1233).t.cpT0Cq);
-    const items14 = [callback(tmp4(5511).HeaderBackButton, obj5), ];
+    const intl = tmp4(1114).intl;
+    obj5[2] = intl.string(tmp4(1114).t.cpT0Cq);
+    const items14 = [callback(tmp4(5631).HeaderBackButton, obj5), ];
     const obj6 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
     obj6[2] = tmp.headerTitle;
     let name;
@@ -604,7 +604,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       name = getOrFetchApplication.name;
     }
     obj6[3] = name;
-    items14[1] = callback(tmp4(4474).Heading, obj6);
+    items14[1] = callback(tmp4(4556).Heading, obj6);
     obj4[1] = items14;
     items13[1] = closure_15(memo1, obj4);
     const obj7 = { style: null, children: null };
@@ -615,7 +615,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       obj8[0] = stateFromStores2.absoluteFill;
       const items15 = [closure_17, closure_18];
       obj8[1] = items15;
-      exclusive = tmp47(tmp2(4941), obj8);
+      exclusive = tmp47(tmp2(4987), obj8);
     }
     const items16 = [exclusive, ];
     const obj9 = { contentContainerStyle: null, children: null };
@@ -629,7 +629,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       if (tmp47Result) {
         const obj11 = { sku: null };
         obj11[0] = stateFromStores;
-        tmp47Result = tmp47(tmp2(8520), obj11);
+        tmp47Result = tmp47(tmp2(8825), obj11);
       }
     }
     const items17 = [tmp47Result, , ];
@@ -637,7 +637,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     if (exclusive2) {
       const obj12 = { style: null, children: null };
       obj12[0] = tmp.exclusiveBadgeContainer;
-      obj12[1] = tmp47(tmp4(10816).ExclusiveBadge, {});
+      obj12[1] = tmp47(tmp4(10817).ExclusiveBadge, {});
       exclusive2 = tmp47(tmp70, obj12);
     }
     items17[1] = exclusive2;
@@ -677,7 +677,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     const obj18 = { style: null, children: null };
     const items19 = [tmp.footer, ];
     const obj19 = { paddingBottom: null };
-    obj19[0] = rect.bottom + tmp2(709).space.PX_16;
+    obj19[0] = rect.bottom + tmp2(576).space.PX_16;
     items19[1] = obj19;
     obj18[0] = items19;
     const obj20 = { sku: null };
@@ -687,9 +687,9 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     if (!result) {
       const obj21 = { variant: "text-xs/normal", color: "text-muted", style: null, children: null };
       obj21[2] = tmp.availabilityCopy;
-      const intl2 = tmp4(1233).intl;
-      obj21[3] = intl2.string(tmp2(3370).gndWN7);
-      tmp47Result2 = tmp47(tmp4(4474).Text, obj21);
+      const intl2 = tmp4(1114).intl;
+      obj21[3] = intl2.string(tmp2(3417).gndWN7);
+      tmp47Result2 = tmp47(tmp4(4556).Text, obj21);
     }
     items20[1] = tmp47Result2;
     const obj22 = { style: null, children: null };
@@ -705,16 +705,16 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     }
     obj24[4] = tmp64;
     obj24[5] = callback3;
-    obj23[1] = callback(tmp4(4929).Button, obj24);
+    obj23[1] = callback(tmp4(4975).Button, obj24);
     const items21 = [callback(memo1, obj23), ];
     if (result1) {
       const obj25 = { icon: null, variant: "primary", size: "lg", disabled: null, accessibilityLabel: null, onPress: null };
-      obj25[0] = tmp2(8004);
+      obj25[0] = tmp2(8083);
       obj25[3] = tmp26;
-      const intl3 = tmp4(1233).intl;
-      obj25[4] = intl3.string(tmp4(1233).t.QAZA5f);
+      const intl3 = tmp4(1114).intl;
+      obj25[4] = intl3.string(tmp4(1114).t.QAZA5f);
       obj25[5] = tmp46;
-      result1 = tmp47(tmp4(8018).IconButton, obj25);
+      result1 = tmp47(tmp4(8097).IconButton, obj25);
     }
     items21[1] = result1;
     obj22[1] = items21;
@@ -724,10 +724,10 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       obj26[0] = tmp.legalCopy;
       const obj27 = { shouldAppendDisclaimer: null };
       obj27[0] = false === tmp2Result(tmp10).hasAlreadyLinked;
-      const mobileFinePrintMessageForApplication = tmp4(10817).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj27);
+      const mobileFinePrintMessageForApplication = tmp4(10820).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj27);
       obj26[1] = mobileFinePrintMessageForApplication.map((children) => callback(skuId(closeButtonIcon[15]).Text, { variant: "text-xs/normal", color: "text-muted", children }, arg1));
       result = tmp47(tmp70, obj26);
-      const tmp4Result4 = tmp4(10817);
+      const tmp4Result4 = tmp4(10820);
       const tmp66 = getOrFetchApplication;
     }
     items20[3] = result;

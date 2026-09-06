@@ -1,9 +1,9 @@
-// === Module 12704: isOnConsole ===
+// === Module 13037: isOnConsole ===
 
-// Module 12704 (isOnConsole)
+// Module 13037 (isOnConsole)
 import set from "set" /* 2 */;
-import isOnXboxDefault from "isOnXbox" /* 9404 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 9405 */;
+import isOnXboxDefault from "isOnXbox" /* 13002 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 13003 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/isOnConsole.tsx");
 

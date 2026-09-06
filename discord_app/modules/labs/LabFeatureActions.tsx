@@ -1,8 +1,8 @@
-// === Module 15375: toggleLabFeature ===
+// === Module 15533: toggleLabFeature ===
 
-// Module 15375 (toggleLabFeature)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "getUserAgnosticState" /* 8643 */;
+// Module 15533 (toggleLabFeature)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "getUserAgnosticState" /* 8353 */;
 
 let closure_3 = {};
 const result = require("set").fileFinishedImporting("modules/labs/LabFeatureActions.tsx");

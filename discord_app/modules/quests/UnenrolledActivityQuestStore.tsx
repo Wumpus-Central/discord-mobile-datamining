@@ -1,9 +1,9 @@
-// === Module 16868: set ===
+// === Module 17032: set ===
 
-// Module 16868 (set)
+// Module 17032 (set)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 import set from "set" /* 2 */;
 
 let set = new Set();

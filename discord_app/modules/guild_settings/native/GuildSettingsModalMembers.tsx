@@ -1,21 +1,21 @@
-// === Module 16409: items ===
+// === Module 16571: items ===
 
-// Module 16409 (items)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 16571 (items)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import closure_7 from "handleInviteData" /* 4398 */;
-import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import closure_9 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_10 from "createGuildRecordFromRust" /* 1908 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_12 from "mergeGuildAvatar" /* 1921 */;
-import closure_13 from "handleFormInit" /* 9755 */;
-import { GuildSettingsSections } from "ME" /* 673 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import closure_7 from "handleInviteData" /* 4480 */;
+import closure_8 from "trackCommunicationDisabled" /* 2021 */;
+import closure_9 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_10 from "createGuildRecordFromRust" /* 1979 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_12 from "mergeGuildAvatar" /* 1371 */;
+import closure_13 from "handleFormInit" /* 9064 */;
+import { GuildSettingsSections } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -34,7 +34,7 @@ let closure_20 = importAllResult.memo((guild) => {
   const sortedGuildRoles = guild.sortedGuildRoles;
   dependencyMap = undefined;
   ({ start, end } = guild);
-  let obj = guild(1498);
+  let obj = guild(1483);
   dependencyMap = obj.useNavigation();
   if (null == guild) {
     return null;
@@ -51,11 +51,11 @@ let closure_20 = importAllResult.memo((guild) => {
     let formatToPlainStringResult;
     if (found.length > 0) {
       user = user.getUser(guildMember.userId);
-      obj1 = guildMember(4673);
+      obj1 = guildMember(4712);
       let str = obj1.getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(4322).getGlobalName(user);
-        const tmp9Result = tmp9(4322);
+        str = tmp9(4404).getGlobalName(user);
+        const tmp9Result = tmp9(4404);
       }
       if (str == null) {
         let username;
@@ -69,11 +69,11 @@ let closure_20 = importAllResult.memo((guild) => {
       }
       const mapped1 = found.map((name) => name.name);
       const joined = mapped1.join(", ");
-      const intl = tmp2(1233).intl;
+      const intl = tmp2(1114).intl;
       obj = { memberName: null, roleNames: null };
       obj[0] = str;
       obj[1] = joined;
-      formatToPlainStringResult = intl.formatToPlainString(tmp2(1233).t["6eGpWx"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t["6eGpWx"], obj);
       tmp9 = guildMember;
     }
     obj = { userId: null, guildId: null, accessibilityLabel: null, subLabel: null, disabled: null, onPress: null, arrow: true, start: null, end: null };
@@ -94,7 +94,7 @@ let closure_20 = importAllResult.memo((guild) => {
     };
     obj[7] = start;
     obj[8] = end;
-    return closure_15(guildMember(10904), obj);
+    return closure_15(guildMember(10942), obj);
   }
   tmp = callback();
 });
@@ -284,12 +284,12 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.create(null));
-            const obj = { source: callback2(9794), accessibilityLabel: null, ref: null };
-            const intl = callback(1233).intl;
-            obj[1] = intl.string(callback(1233).t.ogxXGq);
+            const obj = { source: callback2(9800), accessibilityLabel: null, ref: null };
+            const intl = callback(1114).intl;
+            obj[1] = intl.string(callback(1114).t.ogxXGq);
             obj[2] = ref.ref;
             const merged1 = Object.assign(merged);
-            return callback3(callback(6247).HeaderActionButton, obj);
+            return callback3(callback(7377).HeaderActionButton, obj);
           }
         };
         return closure_1_15(closure_1_0(closure_1_2[26]).ContextMenu, obj);

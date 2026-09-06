@@ -1,22 +1,22 @@
-// === Module 4702: updateUserGuildSettingsInternal ===
+// === Module 4741: updateUserGuildSettingsInternal ===
 
-// Module 4702 (updateUserGuildSettingsInternal)
+// Module 4741 (updateUserGuildSettingsInternal)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import hasFlagAll from "hasFlag" /* 1398 */;
-import reset from "reset" /* 4123 */;
-import resetDefault from "reset" /* 4123 */;
-import closure_4 from "initialize" /* 1983 */;
-import closure_5 from "storeThread" /* 4122 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import closure_9 from "createGuildRecordFromRust" /* 1908 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import { AccountNotificationFlags } from "AccountNotificationFlags" /* 4133 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import hasFlagAll from "hasFlag" /* 1384 */;
+import reset from "reset" /* 4202 */;
+import resetDefault from "reset" /* 4202 */;
+import closure_4 from "initialize" /* 2014 */;
+import closure_5 from "storeThread" /* 4201 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import closure_8 from "ensureGuildLoaded" /* 1957 */;
+import closure_9 from "createGuildRecordFromRust" /* 1979 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import { AccountNotificationFlags } from "AccountNotificationFlags" /* 4212 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -586,7 +586,7 @@ prototype["getNewForumThreadsCreated"] = function getNewForumThreadsCreated(chan
         if (tmp2Result.hasFlag(tmp.flags, tmp4.NEW_FORUM_THREADS_OFF)) {
           return false;
         }
-        tmp2Result = tmp2(1398);
+        tmp2Result = tmp2(1384);
       }
       obj = hasFlagAll;
       tmp2 = importAll;
@@ -770,7 +770,7 @@ prototype["resolveGuildUnreadSetting"] = function resolveGuildUnreadSetting(guil
       } else {
         ONLY_MENTIONS = UnreadSetting.ONLY_MENTIONS;
       }
-      tmp3Result = tmp3(1398);
+      tmp3Result = tmp3(1384);
     }
     obj = hasFlagAll;
     tmp3 = importAll;

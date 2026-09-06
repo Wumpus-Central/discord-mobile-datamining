@@ -1,13 +1,13 @@
-// === Module 10373: RoleLabel ===
+// === Module 10270: RoleLabel ===
 
-// Module 10373 (RoleLabel)
+// Module 10270 (RoleLabel)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 586 */;
-import Form from "Form" /* 8376 */;
+import initialize from "initialize" /* 504 */;
+import Form from "Form" /* 8593 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -40,7 +40,7 @@ export const RoleLabel = function RoleLabel(color) {
     obj1[0] = color;
     obj1[1] = colors;
     obj1[2] = tmp.roleDot;
-    tmp10 = callback(tmp2(1296).RoleDot, obj1);
+    tmp10 = callback(tmp2(1178).RoleDot, obj1);
   }
   const items1 = [tmp10, callback(Form.FormLabel, { style: {}, text: name })];
   obj[1] = items1;

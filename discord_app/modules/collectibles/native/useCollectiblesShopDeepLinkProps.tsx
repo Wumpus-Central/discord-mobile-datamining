@@ -1,10 +1,10 @@
-// === Module 15653: useCollectiblesShopDeepLinkProps ===
+// === Module 15811: useCollectiblesShopDeepLinkProps ===
 
-// Module 15653 (useCollectiblesShopDeepLinkProps)
+// Module 15811 (useCollectiblesShopDeepLinkProps)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "updateCategoriesAndProducts" /* 7297 */;
-import closure_4 from "items" /* 7314 */;
+import closure_3 from "updateCategoriesAndProducts" /* 7542 */;
+import closure_4 from "items" /* 7559 */;
 
 const useMemo = noop.useMemo;
 let closure_5 = {};

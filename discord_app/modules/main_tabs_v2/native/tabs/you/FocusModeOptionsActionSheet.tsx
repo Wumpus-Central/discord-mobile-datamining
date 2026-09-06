@@ -1,9 +1,9 @@
-// === Module 16217: label ===
+// === Module 16379: label ===
 
-// Module 16217 (label)
+// Module 16379 (label)
 import noopAll from "noop" /* 19 */;
-import setDefault from "set" /* 684 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import setDefault from "set" /* 1090 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -71,24 +71,24 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native
 
 export default function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
-  let obj = onSelect(10199);
+  let obj = onSelect(10090);
   const focusModeEnabled = obj.useFocusModeEnabled();
   obj = { title: null, hasIcons: false, children: null };
-  const intl = onSelect(1233).intl;
-  obj[0] = intl.string(onSelect(1233).t["sNX1E+"]);
+  const intl = onSelect(1114).intl;
+  obj[0] = intl.string(onSelect(1114).t["sNX1E+"]);
   let tmp4Result = null;
   if (focusModeEnabled) {
     obj = { accessibilityLabel: null, accessibilityHint: null, onPress: null, trailing: null, label: null };
-    const intl2 = tmp(1233).intl;
-    obj[0] = intl2.string(tmp(1233).t.rk35Gm);
-    const intl3 = tmp(1233).intl;
-    obj[1] = intl3.string(tmp(1233).t.rk35Gm);
+    const intl2 = tmp(1114).intl;
+    obj[0] = intl2.string(tmp(1114).t.rk35Gm);
+    const intl3 = tmp(1114).intl;
+    obj[1] = intl3.string(tmp(1114).t.rk35Gm);
     obj[2] = function onPress() {
       onSelect(false, undefined);
     };
-    const intl4 = tmp(1233).intl;
-    obj[4] = intl4.string(tmp(1233).t.rk35Gm);
-    tmp4Result = tmp4(tmp(5608).TableRow, obj);
+    const intl4 = tmp(1114).intl;
+    obj[4] = intl4.string(tmp(1114).t.rk35Gm);
+    tmp4Result = tmp4(tmp(5605).TableRow, obj);
   }
   obj1 = { children: null };
   items = [tmp4Result, ];
@@ -106,6 +106,6 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     }, "" + duration);
   });
   obj[2] = items;
-  obj1[0] = closure_3(onSelect(6001).TableRowGroup, obj);
-  return closure_2(onSelect(5998).ActionSheet, obj1);
+  obj1[0] = closure_3(onSelect(5687).TableRowGroup, obj);
+  return closure_2(onSelect(7198).ActionSheet, obj1);
 };

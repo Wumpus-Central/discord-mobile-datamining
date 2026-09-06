@@ -1,10 +1,10 @@
-// === Module 17117: trackHttpRequest ===
+// === Module 17283: trackHttpRequest ===
 
-// Module 17117 (trackHttpRequest)
+// Module 17283 (trackHttpRequest)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 17119 */;
+import ME from "ME" /* 1074 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 17285 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");

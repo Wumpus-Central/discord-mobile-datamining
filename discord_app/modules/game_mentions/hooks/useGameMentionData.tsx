@@ -1,11 +1,11 @@
-// === Module 5061: getGameMentionData ===
+// === Module 5107: getGameMentionData ===
 
-// Module 5061 (getGameMentionData)
-import shallowEqualDefault from "shallowEqual" /* 640 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 5065 */;
-import closure_3 from "handleLoadMessages" /* 4502 */;
-import closure_4 from "set" /* 5062 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
+// Module 5107 (getGameMentionData)
+import shallowEqualDefault from "shallowEqual" /* 558 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 5111 */;
+import closure_3 from "createGamesFromMessage" /* 1916 */;
+import closure_4 from "set" /* 5108 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
@@ -43,7 +43,7 @@ export const useGameMentionData = function useGameMentionData(gameId) {
   const _require = gameId;
   const items = [closure_3, closure_4, closure_5];
   const items1 = [gameId];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const currentUser = closure_1_5.getCurrentUser();
     const game = closure_1_3.getGame(gameId);
     const gameById = closure_1_4.getGameById(gameId);

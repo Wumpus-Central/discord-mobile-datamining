@@ -1,26 +1,26 @@
-// === Module 15113: GradientThemeBackground ===
+// === Module 15273: GradientThemeBackground ===
 
-// Module 15113 (GradientThemeBackground)
+// Module 15273 (GradientThemeBackground)
 import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import ClientThemeType from "ClientThemeType" /* 1348 */;
-import isThemeLight from "isThemeLight" /* 1363 */;
-import map from "map" /* 4197 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4205 */;
-import hslToRgbDefault from "hslToRgb" /* 4327 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import getMixedGradientColor from "getMixedGradientColor" /* 5079 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5079 */;
-import registerAssetDefault from "registerAsset" /* 15114 */;
-import SynchronizeIconDefault from "SynchronizeIcon" /* 15115 */;
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import ClientThemeType from "ClientThemeType" /* 1231 */;
+import map from "map" /* 4262 */;
+import isThemeLight from "isThemeLight" /* 4269 */;
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
+import hslToRgbDefault from "hslToRgb" /* 4410 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import getMixedGradientColor from "getMixedGradientColor" /* 5125 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
+import registerAssetDefault from "registerAsset" /* 15274 */;
+import SynchronizeIconDefault from "SynchronizeIcon" /* 15275 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThemeChange" /* 1301 */;
-import importDefaultResult from "THEME_ITEM_WIDTH" /* 15112 */;
-import { ThemeTypes } from "sum" /* 502 */;
+import closure_4 from "handleThemeChange" /* 1183 */;
+import importDefaultResult from "THEME_ITEM_WIDTH" /* 15272 */;
+import { ThemeTypes } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function GradientThemeBackground(arg0) {
@@ -61,9 +61,9 @@ function DefaultThemeBackground(item) {
   } else {
     theme = item.theme;
   }
-  let tmpResult = tmp(4197);
+  let tmpResult = tmp(4262);
   const token = tmpResult.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWER, theme);
-  tmpResult = tmp(4197);
+  tmpResult = tmp(4262);
   const token1 = tmpResult.useToken(ThemesDefault.colors.BORDER_STRONG, theme);
   obj = { style: null, children: null };
   obj = { width: "100%", height: "100%", backgroundColor: token, borderColor: token1, borderWidth: 1, borderRadius: null };
@@ -100,7 +100,7 @@ function CustomThemeBackground(arg0) {
     const obj3 = { source: null, style: null };
     obj3[0] = registerAssetDefault;
     obj3[1] = tmp4.lock;
-    isThemeLocked = tmp7(tmp(1296).Icon, obj3);
+    isThemeLocked = tmp7(tmp(1178).Icon, obj3);
   }
   items1[1] = isThemeLocked;
   obj[1] = items1;
@@ -121,9 +121,9 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   const internal = ThemesDefault.internal;
   const resolveSemanticColor = internal.resolveSemanticColor;
   if (arg0) {
-    let semanticColor = resolveSemanticColor(tmp3.DARKER, tmp(709).colors.INTERACTIVE_TEXT_DEFAULT);
+    let semanticColor = resolveSemanticColor(tmp3.DARKER, tmp(576).colors.INTERACTIVE_TEXT_DEFAULT);
   } else {
-    semanticColor = resolveSemanticColor(tmp3.LIGHT, tmp(709).colors.INTERACTIVE_TEXT_DEFAULT);
+    semanticColor = resolveSemanticColor(tmp3.LIGHT, tmp(576).colors.INTERACTIVE_TEXT_DEFAULT);
   }
   obj[1] = { position: "absolute", alignSelf: "center", opacity: 0.6, tintColor: semanticColor };
   return obj;
@@ -146,7 +146,7 @@ export default function ThemeSelectorItem(onPress) {
     obj[0] = themePreset;
     let tmp8 = callback(DefaultThemeBackground, obj);
     let tmp9 = callback;
-  } else if (themePreset.type === tmp4(1348).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+  } else if (themePreset.type === tmp4(1231).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     obj = { item: null, isThemeLocked: null };
     obj[0] = themePreset;
     obj[1] = isPreview;
@@ -164,8 +164,8 @@ export default function ThemeSelectorItem(onPress) {
   obj1 = { style: tmp.themeSelectorItemContainer, androidRippleConfig: tmp.rippleColor, onPress: onPress.onPress, accessibilityRole, accessibilityLabel: themePreset.getName(), accessibilityState, accessibilityHint: null, children: null };
   let stringResult;
   if (isPreview) {
-    const intl = tmp4(1233).intl;
-    stringResult = intl.string(tmp4(1233).t.VqGKm0);
+    const intl = tmp4(1114).intl;
+    stringResult = intl.string(tmp4(1114).t.VqGKm0);
   }
   obj1[6] = stringResult;
   const obj2 = { style: tmp.themeSelectorItem, children: null };

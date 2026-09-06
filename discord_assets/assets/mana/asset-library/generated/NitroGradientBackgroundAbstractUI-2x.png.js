@@ -1,6 +1,6 @@
-// === Module 6838: metadata ===
+// === Module 6274: metadata ===
 
-// Module 6838 (metadata)
+// Module 6274 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroGradientBackgroundAbstractUI-2x.png.js");

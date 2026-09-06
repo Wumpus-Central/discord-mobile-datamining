@@ -1,13 +1,13 @@
-// === Module 14836: route ===
+// === Module 14992: route ===
 
-// Module 14836 (route)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4152 */;
-import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13362 */;
+// Module 14992 (route)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4231 */;
+import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13468 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11292 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {
@@ -43,7 +43,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_GIFTING,
   getComponent() {
-    return require(13448) /* GiftingSectionTitle */.default;
+    return require(13554) /* GiftingSectionTitle */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

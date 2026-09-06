@@ -1,6 +1,6 @@
-// === Module 14420: setRpcCommandInterceptor ===
+// === Module 14527: setRpcCommandInterceptor ===
 
-// Module 14420 (setRpcCommandInterceptor)
+// Module 14527 (setRpcCommandInterceptor)
 import set from "set" /* 2 */;
 
 let c0 = null;

@@ -1,6 +1,6 @@
-// === Module 16454: getFrameLaunchContextQueryParams ===
+// === Module 16617: getFrameLaunchContextQueryParams ===
 
-// Module 16454 (getFrameLaunchContextQueryParams)
+// Module 16617 (getFrameLaunchContextQueryParams)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/frames/utils/getFrameLaunchContextQueryParams.tsx");

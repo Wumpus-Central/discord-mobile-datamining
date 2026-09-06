@@ -1,21 +1,21 @@
-// === Module 17419: ? ===
+// === Module 17579: ? ===
 
-// Module 17419
-import ThemesDefault from "Themes" /* 709 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5603 */;
-import useInitialValueDefault from "useInitialValue" /* 5950 */;
-import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 9231 */;
+// Module 17579
+import ThemesDefault from "Themes" /* 576 */;
+import useInitialValueDefault from "useInitialValue" /* 5598 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
+import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 11146 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "getEmojiToGroupId" /* 5410 */;
-import closure_9 from "loadSavedGuildStickers" /* 5453 */;
-import ME from "ME" /* 673 */;
-import set from "set" /* 1924 */;
-import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 4169 */;
+import closure_8 from "getEmojiToGroupId" /* 5459 */;
+import closure_9 from "loadSavedGuildStickers" /* 5502 */;
+import ME from "ME" /* 1074 */;
+import set from "set" /* 1374 */;
+import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 1938 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 let c5 = importAllResult;
@@ -463,34 +463,34 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     }
   }, items1);
   obj = { ref, style: tmp.container, keyboardShouldPersistTaps: "always", contentContainerStyle: null, children: null };
-  obj = { paddingHorizontal: tmp14(709).space.PX_16, paddingBottom: tmp14(709).space.PX_16 + insets.bottom };
+  obj = { paddingHorizontal: tmp14(576).space.PX_16, paddingBottom: tmp14(576).space.PX_16 + insets.bottom };
   obj[3] = obj;
   let tmp23Result = null;
   if (null == stickerId) {
     obj1 = { variant: "heading-md/semibold", style: null, children: null };
     obj1[1] = tmp.title;
-    const intl = stickerId(1233).intl;
-    obj1[2] = intl.string(stickerId(1233).t["9N2OWD"]);
-    const items2 = [callback(stickerId(4474).Text, obj1), , , ];
+    const intl = stickerId(1114).intl;
+    obj1[2] = intl.string(stickerId(1114).t["9N2OWD"]);
+    const items2 = [callback(stickerId(4556).Text, obj1), , , ];
     let obj2 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.description;
-    const intl2 = stickerId(1233).intl;
+    const intl2 = stickerId(1114).intl;
     let obj3 = { fileSize: null };
-    let obj6 = stickerId(4372);
+    let obj6 = stickerId(4457);
     obj3[0] = obj6.formatKbSize(first1, { useKibibytes: true });
-    obj2[3] = intl2.format(stickerId(1233).t.hxLviw, obj3);
-    items2[1] = callback(stickerId(4474).Text, obj2);
+    obj2[3] = intl2.format(stickerId(1114).t.hxLviw, obj3);
+    items2[1] = callback(stickerId(4556).Text, obj2);
     let obj4 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
     obj4[2] = tmp.help;
-    const intl3 = stickerId(1233).intl;
+    const intl3 = stickerId(1114).intl;
     let obj5 = { articleUrl: null };
-    let tmp14Result = tmp14(1994);
+    let tmp14Result = tmp14(2024);
     obj5[0] = tmp14Result.getArticleURL(first.STICKERS_UPLOAD);
-    obj4[3] = intl3.format(stickerId(1233).t.UBj0aX, obj5);
-    items2[2] = callback(stickerId(4474).Text, obj4);
+    obj4[3] = intl3.format(stickerId(1114).t.UBj0aX, obj5);
+    items2[2] = callback(stickerId(4556).Text, obj4);
     obj6 = { text: null, onPress: null, variant: null };
-    const intl4 = stickerId(1233).intl;
-    obj6[0] = intl4.string(stickerId(1233).t.O1REe1);
+    const intl4 = stickerId(1114).intl;
+    obj6[0] = intl4.string(stickerId(1114).t.O1REe1);
     obj6[1] = handleImagePicker;
     let str = "secondary";
     if (null == first) {
@@ -498,7 +498,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     }
     const obj7 = { children: null };
     obj6[2] = str;
-    items2[3] = callback(stickerId(4929).Button, obj6);
+    items2[3] = callback(stickerId(4975).Button, obj6);
     obj7[0] = items2;
     tmp23Result = tmp23(closure_16, obj7);
     const tmp26 = closure_16;
@@ -507,17 +507,17 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   const items3 = [tmp23Result, ];
   const obj8 = { style: tmp.stack, children: null };
   const obj9 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
-  const intl5 = stickerId(1233).intl;
-  obj9[3] = intl5.string(stickerId(1233).t.gjdiKE);
-  const items4 = [callback(stickerId(4474).Text, obj9), , , , , , ];
+  const intl5 = stickerId(1114).intl;
+  obj9[3] = intl5.string(stickerId(1114).t.gjdiKE);
+  const items4 = [callback(stickerId(4556).Text, obj9), , , , , , ];
   let obj10 = { style: tmp.stickerPreview, disabled: null != tmp16Result, onPress: handleImagePicker, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  const intl6 = stickerId(1233).intl;
-  obj10[4] = intl6.string(stickerId(1233).t.O1REe1);
+  const intl6 = stickerId(1114).intl;
+  obj10[4] = intl6.string(stickerId(1114).t.O1REe1);
   if (null != tmp16Result) {
     const obj11 = { sticker: null, size: null, animated: true };
     obj11[0] = tmp16Result;
-    tmp14Result = tmp14(10287);
-    obj11[1] = tmp14(709).space.PX_96;
+    tmp14Result = tmp14(10176);
+    obj11[1] = tmp14(576).space.PX_96;
     let tmp32Result = tmp32(tmp14Result, obj11);
   } else if (null != first) {
     const obj12 = { source: null, style: null, resizeMode: "contain" };
@@ -527,14 +527,14 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj12[1] = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj12);
   } else {
-    tmp32Result = tmp32(tmp31(17421).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(17581).StickerPlusIcon, { size: "lg" });
   }
   obj10[5] = tmp32Result;
-  items4[1] = callback(stickerId(5077).PressableHighlight, obj10);
+  items4[1] = callback(stickerId(5123).PressableHighlight, obj10);
   const obj14 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
-  const intl7 = tmp31(1233).intl;
-  obj14[3] = intl7.string(stickerId(1233).t["3BQmiC"]);
-  items4[2] = callback(stickerId(4474).Text, obj14);
+  const intl7 = tmp31(1114).intl;
+  obj14[3] = intl7.string(stickerId(1114).t["3BQmiC"]);
+  items4[2] = callback(stickerId(4556).Text, obj14);
   const obj15 = {
     style: tmp.emojiPreview,
     onPress() {
@@ -553,31 +553,31 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       const obj17 = { id: null, animated: null, size: null };
       ({ id: obj23[0], animated: obj23[1] } = first1);
       obj17[2] = c12;
-      emojiURL = tmp14(1430).getEmojiURL(obj17);
-      const tmp14Result2 = tmp14(1430);
+      emojiURL = tmp14(1396).getEmojiURL(obj17);
+      const tmp14Result2 = tmp14(1396);
     }
     obj16[2] = emojiURL;
-    tmp32Result = tmp32(tmp14(5594), obj16);
-    const tmp14Result1 = tmp14(5594);
+    tmp32Result = tmp32(tmp14(7130), obj16);
+    const tmp14Result1 = tmp14(7130);
   } else {
-    tmp32Result = tmp32(tmp31(8241).ReactionIcon, { size: "md", color: "text-subtle" });
+    tmp32Result = tmp32(tmp31(8757).ReactionIcon, { size: "md", color: "text-subtle" });
   }
   const items5 = [tmp32Result, ];
   if (null != first1) {
     const _HermesInternal = HermesInternal;
     let combined = ":" + first1.name + ":";
   } else {
-    const intl8 = tmp31(1233).intl;
-    combined = intl8.string(tmp31(1233).t.QTK0TJ);
+    const intl8 = tmp31(1114).intl;
+    combined = intl8.string(tmp31(1114).t.QTK0TJ);
   }
-  items5[1] = callback(stickerId(4474).Text, { variant: "text-md/semibold", color: "input-placeholder-text-default", children: combined });
+  items5[1] = callback(stickerId(4556).Text, { variant: "text-md/semibold", color: "input-placeholder-text-default", children: combined });
   obj15[2] = items5;
-  items4[3] = closure_17(stickerId(5077).PressableHighlight, obj15);
+  items4[3] = closure_17(stickerId(5123).PressableHighlight, obj15);
   const obj18 = { ref: ref1, label: null, placeholder: null, onChange: null, onFocus: null, onSubmitEditing: null, isDisabled: false, isClearable: true, returnKeyType: "next", submitBehavior: "submit" };
-  const intl9 = tmp31(1233).intl;
-  obj18[1] = intl9.string(stickerId(1233).t["0VRh6n"]);
-  const intl10 = tmp31(1233).intl;
-  obj18[2] = intl10.string(stickerId(1233).t["3fGttT"]);
+  const intl9 = tmp31(1114).intl;
+  obj18[1] = intl9.string(stickerId(1114).t["0VRh6n"]);
+  const intl10 = tmp31(1114).intl;
+  obj18[2] = intl10.string(stickerId(1114).t["3fGttT"]);
   obj18[3] = tmp6;
   obj18[4] = onFocus;
   obj18[5] = function onSubmitEditing() {
@@ -590,15 +590,15 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       current2.scrollToEnd({ animated: true });
     }
   };
-  items4[4] = callback(stickerId(7717).TextInput, obj18);
+  items4[4] = callback(stickerId(6606).TextInput, obj18);
   const obj19 = { ref: ref2, maxLength: 100, label: null, placeholder: null, onChange: null, onFocus: null };
-  const intl11 = tmp31(1233).intl;
-  obj19[2] = intl11.string(stickerId(1233).t.uGccej);
-  const intl12 = tmp31(1233).intl;
-  obj19[3] = intl12.string(stickerId(1233).t.zwR0fa);
+  const intl11 = tmp31(1114).intl;
+  obj19[2] = intl11.string(stickerId(1114).t.uGccej);
+  const intl12 = tmp31(1114).intl;
+  obj19[3] = intl12.string(stickerId(1114).t.zwR0fa);
   obj19[4] = tmp8;
   obj19[5] = onFocus;
-  items4[5] = callback(stickerId(7820).TextArea, obj19);
+  items4[5] = callback(stickerId(7085).TextArea, obj19);
   const obj20 = {
     onPress: function handleSave() {
       const self = this;
@@ -615,17 +615,17 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     disabled: null,
     loading: false
   };
-  const intl13 = tmp31(1233).intl;
-  obj20[1] = intl13.string(stickerId(1233).t["R3BPH+"]);
+  const intl13 = tmp31(1114).intl;
+  obj20[1] = intl13.string(stickerId(1114).t["R3BPH+"]);
   let str3 = "secondary";
   if (hasUnsavedChanges(false)) {
     str3 = "primary";
   }
   obj20[2] = str3;
   obj20[3] = !hasUnsavedChanges(false);
-  items4[6] = callback(stickerId(4929).Button, obj20);
+  items4[6] = callback(stickerId(4975).Button, obj20);
   obj8[1] = items4;
-  items3[1] = closure_17(stickerId(4927).Stack, obj8);
+  items3[1] = closure_17(stickerId(4973).Stack, obj8);
   obj[4] = items3;
   return closure_17(c7, obj);
 });

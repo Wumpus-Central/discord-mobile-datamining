@@ -1,14 +1,14 @@
-// === Module 6090: formatSingleCurrencyPrice ===
+// === Module 7234: formatSingleCurrencyPrice ===
 
-// Module 6090 (formatSingleCurrencyPrice)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import set from "set" /* 1234 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
-import CurrencyCodes2 from "CurrencyCodes" /* 6091 */;
-import closure_2 from "_getSystemLocale" /* 1995 */;
-import closure_3 from "handlePaymentSourceCreateEnd" /* 4141 */;
-import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1923 */;
-import { CurrencyCodes } from "sum" /* 502 */;
+// Module 7234 (formatSingleCurrencyPrice)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import set from "set" /* 1115 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
+import CurrencyCodes2 from "CurrencyCodes" /* 7235 */;
+import closure_2 from "_getSystemLocale" /* 2025 */;
+import closure_3 from "handlePaymentSourceCreateEnd" /* 4220 */;
+import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1373 */;
+import { CurrencyCodes } from "sum" /* 1085 */;
 
 require = arg1;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {
@@ -54,16 +54,16 @@ function formatPrice(amount, currency, localeOverride, localeOverride) {
   if (timestamp < date.getTime()) {
     const platformName = set.getPlatformName();
     if ("android" === platformName) {
-      let ipCountryCode = tmp2(6093).default.getUserCountry();
-      const _default2 = tmp2(6093).default;
+      let ipCountryCode = tmp2(7237).default.getUserCountry();
+      const _default2 = tmp2(7237).default;
     } else if ("ios" === platformName) {
-      const storeFront = tmp2(6095).default.getStoreFront();
+      const storeFront = tmp2(7239).default.getStoreFront();
       let country;
       if (storeFront != null) {
         country = storeFront.country;
       }
       ipCountryCode = country;
-      const _default = tmp2(6095).default;
+      const _default = tmp2(7239).default;
     } else {
       ipCountryCode = ipCountryCode.ipCountryCode;
     }

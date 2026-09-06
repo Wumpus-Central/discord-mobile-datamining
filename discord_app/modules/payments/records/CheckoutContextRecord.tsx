@@ -1,9 +1,9 @@
-// === Module 7181: createFromServer ===
+// === Module 7426: createFromServer ===
 
-// Module 7181 (createFromServer)
-import toJSDefault from "toJS" /* 1935 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6090 */;
-import addDefault from "add" /* 6092 */;
+// Module 7426 (createFromServer)
+import toJSDefault from "toJS" /* 1386 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 7234 */;
+import addDefault from "add" /* 7236 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 
 require = arg1;

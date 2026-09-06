@@ -1,8 +1,8 @@
-// === Module 17636: useInviteApplicationBypassInfo ===
+// === Module 17796: useInviteApplicationBypassInfo ===
 
-// Module 17636 (useInviteApplicationBypassInfo)
-import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
-import ME from "ME" /* 673 */;
+// Module 17796 (useInviteApplicationBypassInfo)
+import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ GuildFeatures: c3, Permissions: c4 } = ME);
@@ -13,7 +13,7 @@ export const useInviteApplicationBypassInfo = function useInviteApplicationBypas
   const items = [closure_2];
   const items1 = [guild];
   let hasItem;
-  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_2.can(closure_1_4.KICK_MEMBERS, closure_0), items1);
+  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_2.can(closure_1_4.KICK_MEMBERS, closure_0), items1);
   if (guild != null) {
     const features = guild.features;
     hasItem = features.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);

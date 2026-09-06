@@ -1,11 +1,11 @@
-// === Module 13014: MuteUserElement ===
+// === Module 9056: MuteUserElement ===
 
-// Module 13014 (MuteUserElement)
+// Module 9056 (MuteUserElement)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import { MuteUntilSeconds } from "MAX_FAVORITES" /* 682 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import { MuteUntilSeconds } from "MAX_FAVORITES" /* 1084 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

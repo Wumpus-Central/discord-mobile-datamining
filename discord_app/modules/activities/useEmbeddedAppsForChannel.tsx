@@ -1,12 +1,12 @@
-// === Module 11860: useEmbeddedApps ===
+// === Module 12059: useEmbeddedApps ===
 
-// Module 11860 (useEmbeddedApps)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 5968 */;
+// Module 12059 (useEmbeddedApps)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "sortActivity" /* 4569 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import closure_6 from "participantFromServer" /* 1385 */;
-import { NO_ACTIVITIES } from "participantFromServer" /* 1385 */;
+import closure_4 from "sortActivity" /* 4600 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import closure_6 from "participantFromServer" /* 1956 */;
+import { NO_ACTIVITIES } from "participantFromServer" /* 1956 */;
 
 const require = arg1;
 function useEmbeddedApps(arr, arg1) {
@@ -29,7 +29,7 @@ function useEmbeddedApps(arr, arg1) {
   }
   let items = [closure_5];
   const items1 = [set];
-  const stateFromStoresArray = _require(586).useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = _require(504).useStateFromStoresArray(items, () => {
     const items = [];
     for (const item10006 of set) {
       let tmp = closure_1_5;
@@ -81,7 +81,7 @@ let result = require("set").fileFinishedImporting("modules/activities/useEmbedde
 export default function useEmbeddedAppsForChannel(arg0, arg1) {
   const _require = arg0;
   const items = [closure_6];
-  return useEmbeddedApps(_require(586).useStateFromStoresArray(items, () => {
+  return useEmbeddedApps(_require(504).useStateFromStoresArray(items, () => {
     if (null != closure_0) {
       if (null != tmp.id) {
         if ("" !== tmp.id) {
@@ -96,7 +96,7 @@ export default function useEmbeddedAppsForChannel(arg0, arg1) {
 export const useEmbeddedAppsByChannel = function useEmbeddedAppsByChannel(arg0) {
   const _require = arg0;
   let items = [closure_6];
-  const tmp = useEmbeddedApps(_require(586).useStateFromStores(items, () => {
+  const tmp = useEmbeddedApps(_require(504).useStateFromStores(items, () => {
     if (null != closure_0) {
       let embeddedActivitiesForGuild = closure_1_6.getEmbeddedActivitiesForGuild(tmp);
     } else {
@@ -128,7 +128,7 @@ export const useEmbeddedAppsWithPresence = function useEmbeddedAppsWithPresence(
   const _require = arg0;
   const items = [closure_4];
   const items1 = [arg0];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const map = new Map();
     const item = map.forEach((embeddedActivity) => {
       let value;
@@ -159,5 +159,5 @@ export const useEmbeddedAppsWithPresence = function useEmbeddedAppsWithPresence(
       const result = map.set(id, obj);
     });
     return map;
-  }, items1, _require(586).statesWillNeverBeEqual);
+  }, items1, _require(504).statesWillNeverBeEqual);
 };

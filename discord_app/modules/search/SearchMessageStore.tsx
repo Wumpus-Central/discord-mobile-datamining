@@ -1,15 +1,15 @@
-// === Module 6137: handleReaction ===
+// === Module 7281: handleReaction ===
 
-// Module 6137 (handleReaction)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4132 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4376 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import { ChannelTypes } from "ME" /* 673 */;
+// Module 7281 (handleReaction)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import MAX_REACTIONS from "MAX_REACTIONS" /* 4211 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4461 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+import { ChannelTypes } from "ME" /* 1074 */;
 
 require = arg1;
 function handleReaction(optimistic) {
@@ -278,8 +278,8 @@ prototype2["getAnalyticsId"] = function getAnalyticsId(arg0) {
   }
   return value.analyticsId;
 };
-prototype2["hasSearchState"] = function hasSearchState(c23) {
-  return map.has(c23);
+prototype2["hasSearchState"] = function hasSearchState(c25) {
+  return map.has(c25);
 };
 SearchMessageStore.displayName = "SearchMessageStore";
 const searchMessageStore = new SearchMessageStore(dispatcherDefault, {

@@ -1,15 +1,15 @@
-// === Module 9557: updateSpeaker ===
+// === Module 9491: updateSpeaker ===
 
-// Module 9557 (updateSpeaker)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isStreamKey from "isStreamKey" /* 4544 */;
-import closure_4 from "reset" /* 4500 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_7 from "anyoneHasFlagInContext" /* 5372 */;
-import closure_8 from "getParticipants" /* 4494 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
+// Module 9491 (updateSpeaker)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isStreamKey from "isStreamKey" /* 4612 */;
+import closure_4 from "reset" /* 4582 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
+import closure_6 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_7 from "anyoneHasFlagInContext" /* 5419 */;
+import closure_8 from "getParticipants" /* 4576 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 import importDefaultResult from "apply" /* 12 */;
 
 require = arg1;

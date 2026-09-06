@@ -1,6 +1,6 @@
-// === Module 16803: useLaunchPadPullTabMinimized ===
+// === Module 16967: useLaunchPadPullTabMinimized ===
 
-// Module 16803 (useLaunchPadPullTabMinimized)
+// Module 16967 (useLaunchPadPullTabMinimized)
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

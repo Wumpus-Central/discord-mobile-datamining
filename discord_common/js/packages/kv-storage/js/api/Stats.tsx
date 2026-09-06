@@ -1,8 +1,8 @@
-// === Module 1971: malformedValueCount ===
+// === Module 2002: malformedValueCount ===
 
-// Module 1971 (malformedValueCount)
+// Module 2002 (malformedValueCount)
 import set from "set" /* 2 */;
-import open from "open" /* 1964 */;
+import open from "open" /* 1995 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Stats.tsx");
 const prototype = function Stats() {

@@ -1,17 +1,17 @@
-// === Module 5368: createModeratorOverwrite ===
+// === Module 5415: createModeratorOverwrite ===
 
-// Module 5368 (createModeratorOverwrite)
-import fromStringAll from "fromString" /* 503 */;
-import Permissions from "Permissions" /* 1394 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import closure_3 from "initialize" /* 4121 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1429 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
-import ME from "ME" /* 673 */;
+// Module 5415 (createModeratorOverwrite)
+import fromStringAll from "fromString" /* 1086 */;
+import Permissions from "Permissions" /* 1965 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import closure_3 from "initialize" /* 4200 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1975 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ GuildFeatures: c10, Permissions: unpackModuleId } = ME);
@@ -28,7 +28,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
     deny = tmp.deny;
   }
   if (deny == null) {
-    deny = tmp2(4125).NONE;
+    deny = tmp2(4204).NONE;
   }
   obj[2] = fromStringAll.remove(deny, Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   const obj2 = fromStringAll;
@@ -37,7 +37,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
     allow = tmp.allow;
   }
   if (allow == null) {
-    allow = tmp2(4125).NONE;
+    allow = tmp2(4204).NONE;
   }
   obj[3] = fromStringAll.combine(Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
@@ -49,7 +49,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
     deny = deny.deny;
   }
   if (deny == null) {
-    deny = tmp(4125).NONE;
+    deny = tmp(4204).NONE;
   }
   obj[2] = fromStringAll.remove(deny, Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   const obj2 = fromStringAll;
@@ -58,7 +58,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
     allow = deny.allow;
   }
   if (allow == null) {
-    allow = tmp(4125).NONE;
+    allow = tmp(4204).NONE;
   }
   obj[3] = fromStringAll.combine(Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
@@ -91,8 +91,8 @@ export const isEmptyOverwrite = function isEmptyOverwrite(c2) {
   ({ allow, deny } = c2);
   let equalsResult = fromStringAll.equals(allow, applyOverwritesAll.NONE);
   if (equalsResult) {
-    equalsResult = tmp(503).equals(deny, tmp(4125).NONE);
-    const tmpResult = tmp(503);
+    equalsResult = tmp(1086).equals(deny, tmp(4204).NONE);
+    const tmpResult = tmp(1086);
   }
   return equalsResult;
 };
@@ -100,7 +100,7 @@ export const useCanCreateStageChannelByGuild = function useCanCreateStageChannel
   const _require = guildId;
   const items = [closure_8, closure_5, closure_7];
   const items1 = [guildId];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const id = closure_1_5.getId();
     const guild = closure_1_7.getGuild(guildId);
     let tmp3 = null != guild;
@@ -123,7 +123,7 @@ export const useCanUpdateStageChannelModerators = function useCanUpdateStageChan
   const _require = id;
   const items = [closure_8, closure_7, closure_6];
   const items1 = [id];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const channel = closure_1_6.getChannel(id);
     let guildId;
     if (channel != null) {
@@ -145,7 +145,7 @@ export const useCanModerateRequestToSpeak = function useCanModerateRequestToSpea
   const _require = id;
   const items = [closure_6, closure_8];
   const items1 = [id];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_8.can(closure_1_11.MUTE_MEMBERS, closure_1_6.getChannel(tmp));

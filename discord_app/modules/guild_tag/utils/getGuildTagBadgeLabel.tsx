@@ -1,10 +1,10 @@
-// === Module 17432: getGuildTagBadgeLabel ===
+// === Module 17592: getGuildTagBadgeLabel ===
 
-// Module 17432 (getGuildTagBadgeLabel)
+// Module 17592 (getGuildTagBadgeLabel)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import items from "items" /* 7865 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import items from "items" /* 7944 */;
 
 const GuildTagBadgeKind = items.GuildTagBadgeKind;
 const result = set.fileFinishedImporting("modules/guild_tag/utils/getGuildTagBadgeLabel.tsx");

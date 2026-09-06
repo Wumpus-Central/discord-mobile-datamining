@@ -1,13 +1,13 @@
-// === Module 10089: getUserAgnosticState ===
+// === Module 9980: getUserAgnosticState ===
 
-// Module 10089 (getUserAgnosticState)
+// Module 9980 (getUserAgnosticState)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import ME from "ME" /* 673 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import set2 from "set" /* 1234 */;
-import isMetaQuest from "isMetaQuest" /* 1623 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
+import set2 from "set" /* 1115 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import isMetaQuest from "isMetaQuest" /* 1608 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let c4 = false;

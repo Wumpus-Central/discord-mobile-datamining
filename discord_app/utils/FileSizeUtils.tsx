@@ -1,8 +1,8 @@
-// === Module 4372: formatSize ===
+// === Module 4457: formatSize ===
 
-// Module 4372 (formatSize)
+// Module 4457 (formatSize)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 function formatSize(result, arg1) {
   let tmp = arg1;

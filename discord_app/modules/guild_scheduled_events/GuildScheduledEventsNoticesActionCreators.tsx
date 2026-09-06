@@ -1,8 +1,8 @@
-// === Module 16892: hideLiveChannelNotice ===
+// === Module 17056: hideLiveChannelNotice ===
 
-// Module 16892 (hideLiveChannelNotice)
+// Module 17056 (hideLiveChannelNotice)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx");
 

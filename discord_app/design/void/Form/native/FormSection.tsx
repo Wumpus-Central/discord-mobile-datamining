@@ -1,15 +1,15 @@
-// === Module 8385: FormSection ===
+// === Module 8602: FormSection ===
 
-// Module 8385 (FormSection)
-import ThemesDefault from "Themes" /* 709 */;
-import context from "context" /* 5607 */;
-import DividerDefault from "Divider" /* 8382 */;
-import FormTitleDefault from "FormTitle" /* 8386 */;
+// Module 8602 (FormSection)
+import ThemesDefault from "Themes" /* 576 */;
+import context from "context" /* 5686 */;
+import DividerDefault from "Divider" /* 8599 */;
+import FormTitleDefault from "FormTitle" /* 8603 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { TitleStyleType } from "semanticColor" /* 1300 */;
+import { TitleStyleType } from "semanticColor" /* 1182 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ View: c4, StyleSheet, Platform } = get_ActivityIndicator);
@@ -45,7 +45,7 @@ export default function FormSection(arg0) {
     const found = toArrayResult.filter((type) => {
       let isValidElementResult = closure_3.isValidElement(type);
       if (isValidElementResult) {
-        isValidElementResult = type.type !== callback(8382);
+        isValidElementResult = type.type !== callback(8599);
       }
       return isValidElementResult;
     });
@@ -74,7 +74,7 @@ export default function FormSection(arg0) {
     }
     obj1[2] = flag;
     obj1[3] = found;
-    obj[1] = callback(tmp3(6001).TableRowGroup, obj1);
+    obj[1] = callback(tmp3(5687).TableRowGroup, obj1);
     const items = [callback(closure_4, obj), ];
     let tmp20Result = null;
     if (null != hint) {
@@ -113,8 +113,8 @@ export default function FormSection(arg0) {
       if (TitleStyleType.DEFAULT === titleStyleType) {
         titledSectionNoBorderOrMargin = tmp2.titledSectionHeader;
       } else if (tmp12.ANDROID_NO_BORDER === titleStyleType) {
-        titledSectionNoBorderOrMargin = tmp3(1234).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
-        const tmp3Result = tmp3(1234);
+        titledSectionNoBorderOrMargin = tmp3(1115).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
+        const tmp3Result = tmp3(1115);
       } else {
         titledSectionNoBorderOrMargin = emptySectionHeader;
         if (tmp12.NO_BORDER_OR_MARGIN === titleStyleType) {

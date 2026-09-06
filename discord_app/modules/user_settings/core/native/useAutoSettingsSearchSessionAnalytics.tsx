@@ -1,18 +1,18 @@
-// === Module 16740: useAutoSettingsSearchSessionAnalytics ===
+// === Module 16905: useAutoSettingsSearchSessionAnalytics ===
 
-// Module 16740 (useAutoSettingsSearchSessionAnalytics)
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4946 */;
-import usePreviousDefault from "usePrevious" /* 8595 */;
+// Module 16905 (useAutoSettingsSearchSessionAnalytics)
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
+import usePreviousDefault from "usePrevious" /* 8272 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getState" /* 7167 */;
-import closure_5 from "zustandStore" /* 14580 */;
+import closure_4 from "getState" /* 1895 */;
+import closure_5 from "zustandStore" /* 14691 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
 
 export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSearchSessionAnalytics() {
   const items = [closure_4];
-  stateFromStores = stateFromStores(586).useStateFromStores(items, () => {
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     state = state.getState();
     return state === stateFromStores(table[4]).AppStates.ACTIVE;
   });

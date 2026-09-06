@@ -1,13 +1,13 @@
-// === Module 14695: computeAffectedGuilds ===
+// === Module 14851: computeAffectedGuilds ===
 
-// Module 14695 (computeAffectedGuilds)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import create from "create" /* 1305 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import closure_2 from "handleChannelSelect" /* 5460 */;
-import closure_3 from "handleInviteData" /* 4398 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "insertUnsortedGuilds" /* 5390 */;
+// Module 14851 (computeAffectedGuilds)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import create from "create" /* 1187 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import closure_2 from "handleChannelSelect" /* 5509 */;
+import closure_3 from "handleInviteData" /* 4480 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "insertUnsortedGuilds" /* 5438 */;
 
 require = arg1;
 function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
@@ -16,20 +16,20 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
   } else {
     let num2 = 2;
     let num = 2;
-    if (EXPANDING(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== setting) {
+    if (EXPANDING(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== setting) {
       num = 1;
-      if (tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== setting) {
+      if (tmp8(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== setting) {
         num = -1;
-        if (tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === setting) {
+        if (tmp8(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === setting) {
           num = 0;
         }
       }
     }
-    if (EXPANDING(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
+    if (EXPANDING(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
       num2 = 1;
-      if (tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
+      if (tmp8(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
         num2 = -1;
-        if (tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
+        if (tmp8(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
           num2 = 0;
         }
       }
@@ -41,13 +41,13 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
         } else {
           EXPANDING = obj.EXPANDING;
         }
-        dependencyMap = tmp8(6252).getSanitizedActivityRestrictedGuilds();
+        dependencyMap = tmp8(6995).getSanitizedActivityRestrictedGuilds();
         flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
-        if (setting !== tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {
-          if (setting !== tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
-            if (setting !== tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON) {
+        if (setting !== tmp8(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {
+          if (setting !== tmp8(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
+            if (setting !== tmp8(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON) {
               let str3 = "all";
-              if (setting === tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
+              if (setting === tmp8(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
                 str3 = "all";
               }
               let str = str3;
@@ -143,14 +143,14 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
 }
 function getProfileVisibilitySettingName(NumberResult) {
   if (create.ProfileVisibility.FRIENDS_AND_ALL_GUILDS === NumberResult) {
-    const intl3 = tmp(1233).intl;
-    return intl3.string(tmp(1233).t.Boxc8R).toLowerCase();
-  } else if (tmp(1305).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === NumberResult) {
-    const intl2 = tmp(1233).intl;
-    return intl2.string(tmp(1233).t.YOIKBt).toLowerCase();
-  } else if (tmp(1305).ProfileVisibility.FRIENDS_ONLY === NumberResult) {
-    const intl = tmp(1233).intl;
-    return intl.string(tmp(1233).t.u0nlJv).toLowerCase();
+    const intl3 = tmp(1114).intl;
+    return intl3.string(tmp(1114).t.Boxc8R).toLowerCase();
+  } else if (tmp(1187).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === NumberResult) {
+    const intl2 = tmp(1114).intl;
+    return intl2.string(tmp(1114).t.YOIKBt).toLowerCase();
+  } else if (tmp(1187).ProfileVisibility.FRIENDS_ONLY === NumberResult) {
+    const intl = tmp(1114).intl;
+    return intl.string(tmp(1114).t.u0nlJv).toLowerCase();
   } else {
     return "";
   }
@@ -169,9 +169,9 @@ export const ChangeDirection = obj;
 export const getPermissiveness = function getPermissiveness(arg0) {
   if (create.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF === arg0) {
     return 2;
-  } else if (tmp(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS === arg0) {
+  } else if (tmp(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS === arg0) {
     return 1;
-  } else if (tmp(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === arg0) {
+  } else if (tmp(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === arg0) {
     return 0;
   } else {
     return -1;
@@ -187,14 +187,14 @@ export const profileVisibilityToActivityRestriction = function profileVisibility
 export { computeAffectedGuilds };
 export const getActivityRestrictionSettingName = function getActivityRestrictionSettingName(NumberResult) {
   if (create.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF === NumberResult) {
-    const intl3 = tmp(1233).intl;
-    return intl3.string(tmp(1233).t.FzgQna).toLowerCase();
-  } else if (tmp(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS === NumberResult) {
-    const intl2 = tmp(1233).intl;
-    return intl2.string(tmp(1233).t["1hvuGH"]).toLowerCase();
-  } else if (tmp(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === NumberResult) {
-    const intl = tmp(1233).intl;
-    return intl.string(tmp(1233).t.fQc5la).toLowerCase();
+    const intl3 = tmp(1114).intl;
+    return intl3.string(tmp(1114).t.FzgQna).toLowerCase();
+  } else if (tmp(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS === NumberResult) {
+    const intl2 = tmp(1114).intl;
+    return intl2.string(tmp(1114).t["1hvuGH"]).toLowerCase();
+  } else if (tmp(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === NumberResult) {
+    const intl = tmp(1114).intl;
+    return intl.string(tmp(1114).t.fQc5la).toLowerCase();
   } else {
     return "";
   }
@@ -204,15 +204,15 @@ export const getProfileToActivityUpsellStrings = function getProfileToActivityUp
   const intl = getSystemLocale.intl;
   const t = getSystemLocale.t;
   obj = { title: intl.string(arg0 ? t.eYDA7D : t["9jYwjo"]), subtitle: null, confirmText: null, toastContent: null };
-  const intl2 = tmp(1233).intl;
-  const t2 = tmp(1233).t;
+  const intl2 = tmp(1114).intl;
+  const t2 = tmp(1114).t;
   obj = { settingName };
   obj[1] = intl2.format(arg0 ? t2["c5/jDc"] : t2.ajzh8S, obj);
-  const intl3 = tmp(1233).intl;
-  const t3 = tmp(1233).t;
+  const intl3 = tmp(1114).intl;
+  const t3 = tmp(1114).t;
   obj[2] = intl3.string(arg0 ? t3["6uPZV1"] : t3.a9PIyD);
-  const intl4 = tmp(1233).intl;
-  const t4 = tmp(1233).t;
+  const intl4 = tmp(1114).intl;
+  const t4 = tmp(1114).t;
   obj[3] = intl4.string(arg0 ? t4.AdpgML : t4["Q7E+QF"]);
   return obj;
 };
@@ -220,15 +220,15 @@ export const getUpsellStrings = function getUpsellStrings(arg0, settingName) {
   const intl = getSystemLocale.intl;
   const t = getSystemLocale.t;
   obj = { title: intl.string(arg0 ? t.jRx1Aa : t.S0Y0bh), subtitle: null, confirmText: null, toastContent: null };
-  const intl2 = tmp(1233).intl;
-  const t2 = tmp(1233).t;
+  const intl2 = tmp(1114).intl;
+  const t2 = tmp(1114).t;
   obj = { settingName };
   obj[1] = intl2.format(arg0 ? t2.Fs96LO : t2.GcoYX8, obj);
-  const intl3 = tmp(1233).intl;
-  const t3 = tmp(1233).t;
+  const intl3 = tmp(1114).intl;
+  const t3 = tmp(1114).t;
   obj[2] = intl3.string(arg0 ? t3["4DM5HJ"] : t3.WRrDtI);
-  const intl4 = tmp(1233).intl;
-  const t4 = tmp(1233).t;
+  const intl4 = tmp(1114).intl;
+  const t4 = tmp(1114).t;
   obj[3] = intl4.string(arg0 ? t4.AdpgML : t4["Q7E+QF"]);
   return obj;
 };
@@ -245,44 +245,44 @@ export const computeProfileToActivityUpsell = function computeProfileToActivityU
   } else {
     let ACTIVITY_STATUS_OFF2 = obj.get(setting);
     if (ACTIVITY_STATUS_OFF2 == null) {
-      ACTIVITY_STATUS_OFF2 = tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
+      ACTIVITY_STATUS_OFF2 = tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
     }
     let num = 2;
     let num2 = 2;
-    if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF2) {
+    if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF2) {
       num2 = 1;
-      if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF2) {
+      if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF2) {
         num2 = -1;
-        if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF2) {
+        if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF2) {
           num2 = 0;
         }
       }
     }
     let num3 = num;
-    if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
+    if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
       num3 = 1;
-      if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
+      if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
         num3 = -1;
-        if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
+        if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
           num3 = 0;
         }
       }
     }
     let num4 = num;
-    if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== setting) {
+    if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== setting) {
       num4 = 1;
-      if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== setting) {
+      if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== setting) {
         num4 = -1;
-        if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === setting) {
+        if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === setting) {
           num4 = 0;
         }
       }
     }
-    if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
+    if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
       num = 1;
-      if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
+      if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
         num = -1;
-        if (tmp3(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
+        if (tmp3(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
           num = 0;
         }
       }
@@ -311,7 +311,7 @@ export const sortGuildIdsByFrecency = function sortGuildIdsByFrecency(guildIds) 
   });
 };
 export const applyBulkGuildRestrictionChange = function applyBulkGuildRestrictionChange(direction, affectedGuildIds) {
-  obj = set(6252);
+  obj = set(6995);
   const sanitizedActivityRestrictedGuilds = obj.getSanitizedActivityRestrictedGuilds();
   set = new Set(affectedGuildIds);
   if (direction === obj.RESTRICTING) {
@@ -319,7 +319,7 @@ export const applyBulkGuildRestrictionChange = function applyBulkGuildRestrictio
     const items = [];
     HermesBuiltin.arraySpread(tmp5, HermesBuiltin.arraySpread(sanitizedActivityRestrictedGuilds, 0));
     const set1 = new Set(items);
-    const ActivityRestrictedGuilds2 = tmp(4166).ActivityRestrictedGuilds;
+    const ActivityRestrictedGuilds2 = tmp(1935).ActivityRestrictedGuilds;
     const items1 = [];
     HermesBuiltin.arraySpread(set1, 0);
     ActivityRestrictedGuilds2.updateSetting(items1);
@@ -327,7 +327,7 @@ export const applyBulkGuildRestrictionChange = function applyBulkGuildRestrictio
     const items2 = [];
     HermesBuiltin.arraySpread(sanitizedActivityRestrictedGuilds, 0);
     const found = items2.filter((arg0) => !set.has(arg0));
-    const ActivityRestrictedGuilds = tmp(4166).ActivityRestrictedGuilds;
+    const ActivityRestrictedGuilds = tmp(1935).ActivityRestrictedGuilds;
     ActivityRestrictedGuilds.updateSetting(found);
   }
 };

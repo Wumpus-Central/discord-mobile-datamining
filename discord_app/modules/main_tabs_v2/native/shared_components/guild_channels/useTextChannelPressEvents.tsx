@@ -1,8 +1,8 @@
-// === Module 16825: useTextChannelPressEvents ===
+// === Module 16989: useTextChannelPressEvents ===
 
-// Module 16825 (useTextChannelPressEvents)
+// Module 16989 (useTextChannelPressEvents)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx");

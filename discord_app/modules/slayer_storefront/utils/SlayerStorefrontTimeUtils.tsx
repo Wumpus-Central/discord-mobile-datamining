@@ -1,10 +1,10 @@
-// === Module 16763: getLimitedOfferTimeLeft ===
+// === Module 16928: getLimitedOfferTimeLeft ===
 
-// Module 16763 (getLimitedOfferTimeLeft)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 3370 */;
-import hooksDefault from "hooks" /* 4074 */;
-import useIntervalDefault from "useInterval" /* 7200 */;
+// Module 16928 (getLimitedOfferTimeLeft)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 3417 */;
+import hooksDefault from "hooks" /* 4153 */;
+import useIntervalDefault from "useInterval" /* 7445 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -18,14 +18,14 @@ function getLimitedOfferTimeLeft(arg0) {
     if (diffResult > 0) {
       const obj = { days: null, hours: null, minutes: null, seconds: null };
       const _Math = Math;
-      obj[0] = Math.floor(diffResult / tmp5(684).Seconds.DAY);
+      obj[0] = Math.floor(diffResult / tmp5(1090).Seconds.DAY);
       const _Math2 = Math;
-      const result = diffResult % tmp5(684).Seconds.DAY;
-      obj[1] = Math.floor(result / tmp5(684).Seconds.HOUR);
+      const result = diffResult % tmp5(1090).Seconds.DAY;
+      obj[1] = Math.floor(result / tmp5(1090).Seconds.HOUR);
       const _Math3 = Math;
-      const result1 = diffResult % tmp5(684).Seconds.HOUR;
-      obj[2] = Math.floor(result1 / tmp5(684).Seconds.MINUTE);
-      obj[3] = diffResult % tmp5(684).Seconds.MINUTE;
+      const result1 = diffResult % tmp5(1090).Seconds.HOUR;
+      obj[2] = Math.floor(result1 / tmp5(1090).Seconds.MINUTE);
+      obj[3] = diffResult % tmp5(1090).Seconds.MINUTE;
       tmp4 = obj;
     }
     return tmp4;

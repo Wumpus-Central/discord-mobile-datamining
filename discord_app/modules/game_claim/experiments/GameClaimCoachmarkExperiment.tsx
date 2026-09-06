@@ -1,8 +1,8 @@
-// === Module 16100: experiment ===
+// === Module 16262: experiment ===
 
-// Module 16100 (experiment)
+// Module 16262 (experiment)
 import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4389 */;
+import createExperiment from "createExperiment" /* 4474 */;
 
 const items = [{ id: 1, label: "Enable Game Claim Coachmark", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-02_game_claim_coachmark", label: "Game Claim Coachmark", defaultConfig: { enabled: false }, treatments: items });

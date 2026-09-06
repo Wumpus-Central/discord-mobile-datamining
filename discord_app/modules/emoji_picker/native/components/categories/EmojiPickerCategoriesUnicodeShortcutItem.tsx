@@ -1,12 +1,12 @@
-// === Module 9226: EmojiPickerCategoriesUnicodeShortcutItem ===
+// === Module 10360: EmojiPickerCategoriesUnicodeShortcutItem ===
 
-// Module 9226 (EmojiPickerCategoriesUnicodeShortcutItem)
+// Module 10360 (EmojiPickerCategoriesUnicodeShortcutItem)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ EXPRESSION_FOOTER_HEIGHT: closure_6, NODE_SIZE } = ME);

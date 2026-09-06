@@ -1,12 +1,12 @@
-// === Module 13715: calculateFps ===
+// === Module 13821: calculateFps ===
 
-// Module 13715 (calculateFps)
+// Module 13821 (calculateFps)
 import set2 from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
-import ME from "ME" /* 673 */;
-import sleep from "sleep" /* 4558 */;
-import isTablet from "isTablet" /* 4755 */;
-import dispatchAutoDisableVideoDefault from "dispatchAutoDisableVideo" /* 13716 */;
+import ME from "ME" /* 1074 */;
+import sleep from "sleep" /* 4589 */;
+import isTablet from "isTablet" /* 4801 */;
+import dispatchAutoDisableVideoDefault from "dispatchAutoDisableVideo" /* 13822 */;
 
 const VideoToggleState = ME.VideoToggleState;
 class VideoHealthManager {
@@ -114,7 +114,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     if (null !== lastBackoffTime) {
       num2 = 1;
       if (expBackoffFactor <= 16) {
-        let obj = _require(4558);
+        let obj = _require(4589);
         num2 = 1;
         if (self.elapsedSeconds(obj.now(), lastBackoffTime) <= 600) {
           num2 = expBackoffFactor * 2;
@@ -122,11 +122,11 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
       }
     }
     obj = { lastBackoffTime: null, expBackoffFactor: null };
-    obj[0] = _require(4558).now();
+    obj[0] = _require(4589).now();
     obj[1] = num2;
     self.retryBackoffCache[arg0] = obj;
     const result = num2 * self.backoffTimeSec;
-    const result1 = result * self(684).Millis.SECOND;
+    const result1 = result * self(1090).Millis.SECOND;
     const logger2 = self.logger;
     const _HermesInternal2 = HermesInternal;
     logger2.info("starting backoff timer with time = " + result1 + " milliseconds");
@@ -134,7 +134,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     self.timeoutIdCache[arg0] = setTimeout(() => {
       self.queueReenable(closure_0);
     }, result1);
-    const obj3 = _require(4558);
+    const obj3 = _require(4589);
   }
 };
 prototype["queueReenable"] = function queueReenable(closure_0) {

@@ -1,16 +1,16 @@
-// === Module 15868: getMessagesItemChannelSizes ===
+// === Module 16030: getMessagesItemChannelSizes ===
 
-// Module 15868 (getMessagesItemChannelSizes)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 9106 */;
-import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 15869 */;
-import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 15869 */;
-import _modDef15878 from "module_15878" /* 15878 */;
-import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15879 */;
+// Module 16030 (getMessagesItemChannelSizes)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import map from "map" /* 10119 */;
+import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 16031 */;
+import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 16031 */;
+import _modDef16040 from "module_16040" /* 16040 */;
+import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 16041 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -36,7 +36,7 @@ let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
     obj = { height: null, row: null };
     obj[0] = placeholderHeight;
     obj[1] = row;
-    tmp5 = jsx(_modDef15878, { height: null, row: null });
+    tmp5 = jsx(_modDef16040, { height: null, row: null });
   }
   return tmp5;
 });
@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo((arg0) => {
   return <closure_7 />;
 });
 const memoResult1 = importAllResult.memo((channelId) => {
-  let obj = _require(8116);
+  let obj = _require(8874);
   const items = [channelId.channelId];
   const tmp = callback(obj.useRecyclingState(false, items), 2);
   _require = tmp2;

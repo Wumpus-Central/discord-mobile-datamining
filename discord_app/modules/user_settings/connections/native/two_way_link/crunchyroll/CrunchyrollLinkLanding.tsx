@@ -1,13 +1,13 @@
-// === Module 9359: CrunchyrollLinkLanding ===
+// === Module 9273: CrunchyrollLinkLanding ===
 
-// Module 9359 (CrunchyrollLinkLanding)
-import combinedDefault from "combined" /* 1994 */;
-import registerAssetDefault from "registerAsset" /* 9360 */;
+// Module 9273 (CrunchyrollLinkLanding)
+import combinedDefault from "combined" /* 2024 */;
+import registerAssetDefault from "registerAsset" /* 9274 */;
 import closure_3 from "noop" /* 19 */;
-import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9358 */;
-import ME from "ME" /* 673 */;
+import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9272 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ HelpdeskArticles: c5, PlatformTypes: closure_6 } = ME);
@@ -15,14 +15,14 @@ let closure_8 = createCacheKey.createStyles({ image: { width: 234, height: 147 }
 const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
 
 export default function CrunchyrollLinkLanding() {
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   let items = [navigation];
   const memo = React.useMemo(() => {
     const obj = { label: null, icon: null };
-    const intl = navigation(1233).intl;
-    obj[0] = intl.string(navigation(1233).t["2TXHQd"]);
-    obj[1] = navigation(8597).PlayIcon;
+    const intl = navigation(1114).intl;
+    obj[0] = intl.string(navigation(1114).t["2TXHQd"]);
+    obj[1] = navigation(8274).PlayIcon;
     const items = [obj];
     return items;
   }, []);
@@ -30,13 +30,13 @@ export default function CrunchyrollLinkLanding() {
     navigation.push(closure_1_4.PRE_CONNECT);
   }, items);
   obj = { platformType: constants2.CRUNCHYROLL, img: registerAssetDefault, imgStyle: callback().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
-  let intl = navigation(1233).intl;
-  obj[3] = intl.string(navigation(1233).t["Da+3NJ"]);
-  const intl2 = navigation(1233).intl;
-  obj[4] = intl2.string(navigation(1233).t.MaPpPL);
+  let intl = navigation(1114).intl;
+  obj[3] = intl.string(navigation(1114).t["Da+3NJ"]);
+  const intl2 = navigation(1114).intl;
+  obj[4] = intl2.string(navigation(1114).t.MaPpPL);
   const tmp = callback();
   obj[5] = combinedDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj[6] = callback;
   obj[7] = memo;
-  return jsx(navigation(9322).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: registerAssetDefault, imgStyle: callback().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(9225).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: registerAssetDefault, imgStyle: callback().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

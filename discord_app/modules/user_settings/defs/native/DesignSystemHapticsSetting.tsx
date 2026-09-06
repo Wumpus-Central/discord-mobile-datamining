@@ -1,10 +1,10 @@
-// === Module 15642: route ===
+// === Module 15800: route ===
 
-// Module 15642 (route)
+// Module 15800 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import MobileUserSettings from "MobileUserSettings" /* 7896 */;
-import createToggle from "createToggle" /* 11292 */;
+import ME from "ME" /* 1074 */;
+import MobileUserSettings from "MobileUserSettings" /* 7975 */;
+import createToggle from "createToggle" /* 11468 */;
 
 obj = {
   useTitle() {
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_HAPTICS,
   getComponent() {
-    return require(15643) /* HapticButton */.default;
+    return require(15801) /* HapticButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

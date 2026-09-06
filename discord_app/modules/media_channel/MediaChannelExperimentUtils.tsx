@@ -1,8 +1,8 @@
-// === Module 9720: useGuildEligibleForMediaChannels ===
+// === Module 9733: useGuildEligibleForMediaChannels ===
 
-// Module 9720 (useGuildEligibleForMediaChannels)
+// Module 9733 (useGuildEligibleForMediaChannels)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const GuildFeatures = ME.GuildFeatures;
 const result = set.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");

@@ -1,10 +1,10 @@
-// === Module 10905: useInviteActions ===
+// === Module 10943: useInviteActions ===
 
-// Module 10905 (useInviteActions)
+// Module 10943 (useInviteActions)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { InstantInviteSources } from "ME" /* 673 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import { InstantInviteSources } from "ME" /* 1074 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUtils.tsx");
@@ -21,11 +21,11 @@ export const useInviteActions = function useInviteActions(invite) {
   }
   callback = isPrivateResult;
   let obj = { label: null, iconSource: null, action: null };
-  let intl = invite(1233).intl;
-  obj[0] = intl.string(invite(1233).t.RDE0Sc);
-  obj[1] = onInviteRevoked(10899).share;
+  let intl = invite(1114).intl;
+  obj[0] = intl.string(invite(1114).t.RDE0Sc);
+  obj[1] = onInviteRevoked(10937).share;
   obj[2] = function action() {
-    onInviteRevoked(10906)(() => {
+    onInviteRevoked(10944)(() => {
       let obj = closure_1_0(closure_1_2[7]);
       let tmp4;
       if (!closure_3) {
@@ -58,25 +58,25 @@ export const useInviteActions = function useInviteActions(invite) {
   };
   const items = [obj, , ];
   obj = { label: null, iconSource: null, action: null };
-  const intl2 = invite(1233).intl;
-  obj[0] = intl2.string(invite(1233).t.OpuAlK);
-  obj[1] = onInviteRevoked(10899).copy;
+  const intl2 = invite(1114).intl;
+  obj[0] = intl2.string(invite(1114).t.OpuAlK);
+  obj[1] = onInviteRevoked(10937).copy;
   obj[2] = function action() {
     if (c3) {
-      let tmpResult = tmp(9935);
+      let tmpResult = tmp(9820);
       tmpResult.handleCopy(invite.code, invite.channel, closure_1_6.GROUP_DM, false);
     } else {
-      tmpResult = tmp(5990);
-      tmpResult.copy(onInviteRevoked(7514)(invite.code));
-      const result = invite(4193).presentCopiedToClipboard();
-      const obj2 = invite(4193);
+      tmpResult = tmp(7190);
+      tmpResult.copy(onInviteRevoked(7759)(invite.code));
+      const result = invite(4258).presentCopiedToClipboard();
+      const obj2 = invite(4258);
     }
   };
   items[1] = obj;
   obj1 = { label: null, iconSource: null, variant: "destructive", action: null };
-  const intl3 = invite(1233).intl;
-  obj1[0] = intl3.string(invite(1233).t.v6Yazx);
-  obj1[1] = onInviteRevoked(10899).revoke;
+  const intl3 = invite(1114).intl;
+  obj1[0] = intl3.string(invite(1114).t.v6Yazx);
+  obj1[1] = onInviteRevoked(10937).revoke;
   dependencyMap = callback(function*() {
     closure_0 = tmp3;
     c3 = 1;

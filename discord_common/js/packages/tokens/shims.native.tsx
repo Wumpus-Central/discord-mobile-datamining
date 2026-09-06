@@ -1,8 +1,8 @@
-// === Module 708: unsafe_getRawColor ===
+// === Module 575: unsafe_getRawColor ===
 
-// Module 708 (unsafe_getRawColor)
+// Module 575 (unsafe_getRawColor)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
+import ThemesDefault from "Themes" /* 576 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/shims.native.tsx");
 

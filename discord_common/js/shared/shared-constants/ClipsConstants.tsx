@@ -1,6 +1,6 @@
-// === Module 7382: USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH ===
+// === Module 7627: USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH ===
 
-// Module 7382 (USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH)
+// Module 7627 (USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ClipsConstants.tsx");

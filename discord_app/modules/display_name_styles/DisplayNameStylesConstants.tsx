@@ -1,9 +1,9 @@
-// === Module 1938: items3 ===
+// === Module 1389: items3 ===
 
-// Module 1938 (items3)
+// Module 1389 (items3)
 import set from "set" /* 2 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1939 */;
-import DisplayNameFont from "DisplayNameFont" /* 1940 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
+import DisplayNameFont from "DisplayNameFont" /* 1391 */;
 
 let items = [DisplayNameEffect.DisplayNameEffect.SOLID, DisplayNameEffect.DisplayNameEffect.GRADIENT, DisplayNameEffect.DisplayNameEffect.NEON, DisplayNameEffect.DisplayNameEffect.TOON, DisplayNameEffect.DisplayNameEffect.POP];
 const items1 = [DisplayNameFont.DisplayNameFont.PLAYPEN_SANS, DisplayNameFont.DisplayNameFont.ORBITRON, DisplayNameFont.DisplayNameFont.NEW_ROCKER, DisplayNameFont.DisplayNameFont.KALAM];
@@ -28,11 +28,11 @@ export const DISPLAY_NAME_STYLES_PRISM_PRESETS = items6;
 export const getColorPresetsForEffect = function getColorPresetsForEffect(arg0) {
   if (DisplayNameEffect.DisplayNameEffect.GUMMY === arg0) {
     return items5;
-  } else if (tmp(1939).DisplayNameEffect.PRISM === arg0) {
+  } else if (tmp(1390).DisplayNameEffect.PRISM === arg0) {
     return items6;
   } else {
-    if (tmp(1939).DisplayNameEffect.GRADIENT !== arg0) {
-      if (tmp(1939).DisplayNameEffect.GLOW !== arg0) {
+    if (tmp(1390).DisplayNameEffect.GRADIENT !== arg0) {
+      if (tmp(1390).DisplayNameEffect.GLOW !== arg0) {
         return items3.map((arg0) => {
           const items = [arg0];
           return items;

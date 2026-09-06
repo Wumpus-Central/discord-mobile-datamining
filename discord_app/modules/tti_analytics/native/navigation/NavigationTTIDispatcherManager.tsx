@@ -1,13 +1,13 @@
-// === Module 17701: handleChannelSelect ===
+// === Module 17861: handleChannelSelect ===
 
-// Module 17701 (handleChannelSelect)
-import encodeProperties from "encodeProperties" /* 500 */;
-import initializeDefault from "initialize" /* 5495 */;
-import isNavigationTTIEnabled from "isNavigationTTIEnabled" /* 17702 */;
-import getLastBundleDefault from "getLastBundle" /* 17703 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "reinjectEphemerals" /* 4736 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
+// Module 17861 (handleChannelSelect)
+import encodeProperties from "encodeProperties" /* 1250 */;
+import initializeDefault from "initialize" /* 7118 */;
+import isNavigationTTIEnabled from "isNavigationTTIEnabled" /* 17862 */;
+import getLastBundleDefault from "getLastBundle" /* 17863 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "reinjectEphemerals" /* 4781 */;
+import closure_5 from "handleConnectionOpen" /* 2011 */;
 
 require = arg1;
 function handleChannelSelect(opensChannel) {
@@ -27,7 +27,7 @@ function handleChannelSelect(opensChannel) {
           fromChannelId = lastSelectedChannelId;
         }
         if (undefined === fromGuildId) {
-          channel = channel.getChannel(fromChannelId);
+          const channel = store.getChannel(fromChannelId);
           guildId = undefined;
           if (channel != null) {
             guildId = channel.getGuildId();
@@ -40,13 +40,22 @@ function handleChannelSelect(opensChannel) {
         obj = { spanTtiName: null, destinationKey: null, properties: null };
         obj[0] = encodeProperties.SpanTtiNames.CHANNEL;
         obj[1] = channelId;
-        obj = { trigger: "navigation", from_guild_id: null, to_guild_id: null, from_channel_id: null, to_channel_id: null, changed_guild: null, warm_message_cache: null };
+        obj = { trigger: "navigation", from_guild_id: null, to_guild_id: null, from_channel_id: null, to_channel_id: null, channel_type: null, changed_guild: null, warm_message_cache: null };
         obj[1] = fromGuildId;
         obj[2] = guildId;
         obj[3] = fromChannelId;
         obj[4] = channelId;
-        obj[5] = fromGuildId !== guildId;
-        obj[6] = closure_4.hasPresent(channelId);
+        const channel1 = store.getChannel(channelId);
+        let type;
+        if (channel1 != null) {
+          type = channel1.type;
+        }
+        if (type == null) {
+          type = null;
+        }
+        obj[5] = type;
+        obj[6] = fromGuildId !== guildId;
+        obj[7] = closure_4.hasPresent(channelId);
         obj[2] = obj;
         getLastBundleDefault.beginNavigation(obj);
         const obj3 = getLastBundleDefault;

@@ -1,27 +1,27 @@
-// === Module 14742: GuildRow ===
+// === Module 14898: GuildRow ===
 
-// Module 14742 (GuildRow)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2368 */;
-import Text from "Text" /* 4474 */;
-import ActionSheet from "ActionSheet" /* 5998 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6013 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7292 */;
+// Module 14898 (GuildRow)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 2396 */;
+import Text from "Text" /* 4556 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+import ActionSheet from "ActionSheet" /* 7198 */;
+import closure_3 from "freshTeenActivityWithMap" /* 7537 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function GuildRow(guildActivity) {
   guildActivity = guildActivity.guildActivity;
-  let obj = guildActivity(586);
+  let obj = guildActivity(504);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(guildActivity.guild_id));
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7348).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(7593).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     obj = { label: null, subLabel: null, icon: null };
     obj[0] = stateFromStores.name;
     obj[1] = topUserOrGuildDescription;
@@ -29,7 +29,7 @@ function GuildRow(guildActivity) {
     obj[0] = stateFromStores;
     obj[1] = tmp.guildIcon;
     obj[2] = callback(GuildIconSizesDefault, obj);
-    return callback(tmp2(5608).TableRow, obj);
+    return callback(tmp2(5605).TableRow, obj);
   }
   tmp = callback3();
 }

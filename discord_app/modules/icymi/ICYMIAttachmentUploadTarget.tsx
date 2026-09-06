@@ -1,9 +1,9 @@
-// === Module 5130: getCreateAttachmentURL ===
+// === Module 5177: getCreateAttachmentURL ===
 
-// Module 5130 (getCreateAttachmentURL)
+// Module 5177 (getCreateAttachmentURL)
 import set from "set" /* 2 */;
-import items from "items" /* 5083 */;
-import ME from "ME" /* 673 */;
+import items from "items" /* 5129 */;
+import ME from "ME" /* 1074 */;
 
 ({ Endpoints: obj1, MAX_ATTACHMENT_SIZE: c3, MAX_UPLOAD_COUNT: c4 } = ME);
 const result = set.fileFinishedImporting("modules/icymi/ICYMIAttachmentUploadTarget.tsx");
@@ -23,7 +23,7 @@ prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return closure_4;
 };
 prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
-  return items.MAX_TOTAL_ATTACHMENT_SIZE;
+  return items.getMaxTotalAttachmentSize({ location: "ICYMIAttachmentUploadTarget" });
 };
 Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {

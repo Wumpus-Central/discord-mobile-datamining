@@ -1,15 +1,15 @@
-// === Module 9593: map ===
+// === Module 9607: map ===
 
-// Module 9593 (map)
+// Module 9607 (map)
 import timestampDefault from "timestamp" /* 3 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import sleep from "sleep" /* 4558 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "handleConnectionInfoChange" /* 4574 */;
-import closure_6 from "createRTCConnection" /* 4554 */;
-import closure_7 from "updateVoiceState" /* 4497 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import sleep from "sleep" /* 4589 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "handleConnectionInfoChange" /* 4609 */;
+import closure_6 from "createRTCConnection" /* 4583 */;
+import closure_7 from "updateVoiceState" /* 4579 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 const map = new Map();

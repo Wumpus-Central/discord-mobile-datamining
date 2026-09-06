@@ -1,20 +1,20 @@
-// === Module 17576: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
+// === Module 17736: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
 
-// Module 17576 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 17736 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text from "Text" /* 4474 */;
-import Button2 from "Button" /* 4929 */;
-import Background from "Background" /* 5631 */;
-import BottomSheetModal from "BottomSheetModal" /* 5633 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17577 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import Text from "Text" /* 4556 */;
+import Button2 from "Button" /* 4975 */;
+import BottomSheetModal from "BottomSheetModal" /* 6627 */;
+import Background from "Background" /* 7150 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17737 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -55,7 +55,7 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
     children: null
   };
   const obj3 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
-  const intl = tmp6(1233).intl;
+  const intl = tmp6(1114).intl;
   obj3[2] = intl.string(getSystemLocale.t["ETE/oC"]);
   obj2[3] = callback(Text.Text, obj3);
   items[6] = callback(closure_3, obj2);

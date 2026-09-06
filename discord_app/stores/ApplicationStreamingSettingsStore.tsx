@@ -1,11 +1,11 @@
-// === Module 4572: ApplicationStreamPresets ===
+// === Module 4606: ApplicationStreamPresets ===
 
-// Module 4572 (ApplicationStreamPresets)
+// Module 4606 (ApplicationStreamPresets)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4537 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4607 */;
 
 const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
 ({ ApplicationStreamResolutions, ApplicationStreamFPS } = RESOLUTION_720);

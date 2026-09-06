@@ -1,12 +1,12 @@
-// === Module 639: areStatesEqual ===
+// === Module 557: areStatesEqual ===
 
-// Module 639 (areStatesEqual)
-import failsDefault from "fails" /* 581 */;
-import shallowEqual from "shallowEqual" /* 640 */;
+// Module 557 (areStatesEqual)
+import shallowEqual from "shallowEqual" /* 558 */;
+import failsDefault from "fails" /* 559 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import keys from "keys" /* 641 */;
+import keys from "keys" /* 560 */;
 
 require = arg1;
 function areStatesEqual(items, current) {

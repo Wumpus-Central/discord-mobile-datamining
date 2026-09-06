@@ -1,10 +1,10 @@
-// === Module 14378: ACTIVITY_SHARE_LINK_MODAL ===
+// === Module 14485: ACTIVITY_SHARE_LINK_MODAL ===
 
-// Module 14378 (ACTIVITY_SHARE_LINK_MODAL)
+// Module 14485 (ACTIVITY_SHARE_LINK_MODAL)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import getBestActiveInput from "getBestActiveInput" /* 4340 */;
-import _modDef4724 from "module_4724" /* 4724 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import getBestActiveInput from "getBestActiveInput" /* 4425 */;
+import _modDef4763 from "module_4763" /* 4763 */;
 
 const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 const result = set.fileFinishedImporting("modules/activities/openActivityShareLinkModal.native.tsx");
@@ -15,8 +15,8 @@ export const openActivityShareLinkModal = function openActivityShareLinkModal(ar
   let obj = getBestActiveInput;
   obj.dismissKeyboard();
   obj = { applicationId, customId, linkId, message, onShare };
-  _modDef4724.pushLazy(asyncRequireImpl(14379, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
+  _modDef4763.pushLazy(asyncRequireImpl(14486, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
 };
 export const closeActivityShareLinkModal = function closeActivityShareLinkModal() {
-  _modDef4724.popWithKey(ACTIVITY_SHARE_LINK_MODAL);
+  _modDef4763.popWithKey(ACTIVITY_SHARE_LINK_MODAL);
 };

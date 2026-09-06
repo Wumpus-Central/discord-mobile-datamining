@@ -1,11 +1,11 @@
-// === Module 4131: hasFlag ===
+// === Module 4210: hasFlag ===
 
-// Module 4131 (hasFlag)
-import hasFlag from "hasFlag" /* 1398 */;
-import toJSDefault from "toJS" /* 1935 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6156 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8446 */;
-import ME from "ME" /* 673 */;
+// Module 4210 (hasFlag)
+import hasFlag from "hasFlag" /* 1384 */;
+import toJSDefault from "toJS" /* 1386 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9245 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 toJSDefault;

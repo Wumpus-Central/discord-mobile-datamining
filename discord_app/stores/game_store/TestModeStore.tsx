@@ -1,12 +1,12 @@
-// === Module 8516: reset ===
+// === Module 8857: reset ===
 
-// Module 8516 (reset)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import closure_5 from "initialize" /* 1302 */;
-import closure_6 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_7 from "setLibraryApplications" /* 4517 */;
+// Module 8857 (reset)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import closure_5 from "initialize" /* 1184 */;
+import closure_6 from "handleConnectionClosedOrResumed" /* 1221 */;
+import closure_7 from "setLibraryApplications" /* 7397 */;
 import set from "set" /* 2 */;
 
 require = arg1;

@@ -1,8 +1,8 @@
-// === Module 7876: getGuild ===
+// === Module 7955: getGuild ===
 
-// Module 7876 (getGuild)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 7955 (getGuild)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 let c0 = 0;
 let closure_1 = {};

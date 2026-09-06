@@ -1,26 +1,26 @@
-// === Module 16439: ProposalCard ===
+// === Module 16602: ProposalCard ===
 
-// Module 16439 (ProposalCard)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 3500 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
-import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4927 */;
-import Button from "Button" /* 4929 */;
-import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16441 */;
-import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16443 */;
-import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16445 */;
-import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16447 */;
+// Module 16602 (ProposalCard)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 3547 */;
+import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
+import Text from "Text" /* 4556 */;
+import Stack from "Stack" /* 4973 */;
+import Button from "Button" /* 4975 */;
+import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16604 */;
+import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16606 */;
+import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16608 */;
+import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16610 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getState" /* 7167 */;
-import closure_7 from "newMessage" /* 16424 */;
-import { turnSettled } from "newMessage" /* 16424 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 16427 */;
-import closure_13 from "rejectPendingPublish" /* 16427 */;
+import closure_6 from "getState" /* 1895 */;
+import closure_7 from "newMessage" /* 16586 */;
+import { turnSettled } from "newMessage" /* 16586 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 16589 */;
+import closure_13 from "rejectPendingPublish" /* 16589 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function ProposalCard(proposal) {
@@ -43,61 +43,61 @@ function ProposalCard(proposal) {
   obj[2] = intl.string(messagesProxyDefault["60htw+"]);
   const items1 = [callback(Text.Text, obj), , , , , ];
   if ("" === trimmed) {
-    const intl2 = tmp6(1233).intl;
-    let stringResult = intl2.string(tmp8(3500).IHCafX);
+    const intl2 = tmp6(1114).intl;
+    let stringResult = intl2.string(tmp8(3547).IHCafX);
   } else {
-    stringResult = tmp8(4468).parse(trimmed, true, closure_16);
-    const tmp8Result = tmp8(4468);
+    stringResult = tmp8(4550).parse(trimmed, true, closure_16);
+    const tmp8Result = tmp8(4550);
   }
   items1[1] = callback(Text.Text, { variant: "text-md/normal", color: "text-default", children: stringResult });
   let tmp5Result = null;
   if (proposal.changes.length > 0) {
     obj = { direction: "vertical", spacing: 4, children: null };
     obj1 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-    const intl3 = tmp6(1233).intl;
-    obj1[2] = intl3.string(tmp8(3500).KLyB8Y);
-    const items2 = [tmp3(tmp6(4474).Text, obj1), ];
+    const intl3 = tmp6(1114).intl;
+    obj1[2] = intl3.string(tmp8(3547).KLyB8Y);
+    const items2 = [tmp3(tmp6(4556).Text, obj1), ];
     const changes = proposal.changes;
     items2[1] = changes.map((arg0, arg1) => callback2(callback(table[11]).Text, { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + arg0 }, arg1));
     obj[2] = items2;
-    tmp5Result = tmp5(tmp6(4927).Stack, obj);
+    tmp5Result = tmp5(tmp6(4973).Stack, obj);
   }
   items1[2] = tmp5Result;
   tmp5Result = null;
   if (bot_permissions.length > 0) {
     const obj2 = { direction: "vertical", spacing: 4, children: null };
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-    const intl4 = tmp6(1233).intl;
-    obj3[2] = intl4.string(tmp8(3500).ieqTtP);
-    const items3 = [tmp3(tmp6(4474).Text, obj3), ];
+    const intl4 = tmp6(1114).intl;
+    obj3[2] = intl4.string(tmp8(3547).ieqTtP);
+    const items3 = [tmp3(tmp6(4556).Text, obj3), ];
     const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
     obj4[2] = bot_permissions.join(", ");
-    items3[1] = tmp3(tmp6(4474).Text, obj4);
+    items3[1] = tmp3(tmp6(4556).Text, obj4);
     obj2[2] = items3;
-    tmp5Result = tmp5(tmp6(4927).Stack, obj2);
+    tmp5Result = tmp5(tmp6(4973).Stack, obj2);
   }
   items1[3] = tmp5Result;
   let tmp5Result1 = null;
   if (privileged_intents.length > 0) {
     const obj5 = { direction: "vertical", spacing: 4, children: null };
     const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-    const intl5 = tmp6(1233).intl;
-    obj6[2] = intl5.string(tmp8(3500).Cn9qix);
-    const items4 = [tmp3(tmp6(4474).Text, obj6), ];
+    const intl5 = tmp6(1114).intl;
+    obj6[2] = intl5.string(tmp8(3547).Cn9qix);
+    const items4 = [tmp3(tmp6(4556).Text, obj6), ];
     const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
     obj7[2] = privileged_intents.join(", ");
-    items4[1] = tmp3(tmp6(4474).Text, obj7);
+    items4[1] = tmp3(tmp6(4556).Text, obj7);
     obj5[2] = items4;
-    tmp5Result1 = tmp5(tmp6(4927).Stack, obj5);
+    tmp5Result1 = tmp5(tmp6(4973).Stack, obj5);
   }
   items1[4] = tmp5Result1;
   let tmp3Result = null;
   if (actionable) {
     const obj8 = { text: null, variant: "primary", onPress: null };
-    const intl6 = tmp6(1233).intl;
-    obj8[0] = intl6.string(tmp8(3500).GYoWRk);
+    const intl6 = tmp6(1114).intl;
+    obj8[0] = intl6.string(tmp8(3547).GYoWRk);
     obj8[2] = onApprove;
-    tmp3Result = tmp3(tmp6(4929).Button, obj8);
+    tmp3Result = tmp3(tmp6(4975).Button, obj8);
   }
   items1[5] = tmp3Result;
   obj[1] = closure_15(Stack.Stack, { direction: "vertical", spacing: 8, children: items1 });
@@ -163,23 +163,23 @@ function AttachmentPills(projectId) {
         obj[1] = function onPress() {
           return closure_1_2(id.id);
         };
-        const intl = projectId(1233).intl;
+        const intl = projectId(1114).intl;
         obj = { name: null };
         obj[0] = id.name;
-        obj[2] = intl.formatToPlainString(lib(3500).QUFLUq, obj);
+        obj[2] = intl.formatToPlainString(lib(3547).QUFLUq, obj);
         obj = { variant: "text-xs/medium", color: "text-default", children: null };
         obj[2] = id.name;
-        obj[3] = closure_1_14(projectId(4474).Text, obj);
-        let tmp12 = closure_1_14(projectId(5610).Card, obj, id.id);
+        obj[3] = closure_1_14(projectId(4556).Text, obj);
+        let tmp12 = closure_1_14(projectId(5607).Card, obj, id.id);
       } else {
         obj1 = { style: null, children: null };
         obj1[0] = lib.attachmentPill;
         const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
-        const intl2 = projectId(1233).intl;
+        const intl2 = projectId(1114).intl;
         const obj3 = { name: null };
         obj3[0] = id.name;
-        obj2[2] = intl2.formatToPlainString(lib(3500).OBr7WW, obj3);
-        obj1[1] = closure_1_14(projectId(4474).Text, obj2);
+        obj2[2] = intl2.formatToPlainString(lib(3547).OBr7WW, obj3);
+        obj1[1] = closure_1_14(projectId(4556).Text, obj2);
         const _HermesInternal = HermesInternal;
         tmp12 = closure_1_14(closure_1_5, obj1, "" + id.name + "-" + arg1);
       }
@@ -214,8 +214,8 @@ function ActivityBox(tree) {
     const steps = tree.steps;
     const items1 = [
       steps.map((id) => {
-          const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16440).describeNode(id) };
-          return callback3(callback(4474).Text, obj, id.id);
+          const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16603).describeNode(id) };
+          return callback3(callback(4556).Text, obj, id.id);
         }),
 
     ];
@@ -248,11 +248,11 @@ function TodoList(todos) {
   _require = tmp;
   let obj = { style: tmp.todoList, children: null };
   obj = { variant: "text-sm/semibold", color: "text-muted", children: null };
-  const intl = _require(1233).intl;
+  const intl = _require(1114).intl;
   obj = { completed: todos.filter((status) => "completed" === status.status).length, total: todos.length };
   obj[2] = intl.formatToPlainString(messagesProxyDefault.bQvqly, obj);
   let items = [
-    callback(_require(4474).Text, obj),
+    callback(_require(4556).Text, obj),
     todos.map((children) => {
       let obj = { style: lib.todoRow, children: null };
       let str = "text-muted";
@@ -354,7 +354,7 @@ let closure_25 = importAllResult.memo((isNewest) => {
       if ("" !== trimmed) {
         obj1 = { variant: "text-md/normal", color: "text-default", children: null };
         obj1[2] = trimmed;
-        tmp51Result = tmp51(message(4474).Text, obj1);
+        tmp51Result = tmp51(message(4556).Text, obj1);
       }
       items5[1] = tmp51Result;
       tmp51Result = null;
@@ -498,7 +498,7 @@ let closure_25 = importAllResult.memo((isNewest) => {
           const obj5 = { variant: "text-md/normal", color: "text-default", children: null };
           obj4 = get_defaultRulesDefault;
           obj5[2] = obj4.parse(trimmed, true, closure_16);
-          obj4[1] = tmp19(message(4474).Text, obj5);
+          obj4[1] = tmp19(message(4556).Text, obj5);
           tmp19Result = tmp19(tmp18, obj4);
         }
       }
@@ -576,7 +576,7 @@ let closure_25 = importAllResult.memo((isNewest) => {
       if ("message" in found) {
         const obj15 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
         obj15[2] = found.message;
-        tmp19Result8 = tmp19(message(4474).Text, obj15);
+        tmp19Result8 = tmp19(message(4556).Text, obj15);
       }
     }
     items7[12] = tmp19Result8;

@@ -1,17 +1,17 @@
-// === Module 10198: getFocusedChannelId ===
+// === Module 10089: getFocusedChannelId ===
 
-// Module 10198 (getFocusedChannelId)
-import coerceMainRoute from "coerceMainRoute" /* 4332 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import getInitialGuildStateDefault from "getInitialGuildState" /* 4334 */;
-import useChatLayout from "useChatLayout" /* 4335 */;
-import useChatLayoutDefault from "useChatLayout" /* 4335 */;
+// Module 10089 (getFocusedChannelId)
+import coerceMainRoute from "coerceMainRoute" /* 4417 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
+import getInitialGuildStateDefault from "getInitialGuildState" /* 4419 */;
+import useChatLayout from "useChatLayout" /* 4420 */;
+import useChatLayoutDefault from "useChatLayout" /* 4420 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getParticipants" /* 4494 */;
-import closure_6 from "getIdFromHistoryItem" /* 6182 */;
-import { CHANNEL_PREFIX } from "getIdFromHistoryItem" /* 6182 */;
-import closure_8 from "withEqualityFn" /* 4729 */;
+import closure_5 from "getParticipants" /* 4576 */;
+import closure_6 from "getIdFromHistoryItem" /* 7328 */;
+import { CHANNEL_PREFIX } from "getIdFromHistoryItem" /* 7328 */;
+import closure_8 from "withEqualityFn" /* 4768 */;
 
 require = arg1;
 function getFocusedChannelId() {

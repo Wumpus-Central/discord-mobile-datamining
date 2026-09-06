@@ -1,11 +1,11 @@
-// === Module 4303: initialize ===
+// === Module 4385: initialize ===
 
-// Module 4303 (initialize)
+// Module 4385 (initialize)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import Storage3 from "Storage" /* 592 */;
-import ME2 from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 504 */;
+import Storage3 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME2 from "ME" /* 1074 */;
 
 const Routes = ME2.Routes;
 let obj = { lastViewedPath: null, lastViewedNonVoicePath: null };

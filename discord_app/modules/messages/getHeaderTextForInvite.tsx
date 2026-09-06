@@ -1,8 +1,8 @@
-// === Module 13110: getHeaderTextForInvite ===
+// === Module 13210: getHeaderTextForInvite ===
 
-// Module 13110 (getHeaderTextForInvite)
+// Module 13210 (getHeaderTextForInvite)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 const result = set.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 

@@ -1,14 +1,14 @@
-// === Module 6102: _isAccessibleChannelOrThreadPath ===
+// === Module 7246: _isAccessibleChannelOrThreadPath ===
 
-// Module 6102 (_isAccessibleChannelOrThreadPath)
+// Module 7246 (_isAccessibleChannelOrThreadPath)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isSubscriptionGated" /* 1982 */;
-import closure_5 from "shouldShowOnboarding" /* 5472 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_8 from "createGuildRecordFromRust" /* 1908 */;
-import ME from "ME" /* 673 */;
-import set from "set" /* 1393 */;
+import closure_4 from "isSubscriptionGated" /* 2013 */;
+import closure_5 from "shouldShowOnboarding" /* 7096 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_8 from "createGuildRecordFromRust" /* 1979 */;
+import ME from "ME" /* 1074 */;
+import set from "set" /* 1964 */;
 
 const require = arg1;
 function _isAccessibleChannelOrThreadPath() {

@@ -1,52 +1,46 @@
-// === Module 11047: PremiumGiftingPromotionSuccessActions ===
+// === Module 11076: PremiumGiftingPromotionSuccessActions ===
 
-// Module 11047 (PremiumGiftingPromotionSuccessActions)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 11076 (PremiumGiftingPromotionSuccessActions)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { isAvatarDecorationRecord, isNameplateRecord } from "fromServer" /* 7302 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, nameplateContainer: null, nameplateWrapper: null, singleAvatarContainer: null };
+({ jsx: c5, jsxs: closure_6 } = jsxProd);
+createCacheKey = { container: null, promoDetails: null };
 createCacheKey = { flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-let obj1 = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[2] = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[3] = { flexDirection: "row", paddingRight: 15, justifyContent: "center", alignItems: "center", marginLeft: 5 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey[1] = { alignSelf: "stretch", paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { alignSelf: "stretch", paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
 
 export default function PremiumGiftingPromotionSuccessActions(purchase) {
-  purchase = purchase.purchase;
   let onClose;
   let prePurchaseGiftingBadgeProgress;
   let navigation;
   let enabled;
   c4 = undefined;
   let callback;
-  let tmp = callback2();
-  let obj = onClose(navigation[8]);
-  const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj1 = onClose(navigation[9]);
-  const nativeGiftContext = obj1.useNativeGiftContext();
+  let tmp = callback();
+  let obj = onClose(navigation[5]);
+  const nativeGiftContext = obj.useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
   prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
-  let obj2 = onClose(navigation[10]);
-  navigation = obj2.useNavigation();
-  const GiftingBadgeExperiment = onClose(navigation[11]).GiftingBadgeExperiment;
+  obj1 = onClose(navigation[6]);
+  navigation = obj1.useNavigation();
+  const GiftingBadgeExperiment = onClose(navigation[7]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftingPromotionSuccessActions" }).enabled;
-  let obj3 = onClose(navigation[12]);
-  const fetchCollectiblesProduct = obj3.useFetchCollectiblesProduct(purchase.skuId);
+  const fetchCollectiblesProduct = onClose(navigation[8]).useFetchCollectiblesProduct(purchase.purchase.skuId);
   const product = fetchCollectiblesProduct.product;
   c4 = product;
-  const items1 = [enabled, prePurchaseGiftingBadgeProgress, navigation];
+  let tmp12Result = null != product;
+  if (tmp12Result) {
+    tmp12Result = product.items.length > 0;
+  }
+  const items = [enabled, prePurchaseGiftingBadgeProgress, navigation];
   callback = enabled.useCallback(() => {
     let tmp = enabled;
     if (enabled) {
@@ -55,64 +49,50 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
     if (tmp) {
       const obj = { currentProgress: null };
       obj[0] = prePurchaseGiftingBadgeProgress;
-      navigation.navigate(onClose(navigation[13]).PremiumGiftScreens.GIFTING_BADGE, obj);
+      navigation.navigate(onClose(navigation[9]).PremiumGiftScreens.GIFTING_BADGE, obj);
     }
-  }, items1);
-  const items2 = [product, onClose, callback, enabled, prePurchaseGiftingBadgeProgress, navigation];
-  const first = purchase.items[0];
+  }, items);
+  const items1 = [product, onClose, callback, enabled, prePurchaseGiftingBadgeProgress, navigation];
   obj = { style: tmp.container, children: null };
   const callback1 = enabled.useCallback(() => {
     if (null != c4) {
       let obj = { product: null, onCancel: null };
       obj[0] = tmp;
       obj[1] = callback;
-      prePurchaseGiftingBadgeProgress(navigation[14]).open(obj);
-      const obj2 = prePurchaseGiftingBadgeProgress(navigation[14]);
+      prePurchaseGiftingBadgeProgress(navigation[10]).open(obj);
+      const obj2 = prePurchaseGiftingBadgeProgress(navigation[10]);
     } else {
       if (enabled) {
         if (null != prePurchaseGiftingBadgeProgress) {
           obj = { currentProgress: null };
           obj[0] = tmp3;
-          navigation.navigate(onClose(navigation[13]).PremiumGiftScreens.GIFTING_BADGE, obj);
+          navigation.navigate(onClose(navigation[9]).PremiumGiftScreens.GIFTING_BADGE, obj);
         }
       }
       onClose();
     }
-  }, items2);
-  if (isNameplateRecord(first)) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.nameplateContainer;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.nameplateWrapper;
-    obj2 = { nameplate: null, fullOpacity: true, animate: true };
-    const tmp20 = prePurchaseGiftingBadgeProgress(tmp3[15]);
-    obj2[0] = tmp2(tmp3[16]).getNameplateData(first);
-    obj1[1] = callback(tmp20, obj2);
-    const items3 = [callback(tmp12, obj1), ];
-    obj3 = { style: null, children: null };
-    obj3[0] = tmp.singleAvatarContainer;
-    const obj4 = { user: null, guildId: "Array", size: true, "aria-hidden": null };
-    obj4[0] = stateFromStores;
-    obj4[2] = tmp2(tmp3[17]).AvatarSizes.SMALL;
-    obj3[1] = callback(tmp2(tmp3[17]).Avatar, obj4);
-    items3[1] = callback(tmp12, obj3);
-    obj[1] = items3;
-    let tmp11Result = tmp11(tmp12, obj);
-    const tmp2Result = tmp2(tmp3[16]);
-  } else if (callback(first)) {
-    const obj5 = { size: null, asset: null };
-    obj5[0] = tmp2(tmp3[17]).AvatarSizes.LARGE;
-    obj5[1] = first.asset;
-    tmp11Result = callback(prePurchaseGiftingBadgeProgress(tmp3[18]), obj5);
-    const tmp17 = prePurchaseGiftingBadgeProgress(tmp3[18]);
+  }, items1);
+  if (tmp12Result) {
+    obj = { style: null, product: null, title: null, subtitle: null };
+    obj[0] = tmp.promoDetails;
+    obj[1] = product;
+    const intl = tmp2(tmp3[12]).intl;
+    obj[2] = intl.string(prePurchaseGiftingBadgeProgress(tmp3[13]).XeLTZl);
+    let name;
+    if (product != null) {
+      name = product.name;
+    }
+    obj[3] = name;
+    tmp12Result = callback(tmp2(tmp3[11]).PremiumGiftPromotionCollectibleRewardDetails, obj);
+    const tmp12 = callback;
   }
-  const items4 = [tmp11Result, ];
-  const obj6 = { grow: true, text: null, loading: null, onPress: null };
-  const intl = tmp2(tmp3[20]).intl;
-  obj6[1] = intl.string(onClose(navigation[20]).t.kMYVwv);
-  obj6[2] = fetchCollectiblesProduct.isFetching;
-  obj6[3] = callback1;
-  items4[1] = callback(onClose(navigation[19]).Button, obj6);
-  obj[1] = items4;
-  return closure_9(c4, obj);
+  const items2 = [tmp12Result, ];
+  obj1 = { grow: true, text: null, loading: null, onPress: null };
+  const intl2 = tmp2(tmp3[12]).intl;
+  obj1[1] = intl2.string(onClose(navigation[12]).t.kMYVwv);
+  obj1[2] = fetchCollectiblesProduct.isFetching;
+  obj1[3] = callback1;
+  items2[1] = callback(onClose(navigation[14]).Button, obj1);
+  obj[1] = items2;
+  return closure_6(c4, obj);
 };

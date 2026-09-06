@@ -1,11 +1,11 @@
-// === Module 7947: createStageEndSystemMessage ===
+// === Module 8026: createStageEndSystemMessage ===
 
-// Module 7947 (createStageEndSystemMessage)
+// Module 8026 (createStageEndSystemMessage)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7881 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7883 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageEndSystemMessage.tsx");
 

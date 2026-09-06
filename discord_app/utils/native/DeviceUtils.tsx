@@ -1,9 +1,9 @@
-// === Module 4457: DCDDeviceManager ===
+// === Module 4539: DCDDeviceManager ===
 
-// Module 4457 (DCDDeviceManager)
+// Module 4539 (DCDDeviceManager)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 668 */;
-import set from "set" /* 1234 */;
+import enforcingDefault from "enforcing" /* 1343 */;
+import set from "set" /* 1115 */;
 
 if (set.isAndroid()) {
   const importDefaultResult = enforcingDefault;
@@ -79,14 +79,14 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
   if (obj.isAndroid()) {
     let tmp5 = null == mediaPerformanceClass2;
     if (tmp5) {
-      const Storage = tmp(592).Storage;
+      const Storage = tmp(510).Storage;
       const value = Storage.get(mediaPerformanceClass);
       mediaPerformanceClass2 = value;
       tmp5 = null == value;
     }
     if (tmp5) {
       mediaPerformanceClass2 = enforcingDefault.getMediaPerformanceClass();
-      const Storage2 = tmp(592).Storage;
+      const Storage2 = tmp(510).Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
       const obj2 = enforcingDefault;
     }

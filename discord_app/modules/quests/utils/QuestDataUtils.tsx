@@ -1,13 +1,13 @@
-// === Module 7454: getQuestDeliveryDataForPlacement ===
+// === Module 7699: getQuestDeliveryDataForPlacement ===
 
-// Module 7454 (getQuestDeliveryDataForPlacement)
-import _modDef1205 from "module_1205" /* 1205 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5399 */;
-import closure_3 from "map" /* 7455 */;
-import closure_4 from "_getSystemLocale" /* 1995 */;
-import closure_5 from "set" /* 7458 */;
-import closure_6 from "initializeState" /* 7459 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5396 */;
+// Module 7699 (getQuestDeliveryDataForPlacement)
+import _modDef1232 from "module_1232" /* 1232 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
+import closure_3 from "map" /* 7700 */;
+import closure_4 from "_getSystemLocale" /* 2025 */;
+import closure_5 from "set" /* 7702 */;
+import closure_6 from "initializeState" /* 7703 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
 
 require = arg1;
 function getQuestDeliveryDataForPlacement(arg0, adContentId) {
@@ -18,9 +18,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
       let tmp8 = null;
       if (null != adDecisionByPlacementAndAdCreativeId) {
         obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
-        let tmpResult = tmp(7456);
+        let tmpResult = tmp(7701);
         obj[0] = tmpResult.getDeliveredQuestId(adDecisionByPlacementAndAdCreativeId.creative);
-        tmpResult = tmp(7456);
+        tmpResult = tmp(7701);
         obj[1] = tmpResult.getDeliveredAdCreativeId(adDecisionByPlacementAndAdCreativeId.creative);
         ({ adDecisionData: obj[2], adContext: obj[3], metadataSealed: obj[4], trafficMetadataSealed: obj[5], provenanceMetadataSealed: obj[6] } = adDecisionByPlacementAndAdCreativeId);
         tmp8 = obj;
@@ -33,34 +33,34 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   if (null != tmp3) {
     return tmp3;
   } else {
-    const deliveryAdDecisionByPlacement = obj.deliveryAdDecisionByPlacement;
+    const deliveryAdDecisionByPlacement = store.deliveryAdDecisionByPlacement;
     const value = deliveryAdDecisionByPlacement.get(arg0);
-    if (arg0 === tmp(5399).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
+    if (arg0 === tmp(5447).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
       if (null != value) {
         obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
-        obj[0] = tmp(7456).getDeliveredQuestId(value.creative);
-        const tmpResult1 = tmp(7456);
-        obj[1] = tmp(7456).getDeliveredAdCreativeId(value.creative);
+        obj[0] = tmp(7701).getDeliveredQuestId(value.creative);
+        const tmpResult1 = tmp(7701);
+        obj[1] = tmp(7701).getDeliveredAdCreativeId(value.creative);
         ({ adDecisionData: obj7[2], adContext: obj7[3], metadataSealed: obj7[4], trafficMetadataSealed: obj7[5], provenanceMetadataSealed: obj7[6] } = value);
         let tmp9 = obj;
-        const tmpResult2 = tmp(7456);
+        const tmpResult2 = tmp(7701);
       }
       return tmp9;
     }
     tmp9 = null;
     if (null != value) {
       obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
-      obj[0] = tmp(7456).getDeliveredQuestId(value.creative);
-      const tmpResult3 = tmp(7456);
-      obj[1] = tmp(7456).getDeliveredAdCreativeId(value.creative);
+      obj[0] = tmp(7701).getDeliveredQuestId(value.creative);
+      const tmpResult3 = tmp(7701);
+      obj[1] = tmp(7701).getDeliveredAdCreativeId(value.creative);
       ({ adDecisionData: obj4[2], adContext: obj4[3], metadataSealed: obj4[4], trafficMetadataSealed: obj4[5], provenanceMetadataSealed: obj4[6] } = value);
       tmp9 = obj;
-      const tmpResult4 = tmp(7456);
+      const tmpResult4 = tmp(7701);
     }
   }
 }
-({ DismissibleQuestContentFlags: error, BILLABLE_PLACEMENTS: closure_8, EMPTY_AD_DECISION_DATA: c9 } = QuestsExperimentLocations);
-let c10 = 2592000000;
+({ DismissibleQuestContentFlags: error, BILLABLE_PLACEMENTS: closure_8, NON_BILLABLE_CREATIVE_TYPES: c9, EMPTY_AD_DECISION_DATA: c10 } = QuestsExperimentLocations);
+let c11 = 2592000000;
 let obj = {};
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_BAR] = require("QuestsVisibleMessagesChangedSource").AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_BAR_V2] = require("QuestsVisibleMessagesChangedSource").AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
@@ -121,7 +121,7 @@ export const isDismissible = function isDismissible(closure_1) {
 export const isDismissed = function isDismissed(dismissedQuestContent) {
   const keys = Object.keys(closure_7);
   if (keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[arg1])) {
-    return tmp2(1398).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 5399).QuestContent[arg1]]);
+    return tmp2(1384).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 5447).QuestContent[arg1]]);
   } else {
     return false;
   }
@@ -140,7 +140,7 @@ export const getIsQuestExpiredButWithinThirtyDayLookback = function getIsQuestEx
   if (valueOfResult <= Date.now()) {
     const _Date = Date;
     const _Date2 = Date;
-    const diff = Date.now() - c10;
+    const diff = Date.now() - c11;
     const date1 = new Date(quest.config.expiresAt);
     return null != quest.config.expiresAt && date1.valueOf() > diff;
   } else {
@@ -193,37 +193,40 @@ export const getQuestFormattedDate = function getQuestFormattedDate(expiresAtPre
 export const getQuestPlacementFromQuestContent = function getQuestPlacementFromQuestContent(questContent) {
   return obj[questContent];
 };
-export const isBillableQuestContent = function isBillableQuestContent(questContent) {
-  let hasItem = null != tmp;
+export const isBillableQuestContent = function isBillableQuestContent(questContent, adCreativeType) {
+  if (null != adCreativeType) {
+    if (set2.has(adCreativeType)) {
+      return false;
+    }
+  }
+  let hasItem = null != tmp2;
   if (hasItem) {
-    hasItem = set.has(tmp);
+    hasItem = set.has(tmp2);
   }
   return hasItem;
 };
 export const getAdDecisionData = function getAdDecisionData(adContentId, sourceQuestContent) {
   if (null == obj[sourceQuestContent]) {
-    return closure_9;
+    return closure_10;
   } else {
     obj = getQuestDeliveryDataForPlacement(tmp, adContentId);
     if (obj == null) {
       obj = {};
     }
     const adDecisionData = obj.adDecisionData;
-    if (null == adDecisionData) {
-      let tmp6 = closure_9;
-    } else {
-      tmp6 = adDecisionData;
-      if (tmp4 !== adContentId) {
-        tmp6 = adDecisionData;
-        if (tmp5 !== adContentId) {
-          tmp6 = adDecisionData;
-          if (adDecisionData.ad_id !== adContentId) {
-            tmp6 = closure_9;
-          }
-        }
-      }
+    if (null != adDecisionData) {
+      return adDecisionData;
     }
-    return tmp6;
+    const noFillForPlacement = store.getNoFillForPlacement(tmp, { includeExpired: true });
+    if (null != noFillForPlacement) {
+      if (noFillForPlacement.decisionId === adContentId) {
+        obj = { decision_id: null, is_targeted: false };
+        obj[0] = noFillForPlacement.decisionId;
+        let tmp4 = obj;
+      }
+      return tmp4;
+    }
+    tmp4 = closure_10;
   }
 };
 export const getAdMetadataSealed = function getAdMetadataSealed(sourceQuestContent, adCreativeId) {
@@ -233,7 +236,18 @@ export const getAdMetadataSealed = function getAdMetadataSealed(sourceQuestConte
     if (tmp4 != null) {
       metadataSealed = tmp4.metadataSealed;
     }
-    return metadataSealed;
+    if (null != metadataSealed) {
+      return metadataSealed;
+    } else {
+      const noFillForPlacement = store.getNoFillForPlacement(tmp, { includeExpired: true });
+      let metadataSealed1;
+      if (null != noFillForPlacement) {
+        if (noFillForPlacement.decisionId === adCreativeId) {
+          metadataSealed1 = noFillForPlacement.metadataSealed;
+        }
+      }
+      return metadataSealed1;
+    }
   }
 };
 export const getAdProvenanceMetadataSealed = function getAdProvenanceMetadataSealed(sourceQuestContent, adContentId) {
@@ -248,6 +262,12 @@ export const getAdProvenanceMetadataSealed = function getAdProvenanceMetadataSea
 };
 export const getAdTrafficMetadataSealed = function getAdTrafficMetadataSealed(sourceQuestContent, adCreativeId, adContentId) {
   if (null != obj[sourceQuestContent]) {
+    const noFillForPlacement = store.getNoFillForPlacement(tmp, { includeExpired: true });
+    if (null != noFillForPlacement) {
+      if (noFillForPlacement.decisionId === adContentId) {
+        return noFillForPlacement.trafficMetadataSealed;
+      }
+    }
     obj = getQuestDeliveryDataForPlacement(tmp, adContentId);
     if (obj == null) {
       obj = {};
@@ -277,7 +297,7 @@ export const getAdContext = function getAdContext(sourceQuestContent, adContentI
   }
 };
 export const captureQuestsException = function captureQuestsException(error, tags) {
-  obj = _modDef1205;
+  obj = _modDef1232;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

@@ -1,6 +1,6 @@
-// === Module 4531: inject ===
+// === Module 1910: inject ===
 
-// Module 4531 (inject)
+// Module 1910 (inject)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/inject.tsx");

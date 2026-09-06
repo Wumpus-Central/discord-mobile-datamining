@@ -1,12 +1,12 @@
-// === Module 7594: nativeEventEmitter ===
+// === Module 7839: nativeEventEmitter ===
 
-// Module 7594 (nativeEventEmitter)
+// Module 7839 (nativeEventEmitter)
 import timestampDefault from "timestamp" /* 3 */;
-import _fileSizeDefault from "_fileSize" /* 7595 */;
+import _fileSizeDefault from "_fileSize" /* 7840 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 673 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4471 */;
+import ME from "ME" /* 1074 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
 
 const require = arg1;
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
@@ -105,15 +105,15 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
                     } else {
                       let callback = tmp2;
                       obj1 = { title: null, content: null };
-                      const intl = callback(1233).intl;
-                      obj1[0] = intl.string(callback(1233).t["B/HSDd"]);
-                      const intl2 = callback(1233).intl;
+                      const intl = callback(1114).intl;
+                      obj1[0] = intl.string(callback(1114).t["B/HSDd"]);
+                      const intl2 = callback(1114).intl;
                       const obj2 = { count: null };
                       obj2[0] = length.length;
-                      obj1[1] = intl2.formatToPlainString(callback(1233).t.D0noUt, obj2);
+                      obj1[1] = intl2.formatToPlainString(callback(1114).t.D0noUt, obj2);
                       dependencyMap = 1;
                       const obj3 = { value: null, done: false };
-                      obj3[0] = files(7511).startBackgroundTask(obj1);
+                      obj3[0] = files(7755).startBackgroundTask(obj1);
                       return obj3;
                     }
                   } else if (arg0 === 1) {
@@ -127,7 +127,7 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
                   } else {
                     callback = arg1;
                     if (closure_1_0._aborted) {
-                      obj = files(7511);
+                      obj = files(7755);
                       obj.endBackgroundTask(closure_1_0);
                     }
                     dependencyMap = 3;

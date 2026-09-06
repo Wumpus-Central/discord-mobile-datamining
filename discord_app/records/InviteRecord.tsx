@@ -1,8 +1,8 @@
-// === Module 8670: createFromServer ===
+// === Module 8380: createFromServer ===
 
-// Module 8670 (createFromServer)
-import toJSDefault from "toJS" /* 1935 */;
-import hooksDefault from "hooks" /* 4074 */;
+// Module 8380 (createFromServer)
+import toJSDefault from "toJS" /* 1386 */;
+import hooksDefault from "hooks" /* 4153 */;
 
 toJSDefault;
 let InviteRecord;

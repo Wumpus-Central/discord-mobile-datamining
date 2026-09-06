@@ -1,13 +1,13 @@
-// === Module 1209: initialize ===
+// === Module 1236: initialize ===
 
-// Module 1209 (initialize)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import _toPropertyKeyDefault from "_toPropertyKey" /* 1210 */;
-import Version from "Version" /* 4393 */;
+// Module 1236 (initialize)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import _toPropertyKeyDefault from "_toPropertyKey" /* 1237 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import Version from "Version" /* 1362 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 _toPropertyKeyDefault;

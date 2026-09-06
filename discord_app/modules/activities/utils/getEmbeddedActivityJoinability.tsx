@@ -1,14 +1,14 @@
-// === Module 9460: getEmbeddedActivityJoinability ===
+// === Module 9531: getEmbeddedActivityJoinability ===
 
-// Module 9460 (getEmbeddedActivityJoinability)
-import allowChannelAccess from "allowChannelAccess" /* 4666 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9461 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import closure_7 from "updateVoiceState" /* 4497 */;
-import { Permissions } from "ME" /* 673 */;
+// Module 9531 (getEmbeddedActivityJoinability)
+import allowChannelAccess from "allowChannelAccess" /* 4705 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9529 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import closure_7 from "updateVoiceState" /* 4579 */;
+import { Permissions } from "ME" /* 1074 */;
 
 require = arg1;
 function getEmbeddedActivityJoinability(arg0) {

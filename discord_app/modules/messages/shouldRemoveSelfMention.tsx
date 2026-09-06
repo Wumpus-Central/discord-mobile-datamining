@@ -1,8 +1,8 @@
-// === Module 7393: shouldRemoveSelfMention ===
+// === Module 7638: shouldRemoveSelfMention ===
 
-// Module 7393 (shouldRemoveSelfMention)
+// Module 7638 (shouldRemoveSelfMention)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const MessageTypesSets = ME.MessageTypesSets;
 const result = set.fileFinishedImporting("modules/messages/shouldRemoveSelfMention.tsx");

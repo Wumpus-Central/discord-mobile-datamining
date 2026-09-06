@@ -1,15 +1,15 @@
-// === Module 16097: useChannelNoticeRows ===
+// === Module 16259: useChannelNoticeRows ===
 
-// Module 16097 (useChannelNoticeRows)
+// Module 16259 (useChannelNoticeRows)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "completeStep" /* 12275 */;
-import closure_6 from "comparator" /* 1981 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import { ChannelListChannelNoticeRow as closure_9 } from "ChannelListGuildActionRow" /* 7289 */;
-import { MFALevels } from "ME" /* 673 */;
-import ContentDismissActionType from "ContentDismissActionType" /* 1383 */;
+import closure_5 from "completeStep" /* 12475 */;
+import closure_6 from "comparator" /* 2012 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import { ChannelListChannelNoticeRow as closure_9 } from "ChannelListGuildActionRow" /* 7534 */;
+import { MFALevels } from "ME" /* 1074 */;
+import ContentDismissActionType from "ContentDismissActionType" /* 1954 */;
 
 const require = arg1;
 ({ ContentDismissActionType: unpackModuleId, DismissibleContentGroupName: closure_12 } = ContentDismissActionType);

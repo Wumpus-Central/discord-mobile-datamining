@@ -1,8 +1,8 @@
-// === Module 11161: ? ===
+// === Module 11300: ? ===
 
-// Module 11161
-import initialize from "initialize" /* 586 */;
-import closure_2 from "getState" /* 7167 */;
+// Module 11300
+import initialize from "initialize" /* 504 */;
+import closure_2 from "getState" /* 1895 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_state/DiscordAppState.native.tsx");

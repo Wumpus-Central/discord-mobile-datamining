@@ -1,9 +1,9 @@
-// === Module 4847: getPurchaseToken ===
+// === Module 4893: getPurchaseToken ===
 
-// Module 4847 (getPurchaseToken)
-import v1 from "v1" /* 511 */;
-import Storage3 from "Storage" /* 592 */;
-import setDefault from "set" /* 684 */;
+// Module 4893 (getPurchaseToken)
+import Storage3 from "Storage" /* 510 */;
+import setDefault from "set" /* 1090 */;
+import v1 from "v1" /* 1256 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;
@@ -17,7 +17,7 @@ function getPurchaseToken() {
     }
   }
   const v4Result = v1.v4();
-  const Storage2 = tmp(592).Storage;
+  const Storage2 = tmp(510).Storage;
   const tmp3 = purchase_token;
   const tmpResult = v1;
   const result = Storage2.set(tmp3, { purchaseToken: v4Result, expires: Date.now() + closure_4 });

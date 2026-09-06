@@ -1,14 +1,14 @@
-// === Module 15948: FavoritesGuildCategorySettings ===
+// === Module 16112: FavoritesGuildCategorySettings ===
 
-// Module 15948 (FavoritesGuildCategorySettings)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 16112 (FavoritesGuildCategorySettings)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initializeFromUserSettings" /* 1389 */;
-import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_7 } from "date" /* 1424 */;
+import closure_6 from "initializeFromUserSettings" /* 1960 */;
+import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_7 } from "date" /* 1970 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function FavoritesGuildCategorySettings(categoryId) {
@@ -107,21 +107,19 @@ function FavoritesGuildCategorySettings(categoryId) {
     obj.show(obj);
   }, items7);
   obj = { spacing: onGoBack(tmp3[7]).space.PX_24, children: null };
-  obj1 = { label: null, accessibilityLabel: null, placeholder: null, value: null, onChange: null, maxLength: null, isClearable: true };
+  obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, isClearable: true };
   let intl = tmp2(tmp3[13]).intl;
   obj1[0] = intl.string(categoryId(navigation[13]).t.OCAkGP);
   let intl2 = tmp2(tmp3[13]).intl;
-  obj1[1] = intl2.string(categoryId(navigation[13]).t.OCAkGP);
-  let intl3 = tmp2(tmp3[13]).intl;
-  obj1[2] = intl3.string(categoryId(navigation[13]).t.eTVbtx);
-  obj1[3] = str;
-  obj1[4] = tmp8;
-  obj1[5] = closure_7;
+  obj1[1] = intl2.string(categoryId(navigation[13]).t.eTVbtx);
+  obj1[2] = str;
+  obj1[3] = tmp8;
+  obj1[4] = closure_7;
   const items8 = [callback(categoryId(navigation[17]).TextInput, obj1), ];
   obj2 = { hasIcons: true, children: null };
   obj3 = { variant: "danger", icon: callback(tmp2(tmp3[20]).TrashIcon, { color: "text-feedback-critical" }), label: null, onPress: null };
-  let intl4 = tmp2(tmp3[13]).intl;
-  obj3[2] = intl4.string(categoryId(navigation[13]).t.ifbXnL);
+  let intl3 = tmp2(tmp3[13]).intl;
+  obj3[2] = intl3.string(categoryId(navigation[13]).t.ifbXnL);
   obj3[3] = callback2;
   obj2[1] = callback(categoryId(navigation[19]).TableRow, obj3);
   items8[1] = callback(categoryId(navigation[18]).TableRowGroup, obj2);
@@ -141,12 +139,12 @@ let result = require("set").fileFinishedImporting("modules/favorites/native/moda
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(10885)().onGoBack;
+  onGoBack = onGoBack(10922)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
-  const intl = categoryId(1233).intl;
-  obj[1] = intl.string(categoryId(1233).t["/uELTj"]);
+  const intl = categoryId(1114).intl;
+  obj[1] = intl.string(categoryId(1114).t["/uELTj"]);
   obj[2] = function render() {
     return closure_1_8(closure_1_11, { categoryId, onGoBack });
   };
-  return callback(onGoBack(10886), obj);
+  return callback(onGoBack(10924), obj);
 };

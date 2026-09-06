@@ -1,18 +1,18 @@
-// === Module 11373: maybeStartLurking ===
+// === Module 11548: maybeStartLurking ===
 
-// Module 11373 (maybeStartLurking)
+// Module 11548 (maybeStartLurking)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { isGuildVocalChannelType } from "createChannelRecord" /* 1390 */;
-import { isGuildLurker } from "GuildNSFWContentLevel" /* 1429 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import closure_9 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_10 from "createGuildRecordFromRust" /* 1908 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
-import ME from "ME" /* 673 */;
-import { StaticChannelRoute } from "set" /* 1393 */;
-import { GuildOnboardingTab } from "serverPromptToClientPrompt" /* 5477 */;
-import { CHANNELS_AND_ROLES_MODAL_KEY as closure_18 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5473 */;
+import { isGuildVocalChannelType } from "createChannelRecord" /* 1961 */;
+import { isGuildLurker } from "GuildNSFWContentLevel" /* 1975 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "trackCommunicationDisabled" /* 2021 */;
+import closure_9 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_10 from "createGuildRecordFromRust" /* 1979 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4199 */;
+import ME from "ME" /* 1074 */;
+import { StaticChannelRoute } from "set" /* 1964 */;
+import { GuildOnboardingTab } from "serverPromptToClientPrompt" /* 7101 */;
+import { CHANNELS_AND_ROLES_MODAL_KEY as closure_18 } from "GUILD_ONBOARDING_MODAL_KEY" /* 7097 */;
 
 const require = arg1;
 function maybeStartLurking() {

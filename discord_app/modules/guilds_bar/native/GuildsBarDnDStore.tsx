@@ -1,9 +1,9 @@
-// === Module 16122: withEqualityFn ===
+// === Module 16284: withEqualityFn ===
 
-// Module 16122 (withEqualityFn)
+// Module 16284 (withEqualityFn)
 import set from "set" /* 2 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5390 */;
-import identity from "identity" /* 697 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5438 */;
+import identity from "identity" /* 1244 */;
 
 const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;
 let obj = { mode: null, initialX: 0, initialY: 0, absoluteX: 0, absoluteY: 0 };
@@ -11,15 +11,15 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   closure_1 = arg1;
-  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: _require(4217).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "animal", scrollPosition: "rat", windowSize: "center", setStateShallow: "hidden", dropStart: null, dropComplete: "\u{1F478}\u{1F3FF}" };
-  const obj2 = _require(4217);
-  obj[4] = _require(4217).makeMutable(obj);
-  const obj3 = _require(4217);
-  obj[5] = _require(4217).makeMutable(false);
-  let obj4 = _require(4217);
-  obj[6] = _require(4217).makeMutable({ start: 0, end: 0 });
-  const obj5 = _require(4217);
-  obj[7] = _require(4217).makeMutable(0);
+  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: _require(4296).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "Success", scrollPosition: "oO.O", windowSize: "success", setStateShallow: null, dropStart: 0, dropComplete: "No Video Devices" };
+  const obj2 = _require(4296);
+  obj[4] = _require(4296).makeMutable(obj);
+  const obj3 = _require(4296);
+  obj[5] = _require(4296).makeMutable(false);
+  let obj4 = _require(4296);
+  obj[6] = _require(4296).makeMutable({ start: 0, end: 0 });
+  const obj5 = _require(4296);
+  obj[7] = _require(4296).makeMutable(0);
   obj[9] = function setStateShallow(obj) {
     const callback = obj;
     const tmp = callback2();
@@ -200,7 +200,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj[3] = num;
     obj[4] = dragDropInProgress;
     return obj;
-  }, _require(4105).shallow);
+  }, _require(4184).shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

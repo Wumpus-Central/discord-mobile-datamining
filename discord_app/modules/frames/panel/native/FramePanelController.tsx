@@ -1,12 +1,12 @@
-// === Module 16876: FramePanelController ===
+// === Module 17040: FramePanelController ===
 
-// Module 16876 (FramePanelController)
-import contextDefault from "context" /* 16877 */;
+// Module 17040 (FramePanelController)
+import contextDefault from "context" /* 17041 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "addApplication" /* 4519 */;
-import closure_5 from "map" /* 9481 */;
-import { asLaunched } from "FrameLayoutModes" /* 9482 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9483 */;
+import closure_4 from "addApplication" /* 4788 */;
+import closure_5 from "map" /* 9510 */;
+import { asLaunched } from "FrameLayoutModes" /* 9511 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9505 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -14,7 +14,7 @@ const result = require("set").fileFinishedImporting("modules/frames/panel/native
 
 export default function FramePanelController(children) {
   let mainFrameId;
-  let obj = mainFrameId(586);
+  let obj = mainFrameId(504);
   const items = [closure_5, closure_4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const tmp = callback(mainFrame.getMainFrame());
@@ -53,5 +53,5 @@ export default function FramePanelController(children) {
     }
   }, items1);
   obj = { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children };
-  return jsx(mainFrameId(16843).BaseActivityPanelController, { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
+  return jsx(mainFrameId(17007).BaseActivityPanelController, { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
 };

@@ -1,8 +1,8 @@
-// === Module 7531: handleSummarizeThreadFinish ===
+// === Module 7776: handleSummarizeThreadFinish ===
 
-// Module 7531 (handleSummarizeThreadFinish)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 7776 (handleSummarizeThreadFinish)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 function handleSummarizeThreadFinish() {
   c0 = false;

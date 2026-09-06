@@ -1,23 +1,23 @@
-// === Module 7296: openCollectiblesShop ===
+// === Module 7541: openCollectiblesShop ===
 
-// Module 7296 (openCollectiblesShop)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7309 */;
-import pushLayer from "pushLayer" /* 7342 */;
+// Module 7541 (openCollectiblesShop)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7554 */;
+import pushLayer from "pushLayer" /* 7587 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getUserAgnosticState" /* 4477 */;
-import closure_5 from "_getSystemLocale" /* 1995 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7297 */;
-import { addDebugLog } from "useCollectiblesDebugStore" /* 7312 */;
-import closure_8 from "map" /* 7313 */;
-import closure_9 from "items" /* 7314 */;
-import { CollectiblesCategoriesRecord as closure_10, CollectiblesMarketingsRecord as closure_11, CollectiblesShopHomeRecord as closure_14 } from "fromServer" /* 7315 */;
-import closure_12 from "fromServer" /* 7299 */;
-import closure_13 from "fromServer" /* 7325 */;
-import { CollectiblesMobileShopScreen as closure_15 } from "items" /* 675 */;
-import ME from "ME" /* 673 */;
-import getMarketingBySurface from "getMarketingBySurface" /* 7340 */;
+import closure_4 from "getUserAgnosticState" /* 4559 */;
+import closure_5 from "_getSystemLocale" /* 2025 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7542 */;
+import { addDebugLog } from "useCollectiblesDebugStore" /* 7557 */;
+import closure_8 from "map" /* 7558 */;
+import closure_9 from "items" /* 7559 */;
+import { CollectiblesCategoriesRecord as closure_10, CollectiblesMarketingsRecord as closure_11, CollectiblesShopHomeRecord as closure_14 } from "fromServer" /* 7560 */;
+import closure_12 from "fromServer" /* 7544 */;
+import closure_13 from "fromServer" /* 7570 */;
+import { CollectiblesMobileShopScreen as closure_15 } from "items" /* 1076 */;
+import ME from "ME" /* 1074 */;
+import getMarketingBySurface from "getMarketingBySurface" /* 7585 */;
 import "map";
 
 require = arg1;
@@ -684,8 +684,8 @@ function _validateCollectiblesRecipient() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            obj2 = callback(6193);
-            const aPIError = new callback(4376).APIError(callback);
+            obj2 = callback(7339);
+            const aPIError = new callback(4461).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             return { value: false, done: true };
@@ -780,8 +780,8 @@ function _validateCollectiblesRecipientsBatch() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            obj2 = callback(6193);
-            const aPIError = new callback(4376).APIError(callback);
+            obj2 = callback(7339);
+            const aPIError = new callback(4461).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             const obj4 = { value: null, done: true };
@@ -1328,7 +1328,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4333).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4418).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

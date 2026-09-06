@@ -1,9 +1,9 @@
-// === Module 10424: getStickerDiscoverableGuild ===
+// === Module 10406: getStickerDiscoverableGuild ===
 
-// Module 10424 (getStickerDiscoverableGuild)
+// Module 10406 (getStickerDiscoverableGuild)
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 527 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
+import sendRequest from "sendRequest" /* 1272 */;
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/messages/getStickerDiscoverableGuild.tsx");

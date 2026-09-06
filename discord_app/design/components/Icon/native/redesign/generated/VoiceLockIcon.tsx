@@ -1,10 +1,10 @@
-// === Module 5052: VoiceLockIcon ===
+// === Module 5098: VoiceLockIcon ===
 
-// Module 5052 (VoiceLockIcon)
+// Module 5098 (VoiceLockIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 4994 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 5040 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

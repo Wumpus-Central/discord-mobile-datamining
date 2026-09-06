@@ -1,8 +1,8 @@
-// === Module 9619: useCurrentEmbeddedActivity ===
+// === Module 9633: useCurrentEmbeddedActivity ===
 
-// Module 9619 (useCurrentEmbeddedActivity)
-import initialize from "initialize" /* 586 */;
-import closure_2 from "participantFromServer" /* 1385 */;
+// Module 9633 (useCurrentEmbeddedActivity)
+import initialize from "initialize" /* 504 */;
+import closure_2 from "participantFromServer" /* 1956 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedActivity.tsx");

@@ -1,6 +1,6 @@
-// === Module 4677: _guildRoomConnect ===
+// === Module 4716: _guildRoomConnect ===
 
-// Module 4677 (_guildRoomConnect)
+// Module 4716 (_guildRoomConnect)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _guildRoomConnect() {

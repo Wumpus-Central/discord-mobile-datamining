@@ -1,6 +1,6 @@
-// === Module 4680: GuildRoomObjectTypes ===
+// === Module 4719: GuildRoomObjectTypes ===
 
-// Module 4680 (GuildRoomObjectTypes)
+// Module 4719 (GuildRoomObjectTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_rooms/GuildRoomTypes.tsx");

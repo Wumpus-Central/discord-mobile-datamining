@@ -1,14 +1,14 @@
-// === Module 8177: handleUploadMessageAttachmentsErrors ===
+// === Module 9309: handleUploadMessageAttachmentsErrors ===
 
-// Module 8177 (handleUploadMessageAttachmentsErrors)
+// Module 9309 (handleUploadMessageAttachmentsErrors)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import setDefault from "set" /* 4858 */;
-import getUploadFileSizeSum from "getUploadFileSizeSum" /* 5087 */;
-import KESTREL_GA_UPLOAD_LIMIT_MB from "KESTREL_GA_UPLOAD_LIMIT_MB" /* 5132 */;
-import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 8178 */;
-import getAttachmentUploadAbortAlertContent from "getAttachmentUploadAbortAlertContent" /* 8407 */;
-import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import setDefault from "set" /* 4904 */;
+import getUploadFileSizeSum from "getUploadFileSizeSum" /* 5134 */;
+import KESTREL_GA_UPLOAD_LIMIT_MB from "KESTREL_GA_UPLOAD_LIMIT_MB" /* 5179 */;
+import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9310 */;
+import getAttachmentUploadAbortAlertContent from "getAttachmentUploadAbortAlertContent" /* 9393 */;
+import ME from "ME" /* 1074 */;
 
 ({ AbortCodes: c3, MAX_UPLOAD_COUNT: c4 } = ME);
 const result = set.fileFinishedImporting("modules/media_uploads/handleUploadAttachmentErrors.native.tsx");

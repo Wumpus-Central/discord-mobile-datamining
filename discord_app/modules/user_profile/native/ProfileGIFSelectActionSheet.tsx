@@ -1,18 +1,18 @@
-// === Module 14504: ProfileGIFSelectActionSheet ===
+// === Module 14611: ProfileGIFSelectActionSheet ===
 
-// Module 14504 (ProfileGIFSelectActionSheet)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
-import Background from "Background" /* 5631 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8107 */;
-import _modDef10382 from "module_10382" /* 10382 */;
+// Module 14611 (ProfileGIFSelectActionSheet)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
+import Background from "Background" /* 7150 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
+import _modDef10364 from "module_10364" /* 10364 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -160,7 +160,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
                 }
               } else {
                 if (closure_1_10.BANNER === tmp65) {
-                  obj9 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: "patch" };
+                  obj9 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: "text-sm/normal" };
                   obj9[0] = lib(closure_1_2[13]).AssetOriginTypes.NEW_ASSET;
                   obj9[1] = c5;
                   obj9[4] = closure_6;
@@ -206,7 +206,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
   obj[1] = callback(NitroWheelIcon.NitroWheelIcon, {});
   ({ titleWrapper: obj2[2], titleContainer: obj2[3] } = tmp);
   let items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), ];
-  obj = { style: tmp.gifPicker, children: callback(_modDef10382, obj1) };
+  obj = { style: tmp.gifPicker, children: callback(_modDef10364, obj1) };
   items[1] = callback(View, obj);
   obj[3] = items;
   return callback2(Background.BottomSheet, obj);

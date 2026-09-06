@@ -1,11 +1,11 @@
-// === Module 13650: checkGuildIsHub ===
+// === Module 13758: checkGuildIsHub ===
 
-// Module 13650 (checkGuildIsHub)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_0 from "set" /* 6070 */;
-import closure_1 from "createGuildRecordFromRust" /* 1908 */;
-import { GuildFeatures } from "ME" /* 673 */;
+// Module 13758 (checkGuildIsHub)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_0 from "set" /* 7214 */;
+import closure_1 from "createGuildRecordFromRust" /* 1979 */;
+import { GuildFeatures } from "ME" /* 1074 */;
 
 function checkGuildIsHub(id) {
   const guild = store.getGuild(id);

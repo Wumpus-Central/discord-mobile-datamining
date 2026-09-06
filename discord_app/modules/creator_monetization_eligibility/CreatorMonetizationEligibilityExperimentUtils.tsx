@@ -1,10 +1,10 @@
-// === Module 6117: set ===
+// === Module 7261: set ===
 
-// Module 6117 (set)
-import initialize from "initialize" /* 586 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
-import closure_3 from "handlePaymentSourceCreateEnd" /* 4141 */;
-import { GuildFeatures } from "ME" /* 673 */;
+// Module 7261 (set)
+import initialize from "initialize" /* 504 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import closure_3 from "handlePaymentSourceCreateEnd" /* 4220 */;
+import { GuildFeatures } from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 require = arg1;

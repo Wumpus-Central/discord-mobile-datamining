@@ -1,28 +1,28 @@
-// === Module 16635: YouAvatar ===
+// === Module 16800: YouAvatar ===
 
-// Module 16635 (YouAvatar)
-import set from "set" /* 1234 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8547 */;
-import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 8572 */;
-import WidgetRendererDefault from "WidgetRenderer" /* 8819 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12731 */;
+// Module 16800 (YouAvatar)
+import set from "set" /* 1115 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8241 */;
+import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 8256 */;
+import WidgetRendererDefault from "WidgetRenderer" /* 8674 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13064 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { useIsContentShown } from "withContent" /* 1378 */;
-import closure_8 from "filterPlayingActivities" /* 5232 */;
-import closure_9 from "createUserWidgetFromServer" /* 7376 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8573 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import { useIsContentShown } from "withContent" /* 1949 */;
+import closure_8 from "filterPlayingActivities" /* 5279 */;
+import closure_9 from "createUserWidgetFromServer" /* 7621 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(16628).trackYouTabAvatarPress();
-    const obj = callback(16628);
-    const result1 = callback(16207).showYouAccountActionSheet();
+    const result = callback(16793).trackYouTabAvatarPress();
+    const obj = callback(16793);
+    const result1 = callback(16369).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();

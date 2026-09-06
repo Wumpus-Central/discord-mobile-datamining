@@ -1,8 +1,8 @@
-// === Module 11733: getInlineForwardOptions ===
+// === Module 11932: getInlineForwardOptions ===
 
-// Module 11733 (getInlineForwardOptions)
+// Module 11932 (getInlineForwardOptions)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const MessageReferenceTypes = ME.MessageReferenceTypes;
 const result = set.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");

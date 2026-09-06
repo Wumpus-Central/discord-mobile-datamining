@@ -1,8 +1,8 @@
-// === Module 11122: useCanRemoveAllReactions ===
+// === Module 11260: useCanRemoveAllReactions ===
 
-// Module 11122 (useCanRemoveAllReactions)
-import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
-import { Permissions } from "ME" /* 673 */;
+// Module 11260 (useCanRemoveAllReactions)
+import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
+import { Permissions } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/reactions/useCanRemoveAllReactions.tsx");

@@ -1,19 +1,19 @@
-// === Module 10903: InstantInviteDetails ===
+// === Module 10941: InstantInviteDetails ===
 
-// Module 10903 (InstantInviteDetails)
-import ThemesDefault from "Themes" /* 709 */;
-import Text from "Text" /* 4474 */;
-import computeChannelName from "computeChannelName" /* 4674 */;
-import Stack from "Stack" /* 4927 */;
-import getChannelIcon from "getChannelIcon" /* 4982 */;
-import componentDidMountDefault from "componentDidMount" /* 10892 */;
+// Module 10941 (InstantInviteDetails)
+import ThemesDefault from "Themes" /* 576 */;
+import Text from "Text" /* 4556 */;
+import computeChannelName from "computeChannelName" /* 4713 */;
+import Stack from "Stack" /* 4973 */;
+import getChannelIcon from "getChannelIcon" /* 5028 */;
+import componentDidMountDefault from "componentDidMount" /* 10930 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1390 */;
-import closure_6 from "markAllUserIdListsStale" /* 4130 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1961 */;
+import closure_6 from "markAllUserIdListsStale" /* 4209 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 class InstantInviteDetails {
@@ -74,11 +74,11 @@ export default function InstantInviteCode(invite) {
   const memo = React.useMemo(() => closure_1_5(invite.channel), items);
   obj = { children: null };
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  const items1 = [callback(invite(4474).Text, obj), ];
+  const items1 = [callback(invite(4556).Text, obj), ];
   const tmp = callback3();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj[0] = items1;
-  obj[1] = callback2(invite(4927).Stack, obj);
+  obj[1] = callback2(invite(4973).Stack, obj);
   return callback(View, obj);
 };
 export { InstantInviteDetails };

@@ -1,8 +1,8 @@
-// === Module 7592: _uploadMessageAttachments ===
+// === Module 7837: _uploadMessageAttachments ===
 
-// Module 7592 (_uploadMessageAttachments)
+// Module 7837 (_uploadMessageAttachments)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 7593 */;
+import closure_4 from "initialize" /* 7838 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -67,11 +67,11 @@ function _uploadMessageAttachments() {
               set = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              const tmp16 = new callback2(7594)();
+              const tmp16 = new callback2(7839)();
               set = tmp16;
               const _HermesInternal = HermesInternal;
               closure_6 = "pending-upload-" + set._file.id;
-              let obj2 = callback(4738);
+              let obj2 = callback(4783);
               obj2 = {};
               const merged = Object.assign(callback2);
               obj2.key = closure_6;

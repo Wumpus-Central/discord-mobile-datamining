@@ -1,11 +1,11 @@
-// === Module 14060: Slider ===
+// === Module 14178: Slider ===
 
-// Module 14060 (Slider)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 14178 (Slider)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -54,7 +54,7 @@ export const Slider = function Slider(step) {
   obj.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
   obj.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
   obj.tapToSeek = true;
-  items1[1] = callback(step(8394), obj);
+  items1[1] = callback(step(8278), obj);
   let tmp8Result = null;
   if (null != endIcon) {
     obj1 = { style: null, children: null };

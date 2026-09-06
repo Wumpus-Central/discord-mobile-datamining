@@ -1,18 +1,18 @@
-// === Module 5374: buildStageChannelUserRoles ===
+// === Module 5421: buildStageChannelUserRoles ===
 
-// Module 5374 (buildStageChannelUserRoles)
+// Module 5421 (buildStageChannelUserRoles)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5375 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import closure_9 from "updateVoiceState" /* 4497 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
+import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5422 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "trackCommunicationDisabled" /* 2021 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import closure_9 from "updateVoiceState" /* 4579 */;
 
 require = arg1;
 function buildStageChannelUserRoles(id, closure_0, flag) {
@@ -41,7 +41,7 @@ function buildStageChannelUserRoles(id, closure_0, flag) {
         let canResult = null;
         if (flag) {
           obj = { permission: null, user: null, context: null, overwrites: null, roles: null };
-          obj[0] = tmp8(1394).MODERATE_STAGE_CHANNEL_PERMISSIONS;
+          obj[0] = tmp8(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS;
           obj[1] = id;
           obj[2] = guild;
           obj[3] = channel.permissionOverwrites;

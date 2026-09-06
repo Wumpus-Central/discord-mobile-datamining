@@ -1,12 +1,12 @@
-// === Module 16447: VibegrationsSettingsRequestCard ===
+// === Module 16610: VibegrationsSettingsRequestCard ===
 
-// Module 16447 (VibegrationsSettingsRequestCard)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 16610 (VibegrationsSettingsRequestCard)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "rejectPendingPublish" /* 16427 */;
+import closure_5 from "rejectPendingPublish" /* 16589 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -27,7 +27,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
   let React;
   const tmp = callback2();
   dependencyMap = tmp;
-  let obj = projectId(586);
+  let obj = projectId(504);
   const items = [closure_5];
   React = obj.useStateFromStores(items, () => closure_1_5.getSettings(projectId));
   let keys = request.keys;
@@ -53,9 +53,9 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     obj.showActionSheet(obj);
   }, items1);
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
-  const intl = tmp2(1233).intl;
-  obj[2] = intl.string(request(3500).wgDhiQ);
-  const items2 = [callback(projectId(4474).Text, obj), , , ];
+  const intl = tmp2(1114).intl;
+  obj[2] = intl.string(request(3547).wgDhiQ);
+  const items2 = [callback(projectId(4556).Text, obj), , , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -77,12 +77,12 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     items2[2] = tmp7Result;
     const obj3 = { variant: "secondary", size: "sm", onPress: null, text: null };
     obj3[2] = callback;
-    const intl3 = tmp2(1233).intl;
-    obj3[3] = intl3.string(tmp8(3500)["KO2xN+"]);
-    items2[3] = tmp7(tmp2(4929).Button, obj3);
+    const intl3 = tmp2(1114).intl;
+    obj3[3] = intl3.string(tmp8(3547)["KO2xN+"]);
+    items2[3] = tmp7(tmp2(4975).Button, obj3);
     obj[1] = items2;
     return closure_7(tmp6, obj);
   }
-  const intl2 = tmp2(1233).intl;
-  note = intl2.string(tmp8(3500)["V+DBhs"]);
+  const intl2 = tmp2(1114).intl;
+  note = intl2.string(tmp8(3547)["V+DBhs"]);
 };

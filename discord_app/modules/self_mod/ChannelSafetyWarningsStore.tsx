@@ -1,10 +1,10 @@
-// === Module 10878: handleConnectionOpen ===
+// === Module 10915: handleConnectionOpen ===
 
-// Module 10878 (handleConnectionOpen)
-import initializeDefault from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_0 from "ensureGuildLoaded" /* 1386 */;
+// Module 10915 (handleConnectionOpen)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import closure_0 from "ensureGuildLoaded" /* 1957 */;
 import set from "set" /* 2 */;
 
 function handleConnectionOpen() {

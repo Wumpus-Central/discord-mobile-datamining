@@ -1,6 +1,6 @@
-// === Module 1898: parseSkuIdFromServerData ===
+// === Module 1882: parseSkuIdFromServerData ===
 
-// Module 1898 (parseSkuIdFromServerData)
+// Module 1882 (parseSkuIdFromServerData)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/utils/mappers.tsx");

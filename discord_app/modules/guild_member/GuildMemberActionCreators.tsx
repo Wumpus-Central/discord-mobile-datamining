@@ -1,11 +1,11 @@
-// === Module 5497: updateGuildSelfMember ===
+// === Module 7120: updateGuildSelfMember ===
 
-// Module 5497 (updateGuildSelfMember)
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import updateImpersonating from "updateImpersonating" /* 5482 */;
-import closure_3 from "initialize" /* 1983 */;
-import { Endpoints } from "ME" /* 673 */;
+// Module 7120 (updateGuildSelfMember)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import updateImpersonating from "updateImpersonating" /* 5552 */;
+import closure_3 from "initialize" /* 2014 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");

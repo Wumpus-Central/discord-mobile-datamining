@@ -1,10 +1,10 @@
-// === Module 6971: SecurityKeySpotIllustration ===
+// === Module 6407: SecurityKeySpotIllustration ===
 
-// Module 6971 (SecurityKeySpotIllustration)
+// Module 6407 (SecurityKeySpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6972 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6408 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SecurityKeySpotIllustration.native.tsx");

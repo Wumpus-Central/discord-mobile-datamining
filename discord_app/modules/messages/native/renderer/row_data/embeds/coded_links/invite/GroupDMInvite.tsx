@@ -1,13 +1,13 @@
-// === Module 13111: createGroupDMInvite ===
+// === Module 13211: createGroupDMInvite ===
 
-// Module 13111 (createGroupDMInvite)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7866 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11171 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { InviteTypes } from "InviteSendStates" /* 7492 */;
+// Module 13211 (createGroupDMInvite)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11310 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import { InviteTypes } from "InviteSendStates" /* 7736 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
@@ -35,9 +35,9 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
     str = string(t["3p3/BK"]);
     tmp8 = tmp7;
   }
-  const intl2 = tmp8(1233).intl;
+  const intl2 = tmp8(1114).intl;
   const string2 = intl2.string;
-  const t2 = tmp8(1233).t;
+  const t2 = tmp8(1114).t;
   if (flag) {
     string2(t2.cEnaWx);
   } else {
@@ -45,27 +45,27 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   }
   let formatToPlainStringResult;
   if (recipients_.length > 0) {
-    const intl3 = tmp8(1233).intl;
+    const intl3 = tmp8(1114).intl;
     let obj = { count: null };
     obj[0] = recipients_.length;
-    formatToPlainStringResult = intl3.formatToPlainString(tmp8(1233).t.zRl6XR, obj);
+    formatToPlainStringResult = intl3.formatToPlainString(tmp8(1114).t.zRl6XR, obj);
   }
   let channelIconSource = null;
   if (null != channel) {
-    let tmp8Result = tmp8(9447);
+    let tmp8Result = tmp8(13030);
     channelIconSource = tmp8Result.getChannelIconSource(channel);
   }
   let uri = null;
   if (null != channelIconSource) {
-    tmp8Result = tmp8(1433);
+    tmp8Result = tmp8(1399);
     uri = tmp8Result.ensureAvatarSource(channelIconSource).uri;
   }
   let channelName = null;
   if (flag) {
     channelName = null;
     if (null != channel) {
-      channelName = tmp8(4674).computeChannelName(channel, closure_5, closure_4);
-      const tmp8Result1 = tmp8(4674);
+      channelName = tmp8(4713).computeChannelName(channel, closure_5, closure_4);
+      const tmp8Result1 = tmp8(4713);
     }
   }
   if (!channelName) {
@@ -81,17 +81,17 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
     channelName = mapped.join(", ");
   }
   if (!channelName) {
-    const intl4 = tmp8(1233).intl;
-    channelName = intl4.string(tmp8(1233).t.LJpTRF);
+    const intl4 = tmp8(1114).intl;
+    channelName = intl4.string(tmp8(1114).t.LJpTRF);
   }
   if (flag) {
     ({ acceptLabelDisabledColor: acceptLabelGreenColor, acceptLabelDisabledBackgroundColor: acceptLabelGreenBackgroundColor } = colors);
-    const intl6 = tmp8(1233).intl;
-    let stringResult = intl6.string(tmp8(1233).t.cEnaWx);
+    const intl6 = tmp8(1114).intl;
+    let stringResult = intl6.string(tmp8(1114).t.cEnaWx);
   } else {
     ({ acceptLabelGreenColor, acceptLabelGreenBackgroundColor } = colors);
-    const intl5 = tmp8(1233).intl;
-    stringResult = intl5.string(tmp8(1233).t.XpeFYr);
+    const intl5 = tmp8(1114).intl;
+    stringResult = intl5.string(tmp8(1114).t.XpeFYr);
   }
   obj = {};
   const merged = Object.assign(baseColors);
@@ -124,8 +124,8 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
-      channelName1 = tmp8(4674).computeChannelName(channel, closure_5, closure_4);
-      const tmp8Result2 = tmp8(4674);
+      channelName1 = tmp8(4713).computeChannelName(channel, closure_5, closure_4);
+      const tmp8Result2 = tmp8(4713);
     }
   }
   obj.channelName = channelName1;

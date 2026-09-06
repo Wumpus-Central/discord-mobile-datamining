@@ -1,10 +1,10 @@
-// === Module 6491: DisplayNameLockeAbstractUI ===
+// === Module 5923: DisplayNameLockeAbstractUI ===
 
-// Module 6491 (DisplayNameLockeAbstractUI)
+// Module 5923 (DisplayNameLockeAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6492 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5924 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx");

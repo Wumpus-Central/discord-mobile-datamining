@@ -1,9 +1,9 @@
-// === Module 8003: _sendGiftMessage ===
+// === Module 8082: _sendGiftMessage ===
 
-// Module 8003 (_sendGiftMessage)
+// Module 8082 (_sendGiftMessage)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
 
 const require = arg1;
 function _sendGiftMessage() {
@@ -41,13 +41,13 @@ function _sendGiftMessage() {
           return channel;
         }
       });
-      dependencyMap = callback(4753).getGiftCodeURL(callback);
-      const obj9 = lib(7211);
+      dependencyMap = callback(4799).getGiftCodeURL(callback);
+      const obj9 = lib(7456);
       const id = lib.id;
-      const obj8 = callback(4753);
+      const obj8 = callback(4799);
       const obj4 = { isGiftLinkSentOnBehalfOfUser: true, location: null };
       obj4[1] = constants.GIFTING;
-      return obj9.sendMessage(id, lib(7437).parse(lib, dependencyMap), undefined, obj4);
+      return obj9.sendMessage(id, lib(7682).parse(lib, dependencyMap), undefined, obj4);
     })();
   });
   closure_6 = tmp;

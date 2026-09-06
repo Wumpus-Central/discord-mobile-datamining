@@ -1,13 +1,13 @@
-// === Module 8512: _fetchSocialLayerStorefront ===
+// === Module 10798: _fetchSocialLayerStorefront ===
 
-// Module 8512 (_fetchSocialLayerStorefront)
-import failsDefault from "fails" /* 581 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 10798 (_fetchSocialLayerStorefront)
+import failsDefault from "fails" /* 559 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getPromotionIdOverride" /* 8513 */;
-import closure_5 from "handleUserSettingsStoreUpdate" /* 6084 */;
-import { Endpoints } from "ME" /* 673 */;
+import closure_4 from "getPromotionIdOverride" /* 8786 */;
+import closure_5 from "handleUserSettingsStoreUpdate" /* 7228 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchSocialLayerStorefront(arg0, Endpoints, arg2) {
@@ -1059,7 +1059,7 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
     yield HTTP.get(obj1);
     if (1 === tmp7) {
       c11 = 0;
-      obj3 = obj3(706);
+      obj3 = obj3(573);
       obj3.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_FAILURE" });
       c13 = 3;
     } else if (arg0 === 1) {
@@ -1122,7 +1122,7 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
         }
         obj3[7] = c7;
       }
-      const obj = obj3(706);
+      const obj = obj3(573);
       const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS", config: null };
       obj4[1] = obj3;
       obj.dispatch(obj4);
@@ -1253,7 +1253,7 @@ export const fetchSocialLayerSKUPurchaseEligibility = function fetchSocialLayerS
         obj.dispatch(obj);
       }
     }, closure_11);
-    const HTTP = _require(527).HTTP;
+    const HTTP = _require(1272).HTTP;
     obj = { url: null, rejectWithError: true };
     obj[0] = Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(arg0, closure_0);
     const postResult = HTTP.post(obj);

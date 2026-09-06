@@ -1,10 +1,10 @@
-// === Module 6731: GiftingTier4SmallBadge ===
+// === Module 6167: GiftingTier4SmallBadge ===
 
-// Module 6731 (GiftingTier4SmallBadge)
+// Module 6167 (GiftingTier4SmallBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import vanityUrlDefault from "vanityUrl" /* 6732 */;
+import preloadDefault from "preload" /* 5587 */;
+import vanityUrlDefault from "vanityUrl" /* 6168 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier4SmallBadge.native.tsx");

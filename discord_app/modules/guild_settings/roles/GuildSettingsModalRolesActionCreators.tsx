@@ -1,9 +1,9 @@
-// === Module 17457: updateGuildRole ===
+// === Module 17617: updateGuildRole ===
 
-// Module 17457 (updateGuildRole)
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 17617 (updateGuildRole)
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function updateGuildRole(arg0) {
@@ -74,7 +74,7 @@ function _updateGuildRole() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj2[0] = c4.GUILD_ROLE(callback, callback2);
               let obj3 = { name: null, permissions: null, color: null, hoist: null, mentionable: null };
@@ -88,7 +88,7 @@ function _updateGuildRole() {
               obj3[3] = c5;
               obj3[4] = c6;
               obj2[1] = obj3;
-              obj3 = callback(527);
+              obj3 = callback(1272);
               obj2[3] = obj3.rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
@@ -106,7 +106,7 @@ function _updateGuildRole() {
             return obj5;
           } else {
             closure_7 = arg1;
-            obj = callback2(6177);
+            obj = callback2(7323);
             const result = obj.checkGuildTemplateDirty(callback);
             c5 = 3;
             const obj6 = { value: null, done: true };
@@ -175,6 +175,6 @@ export default {
     ({ guildId, roleId, name, permissions, color, hoist, mentionable } = arg0);
     dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING" });
     const obj = dispatcherDefault;
-    updateGuildRole({ guildId, roleId, name, permissions, color, hoist, mentionable }).then(() => callback(706).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_SUCCESS" }), () => callback(706).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_FAILURE" }));
+    updateGuildRole({ guildId, roleId, name, permissions, color, hoist, mentionable }).then(() => callback(573).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_SUCCESS" }), () => callback(573).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_FAILURE" }));
   }
 };

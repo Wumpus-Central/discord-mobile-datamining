@@ -1,13 +1,13 @@
-// === Module 4540: apexExperiment ===
+// === Module 13675: apexExperiment ===
 
-// Module 4540 (apexExperiment)
-import initialize from "initialize" /* 586 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 4541 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+// Module 13675 (apexExperiment)
+import initialize from "initialize" /* 504 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13676 */;
+import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 require = arg1;
 ApexExperiment = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };

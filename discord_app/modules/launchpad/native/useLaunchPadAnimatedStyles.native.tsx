@@ -1,9 +1,9 @@
-// === Module 16800: useLaunchpadAnimatedStyles ===
+// === Module 16965: useLaunchpadAnimatedStyles ===
 
-// Module 16800 (useLaunchpadAnimatedStyles)
-import LAUNCH_PAD_SPRING_CONFIG2 from "LAUNCH_PAD_SPRING_CONFIG" /* 11288 */;
-import set from "set" /* 1234 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+// Module 16965 (useLaunchpadAnimatedStyles)
+import LAUNCH_PAD_SPRING_CONFIG2 from "LAUNCH_PAD_SPRING_CONFIG" /* 11464 */;
+import set from "set" /* 1115 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const LAUNCH_PAD_SPRING_CONFIG = LAUNCH_PAD_SPRING_CONFIG2.LAUNCH_PAD_SPRING_CONFIG;
 let closure_4 = set.isAndroid();

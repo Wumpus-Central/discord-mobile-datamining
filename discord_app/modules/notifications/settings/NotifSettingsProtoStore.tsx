@@ -1,11 +1,11 @@
-// === Module 13571: initialize ===
+// === Module 13680: initialize ===
 
-// Module 13571 (initialize)
+// Module 13680 (initialize)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import b64ToProto from "b64ToProto" /* 1341 */;
-import create from "create" /* 13572 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import b64ToProto from "b64ToProto" /* 1223 */;
+import create from "create" /* 13681 */;
 
 let DeclarativeSettings = create.DeclarativeSettings;
 let closure_2 = DeclarativeSettings.create();

@@ -1,11 +1,11 @@
-// === Module 14049: getItemKey ===
+// === Module 14167: getItemKey ===
 
-// Module 14049 (getItemKey)
-import ContextMenuDivider from "ContextMenuDivider" /* 14050 */;
+// Module 14167 (getItemKey)
+import ContextMenuDivider from "ContextMenuDivider" /* 14168 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function getItemKey(key) {
@@ -48,15 +48,34 @@ export const ContextMenuContainer = function ContextMenuContainer() {
   }
   const effect = React.useEffect(() => {
     const KeyboardEvents = lib(callback[6]).KeyboardEvents;
-    lib = KeyboardEvents.addListener("keyboardDidHide", lib(callback[5]).hideContextMenu);
+    lib = KeyboardEvents.addListener("keyboardDidHide", () => {
+      const ContextMenuStore = lib(table[5]).ContextMenuStore;
+      const menu = ContextMenuStore.getState().menu;
+      let ignoreKeyboardHide;
+      if (menu != null) {
+        ignoreKeyboardHide = menu.ignoreKeyboardHide;
+      }
+      if (true !== ignoreKeyboardHide) {
+        lib(table[5]).hideContextMenu();
+        const tmpResult = lib(table[5]);
+      }
+    });
     return () => {
-      closure_0.remove();
+      lib.remove();
     };
   }, []);
   const items1 = [requestClose];
   callback = React.useCallback(() => {
     requestClose(true);
   }, items1);
+  let ignoreKeyboardHide;
+  if (activeContextMenu != null) {
+    ignoreKeyboardHide = activeContextMenu.ignoreKeyboardHide;
+  }
+  requestClose(callback[7])(() => {
+    callback();
+    return true;
+  }, true === ignoreKeyboardHide);
   const items2 = [callback, , ];
   ({ overlayView: arr3[1], wrapperView: arr3[2] } = tmp);
   const callback1 = React.useCallback((children) => {
@@ -65,11 +84,11 @@ export const ContextMenuContainer = function ContextMenuContainer() {
     if (0 === arg1.length) {
       str = "none";
     }
-    obj = { pointerEvents: str, style: lib.wrapperView, children: tmp(lib(callback[8]).Dialog, obj) };
+    obj = { pointerEvents: str, style: lib.wrapperView, children: tmp(lib(callback[9]).Dialog, obj) };
     obj = { onDismiss: callback, children };
     obj[1] = closure_1_5(closure_1_4, obj);
-    return closure_1_5(requestClose(callback[7]), obj);
+    return closure_1_5(requestClose(callback[8]), obj);
   }, items2);
   obj = { wrapChildren: callback1, items: tmp5, renderItem, getItemKey };
-  return jsx(_require(callback[9]).TransitionGroup, { wrapChildren: callback1, items: tmp5, renderItem, getItemKey });
+  return jsx(_require(callback[10]).TransitionGroup, { wrapChildren: callback1, items: tmp5, renderItem, getItemKey });
 };

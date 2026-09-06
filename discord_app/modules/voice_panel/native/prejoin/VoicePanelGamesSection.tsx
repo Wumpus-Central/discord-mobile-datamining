@@ -1,12 +1,12 @@
-// === Module 16997: GameRow ===
+// === Module 17161: GameRow ===
 
-// Module 16997 (GameRow)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8820 */;
-import VoiceBadges from "VoiceBadges" /* 9833 */;
-import useIsVoiceChannelGamesExperimentEnabledDefault from "useIsVoiceChannelGamesExperimentEnabled" /* 9893 */;
-import _modDef9898 from "module_9898" /* 9898 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 16998 */;
+// Module 17161 (GameRow)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8675 */;
+import VoiceBadges from "VoiceBadges" /* 9118 */;
+import useIsVoiceChannelGamesExperimentEnabledDefault from "useIsVoiceChannelGamesExperimentEnabled" /* 9178 */;
+import _modDef9183 from "module_9183" /* 9183 */;
+import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17162 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -14,9 +14,9 @@ require = arg1;
 function GameRow(gameId) {
   gameId = gameId.gameId;
   let _require;
-  let obj = _require(6163);
+  let obj = _require(7309);
   const data = obj.useGame(gameId).data;
-  obj = { gameId, source: _require(8831).GameProfileSources.VoiceChannelGames };
+  obj = { gameId, source: _require(8686).GameProfileSources.VoiceChannelGames };
   const tmp4Result = useOpenGameProfileModalDefault(obj);
   _require = tmp4Result;
   if (null == data) {
@@ -25,12 +25,12 @@ function GameRow(gameId) {
     if ("" !== data.name) {
       let name = data.name;
     } else {
-      const intl = tmp(1233).intl;
-      name = intl.string(tmp(1233).t.GIWFlF);
+      const intl = tmp(1114).intl;
+      name = intl.string(tmp(1114).t.GIWFlF);
     }
     obj = { game: null, size: 32, fallback: "placeholder" };
     obj[0] = data;
-    const tmp7 = jsx(_modDef9898, { game: null, size: 32, fallback: "placeholder" });
+    const tmp7 = jsx(_modDef9183, { game: null, size: 32, fallback: "placeholder" });
     if (null == tmp4Result) {
       obj1 = { icon: null, label: null, disabled: true };
       obj1[0] = tmp7;
@@ -43,12 +43,12 @@ function GameRow(gameId) {
       obj2[3] = function onPress() {
         return callback();
       };
-      const intl2 = tmp(1233).intl;
+      const intl2 = tmp(1114).intl;
       const obj3 = { gameName: null };
       obj3[0] = name;
-      obj2[5] = intl2.formatToPlainString(tmp(1233).t["9sZWVp"], obj3);
+      obj2[5] = intl2.formatToPlainString(tmp(1114).t["9sZWVp"], obj3);
     }
-    return jsx(tmp(5608).TableRow, obj2);
+    return jsx(tmp(5605).TableRow, obj2);
   }
   const tmp3 = importDefault;
   const tmp4 = useOpenGameProfileModalDefault;

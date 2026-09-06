@@ -1,16 +1,16 @@
-// === Module 17309: _terminate ===
+// === Module 17469: _terminate ===
 
-// Module 17309 (_terminate)
-import initializeDefault from "initialize" /* 5495 */;
-import fetchActivePromotions from "fetchActivePromotions" /* 13248 */;
+// Module 17469 (_terminate)
+import initializeDefault from "initialize" /* 7118 */;
+import fetchActivePromotions from "fetchActivePromotions" /* 13353 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1995 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import closure_6 from "reset" /* 4145 */;
-import closure_7 from "createEmptyPromotionsByType" /* 10700 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
-import { EntitlementTypes } from "ME" /* 673 */;
-import { SubscriptionTypes } from "sum" /* 502 */;
+import closure_4 from "_getSystemLocale" /* 2025 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import closure_6 from "reset" /* 4224 */;
+import closure_7 from "createEmptyPromotionsByType" /* 10665 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
+import { EntitlementTypes } from "ME" /* 1074 */;
+import { SubscriptionTypes } from "sum" /* 1085 */;
 
 require = arg1;
 initializeDefault;

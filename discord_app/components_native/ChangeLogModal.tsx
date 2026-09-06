@@ -1,19 +1,19 @@
-// === Module 15384: ChangeLogScreen ===
+// === Module 15542: ChangeLogScreen ===
 
-// Module 15384 (ChangeLogScreen)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import ThemesDefault from "Themes" /* 709 */;
-import _modDef4724 from "module_4724" /* 4724 */;
-import NavigationStack from "NavigationStack" /* 6017 */;
-import LHeadingDefault from "LHeading" /* 8011 */;
-import VideoComponentDefault from "VideoComponent" /* 8621 */;
-import _modDef15385 from "module_15385" /* 15385 */;
+// Module 15542 (ChangeLogScreen)
+import ThemesDefault from "Themes" /* 576 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import _modDef4763 from "module_4763" /* 4763 */;
+import NavigationStack from "NavigationStack" /* 7000 */;
+import LHeadingDefault from "LHeading" /* 8090 */;
+import VideoComponentDefault from "VideoComponent" /* 8307 */;
+import _modDef15543 from "module_15543" /* 15543 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY" /* 1979 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY" /* 2010 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 class ChangeLogScreen {
@@ -129,7 +129,7 @@ class ChangeLogScreen {
   }
 }
 function hideChangeLog() {
-  _modDef4724.popWithKey(CHANGELOG_MODAL_KEY);
+  _modDef4763.popWithKey(CHANGELOG_MODAL_KEY);
 }
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -277,7 +277,7 @@ prototype["renderVideo"] = function renderVideo() {
       obj1[3] = function onReady() {
         return self.setState({ ytVideoReady: true });
       };
-      const items = [callback(_modDef15385, obj1), ];
+      const items = [callback(_modDef15543, obj1), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: null, source: null };
@@ -286,8 +286,8 @@ prototype["renderVideo"] = function renderVideo() {
         const _HermesInternal = HermesInternal;
         obj3[0] = "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg";
         obj2[1] = obj3;
-        tmp6Result = tmp6(tmp7(5502), obj2);
-        const tmp7Result = tmp7(5502);
+        tmp6Result = tmp6(tmp7(5587), obj2);
+        const tmp7Result = tmp7(5587);
       }
       items[1] = tmp6Result;
       obj[2] = items;
@@ -305,8 +305,8 @@ prototype["renderVideo"] = function renderVideo() {
   const obj4 = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: null };
   const obj5 = { ref: self.ref, style: tmp.videoSpecial, children: null };
   const obj6 = { style: tmp.video, src: obj, width: props.width, height, paused: true, canOpenFullscreen: true, unmutedOnFullScreen: true, accessibilityLabel: null, onPress: null };
-  const intl = self(1233).intl;
-  obj6[7] = intl.string(self(1233).t.zHeo07);
+  const intl = self(1114).intl;
+  obj6[7] = intl.string(self(1114).t.zHeo07);
   obj6[8] = function onPress() {
     self.track(closure_1_5.CHANGE_LOG_VIDEO_INTERACTED);
   };
@@ -317,14 +317,14 @@ prototype["renderVideo"] = function renderVideo() {
     obj7[2] = tmp.videoOverlay;
     obj7[3] = self.playVideo;
     const obj8 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: null, onPress: null, style: null, iconSize: null, iconStyle: null };
-    obj8[2] = tmp15(10415);
+    obj8[2] = tmp15(10397);
     obj8[3] = self.playVideo;
     obj8[4] = tmp.playButton;
-    obj8[5] = tmp18(1296).IconSizes.CUSTOM;
+    obj8[5] = tmp18(1178).IconSizes.CUSTOM;
     obj8[6] = tmp.playIcon;
-    obj7[4] = tmp12(tmp15(9085), obj8);
-    tmp12Result = tmp12(tmp18(5077).PressableOpacity, obj7);
-    const tmp15Result = tmp15(9085);
+    obj7[4] = tmp12(tmp15(9050), obj8);
+    tmp12Result = tmp12(tmp18(5123).PressableOpacity, obj7);
+    const tmp15Result = tmp15(9050);
   }
   items1[1] = tmp12Result;
   obj5[2] = items1;

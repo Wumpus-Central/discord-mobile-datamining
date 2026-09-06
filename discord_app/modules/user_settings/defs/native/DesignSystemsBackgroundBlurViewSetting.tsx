@@ -1,10 +1,10 @@
-// === Module 15612: route ===
+// === Module 15770: route ===
 
-// Module 15612 (route)
+// Module 15770 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import MobileUserSettings from "MobileUserSettings" /* 7896 */;
-import createToggle from "createToggle" /* 11292 */;
+import ME from "ME" /* 1074 */;
+import MobileUserSettings from "MobileUserSettings" /* 7975 */;
+import createToggle from "createToggle" /* 11468 */;
 
 obj = {
   useTitle() {
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_BACKGROUND_BLUR_VIEW,
   getComponent() {
-    return require(15611) /* DemoModal */.default;
+    return require(15769) /* DemoModal */.default;
   }
 };
 const route = createToggle.createRoute(obj);

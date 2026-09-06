@@ -1,10 +1,10 @@
-// === Module 6088: resetStoreState ===
+// === Module 7232: resetStoreState ===
 
-// Module 6088 (resetStoreState)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import closure_2 from "_getSystemLocale" /* 1995 */;
+// Module 7232 (resetStoreState)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import closure_2 from "_getSystemLocale" /* 2025 */;
 
 require = arg1;
 function resetStoreState() {

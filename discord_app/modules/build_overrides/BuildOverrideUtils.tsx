@@ -1,14 +1,14 @@
-// === Module 4393: Version ===
+// === Module 1362: Version ===
 
-// Module 4393 (Version)
-import sendRequest from "sendRequest" /* 527 */;
-import ME from "ME" /* 673 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
-import UrlAll from "Url" /* 1487 */;
-import BUILD_OVERRIDE_TARGET_NAMES from "BUILD_OVERRIDE_TARGET_NAMES" /* 4394 */;
-import parseDefault from "parse" /* 4395 */;
-import getConstants from "getConstants" /* 1624 */;
-import set from "set" /* 1234 */;
+// Module 1362 (Version)
+import ME from "ME" /* 1074 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import BUILD_OVERRIDE_TARGET_NAMES from "BUILD_OVERRIDE_TARGET_NAMES" /* 1363 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
+import UrlAll from "Url" /* 1367 */;
+import parseDefault from "parse" /* 1370 */;
+import getConstants from "getConstants" /* 1364 */;
+import set from "set" /* 1115 */;
 
 let closure_4 = BUILD_OVERRIDE_TARGET_NAMES.BUILD_OVERRIDE_COOKIE_NAME;
 const PRIMARY_DOMAIN = ME.PRIMARY_DOMAIN;

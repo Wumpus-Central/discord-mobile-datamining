@@ -1,10 +1,10 @@
-// === Module 7115: VendingMachineSpotIllustration ===
+// === Module 6553: VendingMachineSpotIllustration ===
 
-// Module 7115 (VendingMachineSpotIllustration)
+// Module 6553 (VendingMachineSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 7116 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6554 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/VendingMachineSpotIllustration.native.tsx");

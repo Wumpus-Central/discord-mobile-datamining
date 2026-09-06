@@ -1,24 +1,24 @@
-// === Module 16131: MiniGuildIcon ===
+// === Module 16293: MiniGuildIcon ===
 
-// Module 16131 (MiniGuildIcon)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 4197 */;
-import registerAssetDefault from "registerAsset" /* 4985 */;
-import preloadDefault from "preload" /* 5502 */;
-import GuildIconSizes from "GuildIconSizes" /* 6013 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6013 */;
+// Module 16293 (MiniGuildIcon)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import map from "map" /* 4262 */;
+import registerAssetDefault from "registerAsset" /* 5031 */;
+import GuildIconSizes from "GuildIconSizes" /* 5584 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
+import preloadDefault from "preload" /* 5587 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "updateGuildUnreadSentinel" /* 7391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "handleConnectionOpen" /* 4299 */;
-import closure_7 from "insertUnsortedGuilds" /* 5390 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5390 */;
-import withEqualityFn from "withEqualityFn" /* 16122 */;
-import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 16128 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16123 */;
+import closure_4 from "updateGuildUnreadSentinel" /* 7636 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "handleConnectionOpen" /* 4381 */;
+import closure_7 from "insertUnsortedGuilds" /* 5438 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5438 */;
+import withEqualityFn from "withEqualityFn" /* 16284 */;
+import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 16290 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16285 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function MiniGuildIcon(arg0) {
@@ -214,11 +214,11 @@ const memoResult = importAllResult.memo(function FolderBGInner(color) {
   color = color.color;
   let token2;
   ({ folderId, totalItems } = color);
-  let obj = color(4197);
-  const token = obj.useToken(token2(709).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const token1 = color(4197).useToken(token2(709).modules.mobile.GUILD_BAR_ITEM_MARGIN);
-  let obj2 = color(4197);
-  const obj3 = color(4197);
+  let obj = color(4262);
+  const token = obj.useToken(token2(576).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const token1 = color(4262).useToken(token2(576).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  let obj2 = color(4262);
+  const obj3 = color(4262);
   const fn = function s(height) {
     let obj = { animations: null, initialValues: null };
     obj = { height: color(table[14]).withSpring(height.targetHeight, closure_12, "animate-always") };
@@ -227,15 +227,15 @@ const memoResult = importAllResult.memo(function FolderBGInner(color) {
     return obj;
   };
   obj = { withSpring: null, TRANSITION_PHYSICS: null };
-  const tmp3 = callback3(token, color(4197).useToken(token2(709).modules.mobile.GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET));
-  obj[0] = color(4928).withSpring;
+  const tmp3 = callback3(token, color(4262).useToken(token2(576).modules.mobile.GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET));
+  obj[0] = color(4974).withSpring;
   obj[1] = closure_12;
   fn.__closure = obj;
   fn.__workletHash = 2519256682742;
   fn.__initData = closure_18;
   const layout = importAllResult.useCallback(fn, []);
   const tmp4 = callback(folderId);
-  token2 = color(4197).useToken(token2(709).modules.mobile.GUILD_FOLDER_COLOR_OPACITY);
+  token2 = color(4262).useToken(token2(576).modules.mobile.GUILD_FOLDER_COLOR_OPACITY);
   const items = [color, token2];
   const memo = importAllResult.useMemo(() => {
     if (null != color) {
@@ -250,7 +250,7 @@ const memoResult = importAllResult.memo(function FolderBGInner(color) {
   const style = [tmp3.folderBackground, memo, ];
   obj = { height: token + token1 + (token + 2 * token1) * totalItems + tmp4 };
   style[2] = obj;
-  return callback2(token2(7808), { pointerEvents: "none", collapsable: false, layout, style });
+  return callback2(token2(7073), { pointerEvents: "none", collapsable: false, layout, style });
 });
 let closure_20 = { code: "function GuildsBarGuildFolderTsx2(){const{withSpring,visible,FOLDER_SPRING_PHYSICS,state,TransitionStates,runOnJS,cleanUp,fromTop,guildItemSize}=this.__closure;return{opacity:withSpring(visible.get(),FOLDER_SPRING_PHYSICS,undefined,function(finished){if(finished&&state===TransitionStates.YEETED)runOnJS(cleanUp)();}),transform:[{translateY:withSpring(visible.get()===1?0:fromTop?-guildItemSize:guildItemSize,FOLDER_SPRING_PHYSICS)},{scale:withSpring(visible.get()===1?1:fromTop?0.3:1.3,FOLDER_SPRING_PHYSICS)}]};}" };
 let closure_21 = { code: "function GuildsBarGuildFolderTsx3(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED)runOnJS(cleanUp)();}" };

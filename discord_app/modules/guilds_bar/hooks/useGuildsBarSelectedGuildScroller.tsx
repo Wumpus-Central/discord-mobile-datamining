@@ -1,8 +1,8 @@
-// === Module 16197: useGuildsBarSelectedGuildScroller ===
+// === Module 16359: useGuildsBarSelectedGuildScroller ===
 
-// Module 16197 (useGuildsBarSelectedGuildScroller)
+// Module 16359 (useGuildsBarSelectedGuildScroller)
 import closure_0 from "noop" /* 19 */;
-import closure_1 from "handleConnectionOpen" /* 4299 */;
+import closure_1 from "handleConnectionOpen" /* 4381 */;
 
 const result = require("set").fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
 

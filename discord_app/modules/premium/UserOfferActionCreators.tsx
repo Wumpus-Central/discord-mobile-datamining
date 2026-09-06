@@ -1,15 +1,15 @@
-// === Module 7983: getPaymentGateway ===
+// === Module 8062: getPaymentGateway ===
 
-// Module 7983 (getPaymentGateway)
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import set from "set" /* 1234 */;
+// Module 8062 (getPaymentGateway)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import set from "set" /* 1115 */;
+import sendRequest from "sendRequest" /* 1272 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createFromServer" /* 7984 */;
-import closure_5 from "createFromServer" /* 7209 */;
-import closure_6 from "emitChanges" /* 7205 */;
-import { PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID as closure_7 } from "GuildFeatures" /* 1923 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "createFromServer" /* 8063 */;
+import closure_5 from "createFromServer" /* 7454 */;
+import closure_6 from "emitChanges" /* 7450 */;
+import { PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID as closure_7 } from "GuildFeatures" /* 1373 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function getPaymentGateway() {
@@ -79,7 +79,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "Array", paymentGatewayOverride: "PX_16" };
+                  obj1 = { offerId: "hash", paymentGatewayOverride: "call" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = closure_4;
@@ -305,7 +305,7 @@ function _fetchExistingChurnDiscountOffer() {
     obj1[0] = closure_1_9.CHURN_USER_OFFER;
     yield HTTP.get(obj1);
     c4 = 0;
-    let obj5 = fromServer(706);
+    let obj5 = fromServer(573);
     obj5.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
     yield "HermesInternal";
     const offer = arg1.body.offer;
@@ -317,7 +317,7 @@ function _fetchExistingChurnDiscountOffer() {
     if (null != closure_0) {
       fromServer = c4.createFromServer(closure_0);
     }
-    const obj = fromServer(706);
+    const obj = fromServer(573);
     const obj4 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: null };
     obj4[1] = fromServer;
     obj.dispatch(obj4);
@@ -441,7 +441,7 @@ export const acknowledgeUserOffer = function acknowledgeUserOffer(hasAcknowledge
     if (user_trial_offer == null) {
       user_trial_offer = null;
     }
-    let obj = callback(706);
+    let obj = callback(573);
     let fromServer = null;
     if (null != user_trial_offer) {
       fromServer = closure_5.createFromServer(user_trial_offer);
@@ -460,8 +460,8 @@ export const acknowledgeUserOffer = function acknowledgeUserOffer(hasAcknowledge
     obj.dispatch(obj);
   }).catch((status) => {
     if (404 === status.status) {
-      callback(706).dispatch({ type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: null, userDiscount: null, userDiscountOffer: null });
-      const obj = callback(706);
+      callback(573).dispatch({ type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: null, userDiscount: null, userDiscountOffer: null });
+      const obj = callback(573);
     }
   });
 };
@@ -487,7 +487,7 @@ export const triggerUserOffer = function triggerUserOffer(arg0, arg1, arg2) {
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(1234);
+      postResultResult = postResult(1115);
     }
     obj = { payment_gateway: null, trigger_type: null, trigger_location_stack: null, trigger_metadata: null, trigger_uptime_app: null };
     obj[0] = GOOGLE;
@@ -496,7 +496,7 @@ export const triggerUserOffer = function triggerUserOffer(arg0, arg1, arg2) {
     _JSON = JSON;
     obj[3] = JSON.stringify(tmp5);
     obj[4] = obj.getUptimeForTrigger();
-    const HTTP = postResult(527).HTTP;
+    const HTTP = postResult(1272).HTTP;
     obj1 = { url: null, body: null, rejectWithError: true };
     obj1[0] = constants.USER_OFFER_TRIGGER;
     obj1[1] = obj;
@@ -528,6 +528,6 @@ export const triggerUserOffer = function triggerUserOffer(arg0, arg1, arg2) {
       obj[5] = fromServer1;
       obj.dispatch(obj);
     });
-    obj4 = _require(1234);
+    obj4 = _require(1115);
   }
 };

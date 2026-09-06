@@ -1,22 +1,22 @@
-// === Module 15537: BalanceWidget ===
+// === Module 15695: BalanceWidget ===
 
-// Module 15537 (BalanceWidget)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
-import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10643 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11073 */;
-import _mod11580 from "module_11580" /* 11580 */;
+// Module 15695 (BalanceWidget)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
+import Text from "Text" /* 4556 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import _mod8850 from "module_8850" /* 8850 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10625 */;
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11100 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 675 */;
-import ContentDismissActionType from "ContentDismissActionType" /* 1383 */;
-import { RewardFilterTypes } from "QuestsExperimentLocations" /* 5396 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 1076 */;
+import ContentDismissActionType from "ContentDismissActionType" /* 1954 */;
+import { RewardFilterTypes } from "QuestsExperimentLocations" /* 5444 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function BalanceWidget(arg0) {
@@ -70,7 +70,7 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  let obj = str(11580);
+  let obj = str(8850);
   str = obj.useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = React.useCallback(() => {
@@ -112,7 +112,7 @@ function BalanceWidgetMenu(style) {
     obj1.openLazy(() => callback(paths[19])(paths[18], paths.paths).then((arg0) => arg0.default), "BalanceWidgetMenu", obj);
   }, items);
   obj = { onPress: callback, style: style.style, accessibilityLabel: null, children: null };
-  let intl = str(1233).intl;
+  let intl = str(1114).intl;
   let str2;
   if (str != null) {
     str2 = str.toString();
@@ -120,7 +120,7 @@ function BalanceWidgetMenu(style) {
   if (str2 == null) {
     str2 = "";
   }
-  obj[2] = intl.formatToPlainString(str(1233).t.zPaLL9, { balance: str2 });
+  obj[2] = intl.formatToPlainString(str(1114).t.zPaLL9, { balance: str2 });
   obj[3] = closure_10(BalanceWidgetPillButtonDefault, { balance: str, onPress: callback, accessible: false });
   return closure_10(BalanceWidget, obj);
 }
@@ -138,7 +138,7 @@ let closure_15 = createCacheKey.createStyles(() => {
 let result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper(style) {
-  let obj = _mod11580;
+  let obj = _mod8850;
   const balance = obj.useFetchVirtualCurrencyBalance().balance;
   UNSAFE_isDismissibleContentDismissed;
   if (null == balance) {
@@ -147,12 +147,12 @@ export default function BalanceWidgetMenuWrapper(style) {
 
     };
     obj[1] = style.style;
-    const intl = tmp2(1233).intl;
-    obj[2] = intl.string(tmp2(1233).t.cKwv4k);
+    const intl = tmp2(1114).intl;
+    obj[2] = intl.string(tmp2(1114).t.cKwv4k);
     obj[3] = { busy: true };
     obj = { style: null, children: null };
     obj[0] = tmp.loadingContainer;
-    obj[1] = callback(tmp2(4945).Ellipsis, { variant: "primary", size: "sm" });
+    obj[1] = callback(tmp2(4991).Ellipsis, { variant: "primary", size: "sm" });
     obj[4] = callback(View, obj);
     let tmp6Result = callback(BalanceWidget, obj);
   } else {

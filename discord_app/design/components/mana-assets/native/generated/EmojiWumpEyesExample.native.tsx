@@ -1,10 +1,10 @@
-// === Module 6527: EmojiWumpEyesExample ===
+// === Module 5961: EmojiWumpEyesExample ===
 
-// Module 6527 (EmojiWumpEyesExample)
+// Module 5961 (EmojiWumpEyesExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6528 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5962 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiWumpEyesExample.native.tsx");

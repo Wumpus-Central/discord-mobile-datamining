@@ -1,7 +1,7 @@
-// === Module 11800: prototype ===
+// === Module 11999: prototype ===
 
-// Module 11800 (prototype)
-import prototypeDefault from "prototype" /* 4377 */;
+// Module 11999 (prototype)
+import prototypeDefault from "prototype" /* 4462 */;
 
 prototypeDefault;
 const prototype = function UploaderError(body) {

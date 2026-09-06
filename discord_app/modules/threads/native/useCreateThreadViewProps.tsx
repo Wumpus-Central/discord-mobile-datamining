@@ -1,8 +1,8 @@
-// === Module 11219: useCreateThreadViewProps ===
+// === Module 11358: useCreateThreadViewProps ===
 
-// Module 11219 (useCreateThreadViewProps)
-import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10356 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
+// Module 11358 (useCreateThreadViewProps)
+import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10253 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/threads/native/useC
 export default function useCreateThreadViewProps(arg0) {
   const tmp = useGetThreadDraftSettingsDefault(arg0);
   const _require = tmp;
-  let obj = _require(644);
+  let obj = _require(563);
   const items = [closure_3];
   const items1 = [tmp];
   const stateFromStores = obj.useStateFromStores(items, () => {

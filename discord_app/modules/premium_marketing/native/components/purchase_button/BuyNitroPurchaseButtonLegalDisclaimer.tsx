@@ -1,16 +1,16 @@
-// === Module 13284: BuyNitroPurchaseButtonLegalDisclaimer ===
+// === Module 13389: BuyNitroPurchaseButtonLegalDisclaimer ===
 
-// Module 13284 (BuyNitroPurchaseButtonLegalDisclaimer)
+// Module 13389 (BuyNitroPurchaseButtonLegalDisclaimer)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import set from "set" /* 1234 */;
-import combinedDefault from "combined" /* 1994 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import ME from "ME" /* 673 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import set from "set" /* 1115 */;
+import combinedDefault from "combined" /* 2024 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -42,16 +42,16 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         obj[2] = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
         const obj6 = combinedDefault;
         obj[3] = combinedDefault.getArticleURL(constants.PAID_TERMS);
-        let formatResult = format(tmp3(1233).t["3uC7vj"], obj);
+        let formatResult = format(tmp3(1114).t["3uC7vj"], obj);
         let tmp10 = tmp3;
         const obj7 = combinedDefault;
       } else {
-        let tmp3Result = tmp3(1234);
-        let t = tmp3(1233).t;
+        let tmp3Result = tmp3(1115);
+        let t = tmp3(1114).t;
         obj = { paidURL: null, interval: null, ctaText: null };
         obj[0] = constants2.PAID_TERMS;
         const isAndroidResult = tmp3Result.isAndroid();
-        tmp3Result = tmp3(4139);
+        tmp3Result = tmp3(4218);
         obj[1] = tmp3Result.getIntervalStringAsNoun(item.interval);
         obj[2] = ctaText;
         formatResult = format(tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"], obj);
@@ -61,10 +61,10 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       obj1 = { style: null, variant: "text-xxs/medium", children: null };
       obj1[0] = tmp.disclaimer;
       obj1[2] = formatResult;
-      jsx(tmp10(4474).Text, { style: null, variant: "text-xxs/medium", children: null });
+      jsx(tmp10(4556).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
     const tmp3Result1 = set;
-    t = tmp3(1233).t;
+    t = tmp3(1114).t;
     const isAndroidResult1 = set.isAndroid();
     t = { paidURL: null, interval: null, cancelURL: null };
     t[0] = constants2.PAID_TERMS;

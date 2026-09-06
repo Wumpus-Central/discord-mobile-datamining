@@ -1,8 +1,8 @@
-// === Module 10668: ? ===
+// === Module 10650: ? ===
 
-// Module 10668
+// Module 10650
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 let result = set.fileFinishedImporting("modules/native_menu/native/NativeMenuActionCreators.tsx");
 

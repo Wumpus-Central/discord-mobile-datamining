@@ -1,8 +1,8 @@
-// === Module 14361: getCurrentEmbeddedActivityChannel ===
+// === Module 14468: getCurrentEmbeddedActivityChannel ===
 
-// Module 14361 (getCurrentEmbeddedActivityChannel)
-import closure_0 from "participantFromServer" /* 1385 */;
-import closure_1 from "ensureGuildLoaded" /* 1386 */;
+// Module 14468 (getCurrentEmbeddedActivityChannel)
+import closure_0 from "participantFromServer" /* 1956 */;
+import closure_1 from "ensureGuildLoaded" /* 1957 */;
 
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedActivityChannel.tsx");
 

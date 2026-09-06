@@ -1,27 +1,27 @@
-// === Module 7280: handleReset ===
+// === Module 7525: handleReset ===
 
-// Module 7280 (handleReset)
+// Module 7525 (handleReset)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4110 */;
-import computeSubtitleDefault from "computeSubtitle" /* 7283 */;
-import closure_3 from "participantFromServer" /* 1385 */;
-import closure_4 from "isSubscriptionGated" /* 1982 */;
-import closure_5 from "scheduledEventSort" /* 7281 */;
-import closure_6 from "rebuild" /* 5457 */;
-import closure_7 from "storeThread" /* 4122 */;
-import closure_8 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_9 from "fetchFingerprint" /* 1215 */;
-import closure_10 from "incrementVersion" /* 5494 */;
-import closure_11 from "ensureGuildLoaded" /* 1386 */;
-import closure_12 from "handleConnectionOpen" /* 7282 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_14 from "generateOldThreadCutoff" /* 4493 */;
-import closure_15 from "handleConnectionOpen" /* 1980 */;
-import closure_16 from "updateUserGuildSettingsInternal" /* 4702 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4189 */;
+import computeSubtitleDefault from "computeSubtitle" /* 7528 */;
+import closure_3 from "participantFromServer" /* 1956 */;
+import closure_4 from "isSubscriptionGated" /* 2013 */;
+import closure_5 from "scheduledEventSort" /* 7526 */;
+import closure_6 from "rebuild" /* 5506 */;
+import closure_7 from "storeThread" /* 4201 */;
+import closure_8 from "handleConnectionClosedOrResumed" /* 1221 */;
+import closure_9 from "fetchFingerprint" /* 502 */;
+import closure_10 from "incrementVersion" /* 7117 */;
+import closure_11 from "ensureGuildLoaded" /* 1957 */;
+import closure_12 from "handleConnectionOpen" /* 7527 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_14 from "generateOldThreadCutoff" /* 4575 */;
+import closure_15 from "handleConnectionOpen" /* 2011 */;
+import closure_16 from "updateUserGuildSettingsInternal" /* 4741 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 1084 */;
 
 require = arg1;
 function handleReset() {
@@ -147,7 +147,7 @@ const channelListStore = new ChannelListStore(dispatcherDefault, {
       }
       return guild_id;
     });
-    const found = mapped.filter(_require(1470).isNotNullish);
+    const found = mapped.filter(_require(1369).isNotNullish);
     const arr = applyDefault(channels.channels);
     const item = found.uniq().forEach((guildId) => {
       if (closure_1_20.clearGuildId(guildId)) {
@@ -379,7 +379,7 @@ let obj = {
       }
       return guild_id;
     });
-    const found = mapped.filter(_require(1470).isNotNullish);
+    const found = mapped.filter(_require(1369).isNotNullish);
     const arr = applyDefault(channels.channels);
     const item = found.uniq().forEach((guildId) => {
       if (closure_1_20.clearGuildId(guildId)) {

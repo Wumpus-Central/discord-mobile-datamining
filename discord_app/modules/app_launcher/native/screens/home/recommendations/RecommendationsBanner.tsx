@@ -1,18 +1,18 @@
-// === Module 11893: ? ===
+// === Module 12092: ? ===
 
-// Module 11893
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import preloadDefault from "preload" /* 5502 */;
-import hasFetchedColorsDefault from "hasFetchedColors" /* 8053 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8125 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8569 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9638 */;
+// Module 12092
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import preloadDefault from "preload" /* 5587 */;
+import hasFetchedColorsDefault from "hasFetchedColors" /* 8132 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8186 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8246 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9652 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createdAt" /* 1934 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "createdAt" /* 1385 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -21,8 +21,8 @@ let closure_9 = createCacheKey.createStyles({ imageContainer: { width: "100%", h
 let closure_10 = importAllResult.memo((applicationId) => {
   let heroMediaDimensions;
   importDefault = undefined;
-  let obj = heroMediaDimensions(9067);
-  obj1 = heroMediaDimensions(11885);
+  let obj = heroMediaDimensions(11215);
+  obj1 = heroMediaDimensions(12084);
   heroMediaDimensions = obj1.useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   obj = { applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] };
   const tmp4 = useEmbeddedActivityBackgroundDefault(obj);

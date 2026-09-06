@@ -1,23 +1,23 @@
-// === Module 1981: comparator ===
+// === Module 2012: comparator ===
 
-// Module 1981 (comparator)
+// Module 2012 (comparator)
 import applyDefault from "apply" /* 12 */;
-import fromStringAll from "fromString" /* 503 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import closure_4 from "isSubscriptionGated" /* 1982 */;
-import closure_5 from "initializeFromUserSettings" /* 1389 */;
-import { createFavoritesGuildChannelRecord as closure_6 } from "createFavoritesGuildChannelRecord" /* 4119 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import closure_10 from "fetchFingerprint" /* 1215 */;
-import closure_11 from "ensureGuildLoaded" /* 1386 */;
-import closure_12 from "trackCommunicationDisabled" /* 1991 */;
-import closure_13 from "createGuildRecordFromRust" /* 1908 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_15 from "markAllUserIdListsStale" /* 4130 */;
-import closure_16 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import fromStringAll from "fromString" /* 1086 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import closure_4 from "isSubscriptionGated" /* 2013 */;
+import closure_5 from "initializeFromUserSettings" /* 1960 */;
+import { createFavoritesGuildChannelRecord as closure_6 } from "createFavoritesGuildChannelRecord" /* 4198 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import closure_10 from "fetchFingerprint" /* 502 */;
+import closure_11 from "ensureGuildLoaded" /* 1957 */;
+import closure_12 from "trackCommunicationDisabled" /* 2021 */;
+import closure_13 from "createGuildRecordFromRust" /* 1979 */;
+import closure_14 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_15 from "markAllUserIdListsStale" /* 4209 */;
+import closure_16 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 function comparator(comparator, comparator2) {
@@ -45,7 +45,7 @@ function rebuildGuildChannels(guildId) {
   importDefault = undefined;
   const id = obj.id;
   importDefault = id;
-  obj1 = obj2(1911);
+  obj1 = obj2(1982);
   obj = {};
   if (obj1.isFavoritesGuildId(id)) {
     favoriteChannels = favoriteChannels.getFavoriteChannels();

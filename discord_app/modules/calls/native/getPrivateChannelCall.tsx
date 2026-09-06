@@ -1,8 +1,8 @@
-// === Module 10866: getPrivateChannelCall ===
+// === Module 10869: getPrivateChannelCall ===
 
-// Module 10866 (getPrivateChannelCall)
-import closure_2 from "updateVoiceState" /* 4497 */;
-import { NOOP_NULL } from "ME" /* 673 */;
+// Module 10869 (getPrivateChannelCall)
+import closure_2 from "updateVoiceState" /* 4579 */;
+import { NOOP_NULL } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");

@@ -1,12 +1,12 @@
-// === Module 7783: ChangePhoneReason ===
+// === Module 7045: ChangePhoneReason ===
 
-// Module 7783 (ChangePhoneReason)
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 7045 (ChangePhoneReason)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7781 */;
-import { Endpoints } from "ME" /* 673 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7043 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");
@@ -108,7 +108,7 @@ export default {
       if (c3) {
         obj1.authorization = "";
       }
-      const obj5 = closure_1_1(4714);
+      const obj5 = closure_1_1(4753);
       const obj2 = { url: null, headers: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
       obj2[0] = closure_1_6.VERIFY_PHONE;
       obj2[1] = obj1;
@@ -117,12 +117,12 @@ export default {
       obj3[1] = closure_1_1;
       obj2[2] = obj3;
       const obj4 = { event: null };
-      obj4[0] = closure_1_0(500).NetworkActionNames.USER_VERIFY_PHONE;
+      obj4[0] = closure_1_0(1250).NetworkActionNames.USER_VERIFY_PHONE;
       obj2[4] = obj4;
-      obj2[5] = closure_1_0(527).rejectWithMigratedError();
+      obj2[5] = closure_1_0(1272).rejectWithMigratedError();
       body = yield obj5.post(obj2);
       if (dependencyMap) {
-        const obj = closure_1_1(706);
+        const obj = closure_1_1(573);
         const obj7 = { type: "MODAL_POP", key: null };
         obj7[1] = closure_1_5;
         obj.dispatch(obj7);

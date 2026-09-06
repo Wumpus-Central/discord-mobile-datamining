@@ -1,17 +1,17 @@
-// === Module 17308: onPostConnectionOpen ===
+// === Module 17468: onPostConnectionOpen ===
 
-// Module 17308 (onPostConnectionOpen)
-import failsDefault from "fails" /* 581 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import initializeDefault from "initialize" /* 5495 */;
-import trackInviteDefault from "trackInvite" /* 7211 */;
-import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 10742 */;
-import closure_3 from "dropChannelIfEmpty" /* 4737 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "getCurrentTime" /* 7999 */;
-import { MessageTypes } from "ME" /* 673 */;
+// Module 17468 (onPostConnectionOpen)
+import failsDefault from "fails" /* 559 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import initializeDefault from "initialize" /* 7118 */;
+import trackInviteDefault from "trackInvite" /* 7456 */;
+import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 10744 */;
+import closure_3 from "dropChannelIfEmpty" /* 4782 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1221 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "getCurrentTime" /* 8078 */;
+import { MessageTypes } from "ME" /* 1074 */;
 
 require = arg1;
 let closure_8 = 10 * setDefault.Millis.SECOND;

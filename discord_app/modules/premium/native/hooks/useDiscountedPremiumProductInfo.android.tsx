@@ -1,8 +1,8 @@
-// === Module 8251: useDiscountedPremiumProductInfo ===
+// === Module 9379: useDiscountedPremiumProductInfo ===
 
-// Module 8251 (useDiscountedPremiumProductInfo)
+// Module 9379 (useDiscountedPremiumProductInfo)
 import closure_2 from "noop" /* 19 */;
-import { CurrencyCodes } from "sum" /* 502 */;
+import { CurrencyCodes } from "sum" /* 1085 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");

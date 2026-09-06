@@ -1,12 +1,12 @@
-// === Module 7930: createApplicationCommandSourceSystemMessage ===
+// === Module 8009: createApplicationCommandSourceSystemMessage ===
 
-// Module 7930 (createApplicationCommandSourceSystemMessage)
+// Module 8009 (createApplicationCommandSourceSystemMessage)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import regExp from "regExp" /* 4954 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7883 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
-import getApplicationCommand from "getApplicationCommand" /* 7931 */;
+import ME from "ME" /* 1074 */;
+import regExp from "regExp" /* 5000 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import getApplicationCommand from "getApplicationCommand" /* 8010 */;
 
 const MessageTypes = ME.MessageTypes;
 const COMMAND_SENTINEL = regExp.COMMAND_SENTINEL;
@@ -22,8 +22,8 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
   }
   if (null != applicationCommand) {
     if (null != name) {
-      const messageAuthorWithProcessedColor = tmp(7881).getMessageAuthorWithProcessedColor(message);
-      const intl = tmp(1233).intl;
+      const messageAuthorWithProcessedColor = tmp(7960).getMessageAuthorWithProcessedColor(message);
+      const intl = tmp(1114).intl;
       obj = { username: null, usernameOnClick: null, commandName: null, applicationName: null };
       obj[0] = messageAuthorWithProcessedColor.nick;
       obj = { message: null, author: null, roleStyle: null };
@@ -40,7 +40,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
       obj1 = { content: null };
       obj[2] = name2;
       obj[3] = name;
-      obj1[0] = intl.formatToParts(tmp(1233).t["1Zm+zw"], obj);
+      obj1[0] = intl.formatToParts(tmp(1114).t["1Zm+zw"], obj);
       const merged = Object.assign(createCommonMessageDefault(message));
       return obj1;
     }

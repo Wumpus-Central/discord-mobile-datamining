@@ -1,18 +1,18 @@
-// === Module 17202: syncLocalState ===
+// === Module 17368: syncLocalState ===
 
-// Module 17202 (syncLocalState)
+// Module 17368 (syncLocalState)
 import timestampDefault from "timestamp" /* 3 */;
-import start from "start" /* 4362 */;
-import initializeDefault from "initialize" /* 5495 */;
+import start from "start" /* 4447 */;
+import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_6 from "createRTCConnection" /* 4554 */;
-import closure_7 from "handleUpdate" /* 4496 */;
-import closure_8 from "updateVoiceState" /* 4497 */;
-import closure_9 from "set" /* 4495 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9330 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_6 from "createRTCConnection" /* 4583 */;
+import closure_7 from "handleUpdate" /* 4578 */;
+import closure_8 from "updateVoiceState" /* 4579 */;
+import closure_9 from "set" /* 4577 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9233 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
 
 require = arg1;
 function syncLocalState() {
@@ -237,14 +237,14 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = callback(9904);
+      let obj = callback(9448);
       obj.disconnectRemote();
       obj = { title: null, body: null };
-      const intl = callback(1233).intl;
-      obj[0] = intl.string(callback(1233).t.wGMxr3);
-      const intl2 = callback(1233).intl;
-      obj[1] = intl2.string(callback(1233).t.i5k8b5);
-      callback2(4858).show(obj);
+      const intl = callback(1114).intl;
+      obj[0] = intl.string(callback(1114).t.wGMxr3);
+      const intl2 = callback(1114).intl;
+      obj[1] = intl2.string(callback(1114).t.i5k8b5);
+      callback2(4904).show(obj);
     });
   };
   applyArgumentsResult.handleConsoleCommandUpdate = function handleConsoleCommandUpdate(arg0) {

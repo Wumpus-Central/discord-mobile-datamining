@@ -1,6 +1,6 @@
-// === Module 4387: gameServerResponseToInstance ===
+// === Module 4472: gameServerResponseToInstance ===
 
-// Module 4387 (gameServerResponseToInstance)
+// Module 4472 (gameServerResponseToInstance)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");

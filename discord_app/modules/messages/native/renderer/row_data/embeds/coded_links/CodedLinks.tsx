@@ -1,10 +1,10 @@
-// === Module 13106: createCodedLinkEmbeds ===
+// === Module 13206: createCodedLinkEmbeds ===
 
-// Module 13106 (createCodedLinkEmbeds)
+// Module 13206 (createCodedLinkEmbeds)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "initialize" /* 4121 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import closure_3 from "initialize" /* 4200 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");

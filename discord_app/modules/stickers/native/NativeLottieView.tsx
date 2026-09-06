@@ -1,13 +1,13 @@
-// === Module 7920: NativeLottieView ===
+// === Module 7999: NativeLottieView ===
 
-// Module 7920 (NativeLottieView)
+// Module 7999 (NativeLottieView)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 7921 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8000 */;
 import noop from "noop" /* 19 */;
 import closure_2 from "noop" /* 19 */;
-import set from "set" /* 1234 */;
+import set from "set" /* 1115 */;
 
 ({ useEffect: c0, useRef: closure_1 } = noop);
 let jsx = jsxProd.jsx;

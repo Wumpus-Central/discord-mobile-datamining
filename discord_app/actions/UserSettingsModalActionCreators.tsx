@@ -1,8 +1,8 @@
-// === Module 7774: dispatcher ===
+// === Module 6990: dispatcher ===
 
-// Module 7774 (dispatcher)
+// Module 6990 (dispatcher)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const result = set.fileFinishedImporting("actions/UserSettingsModalActionCreators.tsx");
 

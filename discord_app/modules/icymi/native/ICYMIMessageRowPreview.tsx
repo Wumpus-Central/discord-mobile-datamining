@@ -1,10 +1,10 @@
-// === Module 16334: ICYMIMessageRowPreview ===
+// === Module 16496: ICYMIMessageRowPreview ===
 
-// Module 16334 (ICYMIMessageRowPreview)
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+// Module 16496 (ICYMIMessageRowPreview)
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
-import { MessageEmbedTypes } from "ME" /* 673 */;
+import { MessageEmbedTypes } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -20,8 +20,8 @@ function ICYMIMessageRowPreview(pointerEvents) {
   let setting1;
   let setting2;
   let obj = createCacheKey;
-  obj = { seeMoreLabelColor: messageOptions(709).colors.TEXT_DEFAULT };
-  dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4413)());
+  obj = { seeMoreLabelColor: messageOptions(576).colors.TEXT_DEFAULT };
+  dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4495)());
   const RenderEmbeds = explicitContentFromProto.RenderEmbeds;
   setting = RenderEmbeds.getSetting();
   const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
@@ -55,7 +55,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     messageSizeCacheRef,
     maxHeight
   };
-  return setting2(messageOptions(8798), obj);
+  return setting2(messageOptions(8652), obj);
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo((message) => {
@@ -162,11 +162,11 @@ const memoResult2 = importAllResult.memo((message) => {
     obj[4] = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(6156)(message);
+  const tmp3 = merged(7302)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   obj = {};
-  const merged2 = Object.assign(message(7855).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(7934).DEFAULT_OPTIONS);
   obj.ignoreMentioned = true;
   obj.renderReplies = false;
   obj.renderThreadEmbeds = false;

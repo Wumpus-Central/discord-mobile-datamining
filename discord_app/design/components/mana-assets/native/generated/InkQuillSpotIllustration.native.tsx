@@ -1,10 +1,10 @@
-// === Module 6775: InkQuillSpotIllustration ===
+// === Module 6211: InkQuillSpotIllustration ===
 
-// Module 6775 (InkQuillSpotIllustration)
+// Module 6211 (InkQuillSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6776 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6212 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/InkQuillSpotIllustration.native.tsx");

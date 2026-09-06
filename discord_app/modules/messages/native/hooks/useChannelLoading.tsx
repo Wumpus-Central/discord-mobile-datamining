@@ -1,7 +1,7 @@
-// === Module 11365: useChannelLoading ===
+// === Module 11540: useChannelLoading ===
 
-// Module 11365 (useChannelLoading)
-import useMountEffectDefault from "useMountEffect" /* 4947 */;
+// Module 11540 (useChannelLoading)
+import useMountEffectDefault from "useMountEffect" /* 4993 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 

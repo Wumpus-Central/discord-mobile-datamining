@@ -1,8 +1,8 @@
-// === Module 12518: showInstantInviteModal ===
+// === Module 12744: showInstantInviteModal ===
 
-// Module 12518 (showInstantInviteModal)
-import closure_2 from "comparator" /* 1981 */;
-import { InstantInviteSources } from "ME" /* 673 */;
+// Module 12744 (showInstantInviteModal)
+import closure_2 from "comparator" /* 2012 */;
+import { InstantInviteSources } from "ME" /* 1074 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("actions/native/CreateGuildActionCreators.tsx");

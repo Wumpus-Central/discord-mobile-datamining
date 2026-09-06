@@ -1,10 +1,10 @@
-// === Module 4377: prototype ===
+// === Module 4462: prototype ===
 
-// Module 4377 (prototype)
+// Module 4462 (prototype)
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 527 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import sendRequest from "sendRequest" /* 1272 */;
 
 const Links = ME.Links;
 const V8APIError = sendRequest.V8APIError;

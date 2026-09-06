@@ -1,12 +1,12 @@
-// === Module 5458: handleThreadCreateOrUpdate ===
+// === Module 5507: handleThreadCreateOrUpdate ===
 
-// Module 5458 (handleThreadCreateOrUpdate)
+// Module 5507 (handleThreadCreateOrUpdate)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import set from "set" /* 2 */;
 
 function handleThreadCreateOrUpdate(channel) {

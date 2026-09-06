@@ -1,11 +1,11 @@
-// === Module 9505: isVoiceEmbeddedActivity ===
+// === Module 9526: isVoiceEmbeddedActivity ===
 
-// Module 9505 (isVoiceEmbeddedActivity)
-import set from "set" /* 689 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "handleConnectionOpen" /* 1980 */;
-import closure_5 from "updateVoiceState" /* 4497 */;
+// Module 9526 (isVoiceEmbeddedActivity)
+import set from "set" /* 1094 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "handleConnectionOpen" /* 2011 */;
+import closure_5 from "updateVoiceState" /* 4579 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");

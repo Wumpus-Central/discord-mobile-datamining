@@ -1,10 +1,10 @@
-// === Module 15016: QuestEmbedPreview ===
+// === Module 15174: QuestEmbedPreview ===
 
-// Module 15016 (QuestEmbedPreview)
+// Module 15174 (QuestEmbedPreview)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasFlag" /* 4131 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { MessageTypes } from "ME" /* 673 */;
+import closure_4 from "hasFlag" /* 4210 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import { MessageTypes } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
     obj.setOptions({ renderCodedLinks: true, renderEmbeds: true, renderComponents: true, shouldDisableInteractiveComponents: true });
     return obj;
   }, []);
-  let obj = questId(586);
+  let obj = questId(504);
   let items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [questId, stateFromStores];
@@ -53,14 +53,14 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
   let tmp6 = null;
   if (null != memo1) {
     obj = { title: null, children: null };
-    const intl = tmp2(1233).intl;
-    obj[0] = intl.string(tmp2(1233).t["habP/M"]);
+    const intl = tmp2(1114).intl;
+    obj[0] = intl.string(tmp2(1114).t["habP/M"]);
     obj = { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" };
     obj[0] = memo;
     obj[1] = memo1;
-    obj[1] = jsx(stateFromStores(8798), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
-    tmp6 = jsx(stateFromStores(15015), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
-    const tmp9 = stateFromStores(15015);
+    obj[1] = jsx(stateFromStores(8652), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
+    tmp6 = jsx(stateFromStores(15173), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
+    const tmp9 = stateFromStores(15173);
   }
   return tmp6;
 };

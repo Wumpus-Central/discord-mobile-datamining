@@ -1,19 +1,19 @@
-// === Module 14289: handleTokenUpdated ===
+// === Module 14395: handleTokenUpdated ===
 
-// Module 14289 (handleTokenUpdated)
-import encodeProperties from "encodeProperties" /* 500 */;
-import initializeDefault from "initialize" /* 586 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import enforcingDefault from "enforcing" /* 8652 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "createGuildRecordFromRust" /* 1908 */;
-import closure_9 from "handleConnectionOpen" /* 1980 */;
-import closure_10 from "handleConnectionOpen" /* 4299 */;
-import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import { AppStates } from "ME" /* 673 */;
+// Module 14395 (handleTokenUpdated)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import encodeProperties from "encodeProperties" /* 1250 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import enforcingDefault from "enforcing" /* 8362 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "createGuildRecordFromRust" /* 1979 */;
+import closure_9 from "handleConnectionOpen" /* 2011 */;
+import closure_10 from "handleConnectionOpen" /* 4381 */;
+import closure_11 from "mergeGuildAvatar" /* 1371 */;
+import { AppStates } from "ME" /* 1074 */;
 
 require = arg1;
 function handleTokenUpdated(token) {

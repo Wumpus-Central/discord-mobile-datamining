@@ -1,14 +1,14 @@
-// === Module 8494: resolveGiftCode ===
+// === Module 11430: resolveGiftCode ===
 
-// Module 8494 (resolveGiftCode)
-import prototypeDefault from "prototype" /* 4162 */;
-import _modDef8495 from "module_8495" /* 8495 */;
+// Module 11430 (resolveGiftCode)
+import prototypeDefault from "prototype" /* 4241 */;
+import _modDef11431 from "module_11431" /* 11431 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4519 */;
-import closure_5 from "updateCategoriesAndProducts" /* 7297 */;
-import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 7305 */;
-import ME from "ME" /* 673 */;
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures" /* 1923 */;
+import closure_4 from "addApplication" /* 4788 */;
+import closure_5 from "updateCategoriesAndProducts" /* 7542 */;
+import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 7550 */;
+import ME from "ME" /* 1074 */;
+import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures" /* 1373 */;
 
 const require = arg1;
 function resolveGiftCode() {
@@ -215,7 +215,7 @@ function _resolveGiftCode() {
 function reportUnexpectedGiftCodeError(status) {
   if (status instanceof prototypeDefault) {
     if (404 !== status.status) {
-      let tmpResult = tmp(1205);
+      let tmpResult = tmp(1232);
       let str = status.status;
       if (str == null) {
         str = "unknown";
@@ -229,11 +229,39 @@ function reportUnexpectedGiftCodeError(status) {
   } else {
     const _Error = Error;
     if (status instanceof Error) {
-      tmpResult = tmp(1205);
+      tmpResult = tmp(1232);
       tmpResult.captureException(status);
     }
   }
   return null;
+}
+function _deliverGiftCodes() {
+  const self = this;
+  const tmp = callback((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c2 = 0;
+    return (function*(arg0, body) {
+      const HTTP = callback(table[13]).HTTP;
+      obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
+      obj1[0] = closure_1_8.USER_GIFT_CODE_DELIVERIES;
+      const obj2 = { checkout_session_id: null, recipient_ids: null };
+      obj2[0] = closure_1;
+      obj2[1] = callback;
+      obj1[1] = obj2;
+      yield HTTP.post(obj1);
+      return body.body;
+    })();
+  });
+  closure_12 = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
 ({ COLLECTIBLES_APPLICATION_ID: error, Endpoints: closure_8, RPCCommands: c9 } = ME);
 const merged = Object.assign(require("redeemGiftCode").default);
@@ -366,8 +394,18 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef8495.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef11431.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };
 export { reportUnexpectedGiftCodeError };
+export const deliverGiftCodes = function deliverGiftCodes() {
+  const self = this;
+  const apply = _deliverGiftCodes.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};

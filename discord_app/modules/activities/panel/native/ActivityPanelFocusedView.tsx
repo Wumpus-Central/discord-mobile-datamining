@@ -1,18 +1,18 @@
-// === Module 16859: BaseActivityPanelFocusedView ===
+// === Module 17023: BaseActivityPanelFocusedView ===
 
-// Module 16859 (BaseActivityPanelFocusedView)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 17023 (BaseActivityPanelFocusedView)
+import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "participantFromServer" /* 1385 */;
-import { ActivityLayoutMode } from "items3" /* 4506 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9483 */;
-import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16854 */;
-import { ThemeTypes } from "ME" /* 673 */;
-import { IS_IOS } from "VoicePanelModes" /* 12069 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "participantFromServer" /* 1956 */;
+import { ActivityLayoutMode } from "items3" /* 1920 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9505 */;
+import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 17018 */;
+import { ThemeTypes } from "ME" /* 1074 */;
+import { IS_IOS } from "VoicePanelModes" /* 12273 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 class BaseActivityPanelFocusedView {
@@ -53,7 +53,7 @@ class BaseActivityPanelFocusedView {
     tmp7 = require("useAnimatedKeyboardHeight")();
     closure_10 = tmp7;
     lg = require("Themes").radii.lg;
-    obj3 = require("module_4217");
+    obj3 = require("module_4296");
     fn = function _() {
       let num = 0;
       if (!wrapperDimensions.isWindowLandscape) {
@@ -136,13 +136,13 @@ class BaseActivityPanelFocusedView {
         tmp21 = wrapperOffset;
       }
     };
-    obj = { wrapperDimensions, lg, IS_IOS, animatedKeyboardHeight: tmp7, windowDimensions: tmp3, safeArea: tmp4, shown, wrapperOffset, transitionState, TransitionStates: require("ManaContext").TransitionStates, runOnJS: require("module_4217").runOnJS, transitionCleanUp, reduceMotion: stateFromStores, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, REDUCED_MOTION_TIMING: closure_18, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperOffset, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
+    obj = { wrapperDimensions, lg, IS_IOS, animatedKeyboardHeight: tmp7, windowDimensions: tmp3, safeArea: tmp4, shown, wrapperOffset, transitionState, TransitionStates: require("ManaContext").TransitionStates, runOnJS: require("module_4296").runOnJS, transitionCleanUp, reduceMotion: stateFromStores, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, REDUCED_MOTION_TIMING: closure_18, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperOffset, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
     fn.__closure = obj;
     fn.__workletHash = 3642447648301;
     fn.__initData = closure_20;
     animatedStyle = obj3.useAnimatedStyle(fn);
     closure_12 = animatedStyle;
-    obj5 = require("module_4217");
+    obj5 = require("module_4296");
     class T {
       constructor() {
         obj = wrapperOffset;
@@ -175,7 +175,7 @@ class BaseActivityPanelFocusedView {
       const items = [closure_4.wrapper, animatedStyle];
       return items;
     }, items1);
-    obj7 = require("module_4217");
+    obj7 = require("module_4296");
     class A {
       constructor() {
         num = 0;
@@ -203,7 +203,7 @@ class BaseActivityPanelFocusedView {
     items3[0] = tmp2.shade;
     items3[1] = animatedStyle1;
     items4 = [, ];
-    items4[0] = jsx(require("module_4217").View, { style: items3, pointerEvents: "none" });
+    items4[0] = jsx(require("module_4296").View, { style: items3, pointerEvents: "none" });
     obj3 = { style: memo, nativeID: "activity-panel-focused-view", accessibilityViewIsModal: true, onAccessibilityEscape: callback, children: null };
     obj4 = { style: animatedStyle2, children: null };
     tmp15 = null;
@@ -215,7 +215,7 @@ class BaseActivityPanelFocusedView {
     }
     obj4[1] = tmp15;
     items5 = [, ];
-    items5[0] = tmp14(require("module_4217").View, obj4);
+    items5[0] = tmp14(require("module_4296").View, obj4);
     items5[1] = header;
     obj3[4] = items5;
     items4[1] = tmp13(require("AccessibilityView").AccessibilityViewAnimated, obj3);
@@ -304,7 +304,7 @@ export default memoResult;
 export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocusedView(context) {
   closure_0 = undefined;
   let isWindowLandscape;
-  const tmp = isWindowLandscape(1627)();
+  const tmp = isWindowLandscape(1611)();
   closure_0 = tmp;
   let obj = importAllResult;
   const wrapperDimensions = importAllResult.useContext(context.context).wrapperDimensions;

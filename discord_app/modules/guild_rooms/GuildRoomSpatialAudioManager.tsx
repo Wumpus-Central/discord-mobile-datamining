@@ -1,17 +1,17 @@
-// === Module 17209: _initialize ===
+// === Module 17375: _initialize ===
 
-// Module 17209 (_initialize)
-import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4721 */;
-import initializeDefault from "initialize" /* 5495 */;
-import GUILD_ROOM_SPATIAL_AUDIO_ENABLED from "GUILD_ROOM_SPATIAL_AUDIO_ENABLED" /* 17210 */;
+// Module 17375 (_initialize)
+import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4760 */;
+import initializeDefault from "initialize" /* 7118 */;
+import GUILD_ROOM_SPATIAL_AUDIO_ENABLED from "GUILD_ROOM_SPATIAL_AUDIO_ENABLED" /* 17376 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4391 */;
-import closure_5 from "initialize" /* 1209 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_9 from "createRTCConnection" /* 4554 */;
-import closure_10 from "resolveCreatingNotes" /* 4679 */;
+import closure_4 from "getHash" /* 4476 */;
+import closure_5 from "initialize" /* 1236 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_9 from "createRTCConnection" /* 4583 */;
+import closure_10 from "resolveCreatingNotes" /* 4718 */;
 
 require = arg1;
 initializeDefault;
@@ -97,7 +97,7 @@ prototype["apply"] = function apply() {
           obj[0] = roomUsers.getRoomUsers(channelId);
           obj[1] = id.getId();
           obj[2] = channelId;
-          _require = _require(17210).computeLivingRoomWorldPoints(obj);
+          _require = _require(17376).computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             const entries = Object.entries(callback);
@@ -112,7 +112,7 @@ prototype["apply"] = function apply() {
               continue;
             }
           });
-          const obj3 = _require(17210);
+          const obj3 = _require(17376);
         }
       }
     }

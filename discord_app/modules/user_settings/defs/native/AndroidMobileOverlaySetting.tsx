@@ -1,11 +1,11 @@
-// === Module 15094: toggle ===
+// === Module 15254: toggle ===
 
-// Module 15094 (toggle)
-import initialize from "initialize" /* 586 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import dispatcherDefault from "dispatcher" /* 10100 */;
-import closure_2 from "getUserAgnosticState" /* 10089 */;
-import createToggle from "createToggle" /* 11292 */;
+// Module 15254 (toggle)
+import initialize from "initialize" /* 504 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import dispatcherDefault from "dispatcher" /* 9991 */;
+import closure_2 from "getUserAgnosticState" /* 9980 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {

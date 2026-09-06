@@ -1,9 +1,9 @@
-// === Module 17745: NativeReactAssetModule ===
+// === Module 17905: NativeReactAssetModule ===
 
-// Module 17745 (NativeReactAssetModule)
-import enforcingDefault from "enforcing" /* 17746 */;
+// Module 17905 (NativeReactAssetModule)
+import enforcingDefault from "enforcing" /* 17906 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 1234 */;
+import set from "set" /* 1115 */;
 
 ({ Image: obj1, NativeModules } = get_ActivityIndicator);
 if (set.isAndroid()) {

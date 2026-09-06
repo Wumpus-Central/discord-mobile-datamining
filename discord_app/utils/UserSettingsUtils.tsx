@@ -1,14 +1,14 @@
-// === Module 6252: getSanitizedRestrictedGuilds ===
+// === Module 6995: getSanitizedRestrictedGuilds ===
 
-// Module 6252 (getSanitizedRestrictedGuilds)
-import ComponentDispatcher from "ComponentDispatcher" /* 1228 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4701 */;
-import getSearchSessionIdDefault from "getSearchSessionId" /* 6253 */;
-import closure_3 from "handleConnectionOpen" /* 4856 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import ME from "ME" /* 673 */;
+// Module 6995 (getSanitizedRestrictedGuilds)
+import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
+import getSearchSessionIdDefault from "getSearchSessionId" /* 6996 */;
+import closure_3 from "handleConnectionOpen" /* 4902 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ AnalyticEvents: c5, FriendSourceFlags: closure_6, AllFriendSourceFlags: error, ComponentActions: closure_8 } = ME);

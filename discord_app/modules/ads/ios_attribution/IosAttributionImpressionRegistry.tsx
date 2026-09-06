@@ -1,8 +1,8 @@
-// === Module 11317: isCurrentImpression ===
+// === Module 11493: isCurrentImpression ===
 
-// Module 11317 (isCurrentImpression)
+// Module 11493 (isCurrentImpression)
 import timestampDefault from "timestamp" /* 3 */;
-import getActiveIosAttributionFramework from "getActiveIosAttributionFramework" /* 11315 */;
+import getActiveIosAttributionFramework from "getActiveIosAttributionFramework" /* 11491 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;
@@ -95,7 +95,7 @@ function _startNativeImpression() {
               if (null == logger) {
                 const _HermesInternal = HermesInternal;
                 logger.warn("No strategy for " + c2 + "; impression " + callback + " is unattributed");
-                const result = callback(11316).trackIosAttributionImpression(callback(11316).IosAttributionImpressionResult.NO_FRAMEWORK, c2);
+                const result = callback(11492).trackIosAttributionImpression(callback(11492).IosAttributionImpressionResult.NO_FRAMEWORK, c2);
                 callback3(callback, signAbort);
                 logger = 3;
                 return { value: "HermesInternal", done: null };
@@ -117,7 +117,7 @@ function _startNativeImpression() {
                 signAbort = 2;
                 logger = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = callback(11319).fetchIosAttributionSignedPayloads(obj2);
+                obj3[0] = callback(11495).fetchIosAttributionSignedPayloads(obj2);
                 return obj3;
               }
             }
@@ -151,15 +151,15 @@ function _startNativeImpression() {
                   }
                   callback2 = tmp38;
                   if (null == callback2) {
-                    let obj6 = callback(11316);
-                    const result1 = obj6.trackIosAttributionImpression(callback(11316).IosAttributionImpressionResult.SIGN_FAILED, c2, callback);
+                    let obj6 = callback(11492);
+                    const result1 = obj6.trackIosAttributionImpression(callback(11492).IosAttributionImpressionResult.SIGN_FAILED, c2, callback);
                     set.delete(callback);
                     logger = 3;
                     const obj5 = { value: null, done: true };
                     obj5[0] = undefined;
                     return obj5;
                   } else {
-                    obj4 = callback(11315);
+                    obj4 = callback(11491);
                     const _JSON = JSON;
                     signAbort = 3;
                     logger = 1;
@@ -186,16 +186,16 @@ function _startNativeImpression() {
               }
             }
             if (null == callback3) {
-              obj1 = callback(11316);
-              const result2 = obj1.trackIosAttributionImpression(callback(11316).IosAttributionImpressionResult.NO_TOKEN, c2, callback);
+              obj1 = callback(11492);
+              const result2 = obj1.trackIosAttributionImpression(callback(11492).IosAttributionImpressionResult.NO_TOKEN, c2, callback);
               set.delete(callback);
               logger = 3;
               const obj8 = { value: null, done: true };
               obj8[0] = undefined;
               return obj8;
             } else {
-              obj = callback(11316);
-              const result3 = obj.trackIosAttributionImpression(callback(11316).IosAttributionImpressionResult.REGISTERED, c2, callback);
+              obj = callback(11492);
+              const result3 = obj.trackIosAttributionImpression(callback(11492).IosAttributionImpressionResult.REGISTERED, c2, callback);
               signAbort.token = callback3;
             }
           }

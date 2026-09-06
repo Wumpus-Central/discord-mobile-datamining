@@ -1,12 +1,12 @@
-// === Module 8461: frozen ===
+// === Module 10700: frozen ===
 
-// Module 8461 (frozen)
-import toJSDefault from "toJS" /* 1935 */;
-import hooksDefault from "hooks" /* 4074 */;
-import closure_3 from "createFromServer" /* 7210 */;
-import closure_4 from "createFromServer" /* 8462 */;
-import closure_5 from "createFromServer" /* 4140 */;
-import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "GuildFeatures" /* 1923 */;
+// Module 10700 (frozen)
+import toJSDefault from "toJS" /* 1386 */;
+import hooksDefault from "hooks" /* 4153 */;
+import closure_3 from "createFromServer" /* 7455 */;
+import closure_4 from "createFromServer" /* 10666 */;
+import closure_5 from "createFromServer" /* 4219 */;
+import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "GuildFeatures" /* 1373 */;
 
 const require = arg1;
 toJSDefault;
@@ -137,13 +137,13 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
 });
 Object.defineProperty(prototype, "isSelfRedeemable", {
   get: function isSelfRedeemable() {
-    return !require(1398) /* hasFlag */.hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
+    return !require(1384) /* hasFlag */.hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isExistingPremiumSubscriptionDisallowed", {
   get: function isExistingPremiumSubscriptionDisallowed() {
-    return require(1398) /* hasFlag */.hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+    return require(1384) /* hasFlag */.hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
   },
   set: undefined
 });

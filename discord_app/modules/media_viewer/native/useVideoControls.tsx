@@ -1,13 +1,13 @@
-// === Module 8593: useVideoControls ===
+// === Module 8270: useVideoControls ===
 
-// Module 8593 (useVideoControls)
-import batchUpdates from "batchUpdates" /* 702 */;
+// Module 8270 (useVideoControls)
+import batchUpdates from "batchUpdates" /* 1249 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import { jsx } from "jsxProd" /* 21 */;
-import keys from "keys" /* 641 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import keys from "keys" /* 560 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 keys = keys.create(() => ({ controls: "PX_16", paused: true }));
@@ -81,7 +81,7 @@ export const initVideoStateStore = function initVideoStateStore() {
 };
 export const setMuted = function setMuted(arg0) {
   const _require = arg0;
-  _require(702).batchUpdates(() => {
+  _require(1249).batchUpdates(() => {
     const useMediaPlayerMutedStore = callback(closure_1_2[6]).useMediaPlayerMutedStore;
     useMediaPlayerMutedStore.setState({ isMuted: callback });
   });
@@ -94,11 +94,11 @@ export const toggleMuted = function toggleMuted() {
 };
 export const setVideoStateControls = function setVideoStateControls(videoControls) {
   const _require = videoControls;
-  _require(702).batchUpdates(() => closure_1_7.setState({ controls: closure_0 }));
+  _require(1249).batchUpdates(() => closure_1_7.setState({ controls: closure_0 }));
 };
 export const setPausedState = function setPausedState(arg0) {
   const _require = arg0;
-  _require(702).batchUpdates(() => closure_1_7.setState({ paused: closure_0 }));
+  _require(1249).batchUpdates(() => closure_1_7.setState({ paused: closure_0 }));
 };
 export const tryPauseCurrentVideo = function tryPauseCurrentVideo() {
   const controls = keys.getState().controls;

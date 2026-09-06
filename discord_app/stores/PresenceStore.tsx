@@ -1,15 +1,15 @@
-// === Module 4569: sortActivity ===
+// === Module 4600: sortActivity ===
 
-// Module 4569 (sortActivity)
+// Module 4600 (sortActivity)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 656 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import hasRichActivityDefault from "hasRichActivity" /* 4570 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 1332 */;
+import hasRichActivityDefault from "hasRichActivity" /* 4601 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 function sortActivity(type, type2) {
   type = type2.type;
@@ -47,7 +47,7 @@ function sortActivity(type, type2) {
       num3 = 1;
     }
     let num4 = 0;
-    if (tmp3(4570)(type)) {
+    if (tmp3(4601)(type)) {
       num4 = 1;
     }
     diff = num3 - num4;

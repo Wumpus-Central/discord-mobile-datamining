@@ -1,14 +1,14 @@
-// === Module 4497: updateVoiceState ===
+// === Module 4579: updateVoiceState ===
 
-// Module 4497 (updateVoiceState)
+// Module 4579 (updateVoiceState)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isMetaQuest from "isMetaQuest" /* 1623 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isMetaQuest from "isMetaQuest" /* 1608 */;
 import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "isVoiceMuted" /* 4498 */;
-import { ME } from "ME" /* 673 */;
-import { VoicePlatforms } from "ParticipantTypes" /* 4499 */;
+import closure_6 from "isVoiceMuted" /* 4580 */;
+import { ME } from "ME" /* 1074 */;
+import { VoicePlatforms } from "ParticipantTypes" /* 4581 */;
 import set from "set" /* 2 */;
 
 require = arg1;

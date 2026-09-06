@@ -1,14 +1,14 @@
-// === Module 7943: createRoleSubscriptionPurchaseSystemMessage ===
+// === Module 8022: createRoleSubscriptionPurchaseSystemMessage ===
 
-// Module 7943 (createRoleSubscriptionPurchaseSystemMessage)
-import ensureAvatarSource from "ensureAvatarSource" /* 1433 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4747 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7881 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7883 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import { SystemChannelFlags } from "ME" /* 673 */;
+// Module 8022 (createRoleSubscriptionPurchaseSystemMessage)
+import ensureAvatarSource from "ensureAvatarSource" /* 1399 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4793 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import { SystemChannelFlags } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/RoleSubscriptionPurchaseSystemMessage.tsx");
@@ -36,11 +36,11 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
         if (tmp9) {
           tmp9 = !(guild.systemChannelFlags & SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
         }
-        let tmp5Result = tmp5(7918);
+        let tmp5Result = tmp5(7997);
         if (tmp5Result.computeIsStickerReplyEnabled(guildId, channel, message, tmp9)) {
-          tmp5Result = tmp5(7919);
-          const tmp5Result1 = tmp5(7913);
-          const transformStickerResult = tmp5Result.transformSticker(tmp5(7913).pickRoleSubscriptionPurchaseSticker(message.id));
+          tmp5Result = tmp5(7998);
+          const tmp5Result1 = tmp5(7992);
+          const transformStickerResult = tmp5Result.transformSticker(tmp5(7992).pickRoleSubscriptionPurchaseSticker(message.id));
         }
       }
     }
@@ -51,8 +51,8 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
         obj[0] = author.id;
         obj[1] = guildMemberAvatar;
         obj[2] = guildId;
-        let guildMemberAvatarSource = tmp5(1430).getGuildMemberAvatarSource(obj, author);
-        const tmp5Result3 = tmp5(1430);
+        let guildMemberAvatarSource = tmp5(1396).getGuildMemberAvatarSource(obj, author);
+        const tmp5Result3 = tmp5(1396);
       }
       obj = { action: "bindOpenRoleSubscriptionOverview", guildId: null, messageId: null, channelId: null, roleSubscriptionListingId: null };
       obj[1] = guildId;
@@ -80,16 +80,16 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
       obj1[2] = formatUsernameOnClickDefault(obj3);
       obj1[3] = obj;
       obj1[4] = roleSubscriptionData;
-      obj2[0] = tmp5(7913).getRoleSubscriptionPurchaseSystemMessageContentMobile(obj1);
+      obj2[0] = tmp5(7992).getRoleSubscriptionPurchaseSystemMessageContentMobile(obj1);
       obj2[1] = roleSubscriptionData.total_months_subscribed;
       obj2[2] = messageAuthorWithProcessedColor.nick;
       obj2[3] = tmp17Result.uri;
       obj2[4] = transformStickerResult;
       const tmp22 = guildId;
-      const tmp5Result4 = tmp5(7913);
-      obj2[5] = tmp5(7913).getRoleSubscriptionPurchaseStickerCTA(message.id, false);
-      const intl = tmp5(1233).intl;
-      obj2[6] = intl.string(tmp5(1233).t.piPHvY);
+      const tmp5Result4 = tmp5(7992);
+      obj2[5] = tmp5(7992).getRoleSubscriptionPurchaseStickerCTA(message.id, false);
+      const intl = tmp5(1114).intl;
+      obj2[6] = intl.string(tmp5(1114).t.piPHvY);
       const merged = Object.assign(createCommonMessageDefault(message));
       return obj2;
     }

@@ -1,19 +1,19 @@
-// === Module 12324: GuildPowerupCardFooterActive ===
+// === Module 12524: GuildPowerupCardFooterActive ===
 
-// Module 12324 (GuildPowerupCardFooterActive)
+// Module 12524 (GuildPowerupCardFooterActive)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2400 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4438 */;
-import Text from "Text" /* 4474 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7720 */;
-import apexExperiment from "apexExperiment" /* 8016 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12300 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12325 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 2428 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
+import Text from "Text" /* 4556 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
+import apexExperiment from "apexExperiment" /* 8095 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12500 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12525 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 class GuildPowerupCardFooterActive {
   constructor(arg0) {

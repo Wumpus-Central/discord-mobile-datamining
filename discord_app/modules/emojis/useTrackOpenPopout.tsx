@@ -1,13 +1,13 @@
-// === Module 9192: useTrackOpenPopout ===
+// === Module 10332: useTrackOpenPopout ===
 
-// Module 9192 (useTrackOpenPopout)
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4946 */;
+// Module 10332 (useTrackOpenPopout)
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import { EmojiInteractionPoint } from "set" /* 1924 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "handleConnectionOpen" /* 2011 */;
+import { EmojiInteractionPoint } from "set" /* 1374 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");

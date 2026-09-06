@@ -1,16 +1,16 @@
-// === Module 9847: computeCallVerification ===
+// === Module 9132: computeCallVerification ===
 
-// Module 9847 (computeCallVerification)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
-import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9865 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "createRTCConnection" /* 4554 */;
-import closure_4 from "initialize" /* 4568 */;
-import closure_5 from "map" /* 9848 */;
-import closure_6 from "initialize" /* 9849 */;
-import { RTCConnectionStates } from "ME" /* 673 */;
+// Module 9132 (computeCallVerification)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
+import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9150 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "createRTCConnection" /* 4583 */;
+import closure_4 from "initialize" /* 4599 */;
+import closure_5 from "map" /* 9133 */;
+import closure_6 from "initialize" /* 9134 */;
+import { RTCConnectionStates } from "ME" /* 1074 */;
 
 require = arg1;
 function computeCallVerification() {
@@ -124,7 +124,7 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(dispatcherDefaul
           tmp6 = computeCallVerification();
         }
         return tmp6;
-      } else if (tmp10(4579).MediaEngineContextTypes.DEFAULT === context) {
+      } else if (tmp10(4615).MediaEngineContextTypes.DEFAULT === context) {
         map.clear();
         map1.clear();
         c10 = false;

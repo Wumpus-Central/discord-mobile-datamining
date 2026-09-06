@@ -1,10 +1,10 @@
-// === Module 16338: ContentInventoryEntryRow ===
+// === Module 16500: ContentInventoryEntryRow ===
 
-// Module 16338 (ContentInventoryEntryRow)
+// Module 16500 (ContentInventoryEntryRow)
 import noopAll from "noop" /* 19 */;
-import itemsDefault from "items" /* 16339 */;
-import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 16348 */;
-import closure_3 from "markAllUserIdListsStale" /* 4130 */;
+import itemsDefault from "items" /* 16501 */;
+import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 16510 */;
+import closure_3 from "markAllUserIdListsStale" /* 4209 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -18,15 +18,15 @@ export default function ContentInventoryEntryRow(content) {
     flag = false;
   }
   let flag2 = content.visible;
-  let obj = content(586);
+  let obj = content(504);
   const items = [closure_3];
   if (obj.useStateFromStores(items, () => closure_1_3.isBlockedOrIgnored(content.author_id))) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8051).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8051).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8051).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8130).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8130).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8130).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           obj = { content: null, renderForScreenshot: null, visible: null };
           obj[0] = content;
           obj[1] = flag;

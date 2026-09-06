@@ -1,9 +1,9 @@
-// === Module 9121: withEqualityFn ===
+// === Module 10286: withEqualityFn ===
 
-// Module 9121 (withEqualityFn)
+// Module 10286 (withEqualityFn)
 import set from "set" /* 2 */;
-import identity from "identity" /* 697 */;
-import createJSONStorage from "createJSONStorage" /* 4345 */;
+import identity from "identity" /* 1244 */;
+import createJSONStorage from "createJSONStorage" /* 4430 */;
 
 let c0 = require;
 let closure_2 = Object.freeze({ inspectedExpressionPosition: { rowIndex: 0, columnIndex: 0 }, hasInteracted: false, activeCategoryIndex: 0, searchPlaceholder: null, bottomPosition: null, analyticsId: null });
@@ -106,9 +106,9 @@ c0 = withEqualityFn3Result;
 const result = set.fileFinishedImporting("modules/expression_picker/ExpressionPickerGridStores.tsx");
 
 export default function createStore() {
-  let obj = _undefined(697);
+  let obj = _undefined(1244);
   const withEqualityFn = obj.createWithEqualityFn();
-  const withEqualityFnResult = withEqualityFn(_undefined(4345).subscribeWithSelector(() => closure_2));
+  const withEqualityFnResult = withEqualityFn(_undefined(4430).subscribeWithSelector(() => closure_2));
   _undefined = withEqualityFnResult;
   obj = {
     useStore: withEqualityFnResult,

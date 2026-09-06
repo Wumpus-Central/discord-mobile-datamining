@@ -1,16 +1,16 @@
-// === Module 1206: _maybeBackfillMissingBreadcrumbsFromTelemetryRing ===
+// === Module 1233: _maybeBackfillMissingBreadcrumbsFromTelemetryRing ===
 
-// Module 1206 (_maybeBackfillMissingBreadcrumbsFromTelemetryRing)
+// Module 1233 (_maybeBackfillMissingBreadcrumbsFromTelemetryRing)
 import timestampDefault from "timestamp" /* 3 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import _modDef1205 from "module_1205" /* 1205 */;
-import transitionTo from "transitionTo" /* 1219 */;
+import transitionTo from "transitionTo" /* 1100 */;
+import _modDef1232 from "module_1232" /* 1232 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 673 */;
-import { PRIMARY_DOMAIN } from "sum" /* 502 */;
-import addBreadcrumb from "addBreadcrumb" /* 807 */;
-import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 14086 */;
+import ME from "ME" /* 1074 */;
+import { PRIMARY_DOMAIN } from "sum" /* 1085 */;
+import addBreadcrumb from "addBreadcrumb" /* 675 */;
+import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 1358 */;
 
 require = arg1;
 function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
@@ -116,7 +116,7 @@ function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
   return applyArgumentsResult;
 }
 function filterError(event_id, originalException) {
-  closure_0 = event_id;
+  let message = event_id;
   importDefault = originalException;
   originalException = undefined;
   if (originalException != null) {
@@ -166,24 +166,39 @@ function filterError(event_id, originalException) {
     }
     flag = flag2;
   }
-  if (flag) {
-    event_id = event_id.event_id;
-    let tmp17 = typeof event_id === "string";
-    if (typeof event_id === "string") {
-      tmp17 = 0 !== event_id.length;
-    }
-    if (tmp17) {
-      _modDef1205.markCrashHandled(event_id);
-      const obj = _modDef1205;
-    }
-  } else {
+  if (!flag) {
     let originalException2;
     if (originalException != null) {
       originalException2 = originalException.originalException;
     }
-    let status1;
+    message = undefined;
     if (originalException2 != null) {
-      status1 = originalException2.status;
+      message = originalException2.message;
+    }
+    let someResult = typeof message === "string";
+    if (typeof message === "string") {
+      someResult = closure_11.some((arg0) => message.includes(arg0));
+    }
+    flag = someResult;
+  }
+  if (flag) {
+    event_id = event_id.event_id;
+    let tmp20 = typeof event_id === "string";
+    if (typeof event_id === "string") {
+      tmp20 = 0 !== event_id.length;
+    }
+    if (tmp20) {
+      _modDef1232.markCrashHandled(event_id);
+      const obj = _modDef1232;
+    }
+  } else {
+    let originalException3;
+    if (originalException != null) {
+      originalException3 = originalException.originalException;
+    }
+    let status1;
+    if (originalException3 != null) {
+      status1 = originalException3.status;
     }
     if (null != status1) {
       if (null == event_id.tags) {
@@ -191,9 +206,9 @@ function filterError(event_id, originalException) {
       }
       event_id.tags.httpStatusCode = status1;
     }
-    let tmp10 = c12;
+    let tmp13 = c12;
     if ("error" === event_id.level) {
-      tmp10 = c13;
+      tmp13 = c13;
     }
     if (!c14) {
       if (callback2()) {
@@ -401,7 +416,7 @@ function trackCrash(event, hint, arg2) {
         tmp7 = 0 !== event_id.length;
       }
       if (tmp7) {
-        obj1 = _modDef1205;
+        obj1 = _modDef1232;
         obj1.markCrashHandled(event_id);
       }
     }
@@ -555,20 +570,20 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1205).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1205);
+    tmp25(1232).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1232);
   }
-  const AppCrashedReasons = tmp11(14085).AppCrashedReasons;
+  const AppCrashedReasons = tmp11(14082).AppCrashedReasons;
   const tmp19 = expandEventPropertiesDefault;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: tmp11(7362).MetricEvents.APP_CRASHED, tags: null };
+  obj1 = { name: tmp11(7607).MetricEvents.APP_CRASHED, tags: null };
   items = ["reason:" + tmp41, ];
   if (level == null) {
     level = "unknown";
   }
   items[1] = "level:" + level;
   obj1[1] = items;
-  tmp26(7357).increment(obj1, true);
+  tmp26(7602).increment(obj1, true);
 }
 ({ AnalyticEvents: closure_6, Endpoints } = ME);
 addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
@@ -647,7 +662,7 @@ export const initSentry = function initSentry() {
           if (tmp14Result2.isAndroid()) {
             str2 = "android";
           }
-          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6342", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@345.3.0-2+345203", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6365", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@345.5.0-2+345205", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           obj[0] = `/error-reporting-proxy/${str2}`;
           obj[2] = closure_16;
           obj[4] = SentryStaffDsn;
@@ -685,7 +700,7 @@ export const initSentry = function initSentry() {
           };
           tmp14Result1.init(obj);
           const tmp14Result4 = callback(tmp[4]);
-          callback(tmp[4]).setTag("buildNumber", "6342");
+          callback(tmp[4]).setTag("buildNumber", "6365");
           const tmp14Result5 = callback(tmp[4]);
           callback(tmp[4]).setTag("appVersion", constants.Version);
           const tmp14Result6 = callback(tmp[4]);

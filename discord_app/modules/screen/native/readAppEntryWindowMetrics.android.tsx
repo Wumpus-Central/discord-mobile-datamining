@@ -1,8 +1,8 @@
-// === Module 1892: readWindowSizeForAppEntry ===
+// === Module 1876: readWindowSizeForAppEntry ===
 
-// Module 1892 (readWindowSizeForAppEntry)
+// Module 1876 (readWindowSizeForAppEntry)
 import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 668 */;
+import enforcingDefault from "enforcing" /* 1343 */;
 
 const result = set.fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");
 

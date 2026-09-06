@@ -1,6 +1,6 @@
-// === Module 16462: inBoundingBox ===
+// === Module 16625: inBoundingBox ===
 
-// Module 16462 (inBoundingBox)
+// Module 16625 (inBoundingBox)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

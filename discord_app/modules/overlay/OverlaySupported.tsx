@@ -1,8 +1,8 @@
-// === Module 13812: IS_OVERLAY_DEV_ENV ===
+// === Module 13834: IS_OVERLAY_DEV_ENV ===
 
-// Module 13812 (IS_OVERLAY_DEV_ENV)
+// Module 13834 (IS_OVERLAY_DEV_ENV)
 import set from "set" /* 2 */;
-import set2 from "set" /* 1234 */;
+import set2 from "set" /* 1115 */;
 
 let flag = set2.isPlatformEmbedded;
 if (flag) {

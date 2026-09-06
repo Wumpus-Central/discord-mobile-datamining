@@ -1,10 +1,10 @@
-// === Module 11285: initialize ===
+// === Module 11428: initialize ===
 
-// Module 11285 (initialize)
+// Module 11428 (initialize)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import str2 from "str2" /* 6064 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import str2 from "str2" /* 6596 */;
 
 const NotificationTypes = str2.NotificationTypes;
 let c1 = null;

@@ -1,8 +1,8 @@
-// === Module 5116: getAdaptiveImageCompressionQuality ===
+// === Module 5163: getAdaptiveImageCompressionQuality ===
 
-// Module 5116 (getAdaptiveImageCompressionQuality)
+// Module 5163 (getAdaptiveImageCompressionQuality)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 function getAdaptiveImageCompressionQuality(width, ADAPTIVE_COMPRESSION_CONFIG) {
   if (ADAPTIVE_COMPRESSION_CONFIG.useAdaptiveCompression) {

@@ -1,8 +1,8 @@
-// === Module 11085: _handleDocumentSelection ===
+// === Module 11223: _handleDocumentSelection ===
 
-// Module 11085 (_handleDocumentSelection)
+// Module 11223 (_handleDocumentSelection)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 function _handleDocumentSelection() {
@@ -111,8 +111,8 @@ function _handleDocumentSelection() {
               }
               dependencyMap = tmp54;
               c4 = 1;
-              let pick = callback(11086).pick;
-              let obj8 = callback(1234);
+              let pick = callback(11224).pick;
+              let obj8 = callback(1115);
               if (obj8.isIOS()) {
                 let obj3 = { mode: "open" };
               } else {
@@ -125,29 +125,29 @@ function _handleDocumentSelection() {
               pick = pick(obj4);
               c5 = 3;
               c6 = 1;
-              const tmp61 = callback(11086);
+              const tmp61 = callback(11224);
             }
           } else if (2 === tmp7) {
             c4 = 0;
             c4 = closure_3;
-            obj3 = flag(11086);
+            obj3 = flag(11224);
             if (obj3.isErrorWithCode(c4)) {
-              if (c4.code === flag(11086).errorCodes.OPERATION_CANCELED) {
+              if (c4.code === flag(11224).errorCodes.OPERATION_CANCELED) {
                 c6 = 3;
                 return { value: "HermesInternal", done: null };
               }
             }
-            obj4 = flag(4701);
+            obj4 = flag(4740);
             const obj5 = { error_message: null };
             const _JSON = JSON;
             obj5[0] = JSON.stringify(c4);
             obj4.trackWithMetadata(c4.MOBILE_FILE_PICKER_ERROR, obj5);
-            let obj6 = extensions(4859);
+            let obj6 = extensions(4905);
             obj6 = { title: null, body: null };
-            const intl3 = flag(1233).intl;
-            obj6[0] = intl3.string(flag(1233).t.rWHepR);
-            const intl4 = flag(1233).intl;
-            obj6[1] = intl4.string(flag(1233).t.fZRH9P);
+            const intl3 = flag(1114).intl;
+            obj6[0] = intl3.string(flag(1114).t.rWHepR);
+            const intl4 = flag(1114).intl;
+            obj6[1] = intl4.string(flag(1114).t.fZRH9P);
             obj6.show(obj6);
             c6 = 3;
             return { value: "HermesInternal", done: null };
@@ -163,12 +163,12 @@ function _handleDocumentSelection() {
           } else {
             closure_3 = arg1;
             if (closure_3.some((size) => 0 === size.size)) {
-              obj = extensions(4859);
+              obj = extensions(4905);
               obj8 = { title: null, body: null };
-              const intl = flag(1233).intl;
-              obj8[0] = intl.string(flag(1233).t.B3vFdU);
-              const intl2 = flag(1233).intl;
-              obj8[1] = intl2.string(flag(1233).t["9ZpT2C"]);
+              const intl = flag(1114).intl;
+              obj8[0] = intl.string(flag(1114).t.B3vFdU);
+              const intl2 = flag(1114).intl;
+              obj8[1] = intl2.string(flag(1114).t["9ZpT2C"]);
               obj.show(obj8);
             }
             c4 = 0;

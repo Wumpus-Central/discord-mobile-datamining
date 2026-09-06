@@ -1,10 +1,10 @@
-// === Module 9261: ApplicationStreamActivityStatus ===
+// === Module 10881: ApplicationStreamActivityStatus ===
 
-// Module 9261 (ApplicationStreamActivityStatus)
+// Module 10881 (ApplicationStreamActivityStatus)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 9262 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 9265 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10882 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10885 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -53,7 +53,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
   let tmp12 = !hideIcon;
   if (!hideIcon) {
     obj = { icon: null, style: null };
-    obj[0] = tmp7(9263).TvIcon;
+    obj[0] = tmp7(10883).TvIcon;
     obj[1] = iconStyle;
     tmp12 = callback(ActivityStatusIconDefault, obj);
     const tmp15 = ActivityStatusIconDefault;

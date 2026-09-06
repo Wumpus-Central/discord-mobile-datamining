@@ -1,18 +1,18 @@
-// === Module 9235: UserProfileCustomStatusActionSheet ===
+// === Module 11149: UserProfileCustomStatusActionSheet ===
 
-// Module 9235 (UserProfileCustomStatusActionSheet)
+// Module 11149 (UserProfileCustomStatusActionSheet)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getNicknameDefault from "getNickname" /* 4673 */;
-import _modDef8117 from "module_8117" /* 8117 */;
-import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 9072 */;
-import StatusBubbleConnectorDefault from "StatusBubbleConnector" /* 9104 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9236 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getNicknameDefault from "getNickname" /* 4712 */;
+import _modDef8257 from "module_8257" /* 8257 */;
+import StatusBubbleConnectorDefault from "StatusBubbleConnector" /* 11112 */;
+import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 11150 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11151 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -33,7 +33,7 @@ export default function UserProfileCustomStatusActionSheet(user) {
   user = user.user;
   ({ guildId, channelId, previewEmoji, previewText } = user);
   const tmp = callback3();
-  let obj = user(586);
+  let obj = user(504);
   const items = [closure_4];
   const items1 = [user];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -46,19 +46,19 @@ export default function UserProfileCustomStatusActionSheet(user) {
   }, items1);
   obj1 = getNicknameDefault;
   const name = obj1.useName(guildId, channelId, user);
-  const intl = user(1233).intl;
+  const intl = user(1114).intl;
   if (stateFromStores) {
-    let stringResult = intl.string(tmp2(1233).t.AHoLf4);
+    let stringResult = intl.string(tmp2(1114).t.AHoLf4);
   } else {
     obj = { username: null };
     obj[0] = name;
-    stringResult = intl.formatToPlainString(tmp2(1233).t["pP5Aa+"], obj);
+    stringResult = intl.formatToPlainString(tmp2(1114).t["pP5Aa+"], obj);
   }
   obj = { title: stringResult, children: null };
   obj1 = { style: tmp.statusPreviewContainer, children: null };
   const obj2 = { style: tmp.avatarContainer, children: null };
   const tmp6 = useCustomStatusActivityForUserDefault(user.id);
-  obj2[1] = callback(_modDef8117, { user, statusStyle: tmp.avatarStatus });
+  obj2[1] = callback(_modDef8257, { user, statusStyle: tmp.avatarStatus });
   const items2 = [callback(View, obj2), callback(StatusBubbleConnectorDefault, { customStatusActivity: tmp6, hasCustomProfileTheme: false, showFullStatus: true, style: tmp.customStatusBubble, previewEmoji, previewText })];
   obj1[1] = items2;
   obj[1] = callback2(View, obj1);

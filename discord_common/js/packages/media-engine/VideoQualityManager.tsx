@@ -1,9 +1,9 @@
-// === Module 4592: WantsVideoQuality ===
+// === Module 4628: WantsVideoQuality ===
 
-// Module 4592 (WantsVideoQuality)
+// Module 4628 (WantsVideoQuality)
 import set from "set" /* 2 */;
-import getMaxSinkValue from "getMaxSinkValue" /* 4593 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+import getMaxSinkValue from "getMaxSinkValue" /* 4629 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 ({ defaultVideoQualityOptions: obj1, MediaEngineContextTypes: c3, VideoQualityMode, VIDEO_QUALITY_FRAMERATE: c4, BIT_FLOOR_PER_PIXEL: c5 } = DesktopSources);
 class WantsVideoQuality {

@@ -1,21 +1,21 @@
-// === Module 11206: handleQuickSwitcherUpdate ===
+// === Module 11345: handleQuickSwitcherUpdate ===
 
-// Module 11206 (handleQuickSwitcherUpdate)
+// Module 11345 (handleQuickSwitcherUpdate)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import canSeeChannelSummaries from "canSeeChannelSummaries" /* 11208 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import canSeeChannelSummaries from "canSeeChannelSummaries" /* 11347 */;
 import closure_7 from "_slicedToArray" /* 32 */;
-import closure_8 from "getHash" /* 4391 */;
-import closure_9 from "handleConnectionOpen" /* 9949 */;
-import closure_10 from "ensureGuildLoaded" /* 1386 */;
-import closure_11 from "createGuildRecordFromRust" /* 1908 */;
-import closure_12 from "generateOldThreadCutoff" /* 4493 */;
-import closure_13 from "handleConnectionOpen" /* 1980 */;
-import closure_14 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_15 from "mergeGuildAvatar" /* 1921 */;
-import { SUMMARY_POLL_INTERVAL } from "result" /* 11207 */;
+import closure_8 from "getHash" /* 4476 */;
+import closure_9 from "handleConnectionOpen" /* 9834 */;
+import closure_10 from "ensureGuildLoaded" /* 1957 */;
+import closure_11 from "createGuildRecordFromRust" /* 1979 */;
+import closure_12 from "generateOldThreadCutoff" /* 4575 */;
+import closure_13 from "handleConnectionOpen" /* 2011 */;
+import closure_14 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_15 from "mergeGuildAvatar" /* 1371 */;
+import { SUMMARY_POLL_INTERVAL } from "result" /* 11346 */;
 
 require = arg1;
 function handleQuickSwitcherUpdate() {
@@ -69,7 +69,7 @@ prototype["topSummaries"] = function topSummaries() {
       obj = callback(11);
       const date = new Date();
       const time = date.getTime();
-      tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(684).Millis.HOUR;
+      tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(1090).Millis.HOUR;
       const extractTimestampResult = callback(11).extractTimestamp(people.endId);
     }
     return tmp;
@@ -98,11 +98,11 @@ prototype["findSummary"] = function findSummary(channelId, summaryId) {
   }
   return found;
 };
-prototype["selectedSummary"] = function selectedSummary(channel_id) {
+prototype["selectedSummary"] = function selectedSummary(id) {
   let findSummaryResult = null;
   if (null != closure_6) {
     findSummaryResult = null;
-    if (closure_6.channelId === channel_id) {
+    if (closure_6.channelId === id) {
       findSummaryResult = null;
       if (null != closure_6.summaryId) {
         let summaryId;
@@ -110,7 +110,7 @@ prototype["selectedSummary"] = function selectedSummary(channel_id) {
         if (closure_6 != null) {
           summaryId = closure_6.summaryId;
         }
-        findSummaryResult = this.findSummary(channel_id, summaryId);
+        findSummaryResult = this.findSummary(id, summaryId);
       }
     }
   }
@@ -272,7 +272,7 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        obj = summaryFromServer(11209);
+        obj = summaryFromServer(11348);
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
         let items = dependencyMap2[channelId];
         if (items == null) {

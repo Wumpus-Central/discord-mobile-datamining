@@ -1,16 +1,16 @@
-// === Module 11327: AppStoreOverlayStatCardItem ===
+// === Module 11503: AppStoreOverlayStatCardItem ===
 
-// Module 11327 (AppStoreOverlayStatCardItem)
+// Module 11503 (AppStoreOverlayStatCardItem)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5661 */;
-import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 11328 */;
-import FractionalStarDefault from "FractionalStar" /* 11329 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
+import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 11504 */;
+import FractionalStarDefault from "FractionalStar" /* 11505 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function AppStoreOverlayStatCardItem(onRatingPress) {
@@ -30,12 +30,12 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(11328);
-      result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1233).intl.currentLocale);
+      let tmp9Result = tmp9(11504);
+      result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1114).intl.currentLocale);
     }
-    tmp9Result = tmp9(11328);
+    tmp9Result = tmp9(11504);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
-    const intl = tmp9(1233).intl;
+    const intl = tmp9(1114).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };
     obj[0] = stat.label;
     obj[1] = result;
@@ -100,7 +100,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     if (null == secondaryContent) {
       const obj4 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
       obj4[3] = secondaryText;
-      secondaryContent = tmp23(tmp20(4474).Text, obj4);
+      secondaryContent = tmp23(tmp20(4556).Text, obj4);
     }
     obj3[1] = secondaryContent;
     tmp23Result = tmp23(closure_5, obj3);
@@ -115,13 +115,13 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     obj5[4] = accessibilityLabel;
     let stringResult;
     if (tmp20Result.isIOS()) {
-      const intl2 = tmp20(1233).intl;
-      stringResult = intl2.string(tmp20(1233).t.quJD0Y);
+      const intl2 = tmp20(1114).intl;
+      stringResult = intl2.string(tmp20(1114).t.quJD0Y);
     }
     obj5[5] = stringResult;
     obj5[6] = tmp18Result;
     tmp23Result = tmp23(closure_3, obj5);
-    tmp20Result = tmp20(1234);
+    tmp20Result = tmp20(1115);
     const tmp29 = closure_3;
   } else {
     const obj6 = { style: null, accessible: true, accessibilityRole: "text", accessibilityLabel: null, children: null };

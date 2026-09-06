@@ -1,12 +1,12 @@
-// === Module 10171: useFetchStreamPreview ===
+// === Module 10062: useFetchStreamPreview ===
 
-// Module 10171 (useFetchStreamPreview)
+// Module 10062 (useFetchStreamPreview)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "reset" /* 4665 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
-import { BasicPermissions } from "sum" /* 502 */;
+import closure_3 from "reset" /* 4704 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_6 from "handleConnectionOpen" /* 2011 */;
+import { BasicPermissions } from "sum" /* 1085 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
@@ -16,23 +16,23 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
   dependencyMap = arg1;
   const React = arg2;
   closure_3 = tmp;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_4];
   closure_4 = obj.useStateFromStores(items, () => channel.getChannel(closure_1));
   const items1 = [shouldFetchPreview];
-  let stateFromStores = _require(586).useStateFromStores(items1, () => {
+  let stateFromStores = _require(504).useStateFromStores(items1, () => {
     let canBasicChannelResult = null != closure_4;
     if (canBasicChannelResult) {
       canBasicChannelResult = shouldFetchPreview.canBasicChannel(closure_1_7.CONNECT, tmp);
     }
     return canBasicChannelResult;
   });
-  const obj2 = _require(586);
+  const obj2 = _require(504);
   const items2 = [stateFromStores];
-  const stateFromStores1 = _require(586).useStateFromStores(items2, () => stateFromStores.getVoiceChannelId() === closure_1);
-  const obj3 = _require(586);
+  const stateFromStores1 = _require(504).useStateFromStores(items2, () => stateFromStores.getVoiceChannelId() === closure_1);
+  const obj3 = _require(504);
   const items3 = [closure_3];
-  const stateFromStoresObject = _require(586).useStateFromStoresObject(items3, () => {
+  const stateFromStoresObject = _require(504).useStateFromStoresObject(items3, () => {
     let isPreviewLoading = !store;
     let shouldFetchPreviewResult = isPreviewLoading;
     if (!store) {

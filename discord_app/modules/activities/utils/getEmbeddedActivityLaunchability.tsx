@@ -1,14 +1,14 @@
-// === Module 9503: getEmbeddedActivityLaunchability ===
+// === Module 9582: getEmbeddedActivityLaunchability ===
 
-// Module 9503 (getEmbeddedActivityLaunchability)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9462 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_5 from "updateVoiceState" /* 4497 */;
-import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "items3" /* 4506 */;
-import { Permissions } from "ME" /* 673 */;
+// Module 9582 (getEmbeddedActivityLaunchability)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9502 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_5 from "updateVoiceState" /* 4579 */;
+import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "items3" /* 1920 */;
+import { Permissions } from "ME" /* 1074 */;
 
 require = arg1;
 function getEmbeddedActivityLaunchability(arg0) {
@@ -70,7 +70,7 @@ export const useEmbeddedActivityLaunchability = function useEmbeddedActivityLaun
   const _require = channelId;
   const items = [closure_2, closure_3, closure_4, closure_5];
   const items1 = [channelId];
-  return _require(586).useStateFromStores(items, () => closure_1_9({ channelId: closure_0, ChannelStore: closure_1_2, GuildStore: closure_1_3, PermissionStore: closure_1_4, VoiceStateStore: closure_1_5 }), items1);
+  return _require(504).useStateFromStores(items, () => closure_1_9({ channelId: closure_0, ChannelStore: closure_1_2, GuildStore: closure_1_3, PermissionStore: closure_1_4, VoiceStateStore: closure_1_5 }), items1);
 };
 export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivityLaunchabilityLabel(arg0) {
   if (obj.CAN_LAUNCH === arg0) {

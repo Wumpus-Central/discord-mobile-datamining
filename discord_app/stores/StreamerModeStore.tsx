@@ -1,12 +1,12 @@
-// === Module 4323: initialize ===
+// === Module 4405: initialize ===
 
-// Module 4323 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import apexExperiment from "apexExperiment" /* 4324 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 4405 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import apexExperiment from "apexExperiment" /* 4406 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 let obj = { enabled: false, autoToggle: true, hideInstantInvites: true, hidePersonalInformation: true, disableSounds: true, disableNotifications: true, disabledOverlayWidgets: [], enableContentProtection: false };

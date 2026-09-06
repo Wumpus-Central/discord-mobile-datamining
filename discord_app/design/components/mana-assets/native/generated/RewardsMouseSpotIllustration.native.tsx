@@ -1,10 +1,10 @@
-// === Module 6949: RewardsMouseSpotIllustration ===
+// === Module 6385: RewardsMouseSpotIllustration ===
 
-// Module 6949 (RewardsMouseSpotIllustration)
+// Module 6385 (RewardsMouseSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6950 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6386 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/RewardsMouseSpotIllustration.native.tsx");

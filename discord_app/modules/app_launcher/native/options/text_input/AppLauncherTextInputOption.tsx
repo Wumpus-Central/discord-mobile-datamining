@@ -1,13 +1,13 @@
-// === Module 11971: AppLauncherTextInputOption ===
+// === Module 12172: AppLauncherTextInputOption ===
 
-// Module 11971 (AppLauncherTextInputOption)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 12172 (AppLauncherTextInputOption)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { EmojiIntention } from "set" /* 1924 */;
+import { EmojiIntention } from "set" /* 1374 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -47,10 +47,10 @@ export default function AppLauncherTextInputOption(guildId) {
   }), 2);
   first = tmp2[0];
   React = tmp2[1];
-  let obj = onChangeText(9067);
+  let obj = onChangeText(11215);
   closure_5 = React.useRef({ start: 0, end: 0 });
   ref = React.useRef(null);
-  let tmp14Result = option.type === onChangeText(1954).ApplicationCommandOptionType.STRING;
+  let tmp14Result = option.type === onChangeText(1894).ApplicationCommandOptionType.STRING;
   closure_7 = tmp14Result;
   const items = [onChangeText];
   callback = React.useCallback((arg0) => {
@@ -103,17 +103,17 @@ export default function AppLauncherTextInputOption(guildId) {
       const obj = onChangeText(closure_1_2[9]);
     }
   }, items2);
-  obj1 = onChangeText(11968);
+  obj1 = onChangeText(12169);
   const animationDelayedAutoFocus = obj1.useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(8448).AppLauncherEntrypoint.VOICE) {
-    let TextInput = tmp4(1296).TextInput;
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(9409).AppLauncherEntrypoint.VOICE) {
+    let TextInput = tmp4(1178).TextInput;
   } else {
-    TextInput = guildId(11972);
+    TextInput = guildId(12173);
   }
   const items3 = [tmp.container, , ];
   if (hasError) {
@@ -124,7 +124,7 @@ export default function AppLauncherTextInputOption(guildId) {
   items3[2] = style;
   obj = { ref, autoFocus: false, value: first, style: tmp.stringOptionInput, maxLength: null, autoComplete: "off", onChangeText: null, onSelectionChange: null, onFocus: null, onEndEditing: null, textAlignVertical: "center", returnKeyType: "default", multiline: true, keyboardType: null, onPressIn: null };
   let maxLength;
-  if (option.type === onChangeText(1954).ApplicationCommandOptionType.STRING) {
+  if (option.type === onChangeText(1894).ApplicationCommandOptionType.STRING) {
     maxLength = option.maxLength;
   }
   obj[4] = maxLength;
@@ -134,13 +134,13 @@ export default function AppLauncherTextInputOption(guildId) {
   };
   obj[8] = onFocus;
   obj[9] = onEndEditing;
-  if (option.type === onChangeText(1954).ApplicationCommandOptionType.INTEGER) {
+  if (option.type === onChangeText(1894).ApplicationCommandOptionType.INTEGER) {
     let str2 = "numbers-and-punctuation";
     if (tmp4Result.isAndroid()) {
       str2 = "numeric";
     }
     let str = str2;
-    tmp4Result = tmp4(1234);
+    tmp4Result = tmp4(1115);
   } else {
     str = "default";
   }
@@ -156,7 +156,7 @@ export default function AppLauncherTextInputOption(guildId) {
       obj = { pickerIntention: ref.CHAT, autoFocus: false, startExpanded: false, onPressEmoji: closure_9, guildId, onClose: closure_10 };
       const result1 = onChangeText(closure_1_2[17]).openEmojiPickerActionSheet(obj);
     };
-    tmp14Result = tmp14(guildId(11973), obj1);
+    tmp14Result = tmp14(guildId(12174), obj1);
   }
   items4[1] = tmp14Result;
   obj[1] = items4;

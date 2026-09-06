@@ -1,21 +1,21 @@
-// === Module 12715: ModeratorActionRow ===
+// === Module 13048: ModeratorActionRow ===
 
-// Module 12715 (ModeratorActionRow)
+// Module 13048 (ModeratorActionRow)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import TableRowInner from "TableRowInner" /* 5608 */;
-import closure_4 from "buildStageChannelUserRoles" /* 5374 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "comparator" /* 1981 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
-import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import closure_9 from "createGuildRecordFromRust" /* 1908 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_11 from "updateVoiceState" /* 4497 */;
-import ME from "ME" /* 673 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
+import ThemesDefault from "Themes" /* 576 */;
+import TableRowInner from "TableRowInner" /* 5605 */;
+import closure_4 from "buildStageChannelUserRoles" /* 5421 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "comparator" /* 2012 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 2012 */;
+import closure_8 from "trackCommunicationDisabled" /* 2021 */;
+import closure_9 from "createGuildRecordFromRust" /* 1979 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_11 from "updateVoiceState" /* 4579 */;
+import ME from "ME" /* 1074 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function ModeratorActionRow(isDestructive) {
@@ -348,7 +348,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              let arr = callback(4724);
+              let arr = callback(4763);
               arr = arr.pop();
             }
           };

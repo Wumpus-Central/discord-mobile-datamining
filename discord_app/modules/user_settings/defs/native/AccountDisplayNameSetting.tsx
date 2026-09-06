@@ -1,10 +1,10 @@
-// === Module 14609: route ===
+// === Module 14712: route ===
 
-// Module 14609 (route)
-import initialize from "initialize" /* 586 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
-import createToggle from "createToggle" /* 11292 */;
+// Module 14712 (route)
+import initialize from "initialize" /* 504 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {
@@ -29,7 +29,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return require(14479) /* ProfileCustomizationSubsection */.default;
+    return require(14586) /* ProfileCustomizationSubsection */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

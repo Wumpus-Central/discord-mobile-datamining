@@ -1,12 +1,12 @@
-// === Module 1205: ? ===
+// === Module 1232: ? ===
 
-// Module 1205
+// Module 1232
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 806 */;
-import addBreadcrumbAll from "addBreadcrumb" /* 807 */;
-import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing" /* 1206 */;
+import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 674 */;
+import addBreadcrumbAll from "addBreadcrumb" /* 675 */;
+import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing" /* 1233 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_5 = new timestampDefault("Sentry");
@@ -35,8 +35,8 @@ let obj = {
   },
   captureException(arg0, extra) {
     const _require = arg0;
-    importAll = _require(14087).getUpdatedOptions(extra);
-    const obj = _require(14087);
+    importAll = _require(14083).getUpdatedOptions(extra);
+    const obj = _require(14083);
     addBreadcrumbAll.withScope((setTags) => {
       if (null != callback) {
         if (null != tmp.tags) {
@@ -52,7 +52,7 @@ let obj = {
   },
   captureCrash(error, extra) {
     const _require = error;
-    const updatedOptions = _require(14087).getUpdatedOptions(extra);
+    const updatedOptions = _require(14083).getUpdatedOptions(extra);
     let tags;
     if (updatedOptions != null) {
       tags = updatedOptions.tags;
@@ -64,8 +64,8 @@ let obj = {
       }
     }
     dependencyMap = Object.assign({ crash: "true" }, {});
-    let obj = _require(14087);
-    updatedOptions(807).withScope((setExtras) => {
+    let obj = _require(14083);
+    updatedOptions(675).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
       }
@@ -95,8 +95,8 @@ let obj = {
   captureMessage(arg0, extra) {
     const _require = arg0;
     closure_1 = arg2;
-    importAll = _require(14087).getUpdatedOptions(extra);
-    const obj = _require(14087);
+    importAll = _require(14083).getUpdatedOptions(extra);
+    const obj = _require(14083);
     addBreadcrumbAll.withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
@@ -201,7 +201,7 @@ let obj = {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                let obj = { type: "y", event_id: "has", timestamp: null, level: "\u{1F60B}", tags: 6 };
+                let obj = { type: "y", event_id: 4, timestamp: 2, level: 0, tags: "BULK_ACK" };
                 obj[1] = timestamp.event_id;
                 obj[2] = result;
                 obj[3] = formatted;

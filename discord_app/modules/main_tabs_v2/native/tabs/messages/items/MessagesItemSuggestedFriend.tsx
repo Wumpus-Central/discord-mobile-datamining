@@ -1,17 +1,17 @@
-// === Module 15880: getMessagesItemSuggestedFriendHeight ===
+// === Module 16042: getMessagesItemSuggestedFriendHeight ===
 
-// Module 15880 (getMessagesItemSuggestedFriendHeight)
-import ThemesDefault from "Themes" /* 709 */;
-import noop from "noop" /* 8116 */;
-import map from "map" /* 9106 */;
-import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15879 */;
+// Module 16042 (getMessagesItemSuggestedFriendHeight)
+import ThemesDefault from "Themes" /* 576 */;
+import noop from "noop" /* 8874 */;
+import map from "map" /* 10119 */;
+import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 16041 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "markAllUserIdListsStale" /* 4130 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "markAllUserIdListsStale" /* 4209 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 let c4 = importAllResult;
@@ -99,7 +99,7 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
     setAddedPressed(true);
   }, items4);
   obj = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: false };
   obj[3] = height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32;
   const items5 = [callback2(height(suggestedFriend[18]).Avatar, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };

@@ -1,9 +1,9 @@
-// === Module 648: logger ===
+// === Module 567: logger ===
 
-// Module 648 (logger)
+// Module 567 (logger)
 import set from "set" /* 2 */;
 import log from "log" /* 4 */;
-import EventEmitter2 from "EventEmitter" /* 649 */;
+import EventEmitter2 from "EventEmitter" /* 568 */;
 
 const logger = new log.Logger("Flux");
 const EventEmitter = EventEmitter2.EventEmitter;

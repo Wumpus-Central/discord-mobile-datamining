@@ -1,9 +1,9 @@
-// === Module 8141: formatExpirationLabel ===
+// === Module 8754: formatExpirationLabel ===
 
-// Module 8141 (formatExpirationLabel)
+// Module 8754 (formatExpirationLabel)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import hooksDefault from "hooks" /* 4074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import hooksDefault from "hooks" /* 4153 */;
 
 function formatExpirationLabel(expiry) {
   const tmp2 = hooksDefault();

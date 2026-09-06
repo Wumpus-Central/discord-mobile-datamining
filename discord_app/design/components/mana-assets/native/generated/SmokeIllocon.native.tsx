@@ -1,10 +1,10 @@
-// === Module 7027: SmokeIllocon ===
+// === Module 6465: SmokeIllocon ===
 
-// Module 7027 (SmokeIllocon)
+// Module 6465 (SmokeIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 7028 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6466 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SmokeIllocon.native.tsx");

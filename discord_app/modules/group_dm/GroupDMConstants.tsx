@@ -1,6 +1,6 @@
-// === Module 16589: MAX_GROUP_DM_NITRO_PARTICIPANTS ===
+// === Module 11593: MAX_GROUP_DM_NITRO_PARTICIPANTS ===
 
-// Module 16589 (MAX_GROUP_DM_NITRO_PARTICIPANTS)
+// Module 11593 (MAX_GROUP_DM_NITRO_PARTICIPANTS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/group_dm/GroupDMConstants.tsx");

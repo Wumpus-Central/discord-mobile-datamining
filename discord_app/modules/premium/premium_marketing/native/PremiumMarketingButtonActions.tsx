@@ -1,10 +1,10 @@
-// === Module 13294: getButtonActionHandler ===
+// === Module 13399: getButtonActionHandler ===
 
-// Module 13294 (getButtonActionHandler)
-import create from "create" /* 8468 */;
-import closure_3 from "createEmptyPromotionsByType" /* 10700 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
-import ME from "ME" /* 673 */;
+// Module 13399 (getButtonActionHandler)
+import create from "create" /* 10672 */;
+import closure_3 from "createEmptyPromotionsByType" /* 10665 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ AnalyticsSections: c5, AnalyticsObjects: closure_6, AnalyticsObjectTypes: error, UserSettingsSections: closure_8 } = ME);
@@ -20,23 +20,23 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
         closure_1_1(closure_1_2[4])(obj);
       }
     };
-  } else if (tmp(8468).ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
+  } else if (tmp(10672).ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
     return () => {
       obj = { analyticsLocation: obj, analyticsLocations: closure_1, premiumType: closure_1_4.TIER_1, onPaymentSuccess: closure_3, onPaymentDismiss: closure_4 };
       obj = { page: closure_2, section: closure_1_5.FOOTER, object: closure_1_6.BUTTON_CTA, objectType: closure_1_7.TIER_1 };
       return closure_1_1(closure_1_2[5])(obj);
     };
   } else {
-    if (tmp(8468).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL !== buttonAction) {
-      if (tmp(8468).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
-        if (tmp(8468).ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
+    if (tmp(10672).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL !== buttonAction) {
+      if (tmp(10672).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
+        if (tmp(10672).ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
           return () => {
             obj = { analyticsLocation: obj, analyticsLocations: closure_1, onPaymentSuccess: closure_3, onPaymentDismiss: closure_4 };
             obj = { page: closure_2, section: closure_1_5.FOOTER, object: closure_1_6.BUTTON_CTA, objectType: closure_1_7.BUY };
             return closure_1_1(closure_1_2[5])(obj);
           };
         } else {
-          const OPEN_MARKETING_PAGE = tmp(8468).ButtonAction.OPEN_MARKETING_PAGE;
+          const OPEN_MARKETING_PAGE = tmp(10672).ButtonAction.OPEN_MARKETING_PAGE;
           return () => {
             let obj = callback(table[8]);
             obj = { screen: constants.PREMIUM };

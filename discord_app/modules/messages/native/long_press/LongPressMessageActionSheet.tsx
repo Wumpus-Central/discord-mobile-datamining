@@ -1,17 +1,17 @@
-// === Module 11469: LongPressMessageActionSheet ===
+// === Module 11658: LongPressMessageActionSheet ===
 
-// Module 11469 (LongPressMessageActionSheet)
+// Module 11658 (LongPressMessageActionSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleMessageSendFailedAutomod" /* 7859 */;
-import closure_6 from "handleSelectedGuildChange" /* 11470 */;
-import closure_7 from "getTimeSafe" /* 11471 */;
-import { isMessageComponentsV2 } from "hasFlag" /* 4131 */;
-import closure_9 from "fetchFingerprint" /* 1215 */;
-import closure_10 from "createGuildRecordFromRust" /* 1908 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
-import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4471 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "handleMessageSendFailedAutomod" /* 7938 */;
+import closure_6 from "handleSelectedGuildChange" /* 11659 */;
+import closure_7 from "getTimeSafe" /* 11660 */;
+import { isMessageComponentsV2 } from "hasFlag" /* 4210 */;
+import closure_9 from "fetchFingerprint" /* 502 */;
+import closure_10 from "createGuildRecordFromRust" /* 1979 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4199 */;
+import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4553 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

@@ -1,13 +1,13 @@
-// === Module 14822: toggle ===
+// === Module 14978: toggle ===
 
-// Module 14822 (toggle)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import hasFlagAll from "hasFlag" /* 1398 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14668 */;
+// Module 14978 (toggle)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import hasFlagAll from "hasFlag" /* 1384 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14824 */;
 import closure_3 from "noop" /* 19 */;
-import { FriendSourceFlags } from "ME" /* 673 */;
-import createToggle from "createToggle" /* 11292 */;
+import { FriendSourceFlags } from "ME" /* 1074 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {
@@ -17,7 +17,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualGuildsSettingValue() {
-    const FriendSourceFlagsSetting = setting(4166).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(1935).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return React.useMemo(() => setting(closure_1_2[5]).computeFlags(setting), items).mutualGuilds;

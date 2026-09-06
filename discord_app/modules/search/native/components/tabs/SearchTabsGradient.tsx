@@ -1,8 +1,8 @@
-// === Module 16553: SearchTabsGradient ===
+// === Module 16719: SearchTabsGradient ===
 
-// Module 16553 (SearchTabsGradient)
-import ThemesDefault from "Themes" /* 709 */;
-import TabsGradientDefault from "TabsGradient" /* 12533 */;
+// Module 16719 (SearchTabsGradient)
+import ThemesDefault from "Themes" /* 576 */;
+import TabsGradientDefault from "TabsGradient" /* 12759 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/search/native/compo
 
 export default function SearchTabsGradient(state) {
   let token;
-  token = token(4197).useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW);
+  token = token(4262).useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW);
   let items = [token];
   const colors = React.useMemo(() => {
     const items = [token, token(closure_1_2[4]).hexWithOpacity(token, 0)];

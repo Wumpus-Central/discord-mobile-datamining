@@ -1,12 +1,12 @@
-// === Module 13816: trackAckMessages ===
+// === Module 13838: trackAckMessages ===
 
-// Module 13816 (trackAckMessages)
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "updateGuildUnreadSentinel" /* 7391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 4702 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 13838 (trackAckMessages)
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "updateGuildUnreadSentinel" /* 7636 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 4741 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/read_states/trackAckMessages.tsx");

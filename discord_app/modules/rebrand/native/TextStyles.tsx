@@ -1,8 +1,8 @@
-// === Module 5470: createTextStyle ===
+// === Module 5524: createTextStyle ===
 
-// Module 5470 (createTextStyle)
+// Module 5524 (createTextStyle)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const Fonts = ME.Fonts;
 let closure_1 = { 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 16: 16, 18: 17, 20: 20, 24: 25, 32: 34 };

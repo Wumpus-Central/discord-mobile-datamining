@@ -1,9 +1,9 @@
-// === Module 1909: identity ===
+// === Module 1980: identity ===
 
-// Module 1909 (identity)
+// Module 1980 (identity)
 import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import { Store } from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import { Store } from "initialize" /* 504 */;
 
 const require = arg1;
 function identity(arg0) {

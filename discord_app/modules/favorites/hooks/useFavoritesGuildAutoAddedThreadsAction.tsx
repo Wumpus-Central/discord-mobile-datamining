@@ -1,15 +1,15 @@
-// === Module 15976: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 16140: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 15976 (useFavoritesGuildAutoAddedThreadsAction)
+// Module 16140 (useFavoritesGuildAutoAddedThreadsAction)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "initializeFromUserSettings" /* 1389 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import closure_5 from "initializeFromUserSettings" /* 1960 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  let obj = hasAccess(10333);
+  let obj = hasAccess(10224);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   const items = [closure_4];
   if (hasAccess) {
@@ -25,9 +25,9 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
       return flag;
     });
   }
-  obj2 = hasAccess(586);
+  obj2 = hasAccess(504);
   const items1 = [closure_5];
-  const stateFromStores = hasAccess(586).useStateFromStores(items1, () => autoAddJoinedThreads.autoAddJoinedThreads);
+  const stateFromStores = hasAccess(504).useStateFromStores(items1, () => autoAddJoinedThreads.autoAddJoinedThreads);
   const items2 = [hasAccess, stateFromStores];
   obj = { isAvailable: hasAccess, isEnabled: stateFromStores, label: null, subLabel: null, toggle: null };
   const callback = React.useCallback(() => {
@@ -36,10 +36,10 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
       const obj = hasAccess(closure_1_2[5]);
     }
   }, items2);
-  const intl = tmp(1233).intl;
-  obj[2] = intl.string(stateFromStores(3178).DIyQIF);
-  const intl2 = tmp(1233).intl;
-  obj[3] = intl2.string(stateFromStores(3178).g2vHYJ);
+  const intl = tmp(1114).intl;
+  obj[2] = intl.string(stateFromStores(3225).DIyQIF);
+  const intl2 = tmp(1114).intl;
+  obj[3] = intl2.string(stateFromStores(3225).g2vHYJ);
   obj[4] = callback;
   return obj;
 };

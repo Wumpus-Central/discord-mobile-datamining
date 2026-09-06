@@ -1,9 +1,9 @@
-// === Module 17527: useCreatorMonetizationEligibilityItems ===
+// === Module 17687: useCreatorMonetizationEligibilityItems ===
 
-// Module 17527 (useCreatorMonetizationEligibilityItems)
+// Module 17687 (useCreatorMonetizationEligibilityItems)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { HelpdeskArticles } from "ME" /* 673 */;
+import { HelpdeskArticles } from "ME" /* 1074 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx");
@@ -140,8 +140,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let fn;
       if (!noRecentViolations) {
         fn = () => {
-          const tmp = callback(4184);
-          return tmp(callback(1994).getSubmitRequestURL());
+          const tmp = callback(4249);
+          return tmp(callback(2024).getSubmitRequestURL());
         };
       }
       obj[6] = fn;

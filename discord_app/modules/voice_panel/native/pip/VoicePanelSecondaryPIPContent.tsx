@@ -1,15 +1,15 @@
-// === Module 17002: VoicePanelSecondaryPIPContent ===
+// === Module 17166: VoicePanelSecondaryPIPContent ===
 
-// Module 17002 (VoicePanelSecondaryPIPContent)
+// Module 17166 (VoicePanelSecondaryPIPContent)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "participantFromServer" /* 1385 */;
-import closure_5 from "map" /* 9481 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import { ActivityLayoutMode } from "items3" /* 4506 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9483 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9482 */;
+import closure_4 from "participantFromServer" /* 1956 */;
+import closure_5 from "map" /* 9510 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import { ActivityLayoutMode } from "items3" /* 1920 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9505 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9511 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ asLaunched: c9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: unpackModuleId } = FrameLayoutModes);

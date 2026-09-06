@@ -1,13 +1,13 @@
-// === Module 9916: getXboxURIForChannel ===
+// === Module 9461: getXboxURIForChannel ===
 
-// Module 9916 (getXboxURIForChannel)
-import computeChannelName from "computeChannelName" /* 4674 */;
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9330 */;
-import ME from "ME" /* 673 */;
+// Module 9461 (getXboxURIForChannel)
+import computeChannelName from "computeChannelName" /* 4713 */;
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9233 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ XBOX_HANDOFF_SEARCH_PARAMS: closure_6, XBOX_URL_BASE: error } = XBOX_URL_BASE);
@@ -28,8 +28,8 @@ export default function getXboxURIForChannel(channelId) {
     name = guild.name;
   }
   if (name == null) {
-    const intl = tmp5(1233).intl;
-    name = intl.string(tmp5(1233).t.LJpTRF);
+    const intl = tmp5(1114).intl;
+    name = intl.string(tmp5(1114).t.LJpTRF);
   }
   obj[3] = name;
   obj[4] = closure_3.isSelfMute();
@@ -37,10 +37,10 @@ export default function getXboxURIForChannel(channelId) {
   obj[6] = nonce;
   const str = closure_6(obj);
   if (forQRCode) {
-    const aPIBaseURL = tmp5(527).getAPIBaseURL();
+    const aPIBaseURL = tmp5(1272).getAPIBaseURL();
     const _HermesInternal2 = HermesInternal;
     let combined = "" + aPIBaseURL + constants.XBOX_HANDOFF + "?" + str.toString();
-    const tmp5Result = tmp5(527);
+    const tmp5Result = tmp5(1272);
   } else {
     const _HermesInternal = HermesInternal;
     combined = "" + closure_7 + "?" + str.toString();

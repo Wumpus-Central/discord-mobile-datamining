@@ -1,8 +1,8 @@
-// === Module 6101: startDiceRoll ===
+// === Module 7245: startDiceRoll ===
 
-// Module 6101 (startDiceRoll)
+// Module 7245 (startDiceRoll)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const result = set.fileFinishedImporting("modules/dice_roll/DiceRollActionCreators.tsx");
 

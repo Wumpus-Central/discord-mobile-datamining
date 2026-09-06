@@ -1,13 +1,13 @@
-// === Module 8771: init ===
+// === Module 8625: init ===
 
-// Module 8771 (init)
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
+// Module 8625 (init)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "normalizeChannelPropertyForCompare" /* 8772 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "normalizeChannelPropertyForCompare" /* 8626 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function init(channelId, location, subsection) {
@@ -160,7 +160,7 @@ function _saveChannel() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            let HTTP = callback(527).HTTP;
+            let HTTP = callback(1272).HTTP;
             let then = HTTP.patch;
             let obj4 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
             obj4[0] = c6.CHANNEL(callback);
@@ -220,7 +220,7 @@ function _saveChannel() {
             obj5[24] = c25;
             obj5[25] = c26;
             obj4[1] = obj5;
-            obj5 = callback(527);
+            obj5 = callback(1272);
             obj4[3] = obj5.rejectWithMigratedError();
             HTTP = then(obj4);
             then = HTTP.then;

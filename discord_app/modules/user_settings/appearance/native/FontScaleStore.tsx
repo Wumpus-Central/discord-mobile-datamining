@@ -1,9 +1,9 @@
-// === Module 15103: DEFAULT_FONT_SCALE_STORE_STATE ===
+// === Module 15263: DEFAULT_FONT_SCALE_STORE_STATE ===
 
-// Module 15103 (DEFAULT_FONT_SCALE_STORE_STATE)
-import enforcingDefault from "enforcing" /* 9107 */;
-import set from "set" /* 1234 */;
-import identity from "identity" /* 697 */;
+// Module 15263 (DEFAULT_FONT_SCALE_STORE_STATE)
+import enforcingDefault from "enforcing" /* 10120 */;
+import set from "set" /* 1115 */;
+import identity from "identity" /* 1244 */;
 
 if (set.isAndroid()) {
   let customFontScale = enforcingDefault.getCustomFontScale();

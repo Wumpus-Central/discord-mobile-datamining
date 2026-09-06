@@ -1,10 +1,10 @@
-// === Module 14940: CONNECTION_BANNER_HEIGHT ===
+// === Module 15098: CONNECTION_BANNER_HEIGHT ===
 
-// Module 14940 (CONNECTION_BANNER_HEIGHT)
+// Module 15098 (CONNECTION_BANNER_HEIGHT)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
 import roundToNearestPixelResult from "module_14" /* 14 */;
 
 const PixelRatio = get_ActivityIndicator.PixelRatio;

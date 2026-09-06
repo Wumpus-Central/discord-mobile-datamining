@@ -1,7 +1,7 @@
-// === Module 4128: doesThreadMembersActionAffectMe ===
+// === Module 4207: doesThreadMembersActionAffectMe ===
 
-// Module 4128 (doesThreadMembersActionAffectMe)
-import closure_0 from "fetchFingerprint" /* 1215 */;
+// Module 4207 (doesThreadMembersActionAffectMe)
+import closure_0 from "fetchFingerprint" /* 502 */;
 
 const result = require("set").fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
 

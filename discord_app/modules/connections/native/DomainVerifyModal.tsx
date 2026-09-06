@@ -1,19 +1,19 @@
-// === Module 9367: DomainScreen ===
+// === Module 9281: DomainScreen ===
 
-// Module 9367 (DomainScreen)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useNavigation from "useNavigation" /* 1498 */;
-import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4929 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
-import EXAMPLE_DOMAIN from "EXAMPLE_DOMAIN" /* 9368 */;
+// Module 9281 (DomainScreen)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import useNavigation from "useNavigation" /* 1483 */;
+import Text from "Text" /* 4556 */;
+import Button from "Button" /* 4975 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
+import EXAMPLE_DOMAIN from "EXAMPLE_DOMAIN" /* 9282 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function DomainScreen(onClose) {
@@ -256,12 +256,12 @@ function HTTPProofScreen(children) {
     obj6 = { variant: "text-md/normal", color: "text-feedback-critical", style: null, children: null };
     obj6[2] = tmp.error;
     obj6[3] = tmp5;
-    tmp9Result = tmp9(tmp2(4474).Text, obj6);
+    tmp9Result = tmp9(tmp2(4556).Text, obj6);
   }
   items[2] = tmp9Result;
   const obj7 = { style: tmp.button, children: null };
   const obj8 = { loading: tmp7, text: null, onPress: null };
-  const intl4 = tmp2(1233).intl;
+  const intl4 = tmp2(1114).intl;
   obj8[1] = intl4.string(getSystemLocale.t["13ofGu"]);
   obj8[2] = function onPress() {
     _undefined2(true);
@@ -312,7 +312,7 @@ function HTTPProofScreen(children) {
   items[3] = callback2(View, obj7);
   const obj9 = { style: tmp.button, children: null };
   const obj10 = { variant: "secondary", text: null, onPress: null };
-  const intl5 = tmp2(1233).intl;
+  const intl5 = tmp2(1114).intl;
   obj10[1] = intl5.string(getSystemLocale.t.RhJMVQ);
   obj10[2] = function onPress() {
 
@@ -343,27 +343,27 @@ export default function DomainVerifyModal(arg0) {
     }
     let obj = {};
     obj = { headerTitle: null, headerLeft: null, render: null };
-    const intl = onClose(1233).intl;
-    obj[0] = intl.string(onClose(1233).t["7lo8+e"]);
-    let obj2 = onClose(5504);
+    const intl = onClose(1114).intl;
+    obj[0] = intl.string(onClose(1114).t["7lo8+e"]);
+    let obj2 = onClose(5624);
     obj[1] = obj2.getHeaderBackButton(onClose);
     obj[2] = function render() {
       return closure_1_8(closure_1_12, { onClose });
     };
     obj[constants.DOMAIN] = obj;
     obj = { headerTitle: null, headerLeft: null, render: null };
-    const intl2 = onClose(1233).intl;
-    obj[0] = intl2.string(onClose(1233).t["7lo8+e"]);
-    obj[1] = onClose(5504).getHeaderBackButton(onClose);
+    const intl2 = onClose(1114).intl;
+    obj[0] = intl2.string(onClose(1114).t["7lo8+e"]);
+    obj[1] = onClose(5624).getHeaderBackButton(onClose);
     obj[2] = function render(domain) {
       return closure_1_8(closure_1_13, { domain: domain.domain, proof: domain.proof, onClose });
     };
     obj[constants.PROOF_DNS] = obj;
     obj1 = { headerTitle: null, headerLeft: null, render: null };
-    const intl3 = onClose(1233).intl;
-    obj1[0] = intl3.string(onClose(1233).t["7lo8+e"]);
-    const obj5 = onClose(5504);
-    obj1[1] = onClose(5504).getHeaderBackButton(onClose);
+    const intl3 = onClose(1114).intl;
+    obj1[0] = intl3.string(onClose(1114).t["7lo8+e"]);
+    const obj5 = onClose(5624);
+    obj1[1] = onClose(5624).getHeaderBackButton(onClose);
     obj1[2] = function render(domain) {
       return closure_1_8(closure_1_14, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -371,8 +371,8 @@ export default function DomainVerifyModal(arg0) {
     obj2 = { screens: null, initialRouteName: null, headerBackTitle: null };
     obj2[0] = obj;
     obj2[1] = constants.DOMAIN;
-    const intl4 = onClose(1233).intl;
-    obj2[2] = intl4.string(onClose(1233).t["13/7kX"]);
-    return callback2(onClose(6017).Navigator, obj2);
+    const intl4 = onClose(1114).intl;
+    obj2[2] = intl4.string(onClose(1114).t["13/7kX"]);
+    return callback2(onClose(7000).Navigator, obj2);
   }
 };

@@ -1,8 +1,8 @@
-// === Module 8924: useNameplate ===
+// === Module 8218: useNameplate ===
 
-// Module 8924 (useNameplate)
+// Module 8218 (useNameplate)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "trackCommunicationDisabled" /* 1991 */;
+import closure_3 from "trackCommunicationDisabled" /* 2021 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");

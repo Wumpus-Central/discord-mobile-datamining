@@ -1,10 +1,10 @@
-// === Module 10031: shouldShowEndStageModal ===
+// === Module 9914: shouldShowEndStageModal ===
 
-// Module 10031 (shouldShowEndStageModal)
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "getActiveStageChannelIds" /* 5371 */;
-import closure_4 from "buildStageChannelUserRoles" /* 5374 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
+// Module 9914 (shouldShowEndStageModal)
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "getActiveStageChannelIds" /* 5418 */;
+import closure_4 from "buildStageChannelUserRoles" /* 5421 */;
+import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/shouldShowEndStageModal.tsx");

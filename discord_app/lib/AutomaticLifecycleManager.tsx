@@ -1,6 +1,6 @@
-// === Module 5495: initialize ===
+// === Module 7118: initialize ===
 
-// Module 5495 (initialize)
+// Module 7118 (initialize)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/AutomaticLifecycleManager.tsx");

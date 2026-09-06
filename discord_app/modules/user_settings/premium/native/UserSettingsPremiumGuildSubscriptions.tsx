@@ -1,29 +1,29 @@
-// === Module 13394: componentDidMount ===
+// === Module 13500: componentDidMount ===
 
-// Module 13394 (componentDidMount)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import create from "create" /* 1929 */;
-import combinedDefault from "combined" /* 1994 */;
-import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4373 */;
-import Text from "Text" /* 4474 */;
-import _deletePaymentSource from "_deletePaymentSource" /* 4838 */;
-import fetchSubscriptionPlansForSKU from "fetchSubscriptionPlansForSKU" /* 6113 */;
-import GuildBoostSlotCooldownDefault from "GuildBoostSlotCooldown" /* 13395 */;
-import handlePressDefault from "handlePress" /* 13409 */;
-import handlePressDefault2 from "handlePress" /* 13411 */;
-import getTopPatternSource from "getTopPatternSource" /* 13413 */;
-import FEATURES_PREMIUM_GUILD_USERDefault from "FEATURES_PREMIUM_GUILD_USER" /* 13417 */;
+// Module 13500 (componentDidMount)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import create from "create" /* 1379 */;
+import combinedDefault from "combined" /* 2024 */;
+import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4458 */;
+import Text from "Text" /* 4556 */;
+import _deletePaymentSource from "_deletePaymentSource" /* 4884 */;
+import fetchSubscriptionPlansForSKU from "fetchSubscriptionPlansForSKU" /* 7257 */;
+import GuildBoostSlotCooldownDefault from "GuildBoostSlotCooldown" /* 13501 */;
+import handlePressDefault from "handlePress" /* 13515 */;
+import handlePressDefault2 from "handlePress" /* 13517 */;
+import getTopPatternSource from "getTopPatternSource" /* 13519 */;
+import FEATURES_PREMIUM_GUILD_USERDefault from "FEATURES_PREMIUM_GUILD_USER" /* 13523 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import closure_7 from "handlePaymentSourceCreateEnd" /* 4141 */;
-import closure_8 from "handleGuildBoostsUpdate" /* 4370 */;
-import closure_9 from "addSubscriptionPlan" /* 4144 */;
-import closure_10 from "reset" /* 4145 */;
-import ME from "ME" /* 673 */;
-import { FractionalPremiumStates } from "GuildFeatures" /* 1923 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import closure_7 from "handlePaymentSourceCreateEnd" /* 4220 */;
+import closure_8 from "handleGuildBoostsUpdate" /* 4455 */;
+import closure_9 from "addSubscriptionPlan" /* 4223 */;
+import closure_10 from "reset" /* 4224 */;
+import ME from "ME" /* 1074 */;
+import { FractionalPremiumStates } from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -105,7 +105,7 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
       const obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj2[0] = tmp.externalManagement;
       obj2[3] = externalManagementMessage;
-      tmp6Result = tmp6(tmp7(4474).Text, obj2);
+      tmp6Result = tmp6(tmp7(4556).Text, obj2);
     }
     const obj3 = { children: null };
     items1[2] = tmp6Result;
@@ -169,7 +169,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   dependencyMap = undefined;
   closure_3 = undefined;
   closure_4 = undefined;
-  let obj = _require(13312);
+  let obj = _require(13417);
   _require = obj.useSubscriptionPlansLoaded();
   flag = undefined;
   if (route != null) {
@@ -181,12 +181,12 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   if (flag == null) {
     flag = true;
   }
-  ({ fractionalState: c2, endsAt } = flag(7151)({ forceFetch: true }));
-  let tmpResult = tmp(7986);
+  ({ fractionalState: c2, endsAt } = flag(7393)({ forceFetch: true }));
+  let tmpResult = tmp(8065);
   closure_3 = tmpResult.useIsInReverseTrial();
-  const tmp3 = flag(7151)({ forceFetch: true });
-  closure_4 = flag(13355)(endsAt, tmp(13355).CountDownMessageTypes.LONG_TIME_LEFT);
-  tmpResult = tmp(586);
+  const tmp3 = flag(7393)({ forceFetch: true });
+  closure_4 = flag(13461)(endsAt, tmp(13461).CountDownMessageTypes.LONG_TIME_LEFT);
+  tmpResult = tmp(504);
   const items = [closure_8, closure_7, closure_9, closure_6];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
     const obj = { hasFetchedSlots: closure_1_8.hasFetched, hasSlots: Object.keys(closure_1_8.boostSlots).length > 0, hasAvailableSlots: null, hasFetchedSubscriptionPlans: null, isFetchingSubscriptionPlans: null, isFetchingPaymentSources: null, shouldFetchSubscriptionPlans: null, fractionalState: null, isInReverseTrial: null, fpDurationText: null, premiumGroupRole: null };
@@ -207,17 +207,17 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     obj[10] = premiumGroupRole;
     return obj;
   });
-  const tmp4 = flag(13355);
+  const tmp4 = flag(13461);
   const items1 = [closure_10];
-  const stateFromStores = _require(586).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  const tmpResult1 = _require(586);
-  const navigation = _require(1498).useNavigation();
-  const tmpResult2 = _require(1498);
+  const stateFromStores = _require(504).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const tmpResult1 = _require(504);
+  const navigation = _require(1483).useNavigation();
+  const tmpResult2 = _require(1483);
   obj = { navigation, externalManagementMessage: null };
-  const externalManagementMessage = _require(7157).getExternalManagementMessage(stateFromStores, { shouldAllowExternalManagement: true });
+  const externalManagementMessage = _require(7404).getExternalManagementMessage(stateFromStores, { shouldAllowExternalManagement: true });
   const tmp10 = UserSettingsPremiumGuildSubscriptions;
   const tmp9 = closure_14;
-  const tmpResult3 = _require(7157);
+  const tmpResult3 = _require(7404);
   let tmp11 = null;
   if (tmpResult4.isMetaQuest()) {
     tmp11 = externalManagementMessage;

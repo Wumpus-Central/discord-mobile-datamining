@@ -1,10 +1,10 @@
-// === Module 11475: isMessagePinnable ===
+// === Module 11664: isMessagePinnable ===
 
-// Module 11475 (isMessagePinnable)
-import useCanStartPrivateThread from "useCanStartPrivateThread" /* 6125 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6126 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
-import ME from "ME" /* 673 */;
+// Module 11664 (isMessagePinnable)
+import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ ChannelTypes: c4, Permissions: c5 } = ME);

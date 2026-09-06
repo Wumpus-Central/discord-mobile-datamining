@@ -1,8 +1,8 @@
-// === Module 7202: usePremiumTrialOffer ===
+// === Module 7447: usePremiumTrialOffer ===
 
-// Module 7202 (usePremiumTrialOffer)
+// Module 7447 (usePremiumTrialOffer)
 import set from "set" /* 2 */;
-import useAndroidAndLegacyIOSPremiumTrialOfferCandidates from "useAndroidAndLegacyIOSPremiumTrialOfferCandidates" /* 7203 */;
+import useAndroidAndLegacyIOSPremiumTrialOfferCandidates from "useAndroidAndLegacyIOSPremiumTrialOfferCandidates" /* 7448 */;
 
 const result = set.fileFinishedImporting("modules/premium/hooks/usePremiumTrialOffer.android.tsx");
 

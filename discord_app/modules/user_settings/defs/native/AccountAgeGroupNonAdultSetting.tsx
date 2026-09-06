@@ -1,14 +1,15 @@
-// === Module 14615: pressable ===
+// === Module 14758: pressable ===
 
-// Module 14615 (pressable)
+// Module 14758 (pressable)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4172 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4734 */;
-import MobileUserSettings from "MobileUserSettings" /* 7896 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8701 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8703 */;
-import createToggle from "createToggle" /* 11292 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 5423 */;
+import MobileUserSettings from "MobileUserSettings" /* 7975 */;
+import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
+import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8413 */;
+import useIsTinyBroncoSettingsEnabled from "useIsTinyBroncoSettingsEnabled" /* 14682 */;
+import createToggle from "createToggle" /* 11468 */;
 
 const pressable = createToggle.createPressable({
   useTitle() {
@@ -21,8 +22,8 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     let stringResult = intl.string(getSystemLocale.t.lKDPGA);
     if (isAgeVerified) {
-      const intl2 = tmp(1233).intl;
-      stringResult = intl2.string(tmp(1233).t.sK0dmH);
+      const intl2 = tmp(1114).intl;
+      stringResult = intl2.string(tmp(1114).t.sK0dmH);
     }
     return stringResult;
   },
@@ -38,12 +39,17 @@ const pressable = createToggle.createPressable({
     const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
     const obj2 = useAgeVerificationRunner;
     let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
+    const obj3 = isFeatureAgeGated;
+    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
     if (hasTeenDefaults) {
-      let tmp4 = !isAgeVerified;
+      let tmp5 = !isAgeVerified;
       if (isAgeVerified) {
-        tmp4 = isVerifiedTeen;
+        tmp5 = isVerifiedTeen;
       }
-      hasTeenDefaults = tmp4;
+      hasTeenDefaults = tmp5;
+    }
+    if (hasTeenDefaults) {
+      hasTeenDefaults = !isTinyBroncoSettingsEnabled;
     }
     return hasTeenDefaults;
   }
@@ -59,8 +65,8 @@ let obj = {
     const intl = getSystemLocale.intl;
     let stringResult = intl.string(getSystemLocale.t.lKDPGA);
     if (isAgeVerified) {
-      const intl2 = tmp(1233).intl;
-      stringResult = intl2.string(tmp(1233).t.sK0dmH);
+      const intl2 = tmp(1114).intl;
+      stringResult = intl2.string(tmp(1114).t.sK0dmH);
     }
     return stringResult;
   },
@@ -76,12 +82,17 @@ let obj = {
     const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
     const obj2 = useAgeVerificationRunner;
     let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
+    const obj3 = isFeatureAgeGated;
+    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
     if (hasTeenDefaults) {
-      let tmp4 = !isAgeVerified;
+      let tmp5 = !isAgeVerified;
       if (isAgeVerified) {
-        tmp4 = isVerifiedTeen;
+        tmp5 = isVerifiedTeen;
       }
-      hasTeenDefaults = tmp4;
+      hasTeenDefaults = tmp5;
+    }
+    if (hasTeenDefaults) {
+      hasTeenDefaults = !isTinyBroncoSettingsEnabled;
     }
     return hasTeenDefaults;
   }

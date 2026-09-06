@@ -1,9 +1,9 @@
-// === Module 14793: _fetchAuthSessions ===
+// === Module 14949: _fetchAuthSessions ===
 
-// Module 14793 (_fetchAuthSessions)
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 14949 (_fetchAuthSessions)
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchAuthSessions() {
@@ -11,7 +11,7 @@ function _fetchAuthSessions() {
   const tmp = callback(function*() {
     const callback = tmp2;
     closure_0 = tmp5;
-    const HTTP = closure_1_0(527).HTTP;
+    const HTTP = closure_1_0(1272).HTTP;
     obj1 = { url: null, rejectWithError: false };
     obj1[0] = closure_1_4.AUTH_SESSIONS;
     closure_0 = yield HTTP.get(obj1);
@@ -20,7 +20,7 @@ function _fetchAuthSessions() {
       const user_sessions = body.user_sessions;
     }
     if (null != user_sessions) {
-      const obj = callback(706);
+      const obj = callback(573);
       const obj4 = { type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: null };
       obj4[1] = closure_0.body.user_sessions;
       obj.dispatch(obj4);

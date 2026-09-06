@@ -1,15 +1,15 @@
-// === Module 12770: LimitedTimeBadge ===
+// === Module 8836: LimitedTimeBadge ===
 
-// Module 12770 (LimitedTimeBadge)
+// Module 8836 (LimitedTimeBadge)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import useCountdownDefault from "useCountdown" /* 7194 */;
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import useCountdownDefault from "useCountdown" /* 7439 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_getSystemLocale" /* 1995 */;
-import closure_5 from "handleThemeChange" /* 1301 */;
+import closure_4 from "_getSystemLocale" /* 2025 */;
+import closure_5 from "handleThemeChange" /* 1183 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -35,31 +35,31 @@ export default function LimitedTimeBadge(unpublishedAt) {
   ({ days, hours } = useCountdownDefault(unpublishedAt.unpublishedAt, 1000, undefined, true));
   if (hasItem) {
     if (days > 1) {
-      const intl6 = tmp2(1233).intl;
+      const intl6 = tmp2(1114).intl;
       obj = { days: null };
       obj[0] = days;
-      let formatToPlainStringResult = intl6.formatToPlainString(tmp2(1233).t.DkxLY0, obj);
+      let formatToPlainStringResult = intl6.formatToPlainString(tmp2(1114).t.DkxLY0, obj);
     } else {
       if (days <= 1) {
         if (hours > 0) {
-          const intl5 = tmp2(1233).intl;
+          const intl5 = tmp2(1114).intl;
           obj = { hours: null };
           obj[0] = hours;
-          formatToPlainStringResult = intl5.formatToPlainString(tmp2(1233).t.WJieZ2, obj);
+          formatToPlainStringResult = intl5.formatToPlainString(tmp2(1114).t.WJieZ2, obj);
         }
       }
-      const intl4 = tmp2(1233).intl;
-      formatToPlainStringResult = intl4.formatToPlainString(tmp2(1233).t.WJieZ2, { hours: 0 });
+      const intl4 = tmp2(1114).intl;
+      formatToPlainStringResult = intl4.formatToPlainString(tmp2(1114).t.WJieZ2, { hours: 0 });
     }
   } else {
-    const intl = tmp2(1233).intl;
-    let sum = days + intl.string(tmp2(1233).t.QJyuxY);
-    const intl2 = tmp2(1233).intl;
-    let sum1 = hours + intl2.string(tmp2(1233).t["1LyF1h"]);
+    const intl = tmp2(1114).intl;
+    let sum = days + intl.string(tmp2(1114).t.QJyuxY);
+    const intl2 = tmp2(1114).intl;
+    let sum1 = hours + intl2.string(tmp2(1114).t["1LyF1h"]);
     if (days <= 1) {
       if (days > 1) {
-        const intl3 = tmp2(1233).intl;
-        sum1 = `0${tmp9(tmp2(1233).t["1LyF1h"])}`;
+        const intl3 = tmp2(1114).intl;
+        sum1 = `0${tmp9(tmp2(1114).t["1LyF1h"])}`;
       }
       sum = sum1;
     }
@@ -74,12 +74,12 @@ export default function LimitedTimeBadge(unpublishedAt) {
     }
     const obj2 = { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null };
     obj2[0] = str2;
-    const intl7 = tmp2(1233).intl;
+    const intl7 = tmp2(1114).intl;
     const obj3 = { daysLeft: null };
     obj3[0] = days;
-    obj2[2] = intl7.formatToPlainString(tmp2(1233).t.TlZULM, obj3);
+    obj2[2] = intl7.formatToPlainString(tmp2(1114).t.TlZULM, obj3);
     obj2[4] = sum;
-    obj1[1] = jsx(tmp2(4474).Text, { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
+    obj1[1] = jsx(tmp2(4556).Text, { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
     return <View style={null}>{null}</View>;
   }
 };

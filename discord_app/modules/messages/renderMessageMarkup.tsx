@@ -1,8 +1,8 @@
-// === Module 7642: getInitialParserState ===
+// === Module 7888: getInitialParserState ===
 
-// Module 7642 (getInitialParserState)
+// Module 7888 (getInitialParserState)
 import set from "set" /* 2 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
+import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
 
 function getInitialParserState(channelId) {
   const renderOptions = channelId.renderOptions;

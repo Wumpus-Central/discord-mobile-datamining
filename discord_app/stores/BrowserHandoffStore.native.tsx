@@ -1,8 +1,8 @@
-// === Module 1216: initialize ===
+// === Module 503: initialize ===
 
-// Module 1216 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 503 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const Store = initializeDefault.Store;
 class BrowserHandoffStore extends Store {
@@ -15,7 +15,7 @@ prototype["isHandoffAvailable"] = function isHandoffAvailable() {
   return false;
 };
 Object.defineProperty(prototype, "user", {
-  get: function user(author1, id, EMBED) {
+  get: function user(xuio0C) {
     return null;
   },
   set: undefined

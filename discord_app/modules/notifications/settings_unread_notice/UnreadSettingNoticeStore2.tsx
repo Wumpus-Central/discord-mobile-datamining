@@ -1,20 +1,20 @@
-// === Module 11270: startInterval ===
+// === Module 11412: startInterval ===
 
-// Module 11270 (startInterval)
+// Module 11412 (startInterval)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import hasFlag from "hasFlag" /* 1398 */;
-import useChannelPresetSettings from "useChannelPresetSettings" /* 10258 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 4702 */;
-import { UserNotificationSettings } from "ME" /* 673 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
-import { ChannelNotificationSettingsFlags as closure_10 } from "MAX_FAVORITES" /* 682 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import hasFlag from "hasFlag" /* 1384 */;
+import useChannelPresetSettings from "useChannelPresetSettings" /* 10149 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "handleConnectionOpen" /* 2011 */;
+import closure_7 from "updateUserGuildSettingsInternal" /* 4741 */;
+import { UserNotificationSettings } from "ME" /* 1074 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
+import { ChannelNotificationSettingsFlags as closure_10 } from "MAX_FAVORITES" /* 1084 */;
 import set from "set" /* 2 */;
 
 require = arg1;

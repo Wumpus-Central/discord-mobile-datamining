@@ -1,14 +1,14 @@
-// === Module 8468: create ===
+// === Module 10672: create ===
 
-// Module 8468 (create)
-import _mod1306 from "module_1306" /* 1306 */;
-import defineProperty from "defineProperty" /* 1336 */;
-import create from "create" /* 8466 */;
+// Module 10672 (create)
+import _mod1188 from "module_1188" /* 1188 */;
+import defineProperty from "defineProperty" /* 1218 */;
+import create from "create" /* 10670 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1306" /* 1306 */;
+import { MessageType } from "module_1188" /* 1188 */;
 
 require = arg1;
-let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", OPEN_MARKETING_PAGE: 1, [1]: "OPEN_MARKETING_PAGE", OPEN_TIER_2_PAYMENT_MODAL: 2, [2]: "OPEN_TIER_2_PAYMENT_MODAL", OPEN_TIER_1_PAYMENT_MODAL: 3, [3]: "OPEN_TIER_1_PAYMENT_MODAL", OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER: 4, [4]: "OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER", OPEN_PLAN_SELECTION_MODAL: 5, [5]: "OPEN_PLAN_SELECTION_MODAL", OPEN_PREMIUM_GROUP_PAYMENT_MODAL: 6, [6]: "OPEN_PREMIUM_GROUP_PAYMENT_MODAL", OPEN_SOCIAL_LAYER_STOREFRONT: 7, [7]: "OPEN_SOCIAL_LAYER_STOREFRONT" };
+let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", OPEN_MARKETING_PAGE: 1, [1]: "OPEN_MARKETING_PAGE", OPEN_TIER_2_PAYMENT_MODAL: 2, [2]: "OPEN_TIER_2_PAYMENT_MODAL", OPEN_TIER_1_PAYMENT_MODAL: 3, [3]: "OPEN_TIER_1_PAYMENT_MODAL", OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER: 4, [4]: "OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER", OPEN_PLAN_SELECTION_MODAL: 5, [5]: "OPEN_PLAN_SELECTION_MODAL", OPEN_PREMIUM_GROUP_PAYMENT_MODAL: 6, [6]: "OPEN_PREMIUM_GROUP_PAYMENT_MODAL", OPEN_SOCIAL_LAYER_STOREFRONT: 7, [7]: "OPEN_SOCIAL_LAYER_STOREFRONT", OPEN_GUILD_BOOST_CHECKOUT: 8, [8]: "OPEN_GUILD_BOOST_CHECKOUT" };
 class CTAButton$Type extends MessageType {
   constructor() {
     items = [, , , , ];
@@ -36,7 +36,7 @@ class CTAButton$Type extends MessageType {
       name: "navigable_storefront_application_id",
       kind: "message",
       T() {
-            return callback(1336).UInt64Value;
+            return callback(1218).UInt64Value;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.CTAButton", items, T);
@@ -49,10 +49,10 @@ prototype["create"] = function create(arr) {
   obj = { copy: "", buttonAction: 0, deeplinkSection: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1306.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1306;
+    const result = _mod1188.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1188;
   }
   return obj;
 };
@@ -112,7 +112,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = _mod1306.UnknownFieldHandler.onRead;
+              onRead = _mod1188.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -128,33 +128,33 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(copy, tag, writeUnknownFields) {
   if ("" !== copy.copy) {
-    tag.tag(1, _mod1306.WireType.LengthDelimited).string(copy.copy);
-    const tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
+    tag.tag(1, _mod1188.WireType.LengthDelimited).string(copy.copy);
+    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
   }
   if (0 !== copy.buttonAction) {
-    tag.tag(2, _mod1306.WireType.Varint).int32(copy.buttonAction);
-    const tagResult1 = tag.tag(2, _mod1306.WireType.Varint);
+    tag.tag(2, _mod1188.WireType.Varint).int32(copy.buttonAction);
+    const tagResult1 = tag.tag(2, _mod1188.WireType.Varint);
   }
   if ("" !== copy.deeplinkSection) {
-    tag.tag(3, _mod1306.WireType.LengthDelimited).string(copy.deeplinkSection);
-    const tagResult2 = tag.tag(3, _mod1306.WireType.LengthDelimited);
+    tag.tag(3, _mod1188.WireType.LengthDelimited).string(copy.deeplinkSection);
+    const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
   }
   if (copy.copyLocalized) {
     const LocalizedString = create.LocalizedString;
-    const tagResult3 = tag.tag(4, _mod1306.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(copy.copyLocalized, tag.tag(4, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(copy.copyLocalized, tag.tag(4, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(copy.copyLocalized, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(copy.copyLocalized, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (copy.navigableStorefrontApplicationId) {
     const UInt64Value = defineProperty.UInt64Value;
-    const tagResult4 = tag.tag(5, _mod1306.WireType.LengthDelimited);
-    const joined1 = UInt64Value.internalBinaryWrite(copy.navigableStorefrontApplicationId, tag.tag(5, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = UInt64Value.internalBinaryWrite(copy.navigableStorefrontApplicationId, tag.tag(5, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
+    const joined1 = UInt64Value.internalBinaryWrite(copy.navigableStorefrontApplicationId, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = UInt64Value.internalBinaryWrite(copy.navigableStorefrontApplicationId, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1306.UnknownFieldHandler.onWrite;
+      onWrite = _mod1188.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, copy, tag);
@@ -189,7 +189,7 @@ items[4] = {
   name: "navigable_storefront_application_id",
   kind: "message",
   T() {
-    return callback(1336).UInt64Value;
+    return callback(1218).UInt64Value;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.CTAButton", items, tmp, T, CTAButton$Type, prototype, items, arg1, dependencyMap);

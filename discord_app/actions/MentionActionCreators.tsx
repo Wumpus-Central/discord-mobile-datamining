@@ -1,10 +1,10 @@
-// === Module 16246: ? ===
+// === Module 16408: ? ===
 
-// Module 16246
+// Module 16408
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import ME from "ME" /* 1074 */;
 
 ({ Endpoints: c3, MAX_MENTIONS_PER_FETCH: c4 } = ME);
 const result = set.fileFinishedImporting("actions/MentionActionCreators.tsx");
@@ -42,7 +42,7 @@ export default {
     }
     let obj = dispatcherDefault;
     obj.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId });
-    const HTTP = before(527).HTTP;
+    const HTTP = before(1272).HTTP;
     obj = { url: closure_3.MENTIONS, query: { before, limit, guild_id: guildId, roles: flag, everyone: flag2, feature: feature.feature }, retries: 2, oldFormErrors: true, rejectWithError: true };
     const value = HTTP.get(obj);
     return value.then((body) => {

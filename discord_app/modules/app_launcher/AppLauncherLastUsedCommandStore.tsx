@@ -1,9 +1,9 @@
-// === Module 11921: initialize ===
+// === Module 12120: initialize ===
 
-// Module 11921 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 12120 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
 
 let closure_0 = 10 * setDefault.Millis.MINUTE;
 let closure_1 = { lastUsedCommandId: null, lastUsedTimeMs: null };

@@ -1,13 +1,13 @@
-// === Module 5487: ack ===
+// === Module 7110: ack ===
 
-// Module 5487 (ack)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "rebuild" /* 5457 */;
-import { isReadableType } from "createChannelRecord" /* 1390 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "setIndex" /* 5488 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import { CURRENT_APP_CONTEXT } from "ME" /* 673 */;
+// Module 7110 (ack)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "rebuild" /* 5506 */;
+import { isReadableType } from "createChannelRecord" /* 1961 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "setIndex" /* 7111 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import { CURRENT_APP_CONTEXT } from "ME" /* 1074 */;
 
 function ack(channelId, location, arg2, arg3, messageId) {
   let flag = arg2;
@@ -80,7 +80,7 @@ export const ackChannel = function ackChannel(channel, arg1) {
     if (channel.isForumLikeChannel()) {
       let tmpResult = tmp(11);
       const _Date = Date;
-      tmpResult = tmp(706);
+      tmpResult = tmp(573);
       let obj = { type: "CHANNEL_ACK", channelId: null, messageId: null, immediate: null, force: null, context: null, location: null };
       obj[1] = id;
       obj[2] = tmpResult.fromTimestamp(Date.now());
@@ -91,14 +91,14 @@ export const ackChannel = function ackChannel(channel, arg1) {
       tmpResult.dispatch(obj);
       const fromTimestampResult = tmpResult.fromTimestamp(Date.now());
     } else {
-      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: "has", force: null, context: "\u{1F60B}", location: 6 };
+      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: 4, force: 2, context: 0, location: "BULK_ACK" };
       obj[1] = id;
       obj[3] = true;
       obj[4] = true;
       obj[5] = CURRENT_APP_CONTEXT;
       obj[6] = arg1;
-      tmp(706).dispatch(obj);
-      const tmpResult1 = tmp(706);
+      tmp(573).dispatch(obj);
+      const tmpResult1 = tmp(573);
     }
   }
 };

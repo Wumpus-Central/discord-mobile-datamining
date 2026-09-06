@@ -1,8 +1,8 @@
-// === Module 13530: getCachedUseAltGateway ===
+// === Module 13636: getCachedUseAltGateway ===
 
-// Module 13530 (getCachedUseAltGateway)
+// Module 13636 (getCachedUseAltGateway)
 import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 13531 */;
+import enforcingDefault from "enforcing" /* 13637 */;
 
 const result = set.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
 

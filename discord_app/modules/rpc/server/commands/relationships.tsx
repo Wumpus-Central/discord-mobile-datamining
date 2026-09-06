@@ -1,14 +1,14 @@
-// === Module 14384: items ===
+// === Module 14491: items ===
 
-// Module 14384 (items)
-import fromStringAll from "fromString" /* 503 */;
-import prototypeDefault from "prototype" /* 9520 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9525 */;
+// Module 14491 (items)
+import fromStringAll from "fromString" /* 1086 */;
+import prototypeDefault from "prototype" /* 9554 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9559 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14369 */;
+import closure_5 from "markAllUserIdListsStale" /* 4209 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14476 */;
 
 require = arg1;
 ({ ApplicationFlags: error, RelationshipTypes: closure_8, RPCCommands, RPCErrors: c9 } = ME);

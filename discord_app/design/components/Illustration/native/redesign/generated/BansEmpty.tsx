@@ -1,9 +1,9 @@
-// === Module 17491: getBansEmptySource ===
+// === Module 17651: getBansEmptySource ===
 
-// Module 17491 (getBansEmptySource)
+// Module 17651 (getBansEmptySource)
 import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
-import getIllustrationSource from "getIllustrationSource" /* 8930 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import getIllustrationSource from "getIllustrationSource" /* 8233 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getBansEmptySource = function getBansEmptySource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(17492);
+      return callback(17652);
     },
     darker() {
-      return callback(17493);
+      return callback(17653);
     },
     light() {
-      return callback(17494);
+      return callback(17654);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useBansEmptySource = function useBansEmptySource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17492);
+      return callback(17652);
     },
     darker() {
-      return callback(17493);
+      return callback(17653);
     },
     light() {
-      return callback(17494);
+      return callback(17654);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const BansEmpty = function BansEmpty(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17492);
+      return callback(17652);
     },
     darker() {
-      return callback(17493);
+      return callback(17653);
     },
     light() {
-      return callback(17494);
+      return callback(17654);
     }
   };
   obj = {};

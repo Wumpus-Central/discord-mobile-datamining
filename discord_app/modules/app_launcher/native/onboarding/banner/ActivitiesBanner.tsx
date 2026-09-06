@@ -1,9 +1,9 @@
-// === Module 11850: ActivitiesBanner ===
+// === Module 12049: ActivitiesBanner ===
 
-// Module 11850 (ActivitiesBanner)
+// Module 12049 (ActivitiesBanner)
 import noopAll from "noop" /* 19 */;
-import useActivityApplications from "useActivityApplications" /* 11839 */;
-import BannerBaseDefault from "BannerBase" /* 11862 */;
+import useActivityApplications from "useActivityApplications" /* 12038 */;
+import BannerBaseDefault from "BannerBase" /* 12061 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -21,10 +21,10 @@ export default function ActivitiesBanner(context) {
     if (null != tmp5) {
       obj = { image: null, text: null };
       obj[0] = tmp8;
-      const intl = tmp(1233).intl;
+      const intl = tmp(1114).intl;
       obj1 = { activityName: null };
       obj1[0] = tmp4.name;
-      obj[1] = intl.formatToPlainString(tmp(1233).t.zHMWuV, obj1);
+      obj[1] = intl.formatToPlainString(tmp(1114).t.zHMWuV, obj1);
       tmp6Result = jsx(BannerBaseDefault, { image: null, text: null });
       const tmp7Result = BannerBaseDefault;
     }

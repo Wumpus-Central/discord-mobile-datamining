@@ -1,18 +1,18 @@
-// === Module 11537: EmojiPickerRowButton ===
+// === Module 11732: EmojiPickerRowButton ===
 
-// Module 11537 (EmojiPickerRowButton)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
-import EmojiTypes from "EmojiTypes" /* 4137 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import EmojiDefault from "Emoji" /* 5594 */;
-import ReactionIcon from "ReactionIcon" /* 8241 */;
+// Module 11732 (EmojiPickerRowButton)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import EmojiTypes from "EmojiTypes" /* 4216 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import EmojiDefault from "Emoji" /* 7130 */;
+import ReactionIcon from "ReactionIcon" /* 8757 */;
 import closure_3 from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1374 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
@@ -39,7 +39,7 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   const isThemeLightResult = AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme);
   obj = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, style: null, children: null };
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj[2] = intl.string(getSystemLocale.t.lfIHs4);
   obj[4] = onPress;
   const items = [tmp.emojiContainer, styles];
@@ -82,7 +82,7 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
     }
     obj[2] = str;
     if (null != animated.id) {
-      const emojiURL = getEmojiURL(1430);
+      const emojiURL = getEmojiURL(1396);
       getEmojiURL = emojiURL.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj[0], animated } = animated);

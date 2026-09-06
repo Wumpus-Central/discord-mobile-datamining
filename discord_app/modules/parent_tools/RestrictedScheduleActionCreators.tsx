@@ -1,8 +1,8 @@
-// === Module 14780: _addRestrictedScheduleRule ===
+// === Module 14936: _addRestrictedScheduleRule ===
 
-// Module 14780 (_addRestrictedScheduleRule)
+// Module 14936 (_addRestrictedScheduleRule)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _addRestrictedScheduleRule() {
@@ -50,14 +50,14 @@ function _updateRestrictedScheduleRule() {
     return (function*(arg0, body) {
       closure_4 = tmp2;
       closure_3 = tmp5;
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_4.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(callback, body);
       obj1[1] = dependencyMap;
-      obj1[2] = callback(527).rejectWithMigratedError();
+      obj1[2] = callback(1272).rejectWithMigratedError();
       yield HTTP.patch(obj1);
       body = body.body;
-      const obj = body(706);
+      const obj = body(573);
       const obj4 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: null, restrictedSchedule: null };
       obj4[1] = callback;
       obj4[2] = body;

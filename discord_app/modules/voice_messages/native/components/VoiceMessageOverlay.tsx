@@ -1,21 +1,21 @@
-// === Module 12419: LockPill ===
+// === Module 12645: LockPill ===
 
-// Module 12419 (LockPill)
-import ThemesDefault from "Themes" /* 709 */;
-import result2 from "result" /* 5393 */;
-import inlineStyles from "inlineStyles" /* 8254 */;
+// Module 12645 (LockPill)
+import ThemesDefault from "Themes" /* 576 */;
+import result2 from "result" /* 5441 */;
+import inlineStyles from "inlineStyles" /* 8453 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11761 */;
-import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11762 */;
-import { ComponentActionsKeyed } from "ME" /* 673 */;
-import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11763 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_8 from "ensureGuildLoaded" /* 1957 */;
+import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11960 */;
+import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11961 */;
+import { ComponentActionsKeyed } from "ME" /* 1074 */;
+import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11962 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4217" /* 4217 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import importDefaultResult from "module_4296" /* 4296 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importDefaultResult2 from "apply" /* 12 */;
 
 require = arg1;
@@ -680,7 +680,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
   dependencyMap = undefined;
   const tmp = useVoiceMessagesUIStore((showRecordingOverlay) => showRecordingOverlay.showRecordingOverlay);
   closure_1 = tmp;
-  let obj = channelId(586);
+  let obj = channelId(504);
   items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getChannel(channelId));
   const tmp2 = useVoiceMessagesUIStore((voiceMessageAnimationState) => voiceMessageAnimationState.voiceMessageAnimationState);

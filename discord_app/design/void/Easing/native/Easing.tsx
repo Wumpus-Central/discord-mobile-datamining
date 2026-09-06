@@ -1,12 +1,12 @@
-// === Module 14002: STANDARD_EASING ===
+// === Module 14120: STANDARD_EASING ===
 
-// Module 14002 (STANDARD_EASING)
+// Module 14120 (STANDARD_EASING)
 import set from "set" /* 2 */;
-import _mod4217 from "module_4217" /* 4217 */;
+import _mod4296 from "module_4296" /* 4296 */;
 import bezierResult1 from "module_0" /* 0 */;
 
-const Easing = _mod4217.Easing;
-const Easing2 = _mod4217.Easing;
+const Easing = _mod4296.Easing;
+const Easing2 = _mod4296.Easing;
 const bezierResult = Easing.bezier(0.4, 0, 0.2, 1);
 const result = set.fileFinishedImporting("design/void/Easing/native/Easing.tsx");
 

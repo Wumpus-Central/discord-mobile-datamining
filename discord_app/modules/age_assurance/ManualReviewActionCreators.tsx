@@ -1,10 +1,10 @@
-// === Module 11730: _requestManualReview ===
+// === Module 11929: _requestManualReview ===
 
-// Module 11730 (_requestManualReview)
-import setDefault from "set" /* 684 */;
+// Module 11929 (_requestManualReview)
+import setDefault from "set" /* 1090 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
-import { SafetyToastType } from "SafetyToastType" /* 8689 */;
+import { Endpoints } from "ME" /* 1074 */;
+import { SafetyToastType } from "SafetyToastType" /* 8399 */;
 
 const require = arg1;
 function _requestManualReview() {
@@ -84,12 +84,12 @@ function _handleManualReviewCta() {
                 })();
                 return obj1;
               } else if (closure_0.status !== constants2.DECIDED_TEEN) {
-                let obj2 = callback(8701);
+                let obj2 = callback(8411);
                 const result = obj2.showManualReviewWebview(closure_0.verification_webview_url);
                 c3 = 1;
               }
             }
-            const result1 = callback(8701).showManualReviewDecidedTeenModal();
+            const result1 = callback(8411).showManualReviewDecidedTeenModal();
             c3 = 0;
             c9 = false;
             constants = 3;
@@ -103,7 +103,7 @@ function _handleManualReviewCta() {
           throw dependencyMap;
         } else if (2 === tmp8) {
           c3 = 1;
-          obj1 = callback(8694);
+          obj1 = callback(8404);
           obj1.showFailedToast(constants.TIGGER_PAWTECT_ERROR);
         } else if (arg0 === 1) {
           constants = 3;

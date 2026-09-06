@@ -1,9 +1,9 @@
-// === Module 17654: apexExperiment ===
+// === Module 17814: apexExperiment ===
 
-// Module 17654 (apexExperiment)
+// Module 17814 (apexExperiment)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 684 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import setDefault from "set" /* 1090 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 let obj = { questFetchJitterMs: 5 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 5 * setDefault.Millis.SECOND };
 obj = { name: "2026-06-quest-fetch-reconnect-jitter", kind: "user", defaultConfig: obj, variations: null };

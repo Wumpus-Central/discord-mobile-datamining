@@ -1,9 +1,9 @@
-// === Module 9314: Permissions ===
+// === Module 9248: Permissions ===
 
-// Module 9314 (Permissions)
+// Module 9248 (Permissions)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 const Permissions = ME.Permissions;
 const items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];

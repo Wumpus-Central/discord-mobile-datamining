@@ -1,11 +1,11 @@
-// === Module 17676: AVErrorStreamViewLowFPSDefinition ===
+// === Module 17836: AVErrorStreamViewLowFPSDefinition ===
 
-// Module 17676 (AVErrorStreamViewLowFPSDefinition)
-import closure_2 from "getParticipants" /* 4494 */;
-import closure_3 from "reset" /* 4500 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "initialize" /* 4568 */;
-import { ApplicationStreamStates } from "ME" /* 673 */;
+// Module 17836 (AVErrorStreamViewLowFPSDefinition)
+import closure_2 from "getParticipants" /* 4576 */;
+import closure_3 from "reset" /* 4582 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "initialize" /* 4599 */;
+import { ApplicationStreamStates } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");

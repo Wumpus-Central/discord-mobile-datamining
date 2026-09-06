@@ -1,9 +1,9 @@
-// === Module 15045: MAX_SUBSCRIPTION_TIERS ===
+// === Module 15205: MAX_SUBSCRIPTION_TIERS ===
 
-// Module 15045 (MAX_SUBSCRIPTION_TIERS)
+// Module 15205 (MAX_SUBSCRIPTION_TIERS)
 import set from "set" /* 2 */;
-import sum from "sum" /* 502 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+import sum from "sum" /* 1085 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 
 const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
 const items = [{ interval: SubscriptionIntervalTypes.DAY, interval_count: 1 }, { interval: SubscriptionIntervalTypes.DAY, interval_count: 7 }];

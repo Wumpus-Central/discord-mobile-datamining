@@ -1,8 +1,8 @@
-// === Module 15377: _emailSupport ===
+// === Module 15535: _emailSupport ===
 
-// Module 15377 (_emailSupport)
+// Module 15535 (_emailSupport)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_getSystemLocale" /* 1995 */;
+import closure_5 from "_getSystemLocale" /* 2025 */;
 
 const require = arg1;
 function _emailSupport() {
@@ -34,10 +34,10 @@ function _emailSupport() {
             obj[0] = arg1;
             return obj;
           } else {
-            const tmp10 = closure_1_1(4190);
+            const tmp10 = closure_1_1(4255);
             closure_1 = tmp10;
             const openURL = tmp10.openURL;
-            obj1 = closure_1_1(1994);
+            obj1 = closure_1_1(2024);
             c2 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };

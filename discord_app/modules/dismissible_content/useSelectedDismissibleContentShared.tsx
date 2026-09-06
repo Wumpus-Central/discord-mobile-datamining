@@ -1,9 +1,9 @@
-// === Module 6264: useSelectedDismissibleContentShared ===
+// === Module 7391: useSelectedDismissibleContentShared ===
 
-// Module 6264 (useSelectedDismissibleContentShared)
+// Module 7391 (useSelectedDismissibleContentShared)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "set" /* 1376 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import closure_3 from "set" /* 1947 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
@@ -18,7 +18,7 @@ export const useSelectedDismissibleContentShared = function useSelectedDismissib
   closure_3 = undefined;
   let tmp = null != arg0 && !flag;
   if (tmp) {
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require(1377).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require(1948).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     tmp = !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
   }
   closure_3 = tmp;

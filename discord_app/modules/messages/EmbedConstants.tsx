@@ -1,7 +1,7 @@
-// === Module 4852: MessageEmbedTypes ===
+// === Module 4898: MessageEmbedTypes ===
 
-// Module 4852 (MessageEmbedTypes)
-import ME from "ME" /* 673 */;
+// Module 4898 (MessageEmbedTypes)
+import ME from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 const MessageEmbedTypes = ME.MessageEmbedTypes;

@@ -1,12 +1,12 @@
-// === Module 8406: openPremiumModal ===
+// === Module 9392: openPremiumModal ===
 
-// Module 8406 (openPremiumModal)
+// Module 9392 (openPremiumModal)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import _modDef4724 from "module_4724" /* 4724 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import _modDef4763 from "module_4763" /* 4763 */;
 
 const result = set.fileFinishedImporting("components_native/premium/openPremiumModal.tsx");
 
 export default function openPremiumModal(closure_0) {
-  return _modDef4724.pushLazy(asyncRequireImpl(7165, dependencyMap.paths), closure_0, "PREMIUM_KEY", { presentation: "modal" });
+  return _modDef4763.pushLazy(asyncRequireImpl(7412, dependencyMap.paths), closure_0, "PREMIUM_KEY", { presentation: "modal" });
 };

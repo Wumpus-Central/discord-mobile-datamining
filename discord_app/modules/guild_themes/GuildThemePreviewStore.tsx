@@ -1,12 +1,12 @@
-// === Module 4360: handleEnd ===
+// === Module 4445: handleEnd ===
 
-// Module 4360 (handleEnd)
+// Module 4445 (handleEnd)
 import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1907 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import GuildThemePreviewOrigin from "GuildThemePreviewOrigin" /* 4361 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1978 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import GuildThemePreviewOrigin from "GuildThemePreviewOrigin" /* 4446 */;
 
 require = arg1;
 function handleEnd() {
@@ -63,7 +63,7 @@ Object.defineProperty(prototype, "originalEnabled", {
   set: undefined
 });
 Object.defineProperty(prototype, "origin", {
-  get: function origin(arg0) {
+  get: function origin(keys, arg1) {
     return closure_5.origin;
   },
   set: undefined
@@ -131,7 +131,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     if (null == obj.guildId) {
       return false;
     } else {
-      obj = { presetId: null, customUserThemeSettings: "Array" };
+      obj = { presetId: null, customUserThemeSettings: "a" };
       obj[0] = tmp;
       const isEqualResult = apply.isEqual(obj.draft, obj);
       let flag = !isEqualResult;

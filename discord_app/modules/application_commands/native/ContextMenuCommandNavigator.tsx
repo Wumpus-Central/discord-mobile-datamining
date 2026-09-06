@@ -1,13 +1,13 @@
-// === Module 16702: ContextMenuCommandNavigator ===
+// === Module 16867: ContextMenuCommandNavigator ===
 
-// Module 16702 (ContextMenuCommandNavigator)
-import ThemesDefault from "Themes" /* 709 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+// Module 16867 (ContextMenuCommandNavigator)
+import ThemesDefault from "Themes" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7834 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -21,8 +21,8 @@ const result = require("set").fileFinishedImporting("modules/application_command
 export default function ContextMenuCommandNavigator() {
   const tmp = callback3();
   const _require = tmp;
-  const layoutEffect = React.useLayoutEffect(() => lib(7230).trackAppUIViewed(), []);
-  let obj = _require(6017);
+  const layoutEffect = React.useLayoutEffect(() => lib(7475).trackAppUIViewed(), []);
+  let obj = _require(7000);
   importDefault = obj.useAccessibilityNativeStackOptions();
   const rect = useSafeAreaInsetsDefault();
   obj = { style: items, children: null };
@@ -57,11 +57,11 @@ export default function ContextMenuCommandNavigator() {
   obj1 = { name: "root", options: null, getComponent: null };
   let obj2 = { title: null };
   ({ Navigator, Screen } = Screen);
-  const intl = _require(1233).intl;
-  obj2[0] = intl.string(_require(1233).t.PHjkRE);
+  const intl = _require(1114).intl;
+  obj2[0] = intl.string(_require(1114).t.PHjkRE);
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
-    return lib(16703).default;
+    return lib(16868).default;
   };
   const items1 = [
     callback(Screen, obj1),
@@ -76,7 +76,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return lib(16705).default;
+        return lib(16870).default;
       }
     })
   ];

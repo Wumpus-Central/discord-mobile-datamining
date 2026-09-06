@@ -1,29 +1,29 @@
-// === Module 12548: ChannelTitleContent ===
+// === Module 12774: ChannelTitleContent ===
 
-// Module 12548 (ChannelTitleContent)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import computeChannelName from "computeChannelName" /* 4674 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9257 */;
+// Module 12774 (ChannelTitleContent)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import computeChannelName from "computeChannelName" /* 4713 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10876 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_handleConnectionOpen" /* 5230 */;
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1390 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "createGuildRecordFromRust" /* 1908 */;
-import closure_9 from "sortActivity" /* 4569 */;
-import closure_10 from "markAllUserIdListsStale" /* 4130 */;
-import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import { StaticChannelRoute } from "set" /* 1393 */;
-import ContentDismissActionType from "ContentDismissActionType" /* 1383 */;
+import closure_5 from "_handleConnectionOpen" /* 5277 */;
+import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1961 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "createGuildRecordFromRust" /* 1979 */;
+import closure_9 from "sortActivity" /* 4600 */;
+import closure_10 from "markAllUserIdListsStale" /* 4209 */;
+import closure_11 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import { StaticChannelRoute } from "set" /* 1964 */;
+import ContentDismissActionType from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5470 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import importDefaultResult from "createTextStyle" /* 5524 */;
 
 require = arg1;
 function ChannelTitleContent(arg0) {
@@ -78,7 +78,7 @@ function ParentChannelSubTitle(parentChannel) {
 }
 function DMChannelName(style) {
   const userId = style.userId;
-  let obj = userId(586);
+  let obj = userId(504);
   const items = [closure_11, closure_10];
   const items1 = [userId];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -93,22 +93,22 @@ function DMChannelName(style) {
     return str;
   }, items1);
   obj = { numberOfLines: 1, style: style.style, accessibilityLabel: null, maxFontSizeMultiplier: 1, accessibilityRole: "header", children: null };
-  const intl = userId(1233).intl;
-  obj[2] = intl.formatToPlainString(userId(1233).t.fYqXVY, { channelName: stateFromStores });
+  const intl = userId(1114).intl;
+  obj[2] = intl.formatToPlainString(userId(1114).t.fYqXVY, { channelName: stateFromStores });
   obj[5] = stateFromStores;
-  return callback(userId(1296).LegacyText, obj);
+  return callback(userId(1178).LegacyText, obj);
 }
 function ConnectedStatus(style) {
   const userId = style.userId;
-  let obj = userId(586);
+  let obj = userId(504);
   const items = [closure_9];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const obj = { status: closure_1_9.getStatus(userId), isMobileOnline: closure_1_9.isMobileOnline(userId), isVROnline: closure_1_9.isVROnline(userId), streaming: closure_1_1(closure_1_2[32])(closure_1_9.getActivities(userId)) };
     return obj;
   });
   ({ status, isMobileOnline, isVROnline, streaming } = stateFromStoresObject);
-  obj = { isMobileOnline, isVROnline, status, streaming, size: userId(1296).StatusSizes.SMALL, style: style.style };
-  return callback(userId(1296).Status, obj);
+  obj = { isMobileOnline, isVROnline, status, streaming, size: userId(1178).StatusSizes.SMALL, style: style.style };
+  return callback(userId(1178).Status, obj);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: closure_12, Fonts } = ME);
@@ -416,12 +416,12 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   }
   let channelIcon = null;
   if (null != stateFromStores) {
-    let tmp2Result = tmp2(4982);
+    let tmp2Result = tmp2(5028);
     channelIcon = tmp2Result.getChannelIcon(stateFromStores);
   }
   let channelName = null;
   if (null != stateFromStores) {
-    tmp2Result = tmp2(4674);
+    tmp2Result = tmp2(4713);
     channelName = tmp2Result.computeChannelName(stateFromStores, closure_11, closure_10);
   }
   let isDMResult;

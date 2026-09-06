@@ -1,15 +1,15 @@
-// === Module 16741: SettingsOverviewScreen ===
+// === Module 16906: SettingsOverviewScreen ===
 
-// Module 16741 (SettingsOverviewScreen)
+// Module 16906 (SettingsOverviewScreen)
 import closure_2 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7896 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
 
 export default function SettingsOverviewScreen() {
-  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(4139).useHasPremiumSubscriptionToDisplay();
+  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(4218).useHasPremiumSubscriptionToDisplay();
   let items = [hasPremiumSubscriptionToDisplay];
   const node = React.useMemo(() => {
     let obj = hasPremiumSubscriptionToDisplay(closure_1_1[7]);
@@ -85,5 +85,5 @@ export default function SettingsOverviewScreen() {
     obj1[0] = items1;
     return obj.createList(obj1);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(14579).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(14690).SearchableSettingsList, { node });
 };

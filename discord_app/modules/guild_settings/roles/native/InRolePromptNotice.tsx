@@ -1,14 +1,14 @@
-// === Module 17470: InRolePromptNotice ===
+// === Module 17630: InRolePromptNotice ===
 
-// Module 17470 (InRolePromptNotice)
+// Module 17630 (InRolePromptNotice)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import hasFlag from "hasFlag" /* 1398 */;
-import registerAssetDefault from "registerAsset" /* 9611 */;
+import ThemesDefault from "Themes" /* 576 */;
+import hasFlag from "hasFlag" /* 1384 */;
+import registerAssetDefault from "registerAsset" /* 9625 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { RoleFlags } from "ME" /* 673 */;
+import { RoleFlags } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -32,8 +32,8 @@ export default function InRolePromptNotice(role) {
   } else {
     obj = { style: null, children: null };
     obj[0] = string.promptRow;
-    const tmpResult = tmp(17471);
-    let Icon = tmp(1296).Icon;
+    const tmpResult = tmp(17631);
+    let Icon = tmp(1178).Icon;
     if (isRolePowerfulResult) {
       obj = { style: null, source: null, color: null };
       obj[0] = string.icon;
@@ -42,11 +42,11 @@ export default function InRolePromptNotice(role) {
       const items = [tmp6(Icon, obj), ];
       obj1 = { style: null, variant: "text-sm/medium", children: null };
       obj1[0] = string.promptText;
-      const intl2 = tmp(1233).intl;
+      const intl2 = tmp(1114).intl;
       string = intl2.string;
-      stringResult = string(tmp(1233).t.YRbgXz);
+      stringResult = string(tmp(1114).t.YRbgXz);
       obj1[2] = stringResult;
-      Icon = tmp6(tmp(4474).Text, obj1);
+      Icon = tmp6(tmp(4556).Text, obj1);
       items[1] = Icon;
       obj[1] = items;
       let tmp4Result = tmp4(tmp5, obj);
@@ -57,12 +57,12 @@ export default function InRolePromptNotice(role) {
       const items1 = [tmp6(Icon, obj2), ];
       const obj3 = { style: null, variant: "text-sm/medium", children: null };
       obj3[0] = string.promptText;
-      const intl = tmp(1233).intl;
-      obj3[2] = intl.string(tmp(1233).t.mqeO2v);
-      items1[1] = tmp6(tmp(4474).Text, obj3);
+      const intl = tmp(1114).intl;
+      obj3[2] = intl.string(tmp(1114).t.mqeO2v);
+      items1[1] = tmp6(tmp(4556).Text, obj3);
       obj[1] = items1;
       tmp4Result = tmp4(tmp5, obj);
     }
-    isRolePowerfulResult = tmp(17471).isRolePowerful(role);
+    isRolePowerfulResult = tmp(17631).isRolePowerful(role);
   }
 };

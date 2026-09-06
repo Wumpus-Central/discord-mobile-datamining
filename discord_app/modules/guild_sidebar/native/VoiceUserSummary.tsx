@@ -1,11 +1,11 @@
-// === Module 15966: VOICE_USER_SUMMARY_HEIGHT ===
+// === Module 16130: VOICE_USER_SUMMARY_HEIGHT ===
 
-// Module 15966 (VOICE_USER_SUMMARY_HEIGHT)
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7628 */;
+// Module 16130 (VOICE_USER_SUMMARY_HEIGHT)
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7873 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -20,13 +20,13 @@ const memoResult = importAllResult.memo((guildId) => {
   if (useIsUsingClientThemeDefault()) {
     transparentBorder = tmp.transparentBorder;
   }
-  let obj = guildId(7627);
+  let obj = guildId(7872);
   obj = { style: null, children: null };
   const items = [noPadding ? tmp.containerNoPadding : tmp.container, obj.useClientThemesOverride()];
   obj[0] = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(5051).StageIcon;
+      let VoiceNormalIcon = tmp4(5097).StageIcon;
     }
     obj = { size: "sm", color: "channel-icon", style: null };
     obj[2] = tmp.redesignChannelIcon;
@@ -35,7 +35,7 @@ const memoResult = importAllResult.memo((guildId) => {
     obj1[1] = tmp.iconContainer;
     const items2 = [tmp.overflow, transparentBorder];
     obj1[2] = items2;
-    obj1[3] = tmp4(1296).OverflowTextSmall;
+    obj1[3] = tmp4(1178).OverflowTextSmall;
     obj1[4] = users;
     obj1[5] = max;
     obj1[6] = function renderItem(user) {
@@ -47,11 +47,11 @@ const memoResult = importAllResult.memo((guildId) => {
       obj[3] = tmp2;
       return closure_1_4(guildId(closure_1_2[3]).CutoutableAvatarImage, obj);
     };
-    items1[1] = tmp7(tmp4(1296).SummarizedIconRow, obj1);
+    items1[1] = tmp7(tmp4(1178).SummarizedIconRow, obj1);
     obj[1] = items1;
     return tmp5(tmp6, obj);
   }
-  VoiceNormalIcon = tmp4(5055).VoiceNormalIcon;
+  VoiceNormalIcon = tmp4(5101).VoiceNormalIcon;
 });
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUserSummary.tsx");
 

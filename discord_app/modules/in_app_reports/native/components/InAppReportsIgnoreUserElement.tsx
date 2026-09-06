@@ -1,10 +1,10 @@
-// === Module 13009: IgnoreUserElement ===
+// === Module 9041: IgnoreUserElement ===
 
-// Module 13009 (IgnoreUserElement)
+// Module 9041 (IgnoreUserElement)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "markAllUserIdListsStale" /* 4209 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

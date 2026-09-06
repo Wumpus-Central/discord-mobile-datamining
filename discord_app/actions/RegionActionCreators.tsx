@@ -1,9 +1,9 @@
-// === Module 16647: ? ===
+// === Module 16812: ? ===
 
-// Module 16647
+// Module 16812
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 527 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
+import sendRequest from "sendRequest" /* 1272 */;
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("actions/RegionActionCreators.tsx");
@@ -11,7 +11,7 @@ const result = set.fileFinishedImporting("actions/RegionActionCreators.tsx");
 export default {
   fetchRegions(id) {
     const _require = id;
-    const HTTP = _require(527).HTTP;
+    const HTTP = _require(1272).HTTP;
     const value = HTTP.get({ url: Endpoints.REGIONS(id), retries: 1, oldFormErrors: true, rejectWithError: true });
     value.then((body) => {
       let obj = closure_1_1(closure_1_2[2]);

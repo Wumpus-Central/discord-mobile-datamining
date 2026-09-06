@@ -1,17 +1,17 @@
-// === Module 12787: ProductNameAndDescription ===
+// === Module 13145: ProductNameAndDescription ===
 
-// Module 12787 (ProductNameAndDescription)
+// Module 13145 (ProductNameAndDescription)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 709 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import Text from "Text" /* 4474 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7309 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 12775 */;
-import getBundleDescription from "getBundleDescription" /* 12788 */;
-import PriceTagDefault from "PriceTag" /* 12789 */;
+import ThemesDefault from "Themes" /* 576 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
+import Text from "Text" /* 4556 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7554 */;
+import getProductPurchaseState from "getProductPurchaseState" /* 8842 */;
+import getBundleDescription from "getBundleDescription" /* 13146 */;
+import PriceTagDefault from "PriceTag" /* 13147 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 function ProductNameAndDescription(product) {
   product = product.product;
@@ -32,14 +32,14 @@ function ProductPurchaseStatus(product) {
   const productPurchaseState = obj1.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl2 = tmp(1233).intl;
-    obj[2] = intl2.string(tmp(1233).t["6cfuDj"]);
-    let children = tmp6(tmp(4474).Text, obj);
+    const intl2 = tmp(1114).intl;
+    obj[2] = intl2.string(tmp(1114).t["6cfuDj"]);
+    let children = tmp6(tmp(4556).Text, obj);
   } else if (tmp5) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl = tmp(1233).intl;
-    obj[2] = intl.string(tmp(1233).t.BEjTij);
-    children = tmp6(tmp(4474).Text, obj);
+    const intl = tmp(1114).intl;
+    obj[2] = intl.string(tmp(1114).t.BEjTij);
+    children = tmp6(tmp(4556).Text, obj);
   } else {
     children = !result;
     if (!result) {

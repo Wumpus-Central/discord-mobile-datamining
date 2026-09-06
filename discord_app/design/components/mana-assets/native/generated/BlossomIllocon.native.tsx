@@ -1,10 +1,10 @@
-// === Module 6369: BlossomIllocon ===
+// === Module 5797: BlossomIllocon ===
 
-// Module 6369 (BlossomIllocon)
+// Module 5797 (BlossomIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6370 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5798 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BlossomIllocon.native.tsx");

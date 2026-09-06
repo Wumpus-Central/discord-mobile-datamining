@@ -1,12 +1,12 @@
-// === Module 16940: areStableParticipantsEqual ===
+// === Module 17104: areStableParticipantsEqual ===
 
-// Module 16940 (areStableParticipantsEqual)
-import shallowEqualDefault from "shallowEqual" /* 640 */;
-import closure_3 from "getParticipants" /* 4494 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
+// Module 17104 (areStableParticipantsEqual)
+import shallowEqualDefault from "shallowEqual" /* 558 */;
+import closure_3 from "getParticipants" /* 4576 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 
 const require = arg1;
 function areStableParticipantsEqual(arg0, arg1) {
@@ -28,25 +28,25 @@ export default function useStableParticipant(arg0, arg1, arg2) {
   dependencyMap = arg2;
   const items = [closure_3, closure_6, closure_4, closure_5];
   const items1 = [arg0, arg1, arg2];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     if (null != callback) {
       const participant = closure_1_3.getParticipant(callback2, tmp);
       if (null == participant) {
         const user = closure_1_6.getUser(tmp);
         if (null != user) {
-          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0.18, isSelf: 0.701 };
+          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0, isSelf: 1 };
           obj[0] = closure_1_7.USER;
           obj[1] = tmp;
           obj[2] = user;
           const id = closure_1_4.getId();
-          obj[5] = callback(4673).getName(dependencyMap, tmp3, user);
-          const obj5 = callback(4673);
-          obj[6] = callback(8923).getAvatarDecoration(user, dependencyMap);
+          obj[5] = callback(4712).getName(dependencyMap, tmp3, user);
+          const obj5 = callback(4712);
+          obj[6] = callback(8217).getAvatarDecoration(user, dependencyMap);
           obj[10] = user.id === id;
           return obj;
         }
       } else {
-        const tmp15 = callback2(9608)(participant);
+        const tmp15 = callback2(9622)(participant);
         const type = participant.type;
         if (closure_1_7.ACTIVITY === type) {
           obj = { type: null, id: null, applicationId: null };

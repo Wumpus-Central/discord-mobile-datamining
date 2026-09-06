@@ -1,9 +1,9 @@
-// === Module 8110: useCutoutBackgroundColor ===
+// === Module 8814: useCutoutBackgroundColor ===
 
-// Module 8110 (useCutoutBackgroundColor)
-import nDefault from "n" /* 686 */;
-import ThemesDefault from "Themes" /* 709 */;
-import flattenColorOverOpaqueBackground from "flattenColorOverOpaqueBackground" /* 8111 */;
+// Module 8814 (useCutoutBackgroundColor)
+import ThemesDefault from "Themes" /* 576 */;
+import nDefault from "n" /* 672 */;
+import flattenColorOverOpaqueBackground from "flattenColorOverOpaqueBackground" /* 8815 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

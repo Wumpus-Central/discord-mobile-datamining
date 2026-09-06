@@ -1,16 +1,16 @@
-// === Module 16748: MenuContainer ===
+// === Module 16913: MenuContainer ===
 
-// Module 16748 (MenuContainer)
-import useBackPressHandlerDefault from "useBackPressHandler" /* 4926 */;
+// Module 16913 (MenuContainer)
+import useBackPressHandlerDefault from "useBackPressHandler" /* 4972 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 9671 */;
+import closure_4 from "initialize" /* 9684 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");
 
 export default function MenuContainer() {
   const items = [closure_4];
-  const stateFromStoresObject = key(586).useStateFromStoresObject(items, () => ({ key: store.getKey(), menu: store.getMenu() }), []);
+  const stateFromStoresObject = key(504).useStateFromStoresObject(items, () => ({ key: store.getKey(), menu: store.getMenu() }), []);
   key = stateFromStoresObject.key;
   const menu = stateFromStoresObject.menu;
   const items1 = [key];

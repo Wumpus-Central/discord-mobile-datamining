@@ -1,10 +1,10 @@
-// === Module 8734: initialize ===
+// === Module 8446: initialize ===
 
-// Module 8734 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import Storage2 from "Storage" /* 592 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
+// Module 8446 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import Storage2 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 let c3 = 86400000;

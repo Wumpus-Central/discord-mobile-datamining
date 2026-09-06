@@ -1,8 +1,8 @@
-// === Module 9946: items ===
+// === Module 9831: items ===
 
-// Module 9946 (items)
+// Module 9831 (items)
 import set from "set" /* 2 */;
-import create from "create" /* 1305 */;
+import create from "create" /* 1187 */;
 
 const items = [create.HubProgressStep.JOIN_GUILD, create.HubProgressStep.INVITE_USER, create.HubProgressStep.CONTACT_SYNC];
 const result = set.fileFinishedImporting("modules/hub/HubProgressBarConstants.tsx");

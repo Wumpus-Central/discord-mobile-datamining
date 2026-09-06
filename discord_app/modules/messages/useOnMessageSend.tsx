@@ -1,8 +1,8 @@
-// === Module 16587: useOnMessageSend ===
+// === Module 16754: useOnMessageSend ===
 
-// Module 16587 (useOnMessageSend)
+// Module 16754 (useOnMessageSend)
 import closure_2 from "noop" /* 19 */;
-import { MessageStates } from "ME" /* 673 */;
+import { MessageStates } from "ME" /* 1074 */;
 
 const result = require("set").fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
 
@@ -32,11 +32,11 @@ export default function useOnMessageSend(arg0) {
         tmp3 = undefined !== handleMessageCreate && optimistic.channelId !== tmp2;
       }
     }
-    const subscription = callback(706).subscribe("MESSAGE_CREATE", handleMessageCreate);
-    let obj = callback(706);
-    const subscription1 = callback(706).subscribe("UPLOAD_START", handleMessage);
-    let obj2 = callback(706);
-    const subscription2 = callback(706).subscribe("CALL_CREATE", handleMessage);
+    const subscription = callback(573).subscribe("MESSAGE_CREATE", handleMessageCreate);
+    let obj = callback(573);
+    const subscription1 = callback(573).subscribe("UPLOAD_START", handleMessage);
+    let obj2 = callback(573);
+    const subscription2 = callback(573).subscribe("CALL_CREATE", handleMessage);
     return () => {
       handleMessage(handleMessageCreate[2]).unsubscribe("MESSAGE_CREATE", handleMessageCreate);
       const obj = handleMessage(handleMessageCreate[2]);

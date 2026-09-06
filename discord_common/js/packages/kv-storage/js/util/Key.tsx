@@ -1,8 +1,8 @@
-// === Module 1961: combineKey ===
+// === Module 1992: combineKey ===
 
-// Module 1961 (combineKey)
+// Module 1992 (combineKey)
 import set from "set" /* 2 */;
-import TableId from "TableId" /* 1962 */;
+import TableId from "TableId" /* 1993 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 

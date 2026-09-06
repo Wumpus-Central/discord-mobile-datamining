@@ -1,20 +1,20 @@
-// === Module 15305: UserSettingsText ===
+// === Module 15463: UserSettingsText ===
 
-// Module 15305 (UserSettingsText)
+// Module 15463 (UserSettingsText)
 import noopAll from "noop" /* 19 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import ThemesDefault from "Themes" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 8226 */;
+import ThemesDefault from "Themes" /* 576 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 9358 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "reset" /* 4145 */;
-import closure_6 from "initialize" /* 1302 */;
-import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
-import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import closure_5 from "reset" /* 4224 */;
+import closure_6 from "initialize" /* 1184 */;
+import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
+import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;

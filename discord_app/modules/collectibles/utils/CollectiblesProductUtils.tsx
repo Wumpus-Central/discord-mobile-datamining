@@ -1,10 +1,10 @@
-// === Module 7308: getProductOrbPrice ===
+// === Module 7553: getProductOrbPrice ===
 
-// Module 7308 (getProductOrbPrice)
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+// Module 7553 (getProductOrbPrice)
+import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { isProfileEffectRecord } from "fromServer" /* 7303 */;
-import ME from "ME" /* 673 */;
+import { isProfileEffectRecord } from "fromServer" /* 7548 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ CurrencyCodes: c4, PriceSetAssignmentPurchaseTypes: c5 } = ME);

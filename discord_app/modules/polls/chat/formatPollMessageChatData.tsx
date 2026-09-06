@@ -1,17 +1,17 @@
-// === Module 8139: reactionForId ===
+// === Module 11717: reactionForId ===
 
-// Module 8139 (reactionForId)
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4109 */;
-import GuildMemberFlags from "GuildMemberFlags" /* 4126 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8141 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_4 from "getEmojiToGroupId" /* 5410 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import closure_7 from "reinjectEphemerals" /* 4736 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import { getPollState } from "useMessagePollInteractions" /* 8140 */;
-import ME from "ME" /* 673 */;
+// Module 11717 (reactionForId)
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4188 */;
+import GuildMemberFlags from "GuildMemberFlags" /* 4205 */;
+import formatExpirationLabel from "formatExpirationLabel" /* 8754 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_4 from "getEmojiToGroupId" /* 5459 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "trackCommunicationDisabled" /* 2021 */;
+import closure_7 from "reinjectEphemerals" /* 4781 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import { getPollState } from "useMessagePollInteractions" /* 11427 */;
+import ME from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 require = arg1;

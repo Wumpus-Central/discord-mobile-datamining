@@ -1,6 +1,6 @@
-// === Module 14682: HighlightColors ===
+// === Module 14838: HighlightColors ===
 
-// Module 14682 (HighlightColors)
+// Module 14838 (HighlightColors)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_settings/safety/HighlightedSettingsTypes.tsx");

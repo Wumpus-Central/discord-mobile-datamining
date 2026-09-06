@@ -1,10 +1,10 @@
-// === Module 4748: useDisplayNameStyles ===
+// === Module 4794: useDisplayNameStyles ===
 
-// Module 4748 (useDisplayNameStyles)
+// Module 4794 (useDisplayNameStyles)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 1991 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import closure_4 from "trackCommunicationDisabled" /* 2021 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
 
 const useContext = noop.useContext;
 const result = set.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStyles.tsx");

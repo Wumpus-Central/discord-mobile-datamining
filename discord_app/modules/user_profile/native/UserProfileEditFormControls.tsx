@@ -1,21 +1,20 @@
-// === Module 14511: FormControlText ===
+// === Module 14618: FormControlText ===
 
-// Module 14511 (FormControlText)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import set from "set" /* 1234 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import TableRowArrow from "TableRowArrow" /* 5615 */;
-import FormSwitch from "FormSwitch" /* 6003 */;
-import Input from "Input" /* 7718 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8107 */;
+// Module 14618 (FormControlText)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import set from "set" /* 1115 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import Input from "Input" /* 6607 */;
+import FormSwitch from "FormSwitch" /* 7202 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function FormControlText(children) {
@@ -35,13 +34,14 @@ function FormControlSubtext(text) {
 }
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { button: null, buttonTextContainer: null, formControlText: null, labelTrailing: null, newBadge: null };
+createCacheKey = { button: null, buttonDisabled: null, buttonTextContainer: null, formControlText: null, labelTrailing: null, newBadge: null };
 createCacheKey = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 1, flexShrink: 1, flexDirection: "column" };
-createCacheKey[2] = { marginRight: "auto", flexShrink: 1 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginLeft: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
-createCacheKey[4] = { paddingTop: 0 };
+createCacheKey[1] = { opacity: 0.5 };
+createCacheKey[2] = { flexGrow: 1, flexShrink: 1, flexDirection: "column" };
+createCacheKey[3] = { marginRight: "auto", flexShrink: 1 };
+createCacheKey[4] = { flexDirection: "row", alignItems: "center", marginLeft: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
+createCacheKey[5] = { paddingTop: 0 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { flexDirection: "row", alignItems: "center", marginLeft: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditFormControls.tsx");
@@ -98,12 +98,25 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   }
   const tmp = callback3();
   let obj = { label, labelTrailing, children: null };
-  obj = { onPress, style: tmp.button, accessibilityRole: "button", accessibilityLabel: label, accessibilityValue, accessibilityHint: null, accessibilityState: null, disabled: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[5] = intl.string(getSystemLocale.t["4lAcxv"]);
+  obj = { onPress, style: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, accessibilityHint: null, accessibilityState: null, disabled: null, children: null };
+  const items = [tmp.button, ];
+  let buttonDisabled = disabled;
+  if (disabled) {
+    buttonDisabled = tmp.buttonDisabled;
+  }
+  items[1] = buttonDisabled;
+  obj[1] = items;
+  obj[3] = label;
+  obj[4] = accessibilityValue;
+  let stringResult;
+  if (!disabled) {
+    const intl = tmp3(1114).intl;
+    stringResult = intl.string(tmp3(1114).t["4lAcxv"]);
+  }
+  obj[5] = stringResult;
   obj[6] = { disabled, busy: flag };
   obj[7] = disabled;
-  const items = [leading, , , ];
+  const items1 = [leading, , , ];
   if (content == null) {
     obj = { style: null, children: null };
     obj[0] = tmp.buttonTextContainer;
@@ -113,22 +126,22 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
       obj1[0] = buttonText;
       tmp2Result = tmp2(FormControlText, obj1);
     }
-    const items1 = [tmp2Result, ];
+    const items2 = [tmp2Result, ];
     const obj2 = { text: null };
     obj2[0] = buttonSubtext;
-    items1[1] = tmp2(FormControlSubtext, obj2);
-    obj[1] = items1;
+    items2[1] = tmp2(FormControlSubtext, obj2);
+    obj[1] = items2;
     content = tmp5(closure_5, obj);
-    const tmp6 = closure_5;
+    const tmp7 = closure_5;
   }
-  items[1] = content;
-  items[2] = trailing;
+  items1[1] = content;
+  items1[2] = trailing;
   tmp2Result = !flag2;
   if (!flag2) {
-    tmp2Result = tmp2(TableRowArrow.TableRowArrow, {});
+    tmp2Result = tmp2(tmp3(5612).TableRowArrow, {});
   }
-  items[3] = tmp2Result;
-  obj[8] = items;
+  items1[3] = tmp2Result;
+  obj[8] = items1;
   obj[2] = closure_7(PressableBase.PressableHighlight, obj);
   return closure_6(Input.Input, obj);
 };
@@ -150,7 +163,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     callback(closure_0);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(5077).PressableHighlight;
+    let PressableHighlight = tmp2(5123).PressableHighlight;
   } else {
     PressableHighlight = closure_4;
   }

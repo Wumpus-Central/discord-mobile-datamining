@@ -1,14 +1,14 @@
-// === Module 8885: GuildBadgeV2 ===
+// === Module 8740: GuildBadgeV2 ===
 
-// Module 8885 (GuildBadgeV2)
+// Module 8740 (GuildBadgeV2)
 import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1296 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
-import badgeVariants from "badgeVariants" /* 8886 */;
-import BadgeCategory from "BadgeCategory" /* 8887 */;
-import GuildVisibility from "GuildVisibility" /* 8888 */;
+import Button from "Button" /* 1178 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import badgeVariants from "badgeVariants" /* 8741 */;
+import BadgeCategory from "BadgeCategory" /* 8742 */;
+import GuildVisibility from "GuildVisibility" /* 8743 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -25,7 +25,7 @@ export default function GuildBadgeV2(arg0) {
   if (null == guild) {
     return null;
   } else {
-    const guildBadgeImageSource = tmp5(8886).getGuildBadgeImageSource(guild, tmp8);
+    const guildBadgeImageSource = tmp5(8741).getGuildBadgeImageSource(guild, tmp8);
     let tmp10 = null;
     if (null != guildBadgeImageSource) {
       const obj = { size: null, source: null, style: null, disableColor: true };
@@ -33,7 +33,7 @@ export default function GuildBadgeV2(arg0) {
       obj[1] = guildBadgeImageSource;
       obj[2] = tmp4.icon;
       const merged1 = Object.assign(merged);
-      tmp10 = jsx(tmp5(1296).Icon, { size: null, source: null, style: null, disableColor: true });
+      tmp10 = jsx(tmp5(1178).Icon, { size: null, source: null, style: null, disableColor: true });
     }
     return tmp10;
   }

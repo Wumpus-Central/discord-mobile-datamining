@@ -1,12 +1,12 @@
-// === Module 11175: useReactionPermissions ===
+// === Module 11314: useReactionPermissions ===
 
-// Module 11175 (useReactionPermissions)
+// Module 11314 (useReactionPermissions)
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "initialize" /* 4121 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "recomputeGuild" /* 5366 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
-import { Permissions } from "ME" /* 673 */;
+import closure_4 from "initialize" /* 4200 */;
+import closure_5 from "trackCommunicationDisabled" /* 2021 */;
+import closure_6 from "recomputeGuild" /* 5413 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
+import { Permissions } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/useReactionPermissions.tsx");

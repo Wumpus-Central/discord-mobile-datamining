@@ -1,22 +1,22 @@
-// === Module 5564: PromptHeader ===
+// === Module 7124: PromptHeader ===
 
-// Module 5564 (PromptHeader)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import Text2 from "Text" /* 4474 */;
-import EmojiDefault from "Emoji" /* 5594 */;
+// Module 7124 (PromptHeader)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import Text2 from "Text" /* 4556 */;
+import EmojiDefault from "Emoji" /* 7130 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "getEmojiToGroupId" /* 5410 */;
-import closure_10 from "get" /* 5499 */;
-import closure_11 from "createGuildRecordFromRust" /* 1908 */;
-import closure_12 from "handleUpdate" /* 5476 */;
-import { GuildOnboardingModalStates as closure_13 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5473 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
+import closure_9 from "getEmojiToGroupId" /* 5459 */;
+import closure_10 from "get" /* 5572 */;
+import closure_11 from "createGuildRecordFromRust" /* 1979 */;
+import closure_12 from "handleUpdate" /* 7100 */;
+import { GuildOnboardingModalStates as closure_13 } from "GUILD_ONBOARDING_MODAL_KEY" /* 7097 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1374 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function PromptHeader(currentPrompt) {
@@ -40,9 +40,9 @@ function PromptHeader(currentPrompt) {
     obj2[0] = tmp.requiredSeparator;
     const items1 = [tmp5(tmp4, obj2), ];
     const obj3 = { variant: "text-sm/medium", color: "text-brand", children: null };
-    const intl2 = tmp6(1233).intl;
-    obj3[2] = intl2.string(tmp6(1233).t.Ur8Vrt);
-    items1[1] = tmp5(tmp6(4474).Text, obj3);
+    const intl2 = tmp6(1114).intl;
+    obj3[2] = intl2.string(tmp6(1114).t.Ur8Vrt);
+    items1[1] = tmp5(tmp6(4556).Text, obj3);
     obj1[0] = items1;
     tmp2Result = tmp2(tmp3, obj1);
   }
@@ -174,7 +174,7 @@ function formattedNameHighlight(children) {
 function DropdownOption(option) {
   option = option.option;
   const tmp = callback4();
-  let obj = option(586);
+  let obj = option(504);
   const items = [closure_9];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const emoji = option.emoji;
@@ -215,7 +215,7 @@ function DropdownOption(option) {
   }
   obj1[3] = str;
   obj[1] = closure_15(EmojiDefault, obj1);
-  const items1 = [closure_15(closure_6, obj), closure_15(option(4474).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [closure_15(closure_6, obj), closure_15(option(4556).Text, { variant: "text-md/semibold", children: option.title })];
   obj[1] = items1;
   return closure_16(closure_6, obj);
 }

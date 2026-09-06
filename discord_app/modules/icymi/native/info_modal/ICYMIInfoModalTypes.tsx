@@ -1,6 +1,6 @@
-// === Module 16305: ICYMI_INFO_MODAL_KEY ===
+// === Module 16467: ICYMI_INFO_MODAL_KEY ===
 
-// Module 16305 (ICYMI_INFO_MODAL_KEY)
+// Module 16467 (ICYMI_INFO_MODAL_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/icymi/native/info_modal/ICYMIInfoModalTypes.tsx");

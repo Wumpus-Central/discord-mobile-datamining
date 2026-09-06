@@ -1,16 +1,16 @@
-// === Module 14539: useGuildProfileEditForm ===
+// === Module 14646: useGuildProfileEditForm ===
 
-// Module 14539 (useGuildProfileEditForm)
+// Module 14646 (useGuildProfileEditForm)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
-import closure_7 from "handleFormOpen" /* 8081 */;
-import { IGNORE_GUILD_IDS } from "handleFormOpen" /* 8081 */;
-import closure_9 from "createUserWidgetFromServer" /* 7376 */;
-import closure_10 from "createGuildRecordFromRust" /* 1908 */;
-import closure_11 from "insertUnsortedGuilds" /* 5390 */;
-import closure_12 from "mergeGuildAvatar" /* 1921 */;
-import { FormStates } from "ME" /* 673 */;
+import closure_7 from "handleFormOpen" /* 8160 */;
+import { IGNORE_GUILD_IDS } from "handleFormOpen" /* 8160 */;
+import closure_9 from "createUserWidgetFromServer" /* 7621 */;
+import closure_10 from "createGuildRecordFromRust" /* 1979 */;
+import closure_11 from "insertUnsortedGuilds" /* 5438 */;
+import closure_12 from "mergeGuildAvatar" /* 1371 */;
+import { FormStates } from "ME" /* 1074 */;
 
 const require = arg1;
 let closure_3 = ["bannerOriginalMd5"];
@@ -64,7 +64,7 @@ export default function useGuildProfileEditForm() {
   const merged1 = Object.assign(stateFromStoresObject.errors);
   const memo = pendingThemeColors.useMemo(() => {
     const delayedCall = new stateFromStores(pendingNickname[11]).DelayedCall(200, () => {
-      callback2(706).wait(callback(9052).resetAllPending);
+      callback2(573).wait(callback(9210).resetAllPending);
     });
     return delayedCall;
   }, []);
@@ -123,11 +123,11 @@ export default function useGuildProfileEditForm() {
             obj1[3] = closure_1_11;
             guildMemberChangesForUpdateRequest = closure_1_12;
             obj1[4] = closure_1_12;
-            guildMemberChangesForUpdateRequest = closure_1_0(11057).getGuildMemberChangesForUpdateRequest(obj1);
+            guildMemberChangesForUpdateRequest = closure_1_0(11086).getGuildMemberChangesForUpdateRequest(obj1);
             let avatarId = guildMemberChangesForUpdateRequest;
             guildMemberChangesForUpdateRequest = closure_1_0;
             guildMemberChangesForUpdateRequest = dependencyMap;
-            const obj16 = closure_1_0(11057);
+            const obj16 = closure_1_0(11086);
             const obj2 = { pendingBanner: null, pendingBio: null, pendingPronouns: null, pendingThemeColors: null, pendingProfileEffect: null, pendingProfileFrame: null };
             guildMemberChangesForUpdateRequest = c3;
             obj2[0] = c3;
@@ -145,7 +145,7 @@ export default function useGuildProfileEditForm() {
             if (closure_1_7 != null) {
               id = closure_1_7.id;
             }
-            let bannerOriginalMd5 = closure_1_0(11057).getProfileChangesForUpdateRequest(obj2, id);
+            let bannerOriginalMd5 = closure_1_0(11086).getProfileChangesForUpdateRequest(obj2, id);
             dependencyMap = true;
             c3 = false;
             const _Object = Object;
@@ -157,10 +157,10 @@ export default function useGuildProfileEditForm() {
               v0 = 1;
               guildMemberChangesForUpdateRequest = 1;
               let obj3 = { value: null, done: false };
-              obj3[0] = closure_1_0(9052).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest);
+              obj3[0] = closure_1_0(9210).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest);
               return obj3;
             }
-            const obj18 = closure_1_0(11057);
+            const obj18 = closure_1_0(11086);
           }
         }
         yield "HermesInternal";
@@ -178,7 +178,7 @@ export default function useGuildProfileEditForm() {
             if (v0.ok) {
               body = v0.body;
               if (undefined !== closure_1_1) {
-                obj3 = closure_1_0(7772);
+                obj3 = closure_1_0(6988);
                 const obj5 = { isGuildProfile: true, avatarHash: null, avatarId: null, avatarAssetOrigin: null };
                 obj5[1] = guildMemberChangesForUpdateRequest.avatar;
                 obj5[2] = avatarId.avatarId;
@@ -199,9 +199,9 @@ export default function useGuildProfileEditForm() {
               }
               if (null != avatar) {
                 guildMemberChangesForUpdateRequest = v0;
-                guildMemberChangesForUpdateRequest = closure_1_0(14498).showGenericGuildProfileUpdateFailureToast(v0.body.avatar);
+                guildMemberChangesForUpdateRequest = closure_1_0(14605).showGenericGuildProfileUpdateFailureToast(v0.body.avatar);
                 c3 = true;
-                const obj15 = closure_1_0(14498);
+                const obj15 = closure_1_0(14605);
               }
             }
             let tmp42 = dependencyMap;
@@ -233,10 +233,10 @@ export default function useGuildProfileEditForm() {
             ok1 = ok.ok;
           }
           if (!ok1) {
-            const aPIError = new closure_1_0(4376).APIError(ok);
+            const aPIError = new closure_1_0(4461).APIError(ok);
             const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
             if (null != firstFieldErrorMessage) {
-              obj1 = closure_1_0(14498);
+              obj1 = closure_1_0(14605);
               const result1 = obj1.showGenericGuildProfileUpdateFailureToast(closure_1_9);
               c3 = true;
             }
@@ -260,9 +260,9 @@ export default function useGuildProfileEditForm() {
           tmp54 = c3;
         }
         if (!tmp54) {
-          obj6 = closure_1_0(14498);
-          const intl = closure_1_0(1233).intl;
-          const result2 = obj6.showGenericGuildProfileUpdateFailureToast(intl.string(closure_1_0(1233).t.s35OuK));
+          obj6 = closure_1_0(14605);
+          const intl = closure_1_0(1114).intl;
+          const result2 = obj6.showGenericGuildProfileUpdateFailureToast(intl.string(closure_1_0(1114).t.s35OuK));
         }
         if (dependencyMap) {
           closure_1_13.delay();

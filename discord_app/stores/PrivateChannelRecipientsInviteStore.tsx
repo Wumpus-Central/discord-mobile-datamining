@@ -1,22 +1,22 @@
-// === Module 13646: performQuery ===
+// === Module 13754: performQuery ===
 
-// Module 13646 (performQuery)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1901 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import getTransformedUserDefault from "getTransformedUser" /* 9954 */;
-import closure_4 from "getHash" /* 4391 */;
-import closure_5 from "recomputeAffinities" /* 7414 */;
-import { PrivateChannelRecord } from "createChannelRecord" /* 1390 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "hasConsented" /* 6063 */;
-import closure_9 from "handleChannelSelect" /* 5460 */;
-import closure_10 from "trackCommunicationDisabled" /* 1991 */;
-import closure_11 from "createGuildRecordFromRust" /* 1908 */;
-import closure_12 from "markAllUserIdListsStale" /* 4130 */;
-import closure_13 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+// Module 13754 (performQuery)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isNullOrEmpty from "isNullOrEmpty" /* 1925 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import getTransformedUserDefault from "getTransformedUser" /* 9839 */;
+import closure_4 from "getHash" /* 4476 */;
+import closure_5 from "recomputeAffinities" /* 7659 */;
+import { PrivateChannelRecord } from "createChannelRecord" /* 1961 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "hasConsented" /* 6595 */;
+import closure_9 from "handleChannelSelect" /* 5509 */;
+import closure_10 from "trackCommunicationDisabled" /* 2021 */;
+import closure_11 from "createGuildRecordFromRust" /* 1979 */;
+import closure_12 from "markAllUserIdListsStale" /* 4209 */;
+import closure_13 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 require = arg1;

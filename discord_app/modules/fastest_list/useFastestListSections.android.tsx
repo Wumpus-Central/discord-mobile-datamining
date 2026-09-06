@@ -1,6 +1,6 @@
-// === Module 7798: useFastestListSections ===
+// === Module 7063: useFastestListSections ===
 
-// Module 7798 (useFastestListSections)
+// Module 7063 (useFastestListSections)
 import closure_2 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListSections.android.tsx");

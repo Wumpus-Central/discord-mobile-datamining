@@ -1,17 +1,17 @@
-// === Module 5475: fetchOnboardingPrompts ===
+// === Module 7099: fetchOnboardingPrompts ===
 
-// Module 5475 (fetchOnboardingPrompts)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
+// Module 7099 (fetchOnboardingPrompts)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "handleUpdate" /* 5476 */;
-import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt" /* 5477 */;
-import ME from "ME" /* 673 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "trackCommunicationDisabled" /* 2021 */;
+import closure_6 from "createGuildRecordFromRust" /* 1979 */;
+import closure_7 from "handleUpdate" /* 7100 */;
+import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt" /* 7101 */;
+import ME from "ME" /* 1074 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
 
 require = arg1;
 function fetchOnboardingPrompts(guildId) {
@@ -19,7 +19,7 @@ function fetchOnboardingPrompts(guildId) {
   let obj = dispatcherDefault;
   obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_START", guildId };
   obj.dispatch(obj);
-  const HTTP = _require(527).HTTP;
+  const HTTP = _require(1272).HTTP;
   obj = { url: closure_10.GUILD_ONBOARDING(guildId), rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {

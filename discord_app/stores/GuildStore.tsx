@@ -1,15 +1,15 @@
-// === Module 1908: createGuildRecordFromRust ===
+// === Module 1979: createGuildRecordFromRust ===
 
-// Module 1908 (createGuildRecordFromRust)
+// Module 1979 (createGuildRecordFromRust)
 import set2 from "set" /* 2 */;
-import date2 from "date" /* 1424 */;
-import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1425 */;
-import areSetsEqual from "areSetsEqual" /* 1428 */;
-import identity from "identity" /* 1909 */;
-import items from "items" /* 1912 */;
-import isValueEqual from "isValueEqual" /* 1426 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
-import closure_9 from "fetchFingerprint" /* 1215 */;
+import date2 from "date" /* 1970 */;
+import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
+import areSetsEqual from "areSetsEqual" /* 1974 */;
+import identity from "identity" /* 1980 */;
+import items from "items" /* 1983 */;
+import isValueEqual from "isValueEqual" /* 1972 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
+import closure_9 from "fetchFingerprint" /* 502 */;
 
 function createGuildRecordFromRust(features) {
   const obj = {};

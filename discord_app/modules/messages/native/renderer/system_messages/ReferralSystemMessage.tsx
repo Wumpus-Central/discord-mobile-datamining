@@ -1,14 +1,14 @@
-// === Module 7973: createReferralSystemMessage ===
+// === Module 8052: createReferralSystemMessage ===
 
-// Module 7973 (createReferralSystemMessage)
-import ThemesDefault from "Themes" /* 709 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
-import registerAssetDefault from "registerAsset" /* 7972 */;
-import createReferralTrialEmbedRedesign from "createReferralTrialEmbedRedesign" /* 7974 */;
-import createReferralTrialEmbedRedeemable from "createReferralTrialEmbedRedeemable" /* 7988 */;
-import closure_3 from "emitChanges" /* 7207 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+// Module 8052 (createReferralSystemMessage)
+import ThemesDefault from "Themes" /* 576 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import registerAssetDefault from "registerAsset" /* 8051 */;
+import createReferralTrialEmbedRedesign from "createReferralTrialEmbedRedesign" /* 8053 */;
+import createReferralTrialEmbedRedeemable from "createReferralTrialEmbedRedeemable" /* 8067 */;
+import closure_3 from "emitChanges" /* 7452 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
@@ -37,7 +37,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = callback(theme);
-        obj.iconUrl = tmp8(7867).getAssetUriForEmbed(registerAssetDefault);
+        obj.iconUrl = tmp8(7946).getAssetUriForEmbed(registerAssetDefault);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj;
       }
@@ -52,7 +52,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged1 = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = callback(theme);
-        obj.iconUrl = tmp23(7867).getAssetUriForEmbed(registerAssetDefault);
+        obj.iconUrl = tmp23(7946).getAssetUriForEmbed(registerAssetDefault);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;

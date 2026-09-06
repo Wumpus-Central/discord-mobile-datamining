@@ -1,6 +1,6 @@
-// === Module 4178: isFeatureTeenByDefault ===
+// === Module 4780: isFeatureTeenByDefault ===
 
-// Module 4178 (isFeatureTeenByDefault)
+// Module 4780 (isFeatureTeenByDefault)
 import set from "set" /* 2 */;
 
 class SettingsConfig {

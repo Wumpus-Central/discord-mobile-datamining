@@ -1,8 +1,8 @@
-// === Module 4516: GameTheme ===
+// === Module 1934: GameTheme ===
 
-// Module 4516 (GameTheme)
-import toJSDefault from "toJS" /* 1935 */;
-import { createExecutable } from "createExecutable" /* 4504 */;
+// Module 1934 (GameTheme)
+import toJSDefault from "toJS" /* 1386 */;
+import { createExecutable } from "createExecutable" /* 1918 */;
 
 toJSDefault;
 const result = require("set").fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");

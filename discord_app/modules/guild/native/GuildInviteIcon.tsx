@@ -1,14 +1,14 @@
-// === Module 12433: render ===
+// === Module 12659: render ===
 
-// Module 12433 (render)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import preloadDefault from "preload" /* 5502 */;
-import getClass from "getClass" /* 12434 */;
+// Module 12659 (render)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import preloadDefault from "preload" /* 5587 */;
+import getClass from "getClass" /* 12660 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -45,7 +45,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     obj1[3] = guildIconSource;
     return jsx(preloadDefault, { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null });
   } else {
-    const acronym = tmp2(1901).getAcronym(guild.name);
+    const acronym = tmp2(1925).getAcronym(guild.name);
     let num = table[acronym.length - 1];
     if (num == null) {
       num = 10;
@@ -65,7 +65,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     items2[1] = obj4;
     obj3[1] = items2;
     obj3[2] = acronym;
-    obj2[4] = jsx(tmp2(1296).LegacyText, { numberOfLines: 1, style: null, children: null });
+    obj2[4] = jsx(tmp2(1178).LegacyText, { numberOfLines: 1, style: null, children: null });
     return <View accessible accessibilityRole="image" accessibilityLabel={null} style={null}>{null}</View>;
   }
 };

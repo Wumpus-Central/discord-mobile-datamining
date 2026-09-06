@@ -1,23 +1,23 @@
-// === Module 4666: allowChannelAccess ===
+// === Module 4705: allowChannelAccess ===
 
-// Module 4666 (allowChannelAccess)
+// Module 4705 (allowChannelAccess)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import fromStringAll from "fromString" /* 503 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import hasStream from "hasStream" /* 4667 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4676 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "comparator" /* 1981 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_10 from "handleConnectionOpen" /* 1980 */;
-import closure_11 from "getVoiceStatesForGuild" /* 4555 */;
-import ME from "ME" /* 673 */;
+import fromStringAll from "fromString" /* 1086 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import hasStream from "hasStream" /* 4706 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4715 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "comparator" /* 2012 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_10 from "handleConnectionOpen" /* 2011 */;
+import closure_11 from "getVoiceStatesForGuild" /* 4584 */;
+import ME from "ME" /* 1074 */;
 
 function allowChannelAccess(id, channelType, MEMBER) {
   const NONE = applyOverwritesAll.NONE;
@@ -27,7 +27,7 @@ function allowChannelAccess(id, channelType, MEMBER) {
   }
   let addResult = NONE;
   if (tmp3) {
-    let tmpResult = tmp(503);
+    let tmpResult = tmp(1086);
     addResult = tmpResult.add(NONE, constants.VIEW_CHANNEL);
   }
   let tmp7 = channelType === closure_21;
@@ -43,10 +43,10 @@ function allowChannelAccess(id, channelType, MEMBER) {
   }
   let addResult2 = addResult;
   if (tmp7) {
-    tmpResult = tmp(503);
+    tmpResult = tmp(1086);
     const addResult1 = tmpResult.add(addResult, constants.VIEW_CHANNEL);
-    addResult2 = tmp(503).add(addResult1, constants.CONNECT);
-    const tmpResult1 = tmp(503);
+    addResult2 = tmp(1086).add(addResult1, constants.CONNECT);
+    const tmpResult1 = tmp(1086);
   }
   return { id, type: MEMBER, deny: applyOverwritesAll.NONE, allow: addResult2 };
 }
@@ -89,7 +89,7 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult = NONE;
     if (tmp6) {
-      let tmp4Result = tmp4(503);
+      let tmp4Result = tmp4(1086);
       addResult = tmp4Result.add(NONE, constants.VIEW_CHANNEL);
     }
     let tmp11 = channelType === closure_21;
@@ -98,14 +98,14 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult2 = addResult;
     if (tmp11) {
-      tmp4Result = tmp4(503);
+      tmp4Result = tmp4(1086);
       const addResult1 = tmp4Result.add(addResult, constants.VIEW_CHANNEL);
-      addResult2 = tmp4(503).add(addResult1, constants.CONNECT);
-      const tmp4Result1 = tmp4(503);
+      addResult2 = tmp4(1086).add(addResult1, constants.CONNECT);
+      const tmp4Result1 = tmp4(1086);
     }
     const obj = { id: null, type: null, allow: null, deny: null };
     obj[0] = guildId;
-    obj[1] = _require(1954).PermissionOverwriteType.ROLE;
+    obj[1] = _require(1894).PermissionOverwriteType.ROLE;
     obj[2] = applyOverwritesAll.NONE;
     obj[3] = addResult2;
     items.push(obj);

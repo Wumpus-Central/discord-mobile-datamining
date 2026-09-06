@@ -1,6 +1,6 @@
-// === Module 11355: areArraysShallowlyEqual ===
+// === Module 9028: areArraysShallowlyEqual ===
 
-// Module 11355 (areArraysShallowlyEqual)
+// Module 9028 (areArraysShallowlyEqual)
 import closure_0 from "_slicedToArray" /* 32 */;
 import closure_1 from "asyncGeneratorStep" /* 5 */;
 

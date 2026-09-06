@@ -1,10 +1,10 @@
-// === Module 7710: UserRequiredActions ===
+// === Module 6592: UserRequiredActions ===
 
-// Module 7710 (UserRequiredActions)
+// Module 6592 (UserRequiredActions)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import ME from "ME" /* 1074 */;
 
 const UserRequiredActions = ME.UserRequiredActions;
 const VerificationTypes = ME.VerificationTypes;

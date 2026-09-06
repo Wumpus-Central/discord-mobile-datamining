@@ -1,18 +1,18 @@
-// === Module 7807: renderDefaultEmpty ===
+// === Module 7072: renderDefaultEmpty ===
 
-// Module 7807 (renderDefaultEmpty)
-import shallowEqualDefault from "shallowEqual" /* 640 */;
-import set2 from "set" /* 1234 */;
-import _mod4217 from "module_4217" /* 4217 */;
-import BottomSheetModal from "BottomSheetModal" /* 5633 */;
-import setDefault from "set" /* 6015 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7810 */;
+// Module 7072 (renderDefaultEmpty)
+import shallowEqualDefault from "shallowEqual" /* 558 */;
+import set2 from "set" /* 1115 */;
+import _mod4296 from "module_4296" /* 4296 */;
+import setDefault from "set" /* 5589 */;
+import BottomSheetModal from "BottomSheetModal" /* 6627 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7075 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4217" /* 4217 */;
+import importDefaultResult from "module_4296" /* 4296 */;
 
 require = arg1;
 function renderDefaultEmpty() {
@@ -2138,8 +2138,8 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
     const result2 = scrollPosValue.set(tmp10);
     self.scrollPosValue = scrollPosValue;
   } else {
-    self.scrollPosValue = _mod4217.makeMutable(tmp10);
-    const obj3 = _mod4217;
+    self.scrollPosValue = _mod4296.makeMutable(tmp10);
+    const obj3 = _mod4296;
   }
   if (result > 0) {
     let computeResult = setInfo.compute(tmp3, sum, items, true);

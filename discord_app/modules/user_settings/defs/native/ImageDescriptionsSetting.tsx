@@ -1,11 +1,11 @@
-// === Module 15304: onImageDescriptionSettingValueChange ===
+// === Module 15462: onImageDescriptionSettingValueChange ===
 
-// Module 15304 (onImageDescriptionSettingValueChange)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import UserSettingsText from "UserSettingsText" /* 15305 */;
-import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
-import createToggle from "createToggle" /* 11292 */;
+// Module 15462 (onImageDescriptionSettingValueChange)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import UserSettingsText from "UserSettingsText" /* 15463 */;
+import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {

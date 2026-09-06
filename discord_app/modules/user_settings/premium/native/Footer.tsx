@@ -1,17 +1,17 @@
-// === Module 13387: Footer ===
+// === Module 13493: Footer ===
 
-// Module 13387 (Footer)
+// Module 13493 (Footer)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4929 */;
-import preloadDefault from "preload" /* 5502 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5982 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13388 */;
-import registerAssetDefault from "registerAsset" /* 13389 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import Button from "Button" /* 4975 */;
+import preloadDefault from "preload" /* 5587 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13494 */;
+import registerAssetDefault from "registerAsset" /* 13495 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;

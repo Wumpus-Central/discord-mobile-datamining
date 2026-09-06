@@ -1,8 +1,8 @@
-// === Module 8171: ? ===
+// === Module 9303: ? ===
 
-// Module 8171
+// Module 9303
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const Endpoints = ME.Endpoints;
 let result = set.fileFinishedImporting("actions/ChangeNicknameActionCreators.tsx");
@@ -11,11 +11,11 @@ export default {
   changeNickname(guildId, arg1, closure_4) {
     const _require = arg1;
     closure_1 = arg3;
-    const HTTP = _require(527).HTTP;
+    const HTTP = _require(1272).HTTP;
     obj = { url: Endpoints.GUILD_MEMBER_NICK(guildId, closure_4), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { nick: closure_1 };
-    obj[3] = _require(527).rejectWithMigratedError();
-    const obj3 = _require(527);
+    obj[3] = _require(1272).rejectWithMigratedError();
+    const obj3 = _require(1272);
     return HTTP.patch(obj).then((body) => {
       const nick = body.body.nick;
       callback2(closure_1_2[2]);

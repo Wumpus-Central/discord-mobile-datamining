@@ -1,28 +1,28 @@
-// === Module 7391: updateGuildUnreadSentinel ===
+// === Module 7636: updateGuildUnreadSentinel ===
 
-// Module 7391 (updateGuildUnreadSentinel)
+// Module 7636 (updateGuildUnreadSentinel)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import clearAllDefault from "clearAll" /* 1217 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
-import doesThreadMembersActionAffectMe from "doesThreadMembersActionAffectMe" /* 4128 */;
-import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 7290 */;
-import closure_3 from "findOrCreateMessageRecord" /* 7392 */;
-import closure_4 from "_validate" /* 7394 */;
-import closure_5 from "rebuild" /* 5457 */;
-import closure_6 from "storeThread" /* 4122 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import closure_10 from "fetchFingerprint" /* 1215 */;
-import closure_11 from "ensureGuildLoaded" /* 1386 */;
-import closure_12 from "createGuildRecordFromRust" /* 1908 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_14 from "generateOldThreadCutoff" /* 4493 */;
-import closure_15 from "handleConnectionOpen" /* 1980 */;
-import closure_16 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_17 from "mergeGuildAvatar" /* 1921 */;
-import { ChannelFlags } from "set" /* 1393 */;
-import ReadStateTypes from "ReadStateTypes" /* 4703 */;
-import { NULL_STRING_GUILD_ID } from "ME" /* 673 */;
+import clearAllDefault from "clearAll" /* 1073 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
+import doesThreadMembersActionAffectMe from "doesThreadMembersActionAffectMe" /* 4207 */;
+import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 7535 */;
+import closure_3 from "findOrCreateMessageRecord" /* 7637 */;
+import closure_4 from "_validate" /* 7639 */;
+import closure_5 from "rebuild" /* 5506 */;
+import closure_6 from "storeThread" /* 4201 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import closure_10 from "fetchFingerprint" /* 502 */;
+import closure_11 from "ensureGuildLoaded" /* 1957 */;
+import closure_12 from "createGuildRecordFromRust" /* 1979 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_14 from "generateOldThreadCutoff" /* 4575 */;
+import closure_15 from "handleConnectionOpen" /* 2011 */;
+import closure_16 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_17 from "mergeGuildAvatar" /* 1371 */;
+import { ChannelFlags } from "set" /* 1964 */;
+import ReadStateTypes from "ReadStateTypes" /* 4742 */;
+import { NULL_STRING_GUILD_ID } from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 require = arg1;

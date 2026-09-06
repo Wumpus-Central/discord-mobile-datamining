@@ -1,10 +1,10 @@
-// === Module 13116: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 13216: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 13116 (useEmbeddedActivityParticipantAvatarUris)
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
+// Module 13216 (useEmbeddedActivityParticipantAvatarUris)
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "participantFromServer" /* 1385 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import closure_3 from "participantFromServer" /* 1956 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx");

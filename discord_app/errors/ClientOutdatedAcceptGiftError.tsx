@@ -1,8 +1,8 @@
-// === Module 4382: prototype ===
+// === Module 4467: prototype ===
 
-// Module 4382 (prototype)
+// Module 4467 (prototype)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const AbortCodes = ME.AbortCodes;
 const prototype = function ClientOutdatedAcceptGiftError(arg0) {

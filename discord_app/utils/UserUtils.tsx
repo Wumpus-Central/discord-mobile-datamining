@@ -1,11 +1,11 @@
-// === Module 4322: nameFromUser ===
+// === Module 4404: nameFromUser ===
 
-// Module 4322 (nameFromUser)
-import initialize from "initialize" /* 586 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import closure_2 from "initialize" /* 4323 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+// Module 4404 (nameFromUser)
+import initialize from "initialize" /* 504 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import closure_2 from "initialize" /* 4405 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function nameFromUser(primary1) {
@@ -269,7 +269,7 @@ function useUserTag(user) {
 function useDirectMessageRecipient(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     if (null != closure_0) {
       let user = null;
       if (obj.isPrivate()) {

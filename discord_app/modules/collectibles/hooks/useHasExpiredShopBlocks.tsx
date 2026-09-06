@@ -1,9 +1,9 @@
-// === Module 15652: useHasExpiredShopBlocks ===
+// === Module 15810: useHasExpiredShopBlocks ===
 
-// Module 15652 (useHasExpiredShopBlocks)
+// Module 15810 (useHasExpiredShopBlocks)
 import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import { MAX_TIMEOUT_MS } from "ME" /* 673 */;
+import { MAX_TIMEOUT_MS } from "ME" /* 1074 */;
 
 const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);

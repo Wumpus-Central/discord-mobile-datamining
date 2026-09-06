@@ -1,22 +1,22 @@
-// === Module 1385: participantFromServer ===
+// === Module 1956: participantFromServer ===
 
-// Module 1385 (participantFromServer)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4110 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7278 */;
-import getPlatformDefault from "getPlatform" /* 8450 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 9484 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9505 */;
-import apexExperiment from "apexExperiment" /* 9510 */;
+// Module 1956 (participantFromServer)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
+import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4189 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
+import getPlatformDefault from "getPlatform" /* 9410 */;
+import apexExperiment from "apexExperiment" /* 9479 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9512 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9526 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9483 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "handleConnectionOpen" /* 2011 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9505 */;
+import ME from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -29,7 +29,7 @@ function updateEmbeddedActivities(content_classification) {
   let combined = importDefault;
   const tmp3 = getURLForApplicationDefault(application_id);
   if (null != tmp3) {
-    const embeddedActivityLocationChannelId = application_id(4110).getEmbeddedActivityLocationChannelId(_location);
+    const embeddedActivityLocationChannelId = application_id(4189).getEmbeddedActivityLocationChannelId(_location);
     if (null != embeddedActivityLocationChannelId) {
       let value = map2.get(embeddedActivityLocationChannelId);
       items = undefined;
@@ -59,7 +59,7 @@ function updateEmbeddedActivities(content_classification) {
       const sessionId = found1.sessionId;
     }
     let obj4 = map;
-    const obj19 = application_id(4110);
+    const obj19 = application_id(4189);
     const value1 = map.get(application_id);
     let obj5 = map4;
     let tmp12 = embeddedActivityLocationChannelId;
@@ -147,7 +147,7 @@ function updateEmbeddedActivities(content_classification) {
               const tmp62 = ActivityBucket;
             }
             value3.upsert(application_id, _location.id, tmp61);
-            let tmp79Result = tmp79(4110);
+            let tmp79Result = tmp79(4189);
             const embeddedActivityLocationChannelId1 = tmp79Result.getEmbeddedActivityLocationChannelId(_location);
             if (null != embeddedActivityLocationChannelId1) {
               let value4 = map2.get(embeddedActivityLocationChannelId1);
@@ -162,7 +162,7 @@ function updateEmbeddedActivities(content_classification) {
                 const tmp68 = ActivityBucket;
               }
               value4.upsert(application_id, _location.id, tmp61);
-              tmp79Result = tmp79(4110);
+              tmp79Result = tmp79(4189);
               let str5 = tmp79Result.getEmbeddedActivityLocationGuildId(_location);
               if (str5 == null) {
                 str5 = "0";
@@ -187,7 +187,7 @@ function updateEmbeddedActivities(content_classification) {
             const arr = Array.from(value1.userIds);
           }
           obj4.delete(value1.applicationId);
-          const ComponentDispatch = tmp79(1228).ComponentDispatch;
+          const ComponentDispatch = tmp79(1109).ComponentDispatch;
           ComponentDispatch.dispatch(constants.RELEASE_ACTIVITY_WEB_VIEW);
         }
       }
@@ -210,7 +210,7 @@ function updateEmbeddedActivities(content_classification) {
               id = value6.location.id;
             }
             if (id !== _location.id) {
-              const embeddedActivityLocationChannelId2 = tmp79(4110).getEmbeddedActivityLocationChannelId(_location);
+              const embeddedActivityLocationChannelId2 = tmp79(4189).getEmbeddedActivityLocationChannelId(_location);
               channel = channel.getChannel(embeddedActivityLocationChannelId2);
               if (channel != null) {
                 const guildId = channel.getGuildId();
@@ -239,7 +239,7 @@ function updateEmbeddedActivities(content_classification) {
                 obj4[10] = obj.proxyTicket;
                 obj4[11] = renderInFramePool;
                 const result4 = obj4.set(application_id, obj4);
-                const ComponentDispatch2 = tmp79(1228).ComponentDispatch;
+                const ComponentDispatch2 = tmp79(1109).ComponentDispatch;
                 obj5 = { location: null, applicationId: null, isFirstActivityInChannel: null, isStart: null, participants: null, embeddedActivity: null, inviterUserId: null };
                 obj5[0] = _location;
                 obj5[1] = application_id;
@@ -249,7 +249,7 @@ function updateEmbeddedActivities(content_classification) {
                 obj5[5] = obj4;
                 obj5[6] = inviterUserId;
                 ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj5);
-                tmp79(9468);
+                tmp79(9534);
                 if (true === renderInFramePool) {
                   let ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.DISCONNECTED;
                   const _HermesInternal2 = HermesInternal;
@@ -267,12 +267,12 @@ function updateEmbeddedActivities(content_classification) {
                 }
                 ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.ACTIVITY_POPOUT_WINDOW;
                 dispatcherDefault.wait(() => {
-                  callback(706).dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+                  callback(573).dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
                 });
                 const combinedResult = dispatcherDefault;
                 const tmp41 = 0 === arr2.length;
               }
-              const tmp79Result1 = tmp79(4110);
+              const tmp79Result1 = tmp79(4189);
             }
           }
         }
@@ -285,7 +285,7 @@ function updateEmbeddedActivities(content_classification) {
       const _HermesInternal3 = HermesInternal;
       obj5.delete("" + application_id + ":" + tmp59);
     }
-    const someResult1 = mapped.some((userId) => application_id(13963).isActivityParticipantCurrentUserCurrentSession(userId));
+    const someResult1 = mapped.some((userId) => application_id(13985).isActivityParticipantCurrentUserCurrentSession(userId));
   }
 }
 ActivityPanelModes = ActivityPanelModes.ActivityPanelModes;
@@ -340,7 +340,7 @@ prototype["getItems"] = function getItems(arg0) {
         let cachedVisible = self.cachedVisible;
         if (cachedVisible == null) {
           items = self.items;
-          const found = items.filter((contentClassification) => !callback(9511).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found = items.filter((contentClassification) => !callback(9480).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedVisible = found;
           cachedVisible = found;
         }
@@ -349,7 +349,7 @@ prototype["getItems"] = function getItems(arg0) {
         let cachedHidden = self.cachedHidden;
         if (cachedHidden == null) {
           items1 = self.items;
-          const found1 = items1.filter((contentClassification) => callback(9511).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found1 = items1.filter((contentClassification) => callback(9480).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedHidden = found1;
           cachedHidden = found1;
         }
@@ -919,7 +919,7 @@ obj = {
     const result = map5.set(guildId, activities);
     const timestamp = Date.now();
     importDefault = undefined;
-    obj = timestamp(1234);
+    obj = timestamp(1115);
     importDefault = getPlatformDefault(obj.getOS());
     obj.dateRangesForSurfaces = activities.reduce((arg0, arg1) => {
       closure_0 = arg0;

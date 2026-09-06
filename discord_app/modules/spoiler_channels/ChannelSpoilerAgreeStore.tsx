@@ -1,9 +1,9 @@
-// === Module 6184: initialize ===
+// === Module 7330: initialize ===
 
-// Module 6184 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_0 from "fetchFingerprint" /* 1215 */;
+// Module 7330 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_0 from "fetchFingerprint" /* 502 */;
 
 let closure_1 = { users: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

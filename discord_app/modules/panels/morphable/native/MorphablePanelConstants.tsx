@@ -1,7 +1,7 @@
-// === Module 12070: MIN_PAN_GESTURE_MOVE ===
+// === Module 12274: MIN_PAN_GESTURE_MOVE ===
 
-// Module 12070 (MIN_PAN_GESTURE_MOVE)
-import set from "set" /* 1234 */;
+// Module 12274 (MIN_PAN_GESTURE_MOVE)
+import set from "set" /* 1115 */;
 
 set = set.isIOS();
 const result = set.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelConstants.tsx");

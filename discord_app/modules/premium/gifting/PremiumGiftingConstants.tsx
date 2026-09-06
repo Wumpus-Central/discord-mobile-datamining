@@ -1,9 +1,9 @@
-// === Module 10985: GIFT_STYLE_DESCRIPTIONS ===
+// === Module 11017: GIFT_STYLE_DESCRIPTIONS ===
 
-// Module 10985 (GIFT_STYLE_DESCRIPTIONS)
+// Module 11017 (GIFT_STYLE_DESCRIPTIONS)
 import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
-import messagesProxyDefault from "messagesProxy" /* 2432 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
+import messagesProxyDefault from "messagesProxy" /* 2460 */;
 
 ({ SNOWGLOBE, BOX, CUP, STANDARD_BOX, CAKE, CHEST, COFFEE, SEASONAL_STANDARD_BOX, SEASONAL_CAKE, SEASONAL_CHEST, SEASONAL_COFFEE, NITROWEEN_STANDARD } = GuildFeatures.PremiumGiftStyles);
 const obj = { [SNOWGLOBE]: messagesProxyDefault.M6cPwB, [BOX]: messagesProxyDefault.B9XqQk, [CUP]: messagesProxyDefault["6dCq/u"], [STANDARD_BOX]: messagesProxyDefault.GzPel1, [CAKE]: messagesProxyDefault.AJ4iir, [CHEST]: messagesProxyDefault.P5keo3, [COFFEE]: messagesProxyDefault.w84vET, [SEASONAL_STANDARD_BOX]: messagesProxyDefault["vd1fu/"], [SEASONAL_CAKE]: messagesProxyDefault.aubYGR, [SEASONAL_CHEST]: messagesProxyDefault.vjxYqU, [SEASONAL_COFFEE]: messagesProxyDefault.bHuJLa, [NITROWEEN_STANDARD]: messagesProxyDefault["+HMF8k"] };

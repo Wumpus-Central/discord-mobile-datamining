@@ -1,21 +1,21 @@
-// === Module 12247: SpamMessageRequestHamActionSheet ===
+// === Module 12447: SpamMessageRequestHamActionSheet ===
 
-// Module 12247 (SpamMessageRequestHamActionSheet)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 4929 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
-import Background from "Background" /* 5631 */;
-import ActionSheetCloseButton from "ActionSheetCloseButton" /* 5999 */;
-import Form from "Form" /* 8376 */;
-import useMessageRequestActions from "useMessageRequestActions" /* 12242 */;
+// Module 12447 (SpamMessageRequestHamActionSheet)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 4975 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
+import Background from "Background" /* 7150 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 7199 */;
+import Form from "Form" /* 8593 */;
+import useMessageRequestActions from "useMessageRequestActions" /* 12442 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -46,15 +46,15 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   obj = {
     user: stateFromStores,
     onError() {
-      let obj = callback(4194);
+      let obj = callback(4259);
       obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-      const intl = recipientId(1233).intl;
-      obj[1] = intl.string(recipientId(1233).t["EDYbS+"]);
-      obj[2] = callback(7692);
+      const intl = recipientId(1114).intl;
+      obj[1] = intl.string(recipientId(1114).t["EDYbS+"]);
+      obj[2] = callback(5597);
       obj.open(obj);
     },
     onAcceptSuccess(arg0) {
-      callback(4445).hideActionSheet();
+      callback(4527).hideActionSheet();
     }
   };
   const messageRequestActions = obj1.useMessageRequestActions(obj);

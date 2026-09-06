@@ -1,21 +1,21 @@
-// === Module 4166: explicitContentFromProto ===
+// === Module 1935: explicitContentFromProto ===
 
-// Module 4166 (explicitContentFromProto)
+// Module 1935 (explicitContentFromProto)
 import apply from "apply" /* 12 */;
-import initialize from "initialize" /* 586 */;
-import shallowEqualDefault from "shallowEqual" /* 640 */;
-import create from "create" /* 1305 */;
-import defineProperty from "defineProperty" /* 1336 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4171 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4172 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4179 */;
-import closure_2 from "updateExistingSettings" /* 4167 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
-import items from "items" /* 4168 */;
-import ME from "ME" /* 673 */;
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4169 */;
-import set from "defineProtoSetting" /* 4170 */;
-import defineProtoSetting from "defineProtoSetting" /* 4170 */;
+import initialize from "initialize" /* 504 */;
+import shallowEqualDefault from "shallowEqual" /* 558 */;
+import create from "create" /* 1187 */;
+import defineProperty from "defineProperty" /* 1218 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 5423 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7299 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
+import closure_2 from "updateExistingSettings" /* 1936 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
+import items from "items" /* 1937 */;
+import ME from "ME" /* 1074 */;
+import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 1938 */;
+import set from "defineProtoSetting" /* 1939 */;
+import defineProtoSetting from "defineProtoSetting" /* 1939 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -1355,9 +1355,9 @@ definePropertyResult = set.defineProtoSetting("safetySettings", "ignoreProfileSp
 definePropertyResult = set.defineProtoSetting("appearance", "uiDensity", (arg0) => {
   let DEFAULT = arg0;
   if (arg0 === create.UIDensity.UNSET_UI_DENSITY) {
-    DEFAULT = tmp(1305).UIDensity.DEFAULT;
+    DEFAULT = tmp(1187).UIDensity.DEFAULT;
   } else if (DEFAULT == null) {
-    DEFAULT = tmp(1305).UIDensity.DEFAULT;
+    DEFAULT = tmp(1187).UIDensity.DEFAULT;
   }
   return DEFAULT;
 }, (arg0) => arg0);

@@ -1,12 +1,12 @@
-// === Module 15882: _sendWave ===
+// === Module 16044: _sendWave ===
 
-// Module 15882 (_sendWave)
-import handleRelationshipAddErrorDefault from "handleRelationshipAddError" /* 9077 */;
-import _modDef9093 from "module_9093" /* 9093 */;
+// Module 16044 (_sendWave)
+import handleRelationshipAddErrorDefault from "handleRelationshipAddError" /* 9042 */;
+import _modDef10870 from "module_10870" /* 10870 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import { AnalyticsSections } from "ME" /* 673 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import { AnalyticsSections } from "ME" /* 1074 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
 
 const require = arg1;
 function _sendWave() {
@@ -74,17 +74,17 @@ function _sendWave() {
                   c7 = 4;
                   c8 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = flag(4491).getDMChannel(callback);
+                  obj2[0] = flag(4573).getDMChannel(callback);
                   return obj2;
                 } else {
                   constants = 2;
                   if (null != dMFromUserId2) {
-                    let obj7 = callback(12061);
+                    let obj7 = callback(12265);
                     const obj3 = { channelId: null, source: null };
                     obj3[0] = dMFromUserId2;
                     obj3[1] = dependencyMap;
                     obj7.trackWaveCtaClicked(obj3);
-                    let obj9 = flag(7211);
+                    let obj9 = flag(7456);
                     let obj4 = { location: null };
                     obj4[0] = constants.SEND_WAVE;
                     c7 = 5;
@@ -101,9 +101,9 @@ function _sendWave() {
               if (2 !== tmp8) {
                 if (3 === tmp8) {
                   constants = 0;
-                  obj4 = callback(4193);
-                  const intl = callback(1233).intl;
-                  obj4.presentError(intl.string(callback(1233).t.iufib1));
+                  obj4 = callback(4258);
+                  const intl = callback(1114).intl;
+                  obj4.presentError(intl.string(callback(1114).t.iufib1));
                   c8 = 3;
                 } else if (4 === tmp8) {
                   if (arg0 === 1) {
@@ -124,7 +124,7 @@ function _sendWave() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   if (flag) {
-                    obj = flag(4491);
+                    obj = flag(4573);
                     obj7 = { recipientIds: null };
                     obj7[0] = callback;
                     obj.openPrivateChannel(obj7);
@@ -132,9 +132,9 @@ function _sendWave() {
                 }
               }
               constants = 0;
-              obj5 = callback(4193);
-              const intl2 = callback(1233).intl;
-              obj5.presentError(intl2.string(callback(1233).t.iufib1));
+              obj5 = callback(4258);
+              const intl2 = callback(1114).intl;
+              obj5.presentError(intl2.string(callback(1114).t.iufib1));
               c8 = 3;
               const obj8 = { value: null, done: true };
               obj8[0] = undefined;
@@ -175,13 +175,13 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/f
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9093;
+  let obj = _modDef10870;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9093;
+  let obj = _modDef10870;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };

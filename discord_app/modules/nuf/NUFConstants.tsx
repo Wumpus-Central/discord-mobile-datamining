@@ -1,6 +1,6 @@
-// === Module 12479: NewUserTypes ===
+// === Module 12705: NewUserTypes ===
 
-// Module 12479 (NewUserTypes)
+// Module 12705 (NewUserTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/nuf/NUFConstants.tsx");

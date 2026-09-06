@@ -1,6 +1,6 @@
-// === Module 9232: measureView ===
+// === Module 11147: measureView ===
 
-// Module 9232 (measureView)
+// Module 11147 (measureView)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/view_measure/ViewMeasureUtils.native.tsx");

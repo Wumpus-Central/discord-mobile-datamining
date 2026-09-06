@@ -1,27 +1,27 @@
-// === Module 9573: areParticipantsEqual ===
+// === Module 9588: areParticipantsEqual ===
 
-// Module 9573 (areParticipantsEqual)
-import ThemesDefault from "Themes" /* 709 */;
-import set from "set" /* 1234 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9555 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 9558 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 9559 */;
+// Module 9588 (areParticipantsEqual)
+import ThemesDefault from "Themes" /* 576 */;
+import set from "set" /* 1115 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9489 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 9492 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 9493 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "participantFromServer" /* 1385 */;
-import closure_7 from "getParticipants" /* 4494 */;
-import closure_8 from "fetchFingerprint" /* 1215 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_10 from "handleConnectionOpen" /* 1980 */;
-import closure_11 from "anyoneHasFlagInContext" /* 5372 */;
-import closure_12 from "initialize" /* 9552 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9537 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
+import closure_6 from "participantFromServer" /* 1956 */;
+import closure_7 from "getParticipants" /* 4576 */;
+import closure_8 from "fetchFingerprint" /* 502 */;
+import closure_9 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_10 from "handleConnectionOpen" /* 2011 */;
+import closure_11 from "anyoneHasFlagInContext" /* 5419 */;
+import closure_12 from "initialize" /* 9486 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9467 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import Button from "Button" /* 1296 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import Button from "Button" /* 1178 */;
 
 require = arg1;
 function areParticipantsEqual(arg0, arg1) {

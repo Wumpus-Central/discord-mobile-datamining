@@ -1,6 +1,6 @@
-// === Module 13865: metadata ===
+// === Module 13887: metadata ===
 
-// Module 13865 (metadata)
+// Module 13887 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/images/consoles/mobile_background.jpg.js");

@@ -1,11 +1,11 @@
-// === Module 10929: useInappropriateConversationsTiers ===
+// === Module 10967: useInappropriateConversationsTiers ===
 
-// Module 10929 (useInappropriateConversationsTiers)
-import initialize from "initialize" /* 586 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10930 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10931 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10878 */;
+// Module 10967 (useInappropriateConversationsTiers)
+import initialize from "initialize" /* 504 */;
+import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10968 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10969 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 10915 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");

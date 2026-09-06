@@ -1,8 +1,8 @@
-// === Module 4581: AudioSubsystems ===
+// === Module 4617: AudioSubsystems ===
 
-// Module 4581 (AudioSubsystems)
+// Module 4617 (AudioSubsystems)
 import set from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 const InputModes = DesktopSources.InputModes;
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Constants.tsx");

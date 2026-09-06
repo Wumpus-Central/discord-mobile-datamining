@@ -1,19 +1,19 @@
-// === Module 11930: PlaceholderCommandRow ===
+// === Module 12129: PlaceholderCommandRow ===
 
-// Module 11930 (PlaceholderCommandRow)
-import ThemesDefault from "Themes" /* 709 */;
-import TableRowInner from "TableRowInner" /* 5608 */;
-import usePlaceholderWidth from "usePlaceholderWidth" /* 11855 */;
-import CommandRowIconDefault from "CommandRowIcon" /* 11906 */;
+// Module 12129 (PlaceholderCommandRow)
+import ThemesDefault from "Themes" /* 576 */;
+import TableRowInner from "TableRowInner" /* 5605 */;
+import usePlaceholderWidth from "usePlaceholderWidth" /* 12054 */;
+import CommandRowIconDefault from "CommandRowIcon" /* 12105 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import getIndexKey from "getIndexKey" /* 8158 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME" /* 4953 */;
+import getIndexKey from "getIndexKey" /* 9290 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME" /* 4999 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function PlaceholderCommandRow(isFirstRow) {

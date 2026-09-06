@@ -1,11 +1,11 @@
-// === Module 14748: getGiftRowDisplayInfo ===
+// === Module 14904: getGiftRowDisplayInfo ===
 
-// Module 14748 (getGiftRowDisplayInfo)
+// Module 14904 (getGiftRowDisplayInfo)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2368 */;
-import _mod3717 from "module_3717" /* 3717 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6090 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 2396 */;
+import _mod3796 from "module_3796" /* 3796 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 7234 */;
 
 const result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
 
@@ -14,7 +14,7 @@ export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {
 };
 export const formatGiftDate = function formatGiftDate(claimedAt) {
   const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { month: "short", day: "numeric" });
-  return dateTimeFormat.format(_mod3717.parseISO(claimedAt));
+  return dateTimeFormat.format(_mod3796.parseISO(claimedAt));
 };
 export const getGiftSubtext = function getGiftSubtext(claimed) {
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
@@ -41,15 +41,15 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
       }
       obj = { date: null };
       const _Intl2 = Intl;
-      const dateTimeFormat = new Intl.DateTimeFormat(tmp8(1233).intl.currentLocale, { month: "short", day: "numeric" });
-      let tmp8Result = tmp8(3717);
+      const dateTimeFormat = new Intl.DateTimeFormat(tmp8(1114).intl.currentLocale, { month: "short", day: "numeric" });
+      let tmp8Result = tmp8(3796);
       obj[0] = dateTimeFormat.format(tmp8Result.parseISO(claimedAt));
       let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj);
     } else {
       obj1 = { date: null };
       const _Intl = Intl;
-      const dateTimeFormat1 = new Intl.DateTimeFormat(tmp8(1233).intl.currentLocale, { month: "short", day: "numeric" });
-      tmp8Result = tmp8(3717);
+      const dateTimeFormat1 = new Intl.DateTimeFormat(tmp8(1114).intl.currentLocale, { month: "short", day: "numeric" });
+      tmp8Result = tmp8(3796);
       obj1[0] = dateTimeFormat1.format(tmp8Result.parseISO(offeredAt));
       formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj1);
     }

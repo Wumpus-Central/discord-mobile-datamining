@@ -1,16 +1,16 @@
-// === Module 7976: getReferralTrialOfferExpirationCopy ===
+// === Module 8055: getReferralTrialOfferExpirationCopy ===
 
-// Module 7976 (getReferralTrialOfferExpirationCopy)
+// Module 8055 (getReferralTrialOfferExpirationCopy)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initialize from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import DismissibleContent from "DismissibleContent" /* 1372 */;
-import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1374 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 7977 */;
-import closure_3 from "emitChanges" /* 7207 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import initialize from "initialize" /* 504 */;
+import setDefault from "set" /* 1090 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import DismissibleContent from "DismissibleContent" /* 1943 */;
+import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1945 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8056 */;
+import closure_3 from "emitChanges" /* 7452 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
@@ -96,13 +96,13 @@ export const useIsReferralProgramPopoverShowable = function useIsReferralProgram
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {
     let tmp8 = null != stateFromStores1;
     if (tmp8) {
-      let tmpResult = tmp(4298);
-      tmp8 = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1372).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, stateFromStores1).isDismissed;
+      let tmpResult = tmp(4380);
+      tmp8 = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1943).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, stateFromStores1).isDismissed;
     }
     let tmp6 = tmp8;
   } else {
-    tmpResult = tmp(4298);
-    tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1372).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
+    tmpResult = tmp(4380);
+    tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1943).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
   }
   if (isEligibleSenderForReferralProgram) {
     isEligibleSenderForReferralProgram = tmp6;

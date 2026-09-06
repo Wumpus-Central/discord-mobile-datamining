@@ -1,13 +1,13 @@
-// === Module 1378: withContent ===
+// === Module 1949: withContent ===
 
-// Module 1378 (withContent)
-import initializeDefault from "initialize" /* 586 */;
-import batchUpdates from "batchUpdates" /* 702 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isActionRequiredDefault from "isActionRequired" /* 1382 */;
-import closure_3 from "handleUpdateUser" /* 1379 */;
-import closure_4 from "handleRequiredAction" /* 1380 */;
-import identity from "identity" /* 697 */;
+// Module 1949 (withContent)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import batchUpdates from "batchUpdates" /* 1249 */;
+import isActionRequiredDefault from "isActionRequired" /* 1953 */;
+import closure_3 from "handleUpdateUser" /* 1950 */;
+import closure_4 from "handleRequiredAction" /* 1951 */;
+import identity from "identity" /* 1244 */;
 
 require = arg1;
 function withContent(currentlyShown, content) {
@@ -30,7 +30,7 @@ function withContent(currentlyShown, content) {
       const currentlyShownGroup = currentlyShown.currentlyShownGroup;
       currentlyShownGroup.add(content.groupName);
     }
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require(1377).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require(1948).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content)) {
       currentlyShown.shownFatigableCandidate = content;
       const prevFatigableCandidate = currentlyShown.prevFatigableCandidate;
@@ -273,9 +273,9 @@ export const isStateInCooldown = function isStateInCooldown(shownFatigableCandid
 };
 export const addCandidateContent = function addCandidateContent(content) {
   const _require = content;
-  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require(1377).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require(1948).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
   closure_1 = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content);
-  _require(702).batchUpdates(() => {
+  _require(1249).batchUpdates(() => {
     closure_1_6.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
@@ -300,7 +300,7 @@ export const addCandidateContent = function addCandidateContent(content) {
 export const removeCandidateContent = function removeCandidateContent(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  _require(702).batchUpdates(() => {
+  _require(1249).batchUpdates(() => {
     closure_1_6.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);

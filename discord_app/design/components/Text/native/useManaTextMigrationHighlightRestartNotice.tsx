@@ -1,15 +1,15 @@
-// === Module 15549: useManaTextMigrationHighlightRestartNotice ===
+// === Module 15707: useManaTextMigrationHighlightRestartNotice ===
 
-// Module 15549 (useManaTextMigrationHighlightRestartNotice)
+// Module 15707 (useManaTextMigrationHighlightRestartNotice)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUserAgnosticState" /* 4477 */;
+import closure_4 from "getUserAgnosticState" /* 4559 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx");
 
 export const useManaTextMigrationHighlightRestartNotice = function useManaTextMigrationHighlightRestartNotice() {
   const items = [closure_4];
-  const stateFromStores = _require(586).useStateFromStores(items, () => closure_4.get("highlight_mana_text"));
+  const stateFromStores = _require(504).useStateFromStores(items, () => closure_4.get("highlight_mana_text"));
   _require = React.useRef(true);
   const items1 = [stateFromStores];
   const effect = React.useEffect(() => {

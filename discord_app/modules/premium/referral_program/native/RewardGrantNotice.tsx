@@ -1,22 +1,23 @@
-// === Module 13341: OrbsGrantNotice ===
+// === Module 13458: OrbsGrantNotice ===
 
-// Module 13341 (OrbsGrantNotice)
+// Module 13458 (OrbsGrantNotice)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 5597 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 11063 */;
-import apexExperiment from "apexExperiment" /* 13340 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7133 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 11090 */;
+import apexExperiment from "apexExperiment" /* 13446 */;
 import { View } from "get ActivityIndicator" /* 17 */;
+import REFERRAL_TRIAL_OFFER_EXPIRATION_DAYS from "REFERRAL_TRIAL_OFFER_EXPIRATION_DAYS" /* 13444 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function OrbsGrantNotice(nRewardsGranted) {
   const tmp = callback3();
   let obj = { style: tmp.orbsPillContainer, children: null };
-  obj = { initialRenderedBalance: 0, balance: 500 * nRewardsGranted.nRewardsGranted, style: tmp.balancePillOverride };
+  obj = { initialRenderedBalance: 0, balance: nRewardsGranted.nRewardsGranted * closure_5, style: tmp.balancePillOverride };
   const items = [callback(BalanceWidgetPill.BalanceWidgetPill, obj), ];
   obj = { variant: "text-sm/medium", color: "text-strong", children: null };
   const intl = getSystemLocale.intl;
@@ -30,25 +31,27 @@ function DiscountGrantNotice(nRewardsGranted) {
   nRewardsGranted = nRewardsGranted.nRewardsGranted;
   let obj = { style: callback3().container, accessible: true, accessibilityLabel: null, children: null };
   const intl = getSystemLocale.intl;
-  obj[2] = intl.formatToPlainString(getSystemLocale.t["P//01n"], { discountPercent: 30, duration: nRewardsGranted });
+  obj = { discountPercent: closure_4, duration: nRewardsGranted };
+  obj[2] = intl.formatToPlainString(getSystemLocale.t["P//01n"], obj);
   obj = { color: ThemesDefault.colors.ICON_FEEDBACK_POSITIVE, size: "xs" };
   const items = [callback(CheckmarkSmallIcon.CheckmarkSmallIcon, obj), ];
-  obj = { variant: "text-sm/medium", color: "text-strong", children: null };
+  obj1 = { variant: "text-sm/medium", color: "text-strong", children: null };
   const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.format(getSystemLocale.t["P//01n"], { discountPercent: 30, duration: nRewardsGranted });
-  items[1] = callback(Text.Text, obj);
+  obj1[2] = intl2.format(getSystemLocale.t["P//01n"], { discountPercent: closure_4, duration: nRewardsGranted });
+  items[1] = callback(Text.Text, obj1);
   obj[3] = items;
   return callback2(View, obj);
 }
 noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: c4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: c5 } = REFERRAL_TRIAL_OFFER_EXPIRATION_DAYS);
+({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, orbsPillContainer: null, balancePillOverride: null };
 createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, marginTop: ThemesDefault.space.PX_8, alignSelf: "flex-start" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", marginTop: ThemesDefault.space.PX_8, alignSelf: "flex-start" };
 createCacheKey[2] = { backgroundColor: "transparent", top: 1, minHeight: 0, paddingHorizontal: 0 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { flexDirection: "row", alignItems: "center", marginTop: ThemesDefault.space.PX_8, alignSelf: "flex-start" };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flexDirection: "row", alignItems: "center", marginTop: ThemesDefault.space.PX_8, alignSelf: "flex-start" };
 const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/RewardGrantNotice.tsx");
 
 export default function RewardGrantNotice(arg0) {
@@ -62,7 +65,7 @@ export default function RewardGrantNotice(arg0) {
       let tmp3 = callback(OrbsGrantNotice, obj);
     } else {
       tmp3 = null;
-      if (referralRewardType === tmp(13340).ReferralRewardType.DISCOUNT) {
+      if (referralRewardType === tmp(13446).ReferralRewardType.DISCOUNT) {
         obj = { nRewardsGranted: null };
         obj[0] = nRewardsGranted;
         tmp3 = callback(DiscountGrantNotice, obj);
@@ -71,5 +74,3 @@ export default function RewardGrantNotice(arg0) {
     tmp = require;
   }
 };
-export const REFERRAL_DISCOUNT_PERCENTAGE = 30;
-export const REFERRAL_ORBS_PER_CONVERSION = 500;

@@ -1,10 +1,10 @@
-// === Module 6915: PotionBookGemSpotIllustration ===
+// === Module 6351: PotionBookGemSpotIllustration ===
 
-// Module 6915 (PotionBookGemSpotIllustration)
+// Module 6351 (PotionBookGemSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6916 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6352 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PotionBookGemSpotIllustration.native.tsx");

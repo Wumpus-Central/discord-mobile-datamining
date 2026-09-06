@@ -1,9 +1,9 @@
-// === Module 11595: getInvalidLinkSource ===
+// === Module 11796: getInvalidLinkSource ===
 
-// Module 11595 (getInvalidLinkSource)
+// Module 11796 (getInvalidLinkSource)
 import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
-import getIllustrationSource from "getIllustrationSource" /* 8930 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import getIllustrationSource from "getIllustrationSource" /* 8233 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getInvalidLinkSource = function getInvalidLinkSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(11596);
+      return callback(11454);
     },
     darker() {
-      return callback(11597);
+      return callback(11797);
     },
     light() {
-      return callback(11598);
+      return callback(11455);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useInvalidLinkSource = function useInvalidLinkSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(11596);
+      return callback(11454);
     },
     darker() {
-      return callback(11597);
+      return callback(11797);
     },
     light() {
-      return callback(11598);
+      return callback(11455);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const InvalidLink = function InvalidLink(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(11596);
+      return callback(11454);
     },
     darker() {
-      return callback(11597);
+      return callback(11797);
     },
     light() {
-      return callback(11598);
+      return callback(11455);
     }
   };
   obj = {};

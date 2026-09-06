@@ -1,6 +1,6 @@
-// === Module 1466: items ===
+// === Module 1432: items ===
 
-// Module 1466 (items)
+// Module 1432 (items)
 import set from "set" /* 2 */;
 
 const items = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];

@@ -1,24 +1,24 @@
-// === Module 10146: Text ===
+// === Module 10037: Text ===
 
-// Module 10146 (Text)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import Button2 from "Button" /* 4929 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
+// Module 10037 (Text)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import Button2 from "Button" /* 4975 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "createGuildRecordFromRust" /* 1908 */;
-import closure_9 from "createRTCConnection" /* 4554 */;
-import closure_10 from "updateStats" /* 10147 */;
-import closure_11 from "initialize" /* 4568 */;
-import closure_12 from "mergeGuildAvatar" /* 1921 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "createGuildRecordFromRust" /* 1979 */;
+import closure_9 from "createRTCConnection" /* 4583 */;
+import closure_10 from "updateStats" /* 10038 */;
+import closure_11 from "initialize" /* 4599 */;
+import closure_12 from "mergeGuildAvatar" /* 1371 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
 
 require = arg1;
 function Text(arg0) {
@@ -77,25 +77,25 @@ function ObjectKV(obj) {
   });
 }
 function RTCDebugGeneral() {
-  let obj = guildId(586);
+  let obj = guildId(504);
   const items = [closure_9];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ guildId: store.getGuildId(), channelId: store.getChannelId() }), []);
   guildId = stateFromStoresObject.guildId;
   const channelId = stateFromStoresObject.channelId;
   const items1 = [closure_8];
   const items2 = [guildId];
-  const stateFromStores = guildId(586).useStateFromStores(items1, () => closure_1_8.getGuild(guildId), items2);
-  const obj2 = guildId(586);
+  const stateFromStores = guildId(504).useStateFromStores(items1, () => closure_1_8.getGuild(guildId), items2);
+  const obj2 = guildId(504);
   const items3 = [closure_7];
   const items4 = [channelId];
-  const stateFromStores1 = guildId(586).useStateFromStores(items3, () => closure_1_7.getChannel(channelId), items4);
+  const stateFromStores1 = guildId(504).useStateFromStores(items3, () => closure_1_7.getChannel(channelId), items4);
   obj = { id: guildId, name: null };
   let name = null;
-  const obj3 = guildId(586);
+  const obj3 = guildId(504);
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4674)(stateFromStores1) } } }) };
+  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4713)(stateFromStores1) } } }) };
   obj[1] = name;
   return closure_14(Section, obj);
 }
@@ -103,7 +103,7 @@ function RTCDebugContext(context) {
   context = context.context;
   let items = [closure_10];
   const items1 = [context];
-  const stateFromStores = context(586).useStateFromStores(items, () => closure_1_10.getAllStats(context), items1);
+  const stateFromStores = context(504).useStateFromStores(items, () => closure_1_10.getAllStats(context), items1);
   let mapped = null;
   if (null != stateFromStores) {
     mapped = null;
@@ -164,7 +164,7 @@ let closure_22 = importAllResult.memo((data) => {
 let closure_23 = importAllResult.memo((userId) => {
   userId = userId.userId;
   const data = userId.data;
-  let obj = userId(586);
+  let obj = userId(504);
   const items = [closure_12];
   const items1 = [userId];
   const str = obj.useStateFromStores(items, () => closure_1_12.getUser(userId), items1);
@@ -191,7 +191,7 @@ let closure_25 = {
   },
   [MediaEngineContextTypes.STREAM]: function StreamContextInfo() {
     const first = allActiveStreamKeys.getAllActiveStreamKeys()[0];
-    let obj = first(586);
+    let obj = first(504);
     const items = [allActiveStreamKeys];
     const items1 = [first];
     obj = {
@@ -210,7 +210,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
     callback(table[17]).open();
-    return () => callback(706).wait(callback2(10148).close);
+    return () => callback(573).wait(callback2(10039).close);
   }, []);
   let obj = { top: true, left: true, right: true, bottom: true, style: items, children: null };
   items = [tmp.container, style];

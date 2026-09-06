@@ -1,10 +1,10 @@
-// === Module 7433: initialize ===
+// === Module 7678: initialize ===
 
-// Module 7433 (initialize)
+// Module 7678 (initialize)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import ConfettiLocation from "ConfettiLocation" /* 7434 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ConfettiLocation from "ConfettiLocation" /* 7679 */;
 import apply from "apply" /* 12 */;
 
 ({ ShakeLocation, ConfettiLocation } = ConfettiLocation);

@@ -1,7 +1,7 @@
-// === Module 12250: useLongestChannelMessageBeforeReply ===
+// === Module 12450: useLongestChannelMessageBeforeReply ===
 
-// Module 12250 (useLongestChannelMessageBeforeReply)
-import closure_2 from "reinjectEphemerals" /* 4736 */;
+// Module 12450 (useLongestChannelMessageBeforeReply)
+import closure_2 from "reinjectEphemerals" /* 4781 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/useLongestChannelMessageBeforeReply.tsx");
@@ -11,7 +11,7 @@ export const useLongestChannelMessageBeforeReply = function useLongestChannelMes
   dependencyMap = recipientId;
   const items = [closure_2];
   const items1 = [id, recipientId];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     if (null != closure_1) {
       const messages = closure_1_2.getMessages(closure_0);
       const findOldestResult = messages.findOldest((author) => author.author.id === closure_1);

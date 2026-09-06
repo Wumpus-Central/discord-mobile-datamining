@@ -1,30 +1,30 @@
-// === Module 10136: HideStageChannelCallIcon ===
+// === Module 10027: HideStageChannelCallIcon ===
 
-// Module 10136 (HideStageChannelCallIcon)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
-import _modDef4724 from "module_4724" /* 4724 */;
-import openChannelCallModal from "openChannelCallModal" /* 4728 */;
-import componentDidMountDefault from "componentDidMount" /* 9547 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10041 */;
-import registerAssetDefault from "registerAsset" /* 10137 */;
-import registerAssetDefault2 from "registerAsset" /* 10139 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10142 */;
-import CameraButton from "CameraButton" /* 10143 */;
+// Module 10027 (HideStageChannelCallIcon)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import computeChannelNameDefault from "computeChannelName" /* 4713 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
+import _modDef4763 from "module_4763" /* 4763 */;
+import openChannelCallModal from "openChannelCallModal" /* 4767 */;
+import componentDidMountDefault from "componentDidMount" /* 9481 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9924 */;
+import registerAssetDefault from "registerAsset" /* 10028 */;
+import registerAssetDefault2 from "registerAsset" /* 10030 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10033 */;
+import CameraButton from "CameraButton" /* 10034 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getParticipants" /* 4494 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 7391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
-import closure_9 from "initialize" /* 10016 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "getParticipants" /* 4576 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "updateGuildUnreadSentinel" /* 7636 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
+import closure_9 from "initialize" /* 9899 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -330,21 +330,21 @@ export const closeStageModal = function closeStageModal(id) {
   const obj3 = collectGuildAnalyticsMetadata;
   componentDidMountDefault.setHidden(false);
   const obj4 = componentDidMountDefault;
-  const obj5 = _modDef4724;
+  const obj5 = _modDef4763;
   obj5.popWithKey(openChannelCallModal.getVoiceChannelKey(id.id));
 };
 export { HideStageChannelCallIcon };
 export { StageChannelCallHeader };
 export const HideChannelCallButton = function HideChannelCallButton(channel) {
   channel = channel.channel;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   obj = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
   const tmp = callback2();
   obj[0] = registerAssetDefault;
-  const intl = channel(1233).intl;
-  obj[1] = intl.string(channel(1233).t.cpT0Cq);
+  const intl = channel(1114).intl;
+  obj[1] = intl.string(channel(1114).t.cpT0Cq);
   obj[2] = function onPress() {
     let obj = closure_1_1(closure_1_2[14]);
     obj = { video_layout: "pop out" };
@@ -359,7 +359,7 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
     const participant = closure_1_1(closure_1_2[23]).selectParticipant(channel.id, null);
   };
   obj[3] = tmp.iconContainer;
-  obj[5] = callback(channel(1296).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+  obj[5] = callback(channel(1178).MaskedBadge, { value: stateFromStores, maskStyle: {} });
   return callback(ChannelCallNavigatorIconDefault, obj);
 };
 export { StageSettingsButton };

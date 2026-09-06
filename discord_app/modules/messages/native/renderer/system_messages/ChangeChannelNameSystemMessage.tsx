@@ -1,11 +1,11 @@
-// === Module 7903: createChangeChannelNameSystemMessage ===
+// === Module 7982: createChangeChannelNameSystemMessage ===
 
-// Module 7903 (createChangeChannelNameSystemMessage)
-import resultDefault from "result" /* 7874 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7881 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7883 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
+// Module 7982 (createChangeChannelNameSystemMessage)
+import resultDefault from "result" /* 7953 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelNameSystemMessage.tsx");
@@ -29,12 +29,12 @@ export const createChangeChannelNameSystemMessage = function createChangeChannel
     flag = false;
   }
   if ("" === message.content) {
-    let rk0be9 = tmp4(1233).t.hToFyf;
+    let rk0be9 = tmp4(1114).t.hToFyf;
   } else {
-    rk0be9 = tmp4(1233).t.rk0be9;
+    rk0be9 = tmp4(1114).t.rk0be9;
   }
   const tmp8 = createCommonMessageDefault(message);
-  const intl = tmp4(1233).intl;
+  const intl = tmp4(1114).intl;
   const formatToParts = intl.formatToParts;
   if (flag) {
     obj = { username: null, usernameOnClick: null, channelName: null, onEditGroup: null };
@@ -51,7 +51,7 @@ export const createChangeChannelNameSystemMessage = function createChangeChannel
     obj[3] = obj;
     let formatToPartsResult = formatToParts(rk0be9, obj);
   } else {
-    const t = tmp4(1233).t;
+    const t = tmp4(1114).t;
     obj1 = { username: null, usernameOnClick: null, channelName: null };
     obj1[0] = messageAuthorWithProcessedColor.nick;
     obj1[1] = tmp6;
@@ -68,9 +68,9 @@ export const createChangeChannelNameSystemMessage = function createChangeChannel
     const obj3 = { accessibilityActions: null };
     const items = [];
     const obj4 = { label: null, name: null };
-    const intl2 = tmp4(1233).intl;
-    obj4[0] = intl2.string(tmp4(1233).t["5Q9+/L"]);
-    obj4[1] = tmp4(7888).MessageAccessibilityAction.EDIT_GDM;
+    const intl2 = tmp4(1114).intl;
+    obj4[0] = intl2.string(tmp4(1114).t["5Q9+/L"]);
+    obj4[1] = tmp4(7967).MessageAccessibilityAction.EDIT_GDM;
     items[HermesBuiltin.arraySpread(accessibilityActions, 0)] = obj4;
     obj3[0] = items;
     tmp12 = obj3;

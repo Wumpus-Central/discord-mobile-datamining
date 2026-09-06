@@ -1,13 +1,13 @@
-// === Module 13240: SubscriptionAccountHoldNotice ===
+// === Module 13345: SubscriptionAccountHoldNotice ===
 
-// Module 13240 (SubscriptionAccountHoldNotice)
+// Module 13345 (SubscriptionAccountHoldNotice)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import registerAssetDefault from "registerAsset" /* 12543 */;
+import ThemesDefault from "Themes" /* 576 */;
+import registerAssetDefault from "registerAsset" /* 12769 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { SubscriptionStatusTypes } from "ME" /* 673 */;
+import { SubscriptionStatusTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -32,30 +32,30 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     obj = { style: null, children: null };
     obj[0] = tmp.textContainer;
     obj = { size: null, style: null, source: null };
-    obj[0] = subscription(1296).IconSizes.MEDIUM;
+    obj[0] = subscription(1178).IconSizes.MEDIUM;
     obj[1] = tmp.icon;
     obj[2] = registerAssetDefault;
-    const items = [callback(subscription(1296).Icon, obj), ];
+    const items = [callback(subscription(1178).Icon, obj), ];
     obj1 = { style: null, variant: "text-sm/medium", children: null };
     obj1[0] = tmp.text;
-    const intl = subscription(1233).intl;
+    const intl = subscription(1114).intl;
     const obj2 = { endDate: null, planDescription: null };
     obj2[0] = subscription.currentPeriodEnd;
-    obj2[1] = subscription(4139).getDisplayName(subscription.planId);
-    obj1[2] = intl.format(subscription(1233).t["7I21Iz"], obj2);
-    items[1] = callback(subscription(4474).Text, obj1);
+    obj2[1] = subscription(4218).getDisplayName(subscription.planId);
+    obj1[2] = intl.format(subscription(1114).t["7I21Iz"], obj2);
+    items[1] = callback(subscription(4556).Text, obj1);
     obj[1] = items;
     const items1 = [callback2(closure_4, obj), ];
     const obj3 = { size: "sm", text: null, onPress: null };
-    const intl2 = subscription(1233).intl;
-    obj3[1] = intl2.string(subscription(1233).t.VJmUNy);
+    const intl2 = subscription(1114).intl;
+    obj3[1] = intl2.string(subscription(1114).t.VJmUNy);
     obj3[2] = function onPress() {
       return closure_1_3.openURL(subscription(closure_1_2[10]).getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
     };
-    items1[1] = callback(subscription(4929).Button, obj3);
+    items1[1] = callback(subscription(4975).Button, obj3);
     obj[1] = items1;
     tmp2 = callback2(closure_4, obj);
-    const obj6 = subscription(4139);
+    const obj6 = subscription(4218);
   }
   return tmp2;
 };

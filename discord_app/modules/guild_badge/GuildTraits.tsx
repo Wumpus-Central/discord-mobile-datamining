@@ -1,9 +1,9 @@
-// === Module 8888: GuildVisibility ===
+// === Module 8743: GuildVisibility ===
 
-// Module 8888 (GuildVisibility)
+// Module 8743 (GuildVisibility)
 import set2 from "set" /* 2 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1425 */;
-import ME from "ME" /* 673 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
+import ME from "ME" /* 1074 */;
 
 ({ GuildFeatures: obj1, BoostedGuildTiers: c3 } = ME);
 let obj = { PUBLIC: "PUBLIC", INVITE_ONLY: "INVITE_ONLY", APPLY_TO_JOIN: "APPLY_TO_JOIN" };

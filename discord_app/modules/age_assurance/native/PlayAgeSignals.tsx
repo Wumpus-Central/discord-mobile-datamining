@@ -1,6 +1,6 @@
-// === Module 17298: _getAgeSignals ===
+// === Module 8572: _getAgeSignals ===
 
-// Module 17298 (_getAgeSignals)
+// Module 8572 (_getAgeSignals)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;

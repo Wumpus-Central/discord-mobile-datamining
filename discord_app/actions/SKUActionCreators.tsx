@@ -1,11 +1,11 @@
-// === Module 10815: _fetchSKU ===
+// === Module 10816: _fetchSKU ===
 
-// Module 10815 (_fetchSKU)
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 10816 (_fetchSKU)
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getPromotionIdOverride" /* 8513 */;
-import closure_5 from "addSku" /* 4527 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "getPromotionIdOverride" /* 8786 */;
+import closure_5 from "addSku" /* 5510 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchSKU() {
@@ -66,12 +66,12 @@ function _fetchSKU() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            obj3 = lib(706);
+            obj3 = lib(573);
             const obj4 = { type: "SKU_FETCH_FAIL", skuId: null };
             obj4[1] = callback;
             obj3.dispatch(obj4);
             const _HermesInternal = HermesInternal;
-            let tmp23 = lib(4162);
+            let tmp23 = lib(4241);
             tmp23 = new tmp23("Failed to fetch SKU " + callback);
             throw tmp23;
           } else if (arg0 === 1) {
@@ -79,7 +79,7 @@ function _fetchSKU() {
             throw arg1;
           } else if (arg0 !== 2) {
             lib = arg1;
-            obj = lib(706);
+            obj = lib(573);
             obj5 = { type: "SKU_FETCH_SUCCESS", sku: null };
             obj5[1] = lib.body;
             obj.dispatch(obj5);
@@ -434,11 +434,11 @@ function _previewPurchaseSku() {
                 c5.promotion_id_override = promotionIdOverride2;
               }
               promotionIdOverride = 1;
-              obj2 = callback(4756);
+              obj2 = callback(4802);
               const obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
               obj3[0] = billingError.STORE_SKU_PURCHASE(c1);
               obj3[1] = c5;
-              let obj4 = callback(527);
+              let obj4 = callback(1272);
               obj3[3] = obj4.rejectWithMigratedError();
               c5 = 3;
               promotionIdOverride2 = 1;
@@ -449,14 +449,14 @@ function _previewPurchaseSku() {
           } else if (2 === tmp7) {
             promotionIdOverride = 0;
             closure_8 = c3;
-            if (closure_8 instanceof callback(4376).BillingError) {
+            if (closure_8 instanceof callback(4461).BillingError) {
               billingError = closure_8;
             } else {
-              billingError = new callback(4376).BillingError(closure_8);
+              billingError = new callback(4461).BillingError(closure_8);
             }
-            if (billingError.code !== callback(4161).ErrorCodes.BILLING_BUNDLE_ALREADY_PURCHASED) {
-              if (billingError.code !== callback(4161).ErrorCodes.BILLING_BUNDLE_PARTIALLY_OWNED) {
-                if (billingError.code !== callback(4161).ErrorCodes.INVALID_BILLING_ADDRESS) {
+            if (billingError.code !== callback(4240).ErrorCodes.BILLING_BUNDLE_ALREADY_PURCHASED) {
+              if (billingError.code !== callback(4240).ErrorCodes.BILLING_BUNDLE_PARTIALLY_OWNED) {
+                if (billingError.code !== callback(4240).ErrorCodes.INVALID_BILLING_ADDRESS) {
                   promotionIdOverride2 = 3;
                   return { value: null, done: true };
                 }
@@ -656,7 +656,7 @@ function _orderSKU() {
               closure_5 = tmp5;
               body = undefined;
               let id;
-              callback2(706).dispatch({ type: "ORDER_CREATE_START" });
+              callback2(573).dispatch({ type: "ORDER_CREATE_START" });
               c8 = 1;
               obj1 = { order_line_items: null, billing_facet: null, location_facet: null };
               const obj2 = { sku_id: null, quantity: 1, purchase_type: 1 };
@@ -676,11 +676,11 @@ function _orderSKU() {
                 obj1.gifting_facet = obj5;
                 const obj6 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
               }
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj7 = { url: null, body: null, rejectWithError: null };
               obj7[0] = closure_1_7.ORDER_CREATE;
               obj7[1] = obj1;
-              let obj8 = callback(527);
+              let obj8 = callback(1272);
               obj7[2] = obj8.rejectWithMigratedError();
               c9 = 2;
               c10 = 1;
@@ -691,10 +691,10 @@ function _orderSKU() {
           } else if (1 === tmp8) {
             c8 = 0;
             dependencyMap = closure_7;
-            obj4 = id(706);
+            obj4 = id(573);
             obj4.dispatch({ type: "ORDER_CREATE_FAIL" });
             const _HermesInternal = HermesInternal;
-            const billingError = new body(4376).BillingError("Failed to create order: " + dependencyMap);
+            const billingError = new body(4461).BillingError("Failed to create order: " + dependencyMap);
             throw billingError;
           } else if (arg0 === 1) {
             c10 = 3;
@@ -708,7 +708,7 @@ function _orderSKU() {
           } else {
             body = body.body;
             id = body.id;
-            obj = id(706);
+            obj = id(573);
             const obj10 = { type: "ORDER_CREATE_SUCCESS", orderId: null, order: null };
             obj10[1] = id;
             obj10[2] = body;
@@ -813,24 +813,24 @@ function _purchaseSKU() {
                 ({ giftInfoOptions: c7, loadId: c8, countryCode: c9, quantity: c10 } = obj1);
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                throwTypeErrorResult = callback2(706).wait(() => {
+                throwTypeErrorResult = callback2(573).wait(() => {
                   let obj = callback(paymentSource[4]);
-                  obj = { type: "SKU_PURCHASE_START", applicationId: closure_0, skuId: callback };
+                  obj = { type: "SKU_PURCHASE_START", applicationId: closure_0, skuId: callback, isGift, loadId: c8 };
                   obj.dispatch(obj);
                 });
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const obj27 = callback2(706);
-                c11 = callback(8514).isTestModeForApplication(callback);
+                const obj27 = callback2(573);
+                c11 = callback(8854).isTestModeForApplication(callback);
                 c8 = 1;
                 obj2 = { gift: isGift, sku_subscription_plan_id: obj1.subscriptionPlanId };
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const obj28 = callback(8514);
+                const obj28 = callback(8854);
                 c10 = 2;
                 c11 = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = callback(4154).createGatewayCheckoutContext(paymentSource);
+                obj3[0] = callback(4233).createGatewayCheckoutContext(paymentSource);
                 return obj3;
               }
             } else if (1 === tmp8) {
@@ -839,6 +839,7 @@ function _purchaseSKU() {
               if (closure_17 instanceof callback(paymentSource[10]).BillingError) {
                 throwTypeErrorResult = closure_17;
               } else {
+                throwTypeErrorResult = new.target;
                 throwTypeErrorResult = new.target;
                 throwTypeErrorResult = new callback(paymentSource[10]).BillingError(closure_17);
               }
@@ -995,7 +996,7 @@ function _purchaseSKU() {
                     c3 = "";
                   }
                   closure_12.return_url = aPIBaseURL + c7.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(paymentSource.type, c3, "success");
-                  const tmp33 = closure_12;
+                  const tmp34 = closure_12;
                 }
               } else if (4 === tmp8) {
                 if (arg0 === 1) {
@@ -1035,7 +1036,7 @@ function _purchaseSKU() {
                 throwTypeErrorResult = paymentSource;
                 throwTypeErrorResult = callback2(paymentSource[4]);
                 let dispatch = throwTypeErrorResult.dispatch;
-                obj = { type: "SKU_PURCHASE_SUCCESS", skuId: null, libraryApplications: null, entitlements: null, giftCode: null };
+                obj = { type: "SKU_PURCHASE_SUCCESS", skuId: null, libraryApplications: null, entitlements: null, giftCode: null, loadId: null };
                 throwTypeErrorResult = callback2;
                 obj[1] = callback2;
                 throwTypeErrorResult = closure_15;
@@ -1048,6 +1049,7 @@ function _purchaseSKU() {
                 obj[2] = found;
                 obj[3] = closure_15.body.entitlements;
                 obj[4] = closure_15.body.gift_code;
+                obj[5] = c8;
                 dispatch(obj);
                 obj = {};
                 dispatch = Object.assign(closure_15.body);
@@ -1137,10 +1139,10 @@ function _resendPaymentVerificationEmail() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = closure_4;
-          if (callback instanceof callback(4376).BillingError) {
+          if (callback instanceof callback(4461).BillingError) {
             let billingError = callback;
           } else {
-            billingError = new callback(4376).BillingError(callback);
+            billingError = new callback(4461).BillingError(callback);
           }
           throw billingError;
         } else if (arg0 === 1) {

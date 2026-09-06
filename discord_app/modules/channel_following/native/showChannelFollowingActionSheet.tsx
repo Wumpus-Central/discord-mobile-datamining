@@ -1,8 +1,8 @@
-// === Module 11186: showChannelFollowingActionSheet ===
+// === Module 11325: showChannelFollowingActionSheet ===
 
-// Module 11186 (showChannelFollowingActionSheet)
+// Module 11325 (showChannelFollowingActionSheet)
 import noopAll from "noop" /* 19 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -110,5 +110,5 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
       return callback(dependencyMap[2]).hideActionSheet();
     }
   };
-  obj.openLazy(_require(2008)(11187, dependencyMap.paths), "NewChannelFollower." + id, obj);
+  obj.openLazy(_require(1896)(11326, dependencyMap.paths), "NewChannelFollower." + id, obj);
 };

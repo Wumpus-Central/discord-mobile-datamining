@@ -1,23 +1,23 @@
-// === Module 10249: ConnectedInAppNotificationSettingsScreen ===
+// === Module 10142: ConnectedInAppNotificationSettingsScreen ===
 
-// Module 10249 (ConnectedInAppNotificationSettingsScreen)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import computeChannelName from "computeChannelName" /* 4674 */;
-import Form from "Form" /* 8376 */;
-import ChannelSettingsNotificationsGuardDefault from "ChannelSettingsNotificationsGuard" /* 10250 */;
+// Module 10142 (ConnectedInAppNotificationSettingsScreen)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import computeChannelName from "computeChannelName" /* 4713 */;
+import Form from "Form" /* 8593 */;
+import ChannelSettingsNotificationsGuardDefault from "ChannelSettingsNotificationsGuard" /* 10143 */;
 import importAllResult from "noop" /* 19 */;
-import { isMultiUserDM } from "createChannelRecord" /* 1390 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "markAllUserIdListsStale" /* 4130 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import { isMultiUserDM } from "createChannelRecord" /* 1961 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "markAllUserIdListsStale" /* 4209 */;
+import closure_7 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
 function ConnectedInAppNotificationSettingsScreen(channel) {
   channel = channel.channel;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_7];
   obj = {
     channel,
@@ -159,7 +159,7 @@ const memoResult = importAllResult.memo((channelId) => {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback(channelId(6017).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return callback(channelId(7000).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });
 let result = require("set").fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 13660: NUFChannelsActionSheet ===
+// === Module 13768: NUFChannelsActionSheet ===
 
-// Module 13660 (NUFChannelsActionSheet)
-import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 13661 */;
-import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 13662 */;
+// Module 13768 (NUFChannelsActionSheet)
+import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 13769 */;
+import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 13770 */;
 import closure_3 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -31,13 +31,13 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     children: null
   };
   obj = { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
-  const intl = markAsDismissed(1233).intl;
-  obj[1] = intl.string(markAsDismissed(1233).t.Ay9424);
-  const intl2 = markAsDismissed(1233).intl;
-  obj[2] = intl2.string(markAsDismissed(1233).t.mufH2P);
-  const intl3 = markAsDismissed(1233).intl;
-  obj[3] = intl3.string(markAsDismissed(1233).t.BddRzS);
+  const intl = markAsDismissed(1114).intl;
+  obj[1] = intl.string(markAsDismissed(1114).t.Ay9424);
+  const intl2 = markAsDismissed(1114).intl;
+  obj[2] = intl2.string(markAsDismissed(1114).t.mufH2P);
+  const intl3 = markAsDismissed(1114).intl;
+  obj[3] = intl3.string(markAsDismissed(1114).t.BddRzS);
   obj[4] = callback;
   obj[2] = jsx(NUFActionSheetTemplateDefault, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
-  return jsx(markAsDismissed(5631).BottomSheet, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
+  return jsx(markAsDismissed(7150).BottomSheet, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
 };

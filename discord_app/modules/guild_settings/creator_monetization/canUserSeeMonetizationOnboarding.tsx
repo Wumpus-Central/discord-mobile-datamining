@@ -1,10 +1,10 @@
-// === Module 6115: canUserSeeMonetizationOnboarding ===
+// === Module 7259: canUserSeeMonetizationOnboarding ===
 
-// Module 6115 (canUserSeeMonetizationOnboarding)
-import isRestrictedFromShowingGuildPurchaseEntryPoints from "isRestrictedFromShowingGuildPurchaseEntryPoints" /* 4113 */;
-import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 6116 */;
-import set from "set" /* 6117 */;
-import closure_2 from "mergeGuildAvatar" /* 1921 */;
+// Module 7259 (canUserSeeMonetizationOnboarding)
+import isRestrictedFromShowingGuildPurchaseEntryPoints from "isRestrictedFromShowingGuildPurchaseEntryPoints" /* 4192 */;
+import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 7260 */;
+import set from "set" /* 7261 */;
+import closure_2 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx");

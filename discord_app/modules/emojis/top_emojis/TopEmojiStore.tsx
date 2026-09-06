@@ -1,8 +1,8 @@
-// === Module 5413: initialize ===
+// === Module 5462: initialize ===
 
-// Module 5413 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 5462 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 let obj = { topEmojisByGuildId: {} };
 let closure_2 = {};

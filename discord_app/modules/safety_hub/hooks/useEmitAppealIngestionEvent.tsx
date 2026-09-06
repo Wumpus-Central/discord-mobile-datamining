@@ -1,10 +1,10 @@
-// === Module 11690: useEmitAppealIngestionEvent ===
+// === Module 11888: useEmitAppealIngestionEvent ===
 
-// Module 11690 (useEmitAppealIngestionEvent)
+// Module 11888 (useEmitAppealIngestionEvent)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8720 */;
-import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView" /* 8709 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
+import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView" /* 8419 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_6, AnalyticEvents: error } = ME);

@@ -1,9 +1,9 @@
-// === Module 7397: getDurationString ===
+// === Module 7642: getDurationString ===
 
-// Module 7397 (getDurationString)
+// Module 7642 (getDurationString)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import hooksDefault from "hooks" /* 4074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import hooksDefault from "hooks" /* 4153 */;
 
 function getDurationString(seconds) {
   seconds = seconds.seconds;

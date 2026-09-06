@@ -1,11 +1,11 @@
-// === Module 16435: VibegrationsModelSettingsSheet ===
+// === Module 16598: VibegrationsModelSettingsSheet ===
 
-// Module 16435 (VibegrationsModelSettingsSheet)
-import ThemesDefault from "Themes" /* 709 */;
-import messagesProxyDefault from "messagesProxy" /* 3500 */;
+// Module 16598 (VibegrationsModelSettingsSheet)
+import ThemesDefault from "Themes" /* 576 */;
+import messagesProxyDefault from "messagesProxy" /* 3547 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "rejectPendingPublish" /* 16427 */;
-import { sendModelSettings } from "rejectPendingPublish" /* 16427 */;
+import closure_4 from "rejectPendingPublish" /* 16589 */;
+import { sendModelSettings } from "rejectPendingPublish" /* 16589 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -15,7 +15,7 @@ const result = require("set").fileFinishedImporting("modules/vibegrations/native
 export default function VibegrationsModelSettingsSheet(projectId) {
   projectId = projectId.projectId;
   importDefault = undefined;
-  let obj = projectId(586);
+  let obj = projectId(504);
   const items = [closure_4];
   const items1 = [projectId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getModelSettings(projectId), items1);
@@ -38,15 +38,15 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     return null;
   } else {
     ({ settings, choices } = stateFromStores);
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     const stringResult = intl.string(messagesProxyDefault["9FRudW"]);
-    const intl2 = tmp(1233).intl;
+    const intl2 = tmp(1114).intl;
     const stringResult1 = intl2.string(messagesProxyDefault["4AsQHS"]);
     obj = { scrollable: true, header: null, children: null };
     obj = { title: null };
-    const intl3 = tmp(1233).intl;
+    const intl3 = tmp(1114).intl;
     obj[0] = intl3.string(messagesProxyDefault["2NWMqY"]);
-    obj[1] = callback(tmp(5630).BottomSheetTitleHeader, obj);
+    obj[1] = callback(tmp(7149).BottomSheetTitleHeader, obj);
     obj1 = { children: null };
     const obj2 = { direction: "vertical", spacing: null, children: null };
     obj2[1] = ThemesDefault.space.PX_16;
@@ -64,8 +64,8 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     obj3[3] = stringResult;
     obj3[4] = stringResult;
     const main = choices.main;
-    obj3[5] = main.map((label) => callback2(projectId(7705).TableRadioRow, { label: label.label, subLabel: projectId(16437).PROVIDER_LABELS[label.provider], value: label.id }, label.id));
-    const items3 = [callback(tmp(7704).TableRadioGroup, obj3), , ];
+    obj3[5] = main.map((label) => callback2(projectId(5688).TableRadioRow, { label: label.label, subLabel: projectId(16600).PROVIDER_LABELS[label.provider], value: label.id }, label.id));
+    const items3 = [callback(tmp(5685).TableRadioGroup, obj3), , ];
     const obj4 = { hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
     obj4[1] = settings.main.thinking;
     obj4[2] = function onChange(arg0) {
@@ -81,21 +81,21 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     obj4[4] = stringResult1;
     const thinking = choices.thinking;
     obj4[5] = thinking.map((value) => {
-      let tmp2 = projectId(16437).THINKING_LABELS[value];
+      let tmp2 = projectId(16600).THINKING_LABELS[value];
       if (tmp2 == null) {
         tmp2 = value;
       }
-      return closure_6(projectId(7705).TableRadioRow, { label: tmp2, value }, value);
+      return closure_6(projectId(5688).TableRadioRow, { label: tmp2, value }, value);
     });
-    items3[1] = callback(tmp(7704).TableRadioGroup, obj4);
+    items3[1] = callback(tmp(5685).TableRadioGroup, obj4);
     const obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl4 = tmp(1233).intl;
+    const intl4 = tmp(1114).intl;
     obj5[2] = intl4.string(messagesProxyDefault.ICU5aW);
-    items3[2] = callback(tmp(4474).Text, obj5);
+    items3[2] = callback(tmp(4556).Text, obj5);
     obj2[2] = items3;
-    obj1[0] = callback2(tmp(4927).Stack, obj2);
-    obj[2] = callback(tmp(5633).BottomSheetScrollView, obj1);
-    return callback(tmp(5998).ActionSheet, obj);
+    obj1[0] = callback2(tmp(4973).Stack, obj2);
+    obj[2] = callback(tmp(6627).BottomSheetScrollView, obj1);
+    return callback(tmp(7198).ActionSheet, obj);
   }
 };
 export const VIBEGRATIONS_MODEL_SETTINGS_SHEET_KEY = "VibegrationsModelSettingsSheet";

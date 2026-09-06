@@ -1,8 +1,8 @@
-// === Module 12182: getBarText ===
+// === Module 12384: getBarText ===
 
-// Module 12182 (getBarText)
+// Module 12384 (getBarText)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 const result = set.fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");
 

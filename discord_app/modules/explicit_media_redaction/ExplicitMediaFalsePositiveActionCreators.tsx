@@ -1,8 +1,8 @@
-// === Module 8411: disableFalsePositiveButton ===
+// === Module 9397: disableFalsePositiveButton ===
 
-// Module 8411 (disableFalsePositiveButton)
+// Module 9397 (disableFalsePositiveButton)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 function disableFalsePositiveButton(channelId, messageId) {
   let obj = dispatcherDefault;

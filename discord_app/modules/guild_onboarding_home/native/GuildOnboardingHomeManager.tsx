@@ -1,18 +1,18 @@
-// === Module 17204: prototype ===
+// === Module 17370: prototype ===
 
-// Module 17204 (prototype)
-import initializeDefault from "initialize" /* 5495 */;
+// Module 17370 (prototype)
+import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 1983 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import closure_9 from "createGuildRecordFromRust" /* 1908 */;
-import closure_10 from "handleConnectionOpen" /* 4299 */;
-import closure_11 from "handleSettingsLoadSuccess" /* 4708 */;
-import closure_12 from "set" /* 4709 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
+import closure_5 from "initialize" /* 2014 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "trackCommunicationDisabled" /* 2021 */;
+import closure_9 from "createGuildRecordFromRust" /* 1979 */;
+import closure_10 from "handleConnectionOpen" /* 4381 */;
+import closure_11 from "handleSettingsLoadSuccess" /* 4747 */;
+import closure_12 from "set" /* 4748 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
 
 const require = arg1;
 initializeDefault;

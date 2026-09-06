@@ -1,21 +1,21 @@
-// === Module 17727: AppStoreParentalRevocationScreen ===
+// === Module 17887: AppStoreParentalRevocationScreen ===
 
-// Module 17727 (AppStoreParentalRevocationScreen)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2662 */;
-import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4927 */;
-import ModalScreen from "ModalScreen" /* 8711 */;
-import ModalContent from "ModalContent" /* 8712 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8747 */;
-import ModalActionButton from "ModalActionButton" /* 10958 */;
-import ModalFooter from "ModalFooter" /* 11727 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17714 */;
+// Module 17887 (AppStoreParentalRevocationScreen)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 2690 */;
+import Text from "Text" /* 4556 */;
+import Stack from "Stack" /* 4973 */;
+import ModalScreen from "ModalScreen" /* 8421 */;
+import ModalContent from "ModalContent" /* 8422 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8580 */;
+import ModalActionButton from "ModalActionButton" /* 10996 */;
+import ModalFooter from "ModalFooter" /* 11926 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17874 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -28,7 +28,7 @@ const result = require("set").fileFinishedImporting("modules/safety_flows/native
 export default function AppStoreParentalRevocationScreen() {
   const tmp = callback3();
   const callback = React.useCallback(() => {
-    callback(table[5]).openURL("https://support.discord.com/hc/articles/14155060633623");
+    callback(table[5]).openURL("https://support.discord.com/hc/en-us/articles/42855178312087");
   }, []);
   let obj = { children: null };
   obj = { children: null };

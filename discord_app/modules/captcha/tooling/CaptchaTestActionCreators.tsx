@@ -1,8 +1,8 @@
-// === Module 15527: _testCaptcha ===
+// === Module 15685: _testCaptcha ===
 
-// Module 15527 (_testCaptcha)
+// Module 15685 (_testCaptcha)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _testCaptcha() {

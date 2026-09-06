@@ -1,9 +1,9 @@
-// === Module 1899: parseSkuIdFromServerData ===
+// === Module 1883: parseSkuIdFromServerData ===
 
-// Module 1899 (parseSkuIdFromServerData)
+// Module 1883 (parseSkuIdFromServerData)
 import set from "set" /* 2 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1898 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1882 */;
 
 let c2 = "media/v1/collectibles-shop";
 let result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesAssetUtils.tsx");

@@ -1,10 +1,10 @@
-// === Module 9608: canRenderParticipantVideo ===
+// === Module 9622: canRenderParticipantVideo ===
 
-// Module 9608 (canRenderParticipantVideo)
-import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
-import ParticipantTypes from "ParticipantTypes" /* 4499 */;
-import { Features } from "DesktopSources" /* 4542 */;
+// Module 9622 (canRenderParticipantVideo)
+import closure_2 from "fetchFingerprint" /* 502 */;
+import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
+import ParticipantTypes from "ParticipantTypes" /* 4581 */;
+import { Features } from "DesktopSources" /* 4585 */;
 
 const require = arg1;
 function canRenderParticipantVideo(participant, closure_1_4) {
@@ -83,5 +83,5 @@ export { canRenderParticipantVideo };
 export const useCanRenderParticipantVideo = function useCanRenderParticipantVideo(stateFromStores) {
   const _require = stateFromStores;
   const items = [closure_3];
-  return _require(586).useStateFromStores(items, () => closure_1_8(closure_0, closure_1_3));
+  return _require(504).useStateFromStores(items, () => closure_1_8(closure_0, closure_1_3));
 };

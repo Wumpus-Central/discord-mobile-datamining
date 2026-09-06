@@ -1,19 +1,19 @@
-// === Module 14932: ESTIMATED_CARD_HEIGHT ===
+// === Module 15090: ESTIMATED_CARD_HEIGHT ===
 
-// Module 14932 (ESTIMATED_CARD_HEIGHT)
-import ThemesDefault from "Themes" /* 709 */;
-import _mod1349 from "module_1349" /* 1349 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
+// Module 15090 (ESTIMATED_CARD_HEIGHT)
+import ThemesDefault from "Themes" /* 576 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
+import _mod4412 from "module_4412" /* 4412 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import closure_9 from "initializeState" /* 7459 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5396 */;
-import { NOOP } from "sum" /* 502 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import closure_9 from "initializeState" /* 7703 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5444 */;
+import { NOOP } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 let c5 = importAllResult;
@@ -21,21 +21,21 @@ let c5 = importAllResult;
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let result = createCacheKey.experimental_createToken((theme) => {
   theme = theme.theme;
-  const obj = _mod1349;
+  const obj = _mod4412;
   const tmp = require;
   const internal = ThemesDefault.internal;
   const colors = ThemesDefault.colors;
-  const semanticColor = internal.resolveSemanticColor(theme, _mod1349.isThemeDark(theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
-  const isThemeDarkResult = _mod1349.isThemeDark(theme);
+  const semanticColor = internal.resolveSemanticColor(theme, _mod4412.isThemeDark(theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
+  const isThemeDarkResult = _mod4412.isThemeDark(theme);
   return hexToRgba.hexOpacityToRgba(semanticColor, 0);
 });
 let result1 = createCacheKey.experimental_createToken((theme) => {
   theme = theme.theme;
-  const isThemeDarkResult = _mod1349.isThemeDark(theme);
+  const isThemeDarkResult = _mod4412.isThemeDark(theme);
   const internal = ThemesDefault.internal;
   const colors = ThemesDefault.colors;
   const semanticColor = internal.resolveSemanticColor(theme, isThemeDarkResult ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
-  const obj = _mod1349;
+  const obj = _mod4412;
   const tmp = require;
   let num = 0.5;
   if (isThemeDarkResult) {
@@ -44,12 +44,12 @@ let result1 = createCacheKey.experimental_createToken((theme) => {
   return hexToRgba.hexOpacityToRgba(semanticColor, num);
 });
 let result2 = createCacheKey.experimental_createToken((theme) => {
-  const obj = _mod1349;
+  const obj = _mod4412;
   const colors = ThemesDefault.colors;
-  return _mod1349.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
+  return _mod4412.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
 });
 const PX_16 = ThemesDefault.space.PX_16;
-let obj = { container: null, heroContainer: null, heroImg: null, heroLinearGradientOverlay: null, previewBadge: null, previewBadgeText: null, rewardImgContainer: null, heroFooterContainer: null, heroFooterLeftContainer: null, detailsWrapper: null, detailsContainer: null, questName: null, bodyContainer: null, subtitleRow: null, orbWithAmountRow: null, detailsTextContainer: null, buttonContainers: null, equalWidthContainer: null };
+let obj = { container: null, heroContainer: null, heroImg: null, heroLinearGradientOverlay: null, previewBadge: null, previewBadgeText: null, rewardImgContainer: null, heroFooterContainer: null, heroFooterLeftContainer: null, promotedByRow: null, shrinkableText: null, detailsWrapper: null, detailsContainer: null, questName: null, bodyContainer: null, subtitleRow: null, rewardSubtitleRow: null, orbWithAmountRow: null, detailsTextContainer: null, buttonContainers: null, equalWidthContainer: null };
 obj = { position: "relative", padding: 0, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: ThemesDefault.space.PX_16, overflow: "hidden" };
 obj[0] = obj;
 createCacheKey = { display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: ThemesDefault.space.PX_12 };
@@ -65,23 +65,27 @@ obj[5] = { textTransform: "uppercase" };
 createCacheKey = { height: 64, width: 64, marginRight: ThemesDefault.space.PX_12 };
 obj[6] = createCacheKey;
 obj[7] = { display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end" };
-obj[8] = { display: "flex", flexDirection: "column", alignItems: "flex-start" };
-obj[9] = { display: "flex", padding: ThemesDefault.space.PX_12 };
-obj[10] = { display: "flex", flexDirection: "row" };
-let obj5 = { display: "flex", padding: ThemesDefault.space.PX_12 };
-obj[11] = { marginBottom: ThemesDefault.space.PX_4 };
-let obj6 = { marginBottom: ThemesDefault.space.PX_4 };
-obj[12] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
-let obj7 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
-obj[13] = { flexDirection: "row", alignItems: "center", rowGap: ThemesDefault.space.PX_4, columnGap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
-obj[14] = { flexDirection: "row", alignItems: "center" };
-obj[15] = { flex: 1, justifyContent: "center" };
-let obj8 = { flexDirection: "row", alignItems: "center", rowGap: ThemesDefault.space.PX_4, columnGap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
-obj[16] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12 };
-obj[17] = { flexBasis: 0, flexGrow: 1, flexShrink: 1 };
+obj[8] = { display: "flex", flexDirection: "column", alignItems: "flex-start", flexShrink: 1 };
+obj[9] = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", columnGap: ThemesDefault.space.PX_4, rowGap: ThemesDefault.space.PX_4 };
+obj[10] = { flexShrink: 1 };
+let obj5 = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", columnGap: ThemesDefault.space.PX_4, rowGap: ThemesDefault.space.PX_4 };
+obj[11] = { display: "flex", padding: ThemesDefault.space.PX_12 };
+obj[12] = { display: "flex", flexDirection: "row" };
+let obj6 = { display: "flex", padding: ThemesDefault.space.PX_12 };
+obj[13] = { marginBottom: ThemesDefault.space.PX_4 };
+let obj7 = { marginBottom: ThemesDefault.space.PX_4 };
+obj[14] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
+let obj8 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
+obj[15] = { flexDirection: "row", alignItems: "center", rowGap: ThemesDefault.space.PX_4, columnGap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
+obj[16] = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", flexShrink: 1 };
+obj[17] = { flexDirection: "row", alignItems: "center", flexShrink: 1 };
+obj[18] = { flex: 1, justifyContent: "center" };
+let obj9 = { flexDirection: "row", alignItems: "center", rowGap: ThemesDefault.space.PX_4, columnGap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
+obj[19] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12 };
+obj[20] = { flexBasis: 0, flexGrow: 1, flexShrink: 1 };
 let closure_16 = createCacheKey.createStyles(obj);
 let closure_17 = createCacheKey.createStyleProperties({ gradientStart: result, gradientMid: result1, gradientEnd: result2 });
-let obj9 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12 };
+let obj10 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12 };
 const memoResult = importAllResult.memo((questContent) => {
   function trackClick(CLAIM_REWARD) {
     let obj = closure_1_0(QUEST_HOME_MOBILE[34]);
@@ -168,7 +172,7 @@ const memoResult = importAllResult.memo((questContent) => {
   }, items);
   let tmp3Result = tmp3(tmp4[19]);
   const questGameLogotypeAssetUrl = tmp3Result.useQuestGameLogotypeAssetUrl(quest);
-  ({ gradientStart, gradientMid, gradientEnd } = product());
+  ({ gradientEnd, gradientStart, gradientMid } = product());
   tmp3Result = tmp3(tmp4[20]);
   let items1 = [quest.id];
   let tmp17 = sourceQuestContent(tmp3Result.useRecyclingState(null, items1), 2);
@@ -503,12 +507,12 @@ const memoResult = importAllResult.memo((questContent) => {
               } else {
                 closure_0 = tmp2;
                 closure_1_5.log("Enrolling in quest");
-                closure_1_0(11137);
+                closure_1_0(11276);
                 obj1 = { questContent: null, questContentCTA: null, sourceQuestContent: null };
                 obj1[0] = dependencyMap;
                 if (!closure_1_20) {
                   if (!closure_1_14) {
-                    let START_QUEST = tmp31(7484).QuestContentCTA.ACCEPT_QUEST;
+                    let START_QUEST = tmp31(7728).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj1[1] = START_QUEST;
                   obj1[2] = closure_1_4;
@@ -516,7 +520,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   v0 = 1;
                   dependencyMap = 1;
                 }
-                START_QUEST = tmp31(7484).QuestContentCTA.START_QUEST;
+                START_QUEST = tmp31(7728).QuestContentCTA.START_QUEST;
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -532,7 +536,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   obj = { questId: null, sourceQuestContent: null };
                   obj[0] = v0.id;
                   obj[1] = closure_4;
-                  v0(14966)(obj);
+                  v0(15124)(obj);
                   dependencyMap = 3;
                 }
                 callback2();
@@ -598,7 +602,8 @@ const memoResult = importAllResult.memo((questContent) => {
   const tmp3Result35 = tmp3(tmp4[52]);
   const questDescription = tmp3(tmp4[42]).useQuestDescription(quest, sourceQuestContent, tmp5.QUEST_HOME_MOBILE, tmp3(tmp4[53]).GameProfileSources.QuestHome);
   const result3 = 16 * Math.min(fontScale, 1.3);
-  const items10 = [null != claimedAt, result2, questOrbRewardQuantityForUser, orbQuantityClaimed, defaultRewardName, defaultRewardNameWithArticle, result3, scaledTextLineHeight, tmp9.orbWithAmountRow];
+  const items10 = [null != claimedAt, result2, questOrbRewardQuantityForUser, orbQuantityClaimed, defaultRewardName, defaultRewardNameWithArticle, result3, scaledTextLineHeight, , , ];
+  ({ orbWithAmountRow: arr13[8], rewardSubtitleRow: arr13[9], shrinkableText: arr13[10] } = tmp9);
   let tmp87 = isQuestExpiredResult;
   const memo1 = obj5.useMemo(() => {
     let obj = closure_1_0(QUEST_HOME_MOBILE[54]);
@@ -607,13 +612,13 @@ const memoResult = importAllResult.memo((questContent) => {
       num = 16 / scaledTextLineHeight;
     }
     result = tmp / 8;
-    obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary" };
+    obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: shrinkableText.shrinkableText };
     obj = { width: tmp, height: tmp, marginRight: result, marginTop: 0, transform: items };
     items = [{ translateY: num }];
     if (closure_16) {
       if (result2) {
         obj1 = { style: null, children: null };
-        obj1[0] = closure_7.orbWithAmountRow;
+        obj1[0] = tmp6.orbWithAmountRow;
         const obj2 = { size: "custom", color: "mobile-text-heading-primary", style: null };
         obj2[2] = obj;
         const items1 = [defaultRewardNameWithArticle(tmp2(tmp3[55]).OrbsIcon, obj2), , ];
@@ -621,7 +626,7 @@ const memoResult = importAllResult.memo((questContent) => {
         const obj4 = { width: null };
         obj4[0] = result;
         obj3[0] = obj4;
-        items1[1] = defaultRewardNameWithArticle(closure_7, obj3);
+        items1[1] = defaultRewardNameWithArticle(shrinkableText, obj3);
         const obj5 = {};
         const merged = Object.assign(obj);
         const intl4 = tmp2(tmp3[44]).intl;
@@ -634,21 +639,21 @@ const memoResult = importAllResult.memo((questContent) => {
         obj5.children = intl4.format(tmp2(tmp3[44]).t["nLXlh+"], obj6);
         items1[2] = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj5);
         obj1[1] = items1;
-        let tmp14Result = questEnrollmentBlockedUntil(closure_7, obj1);
+        let tmp15Result = questEnrollmentBlockedUntil(shrinkableText, obj1);
         const tmp30 = questEnrollmentBlockedUntil;
-        const tmp31 = closure_7;
-        const tmp33 = defaultRewardNameWithArticle;
+        const tmp31 = shrinkableText;
+        const tmp32 = defaultRewardNameWithArticle;
       }
-      return tmp14Result;
+      return tmp15Result;
     }
     if (closure_16) {
       const obj7 = {};
       const merged1 = Object.assign(obj);
       obj7.children = defaultRewardName;
-      tmp14Result = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj7);
+      tmp15Result = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj7);
     } else if (result2) {
       const obj8 = { style: null, children: null };
-      obj8[0] = closure_7.orbWithAmountRow;
+      obj8[0] = tmp6.rewardSubtitleRow;
       const obj9 = {};
       const merged2 = Object.assign(obj);
       const intl2 = tmp2(tmp3[44]).intl;
@@ -659,7 +664,7 @@ const memoResult = importAllResult.memo((questContent) => {
       obj9.children = intl2.format(tmp2(tmp3[44]).t["0IUT4Y"], obj10);
       const items2 = [defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj9), ];
       const obj11 = { style: null, children: null };
-      obj11[0] = closure_7.orbWithAmountRow;
+      obj11[0] = tmp6.orbWithAmountRow;
       const obj12 = { size: "custom", color: "mobile-text-heading-primary", style: null };
       obj12[2] = obj;
       const items3 = [defaultRewardNameWithArticle(tmp2(tmp3[55]).OrbsIcon, obj12), , ];
@@ -667,7 +672,7 @@ const memoResult = importAllResult.memo((questContent) => {
       const obj14 = { width: null };
       obj14[0] = result;
       obj13[0] = obj14;
-      items3[1] = defaultRewardNameWithArticle(closure_7, obj13);
+      items3[1] = defaultRewardNameWithArticle(shrinkableText, obj13);
       const obj15 = {};
       const merged3 = Object.assign(obj);
       const intl3 = tmp2(tmp3[44]).intl;
@@ -680,9 +685,9 @@ const memoResult = importAllResult.memo((questContent) => {
       obj15.children = intl3.format(tmp2(tmp3[44]).t["nLXlh+"], obj16);
       items3[2] = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj15);
       obj11[1] = items3;
-      items2[1] = questEnrollmentBlockedUntil(closure_7, obj11);
+      items2[1] = questEnrollmentBlockedUntil(shrinkableText, obj11);
       obj8[1] = items2;
-      tmp14Result = tmp14(tmp15, obj8);
+      tmp15Result = tmp15(tmp16, obj8);
       const tmp17 = defaultRewardNameWithArticle;
     } else {
       const obj17 = {};
@@ -693,7 +698,7 @@ const memoResult = importAllResult.memo((questContent) => {
         return closure_12;
       };
       obj17.children = intl.format(tmp2(tmp3[44]).t["0IUT4Y"], obj18);
-      tmp14Result = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj17);
+      tmp15Result = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj17);
     }
   }, items10);
   if (isQuestExpiredResult) {
@@ -782,7 +787,7 @@ const memoResult = importAllResult.memo((questContent) => {
   items13 = [tmp9.container, { marginHorizontal: tmp11 - questContent.containerPadding }];
   let obj13 = { visible: tmp78, glow: true, children: null };
   let obj14 = { style: items14, children: null };
-  items14 = [tmp9.heroContainer, { height: result }];
+  items14 = [tmp9.heroContainer, { minHeight: result, backgroundColor: gradientEnd }];
   let tmp10Result = tmp10(tmp4[59]);
   const items15 = [defaultRewardNameWithArticle(quest(tmp4[60]), { source: obj16, style: tmp9.heroImg, onError: callback, accessible: true, accessibilityRole: "image", accessibilityLabel: quest.config.messages.questName }), , , ];
   let obj17 = { style: tmp9.heroLinearGradientOverlay, start: null, end: null, colors: null };
@@ -807,23 +812,23 @@ const memoResult = importAllResult.memo((questContent) => {
   const obj20 = { style: tmp9.heroFooterContainer, children: null };
   const obj21 = { style: tmp9.heroFooterLeftContainer, children: null };
   const items17 = [defaultRewardNameWithArticle(quest(tmp4[63]), { assetUrl: questGameLogotypeAssetUrl, onError: callback }), ];
+  const obj22 = { style: tmp9.promotedByRow, children: null };
   let str = "text-overlay-light";
   let str2 = "text-overlay-light";
   if (isThemeDarkResult) {
     str2 = "text-muted";
   }
-  const obj22 = { direction: "horizontal", align: "center", spacing: 4, children: null };
-  const obj23 = { variant: "text-xs/medium", color: str2, children: null };
+  const obj23 = { variant: "text-xs/medium", color: str2, style: tmp9.shrinkableText, children: null };
   const intl8 = tmp3(tmp4[44]).intl;
-  obj23[2] = intl8.string(tmp3(tmp4[44]).t.VAbKhK);
+  obj23[3] = intl8.string(tmp3(tmp4[44]).t.VAbKhK);
   const items18 = [defaultRewardNameWithArticle(tmp3(tmp4[56]).Text, obj23), , ];
-  const obj24 = { source: quest(tmp4[65]), style: { height: 16, width: 16 }, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
+  const obj24 = { source: quest(tmp4[64]), style: { height: 16, width: 16 }, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
   const intl9 = tmp3(tmp4[44]).intl;
   obj24[4] = intl9.string(tmp3(tmp4[44]).t.OfMjx9);
   items18[1] = defaultRewardNameWithArticle(closure_6, obj24);
-  items18[2] = defaultRewardNameWithArticle(tmp3(tmp4[56]).Text, { variant: "text-xs/medium", color: "text-overlay-light", children: quest.config.messages.gamePublisher });
-  obj22[3] = items18;
-  items17[1] = questEnrollmentBlockedUntil(tmp3(tmp4[64]).Stack, obj22);
+  items18[2] = defaultRewardNameWithArticle(tmp3(tmp4[56]).Text, { variant: "text-xs/medium", color: "text-overlay-light", style: tmp9.shrinkableText, children: quest.config.messages.gamePublisher });
+  obj22[1] = items18;
+  items17[1] = questEnrollmentBlockedUntil(closure_7, obj22);
   obj21[1] = items17;
   const items19 = [questEnrollmentBlockedUntil(closure_7, obj21), ];
   let tmp92Result = !isQuestExpiredResult;
@@ -834,12 +839,13 @@ const memoResult = importAllResult.memo((questContent) => {
     if (isThemeDarkResult) {
       str = "text-default";
     }
-    const obj26 = { variant: "text-xs/medium", color: null, children: null };
+    const obj26 = { variant: "text-xs/medium", color: null, style: null, children: null };
     obj26[1] = str;
+    obj26[2] = tmp9.shrinkableText;
     const intl10 = tmp3(tmp4[44]).intl;
     const obj27 = { expiryDate: null };
     obj27[0] = questFormattedDate1;
-    obj26[2] = intl10.format(tmp3(tmp4[44]).t["7D8r4F"], obj27);
+    obj26[3] = intl10.format(tmp3(tmp4[44]).t["7D8r4F"], obj27);
     tmp92Result = tmp92(tmp3(tmp4[56]).Text, obj26);
   }
   items19[1] = tmp92Result;
@@ -854,11 +860,11 @@ const memoResult = importAllResult.memo((questContent) => {
     const obj31 = { quest: null, progress: null, size: "sm" };
     obj31[0] = quest;
     obj31[1] = obj4.useQuestCompletionDetails(quest).completedRatio;
-    tmp92Result = tmp92(tmp10(tmp4[66]), obj31);
+    tmp92Result = tmp92(tmp10(tmp4[65]), obj31);
   } else {
     const obj32 = { quest: null, height: 64, width: 64 };
     obj32[0] = quest;
-    tmp92Result = tmp92(tmp10(tmp4[67]), obj32);
+    tmp92Result = tmp92(tmp10(tmp4[66]), obj32);
   }
   obj30[1] = tmp92Result;
   const items21 = [defaultRewardNameWithArticle(closure_7, obj30), ];
@@ -871,7 +877,7 @@ const memoResult = importAllResult.memo((questContent) => {
     const obj37 = { questId: null, orbMultiplierEligibility: null };
     obj37[0] = quest.config.id;
     obj37[1] = questOrbMultiplierEligibility;
-    shouldShowBonusOrbsUX = tmp92(tmp3(tmp4[68]).QuestOrbMultiplierPerkPill, obj37);
+    shouldShowBonusOrbsUX = tmp92(tmp3(tmp4[67]).QuestOrbMultiplierPerkPill, obj37);
   }
   items23[1] = shouldShowBonusOrbsUX;
   obj36[1] = items23;
@@ -966,7 +972,7 @@ const memoResult = importAllResult.memo((questContent) => {
   items27[2] = tmp92Result2;
   items27[3] = defaultRewardNameWithArticle(quest(tmp4[73]), { quest, showShareLink: !isQuestExpiredResult, location: first.QUESTS_CARD, sourceQuestContent });
   obj39[4] = items27;
-  items20[2] = questEnrollmentBlockedUntil(tmp3(tmp4[64]).Stack, obj39);
+  items20[2] = questEnrollmentBlockedUntil(tmp3(tmp4[68]).Stack, obj39);
   obj13[2] = items20;
   obj12[2] = questEnrollmentBlockedUntil(tmp10Result, obj13);
   return defaultRewardNameWithArticle(tmp3(tmp4[58]).Card, obj12);

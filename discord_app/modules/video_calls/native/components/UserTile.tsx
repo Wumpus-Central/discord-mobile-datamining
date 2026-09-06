@@ -1,25 +1,25 @@
-// === Module 9609: UserTile ===
+// === Module 9623: UserTile ===
 
-// Module 9609 (UserTile)
-import ThemesDefault from "Themes" /* 709 */;
-import registerAssetDefault from "registerAsset" /* 8760 */;
-import registerAssetDefault2 from "registerAsset" /* 9612 */;
-import registerAssetDefault3 from "registerAsset" /* 9613 */;
-import registerAssetDefault4 from "registerAsset" /* 9614 */;
+// Module 9623 (UserTile)
+import ThemesDefault from "Themes" /* 576 */;
+import registerAssetDefault from "registerAsset" /* 8614 */;
+import registerAssetDefault2 from "registerAsset" /* 9626 */;
+import registerAssetDefault3 from "registerAsset" /* 9627 */;
+import registerAssetDefault4 from "registerAsset" /* 9628 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "recentlyUsedEmojis" /* 9610 */;
-import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis" /* 9610 */;
-import closure_8 from "fetchFingerprint" /* 1215 */;
-import closure_9 from "ensureGuildLoaded" /* 1386 */;
-import closure_10 from "_detectH265HardwareDecode" /* 4529 */;
-import { VideoToggleState } from "ME" /* 673 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
+import closure_6 from "recentlyUsedEmojis" /* 9624 */;
+import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis" /* 9624 */;
+import closure_8 from "fetchFingerprint" /* 502 */;
+import closure_9 from "ensureGuildLoaded" /* 1957 */;
+import closure_10 from "_detectH265HardwareDecode" /* 1908 */;
+import { VideoToggleState } from "ME" /* 1074 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -135,7 +135,7 @@ let closure_19 = importAllResult.memo((userId) => {
   const style = userId.style;
   ({ muted, deafened } = userId);
   const tmp = callback3();
-  let obj = userId(586);
+  let obj = userId(504);
   let items = [closure_10];
   const items1 = [userId];
   const tmp4 = callback(obj.useStateFromStoresArray(items, () => {
@@ -161,8 +161,8 @@ let closure_19 = importAllResult.memo((userId) => {
       obj[0] = items2;
       obj = { source: null, size: null, disableColor: true };
       obj[0] = registerAssetDefault4;
-      obj[1] = tmp2(1296).Icon.Sizes.SMALL;
-      obj[1] = callback2(tmp2(1296).Icon, obj);
+      obj[1] = tmp2(1178).Icon.Sizes.SMALL;
+      obj[1] = callback2(tmp2(1178).Icon, obj);
       tmp14 = callback2(View, obj);
     }
     const items3 = [tmp14, ];
@@ -178,10 +178,10 @@ let closure_19 = importAllResult.memo((userId) => {
       obj2[0] = items4;
       const obj3 = { source: null, size: null, color: null, disableColor: null };
       obj3[0] = tmp6;
-      obj3[1] = tmp2(1296).Icon.Sizes.SMALL;
+      obj3[1] = tmp2(1178).Icon.Sizes.SMALL;
       obj3[2] = ThemesDefault.unsafe_rawColors.WHITE;
       obj3[3] = tmp6 === registerAssetDefault;
-      obj2[1] = callback2(tmp2(1296).Icon, obj3);
+      obj2[1] = callback2(tmp2(1178).Icon, obj3);
       tmp19Result = tmp19(View, obj2);
       const tmp20 = View;
     }

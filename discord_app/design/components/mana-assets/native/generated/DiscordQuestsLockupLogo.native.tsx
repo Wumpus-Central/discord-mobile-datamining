@@ -1,12 +1,12 @@
-// === Module 6477: DiscordQuestsLockupLogo ===
+// === Module 5909: DiscordQuestsLockupLogo ===
 
-// Module 6477 (DiscordQuestsLockupLogo)
+// Module 5909 (DiscordQuestsLockupLogo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 4197 */;
-import metadataDefault from "metadata" /* 6478 */;
+import ThemesDefault from "Themes" /* 576 */;
+import map from "map" /* 4262 */;
+import metadataDefault from "metadata" /* 5910 */;
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

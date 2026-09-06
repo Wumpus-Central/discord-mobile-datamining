@@ -1,10 +1,10 @@
-// === Module 9224: useExpressionPickerCategoriesPlaceholderConfig ===
+// === Module 10358: useExpressionPickerCategoriesPlaceholderConfig ===
 
-// Module 9224 (useExpressionPickerCategoriesPlaceholderConfig)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 10358 (useExpressionPickerCategoriesPlaceholderConfig)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "noop" /* 19 */;
-import { CATEGORY_ICON_SIZE } from "ME" /* 673 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import { CATEGORY_ICON_SIZE } from "ME" /* 1074 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 createCacheKey = { placeholder: null };

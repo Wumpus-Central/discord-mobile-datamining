@@ -1,6 +1,6 @@
-// === Module 11698: TTIFirstContentfulPaint ===
+// === Module 11896: TTIFirstContentfulPaint ===
 
-// Module 11698 (TTIFirstContentfulPaint)
+// Module 11896 (TTIFirstContentfulPaint)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -23,5 +23,5 @@ export const TTIFirstContentfulPaint = function TTIFirstContentfulPaint(checkFoc
     firstContentfulPaint.record(nativeEvent.nativeEvent.timestamp);
     checkFocusedScreen(closure_1_2[4]).notifyAboutTTI();
   }, items);
-  return jsx(checkFocusedScreen(11699).TTIMeasurementView, { onMeasurement });
+  return jsx(checkFocusedScreen(11897).TTIMeasurementView, { onMeasurement });
 };

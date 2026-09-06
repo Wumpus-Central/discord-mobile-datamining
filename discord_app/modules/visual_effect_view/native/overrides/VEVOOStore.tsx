@@ -1,9 +1,9 @@
-// === Module 4920: useVisualEffectViewOverrides ===
+// === Module 4966: useVisualEffectViewOverrides ===
 
-// Module 4920 (useVisualEffectViewOverrides)
+// Module 4966 (useVisualEffectViewOverrides)
 import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 702 */;
-import keys from "keys" /* 641 */;
+import batchUpdates from "batchUpdates" /* 1249 */;
+import keys from "keys" /* 560 */;
 
 let closure_2 = {};
 let closure_3 = keys.create(() => closure_2);
@@ -17,7 +17,7 @@ export const getVisualEffectViewOverrides = function getVisualEffectViewOverride
 };
 export const setVisualEffectViewOverides = function setVisualEffectViewOverides(arg0) {
   const _require = arg0;
-  _require(702).batchUpdates(() => closure_1_3.setState(closure_0));
+  _require(1249).batchUpdates(() => closure_1_3.setState(closure_0));
 };
 export const clearVisualEffectViewOverrides = function clearVisualEffectViewOverrides() {
   batchUpdates.batchUpdates(() => state.setState(closure_2));

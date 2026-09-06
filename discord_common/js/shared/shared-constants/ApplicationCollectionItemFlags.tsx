@@ -1,6 +1,6 @@
-// === Module 11926: ApplicationCollectionItemFlags ===
+// === Module 12125: ApplicationCollectionItemFlags ===
 
-// Module 11926 (ApplicationCollectionItemFlags)
+// Module 12125 (ApplicationCollectionItemFlags)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationCollectionItemFlags.tsx");

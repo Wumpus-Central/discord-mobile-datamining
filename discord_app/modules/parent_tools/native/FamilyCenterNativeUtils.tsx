@@ -1,13 +1,13 @@
-// === Module 11714: FAMILY_CENTER_REQUEST_MODAL_KEY ===
+// === Module 11913: FAMILY_CENTER_REQUEST_MODAL_KEY ===
 
-// Module 11714 (FAMILY_CENTER_REQUEST_MODAL_KEY)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import _modDef4724 from "module_4724" /* 4724 */;
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 7294 */;
-import closure_3 from "initialize" /* 4735 */;
-import items from "items" /* 7293 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 11913 (FAMILY_CENTER_REQUEST_MODAL_KEY)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import _modDef4763 from "module_4763" /* 4763 */;
+import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 7539 */;
+import closure_3 from "initialize" /* 4774 */;
+import items from "items" /* 7538 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 ({ FAMILY_CENTER_LINK_REQUEST_REGEX: c4, FamilyCenterAction: c5 } = items);
@@ -31,20 +31,20 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
     obj = { userId: null, linkCode: null };
     obj[0] = match[1];
     obj[1] = match[2];
-    _modDef4724.pushLazy(asyncRequireImpl(11715, dependencyMap.paths), obj, c7);
+    _modDef4763.pushLazy(asyncRequireImpl(11914, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
   pendingConnection = pendingConnection.getPendingConnection();
   let flag = null != pendingConnection;
   if (flag) {
-    let obj = _modDef4724;
+    let obj = _modDef4763;
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3[0], linkCode: obj3[1] } = pendingConnection);
-    _modDef4724.pushLazy(asyncRequireImpl(11715, dependencyMap.paths), obj, c7);
+    _modDef4763.pushLazy(asyncRequireImpl(11914, dependencyMap.paths), obj, c7);
     flag = true;
-    const obj2 = _modDef4724;
+    const obj2 = _modDef4763;
   }
   return flag;
 };

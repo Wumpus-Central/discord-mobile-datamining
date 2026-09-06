@@ -1,21 +1,21 @@
-// === Module 7355: redactionSettingToRenderedString ===
+// === Module 7600: redactionSettingToRenderedString ===
 
-// Module 7355 (redactionSettingToRenderedString)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import create from "create" /* 1305 */;
-import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4172 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4734 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5376 */;
-import isCurrentUserTeen from "isCurrentUserTeen" /* 6146 */;
-import ObscureReason from "ObscureReason" /* 6151 */;
-import setDefault from "set" /* 7357 */;
-import set from "set" /* 7362 */;
-import resetManager from "resetManager" /* 7363 */;
-import closure_3 from "getUserAgnosticState" /* 4477 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "getFpMessageInfo" /* 6148 */;
-import USER_SETTING_ACTION_SHEET_KEY from "USER_SETTING_ACTION_SHEET_KEY" /* 7356 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 7600 (redactionSettingToRenderedString)
+import create from "create" /* 1187 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
+import isFeatureAgeGated2 from "isFeatureAgeGated" /* 5423 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5424 */;
+import isCurrentUserTeen from "isCurrentUserTeen" /* 7291 */;
+import ObscureReason from "ObscureReason" /* 7296 */;
+import setDefault from "set" /* 7602 */;
+import set from "set" /* 7607 */;
+import resetManager from "resetManager" /* 7608 */;
+import closure_3 from "getUserAgnosticState" /* 4559 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "getFpMessageInfo" /* 7293 */;
+import USER_SETTING_ACTION_SHEET_KEY from "USER_SETTING_ACTION_SHEET_KEY" /* 7601 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 ({ EXPLICIT_MEDIA_MIN_HEIGHT: closure_6, EXPLICIT_MEDIA_MIN_WIDTH: error } = USER_SETTING_ACTION_SHEET_KEY);
@@ -24,18 +24,18 @@ const result = require("set").fileFinishedImporting("modules/explicit_media_reda
 export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
   if (create.ExplicitContentRedaction.SHOW === prop) {
     return () => {
-      const intl = callback(1233).intl;
-      return intl.string(callback(1233).t["5k5OFp"]);
+      const intl = callback(1114).intl;
+      return intl.string(callback(1114).t["5k5OFp"]);
     };
-  } else if (tmp(1305).ExplicitContentRedaction.BLUR === prop) {
+  } else if (tmp(1187).ExplicitContentRedaction.BLUR === prop) {
     return () => {
-      const intl = callback(1233).intl;
-      return intl.string(callback(1233).t.S49Uad);
+      const intl = callback(1114).intl;
+      return intl.string(callback(1114).t.S49Uad);
     };
-  } else if (tmp(1305).ExplicitContentRedaction.BLOCK === prop) {
+  } else if (tmp(1187).ExplicitContentRedaction.BLOCK === prop) {
     return () => {
-      const intl = callback(1233).intl;
-      return intl.string(callback(1233).t["D/157Y"]);
+      const intl = callback(1114).intl;
+      return intl.string(callback(1114).t["D/157Y"]);
     };
   }
 };
@@ -118,12 +118,12 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj[5] = resetManager.MESSAGE_SCAN_TIMEOUT;
         obj[6] = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        let tmp3Result = tmp3(7357);
+        let tmp3Result = tmp3(7602);
         obj = { name: null, tags: null };
         obj[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
         obj[1] = ["metricVersion:1"];
         tmp3Result.increment(obj);
-        tmp3Result = tmp3(7357);
+        tmp3Result = tmp3(7602);
         obj1 = { name: null };
         obj1[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION;
         let num4;
@@ -174,8 +174,8 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     if (sum > 0) {
       obj = { name: null };
       obj[0] = set.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2;
-      tmp10(7357).distribution(obj, sum);
-      const tmp10Result = tmp10(7357);
+      tmp10(7602).distribution(obj, sum);
+      const tmp10Result = tmp10(7602);
     }
     const obj3 = expandEventPropertiesDefault;
     tmp10 = importDefault;

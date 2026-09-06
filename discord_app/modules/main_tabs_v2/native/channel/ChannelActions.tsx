@@ -1,23 +1,23 @@
-// === Module 7630: JoinCallIcon ===
+// === Module 7875: JoinCallIcon ===
 
-// Module 7630 (JoinCallIcon)
+// Module 7875 (JoinCallIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5055 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 7634 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7636 */;
-import _modDef13159 from "module_13159" /* 13159 */;
+import ThemesDefault from "Themes" /* 576 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 7880 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7882 */;
+import _modDef13259 from "module_13259" /* 13259 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThreadCreateOrUpdate" /* 5458 */;
-import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1390 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "updateVoiceState" /* 4497 */;
-import { setIsChannelDetailsSearchActive as closure_8 } from "useChannelDetailsStore" /* 7631 */;
-import ME from "ME" /* 673 */;
-import { SearchEntrypointAnalyticsLocations as closure_12 } from "SearchEntrypointAnalyticsLocations" /* 7632 */;
+import closure_4 from "handleThreadCreateOrUpdate" /* 5507 */;
+import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1961 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "updateVoiceState" /* 4579 */;
+import { setIsChannelDetailsSearchActive as closure_8 } from "useChannelDetailsStore" /* 7876 */;
+import ME from "ME" /* 1074 */;
+import { SearchEntrypointAnalyticsLocations as closure_12 } from "SearchEntrypointAnalyticsLocations" /* 7877 */;
 import { jsx } from "jsxProd" /* 21 */;
 import { createElement } from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function JoinCallIcon() {
@@ -276,10 +276,10 @@ function ChannelActionButtons(channel) {
 function WrappedChannelNavButtons(channelId) {
   channelId = channelId.channelId;
   ({ screenIndex, showCreateThread } = channelId);
-  let obj = channelId(586);
+  let obj = channelId(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
-  channelId(4732);
+  channelId(4771);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;
@@ -304,7 +304,7 @@ export default function ChannelActions(channelId) {
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
   ({ containerStyle, showCreateThread } = channelId);
-  let obj = channelId(586);
+  let obj = channelId(504);
   const items = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let obj = closure_1_6;
@@ -329,12 +329,12 @@ export default function ChannelActions(channelId) {
     return obj;
   });
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  obj1 = channelId(7639);
+  obj1 = channelId(7885);
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp4Result = tmp4(channelId(13157).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = tmp4(channelId(13257).ForumChannelCloseSearchButton, obj);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
@@ -348,7 +348,7 @@ export default function ChannelActions(channelId) {
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = tmp4(_modDef13159, obj2);
+    tmp4Result = tmp4(_modDef13259, obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

@@ -1,6 +1,6 @@
-// === Module 7792: useFastestListComputedStyles ===
+// === Module 7057: useFastestListComputedStyles ===
 
-// Module 7792 (useFastestListComputedStyles)
+// Module 7057 (useFastestListComputedStyles)
 import closure_0 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 

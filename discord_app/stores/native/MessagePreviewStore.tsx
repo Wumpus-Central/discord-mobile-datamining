@@ -1,9 +1,9 @@
-// === Module 8650: messages ===
+// === Module 8360: messages ===
 
-// Module 8650 (messages)
+// Module 8360 (messages)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const require = arg1;
 let c3 = null;

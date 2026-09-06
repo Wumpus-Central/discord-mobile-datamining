@@ -1,26 +1,26 @@
-// === Module 16171: getMediaIcon ===
+// === Module 16333: getMediaIcon ===
 
-// Module 16171 (getMediaIcon)
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import map from "map" /* 4197 */;
-import registerAssetDefault from "registerAsset" /* 4987 */;
-import StageIcon from "StageIcon" /* 5051 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5055 */;
-import AppsIcon from "AppsIcon" /* 5060 */;
-import setDefault from "set" /* 6015 */;
-import registerAssetDefault2 from "registerAsset" /* 8768 */;
-import registerAssetDefault3 from "registerAsset" /* 9779 */;
-import CalendarIcon from "CalendarIcon" /* 9781 */;
-import VideoIcon from "VideoIcon" /* 10219 */;
-import ScreenIcon from "ScreenIcon" /* 12869 */;
-import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 16167 */;
-import registerAssetDefault4 from "registerAsset" /* 16172 */;
-import registerAssetDefault5 from "registerAsset" /* 16173 */;
-import registerAssetDefault6 from "registerAsset" /* 16174 */;
+// Module 16333 (getMediaIcon)
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import map from "map" /* 4262 */;
+import registerAssetDefault from "registerAsset" /* 5033 */;
+import StageIcon from "StageIcon" /* 5097 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
+import AppsIcon from "AppsIcon" /* 5106 */;
+import setDefault from "set" /* 5589 */;
+import registerAssetDefault2 from "registerAsset" /* 8622 */;
+import ScreenIcon from "ScreenIcon" /* 8879 */;
+import registerAssetDefault3 from "registerAsset" /* 9783 */;
+import CalendarIcon from "CalendarIcon" /* 9785 */;
+import VideoIcon from "VideoIcon" /* 10110 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 16329 */;
+import registerAssetDefault4 from "registerAsset" /* 16334 */;
+import registerAssetDefault5 from "registerAsset" /* 16335 */;
+import registerAssetDefault6 from "registerAsset" /* 16336 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function getMediaIcon(closure_3) {
@@ -88,7 +88,7 @@ const memoResult = importAllResult.memo((arg0) => {
   obj = { style: items1, children: null };
   items1[1] = prop;
   if (null != IconComponent) {
-    let colors = tmp3(709).colors;
+    let colors = tmp3(576).colors;
     colors = { color: null, size: "xxs", style: null };
     colors[0] = isCurrentUserConnected ? colors.WHITE : colors.ICON_DEFAULT;
     activityIcon = activityIcon.activityIcon;
@@ -99,7 +99,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj1 = { source: null, color: null, style: null };
     obj1[0] = source;
     if (isCurrentUserConnected) {
-      WHITE = tmp3(709).unsafe_rawColors.WHITE;
+      WHITE = tmp3(576).unsafe_rawColors.WHITE;
     }
     obj1[1] = WHITE;
     obj1[2] = activityIcon.activityIcon;

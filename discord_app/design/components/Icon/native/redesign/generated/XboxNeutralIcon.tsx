@@ -1,10 +1,10 @@
-// === Module 8853: XboxNeutralIcon ===
+// === Module 8708: XboxNeutralIcon ===
 
-// Module 8853 (XboxNeutralIcon)
+// Module 8708 (XboxNeutralIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 8854 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 8709 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

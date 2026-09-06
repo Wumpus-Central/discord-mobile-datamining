@@ -1,8 +1,8 @@
-// === Module 14371: RPCCommands ===
+// === Module 14478: RPCCommands ===
 
-// Module 14371 (RPCCommands)
+// Module 14478 (RPCCommands)
 import set from "set" /* 2 */;
-import sum from "sum" /* 502 */;
+import sum from "sum" /* 1085 */;
 
 ({ RPCCommands, RPCEvents } = sum);
 const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/helpers.tsx");

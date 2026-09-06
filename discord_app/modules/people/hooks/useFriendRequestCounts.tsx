@@ -1,10 +1,10 @@
-// === Module 16581: getIncomingFriendRequestCount ===
+// === Module 16748: getIncomingFriendRequestCount ===
 
-// Module 16581 (getIncomingFriendRequestCount)
-import initialize from "initialize" /* 586 */;
+// Module 16748 (getIncomingFriendRequestCount)
+import initialize from "initialize" /* 504 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "recountRelationshipTypes" /* 7413 */;
-import closure_4 from "markAllUserIdListsStale" /* 4130 */;
+import closure_3 from "recountRelationshipTypes" /* 7658 */;
+import closure_4 from "markAllUserIdListsStale" /* 4209 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");

@@ -1,18 +1,18 @@
-// === Module 8029: nativeStyleProperties ===
+// === Module 8108: nativeStyleProperties ===
 
-// Module 8029 (nativeStyleProperties)
-import ThemesDefault from "Themes" /* 709 */;
-import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1491 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
-import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 6123 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4471 */;
-import { SwipeActionsType } from "Changeset" /* 7854 */;
-import ME from "ME" /* 673 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+// Module 8108 (nativeStyleProperties)
+import ThemesDefault from "Themes" /* 576 */;
+import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1476 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
+import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 7267 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
+import { SwipeActionsType } from "Changeset" /* 7933 */;
+import ME from "ME" /* 1074 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -65,7 +65,7 @@ createCacheKey = {
             guild_id = channel.guild_id;
           }
           guild = guild.getGuild(guild_id);
-          let tmp3Result = tmp3(6123);
+          let tmp3Result = tmp3(7267);
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
             if (guild != null) {
@@ -77,7 +77,7 @@ createCacheKey = {
             if (message.mentioned) {
               let ephemeralGutterColor = tmp.mentionedGutterColor;
             } else {
-              tmp3Result = tmp3(4738);
+              tmp3Result = tmp3(4783);
               if (tmp3Result.hasEphemeralAppearance(message)) {
                 ephemeralGutterColor = tmp.ephemeralGutterColor;
               }

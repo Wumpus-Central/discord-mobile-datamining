@@ -1,11 +1,11 @@
-// === Module 12811: useHandleBuyNow ===
+// === Module 13166: useHandleBuyNow ===
 
-// Module 12811 (useHandleBuyNow)
+// Module 13166 (useHandleBuyNow)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { Routes } from "ME" /* 673 */;
+import { Routes } from "ME" /* 1074 */;
 
 let require = arg1;
 function useHandleBuyNow(product) {
@@ -13,12 +13,13 @@ function useHandleBuyNow(product) {
   require = product;
   const onBuy = product.onBuy;
   const onBuySettled = product.onBuySettled;
+  let callback = product.stageCollectibleChangeForEditProfile;
   let first;
-  let callback;
   let React;
+  closure_6 = undefined;
   function _onPurchaseComplete() {
     const self = this;
-    const tmp = first(function*() {
+    const tmp = callback(function*() {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -49,7 +50,7 @@ function useHandleBuyNow(product) {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(7296).fetchCollectiblesPurchases();
+              obj1[0] = closure_1_0(7541).fetchCollectiblesPurchases();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -62,22 +63,23 @@ function useHandleBuyNow(product) {
             return obj2;
           } else {
             callback(false);
-            obj = v0(4445);
-            obj.hideActionSheet();
-            obj1 = v0(11048);
-            const obj3 = { product: null, useCategoryImage: true };
+            obj = v0(4527);
+            obj.hideAllActionSheets();
+            obj1 = v0(11077);
+            const obj3 = { product: null, useCategoryImage: true, stageCollectibleChangeForEditProfile: null };
             obj3[0] = closure_0;
+            obj3[2] = closure_3;
             obj1.open(obj3);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp16) {
+        } catch (tmp17) {
           dependencyMap = tmp;
-          throw tmp16;
+          throw tmp17;
         }
       }
     });
-    closure_6 = tmp;
+    closure_7 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -87,9 +89,9 @@ function useHandleBuyNow(product) {
     return applyArgumentsResult;
   }
   ({ analyticsLocations, orderId } = product);
-  let tmp = callback(React.useState(false), 2);
+  let tmp = first(React.useState(false), 2);
   first = tmp[0];
-  callback = tmp[1];
+  React = tmp[1];
   let obj = {
     product,
     analyticsLocations,
@@ -104,7 +106,7 @@ function useHandleBuyNow(product) {
       return applyArgumentsResult;
     },
     onPurchaseError() {
-      callback(false);
+      callback2(false);
       if (onBuySettled != null) {
         onBuySettled();
       }
@@ -115,11 +117,11 @@ function useHandleBuyNow(product) {
     orderId
   };
   const tmp3 = onBuy(onBuySettled[5])(obj);
-  React = tmp3;
+  closure_6 = tmp3;
   obj = {
-    handleBuyNow: React.useCallback(first(function*() {
-      if (v02 === 2) {
-        v02 = 3;
+    handleBuyNow: React.useCallback(callback(function*() {
+      if (v0 === 2) {
+        v0 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
@@ -133,13 +135,13 @@ function useHandleBuyNow(product) {
         }
       } else {
         try {
-          v02 = 2;
-          if (0 === v0) {
+          v0 = 2;
+          if (0 === c4) {
             if (arg0 === 1) {
-              v02 = 3;
+              v0 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              v02 = 3;
+              v0 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
@@ -150,21 +152,21 @@ function useHandleBuyNow(product) {
                 c3 = 1;
                 const _HermesInternal3 = HermesInternal;
                 const combined = "" + closure_1_6.COLLECTIBLES_SHOP + "#itemSkuId=" + lib.skuId;
-                v0 = 3;
-                v02 = 1;
+                c4 = 3;
+                v0 = 1;
                 obj1 = { value: null, done: false };
                 obj1[0] = closure_1_1(closure_1_2[10]).redirectWithHandoffToken(combined, { forceExternalBrowser: true });
                 return obj1;
               } else {
                 c3 = 2;
-                if (c3) {
+                if (c4) {
                   c3 = 0;
                 } else {
                   v0(true);
-                  v0 = 4;
-                  v02 = 1;
+                  c4 = 4;
+                  v0 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = v02();
+                  obj2[0] = closure_1_6();
                   return obj2;
                 }
               }
@@ -210,7 +212,7 @@ function useHandleBuyNow(product) {
                 const result1 = obj3.captureBillingException(callback, obj6);
               } else if (3 === tmp8) {
                 if (arg0 === 1) {
-                  v02 = 3;
+                  v0 = 3;
                   throw arg1;
                 } else if (arg0 !== 2) {
                   obj1 = closure_1_1(closure_1_2[7]);
@@ -221,7 +223,7 @@ function useHandleBuyNow(product) {
                   c3 = 0;
                 }
               } else if (arg0 === 1) {
-                v02 = 3;
+                v0 = 3;
                 throw arg1;
               } else if (arg0 !== 2) {
                 if (null != callback) {
@@ -229,27 +231,27 @@ function useHandleBuyNow(product) {
                 }
               }
               c3 = 0;
-              v02 = 3;
+              v0 = 3;
               const obj8 = { value: null, done: true };
               obj8[0] = arg1;
               return obj8;
             }
-            v02 = 3;
+            v0 = 3;
           }
           c3 = 0;
-          v02 = 3;
+          v0 = 3;
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } catch (tmp61) {
           callback2 = tmp61;
           if (tmp5 === c3) {
-            v02 = tmp3;
+            v0 = tmp3;
             throw tmp61;
           } else if (tmp2 === tmp63) {
-            v0 = tmp2;
+            c4 = tmp2;
           } else {
-            v0 = tmp;
+            c4 = tmp;
           }
         }
       }

@@ -1,9 +1,9 @@
-// === Module 1351: updateAccessibilityAnnouncerLiveRegionMessage ===
+// === Module 4273: updateAccessibilityAnnouncerLiveRegionMessage ===
 
-// Module 1351 (updateAccessibilityAnnouncerLiveRegionMessage)
+// Module 4273 (updateAccessibilityAnnouncerLiveRegionMessage)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import keys from "keys" /* 1352 */;
+import keys from "keys" /* 4274 */;
 import importAllResult from "noop" /* 19 */;
 
 ({ StyleSheet, Text: c0 } = get_ActivityIndicator);

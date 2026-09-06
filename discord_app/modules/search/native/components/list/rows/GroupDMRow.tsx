@@ -1,6 +1,6 @@
-// === Module 16490: GroupDMRow ===
+// === Module 16653: GroupDMRow ===
 
-// Module 16490 (GroupDMRow)
+// Module 16653 (GroupDMRow)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -11,20 +11,20 @@ export default function GroupDMRow(channel) {
   channel = channel.channel;
   const onPress = channel.onPress;
   ({ trailing, onAccessibilityAction, accessibilityActions } = channel);
-  let str = onPress(4674)(channel);
+  let str = onPress(4713)(channel);
   const items = [channel.id, onPress];
   const callback = React.useCallback(() => {
     onPress(channel.id);
   }, items);
-  let obj = { size: channel(1296).AvatarSizes.LARGE_48, channel };
-  const tmp4 = onPress(10873);
-  const tmp6 = jsx(onPress(10873), { size: channel(1296).AvatarSizes.LARGE_48, channel });
-  const recipientsLabel = channel(10874).useRecipientsLabel(channel);
+  let obj = { size: channel(1178).AvatarSizes.LARGE_48, channel };
+  const tmp4 = onPress(10910);
+  const tmp6 = jsx(onPress(10910), { size: channel(1178).AvatarSizes.LARGE_48, channel });
+  const recipientsLabel = channel(10911).useRecipientsLabel(channel);
   let tmp3Result;
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     obj[3] = recipientsLabel;
-    tmp3Result = tmp3(tmp5(4474).Text, obj);
+    tmp3Result = tmp3(tmp5(4556).Text, obj);
   }
   let str2 = str;
   if (str == null) {
@@ -39,5 +39,5 @@ export default function GroupDMRow(channel) {
   obj[5] = trailing;
   obj[6] = accessibilityActions;
   obj[7] = onAccessibilityAction;
-  return jsx(channel(16489).SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
+  return jsx(channel(16652).SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
 };

@@ -1,9 +1,9 @@
-// === Module 5066: isAgeRestrictedContentClassification ===
+// === Module 5112: isAgeRestrictedContentClassification ===
 
-// Module 5066 (isAgeRestrictedContentClassification)
+// Module 5112 (isAgeRestrictedContentClassification)
 import set from "set" /* 2 */;
-import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 5067 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5069 */;
+import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 5113 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5115 */;
 
 let result = set.fileFinishedImporting("modules/content_classification/utils.tsx");
 

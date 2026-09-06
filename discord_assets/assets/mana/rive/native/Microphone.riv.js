@@ -1,6 +1,6 @@
-// === Module 4286: metadata ===
+// === Module 4367: metadata ===
 
-// Module 4286 (metadata)
+// Module 4367 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/Microphone.riv.js");

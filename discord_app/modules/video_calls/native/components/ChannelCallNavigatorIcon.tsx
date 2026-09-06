@@ -1,14 +1,14 @@
-// === Module 10041: ChannelCallNavigatorIcon ===
+// === Module 9924: ChannelCallNavigatorIcon ===
 
-// Module 10041 (ChannelCallNavigatorIcon)
+// Module 9924 (ChannelCallNavigatorIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4919 */;
-import PressableBase from "PressableBase" /* 5077 */;
+import ThemesDefault from "Themes" /* 576 */;
+import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;
+import PressableBase from "PressableBase" /* 5123 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { resetFocusTimer } from "VoiceChatDrawerState" /* 9537 */;
+import { resetFocusTimer } from "VoiceChatDrawerState" /* 9467 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -77,8 +77,8 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     const obj3 = { source: null, color: null, size: null };
     obj3[0] = source;
     obj3[1] = tmp.iconColor.color;
-    obj3[2] = tmp5(1296).Icon.Sizes.SMALL_20;
-    tmp2Result = tmp2(tmp5(1296).Icon, obj3);
+    obj3[2] = tmp5(1178).Icon.Sizes.SMALL_20;
+    tmp2Result = tmp2(tmp5(1178).Icon, obj3);
   }
   items1[1] = tmp2Result;
   let tmp2Result1 = null != membersCount;
@@ -89,7 +89,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.text;
     obj4[1] = membersCount;
-    tmp2Result1 = tmp2(tmp5(1296).LegacyText, obj4);
+    tmp2Result1 = tmp2(tmp5(1178).LegacyText, obj4);
   }
   items1[2] = tmp2Result1;
   obj[1] = items1;

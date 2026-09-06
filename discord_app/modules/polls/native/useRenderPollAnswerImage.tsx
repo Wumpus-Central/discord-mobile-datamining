@@ -1,12 +1,12 @@
-// === Module 12022: useRenderPollAnswerImage ===
+// === Module 12226: useRenderPollAnswerImage ===
 
-// Module 12022 (useRenderPollAnswerImage)
+// Module 12226 (useRenderPollAnswerImage)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import { DraftType } from "handleChanged" /* 4855 */;
-import closure_7 from "map" /* 4854 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
+import { DraftType } from "handleChanged" /* 4901 */;
+import closure_7 from "map" /* 4900 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1374 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
   dependencyMap = mediaAttachmentState;
   const callback = arg3;
   const React = arg4;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => upload.getUpload(closure_0, closure_1, first.Poll));
   const tmp4 = callback(React.useState(), 2);
@@ -30,7 +30,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       status = mediaAttachmentState.status;
     }
   }
-  const tmp7 = status === _require(12002).PollMediaUploadAttachmentStatus.PREPARING;
+  const tmp7 = status === _require(12206).PollMediaUploadAttachmentStatus.PREPARING;
   closure_7 = tmp7;
   obj = {
     renderImage: React.useMemo(() => {

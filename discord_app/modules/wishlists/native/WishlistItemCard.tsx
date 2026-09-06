@@ -1,11 +1,11 @@
-// === Module 11001: WishlistItemCard ===
+// === Module 11033: WishlistItemCard ===
 
-// Module 11001 (WishlistItemCard)
+// Module 11033 (WishlistItemCard)
 import noopAll from "noop" /* 19 */;
-import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 11002 */;
-import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 11007 */;
-import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 11008 */;
-import { SKUProductLines } from "ME" /* 673 */;
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 11034 */;
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 11036 */;
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 11037 */;
+import { SKUProductLines } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;

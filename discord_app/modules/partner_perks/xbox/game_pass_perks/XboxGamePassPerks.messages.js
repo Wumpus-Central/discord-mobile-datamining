@@ -1,42 +1,42 @@
-// === Module 3306: messagesProxy ===
+// === Module 3353: messagesProxy ===
 
-// Module 3306 (messagesProxy)
+// Module 3353 (messagesProxy)
 import set from "set" /* 2 */;
-import loadJsonAsset from "loadJsonAsset" /* 1238 */;
-import registerAsset from "registerAsset" /* 3307 */;
-import registerAsset2 from "registerAsset" /* 3308 */;
-import registerAsset3 from "registerAsset" /* 3309 */;
-import registerAsset4 from "registerAsset" /* 3310 */;
-import registerAsset5 from "registerAsset" /* 3311 */;
-import registerAsset6 from "registerAsset" /* 3312 */;
-import registerAsset7 from "registerAsset" /* 3313 */;
-import registerAsset8 from "registerAsset" /* 3314 */;
-import registerAsset9 from "registerAsset" /* 3315 */;
-import registerAsset10 from "registerAsset" /* 3316 */;
-import registerAsset11 from "registerAsset" /* 3317 */;
-import registerAsset12 from "registerAsset" /* 3318 */;
-import registerAsset13 from "registerAsset" /* 3319 */;
-import registerAsset14 from "registerAsset" /* 3320 */;
-import registerAsset15 from "registerAsset" /* 3321 */;
-import registerAsset16 from "registerAsset" /* 3322 */;
-import registerAsset17 from "registerAsset" /* 3323 */;
-import registerAsset18 from "registerAsset" /* 3324 */;
-import registerAsset19 from "registerAsset" /* 3325 */;
-import registerAsset20 from "registerAsset" /* 3326 */;
-import registerAsset21 from "registerAsset" /* 3327 */;
-import registerAsset22 from "registerAsset" /* 3328 */;
-import registerAsset23 from "registerAsset" /* 3329 */;
-import registerAsset24 from "registerAsset" /* 3330 */;
-import registerAsset25 from "registerAsset" /* 3331 */;
-import registerAsset26 from "registerAsset" /* 3332 */;
-import registerAsset27 from "registerAsset" /* 3333 */;
-import registerAsset28 from "registerAsset" /* 3334 */;
-import registerAsset29 from "registerAsset" /* 3335 */;
-import registerAsset30 from "registerAsset" /* 3336 */;
-import registerAsset31 from "registerAsset" /* 3337 */;
-import module_1273 from "module_1273" /* 1273 */;
+import loadJsonAsset from "loadJsonAsset" /* 1120 */;
+import registerAsset from "registerAsset" /* 3354 */;
+import registerAsset2 from "registerAsset" /* 3355 */;
+import registerAsset3 from "registerAsset" /* 3356 */;
+import registerAsset4 from "registerAsset" /* 3357 */;
+import registerAsset5 from "registerAsset" /* 3358 */;
+import registerAsset6 from "registerAsset" /* 3359 */;
+import registerAsset7 from "registerAsset" /* 3360 */;
+import registerAsset8 from "registerAsset" /* 3361 */;
+import registerAsset9 from "registerAsset" /* 3362 */;
+import registerAsset10 from "registerAsset" /* 3363 */;
+import registerAsset11 from "registerAsset" /* 3364 */;
+import registerAsset12 from "registerAsset" /* 3365 */;
+import registerAsset13 from "registerAsset" /* 3366 */;
+import registerAsset14 from "registerAsset" /* 3367 */;
+import registerAsset15 from "registerAsset" /* 3368 */;
+import registerAsset16 from "registerAsset" /* 3369 */;
+import registerAsset17 from "registerAsset" /* 3370 */;
+import registerAsset18 from "registerAsset" /* 3371 */;
+import registerAsset19 from "registerAsset" /* 3372 */;
+import registerAsset20 from "registerAsset" /* 3373 */;
+import registerAsset21 from "registerAsset" /* 3374 */;
+import registerAsset22 from "registerAsset" /* 3375 */;
+import registerAsset23 from "registerAsset" /* 3376 */;
+import registerAsset24 from "registerAsset" /* 3377 */;
+import registerAsset25 from "registerAsset" /* 3378 */;
+import registerAsset26 from "registerAsset" /* 3379 */;
+import registerAsset27 from "registerAsset" /* 3380 */;
+import registerAsset28 from "registerAsset" /* 3381 */;
+import registerAsset29 from "registerAsset" /* 3382 */;
+import registerAsset30 from "registerAsset" /* 3383 */;
+import registerAsset31 from "registerAsset" /* 3384 */;
+import module_1155 from "module_1155" /* 1155 */;
 
-const loader = module_1273.createLoader({
+const loader = module_1155.createLoader({
   bg() {
     const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset);
     return jsonAsset.then((arg0) => ({ default: arg0 }));
@@ -162,7 +162,7 @@ const loader = module_1273.createLoader({
     return jsonAsset.then((arg0) => ({ default: arg0 }));
   }
 }, "en-US");
-const messagesProxy = module_1273.makeMessagesProxy(loader);
+const messagesProxy = module_1155.makeMessagesProxy(loader);
 const result = set.fileFinishedImporting("modules/partner_perks/xbox/game_pass_perks/XboxGamePassPerks.messages.js");
 
 export default messagesProxy;

@@ -1,13 +1,13 @@
-// === Module 7154: GuildBoostingMarketingPersistentCta ===
+// === Module 7401: GuildBoostingMarketingPersistentCta ===
 
-// Module 7154 (GuildBoostingMarketingPersistentCta)
+// Module 7401 (GuildBoostingMarketingPersistentCta)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
+import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { AnalyticsSections } from "ME" /* 673 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import { AnalyticsSections } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -33,10 +33,10 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const tmp = callback3();
   ({ guild, isVisible } = arg0);
   ({ fractionalPremiumState, previousGuildSubscriptionSlot, premiumGroupRole } = arg0);
-  let obj = isVisible(644);
+  let obj = isVisible(563);
   let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = isVisible(4217);
+  obj1 = isVisible(4296);
   const fn = function _() {
     let num = -120;
     if (!stateFromStores) {
@@ -56,7 +56,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
     obj[1] = isVisible(closure_1_2[9]).withSpring(num3, closure_1_8);
     return obj;
   };
-  obj = { useReducedMotion: stateFromStores, VISIBILITY_OFFSET: 120, withSpring: isVisible(4928).withSpring, isVisible, SPRING_CONFIG: closure_8 };
+  obj = { useReducedMotion: stateFromStores, VISIBILITY_OFFSET: 120, withSpring: isVisible(4974).withSpring, isVisible, SPRING_CONFIG: closure_8 };
   fn.__closure = obj;
   fn.__workletHash = 14370895185277;
   fn.__initData = closure_10;
@@ -64,24 +64,24 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   obj = { style: items1, children: null };
   items1 = [tmp.wrapper, animatedStyle];
   obj1 = { angle: 45, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, style: null, useAngle: true, children: null };
-  const items2 = [stateFromStores(709).unsafe_rawColors.GUILD_BOOSTING_BLUE, stateFromStores(709).unsafe_rawColors.GUILD_BOOSTING_PURPLE];
+  const items2 = [stateFromStores(576).unsafe_rawColors.GUILD_BOOSTING_BLUE, stateFromStores(576).unsafe_rawColors.GUILD_BOOSTING_PURPLE];
   obj1[2] = items2;
   obj1[3] = [0, 1];
   obj1[4] = tmp.border;
   const obj2 = { style: tmp.innerWraper, children: null };
   const obj3 = { style: tmp.guildInfoContainer, children: null };
   const obj4 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-  const tmp4 = stateFromStores(4941);
-  obj4[3] = isVisible(6013).GuildIconSizes.LARGE;
-  const items3 = [callback(stateFromStores(6013), obj4), callback(isVisible(4474).Text, { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name })];
+  const tmp4 = stateFromStores(4987);
+  obj4[3] = isVisible(5584).GuildIconSizes.LARGE;
+  const items3 = [callback(stateFromStores(5584), obj4), callback(isVisible(4556).Text, { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name })];
   obj3[1] = items3;
   const items4 = [callback2(View, obj3), ];
   const obj5 = { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name };
-  const tmp5 = stateFromStores(6013);
-  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(7155), obj7) });
+  const tmp5 = stateFromStores(5584);
+  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(7402), obj7) });
   obj2[1] = items4;
   obj1[6] = callback2(View, obj2);
   obj[1] = callback(tmp4, obj1);
-  return callback(stateFromStores(4217).View, obj);
+  return callback(stateFromStores(4296).View, obj);
 };
 export const VISIBILITY_OFFSET = 120;

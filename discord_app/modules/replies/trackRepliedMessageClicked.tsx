@@ -1,11 +1,11 @@
-// === Module 11464: trackRepliedMessageClicked ===
+// === Module 11651: trackRepliedMessageClicked ===
 
-// Module 11464 (trackRepliedMessageClicked)
+// Module 11651 (trackRepliedMessageClicked)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
-import processMessage from "processMessage" /* 7350 */;
-import maybeCreateMessageRecordFromSnapshotDefault from "maybeCreateMessageRecordFromSnapshot" /* 8898 */;
+import ME from "ME" /* 1074 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
+import processMessage from "processMessage" /* 7595 */;
+import maybeCreateMessageRecordFromSnapshotDefault from "maybeCreateMessageRecordFromSnapshot" /* 8753 */;
 
 const ReferencedMessageState = processMessage.ReferencedMessageState;
 const AnalyticEvents = ME.AnalyticEvents;

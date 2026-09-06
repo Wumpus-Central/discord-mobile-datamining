@@ -1,21 +1,21 @@
-// === Module 17486: InvitesDisabledRow ===
+// === Module 17646: InvitesDisabledRow ===
 
-// Module 17486 (InvitesDisabledRow)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import combinedDefault from "combined" /* 1994 */;
-import registerAssetDefault from "registerAsset" /* 7692 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7695 */;
+// Module 17646 (InvitesDisabledRow)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import combinedDefault from "combined" /* 2024 */;
+import registerAssetDefault from "registerAsset" /* 5597 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "computeAlertSettings" /* 10189 */;
-import importDefaultResult from "createFromServer" /* 8670 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "createGuildRecordFromRust" /* 1908 */;
-import closure_9 from "handleFormInit" /* 9755 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "computeAlertSettings" /* 10080 */;
+import importDefaultResult from "createFromServer" /* 8380 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "createGuildRecordFromRust" /* 1979 */;
+import closure_9 from "handleFormInit" /* 9064 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 class InvitesDisabledRow {
@@ -210,10 +210,10 @@ const result = require("set").fileFinishedImporting("modules/guild_settings/nati
 
 export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(586);
+  let obj = guildId(504);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
-  guildId(586);
+  guildId(504);
   [][0] = closure_9;
   let tmp6 = null;
   if (null != stateFromStores) {
@@ -222,7 +222,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
     obj[0] = stateFromStores;
     obj[1] = tmp5;
     obj[2] = guildId.contentContainerStyle;
-    const items1 = [callback(GuildSettingsModalInstantInvites, obj), callback(guildId(5948).NavScrim, {})];
+    const items1 = [callback(GuildSettingsModalInstantInvites, obj), callback(guildId(7040).NavScrim, {})];
     obj[0] = items1;
     tmp6 = callback2(closure_13, obj);
   }

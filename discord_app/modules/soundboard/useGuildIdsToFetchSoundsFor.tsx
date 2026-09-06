@@ -1,10 +1,10 @@
-// === Module 6194: useGuildIdsToFetchSoundsFor ===
+// === Module 7340: useGuildIdsToFetchSoundsFor ===
 
-// Module 6194 (useGuildIdsToFetchSoundsFor)
+// Module 7340 (useGuildIdsToFetchSoundsFor)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 4966 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import closure_4 from "handleSoundCreateOrUpdate" /* 5012 */;
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchSoundsFor.tsx");

@@ -1,6 +1,6 @@
-// === Module 16310: metadata ===
+// === Module 16472: metadata ===
 
-// Module 16310 (metadata)
+// Module 16472 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/icymi/header-image-light-3x.png.js");

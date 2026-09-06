@@ -1,8 +1,8 @@
-// === Module 8055: getFallbackHeroColor ===
+// === Module 8134: getFallbackHeroColor ===
 
-// Module 8055 (getFallbackHeroColor)
+// Module 8134 (getFallbackHeroColor)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
+import ThemesDefault from "Themes" /* 576 */;
 
 const result = set.fileFinishedImporting("modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx");
 

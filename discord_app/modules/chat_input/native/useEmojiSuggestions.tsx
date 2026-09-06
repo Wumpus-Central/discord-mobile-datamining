@@ -1,12 +1,12 @@
-// === Module 12227: findWordSpan ===
+// === Module 12427: findWordSpan ===
 
-// Module 12227 (findWordSpan)
+// Module 12427 (findWordSpan)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getEmojiToGroupId" /* 5410 */;
-import { LoadState } from "getEmojiToGroupId" /* 5410 */;
-import { EMOJI_SENTINEL } from "regExp" /* 4954 */;
-import { EmojiIntention } from "set" /* 1924 */;
+import closure_5 from "getEmojiToGroupId" /* 5459 */;
+import { LoadState } from "getEmojiToGroupId" /* 5459 */;
+import { EMOJI_SENTINEL } from "regExp" /* 5000 */;
+import { EmojiIntention } from "set" /* 1374 */;
 
 const require = arg1;
 function findWordSpan(arr) {

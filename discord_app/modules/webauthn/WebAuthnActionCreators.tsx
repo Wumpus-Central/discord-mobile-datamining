@@ -1,10 +1,10 @@
-// === Module 6065: _fetchWebAuthnConditionalChallenge ===
+// === Module 6597: _fetchWebAuthnConditionalChallenge ===
 
-// Module 6065 (_fetchWebAuthnConditionalChallenge)
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 6597 (_fetchWebAuthnConditionalChallenge)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 require = arg1;
 function _fetchWebAuthnConditionalChallenge() {
@@ -247,12 +247,12 @@ function _finishRegisterWebAuthnCredential() {
               obj2[2] = dependencyMap;
               obj1[1] = obj2;
               const obj3 = { event: null };
-              obj3[0] = lib(660).NetworkActionNames.WEBAUTHN_REGISTER;
+              obj3[0] = lib(1336).NetworkActionNames.WEBAUTHN_REGISTER;
               obj1[2] = obj3;
               c5 = 1;
               c6 = 1;
               let obj4 = { value: null, done: false };
-              obj4[0] = callback(4714).post(obj1);
+              obj4[0] = callback(4753).post(obj1);
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -265,11 +265,11 @@ function _finishRegisterWebAuthnCredential() {
             return obj;
           } else {
             lib = arg1;
-            obj4 = callback(706);
+            obj4 = callback(573);
             const obj5 = { type: "AUTHENTICATOR_CREATE", credential: null };
             obj5[1] = lib.body;
             obj4.dispatch(obj5);
-            let obj6 = callback(706);
+            let obj6 = callback(573);
             obj6 = { type: "MFA_ENABLE_SUCCESS", codes: null };
             obj6[1] = lib.body.backup_codes;
             obj6.dispatch(obj6);

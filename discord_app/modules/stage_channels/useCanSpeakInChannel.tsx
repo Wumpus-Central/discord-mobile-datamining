@@ -1,10 +1,10 @@
-// === Module 9568: useCanCurrentUserSpeakInChannel ===
+// === Module 9583: useCanCurrentUserSpeakInChannel ===
 
-// Module 9568 (useCanCurrentUserSpeakInChannel)
-import initialize from "initialize" /* 586 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4668 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
+// Module 9583 (useCanCurrentUserSpeakInChannel)
+import initialize from "initialize" /* 504 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4707 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useCanSpeakInChannel.tsx");

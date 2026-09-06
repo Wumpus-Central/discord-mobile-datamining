@@ -1,10 +1,10 @@
-// === Module 11782: CustomTypingIndicatorGlyph ===
+// === Module 11981: CustomTypingIndicatorGlyph ===
 
-// Module 11782 (CustomTypingIndicatorGlyph)
+// Module 11981 (CustomTypingIndicatorGlyph)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -18,12 +18,12 @@ export default function CustomTypingIndicatorGlyph(config) {
   let obj = dependencyMap;
   const tmp = callback();
   const tmp2 = map;
-  dependencyMap = map(1941).getEffectiveCustomTypingIndicatorAnimation(map);
-  const obj2 = map(1941);
+  dependencyMap = map(1392).getEffectiveCustomTypingIndicatorAnimation(map);
+  const obj2 = map(1392);
   if (obj3.hasCustomTypingIndicatorEmojis(map.emojis)) {
     let items = [tmp.emojiRow, ];
     if (null == size) {
-      let PX_4 = size(709).space.PX_4;
+      let PX_4 = size(576).space.PX_4;
     } else {
       PX_4 = size / 4;
     }
@@ -38,6 +38,6 @@ export default function CustomTypingIndicatorGlyph(config) {
     tmp3(View, obj);
     const tmp4 = View;
   } else {
-    return tmp3(tmp2(1296).Ellipsis, {});
+    return tmp3(tmp2(1178).Ellipsis, {});
   }
 };

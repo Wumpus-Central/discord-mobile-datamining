@@ -1,10 +1,10 @@
-// === Module 11925: getCollectionItemAssetUrl ===
+// === Module 12124: getCollectionItemAssetUrl ===
 
-// Module 11925 (getCollectionItemAssetUrl)
+// Module 12124 (getCollectionItemAssetUrl)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getAvatarURL from "getAvatarURL" /* 1430 */;
-import handleImageLoad from "handleImageLoad" /* 1464 */;
+import ME from "ME" /* 1074 */;
+import getAvatarURL from "getAvatarURL" /* 1396 */;
+import handleImageLoad from "handleImageLoad" /* 1430 */;
 
 const Endpoints = ME.Endpoints;
 ({ API_ENDPOINT: c3, CDN_HOST: c4 } = window.GLOBAL_ENV);

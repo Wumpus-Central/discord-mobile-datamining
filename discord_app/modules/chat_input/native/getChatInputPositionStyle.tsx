@@ -1,9 +1,9 @@
-// === Module 12056: getChatInputPositionStyle ===
+// === Module 12260: getChatInputPositionStyle ===
 
-// Module 12056 (getChatInputPositionStyle)
+// Module 12260 (getChatInputPositionStyle)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 1234 */;
+import set2 from "set" /* 1115 */;
 
 let obj = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);

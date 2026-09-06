@@ -1,12 +1,12 @@
-// === Module 12456: Steps ===
+// === Module 12682: Steps ===
 
-// Module 12456 (Steps)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import trackNUFStep from "trackNUFStep" /* 12457 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import { getIsOnboarding } from "ContactSyncModes" /* 12451 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12452 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 12682 (Steps)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import trackNUFStep from "trackNUFStep" /* 12683 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import { getIsOnboarding } from "ContactSyncModes" /* 12677 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12678 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 let obj = { INITIALIZED: "Flow Initialized", LANDING: "Landing", PERMISSION_REQUESTED: "Contacts Permission Requested", NAME_INPUT: "Name Input", SUGGESTIONS_RESULTS: "Suggestions Results", CONTACT_INVITES: "Contact Invites", ADD_PHONE_NUMBER: "Add Phone Number", VERIFY_PHONE_NUMBER: "Verify Phone Number", PASSWORD_CONFIRM: "Password Confirmation", COMPLETE: "Complete" };
@@ -27,7 +27,7 @@ export const trackFlowStart = function trackFlowStart(arg0) {
     phone = currentUser.phone;
   }
   closure_1 = null != phone;
-  obj = _require(12454);
+  obj = _require(12680);
   const result = obj.checkContactPermissions();
   result.then((arg0) => {
     let tmp = null;

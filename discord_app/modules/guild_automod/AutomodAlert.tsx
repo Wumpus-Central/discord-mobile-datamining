@@ -1,6 +1,6 @@
-// === Module 7272: AutomodAlertActionType ===
+// === Module 7517: AutomodAlertActionType ===
 
-// Module 7272 (AutomodAlertActionType)
+// Module 7517 (AutomodAlertActionType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_automod/AutomodAlert.tsx");

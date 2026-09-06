@@ -1,21 +1,21 @@
-// === Module 15040: EnrolledBodyWatchTask ===
+// === Module 15198: EnrolledBodyWatchTask ===
 
-// Module 15040 (EnrolledBodyWatchTask)
-import ThemesDefault from "Themes" /* 709 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5399 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 14962 */;
-import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14963 */;
-import useQuestRewardClaimHandlerDefault from "useQuestRewardClaimHandler" /* 14964 */;
+// Module 15198 (EnrolledBodyWatchTask)
+import ThemesDefault from "Themes" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
+import QuestBottomSheet from "QuestBottomSheet" /* 15120 */;
+import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 15121 */;
+import useQuestRewardClaimHandlerDefault from "useQuestRewardClaimHandler" /* 15122 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initializeState" /* 7459 */;
-import closure_7 from "QuestDockMode" /* 14935 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5396 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14937 */;
+import closure_6 from "initializeState" /* 7703 */;
+import closure_7 from "QuestDockMode" /* 15093 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function EnrolledBodyWatchTask(quest) {
@@ -197,9 +197,9 @@ let closure_15 = createCacheKey.createStyles(obj);
 let obj2 = { marginTop: ThemesDefault.space.PX_16 };
 let obj3 = { marginLeft: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, marginRight: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL };
 const memoResult = importAllResult.memo(function QuestDockEnrolledBody() {
-  let obj = minExpandedContentHeight(14944);
+  let obj = minExpandedContentHeight(15102);
   const questDockQuest = obj.useQuestDockQuest();
-  minExpandedContentHeight = importAllResult.useContext(minExpandedContentHeight(14938).QuestDockGestureContext).minExpandedContentHeight;
+  minExpandedContentHeight = importAllResult.useContext(minExpandedContentHeight(15096).QuestDockGestureContext).minExpandedContentHeight;
   const items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];
   const callback = importAllResult.useCallback((nativeEvent) => {

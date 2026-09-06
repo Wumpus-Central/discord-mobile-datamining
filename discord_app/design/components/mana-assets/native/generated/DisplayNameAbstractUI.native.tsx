@@ -1,10 +1,10 @@
-// === Module 6489: DisplayNameAbstractUI ===
+// === Module 5921: DisplayNameAbstractUI ===
 
-// Module 6489 (DisplayNameAbstractUI)
+// Module 5921 (DisplayNameAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6490 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5922 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameAbstractUI.native.tsx");

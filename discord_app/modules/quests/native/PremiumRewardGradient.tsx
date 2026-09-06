@@ -1,12 +1,12 @@
-// === Module 15006: PremiumRewardFillGradient ===
+// === Module 15164: PremiumRewardFillGradient ===
 
-// Module 15006 (PremiumRewardFillGradient)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 15164 (PremiumRewardFillGradient)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
 
 const require = arg1;
 function PremiumRewardFillGradient(arg0) {
@@ -63,32 +63,32 @@ function PremiumRewardGlowGradient(arg0) {
   const tmp = callback3();
   let token;
   let token1;
-  let obj = token(4197);
-  token = obj.useToken(token1(709).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
-  obj1 = token(4197);
-  token1 = obj1.useToken(token1(709).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
+  let obj = token(4262);
+  token = obj.useToken(token1(576).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
+  obj1 = token(4262);
+  token1 = obj1.useToken(token1(576).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
   let items = [token, token1];
   const memo = React.useMemo(() => {
     const items = [token, token1];
     return items;
   }, items);
-  let obj2 = token(1349);
-  const isThemeDarkResult = obj2.isThemeDark(token1(4413)());
+  let obj2 = token(4412);
+  const isThemeDarkResult = obj2.isThemeDark(token1(4495)());
   obj = { style: items1, children: null };
   items1 = [tmp.wrapper, style];
   const items2 = [tmp.glow, ];
   let glowLight = !isThemeDarkResult;
   const tmp10 = closure_5;
-  const tmp7 = token1(4413)();
+  const tmp7 = token1(4495)();
   const tmp9 = closure_7;
   if (!isThemeDarkResult) {
     glowLight = tmp.glowLight;
   }
-  obj = { style: items2, maskElement: tmp11(tmp3(4941), obj1), children: tmp11(tmp3(4941), obj2) };
+  obj = { style: items2, maskElement: tmp11(tmp3(4987), obj1), children: tmp11(tmp3(4987), obj2) };
   items2[1] = glowLight;
   obj1 = { style: closure_4.absoluteFill, colors: ["transparent", "black"], start: closure_11, end: closure_12 };
   obj2 = { style: closure_4.absoluteFill, colors: memo, start: closure_9, end: closure_10 };
-  const items3 = [closure_6(token1(5544), obj), children];
+  const items3 = [closure_6(token1(5664), obj), children];
   obj[1] = items3;
   return tmp9(tmp10, obj);
 }

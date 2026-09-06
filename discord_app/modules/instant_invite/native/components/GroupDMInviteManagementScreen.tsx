@@ -1,15 +1,15 @@
-// === Module 10893: GroupDMInviteManagement ===
+// === Module 10931: GroupDMInviteManagement ===
 
-// Module 10893 (GroupDMInviteManagement)
+// Module 10931 (GroupDMInviteManagement)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "createFromServer" /* 8670 */;
-import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8772 */;
-import ME from "ME" /* 673 */;
+import closure_8 from "createFromServer" /* 8380 */;
+import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8626 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function GroupDMInviteManagement(channelId) {
@@ -23,7 +23,7 @@ function GroupDMInviteManagement(channelId) {
   dependencyMap = tmp2[1];
   const tmp3 = callback(importAllResult.useState(true), 2);
   closure_3 = tmp3[1];
-  first(4946)(() => {
+  first(4992)(() => {
     function _fetchInvites() {
       const self = this;
       const tmp = callback(function*() {
@@ -136,16 +136,16 @@ function GroupDMInviteManagement(channelId) {
   [][0] = first;
   callback = importAllResult.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp14 = jsx(channelId(6056).SceneLoadingIndicator, {});
+    let tmp14 = jsx(channelId(7039).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
     let obj = { lightSource: null, darkSource: null, title: null, body: null };
-    obj[0] = tmp4(10911);
-    obj[1] = tmp4(10912);
-    const intl = channelId(1233).intl;
-    obj[2] = intl.string(channelId(1233).t["+nLJkZ"]);
-    const intl2 = channelId(1233).intl;
-    obj[3] = intl2.string(channelId(1233).t.F53CAc);
-    tmp14 = jsx(channelId(1296).EmptyState, { lightSource: null, darkSource: null, title: null, body: null });
+    obj[0] = tmp4(10949);
+    obj[1] = tmp4(10950);
+    const intl = channelId(1114).intl;
+    obj[2] = intl.string(channelId(1114).t["+nLJkZ"]);
+    const intl2 = channelId(1114).intl;
+    obj[3] = intl2.string(channelId(1114).t.F53CAc);
+    tmp14 = jsx(channelId(1178).EmptyState, { lightSource: null, darkSource: null, title: null, body: null });
   } else {
     obj = { style: null, data: null, keyExtractor: null, renderItem: null, initialNumToRender: 10, windowSize: null };
     obj[0] = tmp.list;
@@ -178,7 +178,7 @@ const memoResult = importAllResult.memo(function GroupDMInviteManagementScreen(c
     obj[closure_1_9.INSTANT_INVITES_MANAGEMENT] = obj;
     return obj;
   }, items);
-  return jsx(channelId(6017).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(7000).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });
 const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx");
 

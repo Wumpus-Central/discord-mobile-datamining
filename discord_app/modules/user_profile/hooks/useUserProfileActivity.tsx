@@ -1,12 +1,12 @@
-// === Module 12707: useUserProfileActivity ===
+// === Module 13040: useUserProfileActivity ===
 
-// Module 12707 (useUserProfileActivity)
+// Module 13040 (useUserProfileActivity)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
-import closure_4 from "map" /* 9436 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_6 from "sortActivity" /* 4569 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
+import closure_4 from "map" /* 8791 */;
+import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_6 from "sortActivity" /* 4600 */;
 
 const useMemo = noop.useMemo;
 const Features = DesktopSources.Features;

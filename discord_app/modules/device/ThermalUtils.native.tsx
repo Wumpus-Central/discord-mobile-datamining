@@ -1,10 +1,10 @@
-// === Module 9476: NativeModules ===
+// === Module 9521: NativeModules ===
 
-// Module 9476 (NativeModules)
-import enforcingDefault from "enforcing" /* 9477 */;
+// Module 9521 (NativeModules)
+import enforcingDefault from "enforcing" /* 9522 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 1234 */;
-import keys from "keys" /* 641 */;
+import set from "set" /* 1115 */;
+import keys from "keys" /* 560 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 if (set.isAndroid()) {
@@ -24,7 +24,7 @@ let closure_5 = keys.create((arg0) => {
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = _require(4457);
+    tmpResult = _require(4539);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();

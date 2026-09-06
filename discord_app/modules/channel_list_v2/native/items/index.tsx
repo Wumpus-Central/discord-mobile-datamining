@@ -1,10 +1,10 @@
-// === Module 15941: CategoryChannel ===
+// === Module 16105: CategoryChannel ===
 
-// Module 15941 (CategoryChannel)
+// Module 16105 (CategoryChannel)
 import set from "set" /* 2 */;
-import renderCategoryItem from "renderCategoryItem" /* 15942 */;
-import ThreadChannelDefault from "ThreadChannel" /* 15949 */;
-import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary" /* 15967 */;
+import renderCategoryItem from "renderCategoryItem" /* 16106 */;
+import ThreadChannelDefault from "ThreadChannel" /* 16113 */;
+import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary" /* 16131 */;
 
 const result = set.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
 

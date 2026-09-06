@@ -1,16 +1,16 @@
-// === Module 9382: styles ===
+// === Module 9427: styles ===
 
-// Module 9382 (styles)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 9427 (styles)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { createChannelRecord } from "createChannelRecord" /* 1390 */;
-import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
+import { createChannelRecord } from "createChannelRecord" /* 1961 */;
+import closure_8 from "markAllUserIdListsStale" /* 4209 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -52,7 +52,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       obj[0] = intl.string(selectedGuildId(onChannelChange[13]).t["Re/64R"]);
       const channels = tmp.channels;
       obj[1] = channels.map((id) => {
-        const obj = { label: callback(4674).computeChannelName(callback2(id), closure_9, closure_8), value: id.id };
+        const obj = { label: callback(4713).computeChannelName(callback2(id), closure_9, closure_8), value: id.id };
         return obj;
       });
       obj[2] = function onItemSelect(arg0) {

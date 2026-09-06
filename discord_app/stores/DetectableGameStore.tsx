@@ -1,19 +1,19 @@
-// === Module 4514: gameFromServer ===
+// === Module 1931: gameFromServer ===
 
-// Module 4514 (gameFromServer)
+// Module 1931 (gameFromServer)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import Storage2 from "Storage" /* 592 */;
-import ME from "ME" /* 673 */;
-import setDefault from "set" /* 684 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import createExecutable2 from "createExecutable" /* 4504 */;
-import ApplicationTypes2 from "ApplicationTypes" /* 4507 */;
-import keysDefault from "keys" /* 4515 */;
-import GameTheme from "GameTheme" /* 4516 */;
-import set from "set" /* 1234 */;
+import initializeDefault from "initialize" /* 504 */;
+import Storage2 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
+import setDefault from "set" /* 1090 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import ApplicationTypes2 from "ApplicationTypes" /* 1350 */;
+import createExecutable2 from "createExecutable" /* 1918 */;
+import keysDefault from "keys" /* 1932 */;
+import GameTheme from "GameTheme" /* 1934 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import set from "set" /* 1115 */;
 
 function gameFromServer(id) {
   ({ executables, aliases, third_party_skus } = id);
@@ -255,13 +255,13 @@ prototype["findGame"] = function findGame(nextResult) {
     }
     if (null != nextResult.exePath) {
       let parts = nextResult.exePath.split("/");
-      let found = parts.filter(_require(1470).isNotNullish);
+      let found = parts.filter(_require(1369).isNotNullish);
       const gameByExecutable = self.getGameByExecutable(found.pop());
       if (null != gameByExecutable) {
         return gameByExecutable;
       } else {
         const parts1 = nextResult.exePath.split("/");
-        const found1 = parts1.filter(tmp15(1470).isNotNullish);
+        const found1 = parts1.filter(tmp15(1369).isNotNullish);
         const substr = found1.slice(-2);
         const gameByExecutable1 = self.getGameByExecutable(substr.join("/"));
         if (null != gameByExecutable1) {

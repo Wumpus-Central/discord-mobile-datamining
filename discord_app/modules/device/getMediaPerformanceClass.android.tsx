@@ -1,8 +1,8 @@
-// === Module 7425: getMediaPerformanceClass ===
+// === Module 7672: getMediaPerformanceClass ===
 
-// Module 7425 (getMediaPerformanceClass)
+// Module 7672 (getMediaPerformanceClass)
 import set from "set" /* 2 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
 
 const result = set.fileFinishedImporting("modules/device/getMediaPerformanceClass.android.tsx");
 

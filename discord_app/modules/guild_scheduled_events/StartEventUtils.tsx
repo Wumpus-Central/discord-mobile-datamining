@@ -1,12 +1,12 @@
-// === Module 9926: createStageChannelForEvent ===
+// === Module 9811: createStageChannelForEvent ===
 
-// Module 9926 (createStageChannelForEvent)
+// Module 9811 (createStageChannelForEvent)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1390 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
-import { ChannelTypes } from "ME" /* 673 */;
+import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1961 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "createGuildRecordFromRust" /* 1979 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
+import { ChannelTypes } from "ME" /* 1074 */;
 
 const require = arg1;
 function createStageChannelForEvent(guild, name, arg2) {

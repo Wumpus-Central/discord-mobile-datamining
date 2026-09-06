@@ -1,8 +1,8 @@
-// === Module 1370: getProtoFieldClass ===
+// === Module 1941: getProtoFieldClass ===
 
-// Module 1370 (getProtoFieldClass)
+// Module 1941 (getProtoFieldClass)
 import set from "set" /* 2 */;
-import b64ToProto from "b64ToProto" /* 1341 */;
+import BINARY_READ_OPTIONS from "BINARY_READ_OPTIONS" /* 1224 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 
@@ -20,7 +20,7 @@ export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSetti
 };
 export const createModifiedProto = function createModifiedProto(closure_1, c2, closure_0, PreloadedUserSettings, closure_02) {
   if (null != closure_1) {
-    let fromBinaryResult = closure_0.fromBinary(closure_0.toBinary(closure_1), b64ToProto.BINARY_READ_OPTIONS);
+    let fromBinaryResult = closure_0.fromBinary(closure_0.toBinary(closure_1), BINARY_READ_OPTIONS.BINARY_READ_OPTIONS);
     const toBinaryResult = closure_0.toBinary(closure_1);
   } else {
     fromBinaryResult = closure_0.create();

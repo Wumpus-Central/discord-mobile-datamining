@@ -1,26 +1,26 @@
-// === Module 10123: ExpandedControlItemIcon ===
+// === Module 10014: ExpandedControlItemIcon ===
 
-// Module 10123 (ExpandedControlItemIcon)
+// Module 10014 (ExpandedControlItemIcon)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import Form from "Form" /* 8376 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9800 */;
-import stopScreenshareDefault from "stopScreenshare" /* 10068 */;
-import VolumeSliderDefault from "VolumeSlider" /* 10095 */;
-import NOOP from "NOOP" /* 10112 */;
-import registerAssetDefault from "registerAsset" /* 10124 */;
-import registerAssetDefault2 from "registerAsset" /* 10125 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10126 */;
-import useDeafStatesDefault from "useDeafStates" /* 10127 */;
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import Form from "Form" /* 8593 */;
+import _handleToggleVideo from "_handleToggleVideo" /* 9082 */;
+import stopScreenshareDefault from "stopScreenshare" /* 9951 */;
+import VolumeSliderDefault from "VolumeSlider" /* 9986 */;
+import NOOP from "NOOP" /* 10003 */;
+import registerAssetDefault from "registerAsset" /* 10015 */;
+import registerAssetDefault2 from "registerAsset" /* 10016 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10017 */;
+import useDeafStatesDefault from "useDeafStates" /* 10018 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4500 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
+import closure_5 from "reset" /* 4582 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function ExpandedControlItemIcon(iconSource) {
@@ -110,7 +110,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   const tmp6 = useMuteAwareLocalVolumeDefault;
   ({ effectiveVolume, handleVolumeChange } = useMuteAwareLocalVolumeDefault(ownerId, MediaEngineContextTypes.STREAM));
   obj = { text: null, style: null };
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj[0] = intl.string(getSystemLocale.t.pEAl4b);
   const items1 = [tmp.formColor, { marginBottom: 16 }];
   obj[1] = items1;
@@ -121,8 +121,8 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   if (tmp2Result.isAndroid()) {
     fn = () => true;
   }
-  obj = { onResponderGrant: fn, value: effectiveVolume, onValueChange: handleVolumeChange, color: tmp5(709).unsafe_rawColors.WHITE, maxTrackTintColor: tmp5(709).unsafe_rawColors.PRIMARY_300, accessibilityLabel: null };
-  const intl2 = tmp2(1233).intl;
+  obj = { onResponderGrant: fn, value: effectiveVolume, onValueChange: handleVolumeChange, color: tmp5(576).unsafe_rawColors.WHITE, maxTrackTintColor: tmp5(576).unsafe_rawColors.PRIMARY_300, accessibilityLabel: null };
+  const intl2 = tmp2(1114).intl;
   obj[5] = intl2.string(getSystemLocale.t.pEAl4b);
   items2[1] = callback(tmp5Result, obj);
   { children: null }[0] = items2;
@@ -130,7 +130,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   if (null != stateFromStores) {
     obj1 = { label: null };
     obj1[0] = tmp11;
-    tmp9Result = tmp9(tmp2(8376).FormRow, obj1);
+    tmp9Result = tmp9(tmp2(8593).FormRow, obj1);
   }
   return tmp9Result;
 };
@@ -163,8 +163,8 @@ export const DeafenButton = function DeafenButton(disabled) {
   }
   let obj = NOOP;
   const deafHandler = obj.createDeafHandler(useDeafStatesDefault(disabled.channel));
-  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10128 : 10129), label: null };
-  const intl = tmp4(1233).intl;
+  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10019 : 10020), label: null };
+  const intl = tmp4(1114).intl;
   obj[3] = intl.string(getSystemLocale.t.wjcRFX);
   return callback(ExpandedControlItem, obj);
 };

@@ -1,14 +1,14 @@
-// === Module 16747: BurstReactionAnimationContainerInner ===
+// === Module 16912: BurstReactionAnimationContainerInner ===
 
-// Module 16747 (BurstReactionAnimationContainerInner)
-import ThemesDefault from "Themes" /* 709 */;
-import ManaContext from "ManaContext" /* 4204 */;
+// Module 16912 (BurstReactionAnimationContainerInner)
+import ThemesDefault from "Themes" /* 576 */;
+import ManaContext from "ManaContext" /* 4271 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function BurstReactionAnimationContainerInner() {
@@ -32,18 +32,18 @@ function BurstReactionAnimationContainerInner() {
       closure_5.current = true;
       const result = handleEffectReceived(closure_1_2[8]).triggerHapticFeedback(closure_1_1(closure_1_2[9]).IMPACT_HEAVY);
     }
-    const subscription = first(706).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
+    const subscription = first(573).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
-      first(706).unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
+      first(573).unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     };
   }, []);
-  let obj = _require(4217);
+  let obj = _require(4296);
   let fn = function y() {
     if (null == first) {
       let obj = { opacity: 0 };
     } else {
       obj = { opacity: null };
-      const tmp11 = callback(4479);
+      const tmp11 = callback(4561);
       const withTiming = tmp11.withTiming;
       obj1 = { duration: 300 };
       if (first1) {
@@ -56,7 +56,7 @@ function BurstReactionAnimationContainerInner() {
           }
         };
         obj = { runOnJS: null, handleComponentFinish: null };
-        obj[0] = callback(4217).runOnJS;
+        obj[0] = callback(4296).runOnJS;
         obj[1] = handleComponentFinish;
         fn.__closure = obj;
         fn.__workletHash = 9326347209552;
@@ -66,7 +66,7 @@ function BurstReactionAnimationContainerInner() {
     }
     return obj;
   };
-  obj = { animationData: first, showAnimation: first1, withTiming: _require(4479).withTiming, runOnJS: _require(4217).runOnJS, handleComponentFinish };
+  obj = { animationData: first, showAnimation: first1, withTiming: _require(4561).withTiming, runOnJS: _require(4296).runOnJS, handleComponentFinish };
   fn.__closure = obj;
   fn.__workletHash = 12044515783370;
   fn.__initData = closure_12;
@@ -74,7 +74,7 @@ function BurstReactionAnimationContainerInner() {
   let tmp8 = null;
   if (null != first) {
     obj = { contentTypes: null, children: null };
-    let items = [_require(1372).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+    let items = [_require(1943).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
     obj[0] = items;
     obj[1] = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
@@ -82,7 +82,7 @@ function BurstReactionAnimationContainerInner() {
       obj = { style: items, children: null };
       items = [markAsDismissed.fill, closure_7];
       obj = {
-        activeOpacity: callback(7539).BACKDROP_OPACITY,
+        activeOpacity: callback(7784).BACKDROP_OPACITY,
         onPress() {
           closure_1_4(false);
           closure_1_5.current = false;
@@ -103,18 +103,18 @@ function BurstReactionAnimationContainerInner() {
             closure_5.current = false;
           }
         };
-        tmpResult = tmp(first(7581), obj3);
+        tmpResult = tmp(first(7826), obj3);
       }
       obj2[1] = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj2);
-      let tmp6Result = markAsDismissed.visibleContent === tmp2(1372).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+      let tmp6Result = markAsDismissed.visibleContent === tmp2(1943).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
         const obj4 = { children: null };
         const obj5 = { style: null, variant: "text-sm/medium", children: null };
         obj5[0] = tmp4.dismissTextContainer;
-        const intl = tmp2(1233).intl;
-        obj5[2] = intl.string(tmp2(1233).t.QpPMih);
-        const items2 = [tmp(tmp2(4474).Text, obj5), ];
+        const intl = tmp2(1114).intl;
+        obj5[2] = intl.string(tmp2(1114).t.QpPMih);
+        const items2 = [tmp(tmp2(4556).Text, obj5), ];
         const obj6 = { style: null };
         obj6[0] = tmp4.dismissTextBackground;
         items2[1] = tmp(tmp8, obj6);
@@ -124,11 +124,11 @@ function BurstReactionAnimationContainerInner() {
       items1[2] = tmp6Result;
       obj[3] = items1;
       obj[1] = closure_1_10(closure_5, obj);
-      obj[1] = closure_1_8(first(4217).View, obj);
-      return closure_1_8(callback(1296).OverlayView, obj);
+      obj[1] = closure_1_8(first(4296).View, obj);
+      return closure_1_8(callback(1178).OverlayView, obj);
     };
-    tmp8 = callback(first(10643), obj);
-    let tmp11 = first(10643);
+    tmp8 = callback(first(10625), obj);
+    let tmp11 = first(10625);
   }
   return tmp8;
 }

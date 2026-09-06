@@ -1,9 +1,9 @@
-// === Module 9434: getActivityPlatformDisplayName ===
+// === Module 13019: getActivityPlatformDisplayName ===
 
-// Module 9434 (getActivityPlatformDisplayName)
+// Module 13019 (getActivityPlatformDisplayName)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 const PlatformTypes = ME.PlatformTypes;
 const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityPlatformDisplayName.tsx");

@@ -1,11 +1,11 @@
-// === Module 13173: initialize ===
+// === Module 13276: initialize ===
 
-// Module 13173 (initialize)
+// Module 13276 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "_handleConnectionOpen" /* 5230 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "_handleConnectionOpen" /* 5277 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
 
 let closure_4 = Object.freeze({ online: null, total: null });
 let closure_5 = {};

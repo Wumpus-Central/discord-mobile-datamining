@@ -1,6 +1,6 @@
-// === Module 9465: hasPartySize ===
+// === Module 11756: hasPartySize ===
 
-// Module 9465 (hasPartySize)
+// Module 11756 (hasPartySize)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/hasPartySize.tsx");

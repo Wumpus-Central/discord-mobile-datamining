@@ -1,13 +1,13 @@
-// === Module 16344: useReplyActions ===
+// === Module 16506: useReplyActions ===
 
-// Module 16344 (useReplyActions)
+// Module 16506 (useReplyActions)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import { DraftType } from "handleChanged" /* 4855 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import { EmojiIntention } from "set" /* 1924 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import { DraftType } from "handleChanged" /* 4901 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import { EmojiIntention } from "set" /* 1374 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

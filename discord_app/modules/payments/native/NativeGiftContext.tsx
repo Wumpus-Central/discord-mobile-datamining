@@ -1,19 +1,19 @@
-// === Module 10702: NativeGiftContextProvider ===
+// === Module 10699: NativeGiftContextProvider ===
 
-// Module 10702 (NativeGiftContextProvider)
+// Module 10699 (NativeGiftContextProvider)
 import timestampDefault from "timestamp" /* 3 */;
-import createDefinedContextDefault from "createDefinedContext" /* 7183 */;
+import createDefinedContextDefault from "createDefinedContext" /* 7428 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importDefaultResult from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 8577 */;
-import closure_7 from "createEmptyPromotionsByType" /* 10700 */;
-import closure_8 from "frozen" /* 8461 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import { GPlayBillingResult as unpackModuleId } from "GPlayConnectionState" /* 6094 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
-import { PaymentGateways } from "sum" /* 502 */;
+import closure_6 from "initialize" /* 8192 */;
+import closure_7 from "createEmptyPromotionsByType" /* 10665 */;
+import closure_8 from "frozen" /* 10700 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import { GPlayBillingResult as unpackModuleId } from "GPlayConnectionState" /* 7238 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
+import { PaymentGateways } from "sum" /* 1085 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -269,7 +269,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     constants = undefined;
     table = undefined;
     closure_15 = undefined;
-    obj = { orderId: "a", planId: null, planSelection: null, giftInfo: null };
+    obj = { orderId: "a", planId: 150, planSelection: "center", giftInfo: "center" };
     obj = { premiumType: null, planInterval: null };
     obj[0] = first;
     obj[1] = first1;

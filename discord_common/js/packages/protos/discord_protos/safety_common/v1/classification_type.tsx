@@ -1,6 +1,6 @@
-// === Module 1931: ClassificationType ===
+// === Module 1381: ClassificationType ===
 
-// Module 1931 (ClassificationType)
+// Module 1381 (ClassificationType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/safety_common/v1/classification_type.tsx");

@@ -1,6 +1,6 @@
-// === Module 4189: LINKING_SCHEMAS ===
+// === Module 4254: LINKING_SCHEMAS ===
 
-// Module 4189 (LINKING_SCHEMAS)
+// Module 4254 (LINKING_SCHEMAS)
 import set from "set" /* 2 */;
 
 obj = { bestbuy: obj };

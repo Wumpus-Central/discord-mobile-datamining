@@ -1,7 +1,7 @@
-// === Module 14584: useHighlightSettingItem ===
+// === Module 14695: useHighlightSettingItem ===
 
-// Module 14584 (useHighlightSettingItem)
-import closure_0 from "zustandStore" /* 14580 */;
+// Module 14695 (useHighlightSettingItem)
+import closure_0 from "zustandStore" /* 14691 */;
 
 const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx");
 

@@ -1,14 +1,14 @@
-// === Module 17661: updateSocialRpcNetworkConfig ===
+// === Module 17821: updateSocialRpcNetworkConfig ===
 
-// Module 17661 (updateSocialRpcNetworkConfig)
+// Module 17821 (updateSocialRpcNetworkConfig)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import sendRequest from "sendRequest" /* 527 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import set2 from "set" /* 1234 */;
-import initializeDefault from "initialize" /* 5495 */;
-import closure_4 from "_getSystemLocale" /* 1995 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
+import set2 from "set" /* 1115 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import initializeDefault from "initialize" /* 7118 */;
+import closure_4 from "_getSystemLocale" /* 2025 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
 
 function updateSocialRpcNetworkConfig() {
   let obj = { "X-Super-Properties": expandEventPropertiesDefault.getSuperPropertiesBase64(), "X-Fingerprint": store.getFingerprint(), "X-Installation-ID": store.getInstallationForTracking(), "X-Discord-Locale": locale.locale };

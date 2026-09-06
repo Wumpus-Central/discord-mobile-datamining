@@ -1,6 +1,6 @@
-// === Module 9735: GuildEmbeddedApplicationUnsupportedReason ===
+// === Module 9748: GuildEmbeddedApplicationUnsupportedReason ===
 
-// Module 9735 (GuildEmbeddedApplicationUnsupportedReason)
+// Module 9748 (GuildEmbeddedApplicationUnsupportedReason)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildEmbeddedApplicationUnsupportedReason.tsx");

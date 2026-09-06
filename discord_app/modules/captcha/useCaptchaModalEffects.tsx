@@ -1,8 +1,8 @@
-// === Module 17122: useCaptchaModalEffects ===
+// === Module 17288: useCaptchaModalEffects ===
 
-// Module 17122 (useCaptchaModalEffects)
+// Module 17288 (useCaptchaModalEffects)
 import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/captcha/useCaptchaModalEffects.tsx");
@@ -14,7 +14,7 @@ export default function useCaptchaModalEffects(arg0) {
   }
   dependencyMap = undefined;
   dependencyMap = React.useRef(true);
-  analyticsType(4946)(() => () => {
+  analyticsType(4992)(() => () => {
     if (ref.current) {
       if (closure_0 != null) {
         tmp(closure_1_0(closure_1_2[3]).CaptchaError.CANCEL);

@@ -1,8 +1,8 @@
-// === Module 8146: ? ===
+// === Module 11722: ? ===
 
-// Module 8146
+// Module 11722
 import set from "set" /* 2 */;
-import buildPlatformPollResources from "buildPlatformPollResources" /* 8142 */;
+import buildPlatformPollResources from "buildPlatformPollResources" /* 11718 */;
 import apply from "apply" /* 12 */;
 
 const memoizeResult = apply.memoize(function buildPollResources(arg0) {

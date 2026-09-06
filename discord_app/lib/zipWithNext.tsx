@@ -1,6 +1,6 @@
-// === Module 13696: zipWithNext ===
+// === Module 13804: zipWithNext ===
 
-// Module 13696 (zipWithNext)
+// Module 13804 (zipWithNext)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/zipWithNext.tsx");

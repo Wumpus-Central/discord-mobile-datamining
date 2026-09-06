@@ -1,8 +1,8 @@
-// === Module 9432: isOnMetaQuest ===
+// === Module 13017: isOnMetaQuest ===
 
-// Module 9432 (isOnMetaQuest)
+// Module 13017 (isOnMetaQuest)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const ActivityGamePlatforms = ME.ActivityGamePlatforms;
 const result = set.fileFinishedImporting("modules/activities/utils/isOnMetaQuest.tsx");

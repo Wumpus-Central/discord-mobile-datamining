@@ -1,11 +1,11 @@
-// === Module 10401: GIFPickerCategoryView ===
+// === Module 10383: GIFPickerCategoryView ===
 
-// Module 10401 (GIFPickerCategoryView)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 10383 (GIFPickerCategoryView)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ StyleSheet, View: c4, TouchableOpacity: c5 } = get_ActivityIndicator);
@@ -42,29 +42,29 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   const callback = React.useCallback(() => {
     onSelectCategory(item.type, item.name);
   }, items);
-  const intl = onSelectCategory(1233).intl;
+  const intl = onSelectCategory(1114).intl;
   let obj = { categoryName: item.name };
-  const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1233).t["j+63pw"], obj);
+  const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1114).t["j+63pw"], obj);
   obj = { style: tmp.container, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult };
-  const merged = Object.assign(item(9746)(callback, formatToPlainStringResult));
+  const merged = Object.assign(item(9759)(callback, formatToPlainStringResult));
   obj = { style: tmp.gifImage, source: obj1 };
-  const items1 = [callback(item(5502), obj), callback(closure_4, { style: tmp.gifOverlay }), ];
+  const items1 = [callback(item(5587), obj), callback(closure_4, { style: tmp.gifOverlay }), ];
   const obj3 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
     const obj4 = { size: "sm", style: null, color: null };
     obj4[1] = tmp.categoryNameIcon;
-    obj4[2] = tmp6(709).colors.WHITE;
-    let tmp10Result = tmp10(tmp3(10402).AnalyticsIcon, obj4);
+    obj4[2] = tmp6(576).colors.WHITE;
+    let tmp10Result = tmp10(tmp3(10384).AnalyticsIcon, obj4);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
       const obj5 = { size: "sm", style: null, color: null };
       obj5[1] = tmp.categoryNameIcon;
-      obj5[2] = tmp6(709).colors.WHITE;
-      tmp10Result = tmp10(tmp3(9199).StarIcon, obj5);
+      obj5[2] = tmp6(576).colors.WHITE;
+      tmp10Result = tmp10(tmp3(10235).StarIcon, obj5);
     }
   }
-  const items2 = [tmp10Result, callback(onSelectCategory(4474).Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];
+  const items2 = [tmp10Result, callback(onSelectCategory(4556).Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];
   obj3[2] = items2;
   items1[2] = closure_8(closure_4, obj3);
   obj.children = items1;

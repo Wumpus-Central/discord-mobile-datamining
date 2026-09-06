@@ -1,13 +1,13 @@
-// === Module 16308: getPrimaryCategories ===
+// === Module 16470: getPrimaryCategories ===
 
-// Module 16308 (getPrimaryCategories)
+// Module 16470 (getPrimaryCategories)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9756 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9066 */;
 
 ({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: c4, DISCOVERY_ALL_CATEGORIES_ID: c5, DISCOVERY_SIDEBAR_CATEGORIES: closure_6 } = DEFAULT_DISCOVERY_CATEGORY_ID);
 let c7 = null;

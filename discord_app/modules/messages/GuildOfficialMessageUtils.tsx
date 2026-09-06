@@ -1,21 +1,21 @@
-// === Module 6123: useCanManageGuildOfficialMessages ===
+// === Module 7267: useCanManageGuildOfficialMessages ===
 
-// Module 6123 (useCanManageGuildOfficialMessages)
-import int2hslRaw from "int2hslRaw" /* 685 */;
-import nDefault from "n" /* 686 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
-import experimentDefault from "experiment" /* 6124 */;
-import useCanStartPrivateThread from "useCanStartPrivateThread" /* 6125 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6126 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
-import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING" /* 4471 */;
-import ME from "ME" /* 673 */;
+// Module 7267 (useCanManageGuildOfficialMessages)
+import nDefault from "n" /* 672 */;
+import int2hslRaw from "int2hslRaw" /* 1091 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
+import experimentDefault from "experiment" /* 7268 */;
+import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING" /* 4553 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function useCanManageGuildOfficialMessages(arg0, arg1, location) {
   const _require = arg0;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_3];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -68,7 +68,7 @@ export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOf
     tmp5 = mixResult;
   }
   obj4 = nDefault;
-  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(1362).WCAGContrastRatios.Text, saturationFactor: num };
+  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(4411).WCAGContrastRatios.Text, saturationFactor: num };
   return hexToRgba.getAccessibleForegroundColor(obj);
 };
 export function showGuildOfficialMessageGradient(officialMessageStyle) {
@@ -102,7 +102,7 @@ export const isGuildOfficialMessagesEnabled = function isGuildOfficialMessagesEn
 };
 export const useIsGuildOfficialMessagesEnabled = function useIsGuildOfficialMessagesEnabled(id, useGuildActionRows) {
   const _require = id;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_3];
   const items1 = [id];
   const stateFromStores = obj.useStateFromStores(items, () => {

@@ -1,15 +1,15 @@
-// === Module 11361: MediaViewerAltTextSheet ===
+// === Module 11536: MediaViewerAltTextSheet ===
 
-// Module 11361 (MediaViewerAltTextSheet)
+// Module 11536 (MediaViewerAltTextSheet)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
-import Background from "Background" /* 5631 */;
-import useMessagePreviewHeightStore from "useMessagePreviewHeightStore" /* 11362 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
+import Background from "Background" /* 7150 */;
+import useMessagePreviewHeightStore from "useMessagePreviewHeightStore" /* 11537 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -29,7 +29,7 @@ export default function MediaViewerAltTextSheet(children) {
   }
   obj = { header: null, contentStyles: null, children: null };
   obj = { title: null };
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj[0] = intl.string(getSystemLocale.t.J3IOO1);
   obj[0] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null });
   const items = [tmp.container, { minHeight: num }];

@@ -1,11 +1,11 @@
-// === Module 6255: openUserSettings ===
+// === Module 7382: openUserSettings ===
 
-// Module 6255 (openUserSettings)
+// Module 7382 (openUserSettings)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import handleFormClose from "handleFormClose" /* 6256 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
+import handleFormClose from "handleFormClose" /* 7383 */;
 
 const UserSettingsSections = ME.UserSettingsSections;
 const result = set.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");

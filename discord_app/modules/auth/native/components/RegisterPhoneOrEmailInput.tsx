@@ -1,9 +1,9 @@
-// === Module 15801: RegisterPhoneOrEmailInput ===
+// === Module 15963: RegisterPhoneOrEmailInput ===
 
-// Module 15801 (RegisterPhoneOrEmailInput)
+// Module 15963 (RegisterPhoneOrEmailInput)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleSetLocationMetadata" /* 7728 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15784 */;
+import closure_4 from "handleSetLocationMetadata" /* 6943 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15946 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

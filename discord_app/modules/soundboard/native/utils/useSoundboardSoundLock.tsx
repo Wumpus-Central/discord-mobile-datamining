@@ -1,10 +1,10 @@
-// === Module 16909: useSoundboardSoundLock ===
+// === Module 17073: useSoundboardSoundLock ===
 
-// Module 16909 (useSoundboardSoundLock)
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
+// Module 17073 (useSoundboardSoundLock)
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4968 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 5014 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
@@ -12,11 +12,11 @@ let result = require("set").fileFinishedImporting("modules/soundboard/native/uti
 export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, channel) {
   const _require = sound;
   let BARTXV = dependencyMap;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const result = _require(6198).canUseSoundboardSound(stateFromStores, sound, channel);
-  const obj2 = _require(6198);
+  const result = _require(7344).canUseSoundboardSound(stateFromStores, sound, channel);
+  const obj2 = _require(7344);
   const tmp4 = !result;
   const result1 = getPremiumPlanItemDefault.canUseSoundboardEverywhere(stateFromStores);
   let tmp6 = !result1;
@@ -35,11 +35,11 @@ export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, cha
     obj[2] = tmp8;
     return obj;
   } else if (tmp6) {
-    const intl2 = tmp(1233).intl;
-    BARTXV = tmp(1233).t.BARTXV;
+    const intl2 = tmp(1114).intl;
+    BARTXV = tmp(1114).t.BARTXV;
     let stringResult = intl2.string(BARTXV);
   } else if (!sound.available) {
-    let intl = tmp(1233).intl;
-    stringResult = intl.string(tmp(1233).t.MDOXJR);
+    let intl = tmp(1114).intl;
+    stringResult = intl.string(tmp(1114).t.MDOXJR);
   }
 };

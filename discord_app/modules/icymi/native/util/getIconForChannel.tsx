@@ -1,14 +1,14 @@
-// === Module 16332: getIconForChannel ===
+// === Module 16494: getIconForChannel ===
 
-// Module 16332 (getIconForChannel)
+// Module 16494 (getIconForChannel)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import TextIcon from "TextIcon" /* 5034 */;
-import ImageIcon from "ImageIcon" /* 5041 */;
-import ForumIcon from "ForumIcon" /* 5042 */;
-import AnnouncementsIcon from "AnnouncementsIcon" /* 5048 */;
-import StageIcon from "StageIcon" /* 5051 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5055 */;
+import ME from "ME" /* 1074 */;
+import TextIcon from "TextIcon" /* 5080 */;
+import ImageIcon from "ImageIcon" /* 5087 */;
+import ForumIcon from "ForumIcon" /* 5088 */;
+import AnnouncementsIcon from "AnnouncementsIcon" /* 5094 */;
+import StageIcon from "StageIcon" /* 5097 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
 
 const ChannelTypes = ME.ChannelTypes;
 const result = set.fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");

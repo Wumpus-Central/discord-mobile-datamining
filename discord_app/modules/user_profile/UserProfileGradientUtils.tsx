@@ -1,12 +1,12 @@
-// === Module 8131: getProfileTheme ===
+// === Module 8229: getProfileTheme ===
 
-// Module 8131 (getProfileTheme)
+// Module 8229 (getProfileTheme)
 import apply2 from "apply" /* 12 */;
-import int2hslRaw from "int2hslRaw" /* 685 */;
-import nDefault from "n" /* 686 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
+import nDefault from "n" /* 672 */;
+import int2hslRaw from "int2hslRaw" /* 1091 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import { ThemeTypes } from "ME" /* 673 */;
+import { ThemeTypes } from "ME" /* 1074 */;
 import apply from "apply" /* 12 */;
 
 require = arg1;
@@ -66,12 +66,12 @@ export const getValueInColorGradientByPercentage = function getValueInColorGradi
   return items;
 };
 export const calculateOverlayedColor = function calculateOverlayedColor(secondaryColor, overlay) {
-  const obj = items1(685);
+  const obj = items1(1091);
   const tmp = items1;
   if (null == overlay) {
     return 0;
   } else {
-    const parseStringResult = alpha(4327).parseString(overlay);
+    const parseStringResult = alpha(4410).parseString(overlay);
     if (null == parseStringResult) {
       return 0;
     } else {
@@ -83,11 +83,11 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
       [tmp8, tmp9, tmp10] = callback(items.map((arg0, arg1) => Math.floor(alpha * arg0 + (1 - alpha) * items1[arg1])), 3);
       const tmp7 = callback(items.map((arg0, arg1) => Math.floor(alpha * arg0 + (1 - alpha) * items1[arg1])), 3);
       const _HermesInternal = HermesInternal;
-      return tmp(685).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
+      return tmp(1091).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
     }
-    const obj2 = alpha(4327);
+    const obj2 = alpha(4410);
   }
-  int2rgbArrayResult = items1(685).int2rgbArray(secondaryColor);
+  int2rgbArrayResult = items1(1091).int2rgbArray(secondaryColor);
 };
 export const calculateButtonColor = memoizeResult;
 export const calculateModalV2BackgroundColor = memoizeResult1;

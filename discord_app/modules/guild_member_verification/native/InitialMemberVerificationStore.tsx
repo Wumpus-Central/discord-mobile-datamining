@@ -1,8 +1,8 @@
-// === Module 7663: map ===
+// === Module 5575: map ===
 
-// Module 7663 (map)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 5575 (map)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

@@ -1,9 +1,9 @@
-// === Module 16584: getFriendStatusCounts ===
+// === Module 16751: getFriendStatusCounts ===
 
-// Module 16584 (getFriendStatusCounts)
-import closure_0 from "sortActivity" /* 4569 */;
-import closure_1 from "markAllUserIdListsStale" /* 4130 */;
-import { StatusTypes } from "ME" /* 673 */;
+// Module 16751 (getFriendStatusCounts)
+import closure_0 from "sortActivity" /* 4600 */;
+import closure_1 from "markAllUserIdListsStale" /* 4209 */;
+import { StatusTypes } from "ME" /* 1074 */;
 
 const result = require("set").fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");
 

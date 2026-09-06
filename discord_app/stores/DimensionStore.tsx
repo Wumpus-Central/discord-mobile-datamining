@@ -1,9 +1,9 @@
-// === Module 5224: percentageScrolled ===
+// === Module 5271: percentageScrolled ===
 
-// Module 5224 (percentageScrolled)
-import initializeDefault from "initialize" /* 586 */;
-import shallowEqualDefault from "shallowEqual" /* 640 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 5271 (percentageScrolled)
+import initializeDefault from "initialize" /* 504 */;
+import shallowEqualDefault from "shallowEqual" /* 558 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 let closure_2 = {};
 let closure_3 = {};

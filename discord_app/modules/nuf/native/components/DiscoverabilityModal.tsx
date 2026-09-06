@@ -1,17 +1,17 @@
-// === Module 12521: DiscoverabilityLandingScene ===
+// === Module 12747: DiscoverabilityLandingScene ===
 
-// Module 12521 (DiscoverabilityLandingScene)
-import keys from "keys" /* 688 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import NavigationStack from "NavigationStack" /* 6017 */;
-import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 12471 */;
+// Module 12747 (DiscoverabilityLandingScene)
+import ThemesDefault from "Themes" /* 576 */;
+import keys from "keys" /* 1093 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import NavigationStack from "NavigationStack" /* 7000 */;
+import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 12697 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useContactSyncModalStore } from "ContactSyncModes" /* 12451 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import { useContactSyncModalStore } from "ContactSyncModes" /* 12677 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function DiscoverabilityLandingScene() {
@@ -63,9 +63,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   callback = React.useCallback((arg0) => {
-    const result = allowPhone(12478).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12478);
-    const result1 = allowPhone(12478).closeDiscoverabilityModal(false);
+    const result = allowPhone(12704).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12704);
+    const result1 = allowPhone(12704).closeDiscoverabilityModal(false);
   }, []);
   obj = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();
@@ -84,7 +84,7 @@ class DiscoverabilityModal {
             let obj = {};
             obj = {
               ignoreKeyboard: true,
-              impressionName: callback(500).ImpressionNames.DISCOVERABILITY,
+              impressionName: callback(1250).ImpressionNames.DISCOVERABILITY,
               fullscreen: true,
               headerLeft() {
                 return null;
@@ -96,10 +96,10 @@ class DiscoverabilityModal {
                 return callback(closure_9, {});
               }
             };
-            obj[callback(688).DiscoverabilityScenes.LANDING] = obj;
+            obj[callback(1093).DiscoverabilityScenes.LANDING] = obj;
             obj = {
               ignoreKeyboard: true,
-              impressionName: callback(500).ImpressionNames.DISCOVERABILITY,
+              impressionName: callback(1250).ImpressionNames.DISCOVERABILITY,
               fullscreen: true,
               headerTitle() {
                 return null;
@@ -108,7 +108,7 @@ class DiscoverabilityModal {
                 return callback(closure_10, {});
               }
             };
-            obj[callback(688).DiscoverabilityScenes.NAME] = obj;
+            obj[callback(1093).DiscoverabilityScenes.NAME] = obj;
             return obj;
           }, []),
       initialRouteName: require("keys").DiscoverabilityScenes.LANDING,

@@ -1,6 +1,6 @@
-// === Module 12336: useGuildPowerupOnToggle ===
+// === Module 12536: useGuildPowerupOnToggle ===
 
-// Module 12336 (useGuildPowerupOnToggle)
+// Module 12536 (useGuildPowerupOnToggle)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

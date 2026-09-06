@@ -1,12 +1,12 @@
-// === Module 7932: createNewThreadSystemMessage ===
+// === Module 8011: createNewThreadSystemMessage ===
 
-// Module 7932 (createNewThreadSystemMessage)
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7881 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7883 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
+// Module 8011 (createNewThreadSystemMessage)
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx");
@@ -21,11 +21,11 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     channel_id = messageReference.channel_id;
   }
   channel = channel.getChannel(channel_id);
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
   if (null != channel) {
-    let content = tmp(4674).computeChannelName(channel, closure_5, closure_4);
-    const tmpResult = tmp(4674);
+    let content = tmp(4713).computeChannelName(channel, closure_5, closure_4);
+    const tmpResult = tmp(4713);
   } else {
     content = message.content;
   }
@@ -35,7 +35,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   if (messageReference2 != null) {
     channel_id1 = messageReference2.channel_id;
   }
-  obj = { content: intl.formatToParts(tmp(1233).t.veX9jq, obj) };
+  obj = { content: intl.formatToParts(tmp(1114).t.veX9jq, obj) };
   obj[3] = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj;

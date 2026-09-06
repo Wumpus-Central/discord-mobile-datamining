@@ -1,10 +1,10 @@
-// === Module 17020: useVoicePanelButtonStyles ===
+// === Module 17184: useVoicePanelButtonStyles ===
 
-// Module 17020 (useVoicePanelButtonStyles)
+// Module 17184 (useVoicePanelButtonStyles)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 8588 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import ThemesDefault from "Themes" /* 576 */;
+import map from "map" /* 8265 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 let closure_3 = createCacheKey.createStyles((arg0) => {
   let obj = { iconBg: { backgroundColor: "transparent" }, iconBgSelected: null, iconBgVoiceMuted: null, iconFill: null, iconFillMuted: null, iconFillRed: null, iconFillSelected: null, iconBadgeIndicator: null };
@@ -19,7 +19,7 @@ let closure_3 = createCacheKey.createStyles((arg0) => {
   obj[5] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
   const obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
   obj[6] = { color: ThemesDefault.colors.BLACK };
-  const colors2 = tmp(709).colors;
+  const colors2 = tmp(576).colors;
   obj[7] = { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.WHITE };
   return obj;
 });

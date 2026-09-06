@@ -1,6 +1,6 @@
-// === Module 10442: AutocompleteTypes ===
+// === Module 10424: AutocompleteTypes ===
 
-// Module 10442 (AutocompleteTypes)
+// Module 10424 (AutocompleteTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteConstants.tsx");

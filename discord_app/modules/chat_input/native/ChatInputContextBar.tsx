@@ -1,22 +1,22 @@
-// === Module 12221: ChatInputReplyBarNoAuthor ===
+// === Module 12421: ChatInputReplyBarNoAuthor ===
 
-// Module 12221 (ChatInputReplyBarNoAuthor)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import map from "map" /* 4197 */;
-import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import registerAssetDefault from "registerAsset" /* 7725 */;
+// Module 12421 (ChatInputReplyBarNoAuthor)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import map from "map" /* 4262 */;
+import Text from "Text" /* 4556 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import registerAssetDefault from "registerAsset" /* 6940 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_7 from "handleChanged" /* 4855 */;
-import { DraftType } from "handleChanged" /* 4855 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_7 from "handleChanged" /* 4901 */;
+import { DraftType } from "handleChanged" /* 4901 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function ChatInputReplyBarNoAuthor(onCancelReplying) {
@@ -344,7 +344,7 @@ function ChatInputEditBar(onCancelEditing) {
   }
   obj[3] = tmp9;
   obj[4] = onCancelEditing.onCancelEditing;
-  obj1 = { source: registerAssetDefault, size: tmp2(1296).Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  obj1 = { source: registerAssetDefault, size: tmp2(1178).Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   obj[5] = callback(Button.Icon, obj1);
   const obj2 = { style: tmp.contextBarRow, children: null };
   const obj3 = { children: null };

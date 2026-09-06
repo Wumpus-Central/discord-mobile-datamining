@@ -1,9 +1,9 @@
-// === Module 13706: apexExperiment ===
+// === Module 13812: apexExperiment ===
 
-// Module 13706 (apexExperiment)
+// Module 13812 (apexExperiment)
 import set from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 const ProcessPriority = DesktopSources.ProcessPriority;
 let obj = { processPriority: ProcessPriority.HIGH, threadPriorityConfiguration: 0 };

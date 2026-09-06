@@ -1,6 +1,6 @@
-// === Module 690: MessageEmbedTypes ===
+// === Module 1095: MessageEmbedTypes ===
 
-// Module 690 (MessageEmbedTypes)
+// Module 1095 (MessageEmbedTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx");

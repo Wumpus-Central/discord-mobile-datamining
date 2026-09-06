@@ -1,9 +1,9 @@
-// === Module 16637: BadgeCustomizationProfileCoachmark ===
+// === Module 16802: BadgeCustomizationProfileCoachmark ===
 
-// Module 16637 (BadgeCustomizationProfileCoachmark)
+// Module 16802 (BadgeCustomizationProfileCoachmark)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
@@ -24,9 +24,8 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
     const t = visible(onTryItOut[5]).t;
     obj[1] = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
     obj[2] = visible;
-    obj = { type: "image", src: null, aspectRatio: "16/9" };
-    obj = { uri: markAsDismissed(tmp2[6]) };
-    obj[1] = obj;
+    obj = { type: "rive", rive: tmp(tmp2[6]).BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: { dataBinding: obj } };
+    obj = { on: visible };
     obj[5] = obj;
     obj[6] = function onDismiss() {
       return callback(closure_1_5.USER_DISMISS);

@@ -1,6 +1,6 @@
-// === Module 11906: CommandRowIcon ===
+// === Module 12105: CommandRowIcon ===
 
-// Module 11906 (CommandRowIcon)
+// Module 12105 (CommandRowIcon)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -11,15 +11,15 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 
 export default function CommandRowIcon(hasOptions) {
   if (hasOptions.hasOptions) {
-    let tmp3Result = tmp3(tmp4(5615).TableRowArrow, {});
+    let tmp3Result = tmp3(tmp4(5612).TableRowArrow, {});
   } else {
     const obj = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
-    const intl = tmp4(1233).intl;
-    obj[1] = intl.string(tmp4(1233).t.TXNS7S);
+    const intl = tmp4(1114).intl;
+    obj[1] = intl.string(tmp4(1114).t.TXNS7S);
     obj[2] = tmp2;
-    obj[3] = tmp3(tmp4(4423).SendMessageIcon, { size: "sm" });
+    obj[3] = tmp3(tmp4(4505).SendMessageIcon, { size: "sm" });
     obj[7] = tmp;
-    tmp3Result = tmp3(tmp4(4929).Button, obj);
+    tmp3Result = tmp3(tmp4(4975).Button, obj);
   }
   return tmp3Result;
 };
@@ -74,13 +74,13 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               dependencyMap();
             }
             c3 = 1;
-            obj1 = closure_1_0(8157);
+            obj1 = closure_1_0(9289);
             obj1 = { command: null, optionValues: null, context: null, sectionName: null, commandOrigin: null };
             obj1[0] = closure_1_0;
-            obj1[1] = closure_1_0(11794).parseOptionValuesForSend(closure_1_6.channel, closure_1_0, {});
+            obj1[1] = closure_1_0(11993).parseOptionValuesForSend(closure_1_6.channel, closure_1_0, {});
             obj1[2] = closure_1_6;
             obj1[3] = c4;
-            obj1[4] = closure_1_0(7278).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            obj1[4] = closure_1_0(7523).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
             const obj2 = { value: null, done: false };

@@ -1,12 +1,12 @@
-// === Module 5977: ConnectionCardView ===
+// === Module 7177: ConnectionCardView ===
 
-// Module 5977 (ConnectionCardView)
+// Module 7177 (ConnectionCardView)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Text from "Text" /* 4474 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Text from "Text" /* 4556 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -42,7 +42,7 @@ export default function ConnectionCardView(description) {
   if (tmp4Result) {
     const obj2 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     obj2[2] = description;
-    tmp4Result = tmp4(tmp5(4474).Text, obj2);
+    tmp4Result = tmp4(tmp5(4556).Text, obj2);
   }
   items1[1] = tmp4Result;
   obj1[1] = items1;
@@ -55,18 +55,18 @@ export default function ConnectionCardView(description) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.connectedStatus;
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
-    const intl2 = tmp5(1233).intl;
-    obj4[2] = intl2.string(tmp5(1233).t["LV+CXH"]);
-    const items3 = [tmp4(tmp5(4474).Text, obj4), tmp4(tmp5(4438).CircleCheckIcon, { size: "sm", color: "status-positive" })];
+    const intl2 = tmp5(1114).intl;
+    obj4[2] = intl2.string(tmp5(1114).t["LV+CXH"]);
+    const items3 = [tmp4(tmp5(4556).Text, obj4), tmp4(tmp5(4520).CircleCheckIcon, { size: "sm", color: "status-positive" })];
     obj3[1] = items3;
     tmp4Result = tmp2(tmp3, obj3);
   } else {
     const obj5 = { variant: "primary", size: "sm", onPress: null, text: null, disabled: null };
     obj5[2] = onConnect;
-    const intl = tmp5(1233).intl;
-    obj5[3] = intl.string(tmp5(1233).t.S0W8Z5);
+    const intl = tmp5(1114).intl;
+    obj5[3] = intl.string(tmp5(1114).t.S0W8Z5);
     obj5[4] = !canConnect;
-    tmp4Result = tmp4(tmp5(4929).Button, obj5);
+    tmp4Result = tmp4(tmp5(4975).Button, obj5);
   }
   items2[1] = tmp4Result;
   obj[1] = items2;

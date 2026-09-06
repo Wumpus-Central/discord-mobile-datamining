@@ -1,13 +1,13 @@
-// === Module 9049: useOpenProfileSettings ===
+// === Module 9207: useOpenProfileSettings ===
 
-// Module 9049 (useOpenProfileSettings)
+// Module 9207 (useOpenProfileSettings)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import ME from "ME" /* 673 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
-import mergeGuildAvatarDefault from "mergeGuildAvatar" /* 1921 */;
-import closure_3 from "zustandStore" /* 9050 */;
-import handleFormOpen from "handleFormOpen" /* 8081 */;
+import ME from "ME" /* 1074 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
+import mergeGuildAvatarDefault from "mergeGuildAvatar" /* 1371 */;
+import closure_3 from "zustandStore" /* 9208 */;
+import handleFormOpen from "handleFormOpen" /* 8160 */;
 
 noop.useCallback;
 mergeGuildAvatarDefault;

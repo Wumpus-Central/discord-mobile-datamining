@@ -1,8 +1,8 @@
-// === Module 1976: getSync ===
+// === Module 2007: getSync ===
 
-// Module 1976 (getSync)
+// Module 2007 (getSync)
 import timestampDefault from "timestamp" /* 3 */;
-import itemsDefault from "items" /* 1955 */;
+import itemsDefault from "items" /* 1986 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = new timestampDefault("ChannelReader");

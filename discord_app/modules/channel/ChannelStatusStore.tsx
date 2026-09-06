@@ -1,10 +1,10 @@
-// === Module 7284: handleConnectionReset ===
+// === Module 7529: handleConnectionReset ===
 
-// Module 7284 (handleConnectionReset)
-import initializeDefault from "initialize" /* 586 */;
-import set2 from "set" /* 689 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "_handleConnectionOpen" /* 5230 */;
+// Module 7529 (handleConnectionReset)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import set2 from "set" /* 1094 */;
+import closure_2 from "_handleConnectionOpen" /* 5277 */;
 import set from "set" /* 2 */;
 
 require = arg1;

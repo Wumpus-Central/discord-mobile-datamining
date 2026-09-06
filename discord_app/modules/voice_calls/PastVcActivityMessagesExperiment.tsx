@@ -1,9 +1,9 @@
-// === Module 17170: experiment ===
+// === Module 17336: experiment ===
 
-// Module 17170 (experiment)
+// Module 17336 (experiment)
 import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4392 */;
-import createExperiment from "createExperiment" /* 4389 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
+import createExperiment from "createExperiment" /* 4474 */;
 
 const items = [{ id: 1, label: "Show past VC activity messages in system channel", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-02_past_vc_activity_messages", label: "Past VC Activity Messages", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: items });

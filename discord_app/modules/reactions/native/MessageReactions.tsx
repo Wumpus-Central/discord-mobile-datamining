@@ -1,8 +1,8 @@
-// === Module 11117: MessageReactions ===
+// === Module 11255: MessageReactions ===
 
-// Module 11117 (MessageReactions)
+// Module 11255 (MessageReactions)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "reinjectEphemerals" /* 4736 */;
+import closure_4 from "reinjectEphemerals" /* 4781 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

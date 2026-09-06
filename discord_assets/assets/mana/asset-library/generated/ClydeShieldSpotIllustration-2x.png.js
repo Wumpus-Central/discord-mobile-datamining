@@ -1,6 +1,6 @@
-// === Module 6430: metadata ===
+// === Module 5862: metadata ===
 
-// Module 6430 (metadata)
+// Module 5862 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ClydeShieldSpotIllustration-2x.png.js");

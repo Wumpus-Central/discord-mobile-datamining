@@ -1,8 +1,8 @@
-// === Module 1950: NAMEPLATE_PALETTES ===
+// === Module 1890: NAMEPLATE_PALETTES ===
 
-// Module 1950 (NAMEPLATE_PALETTES)
+// Module 1890 (NAMEPLATE_PALETTES)
 import set from "set" /* 2 */;
-import PaletteKeys from "PaletteKeys" /* 1951 */;
+import PaletteKeys from "PaletteKeys" /* 1891 */;
 
 let obj = {};
 obj = { darkBackground: "#900007", lightBackground: "#E7040F", name: PaletteKeys.PaletteKeys.Crimson };

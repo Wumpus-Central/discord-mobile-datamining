@@ -1,10 +1,10 @@
-// === Module 4471: MESSAGE_GROUP_SPACING ===
+// === Module 4553: MESSAGE_GROUP_SPACING ===
 
-// Module 4471 (MESSAGE_GROUP_SPACING)
+// Module 4553 (MESSAGE_GROUP_SPACING)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import setDefault from "set" /* 684 */;
-import importDefaultResult from "fails" /* 581 */;
+import ME from "ME" /* 1074 */;
+import setDefault from "set" /* 1090 */;
+import importDefaultResult from "fails" /* 559 */;
 
 const ChannelStreamTypes = ME.ChannelStreamTypes;
 let obj = { timeout: null, backoff: null, retries: 8 };
@@ -38,4 +38,4 @@ export const isChannelStreamMessage = function isChannelStreamMessage(type) {
   return type.type === ChannelStreamTypes.MESSAGE;
 };
 export const MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS = obj;
-export const MessageSendLocation = { PUSH_NOTIFICATION: "push_notification", CHAT_INPUT: "chat_input", SHARE_MODAL: "share_modal", VOICE_MESSAGE: "voice_message", THREAD_CREATION: "thread_creation", FORWARDING: "forwarding", USER_PROFILE: "user_profile", RETRY: "explicit_retry", OVERLAY: "overlay", ACTIVITY_SHARE: "activity_share", ICYMI: "icymi", INSTANT_UPLOAD: "instant_upload", APP_COMMAND: "app_command", PRIVATE_MESSAGE_COMMAND: "private_message_command", POLL_CREATION: "poll_creation", SHARE_CUSTOM_THEME: "share_custom_theme", GIF_REPLY: "gif_reply", STICKER_REPLY: "sticker_reply", SEND_WAVE: "send_wave", GIFTING: "gifting", CONTENT_INVENTORY_MEMBERLIST: "content_inventory_memberlist", GREET: "greet", SOCIAL_LAYER_STOREFRONT: "social_layer_storefront", COLLECTIBLES_SHOP: "collectibles_shop", GAME_SERVER_SHOP: "game_server_shop", MEDIA_MENTION: "media_mention", OTHER: "other" };
+export const MessageSendLocation = { PUSH_NOTIFICATION: "push_notification", CHAT_INPUT: "chat_input", SHARE_MODAL: "share_modal", VOICE_MESSAGE: "voice_message", THREAD_CREATION: "thread_creation", FORWARDING: "forwarding", USER_PROFILE: "user_profile", RETRY: "explicit_retry", OVERLAY: "overlay", ACTIVITY_SHARE: "activity_share", ICYMI: "icymi", INSTANT_UPLOAD: "instant_upload", APP_COMMAND: "app_command", PRIVATE_MESSAGE_COMMAND: "private_message_command", POLL_CREATION: "poll_creation", SHARE_CUSTOM_THEME: "share_custom_theme", VIBEGRATIONS_PATCH_NOTES: "vibegrations_patch_notes", GIF_REPLY: "gif_reply", STICKER_REPLY: "sticker_reply", SEND_WAVE: "send_wave", GIFTING: "gifting", CONTENT_INVENTORY_MEMBERLIST: "content_inventory_memberlist", GREET: "greet", SOCIAL_LAYER_STOREFRONT: "social_layer_storefront", COLLECTIBLES_SHOP: "collectibles_shop", GAME_SERVER_SHOP: "game_server_shop", MEDIA_MENTION: "media_mention", OTHER: "other" };

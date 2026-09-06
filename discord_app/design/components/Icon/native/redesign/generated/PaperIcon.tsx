@@ -1,10 +1,10 @@
-// === Module 7831: PaperIcon ===
+// === Module 7910: PaperIcon ===
 
-// Module 7831 (PaperIcon)
+// Module 7910 (PaperIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 7832 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 7911 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

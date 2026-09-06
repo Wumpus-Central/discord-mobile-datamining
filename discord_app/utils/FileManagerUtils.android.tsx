@@ -1,8 +1,8 @@
-// === Module 8554: _readFile ===
+// === Module 8205: _readFile ===
 
-// Module 8554 (_readFile)
+// Module 8205 (_readFile)
 import timestampDefault from "timestamp" /* 3 */;
-import enforcingDefault from "enforcing" /* 1270 */;
+import enforcingDefault from "enforcing" /* 1152 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _readFile() {
@@ -68,7 +68,7 @@ function _readFile() {
                 c7 = 1;
                 c8 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = callback(1270).fileExists(tmp37 + "/" + tmp35);
+                obj1[0] = callback(1152).fileExists(tmp37 + "/" + tmp35);
                 return obj1;
               }
               tmp35 = dependencyMap;
@@ -84,7 +84,7 @@ function _readFile() {
               return obj2;
             } else if (arg1) {
               c6 = 1;
-              obj2 = callback(1270);
+              obj2 = callback(1152);
               c7 = 3;
               c8 = 1;
               const obj3 = { value: null, done: false };

@@ -1,8 +1,8 @@
-// === Module 17136: AcceptInviteModal ===
+// === Module 17302: AcceptInviteModal ===
 
-// Module 17136 (AcceptInviteModal)
+// Module 17302 (AcceptInviteModal)
 import closure_3 from "noop" /* 19 */;
-import { CreateGuildModalStates } from "NUXGuildTemplatesAnalytics" /* 7765 */;
+import { CreateGuildModalStates } from "NUXGuildTemplatesAnalytics" /* 6980 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -14,7 +14,7 @@ export default function AcceptInviteModal(arg0) {
 
   }, []);
   const items = [arg0];
-  return jsx(_require(6017).Navigator, {
+  return jsx(_require(7000).Navigator, {
     screens: React.useMemo(() => {
       let obj = {};
       obj = { fullscreen: true, headerShown: false, impressionName: lib(closure_1_2[3]).ImpressionNames.INVITE_ACCEPT, impressionProperties: null, render: null };

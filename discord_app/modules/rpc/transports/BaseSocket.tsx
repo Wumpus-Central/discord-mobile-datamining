@@ -1,10 +1,10 @@
-// === Module 9530: checkRpcVersion ===
+// === Module 9564: checkRpcVersion ===
 
-// Module 9530 (checkRpcVersion)
+// Module 9564 (checkRpcVersion)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import prototypeDefault from "prototype" /* 9520 */;
-import ME from "ME" /* 673 */;
+import prototypeDefault from "prototype" /* 9554 */;
+import ME from "ME" /* 1074 */;
 
 ({ RPC_VERSION: obj1, RPCCloseCodes: c3 } = ME);
 const result = set.fileFinishedImporting("modules/rpc/transports/BaseSocket.tsx");

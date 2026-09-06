@@ -1,6 +1,6 @@
-// === Module 1949: CollectiblesItemType ===
+// === Module 1889: CollectiblesItemType ===
 
-// Module 1949 (CollectiblesItemType)
+// Module 1889 (CollectiblesItemType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx");

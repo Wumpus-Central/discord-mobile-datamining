@@ -1,14 +1,14 @@
-// === Module 5568: _fetchVerificationForm ===
+// === Module 5547: _fetchVerificationForm ===
 
-// Module 5568 (_fetchVerificationForm)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 5547 (_fetchVerificationForm)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 1983 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "updateInvite" /* 4462 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "initialize" /* 2014 */;
+import closure_5 from "trackCommunicationDisabled" /* 2021 */;
+import closure_6 from "updateInvite" /* 4544 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 function _fetchVerificationForm() {
@@ -121,7 +121,7 @@ function _updateVerificationForm() {
               closure_5 = tmp2;
               closure_4 = tmp5;
               body = undefined;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_9.GUILD_MEMBER_VERIFICATION(callback);
               const obj2 = { form_fields: null, enabled: null, bulk_action: null };
@@ -129,7 +129,7 @@ function _updateVerificationForm() {
               obj2[1] = dependencyMap;
               obj2[2] = closure_3;
               obj1[1] = obj2;
-              obj1[3] = callback(527).rejectWithMigratedError();
+              obj1[3] = callback(1272).rejectWithMigratedError();
               c6 = 1;
               c7 = 1;
               const obj3 = { value: null, done: false };
@@ -146,7 +146,7 @@ function _updateVerificationForm() {
             return obj;
           } else {
             body = body.body;
-            let obj4 = body(706);
+            let obj4 = body(573);
             obj4 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: null, form: null };
             obj4[1] = callback;
             const obj5 = { version: null, description: null, formFields: null };
@@ -296,13 +296,13 @@ function _enableVerificationForm() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_9.GUILD_MEMBER_VERIFICATION(callback);
               const obj2 = { enabled: null };
               obj2[0] = closure_1;
               obj1[1] = obj2;
-              obj1[3] = callback(527).rejectWithMigratedError();
+              obj1[3] = callback(1272).rejectWithMigratedError();
               c3 = 1;
               dependencyMap = 1;
               const obj3 = { value: null, done: false };

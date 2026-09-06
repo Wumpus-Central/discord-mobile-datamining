@@ -1,9 +1,9 @@
-// === Module 13711: _initStats ===
+// === Module 13817: _initStats ===
 
-// Module 13711 (_initStats)
-import sleep from "sleep" /* 4558 */;
-import closure_2 from "handleConnectionInfoChange" /* 4574 */;
-import ME from "ME" /* 673 */;
+// Module 13817 (_initStats)
+import sleep from "sleep" /* 4589 */;
+import closure_2 from "handleConnectionInfoChange" /* 4609 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ NetworkConnectionTypes: c3, NetworkConnectionSpeeds: c4 } = ME);

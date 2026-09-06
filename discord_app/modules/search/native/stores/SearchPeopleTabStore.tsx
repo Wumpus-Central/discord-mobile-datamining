@@ -1,12 +1,12 @@
-// === Module 12163: teardown ===
+// === Module 12365: teardown ===
 
-// Module 12163 (teardown)
+// Module 12365 (teardown)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import _toPropertyKey from "_toPropertyKey" /* 10859 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "handleChannelSelect" /* 5460 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import _toPropertyKey from "_toPropertyKey" /* 10862 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "handleChannelSelect" /* 5509 */;
 
 require = arg1;
 let closure_5 = [];
@@ -49,7 +49,7 @@ prototype["search"] = function search(str) {
     } else {
       const obj2 = applyDefault;
       const values = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(12164).filterGroupDMs);
+      const found = values.filter(trimmed1(12366).filterGroupDMs);
       const mapped = found.map((id) => {
         const items = [id, trimmed1(closure_1_2[3]).matchGroupDM(id, trimmed1), closure_1_4.getScoreWithoutFetchingLatest(id.id)];
         return items;
@@ -91,12 +91,12 @@ prototype["processResults"] = function processResults() {
     arr3 = result;
     if ("" !== self.searchQueryString) {
       obj = { title: null, items: null };
-      let intl = tmp(1233).intl;
-      obj[0] = intl.string(tmp(1233).t.qGlQrW);
+      let intl = tmp(1114).intl;
+      obj[0] = intl.string(tmp(1114).t.qGlQrW);
       obj[1] = self.groupDMs;
       const findIndexResult = result.findIndex((title) => {
-        const intl = callback(1233).intl;
-        return title.title === intl.string(callback(1233).t.y29JXs);
+        const intl = callback(1114).intl;
+        return title.title === intl.string(callback(1114).t.y29JXs);
       });
       if (-1 === findIndexResult) {
         const items = [];
@@ -171,7 +171,7 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(dispatcherDefault,
       obj.groupDMs = [];
       obj.userIndexes = {};
       obj.results = [];
-      let userSearch = new obj(10859).UserSearch(() => obj.processResults());
+      let userSearch = new obj(10862).UserSearch(() => obj.processResults());
       obj.userSearch = userSearch;
       userSearch = obj.userSearch;
       const subscription = userSearch.subscribe(() => obj.processResults(), true);

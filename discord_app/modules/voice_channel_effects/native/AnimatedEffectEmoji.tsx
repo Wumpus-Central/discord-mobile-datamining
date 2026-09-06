@@ -1,15 +1,15 @@
-// === Module 9616: Emoji ===
+// === Module 9630: Emoji ===
 
-// Module 9616 (Emoji)
-import setDefault from "set" /* 684 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import preloadDefault from "preload" /* 5502 */;
+// Module 9630 (Emoji)
+import ThemesDefault from "Themes" /* 576 */;
+import setDefault from "set" /* 1090 */;
+import Button from "Button" /* 1178 */;
+import preloadDefault from "preload" /* 5587 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function Emoji(url) {

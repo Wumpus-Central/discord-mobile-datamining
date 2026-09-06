@@ -1,17 +1,17 @@
-// === Module 13017: SettingsUpsellsTableRow ===
+// === Module 9075: SettingsUpsellsTableRow ===
 
-// Module 13017 (SettingsUpsellsTableRow)
-import ThemesDefault from "Themes" /* 709 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4946 */;
-import SettingsIcon from "SettingsIcon" /* 6250 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 13010 */;
+// Module 9075 (SettingsUpsellsTableRow)
+import ThemesDefault from "Themes" /* 576 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
+import SettingsIcon from "SettingsIcon" /* 7380 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 9051 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function SettingsUpsellsTableRow(arg0) {
@@ -21,7 +21,7 @@ function SettingsUpsellsTableRow(arg0) {
   const tmp = callback(React.useState(false), 2);
   dependencyMap = tmp[1];
   useMountLayoutEffectDefault(() => {
-    callback2(closure_1_0(8779).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
+    callback2(closure_1_0(8633).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
   });
   const obj = {
     title,
@@ -31,7 +31,7 @@ function SettingsUpsellsTableRow(arg0) {
     onPress() {
       callback();
       dependencyMap(true);
-      callback2(closure_1_0(8779).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
+      callback2(closure_1_0(8633).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
     },
     icon: callback2(SettingsIcon.SettingsIcon, {})
   };

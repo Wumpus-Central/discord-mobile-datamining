@@ -1,22 +1,22 @@
-// === Module 16154: GuildRowWrapper ===
+// === Module 16316: GuildRowWrapper ===
 
-// Module 16154 (GuildRowWrapper)
+// Module 16316 (GuildRowWrapper)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "storeThread" /* 4122 */;
-import { isThread } from "createChannelRecord" /* 1390 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "comparator" /* 1981 */;
-import closure_9 from "updateGuildUnreadSentinel" /* 7391 */;
-import closure_10 from "createGuildRecordFromRust" /* 1908 */;
-import closure_11 from "generateOldThreadCutoff" /* 4493 */;
-import closure_12 from "markAllUserIdListsStale" /* 4130 */;
-import closure_13 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_14 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
+import closure_5 from "storeThread" /* 4201 */;
+import { isThread } from "createChannelRecord" /* 1961 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "comparator" /* 2012 */;
+import closure_9 from "updateGuildUnreadSentinel" /* 7636 */;
+import closure_10 from "createGuildRecordFromRust" /* 1979 */;
+import closure_11 from "generateOldThreadCutoff" /* 4575 */;
+import closure_12 from "markAllUserIdListsStale" /* 4209 */;
+import closure_13 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_14 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function GuildRowWrapper(guild) {
@@ -338,10 +338,10 @@ const result = require("set").fileFinishedImporting("modules/home_drawer/native/
 export default function HomeDrawerGuildRow(guildId) {
   guildId = guildId.guildId;
   ({ disableSubtitle, onActiveHookChange } = guildId);
-  obj = guildId(586);
+  obj = guildId(504);
   const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(4338).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(4423).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

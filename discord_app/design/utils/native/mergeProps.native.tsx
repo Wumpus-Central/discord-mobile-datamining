@@ -1,6 +1,6 @@
-// === Module 4201: chainCallbacks ===
+// === Module 4267: chainCallbacks ===
 
-// Module 4201 (chainCallbacks)
+// Module 4267 (chainCallbacks)
 import set from "set" /* 2 */;
 
 function chainCallbacks(arg0, arg1) {
@@ -26,7 +26,7 @@ function chainCallbacks(arg0, arg1) {
 const result = set.fileFinishedImporting("design/utils/native/mergeProps.native.tsx");
 
 export { chainCallbacks };
-export const mergeRefs = function mergeRefs(ref, ref2) {
+export const mergeRefs = function mergeRefs(ref, closure_1) {
   const items = [...arguments];
   return 1 === items.length ? items[0] : ((current) => {
     const iter = items[Symbol.iterator]();

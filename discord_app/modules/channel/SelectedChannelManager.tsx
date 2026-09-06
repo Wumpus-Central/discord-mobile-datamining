@@ -1,16 +1,16 @@
-// === Module 17322: handleGuildCreate ===
+// === Module 17482: handleGuildCreate ===
 
-// Module 17322 (handleGuildCreate)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import transitionTo from "transitionTo" /* 1219 */;
-import _modDef5364 from "module_5364" /* 5364 */;
-import initializeDefault from "initialize" /* 5495 */;
-import transitionToGuild from "transitionToGuild" /* 6196 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_4 from "handleConnectionOpen" /* 1980 */;
-import { findFirstVoiceChannelId } from "handleConnectionOpen" /* 1980 */;
-import closure_6 from "handleConnectionOpen" /* 4299 */;
-import ME from "ME" /* 673 */;
+// Module 17482 (handleGuildCreate)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import transitionTo from "transitionTo" /* 1100 */;
+import _modDef5411 from "module_5411" /* 5411 */;
+import initializeDefault from "initialize" /* 7118 */;
+import transitionToGuild from "transitionToGuild" /* 7342 */;
+import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_4 from "handleConnectionOpen" /* 2011 */;
+import { findFirstVoiceChannelId } from "handleConnectionOpen" /* 2011 */;
+import closure_6 from "handleConnectionOpen" /* 4381 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ ChannelTypes: error, Routes: closure_8, ME: c9, NULL_STRING_GUILD_ID: c10 } = ME);
@@ -39,8 +39,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = _modDef5364.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = _modDef5364;
+    const voiceChannel = _modDef5411.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
+    const obj2 = _modDef5411;
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
@@ -55,8 +55,8 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = _modDef5364.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = _modDef5364;
+      const voiceChannel = _modDef5411.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
+      const obj2 = _modDef5411;
     }
     tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
   }

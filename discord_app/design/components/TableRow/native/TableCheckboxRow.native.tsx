@@ -1,6 +1,6 @@
-// === Module 7695: TableCheckboxRow ===
+// === Module 5604: TableCheckboxRow ===
 
-// Module 7695 (TableCheckboxRow)
+// Module 5604 (TableCheckboxRow)
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

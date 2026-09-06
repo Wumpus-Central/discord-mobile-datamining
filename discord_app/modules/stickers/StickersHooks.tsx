@@ -1,19 +1,19 @@
-// === Module 10405: useStickerPackCategories ===
+// === Module 10387: useStickerPackCategories ===
 
-// Module 10405 (useStickerPackCategories)
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4853 */;
-import useFrecencySettings from "useFrecencySettings" /* 10389 */;
+// Module 10387 (useStickerPackCategories)
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;
+import useFrecencySettings from "useFrecencySettings" /* 10371 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "handleConnectionOpen" /* 4299 */;
-import closure_8 from "insertUnsortedGuilds" /* 5390 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import closure_10 from "handleStickersStoreUpdate" /* 5452 */;
-import closure_11 from "loadSavedGuildStickers" /* 5453 */;
-import { Permissions } from "ME" /* 673 */;
+import closure_6 from "createGuildRecordFromRust" /* 1979 */;
+import closure_7 from "handleConnectionOpen" /* 4381 */;
+import closure_8 from "insertUnsortedGuilds" /* 5438 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import closure_10 from "handleStickersStoreUpdate" /* 5501 */;
+import closure_11 from "loadSavedGuildStickers" /* 5502 */;
+import { Permissions } from "ME" /* 1074 */;
 
 require = arg1;
 function useStickerPackCategories(channel) {
@@ -204,7 +204,7 @@ export const useFetchStickerPack = function useFetchStickerPack(pack_id) {
     const stickerPacks = pack_id(table[11]).fetchStickerPacks();
   }, []);
   const items = [closure_11];
-  const stateFromStores = _require(586).useStateFromStores(items, () => obj.hasLoadedStickerPacks);
+  const stateFromStores = _require(504).useStateFromStores(items, () => obj.hasLoadedStickerPacks);
   const items1 = [pack_id, stateFromStores];
   const effect1 = React.useEffect(() => {
     let tmp = stateFromStores;
@@ -264,7 +264,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         let tmpResult = tmp(tmp2[14]);
         const guildId = closure_2_7.getGuildId();
         let canCreateExpressions = null != guild;
-        const findIndexResult = c6.findIndex((type) => type.type === SEARCH_RESULTS(5221).StickerCategoryTypes.FAVORITE);
+        const findIndexResult = c6.findIndex((type) => type.type === SEARCH_RESULTS(5268).StickerCategoryTypes.FAVORITE);
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
         }
@@ -410,7 +410,7 @@ export const useFavoriteStickerIds = function useFavoriteStickerIds() {
   return stickerIds;
 };
 export const useFavoriteStickers = function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10389).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10371).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -418,11 +418,11 @@ export const useFavoriteStickers = function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10389);
+  const obj = stickerIds(10371);
   const tmp = stickerIds;
   const items = [closure_11];
   const items1 = [stickerIds];
-  return stickerIds(586).useStateFromStoresArray(items, () => {
+  return stickerIds(504).useStateFromStoresArray(items, () => {
     const mapped = channel.map((arg0) => stickerById.getStickerById(arg0));
     return mapped.filter((body) => {
       let tmp = null != body;
@@ -465,7 +465,7 @@ export const useLatestFrecentStickerIds = function useLatestFrecentStickerIds() 
   return keys;
 };
 export const useLatestFrecentStickers = function useLatestFrecentStickers() {
-  const frecencySettings = keys(10389).useFrecencySettings();
+  const frecencySettings = keys(10371).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -484,11 +484,11 @@ export const useLatestFrecentStickers = function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10389);
+  const obj = keys(10371);
   const tmp = keys;
   const items = [closure_11];
   const items1 = [keys];
-  return keys(586).useStateFromStoresArray(items, () => {
+  return keys(504).useStateFromStoresArray(items, () => {
     const mapped = keys.map((arg0) => stickerById.getStickerById(arg0));
     return mapped.filter((arg0) => undefined !== arg0);
   }, items1);
@@ -504,7 +504,7 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
   c3 = undefined;
   let obj;
   let React;
-  obj = _require(586);
+  obj = _require(504);
   const items = [closure_11];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getStickerById(id.id));
   const tmp4 = obj(React.useState(true), 2);
@@ -512,10 +512,10 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
   [tmp6, c3] = obj(React.useState(false), 2);
   const tmp = _require;
   const tmp5 = obj(React.useState(false), 2);
-  let isGuildStickerResult = _require(4853).isGuildSticker(renderableSticker);
+  let isGuildStickerResult = _require(4899).isGuildSticker(renderableSticker);
   if (!isGuildStickerResult) {
-    isGuildStickerResult = tmp(4853).isStandardSticker(renderableSticker);
-    const tmpResult = tmp(4853);
+    isGuildStickerResult = tmp(4899).isStandardSticker(renderableSticker);
+    const tmpResult = tmp(4899);
   }
   obj = { hasFetched: tmp6, isReturnable: isGuildStickerResult, renderableSticker, shouldFetch: tmp4[0], stickersStoreDefinition: stateFromStores };
   React = obj2.useRef(obj);
@@ -560,7 +560,7 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
                       if (!current.hasFetched) {
                         dependencyMap(false);
                         dependencyMap = 1;
-                        obj1 = closure_1_0(10406);
+                        obj1 = closure_1_0(10388);
                         c1 = 2;
                         v0 = 1;
                         obj1 = { value: null, done: false };

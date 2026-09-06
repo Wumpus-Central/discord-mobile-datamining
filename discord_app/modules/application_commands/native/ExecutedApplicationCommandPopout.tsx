@@ -1,24 +1,24 @@
-// === Module 11434: getCommandOptionComponents ===
+// === Module 11621: getCommandOptionComponents ===
 
-// Module 11434 (getCommandOptionComponents)
-import ThemesDefault from "Themes" /* 709 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
+// Module 11621 (getCommandOptionComponents)
+import ThemesDefault from "Themes" /* 576 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_9 from "ensureGuildLoaded" /* 1386 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_11 from "createGuildRecordFromRust" /* 1908 */;
-import closure_12 from "reinjectEphemerals" /* 4736 */;
-import closure_13 from "markAllUserIdListsStale" /* 4130 */;
-import closure_14 from "mergeGuildAvatar" /* 1921 */;
-import closure_15 from "getIndexKey" /* 8158 */;
-import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 4953 */;
-import ME from "ME" /* 673 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
-import regExp from "regExp" /* 4954 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_9 from "ensureGuildLoaded" /* 1957 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_11 from "createGuildRecordFromRust" /* 1979 */;
+import closure_12 from "reinjectEphemerals" /* 4781 */;
+import closure_13 from "markAllUserIdListsStale" /* 4209 */;
+import closure_14 from "mergeGuildAvatar" /* 1371 */;
+import closure_15 from "getIndexKey" /* 9290 */;
+import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 4999 */;
+import ME from "ME" /* 1074 */;
+import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
+import regExp from "regExp" /* 5000 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function getCommandOptionComponents(option) {
@@ -43,8 +43,8 @@ function getCommandOptionComponents(option) {
     const _HermesInternal = HermesInternal;
     combined = " " + name_localized;
   }
-  if (iter.type !== iter(1954).ApplicationCommandOptionType.SUB_COMMAND) {
-    if (iter.type !== tmp6(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+  if (iter.type !== iter(1894).ApplicationCommandOptionType.SUB_COMMAND) {
+    if (iter.type !== tmp6(1894).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       if (null != iter.value) {
         function getUserComponent(user, styles) {
           let obj = {
@@ -70,24 +70,24 @@ function getCommandOptionComponents(option) {
           return closure_1_23(iter(closure_1_3[22]).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: intl }, "optionValue-" + iter.name);
         }
         const type = iter.type;
-        if (tmp6(1954).ApplicationCommandOptionType.USER === type) {
+        if (tmp6(1894).ApplicationCommandOptionType.USER === type) {
           const user = authStore.getUser(iter.value.toString());
           let userComponent = null;
           if (null != user) {
             userComponent = getUserComponent(user, styles);
           }
           const str5 = iter.value;
-        } else if (tmp6(1954).ApplicationCommandOptionType.CHANNEL === type) {
+        } else if (tmp6(1894).ApplicationCommandOptionType.CHANNEL === type) {
           channel = store.getChannel(iter.value.toString());
           userComponent = null;
           if (null != channel) {
             let obj = { style: null, children: null };
             obj[0] = styles.commandOptionMentionText;
-            const items1 = [closure_20, tmp6(4674).computeChannelName(channel, authStore, closure_13)];
+            const items1 = [closure_20, tmp6(4713).computeChannelName(channel, authStore, closure_13)];
             obj[1] = items1;
             const _HermesInternal3 = HermesInternal;
-            userComponent = callback2(tmp6(1296).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(4674);
+            userComponent = callback2(tmp6(1178).LegacyText, obj, "optionValue-" + iter.name);
+            const tmp6Result = tmp6(4713);
           }
           const str3 = iter.value;
         } else {
@@ -95,7 +95,7 @@ function getCommandOptionComponents(option) {
             const items = [closure_1_22, role.name];
             return closure_1_24(iter(closure_1_3[18]).LegacyText, { style: styles.commandOptionMentionText, children: items }, "optionValue-" + iter.name);
           }
-          if (tmp6(1954).ApplicationCommandOptionType.ROLE === type) {
+          if (tmp6(1894).ApplicationCommandOptionType.ROLE === type) {
             const value = iter.value;
             let role;
             if (null != guild) {
@@ -105,7 +105,7 @@ function getCommandOptionComponents(option) {
             if (null != role) {
               userComponent = getRoleComponent(role);
             }
-          } else if (tmp6(1954).ApplicationCommandOptionType.MENTIONABLE === type) {
+          } else if (tmp6(1894).ApplicationCommandOptionType.MENTIONABLE === type) {
             str = iter.value.toString();
             let role1;
             if (null != guild) {
@@ -123,9 +123,9 @@ function getCommandOptionComponents(option) {
             const str2 = iter.value;
           } else {
             userComponent = null;
-            if (tmp6(1954).ApplicationCommandOptionType.ATTACHMENT === type) {
-              const intl = tmp6(1233).intl;
-              userComponent = getCommandValueText(intl.string(tmp6(1233).t.nONJVc));
+            if (tmp6(1894).ApplicationCommandOptionType.ATTACHMENT === type) {
+              const intl = tmp6(1114).intl;
+              userComponent = getCommandValueText(intl.string(tmp6(1114).t.nONJVc));
             }
           }
         }
@@ -161,7 +161,7 @@ function getCommandOptionComponents(option) {
         obj = { children: null };
         obj[0] = combined + str6;
         const _HermesInternal4 = HermesInternal;
-        const items2 = [callback(tmp6(1296).LegacyText, obj, "optionKey-" + iter.name), userComponent];
+        const items2 = [callback(tmp6(1178).LegacyText, obj, "optionKey-" + iter.name), userComponent];
         obj[0] = items2;
         items.push(callback2(React.Fragment, obj, text));
         const tmp30 = callback2;
@@ -170,7 +170,7 @@ function getCommandOptionComponents(option) {
       return items;
     }
   }
-  items.push(callback(React.Fragment, { children: callback(iter(1296).LegacyText, { children: combined }, "optionKey-" + iter.name) }, text));
+  items.push(callback(React.Fragment, { children: callback(iter(1178).LegacyText, { children: combined }, "optionKey-" + iter.name) }, text));
   if (null != iter.options) {
     let options;
     if (commandOptionSpec != null) {
@@ -222,12 +222,12 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
     let str = "";
     combined = "" + name_localized;
   }
-  if (item10118.type !== _require(1954).ApplicationCommandOptionType.SUB_COMMAND) {
-    if (item10118.type !== tmp5(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+  if (item10118.type !== _require(1894).ApplicationCommandOptionType.SUB_COMMAND) {
+    if (item10118.type !== tmp5(1894).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       let sum = null;
       if (null != item10118.value) {
         const type = item10118.type;
-        if (tmp5(1954).ApplicationCommandOptionType.USER === type) {
+        if (tmp5(1894).ApplicationCommandOptionType.USER === type) {
           const user = authStore.getUser(item10118.value.toString());
           sum = null;
           if (null != user) {
@@ -235,15 +235,15 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
             const obj3 = nameFromUserDefault;
           }
           const str5 = item10118.value;
-        } else if (tmp5(1954).ApplicationCommandOptionType.CHANNEL === type) {
+        } else if (tmp5(1894).ApplicationCommandOptionType.CHANNEL === type) {
           const channel = store.getChannel(item10118.value.toString());
           sum = null;
           if (null != channel) {
-            sum = closure_20 + tmp5(4674).computeChannelName(channel, authStore, closure_13);
-            const tmp5Result = tmp5(4674);
+            sum = closure_20 + tmp5(4713).computeChannelName(channel, authStore, closure_13);
+            const tmp5Result = tmp5(4713);
           }
           const str4 = item10118.value;
-        } else if (tmp5(1954).ApplicationCommandOptionType.ROLE === type) {
+        } else if (tmp5(1894).ApplicationCommandOptionType.ROLE === type) {
           const value = item10118.value;
           let role;
           if (null != id) {
@@ -255,7 +255,7 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
           }
         } else {
           sum = null;
-          if (tmp5(1954).ApplicationCommandOptionType.MENTIONABLE === type) {
+          if (tmp5(1894).ApplicationCommandOptionType.MENTIONABLE === type) {
             str = item10118.value.toString();
             let role1;
             if (null != id) {
@@ -687,7 +687,7 @@ export default function ExecutedCommandPopout(channelId) {
   let stateFromStores;
   ({ user, chatInputRef, author, applicationUser, guildId, messageType } = channelId);
   const tmp = callback3();
-  let obj = channelId(586);
+  let obj = channelId(504);
   const items = [closure_12];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_12.getMessage(channelId, messageId));
   const items1 = [channelId, messageId, ];
@@ -722,7 +722,7 @@ export default function ExecutedCommandPopout(channelId) {
       const obj = stateFromStores(closure_1_3[42]);
     }
   }, items1);
-  obj = { value: messageId(5962)(messageId(5982).EXECUTED_COMMAND).analyticsLocations, children: null };
+  obj = { value: messageId(7162)(messageId(7182).EXECUTED_COMMAND).analyticsLocations, children: null };
   obj = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -765,6 +765,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = tmp9(closure_5, obj4);
   }
   obj[2] = tmp9Result;
-  obj[1] = closure_23(channelId(5631).BottomSheet, obj);
-  return closure_23(channelId(5962).AnalyticsLocationProvider, obj);
+  obj[1] = closure_23(channelId(7150).BottomSheet, obj);
+  return closure_23(channelId(7162).AnalyticsLocationProvider, obj);
 };

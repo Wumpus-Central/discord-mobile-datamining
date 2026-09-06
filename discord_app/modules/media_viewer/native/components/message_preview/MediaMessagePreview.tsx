@@ -1,19 +1,19 @@
-// === Module 13070: MeasureMessage ===
+// === Module 12973: MeasureMessage ===
 
-// Module 13070 (MeasureMessage)
-import ThemesDefault from "Themes" /* 709 */;
-import setOptionsDefault from "setOptions" /* 7853 */;
+// Module 12973 (MeasureMessage)
+import ThemesDefault from "Themes" /* 576 */;
+import setOptionsDefault from "setOptions" /* 7932 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleLoadThreadsSuccess" /* 6133 */;
-import closure_8 from "handleReaction" /* 6137 */;
-import closure_9 from "ensureGuildLoaded" /* 1386 */;
-import closure_10 from "reinjectEphemerals" /* 4736 */;
-import closure_11 from "messages" /* 8650 */;
-import { ThemeTypes } from "ME" /* 673 */;
+import closure_7 from "handleLoadThreadsSuccess" /* 7277 */;
+import closure_8 from "handleReaction" /* 7281 */;
+import closure_9 from "ensureGuildLoaded" /* 1957 */;
+import closure_10 from "reinjectEphemerals" /* 4781 */;
+import closure_11 from "messages" /* 8360 */;
+import { ThemeTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function MeasureMessage(message) {
@@ -304,7 +304,7 @@ export default function MediaMessagePreview(channelId) {
           }
         }
         obj = channelId(onClose[27]);
-        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "BuyNitroPurchaseFlow", message: "absolute", messageChannel: null, selectedChannelId: "call", tapLinkData: "diversity" };
+        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "sm", message: "icon-muted", messageChannel: true, selectedChannelId: "image", tapLinkData: null };
         obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
           channel = channel.getChannel(arg1);
           if (null != channel) {

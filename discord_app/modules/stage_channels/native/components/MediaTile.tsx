@@ -1,12 +1,12 @@
-// === Module 10165: ? ===
+// === Module 10056: ? ===
 
-// Module 10165
-import ThemesDefault from "Themes" /* 709 */;
+// Module 10056
+import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getParticipants" /* 4494 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
+import closure_4 from "getParticipants" /* 4576 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -19,33 +19,33 @@ const memoResult = importAllResult.memo((channel) => {
   const participant = channel.participant;
   const size = channel.size;
   const tmp = callback();
-  let obj = channel(10155);
+  let obj = channel(10046);
   const speakerTileStyles = obj.useSpeakerTileStyles();
-  const isScreenLandscape = channel(5080).useIsScreenLandscape();
-  const obj2 = channel(5080);
+  const isScreenLandscape = channel(5126).useIsScreenLandscape();
+  const obj2 = channel(5126);
   const tmp5 = participant;
   const items = [closure_4];
   const items1 = [channel.id, participant.id];
-  const stateFromStores = channel(586).useStateFromStores(items, () => closure_1_4.getParticipant(channel.id, participant.id), items1);
+  const stateFromStores = channel(504).useStateFromStores(items, () => closure_1_4.getParticipant(channel.id, participant.id), items1);
   let tmp8 = null;
   if (null != stateFromStores) {
     tmp8 = null;
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       obj = { style: null, children: null };
       const items2 = [tmp.container, , ];
-      let tmp2Result = tmp2(10155);
+      let tmp2Result = tmp2(10046);
       items2[1] = tmp2Result.getSizeStyle(size, speakerTileStyles);
-      tmp2Result = tmp2(10155);
-      items2[2] = tmp2Result.getTileWidthStyle(size, participant(1492)().width, isScreenLandscape);
+      tmp2Result = tmp2(10046);
+      items2[2] = tmp2Result.getTileWidthStyle(size, participant(1477)().width, isScreenLandscape);
       obj[0] = items2;
       obj = { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null };
       obj[4] = stateFromStores;
-      obj[5] = tmp2(1296).AvatarSizes.XLARGE;
+      obj[5] = tmp2(1178).AvatarSizes.XLARGE;
       obj[6] = channel;
       obj[8] = tmp.media;
-      obj[1] = jsx(tmp5(10166), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
+      obj[1] = jsx(tmp5(10057), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
       tmp8 = <View hasBottomSafeArea={false} hasLeftSafeArea={false} hasRightSafeArea={false} hasTopSafeArea={false} participant={null} avatarSize={null} channel={null} shrinkStreamEmptyState={false} contentStyle={null} />;
-      const tmp5Result = tmp5(10166);
+      const tmp5Result = tmp5(10057);
     }
   }
   return tmp8;

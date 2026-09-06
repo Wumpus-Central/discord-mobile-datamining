@@ -1,13 +1,13 @@
-// === Module 8013: cacheBustParam ===
+// === Module 8092: cacheBustParam ===
 
-// Module 8013 (cacheBustParam)
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+// Module 8092 (cacheBustParam)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 4492 */;
-import { Endpoints } from "ME" /* 673 */;
-import { ChangelogPlatforms } from "CHANGELOG_MODAL_KEY" /* 1979 */;
+import closure_4 from "handleUserSettingsProtoStoreChange" /* 4574 */;
+import { Endpoints } from "ME" /* 1074 */;
+import { ChangelogPlatforms } from "CHANGELOG_MODAL_KEY" /* 2010 */;
 
 require = arg1;
 function cacheBustParam() {
@@ -79,14 +79,14 @@ export default {
         str = "?" + closure_1_7();
       }
       dependencyMap = 1;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, rejectWithError: true };
       const _HermesInternal2 = HermesInternal;
       obj1[0] = "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + closure_1_0 + "/" + closure_1_1 + ".json" + str;
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         dependencyMap = 0;
-        let obj5 = closure_1_1(706);
+        let obj5 = closure_1_1(573);
         const obj3 = { type: "CHANGE_LOG_FETCH_FAILED", id: null, locale: null };
         obj3[1] = closure_0;
         obj3[2] = closure_1;
@@ -111,7 +111,7 @@ export default {
           return obj5;
         } else {
           closure_0 = arg1;
-          obj1 = closure_1_1(706);
+          obj1 = closure_1_1(573);
           const obj6 = { type: "CHANGE_LOG_FETCH_SUCCESS", id: null, changelog: null };
           obj6[1] = closure_0;
           obj6[2] = closure_0.body;

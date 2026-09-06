@@ -1,8 +1,8 @@
-// === Module 11083: PremiumGiftAnalytics ===
+// === Module 11221: PremiumGiftAnalytics ===
 
-// Module 11083 (PremiumGiftAnalytics)
+// Module 11221 (PremiumGiftAnalytics)
 import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftAnalytics.tsx");

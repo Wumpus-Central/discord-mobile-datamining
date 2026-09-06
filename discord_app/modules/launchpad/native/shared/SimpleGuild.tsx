@@ -1,14 +1,14 @@
-// === Module 16806: SimpleGuild ===
+// === Module 16970: SimpleGuild ===
 
-// Module 16806 (SimpleGuild)
+// Module 16970 (SimpleGuild)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { getGuildIconSource } from "GuildNSFWContentLevel" /* 1429 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 7391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import { ME } from "ME" /* 673 */;
+import { getGuildIconSource } from "GuildNSFWContentLevel" /* 1975 */;
+import closure_6 from "updateGuildUnreadSentinel" /* 7636 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import { ME } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 let closure_10 = createCacheKey.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });

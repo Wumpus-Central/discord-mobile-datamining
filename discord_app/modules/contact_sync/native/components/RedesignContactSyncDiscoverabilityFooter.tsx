@@ -1,13 +1,13 @@
-// === Module 12460: RedesignContactSyncDiscoverabilityFooter ===
+// === Module 12686: RedesignContactSyncDiscoverabilityFooter ===
 
-// Module 12460 (RedesignContactSyncDiscoverabilityFooter)
+// Module 12686 (RedesignContactSyncDiscoverabilityFooter)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import combinedDefault from "combined" /* 1994 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
-import TableSwitchRow from "TableSwitchRow" /* 6002 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import combinedDefault from "combined" /* 2024 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 const jsx = jsxProd.jsx;

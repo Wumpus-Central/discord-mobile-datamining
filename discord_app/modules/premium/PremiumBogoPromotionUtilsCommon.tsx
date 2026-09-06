@@ -1,25 +1,25 @@
-// === Module 13361: isUserEligibleBasedOnCurrentOrPreviousSubs ===
+// === Module 13467: isUserEligibleBasedOnCurrentOrPreviousSubs ===
 
-// Module 13361 (isUserEligibleBasedOnCurrentOrPreviousSubs)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
-import set from "set" /* 1234 */;
-import hooksDefault from "hooks" /* 4074 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import isTablet from "isTablet" /* 4755 */;
-import useBlockedPaymentsConfig from "useBlockedPaymentsConfig" /* 7172 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7202 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7981 */;
-import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13362 */;
-import apexExperiment from "apexExperiment" /* 13363 */;
-import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 13364 */;
+// Module 13467 (isUserEligibleBasedOnCurrentOrPreviousSubs)
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
+import set from "set" /* 1115 */;
+import hooksDefault from "hooks" /* 4153 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
+import isTablet from "isTablet" /* 4801 */;
+import useBlockedPaymentsConfig from "useBlockedPaymentsConfig" /* 7417 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7447 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8060 */;
+import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13468 */;
+import apexExperiment from "apexExperiment" /* 13469 */;
+import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 13470 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "reset" /* 4145 */;
-import closure_6 from "emitChanges" /* 7205 */;
-import closure_7 from "addEntitlement" /* 7152 */;
-import closure_8 from "createEmptyPromotionsByType" /* 10700 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import closure_5 from "reset" /* 4224 */;
+import closure_6 from "emitChanges" /* 7450 */;
+import closure_7 from "addEntitlement" /* 7394 */;
+import closure_8 from "createEmptyPromotionsByType" /* 10665 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
@@ -159,16 +159,16 @@ function _isEligibleForBOGOPromotion() {
                   isClaimedResult = currentUser2.isClaimed();
                 }
                 dependencyMap = !isClaimedResult;
-                let obj2 = flag(7172);
+                let obj2 = flag(7417);
                 isPaymentsBlocked = obj2.getIsPaymentsBlocked();
-                let obj3 = flag(13363);
+                let obj3 = flag(13469);
                 authStore = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
-                let obj4 = flag(13365);
+                let obj4 = flag(13471);
                 store = obj4.getBogoMarketingMaterialsEnabled("bogo marketing eligibility async check");
-                const isMobile = flag(4755).isMobile;
+                const isMobile = flag(4801).isMobile;
                 let isAndroidResult = !isMobile;
                 if (isMobile) {
-                  let obj5 = flag(1234);
+                  let obj5 = flag(1115);
                   isAndroidResult = obj5.isAndroid();
                 }
                 c6 = isAndroidResult;
@@ -195,7 +195,7 @@ function _isEligibleForBOGOPromotion() {
                             isPaymentsBlocked = 2;
                             authStore = 1;
                             obj2 = { value: null, done: false };
-                            obj2[0] = flag(4838).fetchMostRecentSubscription();
+                            obj2[0] = flag(4884).fetchMostRecentSubscription();
                             return obj2;
                           }
                         }
@@ -241,7 +241,7 @@ function _isEligibleForBOGOPromotion() {
               isPaymentsBlocked = 3;
               authStore = 1;
               const obj6 = { value: null, done: false };
-              obj6[0] = flag(4838).fetchSubscriptions();
+              obj6[0] = flag(4884).fetchSubscriptions();
               return obj6;
             }
           }
@@ -396,14 +396,14 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     num2 = valueOfResult - timestamp;
   }
   useScheduledForcedUpdateDefault({ delay: num2 });
-  const isMobile = tmp(4755).isMobile;
+  const isMobile = tmp(4801).isMobile;
   let isAndroidResult = !isMobile;
   if (isMobile) {
-    let tmpResult = tmp(1234);
+    let tmpResult = tmp(1115);
     isAndroidResult = tmpResult.isAndroid();
   }
   const tmp11 = useScheduledForcedUpdateDefault;
-  tmpResult = tmp(13365);
+  tmpResult = tmp(13471);
   let bogoMarketingMaterialsEnabled = tmpResult.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");
   let tmp16 = !tmp10;
   if (timestamp <= valueOfResult) {

@@ -1,11 +1,11 @@
-// === Module 13289: BuyNitroGradient ===
+// === Module 13394: BuyNitroGradient ===
 
-// Module 13289 (BuyNitroGradient)
+// Module 13394 (BuyNitroGradient)
 import noopAll from "noop" /* 19 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4217" /* 4217 */;
+import importDefaultResult from "module_4296" /* 4296 */;
 
 const require = arg1;
 noopAll;
@@ -18,7 +18,7 @@ export default function BuyNitroGradient(selectedTier) {
   selectedTier = selectedTier.selectedTier;
   ({ start, end, style } = selectedTier);
   ({ nitroColors, basicColors } = selectedTier);
-  let obj = selectedTier(4217);
+  let obj = selectedTier(4296);
   const fn = function f() {
     let obj = selectedTier(closure_1_2[5]);
     let num = 0;
@@ -28,7 +28,7 @@ export default function BuyNitroGradient(selectedTier) {
     obj = { opacity: obj.withTiming(num, selectedTier(closure_1_2[6]).timingStandard) };
     return obj;
   };
-  obj = { withTiming: selectedTier(4479).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4482).timingStandard };
+  obj = { withTiming: selectedTier(4561).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4564).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 14014615431537;
   fn.__initData = closure_8;

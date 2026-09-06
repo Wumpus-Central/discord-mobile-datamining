@@ -1,11 +1,11 @@
-// === Module 4526: getComboId ===
+// === Module 7399: getComboId ===
 
-// Module 4526 (getComboId)
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+// Module 7399 (getComboId)
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import closure_4 from "addSku" /* 4527 */;
-import ME from "ME" /* 673 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import closure_4 from "addSku" /* 5510 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ LibraryApplicationFlags: c5, LocalDispatchApplicationStates: closure_6, StatusTypes: error } = ME);

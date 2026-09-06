@@ -1,13 +1,13 @@
-// === Module 17238: onPostConnectionOpen ===
+// === Module 17404: onPostConnectionOpen ===
 
-// Module 17238 (onPostConnectionOpen)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import _modDef1205 from "module_1205" /* 1205 */;
-import initializeDefault from "initialize" /* 5495 */;
+// Module 17404 (onPostConnectionOpen)
+import _modDef1232 from "module_1232" /* 1232 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 let require = arg1;
 let closure_7 = { APP_TRANSACTION_UNAVAILABLE: "native_unavailable", APP_TRANSACTION_CANCELLED: "native_cancelled", APP_TRANSACTION_NETWORK_ERROR: "native_network", APP_TRANSACTION_ERROR: "native_error" };
@@ -231,7 +231,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
 };
 prototype["trackSync"] = function trackSync(empty_id, c4, verified) {
   if (null != c4) {
-    let obj = _modDef1205;
+    let obj = _modDef1232;
     obj = { tags: null };
     obj = { source: "ios_user_identifiers_manager", step: "sync_app_transaction_id", reason: null };
     obj[2] = empty_id;

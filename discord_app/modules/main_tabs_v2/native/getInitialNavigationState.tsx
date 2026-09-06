@@ -1,17 +1,17 @@
-// === Module 4334: getInitialGuildState ===
+// === Module 4419: getInitialGuildState ===
 
-// Module 4334 (getInitialGuildState)
+// Module 4419 (getInitialGuildState)
 import timestampDefault from "timestamp" /* 3 */;
-import transitionTo from "transitionTo" /* 1219 */;
-import matchPath from "matchPath" /* 4304 */;
-import RouteParam5 from "RouteParam" /* 4317 */;
-import useChatLayout from "useChatLayout" /* 4335 */;
-import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4338 */;
+import transitionTo from "transitionTo" /* 1100 */;
+import matchPath from "matchPath" /* 4386 */;
+import RouteParam5 from "RouteParam" /* 4399 */;
+import useChatLayout from "useChatLayout" /* 4420 */;
+import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4423 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "initialize" /* 4303 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import ME from "ME" /* 673 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
+import closure_4 from "initialize" /* 4385 */;
+import closure_5 from "handleConnectionOpen" /* 2011 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function getInitialGuildState(closure_6, channelId, flag, flag2) {
@@ -81,9 +81,9 @@ function computeInitialNavigationStateWithoutLogging() {
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       obj = { path: null };
-      const RouteParam3 = tmp(4317).RouteParam;
-      const tmpResult = tmp(4304);
-      const RouteParam4 = tmp(4317).RouteParam;
+      const RouteParam3 = tmp(4399).RouteParam;
+      const tmpResult = tmp(4386);
+      const RouteParam4 = tmp(4399).RouteParam;
       obj[0] = obj5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
       let matchPathResult1 = tmpResult.matchPath(lastNonVoiceRoute.lastNonVoiceRoute, obj);
       let flag = false;

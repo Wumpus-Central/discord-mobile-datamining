@@ -1,12 +1,12 @@
-// === Module 15030: QuestDockMode ===
+// === Module 15188: QuestDockMode ===
 
-// Module 15030 (QuestDockMode)
+// Module 15188 (QuestDockMode)
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 5396 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14937 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 5444 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -41,13 +41,13 @@ let closure_14 = { code: "function QuestDockDragHandleTsx5(){const{withSpring,is
 const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = callback();
-  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14938).QuestDockGestureContext);
+  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(15096).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   dependencyMap = tmp5;
-  let obj = activeQuestDockMode(14939);
+  let obj = activeQuestDockMode(15097);
   youBarHorizontalMargin = obj.useYouBarHorizontalMargin();
-  obj1 = activeQuestDockMode(4217);
+  obj1 = activeQuestDockMode(4296);
   const fn = function n() {
     return { width: Math.min(windowDimensions.get().width, closure_1_6) };
   };
@@ -56,7 +56,7 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   fn.__workletHash = 13640576219747;
   fn.__initData = closure_11;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  let obj3 = activeQuestDockMode(4217);
+  let obj3 = activeQuestDockMode(4296);
   const fn2 = function u() {
     let obj = activeQuestDockMode;
     const value = activeQuestDockMode.get();
@@ -84,7 +84,7 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   fn2.__workletHash = 6256743736366;
   fn2.__initData = closure_12;
   const animatedStyle1 = obj3.useAnimatedStyle(fn2);
-  let obj5 = activeQuestDockMode(4217);
+  let obj5 = activeQuestDockMode(4296);
   class M {
     constructor() {
       tmp = activeQuestDockMode(closure_2[9]);
@@ -102,7 +102,7 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
       return;
     }
   }
-  obj1 = { withSpring: activeQuestDockMode(4928).withSpring, isDefaultVariant: tmp5, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  obj1 = { withSpring: activeQuestDockMode(4974).withSpring, isDefaultVariant: tmp5, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   M.__closure = obj1;
   M.__workletHash = 7055026667171;
   M.__initData = closure_13;
@@ -124,38 +124,38 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
       return;
     }
   }
-  const obj8 = activeQuestDockMode(4217);
+  const obj8 = activeQuestDockMode(4296);
   const tmp2 = activeQuestDockMode;
-  C.__closure = { withSpring: activeQuestDockMode(4928).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  C.__closure = { withSpring: activeQuestDockMode(4974).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   C.__workletHash = 14421154962041;
   C.__initData = closure_14;
   const animatedStyle3 = obj8.useAnimatedStyle(C);
   obj3 = { style: items, children: null };
   items = [tmp.dragHandleWrapper, animatedStyle];
-  const obj2 = { withSpring: activeQuestDockMode(4928).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  const obj2 = { withSpring: activeQuestDockMode(4974).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   const tmp12 = windowDimensions;
   const obj4 = { style: animatedStyle1, layout: null, children: null };
-  const tmp13 = windowDimensions(7808);
+  const tmp13 = windowDimensions(7073);
   const tmp14 = closure_8;
-  obj4[1] = activeQuestDockMode(14936).dimensionsLayoutTransition;
+  obj4[1] = activeQuestDockMode(15094).dimensionsLayoutTransition;
   obj5 = { style: items1, children: null };
   items1 = [tmp.dragHandleOverlay, animatedStyle3];
-  const tmp15 = windowDimensions(7808);
-  const intl = activeQuestDockMode(1233).intl;
+  const tmp15 = windowDimensions(7073);
+  const intl = activeQuestDockMode(1114).intl;
   const string = intl.string;
-  const t = activeQuestDockMode(1233).t;
+  const t = activeQuestDockMode(1114).t;
   if (isExpanded) {
     let stringResult = string(t["GQ+4bk"]);
   } else {
     stringResult = string(t.Yplnt6);
   }
-  obj5[1] = closure_7(activeQuestDockMode(5946).ActionSheetHeaderBar, { variant: "overlay", accessibilityLabel: stringResult });
-  const items2 = [closure_7(windowDimensions(7808), obj5), ];
+  obj5[1] = closure_7(activeQuestDockMode(7154).ActionSheetHeaderBar, { variant: "overlay", accessibilityLabel: stringResult });
+  const items2 = [closure_7(windowDimensions(7073), obj5), ];
   const obj6 = { style: items3, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   items3 = [tmp.dragHandleOverlay, animatedStyle2];
-  const tmp16 = windowDimensions(7808);
-  obj6[4] = closure_7(tmp2(5946).ActionSheetHeaderBar, { variant: "default" });
-  items2[1] = closure_7(tmp12(7808), obj6);
+  const tmp16 = windowDimensions(7073);
+  obj6[4] = closure_7(tmp2(7154).ActionSheetHeaderBar, { variant: "default" });
+  items2[1] = closure_7(tmp12(7073), obj6);
   obj4[2] = items2;
   obj3[1] = tmp14(tmp15, obj4);
   return closure_7(tmp13, obj3);

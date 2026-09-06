@@ -1,9 +1,9 @@
-// === Module 1970: prefix ===
+// === Module 2001: prefix ===
 
-// Module 1970 (prefix)
+// Module 2001 (prefix)
 import set from "set" /* 2 */;
-import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1960 */;
-import TableId from "TableId" /* 1962 */;
+import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1991 */;
+import TableId from "TableId" /* 1993 */;
 
 let MessageDao;
 class MessageDao {
@@ -76,7 +76,7 @@ prototype["putAll"] = function putAll(arg0, arg1, arr) {
   dependencyMap = arg1;
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = _require(1962).ConflictOptions.Replace;
+    Replace = _require(1993).ConflictOptions.Replace;
   }
   const table = this.table;
   return table.putAll(arr.map((data) => {
@@ -168,7 +168,7 @@ prototype2["putAll"] = function putAll(arg0, arg1, arr) {
   dependencyMap = arg1;
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = _require(1962).ConflictOptions.Replace;
+    Replace = _require(1993).ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   transaction.putAll(arr.map((data) => {

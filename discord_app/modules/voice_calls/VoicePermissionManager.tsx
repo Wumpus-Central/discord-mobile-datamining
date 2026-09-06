@@ -1,15 +1,15 @@
-// === Module 17151: handleVoiceChannelSelect ===
+// === Module 17317: handleVoiceChannelSelect ===
 
-// Module 17151 (handleVoiceChannelSelect)
-import initializeDefault from "initialize" /* 5495 */;
-import closure_3 from "buildStageChannelUserRoles" /* 5374 */;
-import closure_4 from "isVoiceMuted" /* 4498 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_8 from "createRTCConnection" /* 4554 */;
-import { InputModes } from "ME" /* 673 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4731 */;
+// Module 17317 (handleVoiceChannelSelect)
+import initializeDefault from "initialize" /* 7118 */;
+import closure_3 from "buildStageChannelUserRoles" /* 5421 */;
+import closure_4 from "isVoiceMuted" /* 4580 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_8 from "createRTCConnection" /* 4583 */;
+import { InputModes } from "ME" /* 1074 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4770 */;
 
 const require = arg1;
 let c11 = null;
@@ -45,35 +45,35 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
               isSpeakerResult = speaker.isSpeaker(userId, channelId);
             }
             if (isSpeakerResult) {
-              const permission = callback2(5092).requestPermission(constants2.AUDIO);
+              const permission = callback2(5139).requestPermission(constants2.AUDIO);
               permission.then((arg0) => {
                 if (arg0) {
                   callback(table[9])(true);
                 }
               });
               if (store.getMode() === constants.PUSH_TO_TALK) {
-                const permission1 = callback2(5092).requestPermission(constants2.INPUT_MONITORING);
-                const tmp19Result = callback2(5092);
+                const permission1 = callback2(5139).requestPermission(constants2.INPUT_MONITORING);
+                const tmp19Result = callback2(5139);
               }
             } else {
               const tmp8 = new closure_4(arg0);
-              const audienceRequestToSpeakState = callback(4668).getAudienceRequestToSpeakState(tmp8);
-              if (audienceRequestToSpeakState === callback(4668).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
-                const permission2 = callback2(5092).requestPermission(constants2.AUDIO);
+              const audienceRequestToSpeakState = callback(4707).getAudienceRequestToSpeakState(tmp8);
+              if (audienceRequestToSpeakState === callback(4707).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
+                const permission2 = callback2(5139).requestPermission(constants2.AUDIO);
                 permission2.then((arg0) => {
                   if (arg0) {
                     callback(table[9])(true);
                   }
                 });
                 if (store.getMode() === constants.PUSH_TO_TALK) {
-                  const permission3 = tmp13(5092).requestPermission(tmp14.INPUT_MONITORING);
-                  const tmp13Result = tmp13(5092);
+                  const permission3 = tmp13(5139).requestPermission(tmp14.INPUT_MONITORING);
+                  const tmp13Result = tmp13(5139);
                 }
-                const obj2 = callback2(5092);
+                const obj2 = callback2(5139);
                 tmp13 = callback2;
                 tmp14 = constants2;
               }
-              const obj = callback(4668);
+              const obj = callback(4707);
             }
           }
         }

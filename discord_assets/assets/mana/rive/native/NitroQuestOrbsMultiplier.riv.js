@@ -1,6 +1,6 @@
-// === Module 4288: metadata ===
+// === Module 4369: metadata ===
 
-// Module 4288 (metadata)
+// Module 4369 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/NitroQuestOrbsMultiplier.riv.js");

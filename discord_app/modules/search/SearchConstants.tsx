@@ -1,8 +1,8 @@
-// === Module 7633: MessageEmbedTypes ===
+// === Module 7878: MessageEmbedTypes ===
 
-// Module 7633 (MessageEmbedTypes)
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4171 */;
-import ME from "ME" /* 673 */;
+// Module 7878 (MessageEmbedTypes)
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
+import ME from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
 ({ MessageEmbedTypes, SearchTypes } = ME);

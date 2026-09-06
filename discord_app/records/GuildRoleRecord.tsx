@@ -1,10 +1,10 @@
-// === Module 1985: GuildRoleRecordTypeTag ===
+// === Module 2016: GuildRoleRecordTypeTag ===
 
-// Module 1985 (GuildRoleRecordTypeTag)
+// Module 2016 (GuildRoleRecordTypeTag)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import fromString from "fromString" /* 503 */;
-import isValueEqual from "isValueEqual" /* 1426 */;
+import fromString from "fromString" /* 1086 */;
+import isValueEqual from "isValueEqual" /* 1972 */;
 
 const TypeTag = isValueEqual.TypeTag;
 const result = set.fileFinishedImporting("records/GuildRoleRecord.tsx");

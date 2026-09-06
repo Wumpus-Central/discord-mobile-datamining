@@ -1,10 +1,10 @@
-// === Module 6951: RocketshipSpotIllustration ===
+// === Module 6387: RocketshipSpotIllustration ===
 
-// Module 6951 (RocketshipSpotIllustration)
+// Module 6387 (RocketshipSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6952 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6388 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/RocketshipSpotIllustration.native.tsx");

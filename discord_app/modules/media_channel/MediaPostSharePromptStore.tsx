@@ -1,13 +1,13 @@
-// === Module 7863: set ===
+// === Module 7942: set ===
 
-// Module 7863 (set)
+// Module 7942 (set)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 7864 */;
-import closure_3 from "isSubscriptionGated" /* 1982 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 7943 */;
+import closure_3 from "isSubscriptionGated" /* 2013 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import set from "set" /* 2 */;
 
 require = arg1;

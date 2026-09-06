@@ -1,21 +1,21 @@
-// === Module 9912: TransferFooter ===
+// === Module 9456: TransferFooter ===
 
-// Module 9912 (TransferFooter)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4929 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
-import registerAssetDefault from "registerAsset" /* 9913 */;
-import registerAssetDefault2 from "registerAsset" /* 9914 */;
+// Module 9456 (TransferFooter)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import Button from "Button" /* 4975 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
+import registerAssetDefault from "registerAsset" /* 9457 */;
+import registerAssetDefault2 from "registerAsset" /* 9458 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "set" /* 4495 */;
-import { ComponentActions } from "ME" /* 673 */;
+import closure_10 from "set" /* 4577 */;
+import { ComponentActions } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function TransferFooter(arg0) {
@@ -27,7 +27,7 @@ function TransferFooter(arg0) {
   }
   obj[1] = transferring;
   obj[2] = onPress;
-  const intl = tmp3(1233).intl;
+  const intl = tmp3(1114).intl;
   obj[3] = intl.string(getSystemLocale.t.FYi3ry);
   obj[2] = closure_12(Button.Button, obj);
   return closure_12(SafeAreaPaddingView.SafeAreaPaddingView, obj);
@@ -119,7 +119,7 @@ export default function GameConsoleListActionSheet(arg0) {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(9911).transferToPlaystationWithAlert(closure_1_0, dependencyMap[closure_1_4], v0);
+              obj1[0] = closure_1_0(9455).transferToPlaystationWithAlert(closure_1_0, dependencyMap[closure_1_4], v0);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -131,9 +131,9 @@ export default function GameConsoleListActionSheet(arg0) {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = v0(4445);
+            obj = v0(4527);
             obj.hideActionSheet();
-            const ComponentDispatch = closure_1_0(1228).ComponentDispatch;
+            const ComponentDispatch = closure_1_0(1109).ComponentDispatch;
             ComponentDispatch.dispatch(closure_1_11.TOGGLE_CALL_CONTROL_DRAWER);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };

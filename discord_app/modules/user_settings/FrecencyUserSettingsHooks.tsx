@@ -1,15 +1,14 @@
-// === Module 10389: useFrecencySettings ===
+// === Module 10371: useFrecencySettings ===
 
-// Module 10389 (useFrecencySettings)
+// Module 10371 (useFrecencySettings)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/FrecencyUserSettingsHooks.tsx");
 
-export const useFrecencySettings = function useFrecencySettings(flag2) {
-  let flag = flag2;
-  if (flag2 === undefined) {
+export const useFrecencySettings = function useFrecencySettings(flag) {
+  if (flag === undefined) {
     flag = true;
   }
   const items = [flag];
@@ -20,5 +19,5 @@ export const useFrecencySettings = function useFrecencySettings(flag2) {
     }
   }, items);
   const items1 = [closure_3];
-  return flag(586).useStateFromStores(items1, () => obj.frecencyWithoutFetchingLatest);
+  return flag(504).useStateFromStores(items1, () => obj.frecencyWithoutFetchingLatest);
 };

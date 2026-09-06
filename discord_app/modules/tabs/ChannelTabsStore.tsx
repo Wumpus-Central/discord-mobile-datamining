@@ -1,14 +1,14 @@
-// === Module 10952: handleChannelDelete ===
+// === Module 10990: handleChannelDelete ===
 
-// Module 10952 (handleChannelDelete)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import PlatformTypes from "PlatformTypes" /* 1235 */;
-import apexExperimentDefault from "apexExperiment" /* 10953 */;
+// Module 10990 (handleChannelDelete)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import PlatformTypes from "PlatformTypes" /* 1116 */;
+import apexExperimentDefault from "apexExperiment" /* 10991 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "handleConnectionOpen" /* 1980 */;
-import closure_5 from "handleConnectionOpen" /* 4299 */;
-import { isStaticChannelRoute } from "set" /* 1393 */;
+import closure_4 from "handleConnectionOpen" /* 2011 */;
+import closure_5 from "handleConnectionOpen" /* 4381 */;
+import { isStaticChannelRoute } from "set" /* 1964 */;
 
 require = arg1;
 function handleChannelDelete(channel) {
@@ -19,8 +19,8 @@ function handleChannelDelete(channel) {
     const obj = apexExperimentDefault;
   }
   if (enabled) {
-    enabled = channel(1235).isDesktop();
-    const obj2 = channel(1235);
+    enabled = channel(1116).isDesktop();
+    const obj2 = channel(1116);
   }
   if (enabled) {
     if (0 === found.filter((kind) => {
@@ -52,8 +52,8 @@ function handleChannelDelete(channel) {
         const obj3 = apexExperimentDefault;
       }
       if (enabled2) {
-        enabled2 = channel(1235).isDesktop();
-        const obj4 = channel(1235);
+        enabled2 = channel(1116).isDesktop();
+        const obj4 = channel(1116);
       }
       let tmp10 = !enabled2;
       if (!enabled2) {
@@ -284,8 +284,8 @@ const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
         const obj = apexExperimentDefault;
       }
       if (enabled) {
-        enabled = tabId(1235).isDesktop();
-        const obj2 = tabId(1235);
+        enabled = tabId(1116).isDesktop();
+        const obj2 = tabId(1116);
       }
       if (enabled) {
         if (1 === closure_7.length) {
@@ -300,8 +300,8 @@ const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
         const obj3 = apexExperimentDefault;
       }
       if (enabled2) {
-        enabled2 = tabId(1235).isDesktop();
-        const obj4 = tabId(1235);
+        enabled2 = tabId(1116).isDesktop();
+        const obj4 = tabId(1116);
       }
       let tmp14 = !enabled2;
       if (!enabled2) {
@@ -469,8 +469,8 @@ const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
       enabled = obj.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      enabled = obj(1235).isDesktop();
-      const obj2 = obj(1235);
+      enabled = obj(1116).isDesktop();
+      const obj2 = obj(1116);
     }
     if (enabled) {
       if (0 !== closure_7.length) {
@@ -532,7 +532,7 @@ const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
       enabled = obj.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      obj1 = obj(1235);
+      obj1 = obj(1116);
       enabled = obj1.isDesktop();
     }
     if (enabled) {

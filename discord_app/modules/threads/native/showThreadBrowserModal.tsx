@@ -1,10 +1,10 @@
-// === Module 10925: showThreadBrowserModal ===
+// === Module 10963: showThreadBrowserModal ===
 
-// Module 10925 (showThreadBrowserModal)
+// Module 10963 (showThreadBrowserModal)
 import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import getAccessibilityLabelFormatter from "getAccessibilityLabelFormatter" /* 7536 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10879 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
+import getAccessibilityLabelFormatter from "getAccessibilityLabelFormatter" /* 7781 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10916 */;
 
 let closure_2 = ChannelDetailsNavigatorScreens.ChannelDetailsNavigatorScreens;
 let result = set.fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");

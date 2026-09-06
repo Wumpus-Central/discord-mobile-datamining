@@ -1,8 +1,8 @@
-// === Module 13142: createPostPreviewEmbeds ===
+// === Module 13242: createPostPreviewEmbeds ===
 
-// Module 13142 (createPostPreviewEmbeds)
+// Module 13242 (createPostPreviewEmbeds)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const MessageEmbedTypes = ME.MessageEmbedTypes;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");

@@ -1,17 +1,17 @@
-// === Module 5460: handleChannelSelect ===
+// === Module 5509: handleChannelSelect ===
 
-// Module 5460 (handleChannelSelect)
+// Module 5509 (handleChannelSelect)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4566 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import closure_6 from "handleConnectionOpen" /* 4299 */;
-import { ID_REGEX } from "ME" /* 673 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4597 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1221 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "handleConnectionOpen" /* 2011 */;
+import closure_6 from "handleConnectionOpen" /* 4381 */;
+import { ID_REGEX } from "ME" /* 1074 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 1084 */;
 
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);

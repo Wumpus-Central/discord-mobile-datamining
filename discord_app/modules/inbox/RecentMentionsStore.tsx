@@ -1,26 +1,26 @@
-// === Module 7392: findOrCreateMessageRecord ===
+// === Module 7637: findOrCreateMessageRecord ===
 
-// Module 7392 (findOrCreateMessageRecord)
+// Module 7637 (findOrCreateMessageRecord)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import sleep from "sleep" /* 4558 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4732 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
-import isMentioned from "isMentioned" /* 4752 */;
-import isMentionedDefault from "isMentioned" /* 4752 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6126 */;
-import closure_3 from "hasFlag" /* 4131 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "reinjectEphemerals" /* 4736 */;
-import closure_7 from "generateOldThreadCutoff" /* 4493 */;
-import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "handleConnectionOpen" /* 4299 */;
-import closure_10 from "updateUserGuildSettingsInternal" /* 4702 */;
-import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import { Storage } from "Storage" /* 592 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sleep from "sleep" /* 4589 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4771 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
+import isMentioned from "isMentioned" /* 4798 */;
+import isMentionedDefault from "isMentioned" /* 4798 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
+import closure_3 from "hasFlag" /* 4210 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "reinjectEphemerals" /* 4781 */;
+import closure_7 from "generateOldThreadCutoff" /* 4575 */;
+import closure_8 from "markAllUserIdListsStale" /* 4209 */;
+import closure_9 from "handleConnectionOpen" /* 4381 */;
+import closure_10 from "updateUserGuildSettingsInternal" /* 4741 */;
+import closure_11 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import { Storage } from "Storage" /* 510 */;
 
 require = arg1;
 function findOrCreateMessageRecord(channel_id) {
@@ -100,7 +100,7 @@ function parseMessage(message, channelId) {
       }
       id = id.getId();
       if (!blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message)) {
-        if (!tmp2(7393)(message, id)) {
+        if (!tmp2(7638)(message, id)) {
           let tmp12 = message;
           if (!(message instanceof closure_3)) {
             message = store2.getMessage(message.channel_id, message.id);
@@ -116,7 +116,7 @@ function parseMessage(message, channelId) {
           obj[2] = !closure_23.everyoneFilter;
           obj[3] = !closure_23.roleFilter;
           let tmp20 = null;
-          if (tmp2(4752)(obj)) {
+          if (tmp2(4798)(obj)) {
             let tmp2ResultResult = c26;
             if (c26) {
               tmp2ResultResult = closure_7.ackMessageId(channel.id) !== tmp12.id;
@@ -127,8 +127,8 @@ function parseMessage(message, channelId) {
               obj[1] = id;
               obj[2] = closure_10.isSuppressEveryoneEnabled(channel.getGuildId());
               obj[3] = closure_10.isSuppressRolesEnabled(channel.getGuildId());
-              tmp2ResultResult = tmp2(4752)(obj);
-              const tmp2Result = tmp2(4752);
+              tmp2ResultResult = tmp2(4798)(obj);
+              const tmp2Result = tmp2(4798);
             }
             tmp20 = tmp12;
             if (tmp2ResultResult) {
@@ -213,7 +213,7 @@ function handleSetRecentMentionsFilters(arg0) {
   const merged = Object.assign(closure_23);
   const obj2 = applyDefault;
   closure_23 = obj2.defaults(applyDefault.pick(arg0, ["guildFilter", "roleFilter", "everyoneFilter"]), closure_23);
-  const Storage = items(592).Storage;
+  const Storage = items(510).Storage;
   const result = Storage.set(recentMentionFilterSettings, closure_23);
   let tmp4 = obj.guildFilter !== closure_23.guildFilter;
   if (tmp4) {
@@ -614,8 +614,8 @@ obj = {
         const findIndexResult = applyDefault.findIndex(substr, (id) => id.id === id);
         substr = substr.slice();
         if (null != substr[findIndexResult]) {
-          substr[findIndexResult] = id(4738).updateMessageRecord(tmp7, message.message);
-          const obj2 = id(4738);
+          substr[findIndexResult] = id(4783).updateMessageRecord(tmp7, message.message);
+          const obj2 = id(4783);
         }
       }
     }

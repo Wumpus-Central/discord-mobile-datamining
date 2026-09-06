@@ -1,24 +1,24 @@
-// === Module 14429: _initialize ===
+// === Module 14536: _initialize ===
 
-// Module 14429 (_initialize)
+// Module 14536 (_initialize)
 import set2 from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
-import sum from "sum" /* 502 */;
-import ME from "ME" /* 673 */;
-import batchUpdates from "batchUpdates" /* 702 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import initializeDefault from "initialize" /* 4662 */;
-import ActivityPanelModes2 from "ActivityPanelModes" /* 9483 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
+import sum from "sum" /* 1085 */;
+import batchUpdates from "batchUpdates" /* 1249 */;
+import initializeDefault from "initialize" /* 1898 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
+import ActivityPanelModes2 from "ActivityPanelModes" /* 9505 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "participantFromServer" /* 1385 */;
-import closure_6 from "withEqualityFn" /* 4729 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "reinjectEphemerals" /* 4736 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_10 from "getState" /* 7167 */;
-import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14430 */;
-import keys from "keys" /* 641 */;
+import closure_5 from "participantFromServer" /* 1956 */;
+import closure_6 from "withEqualityFn" /* 4768 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "reinjectEphemerals" /* 4781 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_10 from "getState" /* 1895 */;
+import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14537 */;
+import keys from "keys" /* 560 */;
 
 ({ NativeEventEmitter: c3, NativeModules: c4 } = get_ActivityIndicator);
 const AppStates = ME.AppStates;
@@ -28,9 +28,20 @@ const Permissions = sum.Permissions;
 let closure_16 = new timestampDefault("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   closure_0 = arg0;
-  obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "flex", canAccessMedia: "ip", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "PX_16", showPip: "sticker_pack_199", closePip: 1.99, displayedMediaItemIdsPerChannel: "$", currentlyDisplayedChannelId: "usd" };
-  obj[8] = function closePip() {
-    callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
+  obj = {
+    activeMediaPlayerSource: "HermesInternal",
+    mediaSourceMessage: "flex",
+    canAccessMedia: "ip",
+    isPlaying: false,
+    wasPipClosedByUser: null,
+    progress: null,
+    rate: "PX_16",
+    showPip: "setRequestSession",
+    closePip() {
+      callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
+    },
+    displayedMediaItemIdsPerChannel: "\u{1F937}\u{1F3FE}",
+    currentlyDisplayedChannelId: true
   };
   obj[9] = {};
   return obj;
@@ -106,7 +117,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
-  self(702).batchUpdates(() => {
+  self(1249).batchUpdates(() => {
     const activeMediaPlayerSource = closure_1_17.getState().activeMediaPlayerSource;
     let channelId;
     if (activeMediaPlayerSource != null) {
@@ -163,7 +174,7 @@ prototype["userDidClosePip"] = function userDidClosePip() {
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
-  self(702).batchUpdates(() => {
+  self(1249).batchUpdates(() => {
     self.pauseCurrentPlayer();
     closure_1_17.setState({ wasPipClosedByUser: true, showPip: false });
   });
@@ -276,7 +287,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
   const self = this;
   source = source.source;
-  source(702).batchUpdates(() => {
+  source(1249).batchUpdates(() => {
     obj = closure_1_17;
     let id;
     const state = closure_1_17.getState();
@@ -330,13 +341,13 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         obj = { channelId: null, messageId: null };
         obj[0] = channelId;
         obj[1] = messageId;
-        const message1 = self(7211).fetchMessage(obj);
+        const message1 = self(7456).fetchMessage(obj);
         message1.then((arg0) => {
           if (null != arg0) {
             const result = self.handleMediaSourceMessageUpdated(arg0);
           }
         });
-        const obj2 = self(7211);
+        const obj2 = self(7456);
       }
       obj4 = message;
     }
@@ -344,7 +355,7 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
 };
 prototype["handleMediaSourceMessageUpdated"] = function handleMediaSourceMessageUpdated(arg0) {
   const _require = arg0;
-  _require(702).batchUpdates(() => {
+  _require(1249).batchUpdates(() => {
     obj = closure_1_17;
     const activeMediaPlayerSource = closure_1_17.getState().activeMediaPlayerSource;
     let messageId;

@@ -1,8 +1,8 @@
-// === Module 4861: setAccessibilityFocusPrevious ===
+// === Module 4907: setAccessibilityFocusPrevious ===
 
-// Module 4861 (setAccessibilityFocusPrevious)
+// Module 4907 (setAccessibilityFocusPrevious)
 import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 4862 */;
+import enforcingDefault from "enforcing" /* 4908 */;
 
 const result = set.fileFinishedImporting("modules/a11y/native/setAccessibilityFocusPrevious.tsx");
 

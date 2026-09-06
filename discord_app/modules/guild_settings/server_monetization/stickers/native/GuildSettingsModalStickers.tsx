@@ -1,16 +1,16 @@
-// === Module 17413: BoostedGuildTiers ===
+// === Module 17573: BoostedGuildTiers ===
 
-// Module 17413 (BoostedGuildTiers)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 17573 (BoostedGuildTiers)
+import ThemesDefault from "Themes" /* 576 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 4169 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 1938 */;
 import jsxProd from "jsxProd" /* 21 */;
-import { intl, intl as intl2, intl as intl3, intl as intl4 } from "getSystemLocale" /* 1233 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import { intl, intl as intl2, intl as intl3, intl as intl4 } from "getSystemLocale" /* 1114 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ const require = arg1;
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_8, BoostedGuildTiers } = ME);
 const GuildFeatures = ME.GuildFeatures;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "accessible" };
+let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "Array" };
 obj[1] = intl.string(require("getSystemLocale").t.tfVXhP);
 let items = [obj, , , ];
 obj = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };

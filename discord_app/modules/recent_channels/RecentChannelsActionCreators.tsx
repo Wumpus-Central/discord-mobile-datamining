@@ -1,8 +1,8 @@
-// === Module 11385: _bulkClearRecents ===
+// === Module 11560: _bulkClearRecents ===
 
-// Module 11385 (_bulkClearRecents)
+// Module 11560 (_bulkClearRecents)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 function _bulkClearRecents() {
@@ -63,9 +63,9 @@ function _bulkClearRecents() {
             const obj2 = { type: "BULK_CLEAR_RECENTS", guildId: null, channelIds: null };
             obj2[1] = callback;
             obj2[2] = callback2;
-            callback2(706).dispatch(obj2);
-            const obj5 = callback2(706);
-            callback2(695).track(constants.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
+            callback2(573).dispatch(obj2);
+            const obj5 = callback2(573);
+            callback2(1242).track(constants.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
             c5 = 3;
             return { value: "HermesInternal", done: null };
           }

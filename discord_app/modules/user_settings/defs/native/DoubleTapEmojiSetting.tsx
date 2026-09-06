@@ -1,19 +1,19 @@
-// === Module 15730: SettingsEmoji ===
+// === Module 15888: SettingsEmoji ===
 
-// Module 15730 (SettingsEmoji)
+// Module 15888 (SettingsEmoji)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import EmojiDefault from "Emoji" /* 5594 */;
-import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji" /* 7889 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import EmojiDefault from "Emoji" /* 7130 */;
+import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji" /* 7968 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import { EmojiIntention } from "set" /* 1924 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import { EmojiIntention } from "set" /* 1374 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import createToggle from "createToggle" /* 11292 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 function SettingsEmoji(emoji) {
@@ -70,7 +70,7 @@ const pressable = createToggle.createPressable({
     }
   },
   onPress: function onPressSetting() {
-    let obj = _require(9116);
+    let obj = _require(11121);
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;
@@ -209,7 +209,7 @@ let obj1 = {
     }
   },
   onPress: function onPressSetting() {
-    let obj = _require(9116);
+    let obj = _require(11121);
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;

@@ -1,10 +1,10 @@
-// === Module 6469: DevSdkWideAbstractUI ===
+// === Module 5901: DevSdkWideAbstractUI ===
 
-// Module 6469 (DevSdkWideAbstractUI)
+// Module 5901 (DevSdkWideAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6470 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5902 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DevSdkWideAbstractUI.native.tsx");

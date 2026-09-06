@@ -1,13 +1,13 @@
-// === Module 16250: handleLoadFinished ===
+// === Module 16412: handleLoadFinished ===
 
-// Module 16250 (handleLoadFinished)
+// Module 16412 (handleLoadFinished)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import NotificationCenterScenes from "NotificationCenterScenes" /* 7395 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import NotificationCenterScenes from "NotificationCenterScenes" /* 7640 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "findOrCreateMessageRecord" /* 7392 */;
+import closure_4 from "findOrCreateMessageRecord" /* 7637 */;
 
 require = arg1;
 function handleLoadFinished() {

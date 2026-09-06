@@ -1,9 +1,9 @@
-// === Module 11053: useFetchCollectiblesProductCategory ===
+// === Module 11082: useFetchCollectiblesProductCategory ===
 
-// Module 11053 (useFetchCollectiblesProductCategory)
-import setDefault from "set" /* 8096 */;
+// Module 11082 (useFetchCollectiblesProductCategory)
+import setDefault from "set" /* 10735 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7297 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/collectibles/hooks/
 export const useFetchCollectiblesProductCategory = function useFetchCollectiblesProductCategory(skuId) {
   const _require = skuId;
   setDefault();
-  let obj = _require(644);
+  let obj = _require(563);
   let items = [closure_4];
   const tmp2 = callback(obj.useStateFromStoresArray(items, () => {
     const items = [closure_1_4.isFetchingCategories, closure_1_4.getCategoryForProduct(closure_0)];

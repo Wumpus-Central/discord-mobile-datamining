@@ -1,24 +1,24 @@
-// === Module 13167: TitleWrapper ===
+// === Module 13269: TitleWrapper ===
 
-// Module 13167 (TitleWrapper)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import map from "map" /* 4197 */;
-import Text from "Text" /* 4474 */;
-import computeChannelName from "computeChannelName" /* 4674 */;
-import getChannelIcon from "getChannelIcon" /* 4982 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8941 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10873 */;
-import registerAssetDefault from "registerAsset" /* 13168 */;
-import _modDef13169 from "module_13169" /* 13169 */;
+// Module 13269 (TitleWrapper)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import map from "map" /* 4262 */;
+import Text from "Text" /* 4556 */;
+import computeChannelName from "computeChannelName" /* 4713 */;
+import getChannelIcon from "getChannelIcon" /* 5028 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10899 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10910 */;
+import registerAssetDefault from "registerAsset" /* 13270 */;
+import _modDef13271 from "module_13271" /* 13271 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "markAllUserIdListsStale" /* 4130 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import closure_6 from "markAllUserIdListsStale" /* 4209 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function TitleWrapper(headerAccessibilityLabel) {
@@ -36,7 +36,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[2] = children;
     let tmp6Result = callback2(View, obj);
   } else {
-    obj = titleContentHeight(1234);
+    obj = titleContentHeight(1115);
     let tmp9;
     if (obj.isAndroid()) {
       tmp9 = callback;
@@ -49,7 +49,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[5] = tmp5;
     obj[6] = tmp.wrapper;
     obj[7] = children;
-    tmp6Result = callback2(titleContentHeight(5077).PressableOpacity, obj);
+    tmp6Result = callback2(titleContentHeight(5123).PressableOpacity, obj);
     const tmp6 = callback2;
   }
   return tmp6Result;
@@ -109,11 +109,7 @@ function ChannelTitle(guildId) {
   return closure_9(View, obj);
 }
 function GroupDMIcon(channel) {
-  const obj = { size: null, channel: null, style: null };
-  const tmp = callback3();
-  obj[0] = Button.AvatarSizes.REFRESH_MEDIUM_32;
-  obj[1] = channel.channel;
-  obj[2] = tmp.channelIcon;
+  const obj = { size: Button.AvatarSizes.REFRESH_MEDIUM_32, channel: channel.channel };
   return callback2(FacepileGroupDMAvatarDefault, obj);
 }
 function UserAvatar(user) {
@@ -142,10 +138,10 @@ function ChannelIconRaw(IconComponent) {
     let tmp6 = callback2(IconComponent, obj);
   } else {
     obj = { size: null, source: null, color: null };
-    obj[0] = tmp(1296).Icon.Sizes.SMALL_20;
+    obj[0] = tmp(1178).Icon.Sizes.SMALL_20;
     obj[1] = IconComponent.icon;
     obj[2] = tmp4.guildChannelIcon.tintColor;
-    tmp6 = callback2(tmp(1296).Icon, obj);
+    tmp6 = callback2(tmp(1178).Icon, obj);
   }
   return tmp6;
 }
@@ -165,7 +161,7 @@ function MemberCountText(arg0) {
   }
   obj[1] = memberCount;
   obj[3] = leadingAccessoryWidth;
-  const children = [closure_8(_modDef13169, obj), ];
+  const children = [closure_8(_modDef13271, obj), ];
   let tmp4Result = null;
   if (withSeparator) {
     tmp4Result = tmp4(Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });

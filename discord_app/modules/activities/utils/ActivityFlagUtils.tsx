@@ -1,12 +1,12 @@
-// === Module 9455: computeActivityFlags ===
+// === Module 11462: computeActivityFlags ===
 
-// Module 9455 (computeActivityFlags)
+// Module 11462 (computeActivityFlags)
 import set from "set" /* 2 */;
-import Storage2 from "Storage" /* 592 */;
-import hasFlag from "hasFlag" /* 1398 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7495 */;
-import ME from "ME" /* 673 */;
+import Storage2 from "Storage" /* 510 */;
+import hasFlag from "hasFlag" /* 1384 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7739 */;
+import ME from "ME" /* 1074 */;
 
 ({ ActivityFlags: c3, ActivityPartyPrivacy: c4 } = ME);
 const result = set.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");

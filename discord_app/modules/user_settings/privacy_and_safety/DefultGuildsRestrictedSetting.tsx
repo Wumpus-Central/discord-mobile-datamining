@@ -1,8 +1,8 @@
-// === Module 15718: useDefaultGuildsRestricted ===
+// === Module 15876: useDefaultGuildsRestricted ===
 
-// Module 15718 (useDefaultGuildsRestricted)
+// Module 15876 (useDefaultGuildsRestricted)
 import set from "set" /* 2 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
 

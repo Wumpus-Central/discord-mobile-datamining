@@ -1,6 +1,6 @@
-// === Module 12792: useVirtualCurrencyData ===
+// === Module 13149: useVirtualCurrencyData ===
 
-// Module 12792 (useVirtualCurrencyData)
+// Module 13149 (useVirtualCurrencyData)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

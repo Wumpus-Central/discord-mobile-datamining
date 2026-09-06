@@ -1,13 +1,13 @@
-// === Module 8159: handleUserSettingsProtoStoreChange ===
+// === Module 9291: handleUserSettingsProtoStoreChange ===
 
-// Module 8159 (handleUserSettingsProtoStoreChange)
+// Module 9291 (handleUserSettingsProtoStoreChange)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4566 */;
-import closure_2 from "participantFromServer" /* 1385 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4597 */;
+import closure_2 from "participantFromServer" /* 1956 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 1084 */;
 
 function handleUserSettingsProtoStoreChange() {
   const applicationFrecency = obj.frecencyWithoutFetchingLatest.applicationFrecency;

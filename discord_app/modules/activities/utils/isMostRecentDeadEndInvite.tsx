@@ -1,8 +1,8 @@
-// === Module 13135: isMostRecentDeadEndInvite ===
+// === Module 13235: isMostRecentDeadEndInvite ===
 
-// Module 13135 (isMostRecentDeadEndInvite)
+// Module 13235 (isMostRecentDeadEndInvite)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const ActivityActionTypes = ME.ActivityActionTypes;
 const result = set.fileFinishedImporting("modules/activities/utils/isMostRecentDeadEndInvite.tsx");

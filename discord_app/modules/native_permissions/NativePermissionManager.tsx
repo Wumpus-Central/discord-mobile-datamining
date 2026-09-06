@@ -1,13 +1,13 @@
-// === Module 5093: isEnabled ===
+// === Module 5140: isEnabled ===
 
-// Module 5093 (isEnabled)
+// Module 5140 (isEnabled)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import set2 from "set" /* 1234 */;
-import initializeDefault from "initialize" /* 4662 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4731 */;
-import NativePermissionsRequestOptions from "NativePermissionsRequestOptions" /* 5092 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
+import set2 from "set" /* 1115 */;
+import initializeDefault from "initialize" /* 1898 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4770 */;
+import NativePermissionsRequestOptions from "NativePermissionsRequestOptions" /* 5139 */;
 
 const NativePermissionTypes = NativePermissionStatus.NativePermissionTypes;
 const InputModes = ME.InputModes;
@@ -18,11 +18,11 @@ const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
   let isDesktopResult = set2.isDesktop();
   if (isDesktopResult) {
-    isDesktopResult = tmp(1234).isMac();
-    const tmpResult = tmp(1234);
+    isDesktopResult = tmp(1115).isMac();
+    const tmpResult = tmp(1115);
   }
   if (isDesktopResult) {
-    const ProcessArgs = tmp(5094).ProcessArgs;
+    const ProcessArgs = tmp(5141).ProcessArgs;
     isDesktopResult = !ProcessArgs.isDiscordTestSet();
   }
   return isDesktopResult;

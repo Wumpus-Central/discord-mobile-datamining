@@ -1,8 +1,8 @@
-// === Module 15845: isTimingConfig ===
+// === Module 16007: isTimingConfig ===
 
-// Module 15845 (isTimingConfig)
+// Module 16007 (isTimingConfig)
 import set from "set" /* 2 */;
-import Button from "Button" /* 1296 */;
+import Button from "Button" /* 1178 */;
 
 function isTimingConfig(duration) {
   return null != duration && null != duration.duration;

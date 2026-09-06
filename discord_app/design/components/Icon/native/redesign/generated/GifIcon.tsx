@@ -1,10 +1,10 @@
-// === Module 10399: GifIcon ===
+// === Module 10381: GifIcon ===
 
-// Module 10399 (GifIcon)
+// Module 10381 (GifIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 8005 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 8084 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

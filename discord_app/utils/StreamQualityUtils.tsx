@@ -1,18 +1,18 @@
-// === Module 9605: isPremiumResolution ===
+// === Module 9109: isPremiumResolution ===
 
-// Module 9605 (isPremiumResolution)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+// Module 9109 (isPremiumResolution)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ApplicationStreamPresets" /* 4572 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
-import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "createRTCConnection" /* 4554 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4537 */;
-import { StreamQualitiesToPremiumType as closure_15 } from "GuildFeatures" /* 1923 */;
-import { ResolutionTypes } from "DesktopSources" /* 4542 */;
+import closure_4 from "ApplicationStreamPresets" /* 4606 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
+import closure_6 from "createGuildRecordFromRust" /* 1979 */;
+import closure_7 from "createRTCConnection" /* 4583 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4607 */;
+import { StreamQualitiesToPremiumType as closure_15 } from "GuildFeatures" /* 1373 */;
+import { ResolutionTypes } from "DesktopSources" /* 4585 */;
 
 require = arg1;
 ({ ApplicationStreamFPS: c10, ApplicationStreamResolutions: unpackModuleId, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = RESOLUTION_720);
@@ -112,10 +112,14 @@ export const useMaxQuality = function useMaxQuality(participant) {
   let obj = _require(stateFromStores[11]);
   const items1 = [closure_5];
   stateFromStores = _require(stateFromStores[11]).useStateFromStores(items1, () => id.getId());
-  const items2 = [stateFromStores, participant, stateFromStoresObject];
-  return React.useMemo(() => {
+  const obj2 = _require(stateFromStores[11]);
+  const items2 = [closure_7];
+  const stateFromStores1 = _require(stateFromStores[11]).useStateFromStores(items2, () => guildId.getGuildId());
+  const items3 = [stateFromStores, stateFromStores1, participant, stateFromStoresObject];
+  return stateFromStores1.useMemo(() => {
     if (stateFromStores === participant.user.id) {
       let obj = { maxFrameRate: null, maxResolution: null };
+      let tmp7Result = stateFromStoresObject;
       obj[0] = stateFromStoresObject.fps;
       obj = { height: null, width: 0, type: null };
       obj[0] = stateFromStoresObject.resolution;
@@ -125,7 +129,9 @@ export const useMaxQuality = function useMaxQuality(participant) {
         FIXED = closure_1_16.FIXED;
       }
       obj[2] = FIXED;
-      obj[1] = obj;
+      tmp7Result = stateFromStoresObject(stateFromStores[12])("useMaxQuality", tmp8, obj, tmp7Result.fps);
+      obj[1] = tmp7Result;
+      const tmp7 = stateFromStoresObject(stateFromStores[12]);
     } else {
       let tmp3 = null;
       if (null != tmp.maxResolution) {
@@ -138,7 +144,7 @@ export const useMaxQuality = function useMaxQuality(participant) {
       }
       return tmp3;
     }
-  }, items2);
+  }, items3);
 };
 export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) {
   closure_0 = preset;

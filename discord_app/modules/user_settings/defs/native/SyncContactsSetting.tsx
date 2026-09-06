@@ -1,13 +1,13 @@
-// === Module 14687: toggle ===
+// === Module 14843: toggle ===
 
-// Module 14687 (toggle)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import _uploadContacts from "_uploadContacts" /* 12454 */;
-import syncContacts from "syncContacts" /* 14688 */;
-import closure_2 from "set" /* 5234 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import { PlatformTypes } from "ME" /* 673 */;
-import createToggle from "createToggle" /* 11292 */;
+// Module 14843 (toggle)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import _uploadContacts from "_uploadContacts" /* 12680 */;
+import syncContacts from "syncContacts" /* 14844 */;
+import closure_2 from "set" /* 5281 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import { PlatformTypes } from "ME" /* 1074 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {

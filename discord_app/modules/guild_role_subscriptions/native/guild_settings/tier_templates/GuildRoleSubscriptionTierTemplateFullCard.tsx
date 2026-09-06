@@ -1,16 +1,16 @@
-// === Module 17624: SectionSeparator ===
+// === Module 17784: SectionSeparator ===
 
-// Module 17624 (SectionSeparator)
+// Module 17784 (SectionSeparator)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text from "Text" /* 4474 */;
-import SectionTitle from "SectionTitle" /* 15077 */;
-import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15954 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import Text from "Text" /* 4556 */;
+import SectionTitle from "SectionTitle" /* 15237 */;
+import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 16118 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function SectionSeparator() {
@@ -82,30 +82,30 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   let obj = { scrollable: true, startExpanded: true, children: null };
   obj = { style: tmp.container, children: null };
   obj = { template, handleSelectTemplateInPreview, subscriptionPlanTextStyle: tmp.subscriptionPlanTextStyle, descriptionTextStyle: tmp.descriptionPlanTextStyle, closeActionSheet: true };
-  let items = [callback(_require(17625).GuildRoleSubscriptionTierTemplateBasicInfo, obj), callback(View, { style: tmp.separator }), ];
+  let items = [callback(_require(17785).GuildRoleSubscriptionTierTemplateBasicInfo, obj), callback(View, { style: tmp.separator }), ];
   const obj2 = { scrollsToTop: false, style: tmp.content, contentContainerStyle: obj3, children: null };
   const obj4 = { variant: "text-sm/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
-  const intl = _require(1233).intl;
-  obj4[3] = intl.string(_require(1233).t.CjC5XZ);
-  const items1 = [callback(_require(4474).Text, obj4), callback(_require(1296).Spacer, { size: 4 }), , , , , , , , , ];
+  const intl = _require(1114).intl;
+  obj4[3] = intl.string(_require(1114).t.CjC5XZ);
+  const items1 = [callback(_require(4556).Text, obj4), callback(_require(1178).Spacer, { size: 4 }), , , , , , , , , ];
   const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
-  const intl2 = _require(1233).intl;
-  obj5[2] = intl2.string(_require(1233).t.bCb3c8);
-  items1[2] = callback(_require(4474).Text, obj5);
-  items1[3] = callback(_require(1296).Spacer, { size: 24 });
+  const intl2 = _require(1114).intl;
+  obj5[2] = intl2.string(_require(1114).t.bCb3c8);
+  items1[2] = callback(_require(4556).Text, obj5);
+  items1[3] = callback(_require(1178).Spacer, { size: 24 });
   const obj6 = { variant: "text-xs/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
-  const intl3 = _require(1233).intl;
-  obj6[3] = intl3.string(_require(1233).t.ZKyfEo);
-  items1[4] = callback(_require(4474).Text, obj6);
-  items1[5] = callback(_require(1296).Spacer, { size: 8 });
-  items1[6] = callback(_require(17626).GuildRoleSubscriptionRolePreview, { roleColor: role_color, roleImage: image, roleName: name, guildId });
+  const intl3 = _require(1114).intl;
+  obj6[3] = intl3.string(_require(1114).t.ZKyfEo);
+  items1[4] = callback(_require(4556).Text, obj6);
+  items1[5] = callback(_require(1178).Spacer, { size: 8 });
+  items1[6] = callback(_require(17786).GuildRoleSubscriptionRolePreview, { roleColor: role_color, roleImage: image, roleName: name, guildId });
   items1[7] = callback(SectionSeparator, {});
   const obj7 = { sectionTitle: null, children: null };
-  const intl4 = _require(1233).intl;
-  obj7[0] = intl4.string(_require(1233).t.Ofvpfs);
+  const intl4 = _require(1114).intl;
+  obj7[0] = intl4.string(_require(1114).t.Ofvpfs);
   obj1 = { style: tmp.separator };
   obj3 = { paddingBottom: 32 + useSafeAreaInsetsDefault().bottom };
-  obj7[1] = callback(_require(9209).GappedList, {
+  obj7[1] = callback(_require(10346).GappedList, {
     gap: 14,
     children: channels.map((children) => {
       let obj = lib(closure_1_2[16]);
@@ -119,8 +119,8 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   items1[8] = callback(BenefitSection, obj7);
   items1[9] = callback(SectionSeparator, {});
   const obj9 = { sectionTitle: null, children: null };
-  const intl5 = _require(1233).intl;
-  obj9[0] = intl5.string(_require(1233).t.w7KA8R);
+  const intl5 = _require(1114).intl;
+  obj9[0] = intl5.string(_require(1114).t.w7KA8R);
   const obj8 = {
     gap: 14,
     children: channels.map((children) => {
@@ -132,7 +132,7 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
       return closure_1_4(closure_1_9, { title: closure_1_6(closure_1_3, obj), description: children.description }, children.id);
     })
   };
-  obj9[1] = callback(_require(9209).GappedList, {
+  obj9[1] = callback(_require(10346).GappedList, {
     gap: 14,
     children: additional_perks.map((children) => {
       let obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name };
@@ -142,8 +142,8 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   });
   items1[10] = callback(BenefitSection, obj9);
   obj2[3] = items1;
-  items[2] = callback2(_require(5633).BottomSheetScrollView, obj2);
+  items[2] = callback2(_require(6627).BottomSheetScrollView, obj2);
   obj[1] = items;
   obj[2] = callback2(View, obj);
-  return callback(_require(5631).BottomSheet, obj);
+  return callback(_require(7150).BottomSheet, obj);
 };

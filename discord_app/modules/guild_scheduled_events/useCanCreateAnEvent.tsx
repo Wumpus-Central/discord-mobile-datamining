@@ -1,12 +1,12 @@
-// === Module 9659: useCanCreateAnEvent ===
+// === Module 9673: useCanCreateAnEvent ===
 
-// Module 9659 (useCanCreateAnEvent)
+// Module 9673 (useCanCreateAnEvent)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "comparator" /* 1981 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
-import { Permissions } from "ME" /* 673 */;
+import closure_3 from "comparator" /* 2012 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 2012 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
+import { Permissions } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useCanCreateAnEvent.tsx");
@@ -16,7 +16,7 @@ export default function useCanCreateAnEvent(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_5, closure_3, closure_6];
   const items1 = [arg0, arg1];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const guild = closure_1_5.getGuild(callback);
     if (!closure_1_6.can(closure_1_7.ADMINISTRATOR, guild)) {
       if (!closure_1_6.can(closure_1_7.CREATE_EVENTS, guild)) {

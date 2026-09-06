@@ -1,6 +1,6 @@
-// === Module 1990: areArraysShallowlyEqual ===
+// === Module 1933: areArraysShallowlyEqual ===
 
-// Module 1990 (areArraysShallowlyEqual)
+// Module 1933 (areArraysShallowlyEqual)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("utils/FunctionUtils.tsx");

@@ -1,10 +1,10 @@
-// === Module 7125: WaterIllocon ===
+// === Module 6565: WaterIllocon ===
 
-// Module 7125 (WaterIllocon)
+// Module 6565 (WaterIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 7126 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6566 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WaterIllocon.native.tsx");

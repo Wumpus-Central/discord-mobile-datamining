@@ -1,22 +1,22 @@
-// === Module 12038: EnteringAnimation ===
+// === Module 12242: EnteringAnimation ===
 
-// Module 12038 (EnteringAnimation)
+// Module 12242 (EnteringAnimation)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import _modDef4217 from "module_4217" /* 4217 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4479 */;
-import timingNone from "timingNone" /* 4482 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4934 */;
-import playDefault from "play" /* 5953 */;
-import useGradientBottom from "useGradientBottom" /* 7627 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 11838 */;
-import _mod11863 from "module_11863" /* 11863 */;
-import _mod12039 from "module_12039" /* 12039 */;
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import _modDef4296 from "module_4296" /* 4296 */;
+import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4561 */;
+import timingNone from "timingNone" /* 4564 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4980 */;
+import playDefault from "play" /* 5529 */;
+import useGradientBottom from "useGradientBottom" /* 7872 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12037 */;
+import _mod12062 from "module_12062" /* 12062 */;
+import _mod12243 from "module_12243" /* 12243 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -76,17 +76,17 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   obj = { children: null };
   obj = { entering: EnteringAnimation, exiting: ExitingAnimation, style: items1, collapsable: false, children: null };
   items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
-  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod12039, autoPlay: !stateFromStores };
+  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod12243, autoPlay: !stateFromStores };
   const items2 = [callback(playDefault, obj1), , ];
   const items3 = [tmp.glowMask, gradientBottom];
   items2[1] = callback(closure_3, { collapsable: false, style: items3 });
   items2[2] = callback(closure_3, { collapsable: false, style: tmp.fakeButton });
   obj[4] = items2;
-  const items4 = [callback2(_modDef4217.View, obj), ];
+  const items4 = [callback2(_modDef4296.View, obj), ];
   const obj3 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj2 = { collapsable: false, style: tmp.fakeButton };
   const tmp5 = playDefault;
-  obj3[2] = _mod11863;
+  obj3[2] = _mod12062;
   obj3[3] = !stateFromStores;
   items4[1] = callback(playDefault, obj3);
   obj[0] = items4;

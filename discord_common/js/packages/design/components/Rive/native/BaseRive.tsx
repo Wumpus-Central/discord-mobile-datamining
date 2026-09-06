@@ -1,6 +1,6 @@
-// === Module 4211: BaseRive ===
+// === Module 4290: BaseRive ===
 
-// Module 4211 (BaseRive)
+// Module 4290 (BaseRive)
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -163,7 +163,7 @@ export const BaseRive = forwardRefResult;
 export const useNumberBinding = function useNumberBinding(AnimationState, instance, AnimationState2, AnimationState1, playIfNeeded) {
   let _require = AnimationState2;
   dependencyMap = playIfNeeded;
-  const iter = _require(4212).useRiveNumber(AnimationState, instance);
+  const iter = _require(4291).useRiveNumber(AnimationState, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -210,7 +210,7 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
 export const useStringBinding = function useStringBinding(LVL, instance, LVL2, LVL1, playIfNeeded) {
   let _require = LVL2;
   dependencyMap = playIfNeeded;
-  const iter = _require(4212).useRiveString(LVL, instance);
+  const iter = _require(4291).useRiveString(LVL, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -240,10 +240,10 @@ export const useStringBinding = function useStringBinding(LVL, instance, LVL2, L
     }
   }, items2);
 };
-export const useBooleanBinding = function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled, pressed1, playIfNeeded) {
+export const useBooleanBinding = function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled, on1, playIfNeeded) {
   let _require = reducedMotionEnabled;
   dependencyMap = playIfNeeded;
-  const iter = _require(4212).useRiveBoolean(reducedMotion, instance);
+  const iter = _require(4291).useRiveBoolean(reducedMotion, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -252,15 +252,15 @@ export const useBooleanBinding = function useBooleanBinding(reducedMotion, insta
     if (null != closure_0) {
       const _Boolean = Boolean;
       callback(Boolean(tmp));
-      if (pressed1 != null) {
-        pressed1();
+      if (on1 != null) {
+        on1();
       }
     }
   }, items);
   _require = value;
-  dependencyMap = pressed1;
-  importAllResult = importAllResult.useRef(pressed1);
-  const items1 = [pressed1];
+  dependencyMap = on1;
+  importAllResult = importAllResult.useRef(on1);
+  const items1 = [on1];
   const effect1 = importAllResult.useEffect(() => {
     closure_2.current = closure_1;
   }, items1);
@@ -277,7 +277,7 @@ export const useBooleanBinding = function useBooleanBinding(reducedMotion, insta
 export const useColorBinding = function useColorBinding(FillColor, instance, FillColor2, FillColor1, playIfNeeded) {
   const _require = FillColor2;
   dependencyMap = FillColor1;
-  const iter = _require(4212).useRiveColor(FillColor, instance);
+  const iter = _require(4291).useRiveColor(FillColor, instance);
   const setValue = iter.setValue;
   const value = iter.value;
   closure_4 = value;
@@ -305,10 +305,10 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
     }
   }, items2);
 };
-export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, stateFromStores) {
+export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, first) {
   let _require = arg2;
   dependencyMap = arg4;
-  const iter = _require(4212).useRiveEnum(FillColor, instance);
+  const iter = _require(4291).useRiveEnum(FillColor, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -316,15 +316,15 @@ export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2,
   const effect = importAllResult.useEffect(() => {
     if (null != closure_0) {
       ref(closure_0.toString());
-      if (stateFromStores != null) {
-        stateFromStores();
+      if (callback != null) {
+        callback();
       }
     }
   }, items);
   _require = value;
-  dependencyMap = stateFromStores;
-  importAllResult = importAllResult.useRef(stateFromStores);
-  const items1 = [stateFromStores];
+  dependencyMap = first;
+  importAllResult = importAllResult.useRef(first);
+  const items1 = [first];
   const effect1 = importAllResult.useEffect(() => {
     closure_2.current = closure_1;
   }, items1);
@@ -341,7 +341,7 @@ export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2,
 export const useTriggerBinding = function useTriggerBinding(startAnimation, instance, startAnimation2, startAnimation1, playIfNeeded) {
   const _require = startAnimation2;
   dependencyMap = playIfNeeded;
-  let obj = _require(4212);
+  let obj = _require(4291);
   let tmp;
   if (null != startAnimation1) {
     obj = { onTrigger: null };

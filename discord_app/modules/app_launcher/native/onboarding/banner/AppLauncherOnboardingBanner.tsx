@@ -1,11 +1,11 @@
-// === Module 11849: AppLauncherOnboardingBanner ===
+// === Module 12048: AppLauncherOnboardingBanner ===
 
-// Module 11849 (AppLauncherOnboardingBanner)
+// Module 12048 (AppLauncherOnboardingBanner)
 import noopAll from "noop" /* 19 */;
-import DismissibleContent from "DismissibleContent" /* 1372 */;
-import ActivitiesBannerDefault from "ActivitiesBanner" /* 11850 */;
-import AppsBanerDefault from "AppsBaner" /* 11864 */;
-import BotsBannerDefault from "BotsBanner" /* 11866 */;
+import DismissibleContent from "DismissibleContent" /* 1943 */;
+import ActivitiesBannerDefault from "ActivitiesBanner" /* 12049 */;
+import AppsBanerDefault from "AppsBaner" /* 12063 */;
+import BotsBannerDefault from "BotsBanner" /* 12065 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -18,9 +18,9 @@ export default function AppLauncherOnboardingBanner(arg0) {
     let obj = { context: null };
     obj[0] = context;
     return jsx(ActivitiesBannerDefault, { context: null });
-  } else if (tmp(1372).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
+  } else if (tmp(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
     return jsx(AppsBanerDefault, {});
-  } else if (tmp(1372).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
+  } else if (tmp(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
     obj = { context: null };
     obj[0] = context;
     return jsx(BotsBannerDefault, { context: null });

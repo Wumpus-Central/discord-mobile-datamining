@@ -1,11 +1,11 @@
-// === Module 12373: useMultiPerkStatusValues ===
+// === Module 12573: useMultiPerkStatusValues ===
 
-// Module 12373 (useMultiPerkStatusValues)
+// Module 12573 (useMultiPerkStatusValues)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2400 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
-import usePowerupActiveStatus from "usePowerupActiveStatus" /* 12299 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 2428 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
+import usePowerupActiveStatus from "usePowerupActiveStatus" /* 12499 */;
 
 const PowerupActiveStatusType = BoostedGuildTiers.PowerupActiveStatusType;
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");

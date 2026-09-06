@@ -1,11 +1,11 @@
-// === Module 9447: getChannelIconURL ===
+// === Module 13030: getChannelIconURL ===
 
-// Module 9447 (getChannelIconURL)
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
+// Module 13030 (getChannelIconURL)
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { ChannelTypes } from "ME" /* 673 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import { ChannelTypes } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel/getChannelIcon.tsx");

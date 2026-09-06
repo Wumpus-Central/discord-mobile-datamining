@@ -1,6 +1,6 @@
-// === Module 1935: toJS ===
+// === Module 1386: toJS ===
 
-// Module 1935 (toJS)
+// Module 1386 (toJS)
 import set from "set" /* 2 */;
 
 let Record;

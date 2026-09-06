@@ -1,10 +1,10 @@
-// === Module 10212: playInAppMessageSound ===
+// === Module 10103: playInAppMessageSound ===
 
-// Module 10212 (playInAppMessageSound)
-import isMetaQuest from "isMetaQuest" /* 1623 */;
-import closure_2 from "DesktopNotificationTypes" /* 10190 */;
-import { isInAppMessageSoundsEnabled as closure_3 } from "isInAppMessageSoundsEnabled" /* 10213 */;
-import { InAppNotificationTypes } from "ME" /* 673 */;
+// Module 10103 (playInAppMessageSound)
+import isMetaQuest from "isMetaQuest" /* 1608 */;
+import closure_2 from "DesktopNotificationTypes" /* 10081 */;
+import { isInAppMessageSoundsEnabled as closure_3 } from "isInAppMessageSoundsEnabled" /* 10104 */;
+import { InAppNotificationTypes } from "ME" /* 1074 */;
 
 require = arg1;
 const message1 = "message1";
@@ -19,8 +19,8 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
           const _Date = Date;
           const timestamp = Date.now();
           if (timestamp - timestamp >= 1000) {
-            tmp8(10019).playSound(tmp3, 0.4);
-            const tmp8Result = tmp8(10019);
+            tmp8(9902).playSound(tmp3, 0.4);
+            const tmp8Result = tmp8(9902);
           }
         }
         tmp3 = message1;

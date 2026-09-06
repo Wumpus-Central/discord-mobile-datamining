@@ -1,12 +1,12 @@
-// === Module 13639: _handlePresenceUpdate ===
+// === Module 13747: _handlePresenceUpdate ===
 
-// Module 13639 (_handlePresenceUpdate)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "recomputeAffinities" /* 7414 */;
-import closure_3 from "sortActivity" /* 4569 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { ActivityTypes } from "ME" /* 673 */;
+// Module 13747 (_handlePresenceUpdate)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "recomputeAffinities" /* 7659 */;
+import closure_3 from "sortActivity" /* 4600 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import { ActivityTypes } from "ME" /* 1074 */;
 
 function _handlePresenceUpdate(user) {
   user = user.user;

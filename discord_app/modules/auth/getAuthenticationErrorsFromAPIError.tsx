@@ -1,6 +1,6 @@
-// === Module 7733: getAuthenticationErrorsFromAPIError ===
+// === Module 6948: getAuthenticationErrorsFromAPIError ===
 
-// Module 7733 (getAuthenticationErrorsFromAPIError)
+// Module 6948 (getAuthenticationErrorsFromAPIError)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");

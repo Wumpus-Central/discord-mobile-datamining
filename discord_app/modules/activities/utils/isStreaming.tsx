@@ -1,9 +1,9 @@
-// === Module 8119: _isStreaming ===
+// === Module 8259: _isStreaming ===
 
-// Module 8119 (_isStreaming)
+// Module 8259 (_isStreaming)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import items3 from "items3" /* 4506 */;
+import ME from "ME" /* 1074 */;
+import items3 from "items3" /* 1920 */;
 
 function _isStreaming(type) {
   let tmp = type.type === ActivityTypes.STREAMING;

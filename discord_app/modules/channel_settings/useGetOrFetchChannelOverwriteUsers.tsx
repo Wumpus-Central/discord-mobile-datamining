@@ -1,10 +1,10 @@
-// === Module 16661: useGetOrFetchChannelOverwriteUsers ===
+// === Module 16826: useGetOrFetchChannelOverwriteUsers ===
 
-// Module 16661 (useGetOrFetchChannelOverwriteUsers)
+// Module 16826 (useGetOrFetchChannelOverwriteUsers)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import closure_5 from "trackCommunicationDisabled" /* 2021 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx");

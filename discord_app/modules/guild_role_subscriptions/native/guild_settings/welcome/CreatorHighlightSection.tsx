@@ -1,15 +1,15 @@
-// === Module 17547: GuildServerSubscriberCount ===
+// === Module 17707: GuildServerSubscriberCount ===
 
-// Module 17547 (GuildServerSubscriberCount)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 9157 */;
+// Module 17707 (GuildServerSubscriberCount)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import registerAssetDefault from "registerAsset" /* 10302 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function GuildServerSubscriberCount(arg0) {
@@ -41,14 +41,14 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(17548)(guild_id, 3, 60);
+  const tmp4 = guild_id(17708)(guild_id, 3, 60);
   dependencyMap = tmp4;
   hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
     let obj = { style: null, children: null };
     obj[0] = tmp.cardContainer;
-    obj[1] = callback(tmp2(17520), {});
+    obj[1] = callback(tmp2(17680), {});
     return callback(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;
@@ -63,12 +63,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj2 = { uri: null };
     obj2[0] = guildAvatarUrl;
     obj1[1] = obj2;
-    const items1 = [callback(tmp2(5502), obj1), ];
+    const items1 = [callback(tmp2(5587), obj1), ];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.cardHeaderContainer;
     const obj4 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: null };
     obj4[4] = guildName;
-    const items2 = [callback(_require(4474).Text, obj4), ];
+    const items2 = [callback(_require(4556).Text, obj4), ];
     let tmp9Result = null != subscriberCount;
     if (tmp9Result) {
       const obj5 = { subscriberCount: null, style: null };
@@ -84,19 +84,19 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj6 = { style: null, variant: "text-md/normal", color: "text-default", children: null };
     obj6[0] = tmp.ownerQuote;
     obj6[3] = quote;
-    items3[1] = callback(_require(4474).Text, obj6);
+    items3[1] = callback(_require(4556).Text, obj6);
     const obj7 = { style: null, variant: "text-sm/normal", color: "text-default", lineClamp: 1, lineBreakMode: "tail", children: null };
     obj7[0] = tmp.ownerUsername;
-    const intl = tmp10(1233).intl;
+    const intl = tmp10(1114).intl;
     const obj8 = { attributionName: null, attributionTitle: null };
     obj8[0] = quote_attribution;
     if (quote_attribution_title == null) {
-      const intl2 = tmp10(1233).intl;
-      quote_attribution_title = intl2.string(tmp10(1233).t.pclUFJ);
+      const intl2 = tmp10(1114).intl;
+      quote_attribution_title = intl2.string(tmp10(1114).t.pclUFJ);
     }
     obj8[1] = quote_attribution_title;
-    obj7[5] = intl.format(_require(1233).t.m0b6Kj, obj8);
-    items3[2] = callback(_require(4474).Text, obj7);
+    obj7[5] = intl.format(_require(1114).t.m0b6Kj, obj8);
+    items3[2] = callback(_require(4556).Text, obj7);
     let tmp7Result = null != emojisToShow;
     if (tmp7Result) {
       tmp7Result = emojisToShow.length > 0;
@@ -106,9 +106,9 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       obj9[0] = tmp.emojiSectionContainer;
       const obj10 = { style: null, variant: "text-xs/semibold", color: "text-default", children: null };
       obj10[0] = tmp.premiumEmojisTitle;
-      const intl3 = tmp10(1233).intl;
-      obj10[3] = intl3.string(tmp10(1233).t.wg53L8);
-      const items4 = [tmp9(tmp10(4474).Text, obj10), ];
+      const intl3 = tmp10(1114).intl;
+      obj10[3] = intl3.string(tmp10(1114).t.wg53L8);
+      const items4 = [tmp9(tmp10(4556).Text, obj10), ];
       const obj11 = { style: null, children: null };
       const items5 = [, ];
       ({ horizontalContainer: arr6[0], emojiContainer: arr6[1] } = tmp);
@@ -127,7 +127,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
         obj12[0] = tmp.emojiListItem;
         const _HermesInternal = HermesInternal;
         obj12[3] = "+" + notShownEmojiCount;
-        tmp9Result = tmp9(tmp10(4474).Text, obj12);
+        tmp9Result = tmp9(tmp10(4556).Text, obj12);
       }
       items6[1] = tmp9Result;
       obj11[1] = items6;
@@ -140,10 +140,10 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     obj13[0] = tmp.viewServerButtonContainer;
     const obj14 = { pillStyle: null, text: null, onPress: null, shrink: true };
     obj14[0] = tmp.viewServerButton;
-    const intl4 = tmp10(1233).intl;
-    obj14[1] = intl4.string(_require(1233).t.mQ2IGa);
+    const intl4 = tmp10(1114).intl;
+    obj14[1] = intl4.string(_require(1114).t.mQ2IGa);
     obj14[2] = tmp5;
-    obj13[1] = callback(_require(4930).BaseTextButton, obj14);
+    obj13[1] = callback(_require(4976).BaseTextButton, obj14);
     items3[4] = callback(closure_4, obj13);
     obj[1] = items3;
     return closure_7(closure_4, obj);

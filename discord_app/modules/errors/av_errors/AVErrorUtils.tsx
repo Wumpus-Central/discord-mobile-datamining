@@ -1,9 +1,9 @@
-// === Module 17677: getReportInboundErrors ===
+// === Module 17837: getReportInboundErrors ===
 
-// Module 17677 (getReportInboundErrors)
-import setDefault from "set" /* 684 */;
-import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 9595 */;
-import closure_2 from "updateAveragedStatsHelper" /* 4567 */;
+// Module 17837 (getReportInboundErrors)
+import setDefault from "set" /* 1090 */;
+import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 9609 */;
+import closure_2 from "updateAveragedStatsHelper" /* 4598 */;
 
 require = arg1;
 let closure_3 = 10 * setDefault.Millis.SECOND;

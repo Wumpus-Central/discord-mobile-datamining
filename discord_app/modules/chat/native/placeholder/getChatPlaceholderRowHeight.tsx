@@ -1,7 +1,7 @@
-// === Module 12414: PX_24 ===
+// === Module 12640: PX_24 ===
 
-// Module 12414 (PX_24)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 12640 (PX_24)
+import ThemesDefault from "Themes" /* 576 */;
 
 const PX_24 = ThemesDefault.space.PX_24;
 const tmp2 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];

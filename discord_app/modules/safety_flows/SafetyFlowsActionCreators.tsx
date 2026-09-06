@@ -1,8 +1,8 @@
-// === Module 17709: _getCurrentTask ===
+// === Module 17869: _getCurrentTask ===
 
-// Module 17709 (_getCurrentTask)
+// Module 17869 (_getCurrentTask)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 673 */;
+import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
 function _getCurrentTask() {
@@ -12,9 +12,9 @@ function _getCurrentTask() {
     obj1 = { url: null, trackedActionData: null, rejectWithError: true };
     obj1[0] = closure_1_4.SAFETY_FLOWS_TASK;
     const obj2 = { event: null };
-    obj2[0] = closure_1_0(500).NetworkActionNames.USER_VERIFY;
+    obj2[0] = closure_1_0(1250).NetworkActionNames.USER_VERIFY;
     obj1[1] = obj2;
-    closure_0 = yield v0(4714).get(obj1);
+    closure_0 = yield v0(4753).get(obj1);
     let body = null;
     if (204 !== closure_0.status) {
       body = closure_0.body;
@@ -41,9 +41,9 @@ function _completeTask() {
       obj1[0] = closure_1_4.SAFETY_FLOWS_TASK;
       obj1[1] = callback;
       const obj2 = { event: null };
-      obj2[0] = callback(500).NetworkActionNames.USER_VERIFY;
+      obj2[0] = callback(1250).NetworkActionNames.USER_VERIFY;
       obj1[2] = obj2;
-      yield v0(4714).post(obj1);
+      yield v0(4753).post(obj1);
       return body.body;
     })();
   });

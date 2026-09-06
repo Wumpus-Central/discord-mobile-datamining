@@ -1,9 +1,9 @@
-// === Module 7313: map ===
+// === Module 7558: map ===
 
-// Module 7313 (map)
+// Module 7558 (map)
 import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 require = arg1;
 let map = new Map();

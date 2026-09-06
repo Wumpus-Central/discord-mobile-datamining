@@ -1,11 +1,11 @@
-// === Module 4675: ME ===
+// === Module 4714: ME ===
 
-// Module 4675 (ME)
-import setDefault from "set" /* 4465 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
-import ME from "ME" /* 673 */;
+// Module 4714 (ME)
+import setDefault from "set" /* 4547 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+import ME from "ME" /* 1074 */;
 
 ME = ME.ME;
 const Permissions = ME.Permissions;

@@ -1,13 +1,13 @@
-// === Module 16395: ResourcesRow ===
+// === Module 16557: ResourcesRow ===
 
-// Module 16395 (ResourcesRow)
+// Module 16557 (ResourcesRow)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16397 */;
+import ThemesDefault from "Themes" /* 576 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16559 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16396 */;
+import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16558 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -52,12 +52,12 @@ export default function ResourcesRow(guildId) {
       obj.openLazy(guildId(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), closure_1_4, obj);
     };
     obj = { variant: "text-md/medium", color: "text-default", children: null };
-    const intl = guildId(1233).intl;
+    const intl = guildId(1114).intl;
     obj1 = { count: null };
     obj1[0] = arr.length - 2;
-    obj[2] = intl.format(guildId(1233).t.F6iMs4, obj1);
-    obj[2] = callback(guildId(4474).Text, obj);
-    tmp6 = callback(guildId(5077).PressableOpacity, obj);
+    obj[2] = intl.format(guildId(1114).t.F6iMs4, obj1);
+    obj[2] = callback(guildId(4556).Text, obj);
+    tmp6 = callback(guildId(5123).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[2] = items;

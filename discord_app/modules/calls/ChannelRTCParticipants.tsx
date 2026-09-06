@@ -1,27 +1,27 @@
-// === Module 9507: sortKey ===
+// === Module 9476: sortKey ===
 
-// Module 9507 (sortKey)
+// Module 9476 (sortKey)
 import apply from "apply" /* 12 */;
-import version from "version" /* 4116 */;
-import isStreamKey from "isStreamKey" /* 4544 */;
-import getNicknameDefault from "getNickname" /* 4673 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5380 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 8923 */;
-import useIsSpeaking from "useIsSpeaking" /* 9509 */;
-import apexExperiment from "apexExperiment" /* 9510 */;
-import closure_3 from "participantFromServer" /* 1385 */;
-import closure_4 from "reset" /* 4500 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
-import closure_6 from "callConnect" /* 5231 */;
-import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_9 from "anyoneHasFlagInContext" /* 5372 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import closure_11 from "makeTimeoutKey" /* 9508 */;
-import closure_12 from "updateVoiceState" /* 4497 */;
-import ParticipantTypes from "ParticipantTypes" /* 4499 */;
-import ME from "ME" /* 673 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+import version from "version" /* 4195 */;
+import isStreamKey from "isStreamKey" /* 4612 */;
+import getNicknameDefault from "getNickname" /* 4712 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5428 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 8217 */;
+import useIsSpeaking from "useIsSpeaking" /* 9478 */;
+import apexExperiment from "apexExperiment" /* 9479 */;
+import closure_3 from "participantFromServer" /* 1956 */;
+import closure_4 from "reset" /* 4582 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
+import closure_6 from "callConnect" /* 5278 */;
+import closure_7 from "ensureGuildLoaded" /* 1957 */;
+import closure_8 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_9 from "anyoneHasFlagInContext" /* 5419 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
+import closure_11 from "makeTimeoutKey" /* 9477 */;
+import closure_12 from "updateVoiceState" /* 4579 */;
+import ParticipantTypes from "ParticipantTypes" /* 4581 */;
+import ME from "ME" /* 1074 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 require = arg1;
 function sortKey(type) {
@@ -221,11 +221,11 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   return flag;
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f77578) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f78247) {
   const self = this;
-  closure_0 = f77578;
+  closure_0 = f78247;
   let flag;
-  if (this.participants[f77578] != null) {
+  if (this.participants[f78247] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
       if (type.type === closure_1_14.USER) {
@@ -265,11 +265,11 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f775
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f77585, closure_1, closure_2) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f78254, closure_1, closure_2) {
   const self = this;
   closure_0 = closure_2;
   let flag;
-  if (this.participants[f77585] != null) {
+  if (this.participants[f78254] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
       if (type.type === closure_1_14.STREAM) {

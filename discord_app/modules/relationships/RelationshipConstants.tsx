@@ -1,6 +1,6 @@
-// === Module 9078: ClearFriendRequestFilters ===
+// === Module 9043: ClearFriendRequestFilters ===
 
-// Module 9078 (ClearFriendRequestFilters)
+// Module 9043 (ClearFriendRequestFilters)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/relationships/RelationshipConstants.tsx");

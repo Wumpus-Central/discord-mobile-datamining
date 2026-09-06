@@ -1,6 +1,6 @@
-// === Module 4499: ParticipantTypes ===
+// === Module 4581: ParticipantTypes ===
 
-// Module 4499 (ParticipantTypes)
+// Module 4581 (ParticipantTypes)
 import set from "set" /* 2 */;
 
 let obj = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };

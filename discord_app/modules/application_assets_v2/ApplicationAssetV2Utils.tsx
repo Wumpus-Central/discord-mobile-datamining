@@ -1,9 +1,9 @@
-// === Module 13002: getApplicationAssetUrl ===
+// === Module 9029: getApplicationAssetUrl ===
 
-// Module 13002 (getApplicationAssetUrl)
+// Module 9029 (getApplicationAssetUrl)
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 527 */;
-import handleImageLoad from "handleImageLoad" /* 1464 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import handleImageLoad from "handleImageLoad" /* 1430 */;
 
 let result = set.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 

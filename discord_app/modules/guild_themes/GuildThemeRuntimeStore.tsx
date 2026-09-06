@@ -1,15 +1,15 @@
-// === Module 4363: snapshotSelectedGuildId ===
+// === Module 4448: snapshotSelectedGuildId ===
 
-// Module 4363 (snapshotSelectedGuildId)
+// Module 4448 (snapshotSelectedGuildId)
 import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1907 */;
-import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4368 */;
-import closure_2 from "calculateAppliedBoosts" /* 4364 */;
-import closure_3 from "createGuildRecordFromRust" /* 1908 */;
-import closure_4 from "handleConnectionOpen" /* 4299 */;
-import { GuildFeatures } from "ME" /* 673 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1978 */;
+import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4453 */;
+import closure_2 from "calculateAppliedBoosts" /* 4449 */;
+import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import closure_4 from "handleConnectionOpen" /* 4381 */;
+import { GuildFeatures } from "ME" /* 1074 */;
 
 require = arg1;
 function snapshotSelectedGuildId(guildId) {

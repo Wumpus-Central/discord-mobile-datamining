@@ -1,9 +1,9 @@
-// === Module 16677: handleWebhookCreateUpdate ===
+// === Module 16842: handleWebhookCreateUpdate ===
 
-// Module 16677 (handleWebhookCreateUpdate)
+// Module 16842 (handleWebhookCreateUpdate)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 function handleWebhookCreateUpdate(arg0) {
   ({ guildId, webhook } = arg0);

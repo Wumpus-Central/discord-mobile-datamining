@@ -1,20 +1,20 @@
-// === Module 11414: useMemberListAction ===
+// === Module 11589: useMemberListAction ===
 
-// Module 11414 (useMemberListAction)
+// Module 11589 (useMemberListAction)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_8 from "markAllUserIdListsStale" /* 4209 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = ME);
-let closure_14 = { listActionRenderer: "Array", listActionHeight: "PX_16" };
+let closure_14 = { listActionRenderer: "hash", listActionHeight: "call" };
 let closure_15 = createCacheKey.createStyles({ wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
@@ -108,8 +108,7 @@ export default function useMemberListAction(channel) {
   const items1 = [id];
   callback1 = React.useCallback(() => {
     if (null != id) {
-      channel(stateFromStores[14]).navigateToNewGroupDM(tmp, callback.MEMBER_LIST);
-      const obj = channel(stateFromStores[14]);
+      lib(stateFromStores[14])(tmp, callback.MEMBER_LIST);
     }
   }, items1);
   const items2 = [canResult, id, callback1, flag2, flag3, first, callback, stateFromStores, tmp13, tmp7, tmp];
@@ -141,15 +140,22 @@ export default function useMemberListAction(channel) {
             obj[2] = intl3.string(channel(stateFromStores[17]).t["LR+Ptf"]);
             obj[3] = function handlePress() {
               if (null != closure_1_6.getChannel(closure_7)) {
-                let obj = callback(closure_1_2[20]);
-                if (obj.UNSAFE_isDismissibleContentDismissed(callback(closure_1_2[21]).DismissibleContent.GDM_INVITE_REMINDER)) {
-                  callback3();
+                const groupDMAddMembersAction = callback(closure_1_2[14]).getGroupDMAddMembersAction(closure_7, closure_1_11.MEMBER_LIST);
+                if ("open" === groupDMAddMembersAction) {
+                  let tmp8Result = tmp8(tmp9[20]);
+                  if (tmp8Result.UNSAFE_isDismissibleContentDismissed(tmp8(tmp9[21]).DismissibleContent.GDM_INVITE_REMINDER)) {
+                    callback3();
+                  } else {
+                    const obj = { onClick: null };
+                    obj[0] = callback3;
+                    callback2(tmp9[22])(obj);
+                  }
                 } else {
-                  obj = { onClick: null };
-                  obj[0] = callback3;
-                  callback2(tmp2[22])(obj);
+                  tmp8Result = tmp8(tmp9[14]);
+                  const result = tmp8Result.showGroupDMAddMembersRoadblock(groupDMAddMembersAction, tmp10.MEMBER_LIST);
                 }
-                tmp2 = closure_1_2;
+                const obj4 = callback(closure_1_2[14]);
+                tmp10 = closure_1_11;
               }
             };
             tmp12 = obj;
@@ -200,7 +206,7 @@ export default function useMemberListAction(channel) {
         obj1[2] = closure_1_13(channel(stateFromStores[28]).RowButton, obj2);
         closure_0 = closure_1_13(flag2, obj1);
         lib = closure_8 + lib.wrapper.paddingTop;
-        const obj4 = { listActionRenderer: null, listActionHeight: null };
+        let obj4 = { listActionRenderer: null, listActionHeight: null };
         obj4[0] = function listActionRenderer() {
           return closure_0;
         };

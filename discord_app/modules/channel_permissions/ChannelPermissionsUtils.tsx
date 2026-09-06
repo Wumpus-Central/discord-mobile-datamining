@@ -1,22 +1,22 @@
-// === Module 9725: getRoleRowData ===
+// === Module 9738: getRoleRowData ===
 
-// Module 9725 (getRoleRowData)
+// Module 9738 (getRoleRowData)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import fromStringAll from "fromString" /* 503 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import compareGuildRoles from "compareGuildRoles" /* 1988 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import RowType2 from "RowType" /* 8691 */;
-import _updatePermission from "_updatePermission" /* 9726 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1985 */;
-import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import fromStringAll from "fromString" /* 1086 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
+import compareGuildRoles from "compareGuildRoles" /* 2019 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import RowType2 from "RowType" /* 8401 */;
+import _updatePermission from "_updatePermission" /* 9739 */;
+import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 2016 */;
+import closure_8 from "trackCommunicationDisabled" /* 2021 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 function getRoleRowData(colorString) {
   let flag = arg1;
@@ -328,11 +328,11 @@ export const getExistingRolesRows = function getExistingRolesRows(guild, sortedG
   const sorted = found.sort(sortRoles);
   let mapped = sorted.map((arg0) => callback2(arg0));
   if (0 === mapped.length) {
-    const intl2 = _require(1233).intl;
-    let stringResult = intl2.string(_require(1233).t.nZfHsf);
+    const intl2 = _require(1114).intl;
+    let stringResult = intl2.string(_require(1114).t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1233).intl;
-      stringResult = intl.string(tmp4(1233).t["gnsna/"]);
+      const intl = tmp4(1114).intl;
+      stringResult = intl.string(tmp4(1114).t["gnsna/"]);
     }
     let obj = { rowType: null, colorString: null, name: null, disabled: true, id: "EMPTY_STATE" };
     obj[0] = RowType.EMPTY_STATE;
@@ -395,11 +395,11 @@ export const getExistingRolesRowWithPermissionDisabled = function getExistingRol
   const sorted = found.sort(sortRoles);
   let mapped = sorted.map((arg0) => closure_1_14(arg0, closure_1_6(arg0, closure_0)));
   if (0 === mapped.length) {
-    const intl2 = _require(1233).intl;
-    let stringResult = intl2.string(_require(1233).t.nZfHsf);
+    const intl2 = _require(1114).intl;
+    let stringResult = intl2.string(_require(1114).t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1233).intl;
-      stringResult = intl.string(tmp4(1233).t["gnsna/"]);
+      const intl = tmp4(1114).intl;
+      stringResult = intl.string(tmp4(1114).t["gnsna/"]);
     }
     let obj = { rowType: null, colorString: null, name: null, disabled: true, id: "EMPTY_STATE" };
     obj[0] = RowType.EMPTY_STATE;
@@ -469,7 +469,7 @@ export const getExistingMembers = function getExistingMembers(memberIds, channel
   closure_2 = accessPermissions;
   dependencyMap = arg4;
   const mapped = memberIds.map(currentUser.getUser);
-  const found = mapped.filter(_require(1470).isNotNullish);
+  const found = mapped.filter(_require(1369).isNotNullish);
   return found.filter((id) => {
     id = id.id;
     const currentUser = closure_1_9.getCurrentUser();

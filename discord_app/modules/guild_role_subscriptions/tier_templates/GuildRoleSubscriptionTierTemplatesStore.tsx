@@ -1,11 +1,11 @@
-// === Module 15074: initialize ===
+// === Module 15234: initialize ===
 
-// Module 15074 (initialize)
+// Module 15234 (initialize)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import createChannelRecord2 from "createChannelRecord" /* 1390 */;
-import closure_1 from "ensureGuildLoaded" /* 1386 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import createChannelRecord2 from "createChannelRecord" /* 1961 */;
+import closure_1 from "ensureGuildLoaded" /* 1957 */;
 
 const createChannelRecord = createChannelRecord2.createChannelRecord;
 let closure_2 = {};

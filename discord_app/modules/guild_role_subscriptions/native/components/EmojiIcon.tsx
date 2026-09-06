@@ -1,11 +1,11 @@
-// === Module 15080: EmojiIcon ===
+// === Module 15240: EmojiIcon ===
 
-// Module 15080 (EmojiIcon)
+// Module 15240 (EmojiIcon)
 import noopAll from "noop" /* 19 */;
-import preloadDefault from "preload" /* 5502 */;
-import EmojiDefault from "Emoji" /* 5594 */;
-import registerAssetDefault from "registerAsset" /* 9157 */;
-import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15081 */;
+import preloadDefault from "preload" /* 5587 */;
+import EmojiDefault from "Emoji" /* 7130 */;
+import registerAssetDefault from "registerAsset" /* 10302 */;
+import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15241 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -71,8 +71,8 @@ export default function EmojiIcon(size) {
       const obj4 = { id: null, animated: null, size: null };
       ({ id: obj4[0], animated: obj4[1] } = emojiByIdOrName);
       obj4[2] = num;
-      let url = tmp9(1430).getEmojiURL(obj4);
-      const tmp9Result = tmp9(1430);
+      let url = tmp9(1396).getEmojiURL(obj4);
+      const tmp9Result = tmp9(1396);
     } else {
       url = emojiByIdOrName.url;
     }

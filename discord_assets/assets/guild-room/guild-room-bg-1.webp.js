@@ -1,6 +1,6 @@
-// === Module 4685: metadata ===
+// === Module 4724: metadata ===
 
-// Module 4685 (metadata)
+// Module 4724 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/guild-room/guild-room-bg-1.webp.js");

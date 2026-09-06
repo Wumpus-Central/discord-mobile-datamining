@@ -1,6 +1,6 @@
-// === Module 8066: metadata ===
+// === Module 8145: metadata ===
 
-// Module 8066 (metadata)
+// Module 8145 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/checkpoint/card-donut.png.js");

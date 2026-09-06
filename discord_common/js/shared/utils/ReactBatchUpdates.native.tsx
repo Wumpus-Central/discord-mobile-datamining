@@ -1,6 +1,6 @@
-// === Module 702: batchUpdates ===
+// === Module 1249: batchUpdates ===
 
-// Module 702 (batchUpdates)
+// Module 1249 (batchUpdates)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

@@ -1,13 +1,13 @@
-// === Module 16697: ? ===
+// === Module 16862: ? ===
 
-// Module 16697
-import ThemesDefault from "Themes" /* 709 */;
-import InitialPinsScreenDefault from "InitialPinsScreen" /* 16550 */;
+// Module 16862
+import ThemesDefault from "Themes" /* 576 */;
+import InitialPinsScreenDefault from "InitialPinsScreen" /* 16716 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import { SearchTabs } from "MessageEmbedTypes" /* 7633 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import { SearchTabs } from "MessageEmbedTypes" /* 7878 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -16,10 +16,10 @@ obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  let obj = channelId(1501);
+  let obj = channelId(1486);
   channelId = obj.useRoute().params.channelId;
   const items = [closure_4];
-  const stateFromStores = channelId(586).useStateFromStores(items, () => {
+  const stateFromStores = channelId(504).useStateFromStores(items, () => {
     const channel = closure_1_4.getChannel(channelId);
     let guild_id;
     if (channel != null) {
@@ -27,8 +27,8 @@ const memoResult = importAllResult.memo(() => {
     }
     return guild_id;
   });
-  const obj2 = channelId(586);
-  const channelDetailsSearchContext = channelId(12095).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const obj2 = channelId(504);
+  const channelDetailsSearchContext = channelId(12299).useChannelDetailsSearchContext(channelId, stateFromStores);
   obj = { style: callback().container, children: jsx(InitialPinsScreenDefault, obj) };
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   return <View searchContext={channelDetailsSearchContext} isFocused tab={SearchTabs.PINS} />;

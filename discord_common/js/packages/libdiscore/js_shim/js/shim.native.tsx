@@ -1,9 +1,9 @@
-// === Module 1915: isBlockedDomain ===
+// === Module 1351: isBlockedDomain ===
 
-// Module 1915 (isBlockedDomain)
+// Module 1351 (isBlockedDomain)
 import set from "set" /* 2 */;
-import LIBDISCORE_JSI from "LIBDISCORE_JSI" /* 1916 */;
-import _initLibdiscore from "_initLibdiscore" /* 1919 */;
+import LIBDISCORE_JSI from "LIBDISCORE_JSI" /* 1352 */;
+import _initLibdiscore from "_initLibdiscore" /* 1355 */;
 
 let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 

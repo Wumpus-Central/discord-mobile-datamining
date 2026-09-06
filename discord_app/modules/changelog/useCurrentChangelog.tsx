@@ -1,11 +1,11 @@
-// === Module 8012: useChangelog ===
+// === Module 8091: useChangelog ===
 
-// Module 8012 (useChangelog)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
+// Module 8091 (useChangelog)
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1995 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 4492 */;
-import { ChangelogLoadState } from "CHANGELOG_MODAL_KEY" /* 1979 */;
+import closure_4 from "_getSystemLocale" /* 2025 */;
+import closure_5 from "handleUserSettingsProtoStoreChange" /* 4574 */;
+import { ChangelogLoadState } from "CHANGELOG_MODAL_KEY" /* 2010 */;
 
 require = arg1;
 function useChangelog(changelogId, stateFromStores) {

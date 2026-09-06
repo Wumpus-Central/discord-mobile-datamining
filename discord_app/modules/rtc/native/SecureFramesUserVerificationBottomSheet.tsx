@@ -1,16 +1,16 @@
-// === Module 9884: SecureFramesUserVerificationBottomSheet ===
+// === Module 9169: SecureFramesUserVerificationBottomSheet ===
 
-// Module 9884 (SecureFramesUserVerificationBottomSheet)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 9169 (SecureFramesUserVerificationBottomSheet)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createRTCConnection" /* 4554 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9867 */;
-import { AnalyticsLocations } from "ME" /* 673 */;
+import closure_7 from "createRTCConnection" /* 4583 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9152 */;
+import { AnalyticsLocations } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);

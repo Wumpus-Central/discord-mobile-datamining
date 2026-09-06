@@ -1,12 +1,12 @@
-// === Module 8487: create ===
+// === Module 10691: create ===
 
-// Module 8487 (create)
-import _mod1306 from "module_1306" /* 1306 */;
-import defineProperty from "defineProperty" /* 1336 */;
-import create from "create" /* 8466 */;
-import create2 from "create" /* 8467 */;
+// Module 10691 (create)
+import _mod1188 from "module_1188" /* 1188 */;
+import defineProperty from "defineProperty" /* 1218 */;
+import create from "create" /* 10670 */;
+import create2 from "create" /* 10671 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1306" /* 1306 */;
+import { MessageType } from "module_1188" /* 1188 */;
 
 require = arg1;
 class ShopNagbar$Type extends MessageType {
@@ -19,7 +19,7 @@ class ShopNagbar$Type extends MessageType {
       name: "cta_action",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8468).ButtonAction, "BUTTON_ACTION_"];
+            const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(10672).ButtonAction, "BUTTON_ACTION_"];
             return items;
           }
     };
@@ -29,7 +29,7 @@ class ShopNagbar$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8467).HelpArticle;
+            return callback(10671).HelpArticle;
           }
     };
     items[5] = {
@@ -37,7 +37,7 @@ class ShopNagbar$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(8466).LocalizedString;
+            return callback(10670).LocalizedString;
           }
     };
     obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
@@ -53,7 +53,7 @@ class ShopNagbar$Type extends MessageType {
       name: "navigable_storefront_application_id",
       kind: "message",
       T() {
-            return callback(1336).UInt64Value;
+            return callback(1218).UInt64Value;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.ShopNagbar", items, T);
@@ -66,10 +66,10 @@ prototype["create"] = function create(arr) {
   let obj = { body: "", ctaLabel: "", ctaAction: 0, deeplinkSection: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1306.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1306;
+    const result = _mod1188.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1188;
   }
   return obj;
 };
@@ -147,7 +147,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = _mod1306.UnknownFieldHandler.onRead;
+              onRead = _mod1188.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -163,49 +163,49 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, writeUnknownFields) {
   if ("" !== body.body) {
-    tag.tag(1, _mod1306.WireType.LengthDelimited).string(body.body);
-    const tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
+    tag.tag(1, _mod1188.WireType.LengthDelimited).string(body.body);
+    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
   }
   if ("" !== body.ctaLabel) {
-    tag.tag(2, _mod1306.WireType.LengthDelimited).string(body.ctaLabel);
-    const tagResult1 = tag.tag(2, _mod1306.WireType.LengthDelimited);
+    tag.tag(2, _mod1188.WireType.LengthDelimited).string(body.ctaLabel);
+    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
   }
   if (0 !== body.ctaAction) {
-    tag.tag(3, _mod1306.WireType.Varint).int32(body.ctaAction);
-    const tagResult2 = tag.tag(3, _mod1306.WireType.Varint);
+    tag.tag(3, _mod1188.WireType.Varint).int32(body.ctaAction);
+    const tagResult2 = tag.tag(3, _mod1188.WireType.Varint);
   }
   if ("" !== body.deeplinkSection) {
-    tag.tag(4, _mod1306.WireType.LengthDelimited).string(body.deeplinkSection);
-    const tagResult3 = tag.tag(4, _mod1306.WireType.LengthDelimited);
+    tag.tag(4, _mod1188.WireType.LengthDelimited).string(body.deeplinkSection);
+    const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
   }
   if (body.helpArticle) {
     const HelpArticle = create2.HelpArticle;
-    const tagResult4 = tag.tag(5, _mod1306.WireType.LengthDelimited);
-    const joined = HelpArticle.internalBinaryWrite(body.helpArticle, tag.tag(5, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(body.helpArticle, tag.tag(5, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
+    const joined = HelpArticle.internalBinaryWrite(body.helpArticle, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(body.helpArticle, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (body.bodyLocalized) {
     const LocalizedString = create.LocalizedString;
-    const tagResult5 = tag.tag(6, _mod1306.WireType.LengthDelimited);
-    const joined1 = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(6, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(6, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult5 = tag.tag(6, _mod1188.WireType.LengthDelimited);
+    const joined1 = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(6, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(6, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (body.ctaLabelLocalized) {
     const LocalizedString2 = create.LocalizedString;
-    const tagResult6 = tag.tag(7, _mod1306.WireType.LengthDelimited);
-    const joined2 = LocalizedString2.internalBinaryWrite(body.ctaLabelLocalized, tag.tag(7, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(body.ctaLabelLocalized, tag.tag(7, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult6 = tag.tag(7, _mod1188.WireType.LengthDelimited);
+    const joined2 = LocalizedString2.internalBinaryWrite(body.ctaLabelLocalized, tag.tag(7, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(body.ctaLabelLocalized, tag.tag(7, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (body.navigableStorefrontApplicationId) {
     const UInt64Value = defineProperty.UInt64Value;
-    const tagResult7 = tag.tag(8, _mod1306.WireType.LengthDelimited);
-    const joined3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult7 = tag.tag(8, _mod1188.WireType.LengthDelimited);
+    const joined3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1306.UnknownFieldHandler.onWrite;
+      onWrite = _mod1188.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, body, tag);
@@ -220,7 +220,7 @@ let items = [
     name: "cta_action",
     kind: "enum",
     T() {
-      const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8468).ButtonAction, "BUTTON_ACTION_"];
+      const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(10672).ButtonAction, "BUTTON_ACTION_"];
       return items;
     }
   },
@@ -230,7 +230,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(8467).HelpArticle;
+      return callback(10671).HelpArticle;
     }
   },
   {
@@ -238,7 +238,7 @@ let items = [
     name: "body_localized",
     kind: "message",
     T() {
-      return callback(8466).LocalizedString;
+      return callback(10670).LocalizedString;
     }
   },
 ,
@@ -257,7 +257,7 @@ items[7] = {
   name: "navigable_storefront_application_id",
   kind: "message",
   T() {
-    return callback(1336).UInt64Value;
+    return callback(1218).UInt64Value;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.ShopNagbar", items, tmp, T, ShopNagbar$Type, prototype, items);

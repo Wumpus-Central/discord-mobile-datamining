@@ -1,13 +1,13 @@
-// === Module 8043: transformSearchableSelectOptions ===
+// === Module 8122: transformSearchableSelectOptions ===
 
-// Module 8043 (transformSearchableSelectOptions)
-import getChannelIcon from "getChannelIcon" /* 4982 */;
-import registerAssetDefault from "registerAsset" /* 8045 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+// Module 8122 (transformSearchableSelectOptions)
+import getChannelIcon from "getChannelIcon" /* 5028 */;
+import registerAssetDefault from "registerAsset" /* 8124 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ ChannelTypes: error, DEFAULT_ROLE_COLOR: closure_8 } = ME);
@@ -101,7 +101,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
       return null;
     }
   });
-  return mapped.filter(_require(1470).isNotNullish);
+  return mapped.filter(_require(1369).isNotNullish);
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {

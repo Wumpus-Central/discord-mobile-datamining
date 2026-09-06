@@ -1,10 +1,10 @@
-// === Module 9849: initialize ===
+// === Module 9134: initialize ===
 
-// Module 9849 (initialize)
+// Module 9134 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import set from "set" /* 9850 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import set from "set" /* 9135 */;
 
 require = arg1;
 let closure_3 = {};

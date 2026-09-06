@@ -1,9 +1,9 @@
-// === Module 7345: CollectiblesShopPerfCheckpoint ===
+// === Module 7590: CollectiblesShopPerfCheckpoint ===
 
-// Module 7345 (CollectiblesShopPerfCheckpoint)
+// Module 7590 (CollectiblesShopPerfCheckpoint)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import ME from "ME" /* 1074 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesPerfLogging.tsx");

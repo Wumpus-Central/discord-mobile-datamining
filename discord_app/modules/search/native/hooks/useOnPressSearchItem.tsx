@@ -1,15 +1,15 @@
-// === Module 16479: handleVoiceOrStageChannelConnectPress ===
+// === Module 16642: handleVoiceOrStageChannelConnectPress ===
 
-// Module 16479 (handleVoiceOrStageChannelConnectPress)
+// Module 16642 (handleVoiceOrStageChannelConnectPress)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "prototype" /* 12135 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7633 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16480 */;
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 7632 */;
-import ME from "ME" /* 673 */;
-import { StaticChannelRoute } from "set" /* 1393 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "prototype" /* 12339 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
+import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16643 */;
+import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 7877 */;
+import ME from "ME" /* 1074 */;
+import { StaticChannelRoute } from "set" /* 1964 */;
 
 const require = arg1;
 function handleVoiceOrStageChannelConnectPress() {
@@ -331,7 +331,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
 export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContext) {
   searchContext = searchContext.searchContext;
   let navigation;
-  navigation = searchContext(1498).useNavigation();
+  navigation = searchContext(1483).useNavigation();
   const items = [navigation, searchContext];
   return React.useCallback((channelId) => {
     searchContext = channelId;
@@ -358,7 +358,7 @@ export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContex
 export const useOnPressDMItem = function useOnPressDMItem(searchContext) {
   searchContext = searchContext.searchContext;
   let navigation;
-  navigation = searchContext(1498).useNavigation();
+  navigation = searchContext(1483).useNavigation();
   const items = [navigation, searchContext];
   return React.useCallback((userId) => {
     searchContext = arg1;

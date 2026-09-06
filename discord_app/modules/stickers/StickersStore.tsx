@@ -1,13 +1,13 @@
-// === Module 5453: loadSavedGuildStickers ===
+// === Module 5502: loadSavedGuildStickers ===
 
-// Module 5453 (loadSavedGuildStickers)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 5502 (loadSavedGuildStickers)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "allGuildIds" /* 1388 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "parseServerGuildSticker" /* 5454 */;
-import closure_7 from "parseServerPackSticker" /* 5455 */;
+import closure_4 from "allGuildIds" /* 1959 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "parseServerGuildSticker" /* 5503 */;
+import closure_7 from "parseServerPackSticker" /* 5504 */;
 
 const require = arg1;
 function loadSavedGuildStickers() {
@@ -54,12 +54,12 @@ function _loadSavedGuildStickers() {
             c0 = undefined;
             callback = undefined;
             if (Loaded === closure_1_8.Unloaded) {
-              obj1 = closure_1_1(1955);
+              obj1 = closure_1_1(1986);
               const databaseResult = obj1.database();
               c0 = databaseResult;
               if (null != databaseResult) {
                 Loaded = tmp28.Loaded;
-                let obj2 = closure_1_0(1975);
+                let obj2 = closure_1_0(2006);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -77,8 +77,8 @@ function _loadSavedGuildStickers() {
           if (null != callback) {
             obj2 = { type: "CACHED_STICKERS_LOADED", stickers: null };
             obj2[1] = callback;
-            callback(706).dispatch(obj2);
-            const obj7 = callback(706);
+            callback(573).dispatch(obj2);
+            const obj7 = callback(573);
           }
         }
         c3 = 3;

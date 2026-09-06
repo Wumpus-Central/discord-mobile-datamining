@@ -1,6 +1,6 @@
-// === Module 9903: _beginConsoleTransfer ===
+// === Module 9447: _beginConsoleTransfer ===
 
-// Module 9903 (_beginConsoleTransfer)
+// Module 9447 (_beginConsoleTransfer)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import set from "set" /* 2 */;
 

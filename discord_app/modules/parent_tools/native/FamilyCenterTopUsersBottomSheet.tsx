@@ -1,19 +1,19 @@
-// === Module 14741: UserRow ===
+// === Module 14897: UserRow ===
 
-// Module 14741 (UserRow)
+// Module 14897 (UserRow)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import messagesProxyDefault from "messagesProxy" /* 2368 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import Text from "Text" /* 4474 */;
-import TableRowInner from "TableRowInner" /* 5608 */;
-import ActionSheet from "ActionSheet" /* 5998 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7348 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import messagesProxyDefault from "messagesProxy" /* 2396 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
+import Text from "Text" /* 4556 */;
+import TableRowInner from "TableRowInner" /* 5605 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+import ActionSheet from "ActionSheet" /* 7198 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7593 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function UserRow(userActivity) {
@@ -27,7 +27,7 @@ function UserRow(userActivity) {
     obj = { label: null, subLabel: null, icon: null };
     obj[0] = nameFromUserDefault.getName(user);
     obj[1] = topUserOrGuildDescription;
-    obj = { size: null, user: null, guildId: "accessible" };
+    obj = { size: null, user: null, guildId: "Array" };
     obj[0] = Button.AvatarSizes.SMALL;
     obj[1] = user;
     obj[2] = callback(Button.Avatar, obj);

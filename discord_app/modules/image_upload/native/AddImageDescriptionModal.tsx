@@ -1,16 +1,16 @@
-// === Module 11102: AddDescription ===
+// === Module 11240: AddDescription ===
 
-// Module 11102 (AddDescription)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import _modDef10886 from "module_10886" /* 10886 */;
+// Module 11240 (AddDescription)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import _modDef10924 from "module_10924" /* 10924 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { DraftType } from "handleChanged" /* 4855 */;
-import closure_9 from "map" /* 4854 */;
+import { DraftType } from "handleChanged" /* 4901 */;
+import closure_9 from "map" /* 4900 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function AddDescription(id) {
@@ -123,5 +123,5 @@ export default function AddImageDescriptionModal(arg0) {
   obj[2] = function render() {
     return closure_1_10(closure_1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
-  return callback(_modDef10886, obj);
+  return callback(_modDef10924, obj);
 };

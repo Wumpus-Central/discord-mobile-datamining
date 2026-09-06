@@ -1,16 +1,16 @@
-// === Module 587: getClass ===
+// === Module 505: getClass ===
 
-// Module 587 (getClass)
+// Module 505 (getClass)
 import isTracingDefault from "isTracing" /* 10 */;
-import Storage3 from "Storage" /* 592 */;
-import throttleDefault from "throttle" /* 632 */;
+import Storage3 from "Storage" /* 510 */;
+import throttleDefault from "throttle" /* 550 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { Store } from "initialize" /* 588 */;
+import { Store } from "initialize" /* 506 */;
 import set from "set" /* 2 */;
 
 require = arg1;
 let closure_3 = ["_state", "_version"];
-let closure_6 = { _state: "Array", _version: "PX_16" };
+let closure_6 = { _state: "hash", _version: "call" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {

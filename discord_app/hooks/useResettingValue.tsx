@@ -1,7 +1,7 @@
-// === Module 13453: useResettingValue ===
+// === Module 13559: useResettingValue ===
 
-// Module 13453 (useResettingValue)
-import useInitialValueDefault from "useInitialValue" /* 5950 */;
+// Module 13559 (useResettingValue)
+import useInitialValueDefault from "useInitialValue" /* 5598 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
@@ -15,7 +15,7 @@ export default function useResettingValue(arg0, arg1) {
   const tmp = callback(callback2(arg0), 2);
   dependencyMap = tmp[1];
   const tmp2 = useInitialValueDefault(() => {
-    const timeout = new callback(4362).Timeout();
+    const timeout = new callback(4447).Timeout();
     return timeout;
   });
   callback = tmp2;

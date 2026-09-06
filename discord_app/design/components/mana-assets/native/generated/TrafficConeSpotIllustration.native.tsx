@@ -1,10 +1,10 @@
-// === Module 7107: TrafficConeSpotIllustration ===
+// === Module 6545: TrafficConeSpotIllustration ===
 
-// Module 7107 (TrafficConeSpotIllustration)
+// Module 6545 (TrafficConeSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 7108 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6546 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx");

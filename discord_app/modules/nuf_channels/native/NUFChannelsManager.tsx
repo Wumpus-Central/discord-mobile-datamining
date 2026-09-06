@@ -1,15 +1,15 @@
-// === Module 13659: _initialize ===
+// === Module 13767: _initialize ===
 
-// Module 13659 (_initialize)
-import Storage3 from "Storage" /* 592 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import initializeDefault from "initialize" /* 5495 */;
-import closure_3 from "trackCommunicationDisabled" /* 1991 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "handleConnectionOpen" /* 4299 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import { GuildFeatures } from "ME" /* 673 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
+// Module 13767 (_initialize)
+import Storage3 from "Storage" /* 510 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
+import initializeDefault from "initialize" /* 7118 */;
+import closure_3 from "trackCommunicationDisabled" /* 2021 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "handleConnectionOpen" /* 4381 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import { GuildFeatures } from "ME" /* 1074 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
 
 require = arg1;
 let c9 = "2020_02_nuf_channels";
@@ -91,23 +91,23 @@ class NUFChannelsManager extends tmp2 {
       }
     };
     applyArgumentsResult.requiresVoiceChannelsOnboard = function requiresVoiceChannelsOnboard() {
-      const Storage = applyArgumentsResult(592).Storage;
+      const Storage = applyArgumentsResult(510).Storage;
       const value = Storage.get(closure_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(4322).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(4322);
+        isNewUserResult = applyArgumentsResult(4404).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(4404);
       }
       return isNewUserResult;
     };
     applyArgumentsResult.handleVoiceChannelsOnboard = function handleVoiceChannelsOnboard() {
-      const Storage = applyArgumentsResult(592).Storage;
+      const Storage = applyArgumentsResult(510).Storage;
       const result = Storage.set(closure_10, true);
     };
     applyArgumentsResult.clear = function clear() {
-      const Storage = applyArgumentsResult(592).Storage;
+      const Storage = applyArgumentsResult(510).Storage;
       Storage.remove(closure_9);
-      const Storage2 = applyArgumentsResult(592).Storage;
+      const Storage2 = applyArgumentsResult(510).Storage;
       Storage2.remove(closure_10);
     };
     return applyArgumentsResult;
@@ -119,11 +119,11 @@ prototype["_initialize"] = function _initialize() {
   const value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
-    let tmpResult = tmp(4322);
+    let tmpResult = tmp(4404);
     isNewUserResult = tmpResult.isNewUser(currentUser.getCurrentUser());
   }
   if (isNewUserResult) {
-    tmpResult = tmp(4333);
+    tmpResult = tmp(4418);
     const rootNavigationRef = tmpResult.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const self = this;

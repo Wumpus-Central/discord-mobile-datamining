@@ -1,6 +1,6 @@
-// === Module 6392: metadata ===
+// === Module 5820: metadata ===
 
-// Module 6392 (metadata)
+// Module 5820 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BunnyIllocon-2x.png.js");

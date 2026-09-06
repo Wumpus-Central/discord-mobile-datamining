@@ -1,13 +1,13 @@
-// === Module 8010: parseEmbedTitleMarkup ===
+// === Module 8089: parseEmbedTitleMarkup ===
 
-// Module 8010 (parseEmbedTitleMarkup)
+// Module 8089 (parseEmbedTitleMarkup)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import setDefault from "set" /* 684 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
-import getInitialParserState from "getInitialParserState" /* 7642 */;
-import LHeading from "LHeading" /* 8011 */;
-import importDefaultResult from "priv" /* 1400 */;
+import ME from "ME" /* 1074 */;
+import setDefault from "set" /* 1090 */;
+import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
+import getInitialParserState from "getInitialParserState" /* 7888 */;
+import LHeading from "LHeading" /* 8090 */;
+import importDefaultResult from "priv" /* 1437 */;
 
 const MessageTypes = ME.MessageTypes;
 let obj = { max: Infinity, maxAge: 15 * setDefault.Millis.MINUTE, updateAgeOnGet: true };

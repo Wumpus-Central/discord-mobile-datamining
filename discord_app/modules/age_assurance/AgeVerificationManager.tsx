@@ -1,16 +1,16 @@
-// === Module 17146: handleMessageCreate ===
+// === Module 17312: handleMessageCreate ===
 
-// Module 17146 (handleMessageCreate)
+// Module 17312 (handleMessageCreate)
 import timestampDefault from "timestamp" /* 3 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 690 */;
-import initializeDefault from "initialize" /* 5495 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "reinjectEphemerals" /* 4736 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import { transformUser } from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import { SafetyToastType } from "SafetyToastType" /* 8689 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
+import initializeDefault from "initialize" /* 7118 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "reinjectEphemerals" /* 4781 */;
+import closure_5 from "handleConnectionOpen" /* 2011 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import { transformUser } from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import { SafetyToastType } from "SafetyToastType" /* 8399 */;
 
 require = arg1;
 function handleMessageCreate(channelId) {
@@ -79,7 +79,7 @@ let prototype = function AgeVerificationManager() {
         }
         if (tmp20) {
           (function handleLoadChannelMessages(channelId) {
-            let obj = callback(7211);
+            let obj = callback(7456);
             obj = { channelId, limit: closure_9 };
             const messages = obj.fetchMessages(obj);
           })(tmp16);
@@ -98,8 +98,8 @@ let prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              channelId(6158).preloadForumThreads(channel);
-              const obj = channelId(6158);
+              channelId(7304).preloadForumThreads(channel);
+              const obj = channelId(7304);
             }
           })(tmp16);
         }

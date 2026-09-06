@@ -1,6 +1,6 @@
-// === Module 13536: WorkSchedulerTelemetryEvent ===
+// === Module 13642: WorkSchedulerTelemetryEvent ===
 
-// Module 13536 (WorkSchedulerTelemetryEvent)
+// Module 13642 (WorkSchedulerTelemetryEvent)
 import apply from "apply" /* 12 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 

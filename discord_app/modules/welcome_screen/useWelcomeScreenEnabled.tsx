@@ -1,12 +1,12 @@
-// === Module 12429: useWelcomeScreenEnabled ===
+// === Module 12655: useWelcomeScreenEnabled ===
 
-// Module 12429 (useWelcomeScreenEnabled)
+// Module 12655 (useWelcomeScreenEnabled)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
+import ME from "ME" /* 1074 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import closure_5 from "handleConnectionOpen" /* 2011 */;
 
 const isGuildTextChannelType = createChannelRecord.isGuildTextChannelType;
 const GuildFeatures = ME.GuildFeatures;
@@ -16,7 +16,7 @@ export default function useWelcomeScreenEnabled(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   const items = [closure_3, closure_4, closure_5];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const guild = closure_1_4.getGuild(closure_1);
     let hasItem;
     if (guild != null) {

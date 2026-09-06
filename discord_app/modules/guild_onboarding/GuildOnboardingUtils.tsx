@@ -1,20 +1,20 @@
-// === Module 5483: isChattableChannel ===
+// === Module 7106: isChattableChannel ===
 
-// Module 5483 (isChattableChannel)
-import shallowEqualDefault from "shallowEqual" /* 640 */;
-import hasFlagAll from "hasFlag" /* 1398 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import useCanChannelBeDefault from "useCanChannelBeDefault" /* 5478 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "set" /* 5234 */;
-import closure_6 from "comparator" /* 1981 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1981 */;
-import closure_8 from "createGuildRecordFromRust" /* 1908 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
-import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5477 */;
-import ME from "ME" /* 673 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
+// Module 7106 (isChattableChannel)
+import shallowEqualDefault from "shallowEqual" /* 558 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import hasFlagAll from "hasFlag" /* 1384 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import useCanChannelBeDefault from "useCanChannelBeDefault" /* 7102 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "set" /* 5281 */;
+import closure_6 from "comparator" /* 2012 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 2012 */;
+import closure_8 from "createGuildRecordFromRust" /* 1979 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4199 */;
+import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 7101 */;
+import ME from "ME" /* 1074 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
 
 require = arg1;
 function isChattableChannel(guild_id) {
@@ -102,7 +102,7 @@ export const ONBOARDING_EPOCH = date;
 export const useGuildOnboardingSettingsAvailable = function useGuildOnboardingSettingsAvailable(arg0) {
   const _require = arg0;
   const items = [closure_8, closure_9];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const guild = closure_1_8.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
@@ -234,8 +234,8 @@ export const getChannelCoverageForOnboarding = function getChannelCoverageForOnb
 export const useChannelCoverageForOnboarding = function useChannelCoverageForOnboarding(arg0, arr, arr2) {
   let set = arg0;
   const items = [closure_6];
-  const obj = set(586);
-  const mapped = set(586).useStateFromStores(items, () => closure_1_6.getChannels(set))[closure_7].map((channel) => channel.channel);
+  const obj = set(504);
+  const mapped = set(504).useStateFromStores(items, () => closure_1_6.getChannels(set))[closure_7].map((channel) => channel.channel);
   set = undefined;
   set = new Set();
   let item = arr.forEach((options) => {
@@ -310,7 +310,7 @@ export { isChattableChannel };
 export const useIsChattableChannel = function useIsChattableChannel(arg0) {
   const _require = arg0;
   const items = [closure_4];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const channel = closure_1_4.getChannel(callback);
     let isNotNullishResult = callback(closure_1_3[13]).isNotNullish(channel);
     if (isNotNullishResult) {
@@ -433,7 +433,7 @@ export const useChattableDefaultChannels = function useChattableDefaultChannels(
   closure_1 = arg1;
   let items = [closure_6];
   let items1 = [arg0, arg1];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const items = [];
     const items1 = [];
     const iter = closure_1_6.getChannels(callback)[closure_1_7][Symbol.iterator]();

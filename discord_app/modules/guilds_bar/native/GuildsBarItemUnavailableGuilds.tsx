@@ -1,12 +1,12 @@
-// === Module 16187: ? ===
+// === Module 16349: ? ===
 
-// Module 16187
-import ThemesDefault from "Themes" /* 709 */;
-import registerAssetDefault from "registerAsset" /* 16178 */;
+// Module 16349
+import ThemesDefault from "Themes" /* 576 */;
+import registerAssetDefault from "registerAsset" /* 16340 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleConnectionOpen" /* 4856 */;
+import closure_5 from "handleConnectionOpen" /* 4902 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -19,16 +19,16 @@ obj[1] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarItemUnavailableGuilds() {
   const tmp = callback();
-  let obj = stateFromStores(586);
+  let obj = stateFromStores(504);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => obj.totalUnavailableGuilds);
   let tmp5 = null;
   if (stateFromStores > 0) {
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    let intl = tmp2(1233).intl;
+    let intl = tmp2(1114).intl;
     obj = { count: null };
     obj[0] = stateFromStores;
-    obj[1] = intl.formatToPlainString(tmp2(1233).t["MEpX+2"], obj);
+    obj[1] = intl.formatToPlainString(tmp2(1114).t["MEpX+2"], obj);
     obj[2] = function onPress() {
       let obj = closure_1_1(closure_1_2[6]);
       obj = { title: null, body: null };

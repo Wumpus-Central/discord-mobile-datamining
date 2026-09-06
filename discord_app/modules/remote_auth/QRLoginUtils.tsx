@@ -1,8 +1,8 @@
-// === Module 13826: findRemoteAuthFingerprint ===
+// === Module 13848: findRemoteAuthFingerprint ===
 
-// Module 13826 (findRemoteAuthFingerprint)
+// Module 13848 (findRemoteAuthFingerprint)
 import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
 
 const re2 = /^\/ra\/([\w-]+)$/;
 const result = set.fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");

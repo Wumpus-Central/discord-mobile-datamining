@@ -1,13 +1,13 @@
-// === Module 16078: ScreenAlignedThemedGradient ===
+// === Module 16052: ScreenAlignedThemedGradient ===
 
-// Module 16078 (ScreenAlignedThemedGradient)
+// Module 16052 (ScreenAlignedThemedGradient)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5079 */;
-import useActiveThemeType from "useActiveThemeType" /* 7629 */;
-import tDefault from "t" /* 10955 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
+import useActiveThemeType from "useActiveThemeType" /* 7874 */;
+import tDefault from "t" /* 10993 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
@@ -21,7 +21,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1) => {
   obj[0] = obj;
   return obj;
 });
-let closure_7 = { code: "function ScreenAlignedThemedGradientTsx1(){const{roundToNearestPixel,offsetX,panelSpringTranslateX,offsetY}=this.__closure;return{transform:[{translateX:roundToNearestPixel(-offsetX-panelSpringTranslateX.get())},{translateY:roundToNearestPixel(-offsetY)}]};}" };
+let closure_7 = { code: "function ScreenAlignedThemedGradientTsx1(){const{roundToNearestPixel,offsetX,panelTranslateX,offsetY}=this.__closure;return{transform:[{translateX:roundToNearestPixel(-offsetX-panelTranslateX.get())},{translateY:roundToNearestPixel(-offsetY)}]};}" };
 const result = set.fileFinishedImporting("modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx");
 
 export default function ScreenAlignedThemedGradient(arg0) {
@@ -34,26 +34,26 @@ export default function ScreenAlignedThemedGradient(arg0) {
 export const ScreenAlignedThemedGradientSliding = function ScreenAlignedThemedGradientSliding(offsetX) {
   offsetX = offsetX.offsetX;
   const offsetY = offsetX.offsetY;
-  let panelSpringTranslateX;
-  let obj = offsetX(panelSpringTranslateX[4]);
+  let panelTranslateX;
+  let obj = offsetX(panelTranslateX[4]);
   const isClientThemeOrCustomThemeActive = obj.useIsClientThemeOrCustomThemeActive();
-  panelSpringTranslateX = offsetX(panelSpringTranslateX[6]).useHomeDrawerState().panelSpringTranslateX;
-  const obj2 = offsetX(panelSpringTranslateX[6]);
+  panelTranslateX = offsetX(panelTranslateX[6]).useHomeDrawerState().panelTranslateX;
+  const obj2 = offsetX(panelTranslateX[6]);
   const fn = function o() {
     let obj = { transform: null };
-    obj = { translateX: offsetY(panelSpringTranslateX[3])(-offsetX - panelSpringTranslateX.get()) };
+    obj = { translateX: offsetY(panelTranslateX[3])(-offsetX - panelTranslateX.get()) };
     const items = [obj, ];
-    obj = { translateY: offsetY(panelSpringTranslateX[3])(-offsetY) };
+    obj = { translateY: offsetY(panelTranslateX[3])(-offsetY) };
     items[1] = obj;
     obj[0] = items;
     return obj;
   };
-  obj = { roundToNearestPixel: offsetY(panelSpringTranslateX[3]), offsetX, panelSpringTranslateX, offsetY };
+  obj = { roundToNearestPixel: offsetY(panelTranslateX[3]), offsetX, panelTranslateX, offsetY };
   fn.__closure = obj;
-  fn.__workletHash = 9541788107322;
+  fn.__workletHash = 14168713340122;
   fn.__initData = closure_7;
-  const animatedStyle = offsetX(panelSpringTranslateX[7]).useAnimatedStyle(fn);
-  obj = { pointerEvents: "none", style: items, children: jsx(offsetY(panelSpringTranslateX[5]), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive }) };
+  const animatedStyle = offsetX(panelTranslateX[7]).useAnimatedStyle(fn);
+  obj = { pointerEvents: "none", style: items, children: jsx(offsetY(panelTranslateX[5]), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive }) };
   items = [closure_3.absoluteFill, animatedStyle];
-  return jsx(offsetY(panelSpringTranslateX[7]).View, { pointerEvents: "none", style: items, children: jsx(offsetY(panelSpringTranslateX[5]), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive }) });
+  return jsx(offsetY(panelTranslateX[7]).View, { pointerEvents: "none", style: items, children: jsx(offsetY(panelTranslateX[5]), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive }) });
 };

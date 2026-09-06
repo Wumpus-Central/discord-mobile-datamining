@@ -1,11 +1,11 @@
-// === Module 7477: getOrRefreshAdSession ===
+// === Module 7721: getOrRefreshAdSession ===
 
-// Module 7477 (getOrRefreshAdSession)
-import v1 from "v1" /* 511 */;
-import setDefault from "set" /* 684 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import _modDef1205 from "module_1205" /* 1205 */;
-import result2 from "result" /* 7227 */;
+// Module 7721 (getOrRefreshAdSession)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import setDefault from "set" /* 1090 */;
+import _modDef1232 from "module_1232" /* 1232 */;
+import v1 from "v1" /* 1256 */;
+import result2 from "result" /* 7471 */;
 
 require = arg1;
 let closure_3 = 12 * setDefault.Millis.HOUR;
@@ -22,7 +22,7 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
     const _Date = Date;
     const timestamp1 = Date.now();
     if (timestamp1 < obj.createdAtTimestamp) {
-      obj = _modDef1205;
+      obj = _modDef1232;
       obj = { category: "ad", message: null };
       const _HermesInternal = HermesInternal;
       obj[1] = "future facing timestamp Date.now(): " + timestamp1 + ", initialized timestamp: " + tmp11.createdAtTimestamp;
@@ -54,7 +54,7 @@ export function getCurrentAdSession() {
 export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp) {
   const timestamp = Date.now();
   if (timestamp < createdAtTimestamp.createdAtTimestamp) {
-    let obj = _modDef1205;
+    let obj = _modDef1232;
     obj = { category: "ad", message: null };
     const _HermesInternal = HermesInternal;
     obj[1] = "future facing timestamp Date.now(): " + timestamp + ", initialized timestamp: " + createdAtTimestamp.createdAtTimestamp;

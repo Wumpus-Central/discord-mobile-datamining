@@ -1,9 +1,9 @@
-// === Module 8392: FormRadioGroup ===
+// === Module 8609: FormRadioGroup ===
 
-// Module 8392 (FormRadioGroup)
-import context from "context" /* 5607 */;
-import context2 from "context" /* 7704 */;
-import FormSectionDefault from "FormSection" /* 8385 */;
+// Module 8609 (FormRadioGroup)
+import context from "context" /* 5685 */;
+import context2 from "context" /* 5686 */;
+import FormSectionDefault from "FormSection" /* 8602 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -16,7 +16,7 @@ export default function FormRadioGroup(arg0) {
   ({ title, children, hint } = arg0);
   ({ hasIcons, accessibilityLabel, value, icon } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  if (React.useContext(context.RedesignCompatContext)) {
+  if (React.useContext(context2.RedesignCompatContext)) {
     let obj = { style: null, children: null };
     obj[0] = { marginBottom: 24, marginHorizontal: 12 };
     obj = { children: null };
@@ -26,7 +26,7 @@ export default function FormRadioGroup(arg0) {
     obj1[2] = title;
     obj1[3] = accessibilityLabel;
     obj1[4] = children;
-    obj[0] = callback(context2.TableRadioGroup, obj1);
+    obj[0] = callback(context.TableRadioGroup, obj1);
     const items = [callback(View, obj), ];
     let tmp13Result = null;
     if (null != hint) {

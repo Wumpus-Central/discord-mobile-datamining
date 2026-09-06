@@ -1,14 +1,14 @@
-// === Module 12766: useCanPurchaseFrames ===
+// === Module 8830: useCanPurchaseFrames ===
 
-// Module 12766 (useCanPurchaseFrames)
-import initialize from "initialize" /* 586 */;
-import create from "create" /* 1929 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import apexExperiment from "apexExperiment" /* 8561 */;
-import apexExperiment2 from "apexExperiment" /* 12767 */;
-import apexExperimentDefault from "apexExperiment" /* 12767 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+// Module 8830 (useCanPurchaseFrames)
+import initialize from "initialize" /* 504 */;
+import create from "create" /* 1379 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1885 */;
+import apexExperiment from "apexExperiment" /* 8212 */;
+import apexExperiment2 from "apexExperiment" /* 8831 */;
+import apexExperimentDefault from "apexExperiment" /* 8831 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCanPurchaseFrames.tsx");

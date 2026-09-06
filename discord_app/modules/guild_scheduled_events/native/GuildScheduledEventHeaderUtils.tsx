@@ -1,12 +1,12 @@
-// === Module 9778: getGuildScheduledEventHeaderProps ===
+// === Module 9782: getGuildScheduledEventHeaderProps ===
 
-// Module 9778 (getGuildScheduledEventHeaderProps)
+// Module 9782 (getGuildScheduledEventHeaderProps)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
-import getRRule from "getRRule" /* 9651 */;
-import registerAssetDefault from "registerAsset" /* 9779 */;
-import scheduledEventSort from "scheduledEventSort" /* 7281 */;
+import ThemesDefault from "Themes" /* 576 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
+import getRRule from "getRRule" /* 9665 */;
+import registerAssetDefault from "registerAsset" /* 9783 */;
+import scheduledEventSort from "scheduledEventSort" /* 7526 */;
 
 ({ isGuildEventEnded: c3, isGuildScheduledEventActive: c4 } = scheduledEventSort);
 let closure_5 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventEntityTypes;
@@ -30,54 +30,54 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   const ICON_SUBTLE = ThemesDefault.colors.ICON_SUBTLE;
   let tmp8Result = registerAssetDefault;
   if (tmp4) {
-    const intl4 = tmp(1233).intl;
-    let stringResult = intl4.string(tmp(1233).t["X2K3/4"]);
+    const intl4 = tmp(1114).intl;
+    let stringResult = intl4.string(tmp(1114).t["X2K3/4"]);
     if (isStage) {
-      tmp8Result = tmp8(8768);
+      tmp8Result = tmp8(8622);
     }
     let entity_type;
     if (event != null) {
       entity_type = event.entity_type;
     }
     if (entity_type === constants.EXTERNAL) {
-      const intl5 = tmp(1233).intl;
-      stringResult = intl5.string(tmp(1233).t.TxqPQR);
+      const intl5 = tmp(1114).intl;
+      stringResult = intl5.string(tmp(1114).t.TxqPQR);
     }
-    let ICON_FEEDBACK_CRITICAL = tmp8(709).colors.ICON_FEEDBACK_POSITIVE;
+    let ICON_FEEDBACK_CRITICAL = tmp8(576).colors.ICON_FEEDBACK_POSITIVE;
     let stringResult1 = stringResult;
   } else if (tmp7) {
-    tmp8Result = tmp8(9780);
+    tmp8Result = tmp8(9784);
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result = tmp8(9780);
-    const intl3 = tmp(1233).intl;
-    stringResult1 = intl3.string(tmp(1233).t.WINqKV);
+    tmp8Result = tmp8(9784);
+    const intl3 = tmp(1114).intl;
+    stringResult1 = intl3.string(tmp(1114).t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else {
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
     if (upcomingEvent) {
       if (diffMinutes > 0) {
-        const intl2 = tmp(1233).intl;
+        const intl2 = tmp(1114).intl;
         obj = { minutes: null };
         obj[0] = diffMinutes;
-        let formatToPlainStringResult = intl2.formatToPlainString(tmp(1233).t.PQlCWk, obj);
+        let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.PQlCWk, obj);
       } else {
-        const intl = tmp(1233).intl;
-        formatToPlainStringResult = intl.string(tmp(1233).t.WINqKV);
+        const intl = tmp(1114).intl;
+        formatToPlainStringResult = intl.string(tmp(1114).t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result = tmp8(9780);
+      tmp8Result = tmp8(9784);
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result1 = tmp8(9780);
+      const tmp8Result1 = tmp8(9784);
     }
   }
   if (isCanceled) {
-    ICON_FEEDBACK_CRITICAL = tmp8(709).colors.ICON_FEEDBACK_CRITICAL;
+    ICON_FEEDBACK_CRITICAL = tmp8(576).colors.ICON_FEEDBACK_CRITICAL;
   }
   obj = { icon: tmp8Result, text: stringResult1, color: null, shouldChangeTextColor: null };
-  const internal = tmp8(709).internal;
+  const internal = tmp8(576).internal;
   obj[2] = internal.resolveSemanticColor(theme, ICON_FEEDBACK_CRITICAL);
   let tmp17 = !tmp7;
   if (!tmp7) {

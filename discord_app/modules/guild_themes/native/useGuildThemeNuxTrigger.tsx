@@ -1,10 +1,10 @@
-// === Module 15996: useGuildThemeNuxTrigger ===
+// === Module 16160: useGuildThemeNuxTrigger ===
 
-// Module 15996 (useGuildThemeNuxTrigger)
-import initialize from "initialize" /* 586 */;
-import useGuildThemeNuxTriggerDefault from "useGuildThemeNuxTrigger" /* 16002 */;
+// Module 16160 (useGuildThemeNuxTrigger)
+import initialize from "initialize" /* 504 */;
+import useGuildThemeNuxTriggerDefault from "useGuildThemeNuxTrigger" /* 16166 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "setContent" /* 4186 */;
+import closure_4 from "setContent" /* 4251 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");

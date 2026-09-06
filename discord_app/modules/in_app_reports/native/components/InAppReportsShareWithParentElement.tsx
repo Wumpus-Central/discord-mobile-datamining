@@ -1,7 +1,7 @@
-// === Module 13011: parents ===
+// === Module 9052: parents ===
 
-// Module 13011 (parents)
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 13010 */;
+// Module 9052 (parents)
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 9051 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -18,7 +18,7 @@ export default function _default(parents) {
   if (0 === parents.length) {
     return null;
   } else {
-    const intl3 = parents(1233).intl;
+    const intl3 = parents(1114).intl;
     let obj = { count: null, parent1: null, parent2: null, parent3: null };
     obj[0] = parents.length;
     obj[1] = parents[0].username;
@@ -33,9 +33,9 @@ export default function _default(parents) {
     }
     obj[3] = username1;
     obj = { title: null, disabledTitle: null, icon: null, description: null, disabled: null, onPress: null };
-    obj[0] = intl3.formatToPlainString(parents(1233).t.HqyWeO, obj);
-    const formatToPlainStringResult = intl3.formatToPlainString(parents(1233).t.HqyWeO, obj);
-    let intl = tmp15(1233).intl;
+    obj[0] = intl3.formatToPlainString(parents(1114).t.HqyWeO, obj);
+    const formatToPlainStringResult = intl3.formatToPlainString(parents(1114).t.HqyWeO, obj);
+    let intl = tmp15(1114).intl;
     obj = { count: null, parent1: null, parent2: null, parent3: null };
     obj[0] = parents.length;
     obj[1] = parents[0].username;
@@ -49,10 +49,10 @@ export default function _default(parents) {
       username3 = tmp12.username;
     }
     obj[3] = username3;
-    obj[1] = intl.formatToPlainString(parents(1233).t.BlAMme, obj);
-    obj[2] = jsx(parents(13012).ShareIcon, {});
-    const intl2 = tmp15(1233).intl;
-    obj[3] = intl2.string(parents(1233).t["5l/hlt"]);
+    obj[1] = intl.formatToPlainString(parents(1114).t.BlAMme, obj);
+    obj[2] = jsx(parents(9053).ShareIcon, {});
+    const intl2 = tmp15(1114).intl;
+    obj[3] = intl2.string(parents(1114).t["5l/hlt"]);
     obj[4] = tmp[0];
     obj[5] = tmp2;
     return jsx(InAppReportsUpsellsTableRowDefault, { count: null, parent1: null, parent2: null, parent3: null });

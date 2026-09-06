@@ -1,6 +1,6 @@
-// === Module 9820: metadata ===
+// === Module 9103: metadata ===
 
-// Module 9820 (metadata)
+// Module 9103 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/movie.png.js");

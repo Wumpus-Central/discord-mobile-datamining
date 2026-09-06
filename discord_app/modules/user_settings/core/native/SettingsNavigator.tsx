@@ -1,25 +1,25 @@
-// === Module 16738: SettingHeaderBadge ===
+// === Module 16903: SettingHeaderBadge ===
 
-// Module 16738 (SettingHeaderBadge)
-import ThemesDefault from "Themes" /* 709 */;
-import Text from "Text" /* 4474 */;
-import SettingsBadgeType from "SettingsBadgeType" /* 15248 */;
+// Module 16903 (SettingHeaderBadge)
+import ThemesDefault from "Themes" /* 576 */;
+import Text from "Text" /* 4556 */;
+import SettingsBadgeType from "SettingsBadgeType" /* 15406 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1995 */;
-import closure_7 from "zustandStore" /* 14580 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "_getSystemLocale" /* 2025 */;
+import closure_7 from "zustandStore" /* 14691 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7834 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function SettingHeaderBadge(badge) {
   if (badge.badge.badgeType === SettingsBadgeType.SettingsBadgeType.BETA) {
     const obj = { size: null };
-    obj[0] = tmp(1296).BetaSizes.SMALL;
-    return callback(tmp(1296).BetaTag, obj);
+    obj[0] = tmp(1178).BetaSizes.SMALL;
+    return callback(tmp(1178).BetaTag, obj);
   }
 }
 function LeftAlignedHeaderTitle(children) {

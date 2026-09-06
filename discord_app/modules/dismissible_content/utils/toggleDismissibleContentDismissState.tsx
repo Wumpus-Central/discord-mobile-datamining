@@ -1,20 +1,20 @@
-// === Module 15458: useToggleDismissibleContentDismissState ===
+// === Module 15616: useToggleDismissibleContentDismissState ===
 
-// Module 15458 (useToggleDismissibleContentDismissState)
+// Module 15616 (useToggleDismissibleContentDismissState)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4299 */;
+import closure_4 from "handleConnectionOpen" /* 4381 */;
 
 noop.useCallback;
 let result = set.fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
 
 export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER) {
   const _require = APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => guildId.getGuildId());
-  obj = { cooldownDurationMs: stateFromStores(684).Millis.WEEK, guildId: stateFromStores };
-  let result = _require(4298).useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
+  obj = { cooldownDurationMs: stateFromStores(1090).Millis.WEEK, guildId: stateFromStores };
+  let result = _require(4380).useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
   dependencyMap = result;
   const items1 = [APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, stateFromStores, result];
   obj = {

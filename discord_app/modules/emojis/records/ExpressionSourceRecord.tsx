@@ -1,12 +1,12 @@
-// === Module 6014: getEmojiSourceData ===
+// === Module 5585: getEmojiSourceData ===
 
-// Module 6014 (getEmojiSourceData)
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1425 */;
-import areSetsEqual from "areSetsEqual" /* 1428 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import toJSDefault from "toJS" /* 1935 */;
+// Module 5585 (getEmojiSourceData)
+import toJSDefault from "toJS" /* 1386 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
+import areSetsEqual from "areSetsEqual" /* 1974 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function getEmojiSourceData() {
@@ -105,7 +105,7 @@ prototype["getIconSource"] = function getIconSource(arg0, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  return self(1430).getAnimatableSourceWithFallback(flag, (canAnimate) => {
+  return self(1396).getAnimatableSourceWithFallback(flag, (canAnimate) => {
     obj = self(closure_1_2[4]);
     obj = { id: self.id, size: closure_0, icon: self.icon, canAnimate };
     return obj.getGuildIconSource(obj);

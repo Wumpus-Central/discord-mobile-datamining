@@ -1,9 +1,9 @@
-// === Module 7240: LIMITED_GUILD_MEMBER_THRESHOLD ===
+// === Module 7485: LIMITED_GUILD_MEMBER_THRESHOLD ===
 
-// Module 7240 (LIMITED_GUILD_MEMBER_THRESHOLD)
-import closure_0 from "ensureGuildLoaded" /* 1386 */;
-import closure_1 from "handleInviteData" /* 4398 */;
-import { ChannelTypes } from "ME" /* 673 */;
+// Module 7485 (LIMITED_GUILD_MEMBER_THRESHOLD)
+import closure_0 from "ensureGuildLoaded" /* 1957 */;
+import closure_1 from "handleInviteData" /* 4480 */;
+import { ChannelTypes } from "ME" /* 1074 */;
 
 const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
 

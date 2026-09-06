@@ -1,21 +1,21 @@
-// === Module 12297: useGuildPowerupRollbackNotificationConfig ===
+// === Module 12497: useGuildPowerupRollbackNotificationConfig ===
 
-// Module 12297 (useGuildPowerupRollbackNotificationConfig)
-import messagesProxyDefault from "messagesProxy" /* 2400 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12300 */;
-import closure_3 from "calculateAppliedBoosts" /* 4364 */;
+// Module 12497 (useGuildPowerupRollbackNotificationConfig)
+import messagesProxyDefault from "messagesProxy" /* 2428 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12500 */;
+import closure_3 from "calculateAppliedBoosts" /* 4449 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");
 
 export default function useGuildPowerupRollbackNotificationConfig(guildId, location) {
   const _require = guildId;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4368).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4453).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   if (tmp4 != null) {
     const storeRemovalDate = tmp4.storeRemovalDate;
@@ -37,12 +37,12 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
         tmp5 = null;
         if (null != cost) {
           obj = { dismissibleContent: null, title: null, description: null };
-          obj[0] = tmp(1372).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION;
-          const intl = tmp(1233).intl;
+          obj[0] = tmp(1943).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION;
+          const intl = tmp(1114).intl;
           obj = { dateString: null };
           obj[0] = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
           obj[1] = intl.formatToPlainString(messagesProxyDefault["6e2ry1"], obj);
-          const intl2 = tmp(1233).intl;
+          const intl2 = tmp(1114).intl;
           obj1 = { startDate: null, endDate: null, perkName: null, boostCount: null };
           obj1[0] = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
           obj1[1] = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);

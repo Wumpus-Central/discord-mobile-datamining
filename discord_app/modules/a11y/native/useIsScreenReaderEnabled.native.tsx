@@ -1,9 +1,9 @@
-// === Module 4916: SCREEN_READER_ENABLED_GETTER ===
+// === Module 4962: SCREEN_READER_ENABLED_GETTER ===
 
-// Module 4916 (SCREEN_READER_ENABLED_GETTER)
+// Module 4962 (SCREEN_READER_ENABLED_GETTER)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import keys from "keys" /* 641 */;
+import keys from "keys" /* 560 */;
 
 const AccessibilityInfo = get_ActivityIndicator.AccessibilityInfo;
 function SCREEN_READER_ENABLED_GETTER(screenReaderEnabled) {
@@ -42,7 +42,7 @@ let closure_5 = keys.create((arg0) => {
     }));
   });
   const listener = AccessibilityInfo.addEventListener("screenReaderChanged", updateScreenReaderEnabled);
-  let Storage = _require(592).Storage;
+  let Storage = _require(510).Storage;
   screenReaderEnabled = Storage.get(screenReaderEnabled);
   if (screenReaderEnabled == null) {
     screenReaderEnabled = false;

@@ -1,12 +1,12 @@
-// === Module 9763: EditGuildEventDetails ===
+// === Module 9767: EditGuildEventDetails ===
 
-// Module 9763 (EditGuildEventDetails)
+// Module 9767 (EditGuildEventDetails)
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 7281 */;
-import { GuildScheduledEventEntityTypes as closure_7 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
+import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 7526 */;
+import { GuildScheduledEventEntityTypes as closure_7 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
@@ -76,8 +76,8 @@ export default function EditGuildEventDetails(guildEvent) {
       (function assertGuildEventDetailsValid(guildEvent) {
         if (0 === guildEvent.name.length) {
           const _Error = Error;
-          const intl = callback(1233).intl;
-          error = new Error(intl.string(callback(1233).t.GoV0uR));
+          const intl = callback(1114).intl;
+          error = new Error(intl.string(callback(1114).t.GoV0uR));
           throw error;
         }
       })(guildEvent);

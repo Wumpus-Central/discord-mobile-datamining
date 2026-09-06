@@ -1,11 +1,11 @@
-// === Module 15819: ExternalLink ===
+// === Module 15981: ExternalLink ===
 
-// Module 15819 (ExternalLink)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 15981 (ExternalLink)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ Linking: c4, ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
@@ -17,9 +17,9 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     str = "space-between";
   }
   container[3] = str;
-  const space = tmp(709).space;
+  const space = tmp(576).space;
   container[4] = arg0 ? space.PX_24 : space.PX_16;
-  const space2 = tmp(709).space;
+  const space2 = tmp(576).space;
   container[5] = arg0 ? space2.PX_24 : space2.PX_16;
   return { container, description: { textAlign: "center", marginTop: 8 } };
 });

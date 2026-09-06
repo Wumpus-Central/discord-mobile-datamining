@@ -1,11 +1,11 @@
-// === Module 16428: vibegrationLocation ===
+// === Module 16590: vibegrationLocation ===
 
-// Module 16428 (vibegrationLocation)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import vibegrationsAppIdFromTopic from "vibegrationsAppIdFromTopic" /* 6103 */;
-import closure_3 from "addApplication" /* 4519 */;
-import closure_4 from "isProjectOwner" /* 16425 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 16590 (vibegrationLocation)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import vibegrationsAppIdFromTopic from "vibegrationsAppIdFromTopic" /* 7247 */;
+import closure_3 from "addApplication" /* 4788 */;
+import closure_4 from "isProjectOwner" /* 16587 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 function vibegrationLocation(closure_0, isPreview) {

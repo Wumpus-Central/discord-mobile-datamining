@@ -1,10 +1,10 @@
-// === Module 6353: AvatarWumpusExample ===
+// === Module 5781: AvatarWumpusExample ===
 
-// Module 6353 (AvatarWumpusExample)
+// Module 5781 (AvatarWumpusExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6354 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5782 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarWumpusExample.native.tsx");

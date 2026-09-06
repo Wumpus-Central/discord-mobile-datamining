@@ -1,9 +1,9 @@
-// === Module 4413: useTheme ===
+// === Module 4495: useTheme ===
 
-// Module 4413 (useTheme)
+// Module 4495 (useTheme)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
+import ME from "ME" /* 1074 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 
 function useTheme() {
   return AccessibilityAnnouncer.useThemeContext().theme;

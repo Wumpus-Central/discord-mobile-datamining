@@ -1,6 +1,6 @@
-// === Module 12293: getExpiringGuildEntitlements ===
+// === Module 12493: getExpiringGuildEntitlements ===
 
-// Module 12293 (getExpiringGuildEntitlements)
+// Module 12493 (getExpiringGuildEntitlements)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/utils/getExpiringGuildEntitlements.tsx");

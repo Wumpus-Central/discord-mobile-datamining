@@ -1,9 +1,9 @@
-// === Module 7505: DeviceState ===
+// === Module 7749: DeviceState ===
 
-// Module 7505 (DeviceState)
+// Module 7749 (DeviceState)
 import set from "set" /* 2 */;
-import _getDeviceState from "_getDeviceState" /* 7506 */;
-import ThermalState from "ThermalState" /* 7507 */;
+import _getDeviceState from "_getDeviceState" /* 7750 */;
+import ThermalState from "ThermalState" /* 7751 */;
 
 const result = set.fileFinishedImporting("modules/device/DeviceState.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 1472: awaitOnline ===
+// === Module 1461: awaitOnline ===
 
-// Module 1472 (awaitOnline)
+// Module 1461 (awaitOnline)
 import set from "set" /* 2 */;
-import notifyListeners from "notifyListeners" /* 1473 */;
+import notifyListeners from "notifyListeners" /* 1462 */;
 
 let closure_2 = [];
 let c3 = false;

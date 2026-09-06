@@ -1,14 +1,14 @@
-// === Module 10682: getUserWishlistKey ===
+// === Module 8776: getUserWishlistKey ===
 
-// Module 10682 (getUserWishlistKey)
+// Module 8776 (getUserWishlistKey)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { useEffect } from "noop" /* 19 */;
-import closure_6 from "createUserWidgetFromServer" /* 7376 */;
-import closure_7 from "fetchFingerprint" /* 1215 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import closure_9 from "get" /* 10683 */;
-import { getWishlistSkuIds } from "fromServer" /* 10684 */;
+import closure_6 from "createUserWidgetFromServer" /* 7621 */;
+import closure_7 from "fetchFingerprint" /* 502 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import closure_9 from "get" /* 8777 */;
+import { getWishlistSkuIds } from "fromServer" /* 8778 */;
 
 const require = arg1;
 function getUserWishlistKey(arg0, arg1) {
@@ -241,7 +241,7 @@ export const useIsSkuInWishlist = function useIsSkuInWishlist(stateFromStores, s
   const _require = stateFromStores;
   closure_1 = skuId;
   const items = [closure_9];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     let hasSkuIdResult = null != closure_0;
     if (hasSkuIdResult) {
       hasSkuIdResult = closure_1_9.hasSkuId(tmp, closure_1);

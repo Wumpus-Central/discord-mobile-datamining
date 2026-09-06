@@ -1,17 +1,17 @@
-// === Module 9948: compareRowsByMatchScore ===
+// === Module 9833: compareRowsByMatchScore ===
 
-// Module 9948 (compareRowsByMatchScore)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 5464 */;
-import isGuildMember from "isGuildMember" /* 9937 */;
-import closure_9 from "handleConnectionOpen" /* 9949 */;
-import closure_10 from "recomputeAffinities" /* 7414 */;
-import closure_11 from "ensureGuildLoaded" /* 1386 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_13 from "markAllUserIdListsStale" /* 4130 */;
-import ME from "ME" /* 673 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 7492 */;
+// Module 9833 (compareRowsByMatchScore)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 5518 */;
+import isGuildMember from "isGuildMember" /* 9822 */;
+import closure_9 from "handleConnectionOpen" /* 9834 */;
+import closure_10 from "recomputeAffinities" /* 7659 */;
+import closure_11 from "ensureGuildLoaded" /* 1957 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_13 from "markAllUserIdListsStale" /* 4209 */;
+import ME from "ME" /* 1074 */;
+import { InviteTargetTypes } from "InviteSendStates" /* 7736 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -45,7 +45,7 @@ function _computeRows(query) {
   if (!tmp) {
     id = id.id;
   }
-  const mostRecentDMedUser = set1(9937).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9822).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
     isBlockedOrIgnoredResult = closure_13.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -62,14 +62,14 @@ function _computeRows(query) {
   if (closure_8 === InviteTargetTypes.EMBEDDED_APPLICATION) {
     channelHistory = channelHistory.getChannelHistory();
     const mapped = channelHistory.map((arg0) => channel.getChannel(arg0));
-    const found = mapped.filter(set1(1470).isNotNullish);
+    const found = mapped.filter(set1(1369).isNotNullish);
     const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
     const found2 = found1.filter((arg0) => closure_12.can(constants2.SEND_MESSAGES, arg0));
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9937);
-  return set1(9937).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_8 });
+  const obj2 = set1(9822);
+  return set1(9822).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_8 });
 }
 ({ ChannelTypes: closure_14, Permissions: closure_15 } = ME);
 let set = new Set();

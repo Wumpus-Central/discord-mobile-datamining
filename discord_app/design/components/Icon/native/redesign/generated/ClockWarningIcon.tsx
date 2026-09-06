@@ -1,10 +1,10 @@
-// === Module 11654: ClockWarningIcon ===
+// === Module 11853: ClockWarningIcon ===
 
-// Module 11654 (ClockWarningIcon)
+// Module 11853 (ClockWarningIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 11655 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 11854 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

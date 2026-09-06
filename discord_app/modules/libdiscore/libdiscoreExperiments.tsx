@@ -1,11 +1,11 @@
-// === Module 1912: items ===
+// === Module 1983: items ===
 
-// Module 1912 (items)
+// Module 1983 (items)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import ensureValidMode2 from "ensureValidMode" /* 1913 */;
-import isBlockedDomain from "isBlockedDomain" /* 1915 */;
+import isBlockedDomain from "isBlockedDomain" /* 1351 */;
+import ensureValidMode2 from "ensureValidMode" /* 1984 */;
 
 const ensureValidMode = ensureValidMode2.ensureValidMode;
 let closure_4 = new timestampDefault("libdiscoreExperiments");
@@ -37,9 +37,9 @@ prototype["getCachedConfig"] = function getCachedConfig() {
   const self = this;
   if (this.cachedConfig === closure_6) {
     if (obj.isLibdiscoreInitialized()) {
-      const experimentCacher = tmp(1915).getExperimentCacher();
+      const experimentCacher = tmp(1351).getExperimentCacher();
       self.cachedConfig = experimentCacher.getConfig(self.id);
-      const tmpResult = tmp(1915);
+      const tmpResult = tmp(1351);
     } else {
       self.cachedConfig = undefined;
     }

@@ -1,9 +1,9 @@
-// === Module 14357: activityInstanceConnectedParticipants ===
+// === Module 14464: activityInstanceConnectedParticipants ===
 
-// Module 14357 (activityInstanceConnectedParticipants)
-import closure_3 from "participantFromServer" /* 1385 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4380 */;
+// Module 14464 (activityInstanceConnectedParticipants)
+import closure_3 from "participantFromServer" /* 1956 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
 
 const require = arg1;
 let obj = { [RPC_SCOPE_CONFIG.RPC_SCOPE_CONFIG.ANY]: items };
@@ -20,12 +20,12 @@ obj = {
         let obj = { participants: null };
         obj[0] = [];
       } else {
-        callback = callback(4110).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = callback(4110);
-        callback2 = callback(4110).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        callback = callback(4189).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+        const obj4 = callback(4189);
+        callback2 = callback(4189).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
         obj = { participants: null };
         const _Array = Array;
-        const obj5 = callback(4110);
+        const obj5 = callback(4189);
         obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           const user = closure_1_4.getUser(arg0);
           if (null != user) {
@@ -36,7 +36,7 @@ obj = {
             obj.nickname = nickname;
             return obj;
           }
-        }).filter(callback(1470).isNotNullish);
+        }).filter(callback(1369).isNotNullish);
         const arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           const user = closure_1_4.getUser(arg0);
           if (null != user) {
@@ -65,12 +65,12 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
     obj[0] = [];
     return obj;
   } else {
-    _require = _require(4110).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-    const obj2 = _require(4110);
-    const embeddedActivityLocationChannelId = _require(4110).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+    _require = _require(4189).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+    const obj2 = _require(4189);
+    const embeddedActivityLocationChannelId = _require(4189).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
     obj = { participants: null };
     const _Array = Array;
-    const obj3 = _require(4110);
+    const obj3 = _require(4189);
     obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
       const user = closure_1_4.getUser(arg0);
       if (null != user) {
@@ -81,7 +81,7 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
         obj.nickname = nickname;
         return obj;
       }
-    }).filter(_require(1470).isNotNullish);
+    }).filter(_require(1369).isNotNullish);
     return obj;
   }
 };

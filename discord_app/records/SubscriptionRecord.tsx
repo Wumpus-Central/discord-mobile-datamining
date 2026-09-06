@@ -1,12 +1,12 @@
-// === Module 4146: createSubscriptionItemFromServer ===
+// === Module 4225: createSubscriptionItemFromServer ===
 
-// Module 4146 (createSubscriptionItemFromServer)
-import toJSDefault from "toJS" /* 1935 */;
-import closure_3 from "createFromServer" /* 4147 */;
-import closure_4 from "createFromServer" /* 4148 */;
-import ME from "ME" /* 673 */;
-import set from "set" /* 4150 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
+// Module 4225 (createSubscriptionItemFromServer)
+import toJSDefault from "toJS" /* 1386 */;
+import closure_3 from "createFromServer" /* 4226 */;
+import closure_4 from "createFromServer" /* 4227 */;
+import ME from "ME" /* 1074 */;
+import set from "set" /* 4229 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
 
 const require = arg1;
 function createSubscriptionItemFromServer(id) {
@@ -223,14 +223,14 @@ Object.defineProperty(prototype, "isOnPlatformMatchingExternalPaymentGateway", {
   get: function isOnPlatformMatchingExternalPaymentGateway() {
     let isPurchasedViaApple = this.isPurchasedViaApple;
     if (isPurchasedViaApple) {
-      isPurchasedViaApple = require(1234) /* set */.isIOS();
-      const obj = require(1234) /* set */;
+      isPurchasedViaApple = require(1115) /* set */.isIOS();
+      const obj = require(1115) /* set */;
     }
     if (!isPurchasedViaApple) {
       let isPurchasedViaGoogle = this.isPurchasedViaGoogle;
       if (isPurchasedViaGoogle) {
-        isPurchasedViaGoogle = require(4152) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
-        const obj2 = require(4152) /* isPremiumGiftingSupported */;
+        isPurchasedViaGoogle = require(4231) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
+        const obj2 = require(4231) /* isPremiumGiftingSupported */;
       }
       isPurchasedViaApple = isPurchasedViaGoogle;
     }

@@ -1,10 +1,10 @@
-// === Module 8582: urlUserId ===
+// === Module 8197: urlUserId ===
 
-// Module 8582 (urlUserId)
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 8197 (urlUserId)
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 function urlUserId(arg0) {
@@ -112,12 +112,12 @@ function _fetchBadgeDirectory() {
                   closure_5 = "attempt:" + str3;
                   const _Date3 = Date;
                   c6 = Date.now();
-                  let obj10 = obj1(706);
+                  let obj10 = obj1(573);
                   const obj3 = { type: "BADGE_DIRECTORY_FETCH_START", userId: null };
                   obj3[1] = dependencyMap;
                   obj10.dispatch(obj3);
                   c6 = 1;
-                  const HTTP = callback(527).HTTP;
+                  const HTTP = callback(1272).HTTP;
                   const obj4 = { url: null, rejectWithError: true };
                   obj4[0] = closure_5.USER_BADGES(body(dependencyMap));
                   body = 3;
@@ -131,18 +131,18 @@ function _fetchBadgeDirectory() {
               if (2 === tmp7) {
                 c6 = 0;
                 closure_9 = closure_5;
-                obj5 = obj1(7357);
+                obj5 = obj1(7602);
                 const obj6 = { name: null, tags: null };
-                obj6[0] = callback(7362).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
+                obj6[0] = callback(7607).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
                 const items = [authStore, "result:failure", "catalog_state:unknown", closure_5];
                 obj6[1] = items;
                 const _Date2 = Date;
                 obj5.distribution(obj6, Date.now() - c6);
-                let obj7 = obj1(706);
+                let obj7 = obj1(573);
                 obj7 = { type: "BADGE_DIRECTORY_FETCH_FAILURE", userId: null };
                 obj7[1] = dependencyMap;
                 obj7.dispatch(obj7);
-                let obj9 = obj1(1205);
+                let obj9 = obj1(1232);
                 obj9.captureException(closure_9);
               } else if (arg0 === 1) {
                 c8 = 3;
@@ -157,13 +157,13 @@ function _fetchBadgeDirectory() {
                 items1[2] = "catalog_state:" + str;
                 items1[3] = closure_5;
                 c8 = items1;
-                obj = obj1(7357);
+                obj = obj1(7602);
                 const obj8 = { name: null, tags: null };
-                obj8[0] = callback(7362).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
+                obj8[0] = callback(7607).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
                 obj8[1] = c8;
                 const _Date = Date;
                 obj.distribution(obj8, Date.now() - c6);
-                obj2 = obj1(706);
+                obj2 = obj1(573);
                 obj9 = { type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: null, badges: null };
                 obj9[1] = dependencyMap;
                 obj9[2] = body.badges;
@@ -267,14 +267,14 @@ function _fetchBadge() {
             if (1 === tmp7) {
               c6 = 0;
               dependencyMap = closure_5;
-              let obj3 = lib(1205);
+              let obj3 = lib(1232);
               obj3.captureException(dependencyMap);
             } else if (arg0 === 1) {
               c8 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
               lib = arg1;
-              obj = lib(706);
+              obj = lib(573);
               obj3 = { type: "BADGE_FETCH_SUCCESS", userId: null, badge: null };
               obj3[1] = callback;
               obj3[2] = lib.body;

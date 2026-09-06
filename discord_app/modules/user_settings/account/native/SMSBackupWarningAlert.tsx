@@ -1,10 +1,10 @@
-// === Module 7812: SMSBackupWarningAlert ===
+// === Module 7077: SMSBackupWarningAlert ===
 
-// Module 7812 (SMSBackupWarningAlert)
+// Module 7077 (SMSBackupWarningAlert)
 import noopAll from "noop" /* 19 */;
-import componentDidMountDefault from "componentDidMount" /* 4948 */;
+import componentDidMountDefault from "componentDidMount" /* 4994 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -16,10 +16,10 @@ export default function SMSBackupWarningAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
   const tmp = callback3();
   let obj = { cancelText: null, confirmText: null, onConfirm: null, onCancel: null, children: null };
-  const intl = onConfirm(1233).intl;
-  obj[0] = intl.string(onConfirm(1233).t["ETE/oC"]);
-  const intl2 = onConfirm(1233).intl;
-  obj[1] = intl2.string(onConfirm(1233).t.N86XcP);
+  const intl = onConfirm(1114).intl;
+  obj[0] = intl.string(onConfirm(1114).t["ETE/oC"]);
+  const intl2 = onConfirm(1114).intl;
+  obj[1] = intl2.string(onConfirm(1114).t.N86XcP);
   obj[2] = function onConfirm() {
     onConfirm();
     closure_1_1(closure_1_2[5]).close();
@@ -28,13 +28,13 @@ export default function SMSBackupWarningAlert(onConfirm) {
     return callback(table[5]).close();
   };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl3 = onConfirm(1233).intl;
-  obj[4] = intl3.string(onConfirm(1233).t.Ed4XQB);
-  const items = [callback(onConfirm(4474).Text, obj), ];
+  const intl3 = onConfirm(1114).intl;
+  obj[4] = intl3.string(onConfirm(1114).t.Ed4XQB);
+  const items = [callback(onConfirm(4556).Text, obj), ];
   obj = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl4 = onConfirm(1233).intl;
-  obj[3] = intl4.string(onConfirm(1233).t.EDU2Eg);
-  items[1] = callback(onConfirm(4474).Text, obj);
+  const intl4 = onConfirm(1114).intl;
+  obj[3] = intl4.string(onConfirm(1114).t.EDU2Eg);
+  items[1] = callback(onConfirm(4556).Text, obj);
   obj[4] = items;
   return callback2(componentDidMountDefault, obj);
 };

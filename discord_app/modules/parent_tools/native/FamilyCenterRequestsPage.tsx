@@ -1,23 +1,23 @@
-// === Module 14756: FamilyCenterMaxConnectionsBlurb ===
+// === Module 14912: FamilyCenterMaxConnectionsBlurb ===
 
-// Module 14756 (FamilyCenterMaxConnectionsBlurb)
+// Module 14912 (FamilyCenterMaxConnectionsBlurb)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import messagesProxyDefault from "messagesProxy" /* 2368 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8791 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8792 */;
-import set from "set" /* 11251 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11720 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14717 */;
-import FamilyCenterLinkingBannerParentContentDefault from "FamilyCenterLinkingBannerParentContent" /* 14757 */;
-import FamilyCenterAcceptedLinkRowDefault from "FamilyCenterAcceptedLinkRow" /* 14759 */;
-import FamilyCenterPendingLinkRowDefault from "FamilyCenterPendingLinkRow" /* 14768 */;
+import ThemesDefault from "Themes" /* 576 */;
+import messagesProxyDefault from "messagesProxy" /* 2396 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8645 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
+import set from "set" /* 11393 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11919 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14873 */;
+import FamilyCenterLinkingBannerParentContentDefault from "FamilyCenterLinkingBannerParentContent" /* 14913 */;
+import FamilyCenterAcceptedLinkRowDefault from "FamilyCenterAcceptedLinkRow" /* 14915 */;
+import FamilyCenterPendingLinkRowDefault from "FamilyCenterPendingLinkRow" /* 14924 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7293 */;
-import { THROUGHLINE_URL } from "LOCATION_CONTEXT_MOBILE" /* 11224 */;
+import items from "items" /* 7538 */;
+import { THROUGHLINE_URL } from "LOCATION_CONTEXT_MOBILE" /* 11363 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function FamilyCenterMaxConnectionsBlurb() {
@@ -26,16 +26,16 @@ function FamilyCenterMaxConnectionsBlurb() {
   const tmp = callback3();
   const tmp5 = importDefault;
   useAgeSpecificText;
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   intl.formatToPlainString(messagesProxyDefault["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? closure_5 : closure_6 });
-  const intl2 = tmp2(1233).intl;
+  const intl2 = tmp2(1114).intl;
   let tmp10 = null;
   if (hasMaxConnections) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { variant: "text-xxs/medium", color: "text-muted", children: null };
     obj[2] = tmp9;
-    obj[1] = callback(tmp2(4474).Text, obj);
+    obj[1] = callback(tmp2(4556).Text, obj);
     tmp10 = callback(closure_3, obj);
   }
   return tmp10;
@@ -46,12 +46,12 @@ function FamilyCenterHelpLineInfo() {
   const shouldShowHelplineLink = obj.useShouldShowHelplineLink();
   set;
   if (shouldShowHelplineLink) {
-    const intl2 = tmp2(1233).intl;
+    const intl2 = tmp2(1114).intl;
     let formatResult = intl2.format(messagesProxyDefault["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (tmp6) {
-      const intl = tmp2(1233).intl;
+      const intl = tmp2(1114).intl;
       obj = { helpLink: null };
       obj[0] = THROUGHLINE_URL;
       formatResult = intl.format(messagesProxyDefault["6tsC8u"], obj);
@@ -63,12 +63,12 @@ function FamilyCenterHelpLineInfo() {
     obj[0] = tmp.container;
     obj1 = { style: null, variant: "heading-sm/semibold", children: null };
     obj1[0] = tmp.supportHeader;
-    const intl3 = tmp2(1233).intl;
+    const intl3 = tmp2(1114).intl;
     obj1[2] = intl3.string(messagesProxyDefault["7/tVhv"]);
-    const items = [callback(tmp2(4474).Text, obj1), ];
+    const items = [callback(tmp2(4556).Text, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj2[2] = formatResult;
-    items[1] = callback(tmp2(4474).Text, obj2);
+    items[1] = callback(tmp2(4556).Text, obj2);
     obj[1] = items;
     tmp11 = callback2(closure_3, obj);
   }

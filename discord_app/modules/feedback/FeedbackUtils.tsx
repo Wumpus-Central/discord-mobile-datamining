@@ -1,13 +1,13 @@
-// === Module 11442: shuffleProblems ===
+// === Module 11629: shuffleProblems ===
 
-// Module 11442 (shuffleProblems)
+// Module 11629 (shuffleProblems)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import ME from "ME" /* 673 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2630 */;
-import FeedbackRating from "FeedbackRating" /* 11439 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import messagesProxyDefault from "messagesProxy" /* 2658 */;
+import FeedbackRating from "FeedbackRating" /* 11626 */;
 
 ({ ConnectionFeedbackOption: c3, AudioFeedbackOption: c4, VideoFeedbackOption: c5, VideoBackgroundFeedbackOption: closure_6, StreamFeedbackOption: error, FeedbackOptionVariant: closure_8, FeedbackType: c9, MAX_REPRESENTABLE_DATE: c10, PeopleFeedbackOption: unpackModuleId } = FeedbackRating);
 const AnalyticEvents = ME.AnalyticEvents;
@@ -28,7 +28,7 @@ export const processOptOut = function processOptOut(feedbackType) {
   let obj = expandEventPropertiesDefault;
   obj = { feedback_type: table[feedbackType], opted_out_until: closure_10 };
   obj.track(AnalyticEvents.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, obj);
-  const InAppFeedbackStates = feedbackType(4166).InAppFeedbackStates;
+  const InAppFeedbackStates = feedbackType(1935).InAppFeedbackStates;
   InAppFeedbackStates.updateSetting((arg0) => {
     let obj = {};
     const merged = Object.assign(arg0);

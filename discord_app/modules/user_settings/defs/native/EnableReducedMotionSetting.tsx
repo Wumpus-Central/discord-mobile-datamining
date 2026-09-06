@@ -1,11 +1,11 @@
-// === Module 15257: toggle ===
+// === Module 15415: toggle ===
 
-// Module 15257 (toggle)
-import initialize from "initialize" /* 586 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import setFontSize from "setFontSize" /* 14331 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import createToggle from "createToggle" /* 11292 */;
+// Module 15415 (toggle)
+import initialize from "initialize" /* 504 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import setFontSize from "setFontSize" /* 14437 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {

@@ -1,9 +1,9 @@
-// === Module 17007: trackVoicePanelTabOpened ===
+// === Module 17171: trackVoicePanelTabOpened ===
 
-// Module 17007 (trackVoicePanelTabOpened)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import closure_2 from "generateOldThreadCutoff" /* 4493 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 17171 (trackVoicePanelTabOpened)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import closure_2 from "generateOldThreadCutoff" /* 4575 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 

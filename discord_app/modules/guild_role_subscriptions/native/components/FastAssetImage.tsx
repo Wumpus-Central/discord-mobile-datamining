@@ -1,6 +1,6 @@
-// === Module 15076: FastAssetImage ===
+// === Module 15236: FastAssetImage ===
 
-// Module 15076 (FastAssetImage)
+// Module 15236 (FastAssetImage)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

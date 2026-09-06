@@ -1,11 +1,11 @@
-// === Module 7319: fromServer ===
+// === Module 7564: fromServer ===
 
-// Module 7319 (fromServer)
+// Module 7564 (fromServer)
 import set from "set" /* 2 */;
-import fromServer from "fromServer" /* 7320 */;
-import fromServer2 from "fromServer" /* 7322 */;
-import fromServer3 from "fromServer" /* 7323 */;
-import closure_5 from "fromServer" /* 7324 */;
+import fromServer from "fromServer" /* 7565 */;
+import fromServer2 from "fromServer" /* 7567 */;
+import fromServer3 from "fromServer" /* 7568 */;
+import closure_5 from "fromServer" /* 7569 */;
 
 let closure_2 = fromServer.CollectiblesMarketingBadgeRecord;
 let closure_3 = fromServer2.CollectiblesMarketingBannerRecord;

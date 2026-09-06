@@ -1,10 +1,10 @@
-// === Module 6391: BunnyIllocon ===
+// === Module 5819: BunnyIllocon ===
 
-// Module 6391 (BunnyIllocon)
+// Module 5819 (BunnyIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6392 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5820 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BunnyIllocon.native.tsx");

@@ -1,9 +1,9 @@
-// === Module 16123: GUILD_ITEM_SIZE ===
+// === Module 16285: GUILD_ITEM_SIZE ===
 
-// Module 16123 (GUILD_ITEM_SIZE)
+// Module 16285 (GUILD_ITEM_SIZE)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 4197 */;
+import ThemesDefault from "Themes" /* 576 */;
+import map from "map" /* 4262 */;
 
 const result = set.fileFinishedImporting("modules/guilds_bar/native/GuildsBarConstants.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 5095: requestPermissionCore ===
+// === Module 5142: requestPermissionCore ===
 
-// Module 5095 (requestPermissionCore)
+// Module 5142 (requestPermissionCore)
 import set from "set" /* 2 */;
-import requestAuthorization from "requestAuthorization" /* 5096 */;
+import requestAuthorization from "requestAuthorization" /* 5143 */;
 
 const NativePermissionBaseUtils = requestAuthorization.NativePermissionBaseUtils;
 class NativePermissionDesktopNullUtils extends NativePermissionBaseUtils {

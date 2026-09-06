@@ -1,12 +1,12 @@
-// === Module 16050: GuildMemberDashChannelRow ===
+// === Module 16214: GuildMemberDashChannelRow ===
 
-// Module 16050 (GuildMemberDashChannelRow)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 16214 (GuildMemberDashChannelRow)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 673 */;
-import { StaticChannelRoute } from "set" /* 1393 */;
+import ME from "ME" /* 1074 */;
+import { StaticChannelRoute } from "set" /* 1964 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ GuildFeatures: c4, Routes: c5 } = ME);
@@ -26,7 +26,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = callback();
   id = guild.id;
-  let obj = id(16051);
+  let obj = id(16215);
   let num = obj.useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
@@ -47,26 +47,26 @@ export default function GuildMemberDashChannelRow(arg0) {
   callback = React.useCallback(() => {
     id(closure_1_2[10]).transitionTo(closure_1_5.CHANNEL(id, closure_1_6.MEMBER_SAFETY));
   }, items1);
-  const ChannelModes = tmp2(12177).ChannelModes;
+  const ChannelModes = tmp2(12379).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
   obj = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
-  const intl = tmp2(1233).intl;
-  obj[3] = intl.string(id(1233).t["9Oq93m"]);
+  const intl = tmp2(1114).intl;
+  obj[3] = intl.string(id(1114).t["9Oq93m"]);
   obj[4] = { selected };
   obj[5] = tmp7;
   obj = { name: null, mode: null };
-  const intl2 = tmp2(1233).intl;
-  obj[0] = intl2.string(id(1233).t["9Oq93m"]);
+  const intl2 = tmp2(1114).intl;
+  obj[0] = intl2.string(id(1114).t["9Oq93m"]);
   obj[1] = tmp7;
-  obj[6] = jsx(id(12177).BaseChannelName, { name: null, mode: null });
-  const tmp9 = hasItem(12177);
-  obj[7] = jsx(id(12177).BaseChannelIcon, { mode: tmp7, IconComponent: id(5043).GroupIcon });
+  obj[6] = jsx(id(12379).BaseChannelName, { name: null, mode: null });
+  const tmp9 = hasItem(12379);
+  obj[7] = jsx(id(12379).BaseChannelIcon, { mode: tmp7, IconComponent: id(5089).GroupIcon });
   let tmp8Result = null;
   if (num > 0) {
     const obj2 = { style: null, textStyle: null, value: null };
     ({ badge: obj5[0], badgeText: obj5[1] } = tmp);
     obj2[2] = num;
-    tmp8Result = tmp8(tmp2(1296).Badge, obj2);
+    tmp8Result = tmp8(tmp2(1178).Badge, obj2);
   }
   obj[8] = tmp8Result;
   return <tmp9 name={null} mode={null} />;

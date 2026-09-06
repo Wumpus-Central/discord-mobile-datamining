@@ -1,11 +1,11 @@
-// === Module 12236: useRequiredLinkedLobbyApplicationAuthorization ===
+// === Module 12436: useRequiredLinkedLobbyApplicationAuthorization ===
 
-// Module 12236 (useRequiredLinkedLobbyApplicationAuthorization)
+// Module 12436 (useRequiredLinkedLobbyApplicationAuthorization)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import recomputeFromAppTokens from "recomputeFromAppTokens" /* 5484 */;
-import closure_4 from "addApplication" /* 4519 */;
-import closure_5 from "recomputeFromAppTokens" /* 5484 */;
+import recomputeFromAppTokens from "recomputeFromAppTokens" /* 7107 */;
+import closure_4 from "addApplication" /* 4788 */;
+import closure_5 from "recomputeFromAppTokens" /* 7107 */;
 
 const useEffect = noop.useEffect;
 const FetchState = recomputeFromAppTokens.FetchState;

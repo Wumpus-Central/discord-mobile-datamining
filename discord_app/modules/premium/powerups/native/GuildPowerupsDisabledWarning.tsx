@@ -1,13 +1,13 @@
-// === Module 12345: GuildPowerupsDisabledWarning ===
+// === Module 12545: GuildPowerupsDisabledWarning ===
 
-// Module 12345 (GuildPowerupsDisabledWarning)
+// Module 12545 (GuildPowerupsDisabledWarning)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Text from "Text" /* 4474 */;
-import WarningIcon from "WarningIcon" /* 8755 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Text from "Text" /* 4556 */;
+import WarningIcon from "WarningIcon" /* 8588 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

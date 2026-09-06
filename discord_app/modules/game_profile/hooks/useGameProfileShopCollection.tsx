@@ -1,9 +1,9 @@
-// === Module 12863: useGameProfileShopCollection ===
+// === Module 8872: useGameProfileShopCollection ===
 
-// Module 12863 (useGameProfileShopCollection)
+// Module 8872 (useGameProfileShopCollection)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "getSimilarGames" /* 8827 */;
+import closure_3 from "getSimilarGames" /* 8682 */;
 
 const useEffect = noop.useEffect;
 let result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileShopCollection.tsx");

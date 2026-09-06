@@ -1,10 +1,10 @@
-// === Module 7149: WumpusWishlistingSpotIllustration ===
+// === Module 6589: WumpusWishlistingSpotIllustration ===
 
-// Module 7149 (WumpusWishlistingSpotIllustration)
+// Module 6589 (WumpusWishlistingSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 7150 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6590 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WumpusWishlistingSpotIllustration.native.tsx");

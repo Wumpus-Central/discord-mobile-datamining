@@ -1,10 +1,10 @@
-// === Module 14537: UserProfilePremiumUpsellCard ===
+// === Module 14644: UserProfilePremiumUpsellCard ===
 
-// Module 14537 (UserProfilePremiumUpsellCard)
+// Module 14644 (UserProfilePremiumUpsellCard)
 import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ AnalyticsObjects: c4, AnalyticsPages: c5, AnalyticsSections: closure_6, UserSettingsSections: error } = ME);
@@ -18,15 +18,15 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   isTryItOut = isTryItOut.isTryItOut;
   let navigation;
   let analyticsLocations;
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   const tmp = analyticsLocations;
-  const tmp3 = callback(analyticsLocations(1627)().bottom);
-  let nitroTrialCtaOverride = navigation(7201).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  const obj2 = navigation(7201);
-  const tmp8 = analyticsLocations(5982);
+  const tmp3 = callback(analyticsLocations(1611)().bottom);
+  let nitroTrialCtaOverride = navigation(7446).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  const obj2 = navigation(7446);
+  const tmp8 = analyticsLocations(7182);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
-  analyticsLocations = analyticsLocations(5962)(items).analyticsLocations;
+  analyticsLocations = analyticsLocations(7162)(items).analyticsLocations;
   const items1 = [navigation];
   callback = React.useCallback(() => {
     analyticsLocations(closure_1_2[9]).setSection(closure_1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
@@ -40,30 +40,30 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     analyticsLocations(closure_1_2[10])(obj);
   }, items2);
   obj = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
-  const tmp7 = analyticsLocations(5962);
+  const tmp7 = analyticsLocations(7162);
   if (isTryItOut) {
     if (nitroTrialCtaOverride == null) {
-      const intl2 = tmp4(1233).intl;
-      nitroTrialCtaOverride = intl2.string(tmp4(1233).t.pj0XBN);
+      const intl2 = tmp4(1114).intl;
+      nitroTrialCtaOverride = intl2.string(tmp4(1114).t.pj0XBN);
     }
     let stringResult = nitroTrialCtaOverride;
   } else {
-    const intl = tmp4(1233).intl;
-    stringResult = intl.string(tmp4(1233).t.PxUx8e);
+    const intl = tmp4(1114).intl;
+    stringResult = intl.string(tmp4(1114).t.PxUx8e);
   }
   obj[1] = stringResult;
   if (isTryItOut) {
     callback = callback1;
   }
   obj[3] = callback;
-  const intl3 = tmp4(1233).intl;
+  const intl3 = tmp4(1114).intl;
   const string = intl3.string;
-  const t = tmp4(1233).t;
+  const t = tmp4(1114).t;
   if (isTryItOut) {
     let stringResult1 = string(t.ZFR9LF);
   } else {
     stringResult1 = string(t.Tii53U);
   }
-  obj[4] = jsx(navigation(4474).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(14515), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  obj[4] = jsx(navigation(4556).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
+  return jsx(tmp(14622), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
 };

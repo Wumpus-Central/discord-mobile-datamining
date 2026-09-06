@@ -1,12 +1,12 @@
-// === Module 5465: getGuildNameSuggestion ===
+// === Module 5519: getGuildNameSuggestion ===
 
-// Module 5465 (getGuildNameSuggestion)
-import setDefault from "set" /* 684 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import nameFromUserAll from "nameFromUser" /* 4322 */;
-import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import importDefaultResult from "priv" /* 1400 */;
+// Module 5519 (getGuildNameSuggestion)
+import setDefault from "set" /* 1090 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import nameFromUserAll from "nameFromUser" /* 4404 */;
+import closure_5 from "createGuildRecordFromRust" /* 1979 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import importDefaultResult from "priv" /* 1437 */;
 
 require = arg1;
 function getGuildNameSuggestion(truncateUsername) {

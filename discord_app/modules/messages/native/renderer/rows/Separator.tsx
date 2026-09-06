@@ -1,11 +1,11 @@
-// === Module 13148: generateSeparatorRowData ===
+// === Module 13248: generateSeparatorRowData ===
 
-// Module 13148 (generateSeparatorRowData)
+// Module 13248 (generateSeparatorRowData)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import Changeset from "Changeset" /* 7854 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import ThemesDefault from "Themes" /* 576 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import Changeset from "Changeset" /* 7933 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 ({ RowType: obj1, SeparatorType: c3 } = Changeset);
 let closure_4 = createCacheKey.createNativeStyleProperties({ dayColor: ThemesDefault.colors.TEXT_MUTED, unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT, unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER, summaryColor: ThemesDefault.colors.TEXT_BRAND });

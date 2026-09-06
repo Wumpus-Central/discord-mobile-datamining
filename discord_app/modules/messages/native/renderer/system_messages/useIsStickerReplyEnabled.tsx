@@ -1,11 +1,11 @@
-// === Module 7918: computeIsStickerReplyEnabled ===
+// === Module 7997: computeIsStickerReplyEnabled ===
 
-// Module 7918 (computeIsStickerReplyEnabled)
-import useCanStartPrivateThread from "useCanStartPrivateThread" /* 6125 */;
-import closure_2 from "trackCommunicationDisabled" /* 1991 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { Permissions } from "ME" /* 673 */;
+// Module 7997 (computeIsStickerReplyEnabled)
+import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
+import closure_2 from "trackCommunicationDisabled" /* 2021 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import { Permissions } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");

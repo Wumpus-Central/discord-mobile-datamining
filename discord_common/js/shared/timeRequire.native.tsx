@@ -1,6 +1,6 @@
-// === Module 7247: timeRequire ===
+// === Module 7492: timeRequire ===
 
-// Module 7247 (timeRequire)
+// Module 7492 (timeRequire)
 import set from "set" /* 2 */;
 import isTracingDefault from "isTracing" /* 10 */;
 

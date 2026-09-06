@@ -1,16 +1,16 @@
-// === Module 11000: GiftingBadgeLevelUpProgress ===
+// === Module 11032: GiftingBadgeLevelUpProgress ===
 
-// Module 11000 (GiftingBadgeLevelUpProgress)
+// Module 11032 (GiftingBadgeLevelUpProgress)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2464 */;
-import Text from "Text" /* 4474 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10747 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 2492 */;
+import Text from "Text" /* 4556 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8577 */;
+import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8192 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;

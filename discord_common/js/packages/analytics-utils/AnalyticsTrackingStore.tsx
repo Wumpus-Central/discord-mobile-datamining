@@ -1,10 +1,10 @@
-// === Module 501: logger ===
+// === Module 1251: logger ===
 
-// Module 501 (logger)
+// Module 1251 (logger)
 import set from "set" /* 2 */;
 import log from "log" /* 4 */;
-import generate from "generate" /* 507 */;
-import sum from "sum" /* 502 */;
+import generate from "generate" /* 1252 */;
+import sum from "sum" /* 1085 */;
 
 ({ TelemetryEndpoints: c3, TelemetryEvents: c4 } = sum);
 let c5 = "x-science-test";
@@ -417,7 +417,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
     }
     return false;
   };
-  const Store = getSessionId(586).Store;
+  const Store = getSessionId(504).Store;
   class AnalyticsTrackingStore extends Store {
     constructor() {
       applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

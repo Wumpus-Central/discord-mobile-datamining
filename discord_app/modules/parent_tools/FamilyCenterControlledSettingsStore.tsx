@@ -1,10 +1,10 @@
-// === Module 7295: getSettings ===
+// === Module 7540: getSettings ===
 
-// Module 7295 (getSettings)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import create from "create" /* 1305 */;
-import b64ToProto from "b64ToProto" /* 1341 */;
+// Module 7540 (getSettings)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import create from "create" /* 1187 */;
+import b64ToProto from "b64ToProto" /* 1223 */;
 
 require = arg1;
 let c2 = false;

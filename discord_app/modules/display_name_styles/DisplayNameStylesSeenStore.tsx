@@ -1,8 +1,8 @@
-// === Module 15180: set ===
+// === Module 15340: set ===
 
-// Module 15180 (set)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 15340 (set)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 import set from "set" /* 2 */;
 
 let obj = { seenFontIds: null, seenEffectIds: null, newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };

@@ -1,12 +1,12 @@
-// === Module 1937: set ===
+// === Module 1388: set ===
 
-// Module 1937 (set)
-import int2hslRaw from "int2hslRaw" /* 685 */;
-import nDefault from "n" /* 686 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1939 */;
-import DisplayNameFont from "DisplayNameFont" /* 1940 */;
+// Module 1388 (set)
+import nDefault from "n" /* 672 */;
+import int2hslRaw from "int2hslRaw" /* 1091 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
+import DisplayNameFont from "DisplayNameFont" /* 1391 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import items3 from "items3" /* 1938 */;
+import items3 from "items3" /* 1389 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -19,9 +19,9 @@ let result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameS
 export const getEffectColorCount = function getEffectColorCount(effectId) {
   if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
     return 2;
-  } else if (tmp(1939).DisplayNameEffect.GUMMY === effectId) {
+  } else if (tmp(1390).DisplayNameEffect.GUMMY === effectId) {
     return 4;
-  } else if (tmp(1939).DisplayNameEffect.PRISM === effectId) {
+  } else if (tmp(1390).DisplayNameEffect.PRISM === effectId) {
     return 5;
   } else {
     return 1;
@@ -58,8 +58,8 @@ export const wrapHue = function wrapHue(h) {
 export const GUMMY_STRIPES = items1;
 export const buildGummyColors = function buildGummyColors(closure_1_11) {
   const tmp = nDefault;
-  let obj = _require(685);
-  const tmp3 = callback(tmp(_require(685).int2hex(closure_1_11)).hsl(), 3);
+  let obj = _require(1091);
+  const tmp3 = callback(tmp(_require(1091).int2hex(closure_1_11)).hsl(), 3);
   const first = tmp3[0];
   let num = 0;
   if (!Number.isNaN(first)) {
@@ -93,8 +93,8 @@ export const rebuildGummySourceColor = function rebuildGummySourceColor(selected
     const result = (callback(items, 1)[0] - items1[0].hueShift) % 360;
     const tmp12Result = tmp12(int2hslRaw.int2hex(first));
     const tmp14 = callback;
-    const tmp10Result = tmp10(686);
-    return tmp10(686).hsl((result + 360) % 360, closure_5, closure_4).num();
+    const tmp10Result = tmp10(672);
+    return tmp10(672).hsl((result + 360) % 360, closure_5, closure_4).num();
   }
 };
 export const hueToGummyColor = function hueToGummyColor(sharedValue) {

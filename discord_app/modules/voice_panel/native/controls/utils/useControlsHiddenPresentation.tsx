@@ -1,8 +1,8 @@
-// === Module 17014: useControlsHiddenPresentation ===
+// === Module 17178: useControlsHiddenPresentation ===
 
-// Module 17014 (useControlsHiddenPresentation)
+// Module 17178 (useControlsHiddenPresentation)
 import set from "set" /* 2 */;
-import VoicePanelModes from "VoicePanelModes" /* 12069 */;
+import VoicePanelModes from "VoicePanelModes" /* 12273 */;
 
 VoicePanelModes = VoicePanelModes.VoicePanelModes;
 let obj = {};
@@ -21,7 +21,7 @@ export default function useControlsHiddenPresentation(mode, wrapperSpecs) {
   }
   const cleanUp = obj.cleanUp;
   closure_3 = undefined;
-  let tmp = obj.state === _require(4204).TransitionStates.YEETED;
+  let tmp = obj.state === _require(4271).TransitionStates.YEETED;
   closure_3 = tmp;
   obj = { hiddenProps: null, hiddenStyles: null };
   let fn = function _() {
@@ -39,8 +39,8 @@ export default function useControlsHiddenPresentation(mode, wrapperSpecs) {
   fn.__closure = obj;
   fn.__workletHash = 2182108251011;
   fn.__initData = closure_4;
-  obj[0] = _require(4217).useAnimatedProps(fn);
-  const obj3 = _require(4217);
+  obj[0] = _require(4296).useAnimatedProps(fn);
+  const obj3 = _require(4296);
   class S {
     constructor() {
       obj = closure_0(closure_1[3]);
@@ -68,8 +68,8 @@ export default function useControlsHiddenPresentation(mode, wrapperSpecs) {
       return obj;
     }
   }
-  const obj5 = _require(4217);
-  S.__closure = { withSpring: _require(4928).withSpring, yeeted: tmp, wrapperSpecs, HIDDEN_OPACITY_PHYSICS: closure_3, cleanUp, runOnJS: _require(4217).runOnJS };
+  const obj5 = _require(4296);
+  S.__closure = { withSpring: _require(4974).withSpring, yeeted: tmp, wrapperSpecs, HIDDEN_OPACITY_PHYSICS: closure_3, cleanUp, runOnJS: _require(4296).runOnJS };
   S.__workletHash = 13662769817707;
   S.__initData = closure_5;
   obj[1] = obj5.useAnimatedStyle(S);

@@ -1,19 +1,19 @@
-// === Module 9628: getSafeArea ===
+// === Module 9642: getSafeArea ===
 
-// Module 9628 (getSafeArea)
+// Module 9642 (getSafeArea)
 import timestampDefault from "timestamp" /* 3 */;
-import usePreviousDefault from "usePrevious" /* 8595 */;
+import usePreviousDefault from "usePrevious" /* 8272 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 8515 */;
-import items3 from "items3" /* 4506 */;
-import ME from "ME" /* 673 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4380 */;
+import closure_8 from "initialize" /* 8855 */;
+import items3 from "items3" /* 1920 */;
+import ME from "ME" /* 1074 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4465 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 1234 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import set from "set" /* 1115 */;
 
 const require = arg1;
 function getSafeArea(arg0, arg1) {

@@ -1,8 +1,8 @@
-// === Module 8692: getSystemLocale ===
+// === Module 8402: getSystemLocale ===
 
-// Module 8692 (getSystemLocale)
+// Module 8402 (getSystemLocale)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 const result = set.fileFinishedImporting("modules/forums/ForumPlatformUtils.native.tsx");
 

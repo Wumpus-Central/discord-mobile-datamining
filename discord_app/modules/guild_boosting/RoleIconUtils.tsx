@@ -1,11 +1,11 @@
-// === Module 5987: getRoleIconData ===
+// === Module 7187: getRoleIconData ===
 
-// Module 5987 (getRoleIconData)
-import getAvatarURL from "getAvatarURL" /* 1430 */;
-import handleImageLoad from "handleImageLoad" /* 1464 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
-import ME from "ME" /* 673 */;
-import set from "set" /* 1234 */;
+// Module 7187 (getRoleIconData)
+import getAvatarURL from "getAvatarURL" /* 1396 */;
+import handleImageLoad from "handleImageLoad" /* 1430 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
+import ME from "ME" /* 1074 */;
+import set from "set" /* 1115 */;
 
 ({ Endpoints: c3, GuildFeatures: c4 } = ME);
 let closure_5 = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/role-icons";
@@ -35,8 +35,8 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
         let str3 = "quality=lossless";
         let str5 = "";
         if (null != arg1) {
-          tmp5(1464);
-          tmp5(1464);
+          tmp5(1430);
+          tmp5(1430);
           let str7 = "";
           const text = `size=${tmp9(arg1 * obj3.getDevicePixelRatio())}`;
           if (!closure_7) {

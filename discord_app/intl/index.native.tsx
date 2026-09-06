@@ -1,18 +1,18 @@
-// === Module 1233: getSystemLocale ===
+// === Module 1114: getSystemLocale ===
 
-// Module 1233 (getSystemLocale)
+// Module 1114 (getSystemLocale)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import noopAll from "noop" /* 19 */;
-import enforcing from "enforcing" /* 663 */;
-import getAvailableLocales2 from "getAvailableLocales" /* 1236 */;
-import Button from "Button" /* 1296 */;
-import IntlLink from "IntlLink" /* 14066 */;
-import messagesProxyDefault from "messagesProxy" /* 14070 */;
-import { Fonts } from "ME" /* 673 */;
+import enforcing from "enforcing" /* 1117 */;
+import getAvailableLocales2 from "getAvailableLocales" /* 1118 */;
+import Button from "Button" /* 1178 */;
+import IntlLink from "IntlLink" /* 14184 */;
+import messagesProxyDefault from "messagesProxy" /* 14188 */;
+import { Fonts } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 1234 */;
-import getAvailableLocales from "getAvailableLocales" /* 1236 */;
-import module_1273 from "module_1273" /* 1273 */;
+import set from "set" /* 1115 */;
+import getAvailableLocales from "getAvailableLocales" /* 1118 */;
+import module_1155 from "module_1155" /* 1155 */;
 
 require = arg1;
 noopAll;
@@ -64,9 +64,9 @@ obj = {
     return jsx(IntlLink.IntlLink, { target: tmp, children }, arg1);
   }
 };
-const reactFormatter = module_1273.makeReactFormatter(obj);
-const intlManager = new require("module_1273").IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
-set = { format: reactFormatter, formatToPlainString: require("module_1273").stringFormatter, formatToMarkdownString: require("module_1273").markdownFormatter, formatToParts: require("module_1273").astFormatter };
+const reactFormatter = module_1155.makeReactFormatter(obj);
+const intlManager = new require("module_1155").IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
+set = { format: reactFormatter, formatToPlainString: require("module_1155").stringFormatter, formatToMarkdownString: require("module_1155").markdownFormatter, formatToParts: require("module_1155").astFormatter };
 set = intlManager.withFormatters(set);
 const result = set.fileFinishedImporting("intl/index.native.tsx");
 

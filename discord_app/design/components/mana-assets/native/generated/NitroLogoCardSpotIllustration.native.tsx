@@ -1,10 +1,10 @@
-// === Module 6839: NitroLogoCardSpotIllustration ===
+// === Module 6275: NitroLogoCardSpotIllustration ===
 
-// Module 6839 (NitroLogoCardSpotIllustration)
+// Module 6275 (NitroLogoCardSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6840 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6276 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroLogoCardSpotIllustration.native.tsx");

@@ -1,13 +1,13 @@
-// === Module 10162: StageSectionHeader ===
+// === Module 10053: StageSectionHeader ===
 
-// Module 10162 (StageSectionHeader)
+// Module 10053 (StageSectionHeader)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import _modDef4217 from "module_4217" /* 4217 */;
-import registerAssetDefault from "registerAsset" /* 5952 */;
+import ThemesDefault from "Themes" /* 576 */;
+import _modDef4296 from "module_4296" /* 4296 */;
+import registerAssetDefault from "registerAsset" /* 7158 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -27,7 +27,7 @@ export default function StageSectionHeader(collapsed) {
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
   const tmp = callback2();
-  let obj = collapsed(4217);
+  let obj = collapsed(4296);
   const fn = function y() {
     let obj = collapsed(closure_1_2[6]);
     let str = "0deg";
@@ -40,7 +40,7 @@ export default function StageSectionHeader(collapsed) {
     obj[0] = items;
     return obj;
   };
-  obj = { withTiming: collapsed(4479).withTiming, collapsed };
+  obj = { withTiming: collapsed(4561).withTiming, collapsed };
   fn.__closure = obj;
   fn.__workletHash = 13855092771739;
   fn.__initData = closure_8;
@@ -48,7 +48,7 @@ export default function StageSectionHeader(collapsed) {
   obj1 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
   let items = [label, " \u2014 ", count];
-  const items1 = [callback(collapsed(4474).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
+  const items1 = [callback(collapsed(4556).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj2 = { style: null, children: null };
@@ -58,8 +58,8 @@ export default function StageSectionHeader(collapsed) {
   }
   items1[1] = tmp5Result;
   const obj3 = { style: tmp.collapseButton, children: null };
-  const obj4 = { style: animatedStyle, children: closure_6(collapsed(1296).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }) };
-  obj3[1] = closure_6(_modDef4217.View, obj4);
+  const obj4 = { style: animatedStyle, children: closure_6(collapsed(1178).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }) };
+  obj3[1] = closure_6(_modDef4296.View, obj4);
   items1[2] = closure_6(closure_4, obj3);
   obj1[2] = items1;
   obj[1] = callback(closure_3, obj1);

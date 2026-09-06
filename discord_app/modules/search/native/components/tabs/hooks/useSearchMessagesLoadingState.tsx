@@ -1,11 +1,11 @@
-// === Module 16528: useSearchMessagesLoadingState ===
+// === Module 16694: useSearchMessagesLoadingState ===
 
-// Module 16528 (useSearchMessagesLoadingState)
-import initialize from "initialize" /* 586 */;
-import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 16483 */;
-import closure_2 from "handleReaction" /* 6137 */;
-import closure_3 from "prototype" /* 12135 */;
-import { SEARCH_TABS_TO_SEARCH_QUERY_LIMITS as closure_4 } from "MessageEmbedTypes" /* 7633 */;
+// Module 16694 (useSearchMessagesLoadingState)
+import initialize from "initialize" /* 504 */;
+import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 16646 */;
+import closure_2 from "handleReaction" /* 7281 */;
+import closure_3 from "prototype" /* 12339 */;
+import { SEARCH_TABS_TO_SEARCH_QUERY_LIMITS as closure_4 } from "MessageEmbedTypes" /* 7878 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");

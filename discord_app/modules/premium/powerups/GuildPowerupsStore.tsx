@@ -1,12 +1,12 @@
-// === Module 4364: calculateAppliedBoosts ===
+// === Module 4449: calculateAppliedBoosts ===
 
-// Module 4364 (calculateAppliedBoosts)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 4449 (calculateAppliedBoosts)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "createGuildRecordFromRust" /* 1908 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
-import ME from "ME" /* 673 */;
+import closure_1 from "createGuildRecordFromRust" /* 1979 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
+import ME from "ME" /* 1074 */;
 
 function calculateAppliedBoosts(guildId) {
   guild = guild.getGuild(guildId);

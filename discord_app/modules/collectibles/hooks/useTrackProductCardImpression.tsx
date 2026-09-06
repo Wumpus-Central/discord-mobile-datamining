@@ -1,9 +1,9 @@
-// === Module 15660: useTrackProductCardImpression ===
+// === Module 15818: useTrackProductCardImpression ===
 
-// Module 15660 (useTrackProductCardImpression)
+// Module 15818 (useTrackProductCardImpression)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7297 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");

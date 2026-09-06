@@ -1,13 +1,13 @@
-// === Module 7417: initialize ===
+// === Module 7662: initialize ===
 
-// Module 7417 (initialize)
+// Module 7662 (initialize)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import _modDef7418 from "module_7418" /* 7418 */;
-import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7419 */;
-import closure_2 from "createdAt" /* 1934 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import _modDef7663 from "module_7663" /* 7663 */;
+import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7664 */;
+import closure_2 from "createdAt" /* 1385 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
 
 let closure_4 = {};
 let c5 = 0;
@@ -47,8 +47,8 @@ const friendSuggestionStore = new FriendSuggestionStore(dispatcherDefault, {
       if (flag2) {
         c6 = true;
         c7 = false;
-        const response = _modDef7418.fetch();
-        const obj = _modDef7418;
+        const response = _modDef7663.fetch();
+        const obj = _modDef7663;
       }
     } else {
       maybeDispatchDevOnlyDummyFriendSuggestionsDefault();

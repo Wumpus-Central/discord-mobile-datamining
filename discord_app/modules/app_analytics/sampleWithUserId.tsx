@@ -1,8 +1,8 @@
-// === Module 7226: sampleWithUserId ===
+// === Module 7470: sampleWithUserId ===
 
-// Module 7226 (sampleWithUserId)
+// Module 7470 (sampleWithUserId)
 import set from "set" /* 2 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1214 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
 
 let c2 = 2147483647;
 const result = set.fileFinishedImporting("modules/app_analytics/sampleWithUserId.tsx");

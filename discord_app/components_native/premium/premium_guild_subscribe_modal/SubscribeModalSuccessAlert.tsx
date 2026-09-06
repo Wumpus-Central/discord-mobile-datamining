@@ -1,23 +1,23 @@
-// === Module 13515: PremiumPaymentGuildAnimation ===
+// === Module 13621: PremiumPaymentGuildAnimation ===
 
-// Module 13515 (PremiumPaymentGuildAnimation)
-import initialize from "initialize" /* 586 */;
-import keys from "keys" /* 688 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useThemeDefault from "useTheme" /* 4413 */;
-import Text from "Text" /* 4474 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
-import componentDidMountDefault from "componentDidMount" /* 4948 */;
-import componentDidMountDefault2 from "componentDidMount" /* 13516 */;
-import _mod13517 from "module_13517" /* 13517 */;
+// Module 13621 (PremiumPaymentGuildAnimation)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import keys from "keys" /* 1093 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import useThemeDefault from "useTheme" /* 4495 */;
+import Text from "Text" /* 4556 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import componentDidMountDefault from "componentDidMount" /* 4994 */;
+import componentDidMountDefault2 from "componentDidMount" /* 13622 */;
+import _mod13623 from "module_13623" /* 13623 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import { Gradients } from "items" /* 7187 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import { Gradients } from "items" /* 7432 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 class PremiumPaymentGuildAnimation {
@@ -26,7 +26,7 @@ class PremiumPaymentGuildAnimation {
     tmp = closure_11();
     obj = { nextScene, onSceneComplete, loop, sceneSegments: closure_12, style: tmp.animation, source: null };
     tmp2 = require("componentDidMount");
-    obj[5] = require("module_13517");
+    obj[5] = require("module_13623");
     return jsx(tmp2, obj);
   }
 }
@@ -70,12 +70,12 @@ export default function SubscribeModalSuccessAlert(arg0) {
   dependencyMap = tmp7[1];
   obj = { style: tmp.wrapper, confirmText: null, onConfirm: null, children: null };
   const tmp9 = useThemeDefault();
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj[1] = intl.string(getSystemLocale.t.YKxJCI);
   obj[2] = function onConfirm() {
-    callback2(4859).close();
-    const obj = callback2(4859);
-    callback(5386).closeApplyBoostModal();
+    callback2(4905).close();
+    const obj = callback2(4905);
+    callback(5434).closeApplyBoostModal();
   };
   obj = {
     nextScene: tmp6[0],
@@ -99,9 +99,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13518);
+    let tmp8Result = tmp8(13624);
   } else {
-    tmp8Result = tmp8(13519);
+    tmp8Result = tmp8(13625);
   }
   obj3[1] = tmp8Result;
   obj2[1] = callback2(tmp15, obj3);
@@ -109,9 +109,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const items2 = [callback2(tmp14, obj1), ];
   const obj4 = { style: tmp.successInfo, children: null };
   const obj5 = { style: tmp.text, variant: "text-sm/medium", children: null };
-  const intl2 = tmp2(1233).intl;
+  const intl2 = tmp2(1114).intl;
   const string = intl2.string;
-  const t = tmp2(1233).t;
+  const t = tmp2(1114).t;
   if (someResult) {
     let stringResult = string(t.RMmWY3);
   } else {
@@ -121,7 +121,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
   obj5[2] = stringResult;
   const items3 = [callback2(Text.Text, obj5), ];
   const obj7 = { style: tmp.text, variant: "text-sm/medium", children: null };
-  const intl3 = tmp2(1233).intl;
+  const intl3 = tmp2(1114).intl;
   obj7[2] = intl3.format(getSystemLocale.t.r0IGsP, { guildName: stateFromStores.name, guildSubscriptionQuantity: num });
   items3[1] = callback2(Text.Text, obj7);
   obj4[1] = items3;

@@ -1,40 +1,40 @@
-// === Module 17065: getMessages ===
+// === Module 17231: getMessages ===
 
-// Module 17065 (getMessages)
-import _modDef17066 from "module_17066" /* 17066 */;
-import format from "format" /* 17108 */;
-import module_17075 from "module_17075" /* 17075 */;
-import module_17076 from "module_17076" /* 17076 */;
-import module_17077 from "module_17077" /* 17077 */;
-import module_17078 from "module_17078" /* 17078 */;
-import module_17079 from "module_17079" /* 17079 */;
-import module_17080 from "module_17080" /* 17080 */;
-import module_17081 from "module_17081" /* 17081 */;
-import module_17082 from "module_17082" /* 17082 */;
-import module_17083 from "module_17083" /* 17083 */;
-import module_17084 from "module_17084" /* 17084 */;
-import module_17085 from "module_17085" /* 17085 */;
-import module_17086 from "module_17086" /* 17086 */;
-import module_17087 from "module_17087" /* 17087 */;
-import module_17088 from "module_17088" /* 17088 */;
-import module_17089 from "module_17089" /* 17089 */;
-import module_17090 from "module_17090" /* 17090 */;
-import module_17091 from "module_17091" /* 17091 */;
-import module_17092 from "module_17092" /* 17092 */;
-import module_17093 from "module_17093" /* 17093 */;
-import module_17094 from "module_17094" /* 17094 */;
-import module_17095 from "module_17095" /* 17095 */;
-import module_17096 from "module_17096" /* 17096 */;
-import module_17097 from "module_17097" /* 17097 */;
-import module_17098 from "module_17098" /* 17098 */;
-import module_17099 from "module_17099" /* 17099 */;
-import module_17100 from "module_17100" /* 17100 */;
-import module_17101 from "module_17101" /* 17101 */;
-import module_17102 from "module_17102" /* 17102 */;
-import { EventEmitter } from "EventEmitter" /* 649 */;
+// Module 17231 (getMessages)
+import _modDef17232 from "module_17232" /* 17232 */;
+import format from "format" /* 17274 */;
+import module_17241 from "module_17241" /* 17241 */;
+import module_17242 from "module_17242" /* 17242 */;
+import module_17243 from "module_17243" /* 17243 */;
+import module_17244 from "module_17244" /* 17244 */;
+import module_17245 from "module_17245" /* 17245 */;
+import module_17246 from "module_17246" /* 17246 */;
+import module_17247 from "module_17247" /* 17247 */;
+import module_17248 from "module_17248" /* 17248 */;
+import module_17249 from "module_17249" /* 17249 */;
+import module_17250 from "module_17250" /* 17250 */;
+import module_17251 from "module_17251" /* 17251 */;
+import module_17252 from "module_17252" /* 17252 */;
+import module_17253 from "module_17253" /* 17253 */;
+import module_17254 from "module_17254" /* 17254 */;
+import module_17255 from "module_17255" /* 17255 */;
+import module_17256 from "module_17256" /* 17256 */;
+import module_17257 from "module_17257" /* 17257 */;
+import module_17258 from "module_17258" /* 17258 */;
+import module_17259 from "module_17259" /* 17259 */;
+import module_17260 from "module_17260" /* 17260 */;
+import module_17261 from "module_17261" /* 17261 */;
+import module_17262 from "module_17262" /* 17262 */;
+import module_17263 from "module_17263" /* 17263 */;
+import module_17264 from "module_17264" /* 17264 */;
+import module_17265 from "module_17265" /* 17265 */;
+import module_17266 from "module_17266" /* 17266 */;
+import module_17267 from "module_17267" /* 17267 */;
+import module_17268 from "module_17268" /* 17268 */;
+import { EventEmitter } from "EventEmitter" /* 568 */;
 
 require = arg1;
-global.IntlMessageFormat = _modDef17066;
+global.IntlMessageFormat = _modDef17232;
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
   require("_default2");
@@ -138,11 +138,11 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj);
     } else {
       try {
-        obj = self(17108);
+        obj = self(17274);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(17108).getMessage(tmp7, tmp);
+          return self(17274).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -171,7 +171,7 @@ class I18N extends EventEmitter {
       _Intl = Intl;
       tmp9 = closure_0;
       tmp10 = closure_1;
-      __addLocaleDataResult = Intl.__addLocaleData(require("module_17107"));
+      __addLocaleDataResult = Intl.__addLocaleData(require("module_17273"));
     }
     tmp6._languages = getLanguages();
     if (null != window.Proxy) {
@@ -257,7 +257,7 @@ prototype["getLocaleInfo"] = function getLocaleInfo() {
   return _languages.find((code) => code.code === self._chosenLocale);
 };
 prototype["getDefaultLocale"] = function getDefaultLocale() {
-  let str = parts(662).getSystemLocale();
+  let str = parts(1338).getSystemLocale();
   if (str == null) {
     str = c2;
   }
@@ -290,7 +290,7 @@ prototype["getDefaultLocale"] = function getDefaultLocale() {
     }
     return found2;
   }
-  const obj = parts(662);
+  const obj = parts(1338);
 };
 prototype["_loadMessagesForLocale"] = function _loadMessagesForLocale(_requestedLocale) {
   let self = this;

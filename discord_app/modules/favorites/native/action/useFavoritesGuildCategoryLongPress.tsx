@@ -1,9 +1,9 @@
-// === Module 15944: useFavoritesGuildCategoryLongPress ===
+// === Module 16108: useFavoritesGuildCategoryLongPress ===
 
-// Module 15944 (useFavoritesGuildCategoryLongPress)
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
+// Module 16108 (useFavoritesGuildCategoryLongPress)
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
 import closure_3 from "noop" /* 19 */;
-import { ChannelTypes } from "ME" /* 673 */;
+import { ChannelTypes } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");

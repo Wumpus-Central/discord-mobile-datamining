@@ -1,18 +1,18 @@
-// === Module 10109: VoiceChatCallScreenHeaderIconInner ===
+// === Module 10000: VoiceChatCallScreenHeaderIconInner ===
 
-// Module 10109 (VoiceChatCallScreenHeaderIconInner)
+// Module 10000 (VoiceChatCallScreenHeaderIconInner)
 import applyDefault from "apply" /* 12 */;
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import ManaContext from "ManaContext" /* 4204 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10041 */;
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import ManaContext from "ManaContext" /* 4271 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9924 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "generateOldThreadCutoff" /* 4493 */;
-import { ThemeTypes } from "ME" /* 673 */;
+import closure_4 from "generateOldThreadCutoff" /* 4575 */;
+import { ThemeTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function VoiceChatCallScreenHeaderIconInner(onPress) {
@@ -54,7 +54,7 @@ export default function VoiceChatHeaderIcon(disabled) {
   }
   items[1] = disabledOpacity;
   obj[5] = items;
-  obj = { source, color: tmp.badge.backgroundColor, size: tmp3(1296).Icon.Sizes.SMALL_20 };
+  obj = { source, color: tmp.badge.backgroundColor, size: tmp3(1178).Icon.Sizes.SMALL_20 };
   const items1 = [callback(Button.Icon, obj), children];
   obj[6] = items1;
   return closure_7(PressableBase.PressableOpacity, obj);
@@ -63,7 +63,7 @@ export const useVoiceChatMentions = function useVoiceChatMentions(arg0) {
   const _require = arg0;
   const items = [closure_4];
   const items1 = [arg0];
-  return _require(586).useStateFromStoresObject(items, () => ({ unreadCount: closure_1_4.getUnreadCount(closure_0), mentionCount: closure_1_4.getMentionCount(closure_0) }), items1);
+  return _require(504).useStateFromStoresObject(items, () => ({ unreadCount: closure_1_4.getUnreadCount(closure_0), mentionCount: closure_1_4.getMentionCount(closure_0) }), items1);
 };
 export const VoiceChatCallScreenHeaderIcon = function VoiceChatCallScreenHeaderIcon(arg0) {
   let obj = { theme: ThemeTypes.DARK, children: null };

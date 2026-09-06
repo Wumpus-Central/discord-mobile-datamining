@@ -1,10 +1,10 @@
-// === Module 8605: useMediaViewerSyncer ===
+// === Module 8291: useMediaViewerSyncer ===
 
-// Module 8605 (useMediaViewerSyncer)
+// Module 8291 (useMediaViewerSyncer)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN" /* 8606 */;
-import set from "set" /* 1234 */;
+import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN" /* 8292 */;
+import set from "set" /* 1115 */;
 
 const require = arg1;
 ({ THUMBNAIL_MARGIN: c5, THUMBNAIL_HEIGHT: closure_6, THUMBNAIL_MAX_WIDTH: error, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: c9 } = THUMBNAIL_MARGIN);

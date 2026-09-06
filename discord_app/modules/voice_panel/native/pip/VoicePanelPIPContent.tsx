@@ -1,35 +1,35 @@
-// === Module 17001: VideoStream ===
+// === Module 17165: VideoStream ===
 
-// Module 17001 (VideoStream)
-import ThemesDefault from "Themes" /* 709 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1228 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
-import setDefault from "set" /* 7808 */;
-import dismissPanelDefault from "dismissPanel" /* 12068 */;
+// Module 17165 (VideoStream)
+import ThemesDefault from "Themes" /* 576 */;
+import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import setDefault from "set" /* 7073 */;
+import dismissPanelDefault from "dismissPanel" /* 12272 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "participantFromServer" /* 1385 */;
-import closure_8 from "getParticipants" /* 4494 */;
-import closure_9 from "initialize" /* 9552 */;
-import closure_10 from "reset" /* 4500 */;
-import closure_11 from "fetchFingerprint" /* 1215 */;
-import closure_12 from "ensureGuildLoaded" /* 1386 */;
-import closure_13 from "mergeGuildAvatar" /* 1921 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 12069 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16924 */;
-import ME from "ME" /* 673 */;
-import items3 from "items3" /* 4506 */;
-import ParticipantTypes from "ParticipantTypes" /* 4499 */;
+import closure_7 from "participantFromServer" /* 1956 */;
+import closure_8 from "getParticipants" /* 4576 */;
+import closure_9 from "initialize" /* 9486 */;
+import closure_10 from "reset" /* 4582 */;
+import closure_11 from "fetchFingerprint" /* 502 */;
+import closure_12 from "ensureGuildLoaded" /* 1957 */;
+import closure_13 from "mergeGuildAvatar" /* 1371 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 12273 */;
+import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 17088 */;
+import ME from "ME" /* 1074 */;
+import items3 from "items3" /* 1920 */;
+import ParticipantTypes from "ParticipantTypes" /* 4581 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "module_4217" /* 4217 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import importDefaultResult from "module_4296" /* 4296 */;
 
 require = arg1;
 function VideoStream(streamId) {
   streamId = streamId.streamId;
-  let obj = streamId(16918);
-  setHasActiveVideoOutputSink = obj.useSetHasActiveVideoOutputSink(importAllResult.useContext(setHasActiveVideoOutputSink(12068)).streamOutputSinkStack);
+  let obj = streamId(17082);
+  setHasActiveVideoOutputSink = obj.useSetHasActiveVideoOutputSink(importAllResult.useContext(setHasActiveVideoOutputSink(12272)).streamOutputSinkStack);
   const items = [setHasActiveVideoOutputSink, streamId];
   const effect = importAllResult.useEffect(() => {
     if (null != streamId) {
@@ -41,7 +41,7 @@ function VideoStream(streamId) {
   }, items);
   obj = {};
   const merged = Object.assign(streamId);
-  return callback(setHasActiveVideoOutputSink(9603), obj);
+  return callback(setHasActiveVideoOutputSink(9617), obj);
 }
 function markContentReady() {
   const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
@@ -290,14 +290,14 @@ function User(participantId) {
     tmp = transitionState;
     tmp2 = _undefined;
   }, items);
-  let tmp5 = transitionState === transitionState(4204).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
+  let tmp5 = transitionState === transitionState(4271).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
   dependencyMap = tmp5;
-  const context = obj.useContext(transitionCleanUp(12068));
+  const context = obj.useContext(transitionCleanUp(12272));
   channelId = context.channelId;
   ({ guildId, focused } = context);
   mode = context.mode;
   layoutManager = context.layoutManager;
-  let tmp3Result = tmp3(644);
+  let tmp3Result = tmp3(563);
   const items1 = [closure_8];
   const stateFromStores = tmp3Result.useStateFromStores(items1, () => {
     const participant = store.getParticipant(channelId, transitionState);
@@ -318,14 +318,14 @@ function User(participantId) {
   if (user == null) {
     user = currentUser.getCurrentUser();
   }
-  tmp3Result = tmp3(8521);
+  tmp3Result = tmp3(8826);
   let avatarURL;
   if (user != null) {
     avatarURL = user.getAvatarURL(guildId, 80, false);
   }
   dominantColorFromImage = tmp3Result.useDominantColorFromImage(avatarURL);
   let id;
-  let tmp6Result = tmp6(8124);
+  let tmp6Result = tmp6(8251);
   if (user != null) {
     id = user.id;
   }
@@ -353,7 +353,7 @@ function User(participantId) {
     }
   }
   const items3 = [channelId];
-  const surfaceDirectRendererExperiment = transitionState(9591).useSurfaceDirectRendererExperiment(id1, { location: "VoicePanelPIPContent" });
+  const surfaceDirectRendererExperiment = transitionState(9605).useSurfaceDirectRendererExperiment(id1, { location: "VoicePanelPIPContent" });
   callback = obj.useCallback((arg0, arg1) => {
     let participant;
     if (null != arg0) {
@@ -368,7 +368,7 @@ function User(participantId) {
     }
     c9(tmp5);
   }, items3);
-  const tmp3Result1 = transitionState(9591);
+  const tmp3Result1 = transitionState(9605);
   class S {
     constructor() {
       value = focused.get();
@@ -384,17 +384,17 @@ function User(participantId) {
   S.__initData = closure_32;
   const fn = function h(arg0, arg1) {
     if (arg0 !== arg1) {
-      const obj = transitionState(4217);
-      transitionState(4217).runOnJS(callback)(arg0, mode.get());
-      const runOnJSResult = transitionState(4217).runOnJS(callback);
+      const obj = transitionState(4296);
+      transitionState(4296).runOnJS(callback)(arg0, mode.get());
+      const runOnJSResult = transitionState(4296).runOnJS(callback);
     }
   };
-  obj = { runOnJS: tmp3(4217).runOnJS, updateIsActivityFocused: callback, mode };
+  obj = { runOnJS: tmp3(4296).runOnJS, updateIsActivityFocused: callback, mode };
   fn.__closure = obj;
   fn.__workletHash = 5971237403457;
   fn.__initData = closure_33;
-  const animatedReaction = transitionState(4217).useAnimatedReaction(S, fn);
-  const tmp3Result2 = transitionState(4217);
+  const animatedReaction = transitionState(4296).useAnimatedReaction(S, fn);
+  const tmp3Result2 = transitionState(4296);
   const fn2 = function v() {
     return mode.get();
   };
@@ -421,22 +421,22 @@ function User(participantId) {
       return;
     }
   }
-  obj = { runOnJS: tmp3(4217).runOnJS, updateIsActivityFocused: callback, focused };
+  obj = { runOnJS: tmp3(4296).runOnJS, updateIsActivityFocused: callback, focused };
   I.__closure = obj;
   I.__workletHash = 12552370107483;
   I.__initData = closure_35;
-  const animatedReaction1 = transitionState(4217).useAnimatedReaction(fn2, I);
-  const tmp3Result3 = transitionState(4217);
+  const animatedReaction1 = transitionState(4296).useAnimatedReaction(fn2, I);
+  const tmp3Result3 = transitionState(4296);
   const items4 = [c9];
-  const stateFromStoresObject = transitionState(644).useStateFromStoresObject(items4, () => ({ isReactingToThermalState: _undefined.isReactingToThermalState(), consumedRequestToRespondToSeriousThermalState: _undefined.consumedRequestToRespondToSeriousThermalState() }));
+  const stateFromStoresObject = transitionState(563).useStateFromStoresObject(items4, () => ({ isReactingToThermalState: _undefined.isReactingToThermalState(), consumedRequestToRespondToSeriousThermalState: _undefined.consumedRequestToRespondToSeriousThermalState() }));
   const items5 = [layoutManager, participantId];
   ({ isReactingToThermalState, consumedRequestToRespondToSeriousThermalState } = stateFromStoresObject);
   const callback1 = obj.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     layoutManager.setTargetDimensions(transitionState, nativeEvent.width, nativeEvent.height);
   }, items5);
-  const tmp3Result4 = transitionState(644);
-  canRenderParticipantVideo = transitionState(9608).useCanRenderParticipantVideo(stateFromStores);
+  const tmp3Result4 = transitionState(563);
+  canRenderParticipantVideo = transitionState(9622).useCanRenderParticipantVideo(stateFromStores);
   if (canRenderParticipantVideo) {
     let tmp27 = tmp18;
     if (tmp18) {
@@ -447,12 +447,12 @@ function User(participantId) {
   const items6 = [canRenderParticipantVideo];
   const effect1 = obj.useEffect(() => {
     if (!canRenderParticipantVideo) {
-      const ComponentDispatch = transitionState(1228).ComponentDispatch;
+      const ComponentDispatch = transitionState(1109).ComponentDispatch;
       ComponentDispatch.dispatch(closure_1_17.VOICE_PANEL_PIP_CONTENT_READY);
     }
   }, items6);
   obj1 = { style: null, children: null };
-  tmp6Result = tmp6(6015);
+  tmp6Result = tmp6(5589);
   if (canRenderParticipantVideo) {
     const items7 = [, ];
     ({ blackBackground: arr9[0], user: arr9[1] } = tmp);
@@ -480,7 +480,7 @@ function User(participantId) {
       obj4[1] = { x: 0, y: 0 };
       obj4[2] = { x: 0, y: 1 };
       obj4[3] = layoutManager.absoluteFill;
-      obj4[4] = tmp3(16923).layoutTransition;
+      obj4[4] = tmp3(17087).layoutTransition;
       tmp31 = callback(closure_25, obj4);
     }
     const items10 = [tmp31, , , ];
@@ -489,19 +489,19 @@ function User(participantId) {
     let tmp35Result = null;
     if (null != user) {
       const obj6 = { source: null, size: null, avatarDecoration: null };
-      obj6[0] = tmp3(8521).getCachedSourceFromURI(user.getAvatarURL(guildId, 80, false));
-      const AvatarSizes = tmp3(1296).AvatarSizes;
+      obj6[0] = tmp3(8826).getCachedSourceFromURI(user.getAvatarURL(guildId, 80, false));
+      const AvatarSizes = tmp3(1178).AvatarSizes;
       obj6[1] = tmp18 ? AvatarSizes.LARGE : AvatarSizes.XLARGE;
       let userAvatarDecoration;
       if (stateFromStores != null) {
         userAvatarDecoration = stateFromStores.userAvatarDecoration;
       }
       obj6[2] = userAvatarDecoration;
-      tmp35Result = tmp35(tmp3(1296).Avatar, obj6);
-      const tmp3Result6 = tmp3(8521);
+      tmp35Result = tmp35(tmp3(1178).Avatar, obj6);
+      const tmp3Result6 = tmp3(8826);
     }
     obj5[1] = tmp35Result;
-    items10[1] = callback(tmp6(6015), obj5);
+    items10[1] = callback(tmp6(5589), obj5);
     const obj7 = { style: null };
     obj7[0] = tmp.userOpacity;
     items10[2] = callback(InnerStroke, obj7);
@@ -513,25 +513,25 @@ function User(participantId) {
         obj8[0] = tmp.thermalAlertIconContainer;
         const obj9 = { style: null, source: null, color: null };
         obj9[0] = tmp.thermalAlertIcon;
-        obj9[1] = tmp6(9611);
+        obj9[1] = tmp6(9625);
         obj9[2] = tmp.thermalAlertIcon.color;
-        obj8[1] = tmp35(tmp3(1296).Icon, obj9);
-        tmp35Result = tmp35(tmp6(6015), obj8);
-        const tmp6Result2 = tmp6(6015);
+        obj8[1] = tmp35(tmp3(1178).Icon, obj9);
+        tmp35Result = tmp35(tmp6(5589), obj8);
+        const tmp6Result2 = tmp6(5589);
       }
     }
     items10[3] = tmp35Result;
     obj1[1] = items10;
     tmp42 = obj1;
-    const tmp6Result1 = tmp6(6015);
+    const tmp6Result1 = tmp6(5589);
   }
   return closure_23(tmp6Result, tmp42);
 }
 function AnimatedVideoWrapper(arg0) {
   let targetDimensionsSubscription;
   ({ participantId, style, children } = arg0);
-  targetDimensionsSubscription = targetDimensionsSubscription(12071).useTargetDimensionsSubscription(participantId, importAllResult.useContext(dismissPanelDefault).layoutManager);
-  const obj = targetDimensionsSubscription(12071);
+  targetDimensionsSubscription = targetDimensionsSubscription(12275).useTargetDimensionsSubscription(participantId, importAllResult.useContext(dismissPanelDefault).layoutManager);
+  const obj = targetDimensionsSubscription(12275);
   const fn = function u() {
     const value = targetDimensionsSubscription.get();
     ({ width, height } = value);
@@ -546,7 +546,7 @@ function AnimatedVideoWrapper(arg0) {
   fn.__closure = { targetDimensions: targetDimensionsSubscription };
   fn.__workletHash = 10377220209728;
   fn.__initData = closure_37;
-  const animatedStyle = targetDimensionsSubscription(4217).useAnimatedStyle(fn);
+  const animatedStyle = targetDimensionsSubscription(4296).useAnimatedStyle(fn);
   style = [, ];
   style[0] = style;
   style[1] = animatedStyle;
@@ -566,7 +566,7 @@ function Stream(participantId) {
   let callback2;
   closure_9 = undefined;
   let tmp = callback3();
-  let obj = transitionState(16928);
+  let obj = transitionState(17092);
   const mode = obj.usePIPState().mode;
   transitionCleanUp = mode;
   obj1 = streamId;
@@ -602,9 +602,9 @@ function Stream(participantId) {
     tmp = transitionState;
     tmp2 = _undefined;
   }, items);
-  const context = obj1.useContext(transitionCleanUp(12068));
+  const context = obj1.useContext(transitionCleanUp(12272));
   ({ channelId: c2, layoutManager } = context);
-  let tmp2Result = tmp2(644);
+  let tmp2Result = tmp2(563);
   const items1 = [callback2];
   const stateFromStoresObject = tmp2Result.useStateFromStoresObject(items1, () => {
     const participant = callback2.getParticipant(c2, transitionState);
@@ -630,11 +630,11 @@ function Stream(participantId) {
     return obj;
   });
   streamId = stateFromStoresObject.streamId;
-  tmp2Result = tmp2(9591);
+  tmp2Result = tmp2(9605);
   const surfaceDirectRendererExperiment = tmp2Result.useSurfaceDirectRendererExperiment(stateFromStoresObject.userId, { location: "VoicePanelPIPContent.Stream" });
-  let tmp5 = transitionState === transitionState(4204).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
+  let tmp5 = transitionState === transitionState(4271).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
   const items2 = [closure_10];
-  const stateFromStores = transitionState(644).useStateFromStores(items2, () => {
+  const stateFromStores = transitionState(563).useStateFromStores(items2, () => {
     const activeStreamForStreamKey = closure_1_10.getActiveStreamForStreamKey(transitionState);
     let state;
     if (activeStreamForStreamKey != null) {
@@ -710,11 +710,11 @@ function Stream(participantId) {
   if (stateFromStores === constants.ENDED) {
     obj = { style: null, resizeMode: "contain" };
     obj[0] = tmp.streamEmptyImage;
-    let tmp18Result = callback(tmp2(9584).StreamEnded, obj);
+    let tmp18Result = callback(tmp2(9598).StreamEnded, obj);
   } else if (stateFromStores === tmp17.FAILED) {
     obj = { style: null, resizeMode: "contain" };
     obj[0] = tmp.streamEmptyImage;
-    tmp18Result = callback(tmp2(9587).StreamFailed, obj);
+    tmp18Result = callback(tmp2(9601).StreamFailed, obj);
   } else if (tmp15) {
     obj1 = { style: null, participantId: null, children: null };
     obj1[0] = tmp5;
@@ -835,7 +835,7 @@ let closure_40 = importAllResult.memo(function EmptyPIP(transitionState) {
     }
   }, items);
   const tmp = callback3();
-  return callback(transitionCleanUp(6015), { style: callback3().emptyPip });
+  return callback(transitionCleanUp(5589), { style: callback3().emptyPip });
 });
 const memoResult = importAllResult.memo(function VoicePanelPIPContent() {
   const channelId = importAllResult.useContext(id(width[20])).channelId;

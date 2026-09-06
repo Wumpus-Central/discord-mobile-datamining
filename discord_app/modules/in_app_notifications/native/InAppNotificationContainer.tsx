@@ -1,24 +1,24 @@
-// === Module 10214: NotificationWrapper ===
+// === Module 10105: NotificationWrapper ===
 
-// Module 10214 (NotificationWrapper)
-import _modDef10215 from "module_10215" /* 10215 */;
-import _modDef10290 from "module_10290" /* 10290 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10291 */;
-import BugReporterNotification from "BugReporterNotification" /* 10292 */;
-import AlertNotificationDefault from "AlertNotification" /* 10325 */;
-import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10326 */;
-import NotificationAvatarDefault from "NotificationAvatar" /* 11179 */;
-import _modDef11180 from "module_11180" /* 11180 */;
-import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 11183 */;
+// Module 10105 (NotificationWrapper)
+import _modDef10106 from "module_10106" /* 10106 */;
+import _modDef10179 from "module_10179" /* 10179 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10182 */;
+import BugReporterNotification from "BugReporterNotification" /* 10183 */;
+import AlertNotificationDefault from "AlertNotification" /* 10216 */;
+import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10217 */;
+import NotificationAvatarDefault from "NotificationAvatar" /* 11318 */;
+import _modDef11319 from "module_11319" /* 11319 */;
+import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 11322 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 9671 */;
-import set from "set" /* 10204 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "initialize" /* 9684 */;
+import set from "set" /* 10095 */;
+import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
-import { Easing } from "module_4217" /* 4217 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import { Easing } from "module_4296" /* 4296 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function NotificationWrapper(notification) {
@@ -27,11 +27,11 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10215, { notification: null });
+    return jsx(_modDef10106, { notification: null });
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10290, { notification: null });
+    return jsx(_modDef10179, { notification: null });
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     obj1 = { notification: null };
     obj1[0] = notification;
@@ -66,13 +66,13 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return jsx(_modDef11180, { notification: null });
+    return jsx(_modDef11319, { notification: null });
   }
 }
 ({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = ME);
 let obj = { duration: 200, easing: null };
-obj[1] = Easing.in(require("module_4217").Easing.ease);
+obj[1] = Easing.in(require("module_4296").Easing.ease);
 let closure_16 = createCacheKey.createStyles({ safeAreaContainer: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8, top: 0, bottom: 0 }, animatedContainer: { marginLeft: NOTIFICATION_CONTAINER_MARGIN, marginRight: NOTIFICATION_CONTAINER_MARGIN } });
 let closure_18 = { code: "function InAppNotificationContainerTsx1(){const{runOnJS,setInitialized}=this.__closure;return runOnJS(setInitialized)(true);}" };
 let closure_19 = { code: "function InAppNotificationContainerTsx2(){const{runOnJS,setPanning}=this.__closure;runOnJS(setPanning)(false);}" };

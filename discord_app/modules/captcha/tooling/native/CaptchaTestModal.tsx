@@ -1,14 +1,14 @@
-// === Module 15525: CaptchaTestScreen ===
+// === Module 15683: CaptchaTestScreen ===
 
-// Module 15525 (CaptchaTestScreen)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 15683 (CaptchaTestScreen)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "found" /* 15526 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "found" /* 15684 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -225,7 +225,7 @@ export default function CaptchaTestModal() {
     return obj;
   }, items);
   let obj = { screens: memo, initialRouteName: constants.TEST_CAPTCHA, headerBackTitle: null };
-  const intl = _require(1233).intl;
-  obj[2] = intl.string(_require(1233).t["13/7kX"]);
-  return callback(_require(6017).Navigator, obj);
+  const intl = _require(1114).intl;
+  obj[2] = intl.string(_require(1114).t["13/7kX"]);
+  return callback(_require(7000).Navigator, obj);
 };

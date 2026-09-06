@@ -1,8 +1,8 @@
-// === Module 9124: useTopAndNewlyAddedEmojis ===
+// === Module 10281: useTopAndNewlyAddedEmojis ===
 
-// Module 9124 (useTopAndNewlyAddedEmojis)
-import closure_2 from "getEmojiToGroupId" /* 5410 */;
-import { EmojiIntention } from "set" /* 1924 */;
+// Module 10281 (useTopAndNewlyAddedEmojis)
+import closure_2 from "getEmojiToGroupId" /* 5459 */;
+import { EmojiIntention } from "set" /* 1374 */;
 
 const require = arg1;
 let closure_4 = [];
@@ -13,7 +13,7 @@ export default function useTopAndNewlyAddedEmojis(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_2];
   const items1 = [arg0, arg1];
-  return _require(644).useStateFromStoresObject(items, () => {
+  return _require(563).useStateFromStoresObject(items, () => {
     let obj = closure_1_2;
     if (closure_1_2 !== undefined) {
       if (tmp2 !== closure_1_3.REACTION) {

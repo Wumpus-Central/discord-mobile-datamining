@@ -1,15 +1,15 @@
-// === Module 8802: UserPreview ===
+// === Module 8656: UserPreview ===
 
-// Module 8802 (UserPreview)
+// Module 8656 (UserPreview)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
-import Text from "Text" /* 4474 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
+import Text from "Text" /* 4556 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -37,13 +37,13 @@ export default function UserPreview(user) {
   obj1 = { style: items1, children: null };
   items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
   const str = intl.string(getSystemLocale.t.Rsth7z);
-  const items2 = [callback(Button.Avatar, { size: Button.AvatarSizes.LARGE_48, user, guildId: "accessible" }), ];
+  const items2 = [callback(Button.Avatar, { size: Button.AvatarSizes.LARGE_48, user, guildId: "Array" }), ];
   const obj3 = { style: tmp.userProfileInfo, children: null };
   let tmp7Result = null != user.globalName;
   if (tmp7Result) {
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[2] = user.globalName;
-    tmp7Result = tmp7(tmp2(4474).Text, obj4);
+    tmp7Result = tmp7(tmp2(4556).Text, obj4);
   }
   const items3 = [tmp7Result, callback(Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
   obj3[1] = items3;

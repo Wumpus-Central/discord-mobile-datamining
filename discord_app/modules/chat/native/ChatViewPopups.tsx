@@ -1,7 +1,7 @@
-// === Module 12422: ChatViewPopups ===
+// === Module 12648: ChatViewPopups ===
 
-// Module 12422 (ChatViewPopups)
-import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12423 */;
+// Module 12648 (ChatViewPopups)
+import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12649 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -30,11 +30,11 @@ class ChatViewPopups {
             closure_1.current = false;
             return false;
           };
-          ref(12435).open(obj);
+          ref(12661).open(obj);
           tmp.current = true;
-          const obj3 = ref(12435);
+          const obj3 = ref(12661);
         } else if (showWelcomeModal) {
-          obj = guildId(12427);
+          obj = guildId(12653);
           obj = { guildId: null, onHide: null };
           obj[0] = guildId;
           obj[1] = function onHide() {

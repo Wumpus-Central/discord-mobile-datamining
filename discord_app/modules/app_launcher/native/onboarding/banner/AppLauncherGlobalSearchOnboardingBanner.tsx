@@ -1,13 +1,13 @@
-// === Module 11917: GlobalSearchCoachmark ===
+// === Module 12116: GlobalSearchCoachmark ===
 
-// Module 11917 (GlobalSearchCoachmark)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 12116 (GlobalSearchCoachmark)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 createCacheKey = { appsIcon: null, appsIconImage: null };
@@ -42,10 +42,10 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
       obj[1] = closure_1_7(markAsDismissed(closure_2[7]).AppsIcon, obj);
       return closure_1_7(closure_1_4, obj);
     };
-    const intl = markAsDismissed(1233).intl;
-    obj[1] = intl.string(markAsDismissed(1233).t.bCPN5y);
-    const intl2 = markAsDismissed(1233).intl;
-    obj[2] = intl2.string(markAsDismissed(1233).t["0TBExc"]);
+    const intl = markAsDismissed(1114).intl;
+    obj[1] = intl.string(markAsDismissed(1114).t.bCPN5y);
+    const intl2 = markAsDismissed(1114).intl;
+    obj[2] = intl2.string(markAsDismissed(1114).t["0TBExc"]);
     obj[3] = function onDismiss() {
       markAsDismissed({ actionType: closure_1_6.TAKE_ACTION });
     };
@@ -56,7 +56,7 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj[2] = diff;
     obj[3] = windowDimensions.height;
     obj[5] = obj;
-    tmp3 = jsx(markAsDismissed(9000).Coachmark, { x: -140, y: -40, width: null, height: null });
+    tmp3 = jsx(markAsDismissed(11135).Coachmark, { x: -140, y: -40, width: null, height: null });
   }
   return tmp3;
 };

@@ -1,10 +1,10 @@
-// === Module 9894: usePlayingGameActivities ===
+// === Module 9179: usePlayingGameActivities ===
 
-// Module 9894 (usePlayingGameActivities)
+// Module 9179 (usePlayingGameActivities)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "sortActivity" /* 4569 */;
-import closure_6 from "filterPlayingActivities" /* 5232 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
+import closure_5 from "sortActivity" /* 4600 */;
+import closure_6 from "filterPlayingActivities" /* 5279 */;
 
 const require = arg1;
 let closure_7 = [];

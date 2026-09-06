@@ -1,16 +1,16 @@
-// === Module 4376: V6OrEarlierAPIError ===
+// === Module 4461: V6OrEarlierAPIError ===
 
-// Module 4376 (V6OrEarlierAPIError)
+// Module 4461 (V6OrEarlierAPIError)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 4161 */;
-import prototypeDefault from "prototype" /* 4162 */;
-import prototypeDefault2 from "prototype" /* 4377 */;
-import prototypeDefault3 from "prototype" /* 4378 */;
-import displayMessageDefault from "displayMessage" /* 4379 */;
-import _getMessageFromRateLimitDefault from "_getMessageFromRateLimit" /* 4381 */;
-import prototypeDefault4 from "prototype" /* 4382 */;
-import displayMessage from "displayMessage" /* 4383 */;
-import displayMessageDefault2 from "displayMessage" /* 4383 */;
+import setDefault from "set" /* 4240 */;
+import prototypeDefault from "prototype" /* 4241 */;
+import prototypeDefault2 from "prototype" /* 4462 */;
+import prototypeDefault3 from "prototype" /* 4463 */;
+import displayMessageDefault from "displayMessage" /* 4464 */;
+import _getMessageFromRateLimitDefault from "_getMessageFromRateLimit" /* 4466 */;
+import prototypeDefault4 from "prototype" /* 4467 */;
+import displayMessage from "displayMessage" /* 4468 */;
+import displayMessageDefault2 from "displayMessage" /* 4468 */;
 
 const result = set.fileFinishedImporting("errors/index.tsx");
 

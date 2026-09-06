@@ -1,7 +1,7 @@
-// === Module 15914: _getEmojiCacheKey ===
+// === Module 16078: _getEmojiCacheKey ===
 
-// Module 15914 (_getEmojiCacheKey)
-import privDefault from "priv" /* 1400 */;
+// Module 16078 (_getEmojiCacheKey)
+import privDefault from "priv" /* 1437 */;
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 

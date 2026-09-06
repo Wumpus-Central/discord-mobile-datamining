@@ -1,14 +1,14 @@
-// === Module 12744: UserProfilePrivacyNotice ===
+// === Module 13074: UserProfilePrivacyNotice ===
 
-// Module 12744 (UserProfilePrivacyNotice)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 13074 (UserProfilePrivacyNotice)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 673 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import { UserSettingsSections } from "ME" /* 1074 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);

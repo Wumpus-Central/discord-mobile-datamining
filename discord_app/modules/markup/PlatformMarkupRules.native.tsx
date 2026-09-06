@@ -1,17 +1,17 @@
-// === Module 4981: match ===
+// === Module 5027: match ===
 
-// Module 4981 (match)
+// Module 5027 (match)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
-import tDefault from "t" /* 4192 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4511 */;
-import textRegexpDefault from "textRegexp" /* 4959 */;
-import getChannelDefault from "getChannel" /* 4960 */;
-import regExpDefault from "regExp" /* 4963 */;
-import getGameMentionData from "getGameMentionData" /* 5061 */;
-import INVISIBLE_CHAR_REGEX2 from "INVISIBLE_CHAR_REGEX" /* 5076 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
+import tDefault from "t" /* 4257 */;
+import textRegexpDefault from "textRegexp" /* 5005 */;
+import getChannelDefault from "getChannel" /* 5006 */;
+import regExpDefault from "regExp" /* 5009 */;
+import getGameMentionData from "getGameMentionData" /* 5107 */;
+import INVISIBLE_CHAR_REGEX2 from "INVISIBLE_CHAR_REGEX" /* 5122 */;
 
 const Image = get_ActivityIndicator.Image;
 obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, gameMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };
@@ -186,8 +186,8 @@ obj[6] = {
       gameName = gameMentionData.gameName;
     }
     if (gameName == null) {
-      const intl = tmp2(1233).intl;
-      gameName = intl.string(tmp2(1233).t["11pdXZ"]);
+      const intl = tmp2(1114).intl;
+      gameName = intl.string(tmp2(1114).t["11pdXZ"]);
     }
     obj[4] = gameName;
     return obj;
@@ -429,8 +429,8 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
     gameName = gameMentionData.gameName;
   }
   if (gameName == null) {
-    const intl = tmp(1233).intl;
-    gameName = intl.string(tmp(1233).t["11pdXZ"]);
+    const intl = tmp(1114).intl;
+    gameName = intl.string(tmp(1114).t["11pdXZ"]);
   }
   obj[4] = gameName;
   return obj;

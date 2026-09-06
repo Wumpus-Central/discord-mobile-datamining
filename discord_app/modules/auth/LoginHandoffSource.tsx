@@ -1,10 +1,10 @@
-// === Module 6174: LoginHandoffSource ===
+// === Module 7320: LoginHandoffSource ===
 
-// Module 6174 (LoginHandoffSource)
+// Module 7320 (LoginHandoffSource)
 import set from "set" /* 2 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
-import set2 from "set" /* 1393 */;
-import ME from "ME" /* 4675 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
+import set2 from "set" /* 1964 */;
+import ME from "ME" /* 4714 */;
 
 const StaticChannelRoute = set2.StaticChannelRoute;
 const UserSettingsPath = MAX_FAVORITES.UserSettingsPath;

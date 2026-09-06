@@ -1,10 +1,10 @@
-// === Module 14976: useVideoQuestPlayerAnalytics ===
+// === Module 15134: useVideoQuestPlayerAnalytics ===
 
-// Module 14976 (useVideoQuestPlayerAnalytics)
+// Module 15134 (useVideoQuestPlayerAnalytics)
 import closure_3 from "noop" /* 19 */;
 import { AppState } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleConnectionInfoChange" /* 4574 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_5 from "handleConnectionInfoChange" /* 4609 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestPlayerAnalytics.tsx");

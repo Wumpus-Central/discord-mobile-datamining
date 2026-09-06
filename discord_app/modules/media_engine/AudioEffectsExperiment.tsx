@@ -1,8 +1,8 @@
-// === Module 13796: apexExperiment ===
+// === Module 14069: apexExperiment ===
 
-// Module 13796 (apexExperiment)
+// Module 14069 (apexExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 let obj = { probeAudioEffects: false };
 obj = { name: "2026-03-audio-effects-probe", kind: "user", defaultConfig: obj, variations: null };

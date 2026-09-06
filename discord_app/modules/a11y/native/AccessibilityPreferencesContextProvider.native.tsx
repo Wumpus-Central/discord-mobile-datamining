@@ -1,8 +1,8 @@
-// === Module 14464: AccessibilityPreferencesContextProvider ===
+// === Module 14571: AccessibilityPreferencesContextProvider ===
 
-// Module 14464 (AccessibilityPreferencesContextProvider)
+// Module 14571 (AccessibilityPreferencesContextProvider)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

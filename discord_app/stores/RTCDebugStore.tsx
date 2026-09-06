@@ -1,13 +1,13 @@
-// === Module 10147: updateStats ===
+// === Module 10038: updateStats ===
 
-// Module 10147 (updateStats)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import openAll from "open" /* 10148 */;
+// Module 10038 (updateStats)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import openAll from "open" /* 10039 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 const require = arg1;
 function updateStats(arr, arg1, timestamp) {
@@ -203,7 +203,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: false };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -338,7 +338,7 @@ obj = {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(4579).BaseConnectionEvent.Video, (userId) => {
+          replayConnection.on(replayConnection(4615).BaseConnectionEvent.Video, (userId) => {
             let num = arg3;
             obj = closure_1_1(closure_1_3[7]);
             obj = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };

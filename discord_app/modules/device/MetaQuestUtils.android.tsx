@@ -1,8 +1,8 @@
-// === Module 1623: isMetaQuest ===
+// === Module 1608: isMetaQuest ===
 
-// Module 1623 (isMetaQuest)
-import getConstantsAll from "getConstants" /* 1624 */;
-import importDefaultResult from "enforcing" /* 667 */;
+// Module 1608 (isMetaQuest)
+import getConstantsAll from "getConstants" /* 1364 */;
+import importDefaultResult from "enforcing" /* 1342 */;
 
 const isMetaQuestResult = importDefaultResult.isMetaQuest();
 const result = require("set").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");

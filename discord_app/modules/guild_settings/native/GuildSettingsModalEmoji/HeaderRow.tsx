@@ -1,17 +1,17 @@
-// === Module 17408: HeaderRow ===
+// === Module 17568: HeaderRow ===
 
-// Module 17408 (HeaderRow)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
+// Module 17568 (HeaderRow)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 17402 */;
-import ME from "ME" /* 673 */;
-import { EMOJI_MAX_FILESIZE_KB } from "set" /* 1924 */;
+import closure_8 from "initialize" /* 17562 */;
+import ME from "ME" /* 1074 */;
+import { EMOJI_MAX_FILESIZE_KB } from "set" /* 1374 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function HeaderRow(guild) {
@@ -192,32 +192,32 @@ function HeaderRow(guild) {
   [tmp5, c5] = callback(React.useState(null), 2);
   const tmp4 = callback(React.useState(null), 2);
   [c6, c7] = callback(React.useState(""), 2);
-  let obj = guild(9657);
+  let obj = guild(9671);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
-  let intl = guild(1233).intl;
+  let intl = guild(1114).intl;
   obj = { id: null, text: null };
   const tmp6 = callback(React.useState(""), 2);
   obj[0] = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 1;
-  obj[1] = intl.string(guild(1233).t.N2qTQ3);
+  obj[1] = intl.string(guild(1114).t.N2qTQ3);
   let items = [obj, , , ];
-  let intl2 = guild(1233).intl;
+  let intl2 = guild(1114).intl;
   obj = { maxSize: EMOJI_MAX_FILESIZE_KB };
   obj1 = { id: null, text: null };
-  let stringResult = intl.string(guild(1233).t.N2qTQ3);
+  let stringResult = intl.string(guild(1114).t.N2qTQ3);
   obj1[0] = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 2;
-  obj1[1] = intl2.formatToPlainString(guild(1233).t.gfAXoR, obj);
+  obj1[1] = intl2.formatToPlainString(guild(1114).t.gfAXoR, obj);
   items[1] = obj1;
-  let intl3 = guild(1233).intl;
+  let intl3 = guild(1114).intl;
   let obj2 = { id: null, text: null };
-  const formatToPlainStringResult = intl2.formatToPlainString(guild(1233).t.gfAXoR, obj);
+  const formatToPlainStringResult = intl2.formatToPlainString(guild(1114).t.gfAXoR, obj);
   obj2[0] = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 3;
-  obj2[1] = intl3.string(guild(1233).t.rnwKPH);
+  obj2[1] = intl3.string(guild(1114).t.rnwKPH);
   items[2] = obj2;
-  const intl4 = guild(1233).intl;
+  const intl4 = guild(1114).intl;
   let obj3 = { id: null, text: null };
-  const stringResult1 = intl3.string(guild(1233).t.rnwKPH);
+  const stringResult1 = intl3.string(guild(1114).t.rnwKPH);
   obj3[0] = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 4;
-  obj3[1] = intl4.string(guild(1233).t["8Vr5Qd"]);
+  obj3[1] = intl4.string(guild(1114).t["8Vr5Qd"]);
   items[3] = obj3;
   let obj4 = { style: tmp.headerContainer, children: null };
   if (canCreateExpressions) {
@@ -233,10 +233,10 @@ function HeaderRow(guild) {
       }
       return applyArgumentsResult;
     };
-    const intl5 = tmp7(1233).intl;
-    obj5[3] = intl5.string(tmp7(1233).t["DU0dy/"]);
+    const intl5 = tmp7(1114).intl;
+    obj5[3] = intl5.string(tmp7(1114).t["DU0dy/"]);
     obj5[4] = uploadDisabled;
-    canCreateExpressions = tmp13(tmp7(4929).Button, obj5);
+    canCreateExpressions = tmp13(tmp7(4975).Button, obj5);
   }
   const items1 = [canCreateExpressions, , ];
   let tmp13Result = null != tmp5;
@@ -244,18 +244,18 @@ function HeaderRow(guild) {
     const obj6 = { style: null, variant: "text-sm/medium", color: "text-feedback-critical", children: null };
     obj6[0] = tmp.errorText;
     obj6[3] = tmp5;
-    tmp13Result = tmp13(tmp7(4474).Text, obj6);
+    tmp13Result = tmp13(tmp7(4556).Text, obj6);
   }
   let obj7 = { children: null };
   items1[1] = tmp13Result;
   let obj8 = { style: tmp.uploadInstructionsContainer, children: null };
-  const items2 = [closure_14(guild(4474).Text, { variant: "text-sm/medium", color: "text-muted", children: description }), , ];
+  const items2 = [closure_14(guild(4556).Text, { variant: "text-sm/medium", color: "text-muted", children: description }), , ];
   const obj9 = { variant: "text-xs/bold", color: "text-muted", style: tmp.uploadInstructionsHeading, children: null };
-  const intl6 = tmp7(1233).intl;
-  const stringResult2 = intl4.string(guild(1233).t["8Vr5Qd"]);
+  const intl6 = tmp7(1114).intl;
+  const stringResult2 = intl4.string(guild(1114).t["8Vr5Qd"]);
   const tmp14 = closure_15;
-  obj9[3] = intl6.string(guild(1233).t.jrXfyw).toUpperCase();
-  items2[1] = closure_14(guild(4474).Text, obj9);
+  obj9[3] = intl6.string(guild(1114).t.jrXfyw).toUpperCase();
+  items2[1] = closure_14(guild(4556).Text, obj9);
   items2[2] = closure_14(c7, {
     style: tmp.uploadInstructionsList,
     data: items,

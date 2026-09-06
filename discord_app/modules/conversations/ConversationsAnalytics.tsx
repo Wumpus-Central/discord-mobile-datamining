@@ -1,9 +1,9 @@
-// === Module 7830: ConversationsAnalytics ===
+// === Module 7909: ConversationsAnalytics ===
 
-// Module 7830 (ConversationsAnalytics)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 7909 (ConversationsAnalytics)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const result = require("set").fileFinishedImporting("modules/conversations/ConversationsAnalytics.tsx");
 

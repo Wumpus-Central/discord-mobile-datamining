@@ -1,15 +1,15 @@
-// === Module 5494: incrementVersion ===
+// === Module 7117: incrementVersion ===
 
-// Module 5494 (incrementVersion)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import create from "create" /* 1305 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "handleConnectionOpen" /* 4856 */;
-import closure_5 from "comparator" /* 1981 */;
-import { ChannelTypes } from "ME" /* 673 */;
+// Module 7117 (incrementVersion)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import create from "create" /* 1187 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1221 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "handleConnectionOpen" /* 4902 */;
+import closure_5 from "comparator" /* 2012 */;
+import { ChannelTypes } from "ME" /* 1074 */;
 
 require = arg1;
 function incrementVersion() {

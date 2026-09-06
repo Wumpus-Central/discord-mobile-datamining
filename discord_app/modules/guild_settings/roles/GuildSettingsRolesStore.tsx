@@ -1,21 +1,21 @@
-// === Module 17450: handleSetSection ===
+// === Module 17610: handleSetSection ===
 
-// Module 17450 (handleSetSection)
+// Module 17610 (handleSetSection)
 import applyDefault from "apply" /* 12 */;
-import fromStringAll from "fromString" /* 503 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isValueEqual from "isValueEqual" /* 1426 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1985 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import calculatePositionDeltasDefault from "calculatePositionDeltas" /* 12216 */;
-import MAX_SUBCATEGORIES from "MAX_SUBCATEGORIES" /* 17445 */;
-import closure_8 from "map" /* 17451 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1984 */;
-import closure_11 from "handleFormInit" /* 9755 */;
-import ME from "ME" /* 673 */;
-import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS" /* 17452 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import fromStringAll from "fromString" /* 1086 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import isValueEqual from "isValueEqual" /* 1972 */;
+import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 2016 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import calculatePositionDeltasDefault from "calculatePositionDeltas" /* 12416 */;
+import MAX_SUBCATEGORIES from "MAX_SUBCATEGORIES" /* 17605 */;
+import closure_8 from "map" /* 17611 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 2015 */;
+import closure_11 from "handleFormInit" /* 9064 */;
+import ME from "ME" /* 1074 */;
+import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS" /* 17612 */;
 import set from "set" /* 2 */;
 
 function handleSetSection(arg0) {
@@ -545,7 +545,7 @@ obj = {
     ({ id, color } = arg0);
     let int2hexResult = null;
     if (0 !== color) {
-      obj = id(685);
+      obj = id(1091);
       int2hexResult = obj.int2hex(color);
     }
     const found = items.find((id) => id.id === closure_0);
@@ -598,7 +598,7 @@ obj = {
     if (null == found) {
       return false;
     } else {
-      const result = id(1987).extractColorStringsFromServerColors(colors);
+      const result = id(2018).extractColorStringsFromServerColors(colors);
       const value = map2.get(id);
       let tmp21 = null != value;
       if (tmp21) {
@@ -969,7 +969,7 @@ obj = {
         obj[0] = currentStyle;
         obj[1] = value.styleColors;
         const result = obj3.set(id, obj);
-        const result1 = id(1987).extractColorStringsFromServerColors(tmp19);
+        const result1 = id(2018).extractColorStringsFromServerColors(tmp19);
         const primary_color = tmp19.primary_color;
         obj = { color: null, colors: null, colorString: null, colorStrings: null };
         obj[0] = primary_color;

@@ -1,8 +1,8 @@
-// === Module 14345: knownExperimentConfigs ===
+// === Module 14451: knownExperimentConfigs ===
 
-// Module 14345 (knownExperimentConfigs)
+// Module 14451 (knownExperimentConfigs)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 let obj = { "2026-05-noisier-notif-settings-defaults": null };
 obj = { 1: null, 2: { variation: 1 }, 3: { variation: 2 }, 4: { variation: 3 }, 5: { variation: 4 } };

@@ -1,12 +1,12 @@
-// === Module 4122: storeThread ===
+// === Module 4201: storeThread ===
 
-// Module 4122 (storeThread)
+// Module 4201 (storeThread)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import resetDefault from "reset" /* 4123 */;
-import closure_3 from "fetchFingerprint" /* 1215 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import resetDefault from "reset" /* 4202 */;
+import closure_3 from "fetchFingerprint" /* 502 */;
 import set from "set" /* 2 */;
 
 function storeThread(channel) {

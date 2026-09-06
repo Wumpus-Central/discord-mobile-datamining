@@ -1,10 +1,10 @@
-// === Module 8156: isActivityInTextSupportedForChannel ===
+// === Module 9546: isActivityInTextSupportedForChannel ===
 
-// Module 8156 (isActivityInTextSupportedForChannel)
-import set from "set" /* 689 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
-import { Permissions } from "sum" /* 502 */;
+// Module 9546 (isActivityInTextSupportedForChannel)
+import set from "set" /* 1094 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+import { Permissions } from "sum" /* 1085 */;
 
 require = arg1;
 function isActivityInTextSupportedForChannel(channel) {
@@ -52,7 +52,7 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
 export const useIsActivitiesInTextEnabled = function useIsActivitiesInTextEnabled(id) {
   const _require = id;
   const items = [closure_2, closure_3];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const channel = closure_1_2.getChannel(closure_0);
     let flag = false;
     if (null != channel) {
@@ -87,7 +87,7 @@ export const getIsAppLauncherEnabled = function getIsAppLauncherEnabled(channel)
 export const useIsAppLauncherEnabled = function useIsAppLauncherEnabled(id) {
   const _require = id;
   const items = [closure_2];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const channel = closure_1_2.getChannel(closure_0);
     let tmp2 = null != channel;
     if (tmp2) {

@@ -1,11 +1,11 @@
-// === Module 8578: items ===
+// === Module 8193: items ===
 
-// Module 8578 (items)
-import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8573 */;
-import BadgeId from "BadgeId" /* 8574 */;
-import DEFAULT_PREMIUM_BADGE_ID from "DEFAULT_PREMIUM_BADGE_ID" /* 8579 */;
-import LEGACY_BADGE_ID_MAP from "LEGACY_BADGE_ID_MAP" /* 8580 */;
-import BalanceWidgetMode from "BalanceWidgetMode" /* 8581 */;
+// Module 8193 (items)
+import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;
+import BadgeId from "BadgeId" /* 8184 */;
+import DEFAULT_PREMIUM_BADGE_ID from "DEFAULT_PREMIUM_BADGE_ID" /* 8194 */;
+import LEGACY_BADGE_ID_MAP from "LEGACY_BADGE_ID_MAP" /* 8195 */;
+import BalanceWidgetMode from "BalanceWidgetMode" /* 8196 */;
 import set from "set" /* 2 */;
 
 const getBadgeName = USER_PROFILE_TOOLTIP_DELAY.getBadgeName;

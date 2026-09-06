@@ -1,12 +1,12 @@
-// === Module 11846: initialize ===
+// === Module 12045: initialize ===
 
-// Module 11846 (initialize)
+// Module 12045 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7278 */;
-import result2 from "result" /* 11844 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
+import result2 from "result" /* 12043 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 const Store = initializeDefault.Store;

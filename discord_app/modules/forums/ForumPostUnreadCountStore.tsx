@@ -1,12 +1,12 @@
-// === Module 7640: set ===
+// === Module 7886: set ===
 
-// Module 7640 (set)
+// Module 7886 (set)
 import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "handleThreadCreateOrUpdate" /* 5458 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "generateOldThreadCutoff" /* 4493 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "handleThreadCreateOrUpdate" /* 5507 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "generateOldThreadCutoff" /* 4575 */;
 import set from "set" /* 2 */;
 
 let closure_5 = {};

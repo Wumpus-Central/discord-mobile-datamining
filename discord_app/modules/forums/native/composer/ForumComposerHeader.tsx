@@ -1,17 +1,17 @@
-// === Module 10369: ForumComposerHeader ===
+// === Module 10266: ForumComposerHeader ===
 
-// Module 10369 (ForumComposerHeader)
+// Module 10266 (ForumComposerHeader)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import ForumIcon from "ForumIcon" /* 5042 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import XSmallIcon from "XSmallIcon" /* 5560 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import computeChannelNameDefault from "computeChannelName" /* 4713 */;
+import ForumIcon from "ForumIcon" /* 5088 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import XSmallIcon from "XSmallIcon" /* 5680 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -51,8 +51,8 @@ export default function ForumComposerHeader(height) {
   const items1 = [callback(ForumIcon.ForumIcon, { size: "sm" }), ];
   obj1 = { style: tmp.headerBarText, children: null };
   if ("" === title) {
-    const intl2 = tmp7(1233).intl;
-    title = intl2.string(tmp7(1233).t["7EjFCk"]);
+    const intl2 = tmp7(1114).intl;
+    title = intl2.string(tmp7(1114).t["7EjFCk"]);
   }
   const items2 = [callback(Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(Text.Text, { variant: "text-xs/medium", color: "text-default", children: computeChannelNameDefault(channel) })];
   obj1[1] = items2;
@@ -66,12 +66,12 @@ export default function ForumComposerHeader(height) {
   let tmp6Result = null;
   if (length > 0) {
     const obj2 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, children: null };
-    const intl3 = tmp7(1233).intl;
-    obj2[1] = intl3.string(tmp7(1233).t.yR6HwZ);
+    const intl3 = tmp7(1114).intl;
+    obj2[1] = intl3.string(tmp7(1114).t.yR6HwZ);
     obj2[2] = tmp.button;
     obj2[3] = onGuidelinesPress;
-    obj2[4] = tmp6(tmp7(5029).BookCheckIcon, {});
-    tmp6Result = tmp6(tmp7(5077).PressableOpacity, obj2);
+    obj2[4] = tmp6(tmp7(5075).BookCheckIcon, {});
+    tmp6Result = tmp6(tmp7(5123).PressableOpacity, obj2);
   }
   items[2] = tmp6Result;
   items[3] = callback(closure_4, { style: tmp.headerBarSeparator });

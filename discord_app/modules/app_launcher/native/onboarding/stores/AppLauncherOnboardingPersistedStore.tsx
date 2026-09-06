@@ -1,8 +1,8 @@
-// === Module 11845: initialize ===
+// === Module 12044: initialize ===
 
-// Module 11845 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+// Module 12044 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
 
 let obj = { canShowBotsBanner: false, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: false, timeMs: 0, channelId: "0" };
 let closure_1 = { lastSeenTimeMs: null, triggeredOnboardingContentMetadata: obj };

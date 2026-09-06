@@ -1,7 +1,7 @@
-// === Module 13795: modKey ===
+// === Module 14068: modKey ===
 
-// Module 13795 (modKey)
-import set from "set" /* 1234 */;
+// Module 14068 (modKey)
+import set from "set" /* 1115 */;
 
 if (set.isMac()) {
   let str = "cmd";

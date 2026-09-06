@@ -1,18 +1,18 @@
-// === Module 9417: ActiveTimestamp ===
+// === Module 13008: ActiveTimestamp ===
 
-// Module 9417 (ActiveTimestamp)
-import initialize from "initialize" /* 586 */;
-import setDefault from "set" /* 684 */;
-import ThemesDefault from "Themes" /* 709 */;
-import Text from "Text" /* 4474 */;
-import calculateTimestampDurations from "calculateTimestampDurations" /* 8056 */;
-import GameControllerIcon from "GameControllerIcon" /* 9217 */;
-import TimerIcon from "TimerIcon" /* 9418 */;
+// Module 13008 (ActiveTimestamp)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import setDefault from "set" /* 1090 */;
+import Text from "Text" /* 4556 */;
+import calculateTimestampDurations from "calculateTimestampDurations" /* 8135 */;
+import GameControllerIcon from "GameControllerIcon" /* 9223 */;
+import TimerIcon from "TimerIcon" /* 11605 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1995 */;
+import closure_5 from "_getSystemLocale" /* 2025 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 class ActiveTimestamp {
@@ -41,9 +41,9 @@ function ContentTimestamp(entry) {
   } else {
     obj = { variant: "text-sm/medium", style: null, children: null };
     obj[1] = tmp.text;
-    obj[2] = tmp2(8056).formatEndedTimestamp(entry, tmp6);
-    tmp7Result = tmp7(tmp2(4474).Text, obj);
-    const tmp2Result = tmp2(8056);
+    obj[2] = tmp2(8135).formatEndedTimestamp(entry, tmp6);
+    tmp7Result = tmp7(tmp2(4556).Text, obj);
+    const tmp2Result = tmp2(8135);
   }
   return tmp7Result;
 }
@@ -86,16 +86,16 @@ export const MarathonBadge = function MarathonBadge(entry) {
   entry = entry.entry;
   let obj = calculateTimestampDurations;
   if (obj.isEntryMarathon(entry)) {
-    let tmpResult = tmp(8056);
+    let tmpResult = tmp(8135);
     const colors = ThemesDefault.colors;
     const isEntryActiveResult = tmpResult.isEntryActive(entry);
-    tmpResult = tmp(8056);
+    tmpResult = tmp(8135);
     const marathonDescription = tmpResult.getMarathonDescription(entry);
     const text = marathonDescription.text;
     let tmp9 = null;
     if (null != text) {
       obj = { Icon: null, iconColor: null, text: null, accessibilityLabel: null };
-      obj[0] = tmp(9418).TimerIcon;
+      obj[0] = tmp(11605).TimerIcon;
       obj[1] = tmp6;
       obj[2] = text;
       obj[3] = tmp8;
@@ -111,9 +111,9 @@ export const NewGameBadge = function NewGameBadge(entry) {
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(9420).NewUserIcon;
-    const intl = tmp(1233).intl;
-    obj[1] = intl.string(tmp(1233).t.keY6mW);
+    obj[0] = tmp(13009).NewUserIcon;
+    const intl = tmp(1114).intl;
+    obj[1] = intl.string(tmp(1114).t.keY6mW);
     obj[2] = ThemesDefault.colors.STATUS_POSITIVE;
     tmp3 = callback(BaseBadge, obj);
   }
@@ -127,16 +127,16 @@ export const StreakBadge = function StreakBadge(entry) {
     tmp4 = null;
     if (streakCount >= 2) {
       obj = { Icon: null, text: null, iconColor: null, accessibilityLabel: null };
-      obj[0] = tmp(9422).FlashIcon;
-      const intl = tmp(1233).intl;
+      obj[0] = tmp(13011).FlashIcon;
+      const intl = tmp(1114).intl;
       obj = { days: null };
       obj[0] = streakCount;
-      obj[1] = intl.formatToPlainString(tmp(1233).t["Klie/P"], obj);
+      obj[1] = intl.formatToPlainString(tmp(1114).t["Klie/P"], obj);
       obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
-      const intl2 = tmp(1233).intl;
+      const intl2 = tmp(1114).intl;
       obj1 = { days: null };
       obj1[0] = streakCount;
-      obj[3] = intl2.formatToPlainString(tmp(1233).t.nVLPBf, obj1);
+      obj[3] = intl2.formatToPlainString(tmp(1114).t.nVLPBf, obj1);
       tmp4 = callback(BaseBadge, obj);
     }
   }
@@ -148,11 +148,11 @@ export const TrendingBadge = function TrendingBadge(entry) {
   let tmp4 = null;
   if (null != trendingType) {
     tmp4 = null;
-    if (trendingType !== tmp(9424).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
+    if (trendingType !== tmp(13013).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
       obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(9040).FireIcon;
-      const intl = tmp(1233).intl;
-      obj[1] = intl.string(tmp(1233).t.TsWCdW);
+      obj[0] = tmp(9198).FireIcon;
+      const intl = tmp(1114).intl;
+      obj[1] = intl.string(tmp(1114).t.TsWCdW);
       obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
       tmp4 = callback(BaseBadge, obj);
     }
@@ -164,9 +164,9 @@ export const ResurrectedBadge = function ResurrectedBadge(entry) {
   let tmp3 = null;
   if (null != obj.getResurrectedEntryLastPlayTime(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(9425).RetryIcon;
-    const intl = tmp(1233).intl;
-    obj[1] = intl.string(tmp(1233).t.adnLsB);
+    obj[0] = tmp(10180).RetryIcon;
+    const intl = tmp(1114).intl;
+    obj[1] = intl.string(tmp(1114).t.adnLsB);
     obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
     tmp3 = callback(BaseBadge, obj);
   }
@@ -179,15 +179,15 @@ export const TopGameBadge = function TopGameBadge(entry) {
     return null;
   } else {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(8862).TrophyIcon;
+    obj[0] = tmp(8717).TrophyIcon;
     obj = { children: null };
-    const intl = tmp(1233).intl;
-    const items = [intl.string(tmp(1233).t["/50eHi"]), ": ", ];
-    const intl2 = tmp(1233).intl;
+    const intl = tmp(1114).intl;
+    const items = [intl.string(tmp(1114).t["/50eHi"]), ": ", ];
+    const intl2 = tmp(1114).intl;
     obj1 = { hours: null };
     const _Math = Math;
     obj1[0] = Math.round(entryDuration / setDefault.Seconds.HOUR);
-    items[2] = intl2.format(tmp(1233).t.SDRHgr, obj1);
+    items[2] = intl2.format(tmp(1114).t.SDRHgr, obj1);
     obj[0] = items;
     obj[1] = callback2(closure_8, obj);
     obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;

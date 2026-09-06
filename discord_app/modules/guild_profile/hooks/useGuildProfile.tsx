@@ -1,21 +1,21 @@
-// === Module 9029: useGuildProfile ===
+// === Module 9187: useGuildProfile ===
 
-// Module 9029 (useGuildProfile)
+// Module 9187 (useGuildProfile)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateStart" /* 9027 */;
+import closure_4 from "handleUpdateStart" /* 9065 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");
 
 export const useGuildProfile = function useGuildProfile(guildId) {
   const _require = guildId;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getProfile(closure_0));
   const items1 = [closure_4];
   obj = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
-  const stateFromStores1 = _require(586).useStateFromStores(items1, () => closure_1_4.getFetchStatus(closure_0));
+  const stateFromStores1 = _require(504).useStateFromStores(items1, () => closure_1_4.getFetchStatus(closure_0));
   const items2 = [guildId];
   obj[1] = React.useCallback(callback(() => {
     closure_0 = arg0;

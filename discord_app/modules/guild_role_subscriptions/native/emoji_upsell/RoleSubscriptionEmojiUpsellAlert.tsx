@@ -1,9 +1,9 @@
-// === Module 9154: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 10299: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 9154 (RoleSubscriptionEmojiUpsellAlert)
+// Module 10299 (RoleSubscriptionEmojiUpsellAlert)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import { StaticChannelRoute } from "set" /* 1393 */;
+import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+import { StaticChannelRoute } from "set" /* 1964 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

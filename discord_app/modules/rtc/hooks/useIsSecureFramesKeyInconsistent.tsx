@@ -1,9 +1,9 @@
-// === Module 9877: useIsSecureFramesKeyInconsistent ===
+// === Module 9162: useIsSecureFramesKeyInconsistent ===
 
-// Module 9877 (useIsSecureFramesKeyInconsistent)
+// Module 9162 (useIsSecureFramesKeyInconsistent)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "createRTCConnection" /* 4554 */;
-import closure_4 from "initialize" /* 4568 */;
+import closure_3 from "createRTCConnection" /* 4583 */;
+import closure_4 from "initialize" /* 4599 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx");
@@ -11,7 +11,7 @@ let result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecure
 export const useIsSecureFramesKeyInconsistent = function useIsSecureFramesKeyInconsistent(userId) {
   userId = userId.userId;
   const items = [closure_3, closure_4];
-  return userId(586).useStateFromStores(items, () => {
+  return userId(504).useStateFromStores(items, () => {
     const items = [onAlertOpen, stateFromStores];
     return userId(userId[4]).getIsSecureFramesKeyInconsistent(userId, items);
   });

@@ -1,9 +1,9 @@
-// === Module 16628: trackYouTabAvatarPress ===
+// === Module 16793: trackYouTabAvatarPress ===
 
-// Module 16628 (trackYouTabAvatarPress)
+// Module 16793 (trackYouTabAvatarPress)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import ME from "ME" /* 1074 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");

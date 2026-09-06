@@ -1,11 +1,11 @@
-// === Module 14632: TwoFASetupScan ===
+// === Module 14788: TwoFASetupScan ===
 
-// Module 14632 (TwoFASetupScan)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 14788 (TwoFASetupScan)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -24,29 +24,29 @@ export default function TwoFASetupScan(totpSecret) {
   const items = [totpSecret];
   callback = React.useCallback(() => {
     dependencyMap(true);
-    totpSecret(5990).copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
+    totpSecret(7190).copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
-  let obj = totpSecret(14630);
+  let obj = totpSecret(14786);
   const twoFASetupStyles = obj.useTwoFASetupStyles();
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: items1, children: null };
   items1 = [, ];
   ({ modalHeader: arr2[0], text: arr2[1] } = twoFASetupStyles);
-  const intl = totpSecret(1233).intl;
-  obj[1] = intl.string(totpSecret(1233).t["hg/+aT"]);
-  const items2 = [callback2(totpSecret(1296).LegacyText, obj), , , ];
+  const intl = totpSecret(1114).intl;
+  obj[1] = intl.string(totpSecret(1114).t["hg/+aT"]);
+  const items2 = [callback2(totpSecret(1178).LegacyText, obj), , , ];
   obj1 = { style: items3, children: null };
   items3 = [, ];
   ({ modalBody: arr4[0], text: arr4[1] } = twoFASetupStyles);
-  const intl2 = totpSecret(1233).intl;
-  obj1[1] = intl2.string(totpSecret(1233).t["UQR+Qy"]);
-  items2[1] = callback2(totpSecret(1296).LegacyText, obj1);
-  items2[2] = callback2(totpSecret(4474).Text, { variant: "text-md/bold", style: { textAlign: "center" }, children: totpSecret });
+  const intl2 = totpSecret(1114).intl;
+  obj1[1] = intl2.string(totpSecret(1114).t["UQR+Qy"]);
+  items2[1] = callback2(totpSecret(1178).LegacyText, obj1);
+  items2[2] = callback2(totpSecret(4556).Text, { variant: "text-md/bold", style: { textAlign: "center" }, children: totpSecret });
   const obj2 = { accessibilityRole: "button", onPress: callback, children: null };
   const obj3 = { style: tmp.copy, children: null };
-  const intl3 = totpSecret(1233).intl;
+  const intl3 = totpSecret(1114).intl;
   const string = intl3.string;
-  const t = totpSecret(1233).t;
+  const t = totpSecret(1114).t;
   if (tmp2[0]) {
     let stringResult = string(t.mGZ66D);
   } else {
@@ -54,9 +54,9 @@ export default function TwoFASetupScan(totpSecret) {
   }
   const obj4 = { children: null };
   obj3[1] = stringResult;
-  obj2[2] = callback2(totpSecret(1296).LegacyText, obj3);
-  items2[3] = callback2(totpSecret(5077).PressableOpacity, obj2);
+  obj2[2] = callback2(totpSecret(1178).LegacyText, obj3);
+  items2[3] = callback2(totpSecret(5123).PressableOpacity, obj2);
   obj[2] = items2;
-  obj4[0] = closure_5(totpSecret(5562).SafeAreaPaddingView, obj);
-  return callback2(totpSecret(14626).TwoFASetupModalScreen, obj4);
+  obj4[0] = closure_5(totpSecret(7123).SafeAreaPaddingView, obj);
+  return callback2(totpSecret(14782).TwoFASetupModalScreen, obj4);
 };

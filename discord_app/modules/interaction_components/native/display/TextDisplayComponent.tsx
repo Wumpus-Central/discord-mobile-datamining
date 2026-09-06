@@ -1,11 +1,11 @@
-// === Module 15557: TextDisplayComponent ===
+// === Module 15715: TextDisplayComponent ===
 
-// Module 15557 (TextDisplayComponent)
+// Module 15715 (TextDisplayComponent)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8032 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_6 from "handleConnectionOpen" /* 2011 */;
+import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8111 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

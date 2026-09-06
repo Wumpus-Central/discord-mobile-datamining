@@ -1,14 +1,14 @@
-// === Module 8382: Divider ===
+// === Module 8599: Divider ===
 
-// Module 8382 (Divider)
-import ThemesDefault from "Themes" /* 709 */;
-import ManaContext from "ManaContext" /* 4204 */;
-import context from "context" /* 5607 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 5984 */;
+// Module 8599 (Divider)
+import ThemesDefault from "Themes" /* 576 */;
+import ManaContext from "ManaContext" /* 4271 */;
+import context from "context" /* 5686 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7184 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);
@@ -40,9 +40,9 @@ export default function Divider(outer) {
   let tmp7 = null;
   if (tmp6) {
     obj = { backgroundColor: null };
-    obj[0] = tmp2(4326).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
+    obj[0] = tmp2(4409).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
     tmp7 = obj;
-    const tmp2Result = tmp2(4326);
+    const tmp2Result = tmp2(4409);
   }
   let tmp10Result = null;
   if (!React.useContext(context.RedesignCompatContext)) {

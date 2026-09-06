@@ -1,8 +1,8 @@
-// === Module 1896: shortenAndLocalizeNumber ===
+// === Module 1880: shortenAndLocalizeNumber ===
 
-// Module 1896 (shortenAndLocalizeNumber)
+// Module 1880 (shortenAndLocalizeNumber)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 let c2 = 1000000;
 let result = set.fileFinishedImporting("utils/NumberUtils.tsx");

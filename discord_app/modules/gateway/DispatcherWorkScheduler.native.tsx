@@ -1,11 +1,11 @@
-// === Module 13534: _queueIdleCallback ===
+// === Module 13640: _queueIdleCallback ===
 
-// Module 13534 (_queueIdleCallback)
+// Module 13640 (_queueIdleCallback)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import _trackAppBackgrounded from "_trackAppBackgrounded" /* 13535 */;
-import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS" /* 13533 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
+import _trackAppBackgrounded from "_trackAppBackgrounded" /* 13641 */;
+import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS" /* 13639 */;
 
 ({ DISPATCHER_CALLBACK_MAX_TIME_REMAINING_MS: obj1, NATIVE_WORK_BACKOFF_MS: c3, NATIVE_WORK_DEADLINE_MS: c4, WorkIdleDeadline: c5 } = DISPATCHER_STANDARD_TIMEOUT_MS);
 const AppStates = ME.AppStates;

@@ -1,12 +1,12 @@
-// === Module 16731: RestrictedMessagePreviewHeader ===
+// === Module 16896: RestrictedMessagePreviewHeader ===
 
-// Module 16731 (RestrictedMessagePreviewHeader)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 16896 (RestrictedMessagePreviewHeader)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_5 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 12243 */;
+import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_5 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 12443 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -46,13 +46,13 @@ export default function RestrictedMessagePreviewHeader(channel) {
     obj = {
       user,
       onPressMutualGuild(arg0) {
-        const result = callback(8576).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = callback(8576);
-        callback(6196).transitionToGuild(arg0);
-        const obj2 = callback(6196);
-        callback2(4445).hideActionSheet();
-        const obj3 = callback2(4445);
-        callback2(4724).popWithKey(closure_5);
+        const result = callback(8191).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = callback(8191);
+        callback(7342).transitionToGuild(arg0);
+        const obj2 = callback(7342);
+        callback2(4527).hideActionSheet();
+        const obj3 = callback2(4527);
+        callback2(4763).popWithKey(closure_5);
       }
     };
     obj.openLazy(channel(analyticsLocations[13])(analyticsLocations[12], analyticsLocations.paths), "MutualGuildsActionSheet", obj);

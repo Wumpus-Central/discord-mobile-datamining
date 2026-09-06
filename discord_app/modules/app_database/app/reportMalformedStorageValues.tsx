@@ -1,22 +1,22 @@
-// === Module 17182: reportMalformedStorageValues ===
+// === Module 17348: reportMalformedStorageValues ===
 
-// Module 17182 (reportMalformedStorageValues)
+// Module 17348 (reportMalformedStorageValues)
 import set from "set" /* 2 */;
-import _modDef1205 from "module_1205" /* 1205 */;
-import _mod1956 from "module_1956" /* 1956 */;
+import _modDef1232 from "module_1232" /* 1232 */;
+import _mod1987 from "module_1987" /* 1987 */;
 
 let c3 = false;
 const result = set.fileFinishedImporting("modules/app_database/app/reportMalformedStorageValues.tsx");
 
 export default function reportMalformedStorageValues(arg0) {
   if (!c3) {
-    const Stats = _mod1956.Stats;
+    const Stats = _mod1987.Stats;
     const malformedValueCountResult = Stats.malformedValueCount();
-    const Stats2 = _mod1956.Stats;
+    const Stats2 = _mod1987.Stats;
     const malformedEntryCountResult = Stats2.malformedEntryCount();
     if (!tmp5) {
       c3 = true;
-      let obj = _modDef1205;
+      let obj = _modDef1232;
       obj = { extra: null, fingerprint: null };
       obj = { malformed_value_count: null, malformed_entry_count: null, source: null };
       obj[0] = malformedValueCountResult;

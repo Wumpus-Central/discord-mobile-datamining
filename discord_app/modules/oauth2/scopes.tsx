@@ -1,9 +1,9 @@
-// === Module 9305: items ===
+// === Module 9238: items ===
 
-// Module 9305 (items)
+// Module 9238 (items)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import set2 from "set" /* 8629 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import set2 from "set" /* 8339 */;
 
 let items = [
   () => {
@@ -274,18 +274,18 @@ export const isSocialLayerUmbrellaScope = function isSocialLayerUmbrellaScope(ar
 };
 export const getSecurityMessage = function getSecurityMessage(scopes) {
   if (!scopes.includes(set2.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE)) {
-    if (!scopes.includes(tmp(8629).OAuth2Scopes.SDK_SOCIAL_LAYER)) {
-      if (!scopes.includes(tmp(8629).OAuth2Scopes.MESSAGES_READ)) {
-        if (!scopes.includes(tmp(8629).OAuth2Scopes.DM_CHANNELS_MESSAGES_READ)) {
-          const intl = tmp(1233).intl;
-          let formatResult = intl.format(tmp(1233).t["TeL+Ct"], {});
+    if (!scopes.includes(tmp(8339).OAuth2Scopes.SDK_SOCIAL_LAYER)) {
+      if (!scopes.includes(tmp(8339).OAuth2Scopes.MESSAGES_READ)) {
+        if (!scopes.includes(tmp(8339).OAuth2Scopes.DM_CHANNELS_MESSAGES_READ)) {
+          const intl = tmp(1114).intl;
+          let formatResult = intl.format(tmp(1114).t["TeL+Ct"], {});
         }
       }
-      const intl2 = tmp(1233).intl;
-      formatResult = intl2.format(tmp(1233).t.Soy7jJ, {});
+      const intl2 = tmp(1114).intl;
+      formatResult = intl2.format(tmp(1114).t.Soy7jJ, {});
     }
     return formatResult;
   }
-  const intl3 = tmp(1233).intl;
-  formatResult = intl3.format(tmp(1233).t.o0GMBD, {});
+  const intl3 = tmp(1114).intl;
+  formatResult = intl3.format(tmp(1114).t.o0GMBD, {});
 };

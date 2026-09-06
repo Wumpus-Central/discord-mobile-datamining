@@ -1,9 +1,9 @@
-// === Module 13397: getSubscriptionPlaceholderPatternSource ===
+// === Module 13503: getSubscriptionPlaceholderPatternSource ===
 
-// Module 13397 (getSubscriptionPlaceholderPatternSource)
+// Module 13503 (getSubscriptionPlaceholderPatternSource)
 import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
-import getIllustrationSource from "getIllustrationSource" /* 8930 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import getIllustrationSource from "getIllustrationSource" /* 8233 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getSubscriptionPlaceholderPatternSource = function getSubscriptionP
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(13398);
+      return callback(13504);
     },
     darker() {
-      return callback(13399);
+      return callback(13505);
     },
     light() {
-      return callback(13400);
+      return callback(13506);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useSubscriptionPlaceholderPatternSource = function useSubscriptionP
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13398);
+      return callback(13504);
     },
     darker() {
-      return callback(13399);
+      return callback(13505);
     },
     light() {
-      return callback(13400);
+      return callback(13506);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPa
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13398);
+      return callback(13504);
     },
     darker() {
-      return callback(13399);
+      return callback(13505);
     },
     light() {
-      return callback(13400);
+      return callback(13506);
     }
   };
   obj = {};

@@ -1,8 +1,8 @@
-// === Module 17774: promise ===
+// === Module 17934: promise ===
 
-// Module 17774 (promise)
+// Module 17934 (promise)
 import set from "set" /* 2 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
 
 const MuteUntilSeconds = MAX_FAVORITES.MuteUntilSeconds;
 let result = set.fileFinishedImporting("modules/headless_tasks/android/MuteAction.tsx");

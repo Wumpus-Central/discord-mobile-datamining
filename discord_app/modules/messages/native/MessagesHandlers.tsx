@@ -1,43 +1,43 @@
-// === Module 11368: items ===
+// === Module 11543: items ===
 
-// Module 11368 (items)
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5982 */;
+// Module 11543 (items)
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import closure_7 from "asyncGeneratorStep" /* 5 */;
 import closure_8 from "_slicedToArray" /* 32 */;
-import closure_9 from "initialize" /* 8734 */;
-import closure_10 from "addApplication" /* 4519 */;
-import closure_11 from "set" /* 5964 */;
-import closure_12 from "computeAlertSettings" /* 10189 */;
-import closure_13 from "scheduledEventSort" /* 7281 */;
-import { isGuildScheduledEventActive as closure_14 } from "scheduledEventSort" /* 7281 */;
-import closure_15 from "getCurrentTime" /* 7999 */;
-import closure_16 from "initializeState" /* 7459 */;
-import closure_17 from "processMessage" /* 7350 */;
-import closure_18 from "handleQuickSwitcherUpdate" /* 11206 */;
-import closure_19 from "storeThread" /* 4122 */;
-import closure_20 from "recomputeAffinities" /* 7414 */;
-import closure_21 from "fetchFingerprint" /* 1215 */;
-import closure_22 from "ensureGuildLoaded" /* 1386 */;
-import closure_23 from "updateGiftCode" /* 8460 */;
-import closure_24 from "trackCommunicationDisabled" /* 1991 */;
-import closure_25 from "createGuildRecordFromRust" /* 1908 */;
-import closure_26 from "updateInvite" /* 4462 */;
-import closure_27 from "updateActivities" /* 9450 */;
-import closure_28 from "reinjectEphemerals" /* 4736 */;
-import closure_29 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_30 from "sortActivity" /* 4569 */;
-import closure_31 from "handleConnectionOpen" /* 1980 */;
-import closure_32 from "handleConnectionOpen" /* 4299 */;
-import closure_33 from "filterPlayingActivities" /* 5232 */;
-import closure_34 from "initialize" /* 7593 */;
-import closure_35 from "mergeGuildAvatar" /* 1921 */;
-import { SeparatorAction } from "Changeset" /* 7854 */;
-import ME from "ME" /* 673 */;
-import { InviteTypes } from "InviteSendStates" /* 7492 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
-import { SafetySystemNotificationCtaType as closure_61 } from "SafetyHubView" /* 8709 */;
-import { OpenThreadAnalyticsLocations as closure_62 } from "AbortCodes" /* 1232 */;
+import closure_9 from "initialize" /* 8446 */;
+import closure_10 from "addApplication" /* 4788 */;
+import closure_11 from "set" /* 7164 */;
+import closure_12 from "computeAlertSettings" /* 10080 */;
+import closure_13 from "scheduledEventSort" /* 7526 */;
+import { isGuildScheduledEventActive as closure_14 } from "scheduledEventSort" /* 7526 */;
+import closure_15 from "getCurrentTime" /* 8078 */;
+import closure_16 from "initializeState" /* 7703 */;
+import closure_17 from "processMessage" /* 7595 */;
+import closure_18 from "handleQuickSwitcherUpdate" /* 11345 */;
+import closure_19 from "storeThread" /* 4201 */;
+import closure_20 from "recomputeAffinities" /* 7659 */;
+import closure_21 from "fetchFingerprint" /* 502 */;
+import closure_22 from "ensureGuildLoaded" /* 1957 */;
+import closure_23 from "updateGiftCode" /* 11429 */;
+import closure_24 from "trackCommunicationDisabled" /* 2021 */;
+import closure_25 from "createGuildRecordFromRust" /* 1979 */;
+import closure_26 from "updateInvite" /* 4544 */;
+import closure_27 from "updateActivities" /* 11457 */;
+import closure_28 from "reinjectEphemerals" /* 4781 */;
+import closure_29 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_30 from "sortActivity" /* 4600 */;
+import closure_31 from "handleConnectionOpen" /* 2011 */;
+import closure_32 from "handleConnectionOpen" /* 4381 */;
+import closure_33 from "filterPlayingActivities" /* 5279 */;
+import closure_34 from "initialize" /* 7838 */;
+import closure_35 from "mergeGuildAvatar" /* 1371 */;
+import { SeparatorAction } from "Changeset" /* 7933 */;
+import ME from "ME" /* 1074 */;
+import { InviteTypes } from "InviteSendStates" /* 7736 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
+import { SafetySystemNotificationCtaType as closure_61 } from "SafetyHubView" /* 8419 */;
+import { OpenThreadAnalyticsLocations as closure_62 } from "AbortCodes" /* 1113 */;
 
 const require = arg1;
 let closure_4 = ["messageId"];
@@ -2286,25 +2286,25 @@ class MessagesHandlers {
                 closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(11372).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(11547).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(11372);
+                const obj10 = callback(11547);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
                     c4 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = callback(4734).maybePerformReactiveCheck();
+                    obj1[0] = callback(4773).maybePerformReactiveCheck();
                     return obj1;
                   }
                 }
-                let obj3 = callback(7355);
+                let obj3 = callback(7600);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(7355);
+                obj11 = callback(7600);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2317,9 +2317,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = closure_1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = closure_1_1(8701);
+                obj = closure_1_1(8411);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(8703).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(8413).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }

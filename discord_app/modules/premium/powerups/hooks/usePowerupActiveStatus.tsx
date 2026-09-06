@@ -1,11 +1,11 @@
-// === Module 12299: usePowerupActiveStatus ===
+// === Module 12499: usePowerupActiveStatus ===
 
-// Module 12299 (usePowerupActiveStatus)
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import closure_3 from "calculateAppliedBoosts" /* 4364 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
-import { GuildFeatures } from "ME" /* 673 */;
-import { GAME_SERVER_POWERUP_SKU_ID as closure_9 } from "str11" /* 4366 */;
+// Module 12499 (usePowerupActiveStatus)
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import closure_3 from "calculateAppliedBoosts" /* 4449 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
+import { GuildFeatures } from "ME" /* 1074 */;
+import { GAME_SERVER_POWERUP_SKU_ID as closure_9 } from "str11" /* 4451 */;
 
 const require = arg1;
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: c4, PowerupActiveStatusType: c5, POWERUPS_INCLUDED_IN_LEVEL: closure_6, BOOSTING_TIER_TO_LEVEL_SKU_ID: error } = BoostedGuildTiers);
@@ -109,7 +109,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
             obj1[3] = levelPowerup;
             obj = obj1;
           } else if (hasItem1) {
-            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: false };
             obj2[0] = tmp11.TIER_OVERRIDE_ACTIVATED;
             obj2[1] = skuId;
             obj2[3] = skuId;
@@ -233,7 +233,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
             obj1[3] = levelPowerup;
             obj = obj1;
           } else if (hasItem1) {
-            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+            const obj2 = { type: null, powerup: null, sourceEntitlement: "Array", sourcePowerup: false };
             obj2[0] = tmp11.TIER_OVERRIDE_ACTIVATED;
             obj2[1] = skuId;
             obj2[3] = skuId;

@@ -1,23 +1,23 @@
-// === Module 13165: openLoadingIndicatorDebugBody ===
+// === Module 13267: openLoadingIndicatorDebugBody ===
 
-// Module 13165 (openLoadingIndicatorDebugBody)
-import initialize from "initialize" /* 586 */;
-import ThemesDefault from "Themes" /* 709 */;
-import _modDef4217 from "module_4217" /* 4217 */;
-import Text from "Text" /* 4474 */;
-import _modDef4859 from "module_4859" /* 4859 */;
+// Module 13267 (openLoadingIndicatorDebugBody)
+import initialize from "initialize" /* 504 */;
+import ThemesDefault from "Themes" /* 576 */;
+import _modDef4296 from "module_4296" /* 4296 */;
+import Text from "Text" /* 4556 */;
+import _modDef4905 from "module_4905" /* 4905 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_7 from "_handleConnectionOpen" /* 5230 */;
-import closure_8 from "reinjectEphemerals" /* 4736 */;
-import closure_9 from "handleConnectionOpen" /* 1980 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import closure_11 from "getState" /* 7167 */;
-import { AppStates } from "ME" /* 673 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_7 from "_handleConnectionOpen" /* 5277 */;
+import closure_8 from "reinjectEphemerals" /* 4781 */;
+import closure_9 from "handleConnectionOpen" /* 2011 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
+import closure_11 from "getState" /* 1895 */;
+import { AppStates } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function openLoadingIndicatorDebugBody() {
@@ -47,8 +47,8 @@ function openLoadingIndicatorDebugBody() {
         };
       });
     };
-    _modDef4859.openLazy(obj);
-    const obj2 = _modDef4859;
+    _modDef4905.openLazy(obj);
+    const obj2 = _modDef4905;
   }
 }
 let c4 = importAllResult;
@@ -95,7 +95,7 @@ let closure_18 = importAllResult.memo(() => {
     obj = { variant: "text-md/normal", color: "text-muted", children: null };
     const items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
     obj[2] = items2;
-    tmp4Result = tmp4(tmp(4474).Text, obj);
+    tmp4Result = tmp4(tmp(4556).Text, obj);
   }
   items1[4] = tmp4Result;
   const items3 = [closure_14(closure_15, { children: items1 }), "\n", , , , , ];
@@ -116,7 +116,7 @@ let closure_18 = importAllResult.memo(() => {
     const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj2[2] = items5;
-    tmp4Result = tmp4(tmp(4474).Text, obj2);
+    tmp4Result = tmp4(tmp(4556).Text, obj2);
   }
   items4[4] = tmp4Result;
   items3[2] = closure_14(closure_15, { children: items4 });
@@ -138,7 +138,7 @@ let closure_18 = importAllResult.memo(() => {
     const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj4[2] = items7;
-    tmp4Result1 = tmp4(tmp(4474).Text, obj4);
+    tmp4Result1 = tmp4(tmp(4556).Text, obj4);
   }
   items6[4] = tmp4Result1;
   items3[4] = closure_14(closure_15, { children: items6 });
@@ -214,10 +214,10 @@ export const useShouldChannelShowLoadingIndicator = function useShouldChannelSho
 };
 export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndicator() {
   const tmp = callback4();
-  let obj = stateFromStores(586);
+  let obj = stateFromStores(504);
   let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = stateFromStores(586);
+  obj1 = stateFromStores(504);
   const items1 = [closure_10];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
@@ -234,7 +234,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return isStaffResult;
   });
-  let obj2 = stateFromStores(4217);
+  let obj2 = stateFromStores(4296);
   const fn = function t() {
     let obj = { transform: null };
     if (stateFromStores) {
@@ -262,18 +262,18 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return tmp7;
   };
-  obj = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4217).withRepeat, withSequence: stateFromStores(4217).withSequence, withTiming: stateFromStores(4479).withTiming, Easing: stateFromStores(4217).Easing };
+  obj = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4296).withRepeat, withSequence: stateFromStores(4296).withSequence, withTiming: stateFromStores(4561).withTiming, Easing: stateFromStores(4296).Easing };
   fn.__closure = obj;
   fn.__workletHash = 17454673879926;
   fn.__initData = closure_19;
   obj = { style: tmp.container, children: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const items2 = [tmp.pulse, animatedStyle];
-  const items3 = [callback2(_modDef4217.View, { style: items2 }), ];
+  const items3 = [callback2(_modDef4296.View, { style: items2 }), ];
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = stateFromStores(1233).intl;
-  obj1[2] = intl.string(stateFromStores(1233).t.JwIJMV);
-  items3[1] = callback2(stateFromStores(4474).Text, obj1);
+  const intl = stateFromStores(1114).intl;
+  obj1[2] = intl.string(stateFromStores(1114).t.JwIJMV);
+  items3[1] = callback2(stateFromStores(4556).Text, obj1);
   obj[1] = items3;
   const tmp8 = callback3(View, obj);
   let tmp7Result = tmp8;
@@ -281,7 +281,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     obj2 = { onPress: null, children: null };
     obj2[0] = openLoadingIndicatorDebugBody;
     obj2[1] = tmp8;
-    tmp7Result = callback2(stateFromStores(5077).PressableOpacity, obj2);
+    tmp7Result = callback2(stateFromStores(5123).PressableOpacity, obj2);
   }
   return tmp7Result;
 };

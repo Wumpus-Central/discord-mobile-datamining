@@ -1,10 +1,10 @@
-// === Module 9728: sanitizeChannelName ===
+// === Module 9741: sanitizeChannelName ===
 
-// Module 9728 (sanitizeChannelName)
+// Module 9741 (sanitizeChannelName)
 import set from "set" /* 2 */;
-import set2 from "set" /* 689 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4676 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6130 */;
+import set2 from "set" /* 1094 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4715 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7274 */;
 
 const result = set.fileFinishedImporting("modules/channel/sanitizeChannelName.tsx");
 

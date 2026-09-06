@@ -1,12 +1,12 @@
-// === Module 6155: resolveGoreSettingWithDefaults ===
+// === Module 7301: resolveGoreSettingWithDefaults ===
 
-// Module 6155 (resolveGoreSettingWithDefaults)
-import create from "create" /* 1305 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4179 */;
+// Module 7301 (resolveGoreSettingWithDefaults)
+import create from "create" /* 1187 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7299 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import { HelpdeskArticles } from "ME" /* 673 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import { HelpdeskArticles } from "ME" /* 1074 */;
 
 require = arg1;
 function resolveGoreSettingWithDefaults(isFriend) {
@@ -34,10 +34,10 @@ function resolveGoreSettingWithDefaults(isFriend) {
     }
     if (isDm) {
       if (!flag) {
-        let BLUR2 = tmp4(1305).ExplicitContentRedaction.BLOCK;
+        let BLUR2 = tmp4(1187).ExplicitContentRedaction.BLOCK;
       }
     }
-    ExplicitContentRedaction = tmp4(1305).ExplicitContentRedaction;
+    ExplicitContentRedaction = tmp4(1187).ExplicitContentRedaction;
     BLUR2 = ExplicitContentRedaction.BLUR;
   } else {
     let nsfwAllowed;
@@ -54,10 +54,10 @@ function resolveGoreSettingWithDefaults(isFriend) {
         flag6 = false;
       }
       if (!flag5) {
-        const ExplicitContentRedaction3 = tmp4(1305).ExplicitContentRedaction;
+        const ExplicitContentRedaction3 = tmp4(1187).ExplicitContentRedaction;
         let BLUR = flag5 ? ExplicitContentRedaction3.BLOCK : ExplicitContentRedaction3.BLUR;
       }
-      BLUR = tmp4(1305).ExplicitContentRedaction.BLUR;
+      BLUR = tmp4(1187).ExplicitContentRedaction.BLUR;
     } else {
       let flag3 = isDm;
       if (isDm === undefined) {
@@ -69,11 +69,11 @@ function resolveGoreSettingWithDefaults(isFriend) {
       }
       if (flag3) {
         if (flag4) {
-          let SHOW = tmp4(1305).ExplicitContentRedaction.SHOW;
+          let SHOW = tmp4(1187).ExplicitContentRedaction.SHOW;
         }
         return SHOW;
       }
-      const ExplicitContentRedaction2 = tmp4(1305).ExplicitContentRedaction;
+      const ExplicitContentRedaction2 = tmp4(1187).ExplicitContentRedaction;
       SHOW = flag3 ? ExplicitContentRedaction2.BLOCK : ExplicitContentRedaction2.SHOW;
     }
   }

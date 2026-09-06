@@ -1,10 +1,10 @@
-// === Module 17179: handleInteraction ===
+// === Module 17345: handleInteraction ===
 
-// Module 17179 (handleInteraction)
-import initializeDefault from "initialize" /* 5495 */;
-import maybeFetchTopEmojisByGuild from "maybeFetchTopEmojisByGuild" /* 9122 */;
-import closure_2 from "handleConnectionOpen" /* 4299 */;
-import { EmojiInteractionPoint } from "set" /* 1924 */;
+// Module 17345 (handleInteraction)
+import initializeDefault from "initialize" /* 7118 */;
+import maybeFetchTopEmojisByGuild from "maybeFetchTopEmojisByGuild" /* 10278 */;
+import closure_2 from "handleConnectionOpen" /* 4381 */;
+import { EmojiInteractionPoint } from "set" /* 1374 */;
 
 require = arg1;
 initializeDefault;

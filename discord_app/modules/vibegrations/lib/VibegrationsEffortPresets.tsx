@@ -1,9 +1,9 @@
-// === Module 16436: items ===
+// === Module 16599: items ===
 
-// Module 16436 (items)
+// Module 16599 (items)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 3500 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 3547 */;
 
 let obj = {
   model: "gpt-5.6-luna",
@@ -24,7 +24,7 @@ const items = [
     }
   },
   {
-    model: "claude-fable-5",
+    model: "claude-fable-5-1",
     thinking: "high",
     summary() {
       const intl = getSystemLocale.intl;
@@ -73,7 +73,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (label == null) {
     label = model;
   }
-  let tmp3 = model(16437).THINKING_LABELS[thinking];
+  let tmp3 = model(16600).THINKING_LABELS[thinking];
   if (tmp3 == null) {
     tmp3 = thinking;
   }

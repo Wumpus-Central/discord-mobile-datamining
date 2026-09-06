@@ -1,11 +1,11 @@
-// === Module 11311: set ===
+// === Module 11487: set ===
 
-// Module 11311 (set)
+// Module 11487 (set)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "initializeState" /* 7459 */;
-import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9020 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_5 from "initializeState" /* 7703 */;
+import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 11196 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 2 */;
 
@@ -25,7 +25,7 @@ class QuestContentImpression {
       const questPlacementFromQuestContent = obj.getQuestPlacementFromQuestContent(obj.questContent);
       let result = null != questPlacementFromQuestContent;
       if (result) {
-        result = obj(closure_1_2[8]).isBillableQuestContent(obj.questContent);
+        result = obj(closure_1_2[8]).isBillableQuestContent(tmp3.questContent, tmp3.entity.adCreativeType);
         const tmpResult = obj(closure_1_2[8]);
       }
       if (result) {
@@ -42,7 +42,7 @@ class QuestContentImpression {
         result = !closure_1_11.has("" + adCreativeId + "_" + questPlacementFromQuestContent);
       }
       if (result) {
-        result = obj(closure_1_2[8]).isBillableQuestContent(obj.questContent);
+        result = obj(closure_1_2[8]).isBillableQuestContent(tmp3.questContent, tmp3.entity.adCreativeType);
         const tmpResult = obj(closure_1_2[8]);
       }
       return result;
@@ -112,11 +112,11 @@ class QuestContentImpression {
               closure_0 = undefined;
               obj3 = undefined;
               obj4 = undefined;
-              const obj10 = closure_1_0(7485);
+              const obj10 = closure_1_0(7729);
               obj4 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj10.getAdUser(closure_1_0(7484).getQuestContentName(closure_1_0.questContent));
+              obj1[0] = obj10.getAdUser(closure_1_0(7728).getQuestContentName(closure_1_0.questContent));
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -138,7 +138,7 @@ class QuestContentImpression {
             obj4[2] = closure_0.triggeredByStatusChange;
             let advertisingId = null;
             if (null != closure_0) {
-              obj = closure_1_0(1234);
+              obj = closure_1_0(1115);
               advertisingId = null;
               if (obj.isIOS()) {
                 advertisingId = closure_1_0.advertisingId;
@@ -147,15 +147,15 @@ class QuestContentImpression {
             obj4[3] = advertisingId;
             let advertisingId1 = null;
             if (null != closure_1_0) {
-              obj1 = closure_1_0(1234);
+              obj1 = closure_1_0(1115);
               advertisingId1 = null;
               if (obj1.isAndroid()) {
                 advertisingId1 = closure_1_0.advertisingId;
               }
             }
             obj4[4] = advertisingId1;
-            let merged = Object.assign(closure_1_1(7432)());
-            obj2 = closure_1_0(9018);
+            let merged = Object.assign(closure_1_1(7677)());
+            obj2 = closure_1_0(11194);
             let merged1 = Object.assign(obj2.getBrandSafetyContext(closure_1_0.questContent));
             const adContentIds = closure_1_0.entity.adContentIds;
             const item = adContentIds.forEach((adCreativeId) => {
@@ -180,7 +180,7 @@ class QuestContentImpression {
                     tmpResult.markAdContentSeen(tmp(tmp2[9]).AdCreativeType.QUEST, items);
                   }
                 }
-                const result = tmp(tmp2[8]).isBillableQuestContent(obj1.questContent);
+                const result = tmp(tmp2[8]).isBillableQuestContent(obj1.questContent, obj1.entity.adCreativeType);
                 const AdUserActionType = tmp(tmp2[20]).AdUserActionType;
                 obj = { type: null, surfaceId: null, sourceQuestContent: null, impressionId: null, triggeredByStatusChange: null, minViewTimeSeconds: null, minViewportPercentage: null, isQuestEnrollmentBlocked: null, shouldExtendSession: null, adUser: null, questContentPosition: null, questContentRowIndex: null, trackGuildAndChannelMetadata: null };
                 obj[0] = result ? AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION : AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION;
@@ -548,7 +548,7 @@ class QuestContentImpression {
     obj.migrateQuestContentLoadedToCaptureAdUserAction = obj2.shouldMigrateToAdAnalyticsInterface(require("apexExperiment").AdAnalyticsInterfaceExperimentStep.STEP_1_LOADED, "quest_content_impression");
     obj3 = require("apexExperiment");
     obj4 = require("getQuestDeliveryDataForPlacement");
-    result = obj4.isBillableQuestContent(questContent);
+    result = obj4.isBillableQuestContent(questContent, adCreativeType);
     AdAnalyticsInterfaceExperimentStep = require("apexExperiment").AdAnalyticsInterfaceExperimentStep;
     obj.migrateQuestContentViewedToCaptureAdUserAction = obj3.shouldMigrateToAdAnalyticsInterface(result ? AdAnalyticsInterfaceExperimentStep.STEP_5_VIEWED_IMPRESSION : AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION, "quest_content_impression");
     if (adCreativeType === require("AdCreativeType").AdCreativeType.QUEST) {

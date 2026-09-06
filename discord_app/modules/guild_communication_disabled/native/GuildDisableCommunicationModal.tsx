@@ -1,6 +1,6 @@
-// === Module 11641: GuildDisableCommunicationModal ===
+// === Module 11840: GuildDisableCommunicationModal ===
 
-// Module 11641 (GuildDisableCommunicationModal)
+// Module 11840 (GuildDisableCommunicationModal)
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

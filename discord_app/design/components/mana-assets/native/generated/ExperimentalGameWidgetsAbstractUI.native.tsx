@@ -1,10 +1,10 @@
-// === Module 6543: ExperimentalGameWidgetsAbstractUI ===
+// === Module 5977: ExperimentalGameWidgetsAbstractUI ===
 
-// Module 6543 (ExperimentalGameWidgetsAbstractUI)
+// Module 5977 (ExperimentalGameWidgetsAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6544 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5978 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ExperimentalGameWidgetsAbstractUI.native.tsx");

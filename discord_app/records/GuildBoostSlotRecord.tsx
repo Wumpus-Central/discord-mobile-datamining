@@ -1,7 +1,7 @@
-// === Module 4375: createFromServer ===
+// === Module 4460: createFromServer ===
 
-// Module 4375 (createFromServer)
-import toJSDefault from "toJS" /* 1935 */;
+// Module 4460 (createFromServer)
+import toJSDefault from "toJS" /* 1386 */;
 
 toJSDefault;
 let GuildBoostSlotRecord;

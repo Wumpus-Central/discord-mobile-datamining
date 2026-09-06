@@ -1,17 +1,17 @@
-// === Module 13258: fetchCurrentAppIcon ===
+// === Module 13363: fetchCurrentAppIcon ===
 
-// Module 13258 (fetchCurrentAppIcon)
+// Module 13363 (fetchCurrentAppIcon)
 import timestampDefault from "timestamp" /* 3 */;
-import isMetaQuest from "isMetaQuest" /* 1623 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4946 */;
-import openUserSettings from "openUserSettings" /* 6255 */;
+import isMetaQuest from "isMetaQuest" /* 1608 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
+import openUserSettings from "openUserSettings" /* 7382 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
-import items from "items" /* 8191 */;
-import ME from "ME" /* 673 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
-import set from "set" /* 1234 */;
+import items from "items" /* 9323 */;
+import ME from "ME" /* 1074 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
+import set from "set" /* 1115 */;
 
 require = arg1;
 function fetchCurrentAppIcon() {
@@ -132,10 +132,10 @@ function _setAppIcon() {
       if (1 === tmp8) {
         c5 = 0;
         dependencyMap = closure_4;
-        obj1 = callback2(4194);
+        obj1 = callback2(4259);
         const obj2 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
-        const intl = callback(1233).intl;
-        obj2[1] = intl.string(callback(1233).t["c76eo/"]);
+        const intl = callback(1114).intl;
+        obj2[1] = intl.string(callback(1114).t["c76eo/"]);
         obj1.open(obj2);
         const _HermesInternal = HermesInternal;
         logger.warn("Error changing users app icon: " + dependencyMap);
@@ -144,19 +144,19 @@ function _setAppIcon() {
         c7 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        callback2(706).dispatch({ type: "APP_ICON_UPDATED" });
-        const obj8 = callback2(706);
+        callback2(573).dispatch({ type: "APP_ICON_UPDATED" });
+        const obj8 = callback2(573);
         obj3 = { icon_id: null, user_premium_tier: null, icon_premium_tier: null };
         obj3[0] = callback;
         obj3[1] = callback2;
         let TIER_2 = null;
-        if (callback !== callback(8192).FreemiumAppIconIds.DEFAULT) {
+        if (callback !== callback(9324).FreemiumAppIconIds.DEFAULT) {
           TIER_2 = TIER_2.TIER_2;
         }
         obj3[2] = TIER_2;
-        callback2(695).track(constants.APP_ICON_UPDATED, obj3);
+        callback2(1242).track(constants.APP_ICON_UPDATED, obj3);
         c5 = 0;
-        const obj9 = callback2(695);
+        const obj9 = callback2(1242);
       }
       c5 = 0;
       return arg1;
@@ -180,7 +180,7 @@ if (set.isAndroid()) {
   DCDIconManager = require("get ActivityIndicator").NativeModules.DCDIconManager;
 }
 function useCurrentAppIcon() {
-  const tmp = callback(React.useState(_require(8192).FreemiumAppIconIds.DEFAULT), 2);
+  const tmp = callback(React.useState(_require(9324).FreemiumAppIconIds.DEFAULT), 2);
   _require = tmp[1];
   importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -240,7 +240,7 @@ function useCurrentAppIcon() {
   }), []);
   useMountLayoutEffectDefault(() => {
     callback();
-    const subscription = callback(706).subscribe("APP_ICON_UPDATED", callback);
+    const subscription = callback(573).subscribe("APP_ICON_UPDATED", callback);
     return () => {
       closure_1_1(closure_1_2[12]).unsubscribe("APP_ICON_UPDATED", closure_1);
     };
@@ -262,7 +262,7 @@ export const setAppIcon = function setAppIcon(DEFAULT, premiumType) {
   return applyArgumentsResult;
 };
 export const useAppIcons = function useAppIcons() {
-  const currentAppIcon = callback(React.useState(_require(8192).FreemiumAppIconIds.DEFAULT), 2);
+  const currentAppIcon = callback(React.useState(_require(9324).FreemiumAppIconIds.DEFAULT), 2);
   _require = currentAppIcon[1];
   importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -322,7 +322,7 @@ export const useAppIcons = function useAppIcons() {
   }), []);
   useMountLayoutEffectDefault(() => {
     callback();
-    const subscription = callback(706).subscribe("APP_ICON_UPDATED", callback);
+    const subscription = callback(573).subscribe("APP_ICON_UPDATED", callback);
     return () => {
       closure_1_1(closure_1_2[12]).unsubscribe("APP_ICON_UPDATED", closure_1);
     };
@@ -370,7 +370,7 @@ export const useAppIcons = function useAppIcons() {
   }), []);
   useMountLayoutEffectDefault(() => {
     dependencyMap();
-    const subscription = callback(706).subscribe("APP_ICON_UPDATED", dependencyMap);
+    const subscription = callback(573).subscribe("APP_ICON_UPDATED", dependencyMap);
     return () => {
       closure_1_1(closure_1_2[12]).unsubscribe("APP_ICON_UPDATED", closure_2);
     };

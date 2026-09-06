@@ -1,9 +1,9 @@
-// === Module 10340: setNextFavoritesGuildViewSource ===
+// === Module 10233: setNextFavoritesGuildViewSource ===
 
-// Module 10340 (setNextFavoritesGuildViewSource)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import closure_3 from "handleConnectionOpen" /* 4299 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+// Module 10233 (setNextFavoritesGuildViewSource)
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import closure_3 from "handleConnectionOpen" /* 4381 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 const require = arg1;
 let manual_browsing = "manual_browsing";

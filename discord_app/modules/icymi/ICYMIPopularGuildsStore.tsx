@@ -1,9 +1,9 @@
-// === Module 16321: initialize ===
+// === Module 16483: initialize ===
 
-// Module 16321 (initialize)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
+// Module 16483 (initialize)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
 
 const require = arg1;
 let closure_3 = [];

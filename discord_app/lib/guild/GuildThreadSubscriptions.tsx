@@ -1,8 +1,8 @@
-// === Module 6142: reset ===
+// === Module 7287: reset ===
 
-// Module 6142 (reset)
+// Module 7287 (reset)
 import set2 from "set" /* 2 */;
-import privDefault from "priv" /* 1400 */;
+import privDefault from "priv" /* 1437 */;
 
 let result = set2.fileFinishedImporting("lib/guild/GuildThreadSubscriptions.tsx");
 class GuildThreadSubscriptions {

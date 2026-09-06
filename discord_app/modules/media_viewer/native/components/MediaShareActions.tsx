@@ -1,15 +1,15 @@
-// === Module 8624: useMediaShareActions ===
+// === Module 8334: useMediaShareActions ===
 
-// Module 8624 (useMediaShareActions)
-import ActionSheet from "ActionSheet" /* 5998 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 6000 */;
+// Module 8334 (useMediaShareActions)
+import ActionSheet from "ActionSheet" /* 7198 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "filterStaffGuild" /* 8625 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "reinjectEphemerals" /* 4736 */;
-import closure_7 from "messages" /* 8650 */;
-import ME from "ME" /* 673 */;
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_11 } from "USER_SETTING_ACTION_SHEET_KEY" /* 7356 */;
+import closure_4 from "filterStaffGuild" /* 8335 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "reinjectEphemerals" /* 4781 */;
+import closure_7 from "messages" /* 8360 */;
+import ME from "ME" /* 1074 */;
+import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_11 } from "USER_SETTING_ACTION_SHEET_KEY" /* 7601 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -100,7 +100,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = tmp8.attachmentId;
         if (null != attachmentId) {
-          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: 75 };
+          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
           obj[0] = tmp3;
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -111,7 +111,7 @@ function useMediaShareActions(source) {
         }
       } else {
         obj1 = source(tmp[18]);
-        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: 75 };
+        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
         obj1[0] = tmp3;
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [tmp8.mediaIndex];
@@ -231,9 +231,9 @@ export default function MediaShareActionSheet(source) {
     children: useMediaShareActions(obj).map((IconComponent) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(6000).ActionSheetRow.Icon, obj);
+      obj[0] = callback2(callback(7200).ActionSheetRow.Icon, obj);
       ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(6000).ActionSheetRow, obj, arg1);
+      return callback2(callback(7200).ActionSheetRow, obj, arg1);
     })
   };
   obj[0] = jsx(ActionSheetRowIcon.ActionSheetRow.Group, {
@@ -241,9 +241,9 @@ export default function MediaShareActionSheet(source) {
     children: useMediaShareActions(obj).map((IconComponent) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(6000).ActionSheetRow.Icon, obj);
+      obj[0] = callback2(callback(7200).ActionSheetRow.Icon, obj);
       ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(6000).ActionSheetRow, obj, arg1);
+      return callback2(callback(7200).ActionSheetRow, obj, arg1);
     })
   });
   return jsx(ActionSheet.ActionSheet, {
@@ -251,9 +251,9 @@ export default function MediaShareActionSheet(source) {
     children: useMediaShareActions(obj).map((IconComponent) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(6000).ActionSheetRow.Icon, obj);
+      obj[0] = callback2(callback(7200).ActionSheetRow.Icon, obj);
       ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(6000).ActionSheetRow, obj, arg1);
+      return callback2(callback(7200).ActionSheetRow, obj, arg1);
     })
   });
 };

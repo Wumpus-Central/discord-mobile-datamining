@@ -1,15 +1,15 @@
-// === Module 11045: PremiumGiftDMSuccessBody ===
+// === Module 11074: PremiumGiftDMSuccessBody ===
 
-// Module 11045 (PremiumGiftDMSuccessBody)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10702 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10827 */;
+// Module 11074 (PremiumGiftDMSuccessBody)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10699 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10830 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);

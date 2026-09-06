@@ -1,10 +1,10 @@
-// === Module 6084: handleUserSettingsStoreUpdate ===
+// === Module 7228: handleUserSettingsStoreUpdate ===
 
-// Module 6084 (handleUserSettingsStoreUpdate)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_1 from "_getSystemLocale" /* 1995 */;
-import closure_2 from "fetchFingerprint" /* 1215 */;
+// Module 7228 (handleUserSettingsStoreUpdate)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import closure_1 from "_getSystemLocale" /* 2025 */;
+import closure_2 from "fetchFingerprint" /* 502 */;
 import set from "set" /* 2 */;
 
 function handleUserSettingsStoreUpdate() {
@@ -130,17 +130,33 @@ prototype["getGuildIdFromApplicationId"] = function getGuildIdFromApplicationId(
   return tmp;
 };
 prototype["getApplicationIdFromGuildId"] = function getApplicationIdFromGuildId(id) {
-  let tmp;
   if (null != id) {
-    tmp = dependencyMap5[id];
+    let tmp2 = dependencyMap5[id];
+    if (tmp2 == null) {
+      let applicationId;
+      if (dependencyMap[id] != null) {
+        const storefront = tmp4.storefront;
+        if (storefront != null) {
+          applicationId = storefront.applicationId;
+        }
+      }
+      tmp2 = applicationId;
+    }
+    return tmp2;
   }
-  return tmp;
 };
 prototype["getConfigFetchState"] = function getConfigFetchState() {
   return closure_15;
 };
 prototype["getStorefrontApplicationIds"] = function getStorefrontApplicationIds() {
   return set1;
+};
+prototype["hasStorefrontForApplicationId"] = function hasStorefrontForApplicationId(applicationIdFromGuildId) {
+  let hasItem = null != applicationIdFromGuildId;
+  if (hasItem) {
+    hasItem = set1.has(applicationIdFromGuildId);
+  }
+  return hasItem;
 };
 prototype["getStorefrontGuildIds"] = function getStorefrontGuildIds() {
   return set2;
@@ -392,7 +408,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefa
       const merged7 = Object.assign(obj9);
       obj9 = obj5;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "Boolean" };
+      obj = { state: "error", fetchedAt: null, storefront: "r" };
       const _Date = Date;
       obj[1] = Date.now();
       if (null != guildId) {

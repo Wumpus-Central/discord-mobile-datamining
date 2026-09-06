@@ -1,10 +1,10 @@
-// === Module 16716: useSortedMessageRequests ===
+// === Module 16881: useSortedMessageRequests ===
 
-// Module 16716 (useSortedMessageRequests)
+// Module 16881 (useSortedMessageRequests)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "processChannel" /* 6075 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import closure_5 from "processChannel" /* 7219 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_request/hooks/useSortedMessageRequests.tsx");

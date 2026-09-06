@@ -1,17 +1,17 @@
-// === Module 9645: ModeratorViewOverlay ===
+// === Module 9659: ModeratorViewOverlay ===
 
-// Module 9645 (ModeratorViewOverlay)
-import ThemesDefault from "Themes" /* 709 */;
-import _modDef4217 from "module_4217" /* 4217 */;
-import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 10015 */;
-import JoinStageViewDefault from "JoinStageView" /* 10057 */;
-import RootThemeContextProvider from "RootThemeContextProvider" /* 10184 */;
+// Module 9659 (ModeratorViewOverlay)
+import ThemesDefault from "Themes" /* 576 */;
+import _modDef4296 from "module_4296" /* 4296 */;
+import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 9898 */;
+import JoinStageViewDefault from "JoinStageView" /* 9940 */;
+import RootThemeContextProvider from "RootThemeContextProvider" /* 10075 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { ThemeTypes } from "sum" /* 502 */;
+import { ThemeTypes } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function ModeratorViewOverlay(channel) {
@@ -77,7 +77,7 @@ function JoinStageOverlay(channel) {
   const tmp = callback(React.useState(false), 2);
   first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(4217);
+  let obj = first(4296);
   const fn = function s() {
     let obj = first(closure_1_2[7]);
     let num = 0;
@@ -87,7 +87,7 @@ function JoinStageOverlay(channel) {
     obj = { opacity: obj.withSpring(num, closure_1_11) };
     return obj;
   };
-  obj = { withSpring: first(4928).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
+  obj = { withSpring: first(4974).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
   fn.__closure = obj;
   fn.__workletHash = 1929951426580;
   fn.__initData = closure_15;
@@ -104,7 +104,7 @@ function JoinStageOverlay(channel) {
   const items = [closure_5.absoluteFill, { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800 }, animatedStyle];
   obj[0] = items;
   obj[1] = callback2(JoinStageViewDefault, { channel: channel.channel });
-  return callback2(_modDef4217.View, obj);
+  return callback2(_modDef4296.View, obj);
 }
 function StagePromptWrapper(channel) {
   return callback2(RootThemeContextProvider.DisableCustomTheme, { children: callback2(StagePromptInner, { channel: channel.channel }) });

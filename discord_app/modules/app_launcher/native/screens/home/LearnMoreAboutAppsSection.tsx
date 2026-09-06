@@ -1,17 +1,17 @@
-// === Module 11896: LearnMoreAboutAppsSection ===
+// === Module 12095: LearnMoreAboutAppsSection ===
 
-// Module 11896 (LearnMoreAboutAppsSection)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5077 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8448 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11897 */;
+// Module 12095 (LearnMoreAboutAppsSection)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import PressableBase from "PressableBase" /* 5123 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9409 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12096 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 673 */;
+import { HelpdeskArticles } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -30,8 +30,8 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 export default function LearnMoreAboutAppsSection(visible) {
   const tmp = callback3();
   const callback = React.useCallback(() => {
-    const obj = callback(4190);
-    obj.openURL(callback(1994).getAppsSupportURL(constants.APPS_LEARN_MORE));
+    const obj = callback(4255);
+    obj.openURL(callback(2024).getAppsSupportURL(constants.APPS_LEARN_MORE));
   }, []);
   const intl = getSystemLocale.intl;
   const stringResult = intl.string(getSystemLocale.t["kw8/Ec"]);

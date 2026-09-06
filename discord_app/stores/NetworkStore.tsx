@@ -1,11 +1,11 @@
-// === Module 4574: handleConnectionInfoChange ===
+// === Module 4609: handleConnectionInfoChange ===
 
-// Module 4574 (handleConnectionInfoChange)
+// Module 4609 (handleConnectionInfoChange)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import awaitOnlineDefault from "awaitOnline" /* 1472 */;
-import ME from "ME" /* 673 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import awaitOnlineDefault from "awaitOnline" /* 1461 */;
+import ME from "ME" /* 1074 */;
 
 function handleConnectionInfoChange(type) {
   if (null != type.type) {

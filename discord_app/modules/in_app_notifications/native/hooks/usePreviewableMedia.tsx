@@ -1,18 +1,18 @@
-// === Module 10238: VoiceMessageIcon ===
+// === Module 10131: VoiceMessageIcon ===
 
-// Module 10238 (VoiceMessageIcon)
-import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 4197 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4671 */;
-import inlineStyles from "inlineStyles" /* 8254 */;
-import inlineStylesDefault from "inlineStyles" /* 8254 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 10239 */;
-import WaveformIcon from "WaveformIcon" /* 10242 */;
+// Module 10131 (VoiceMessageIcon)
+import ThemesDefault from "Themes" /* 576 */;
+import map from "map" /* 4262 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4710 */;
+import inlineStyles from "inlineStyles" /* 8453 */;
+import inlineStylesDefault from "inlineStyles" /* 8453 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 10132 */;
+import WaveformIcon from "WaveformIcon" /* 10135 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function VoiceMessageIcon() {
@@ -76,7 +76,7 @@ function getBasePreviewableMedia(arg0) {
           obj[3] = str7;
           let arr = items.push(obj);
         } else {
-          let tmp8Result = tmp8(4671);
+          let tmp8Result = tmp8(4710);
           let tmp10 = filename;
           if (tmp8Result.isVideoFile(tmp7)) {
             obj1 = { id: null, type: null, media: null, parentType: null };
@@ -93,7 +93,7 @@ function getBasePreviewableMedia(arg0) {
             obj1[3] = str6;
             let arr1 = items.push(obj1);
           } else {
-            tmp8Result = tmp8(4671);
+            tmp8Result = tmp8(4710);
             let tmp11 = filename;
             let push = items.push;
             let obj2 = { id: null, type: null, media: null, icon: null, parentType: null };
@@ -106,7 +106,7 @@ function getBasePreviewableMedia(arg0) {
               obj2[1] = tmp13.AUDIO;
               obj2[2] = tmp6;
               let tmp17 = callback;
-              obj2[3] = callback(tmp8(10239).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
+              obj2[3] = callback(tmp8(10132).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
               let str5 = null;
               if (isForward) {
                 str5 = "forward";
@@ -122,7 +122,7 @@ function getBasePreviewableMedia(arg0) {
               let obj3 = { size: "lg", color: null };
               let tmp15 = importDefault;
               obj3[1] = ThemesDefault.colors.ICON_SUBTLE;
-              obj2[3] = callback(tmp8(10244).FileIcon, obj3);
+              obj2[3] = callback(tmp8(10137).FileIcon, obj3);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";

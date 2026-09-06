@@ -1,6 +1,6 @@
-// === Module 16788: NativeAPNGPreloadModule ===
+// === Module 16953: NativeAPNGPreloadModule ===
 
-// Module 16788 (NativeAPNGPreloadModule)
+// Module 16953 (NativeAPNGPreloadModule)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

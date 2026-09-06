@@ -1,6 +1,6 @@
-// === Module 1962: TableId ===
+// === Module 1993: TableId ===
 
-// Module 1962 (TableId)
+// Module 1993 (TableId)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/types/index.tsx");

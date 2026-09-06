@@ -1,13 +1,13 @@
-// === Module 7652: withErrorHandling ===
+// === Module 7898: withErrorHandling ===
 
-// Module 7652 (withErrorHandling)
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 7653 */;
-import prototype from "prototype" /* 7654 */;
-import maybeMarkSeen from "maybeMarkSeen" /* 7655 */;
+// Module 7898 (withErrorHandling)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 7899 */;
+import prototype from "prototype" /* 7900 */;
+import maybeMarkSeen from "maybeMarkSeen" /* 7901 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function withErrorHandling(arg0, stringResult, intl2) {
@@ -168,7 +168,7 @@ export default {
     return HTTP.post(obj);
   },
   updateForumTag(id, channelId) {
-    const HTTP = _require(527).HTTP;
+    const HTTP = _require(1272).HTTP;
     let obj = { url: closure_5.FORUM_TAG(channelId, id.id), body: null, rejectWithError: null };
     obj = { name: id.name, emoji_id: id.emojiId, emoji_name: null, moderated: null };
     let emojiName;
@@ -178,36 +178,36 @@ export default {
     obj[2] = emojiName;
     obj[3] = id.moderated;
     obj[1] = obj;
-    obj[2] = _require(527).rejectWithMigratedError();
+    obj[2] = _require(1272).rejectWithMigratedError();
     _require = HTTP.put(obj);
-    const intl = tmp(1233).intl;
-    const tmpResult = _require(527);
-    const intl2 = tmp(1233).intl;
-    withErrorHandling(() => closure_0, intl.string(_require(1233).t.T8sBLJ), intl2.string(_require(1233).t.imcb5u));
+    const intl = tmp(1114).intl;
+    const tmpResult = _require(1272);
+    const intl2 = tmp(1114).intl;
+    withErrorHandling(() => closure_0, intl.string(_require(1114).t.T8sBLJ), intl2.string(_require(1114).t.imcb5u));
   },
   deleteForumTag(closure_0, id) {
-    const HTTP = _require(527).HTTP;
-    const obj = { url: closure_5.FORUM_TAG(closure_0, id), rejectWithError: _require(527).rejectWithMigratedError() };
+    const HTTP = _require(1272).HTTP;
+    const obj = { url: closure_5.FORUM_TAG(closure_0, id), rejectWithError: _require(1272).rejectWithMigratedError() };
     _require = HTTP.del(obj);
-    const intl = _require(1233).intl;
-    const obj2 = _require(527);
-    const intl2 = _require(1233).intl;
-    withErrorHandling(() => closure_0, intl.string(_require(1233).t["0ZkNDU"]), intl2.string(_require(1233).t.imcb5u));
+    const intl = _require(1114).intl;
+    const obj2 = _require(1272);
+    const intl2 = _require(1114).intl;
+    withErrorHandling(() => closure_0, intl.string(_require(1114).t["0ZkNDU"]), intl2.string(_require(1114).t.imcb5u));
   },
   updateForumPostTags(id, arg1) {
     closure_0 = id;
     closure_1 = arg1;
     return callback(function*() {
       closure_0 = tmp4;
-      const obj2 = v0(7520);
+      const obj2 = v0(7765);
       yield obj2.unarchiveThreadIfNecessary(closure_1_0);
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       const obj3 = { url: null, body: null, rejectWithError: null };
       obj3[0] = closure_1_5.CHANNEL(closure_0);
       const obj4 = { applied_tags: null };
       obj4[0] = v0;
       obj3[1] = obj4;
-      obj3[2] = closure_1_0(527).rejectWithMigratedError();
+      obj3[2] = closure_1_0(1272).rejectWithMigratedError();
       return HTTP.patch(obj3);
     })();
   },
@@ -241,13 +241,13 @@ export default {
       closure_1 = tmp3;
       obj1 = { type: "FORUM_SEARCH_START", channelId: null };
       obj1[1] = closure_1_1;
-      closure_1_1(706).dispatch(obj1);
+      closure_1_1(573).dispatch(obj1);
       dependencyMap = 1;
-      const obj13 = closure_1_1(7520);
+      const obj13 = closure_1_1(7765);
       yield obj13.searchThreads(closure_1_0, closure_1_1, dependencyMap, c3, c4);
       if (1 === tmp7) {
         dependencyMap = 0;
-        obj1 = closure_1_1(706);
+        obj1 = closure_1_1(573);
         const obj3 = { type: "FORUM_SEARCH_FAILURE", channelId: null };
         obj3[1] = closure_1;
         obj1.dispatch(obj3);
@@ -261,14 +261,14 @@ export default {
         obj4[0] = length;
         obj4[1] = closure_1;
         obj4[2] = length.length;
-        closure_1_0(7522).trackForumSearched(obj4);
-        const obj7 = closure_1_0(7522);
+        closure_1_0(7767).trackForumSearched(obj4);
+        const obj7 = closure_1_0(7767);
         const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
         obj5[1] = closure_1;
         obj5[2] = length;
-        closure_1_1(706).dispatch(obj5);
+        closure_1_1(573).dispatch(obj5);
         dependencyMap = 0;
-        const obj9 = closure_1_1(706);
+        const obj9 = closure_1_1(573);
       }
       dependencyMap = 0;
       return arg1;

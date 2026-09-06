@@ -1,6 +1,6 @@
-// === Module 7229: create ===
+// === Module 7474: create ===
 
-// Module 7229 (create)
+// Module 7474 (create)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 

@@ -1,11 +1,11 @@
-// === Module 7239: isReadableChannel ===
+// === Module 7484: isReadableChannel ===
 
-// Module 7239 (isReadableChannel)
+// Module 7484 (isReadableChannel)
 import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1390 */;
-import closure_1 from "ensureGuildLoaded" /* 1386 */;
-import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
-import ME from "ME" /* 673 */;
+import createChannelRecord from "createChannelRecord" /* 1961 */;
+import closure_1 from "ensureGuildLoaded" /* 1957 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
+import ME from "ME" /* 1074 */;
 
 const isTextChannel = createChannelRecord.isTextChannel;
 ({ ChannelTypes: c3, BasicPermissions } = ME);

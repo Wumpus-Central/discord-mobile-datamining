@@ -1,8 +1,8 @@
-// === Module 16513: createSearchResultLinkPreviewReactRules ===
+// === Module 16676: createSearchResultLinkPreviewReactRules ===
 
-// Module 16513 (createSearchResultLinkPreviewReactRules)
+// Module 16676 (createSearchResultLinkPreviewReactRules)
 import set from "set" /* 2 */;
-import defaultReactFn from "defaultReactFn" /* 10226 */;
+import defaultReactFn from "defaultReactFn" /* 10117 */;
 
 const result = set.fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");
 

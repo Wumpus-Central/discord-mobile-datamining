@@ -1,9 +1,9 @@
-// === Module 4152: isPremiumGiftingSupported ===
+// === Module 4231: isPremiumGiftingSupported ===
 
-// Module 4152 (isPremiumGiftingSupported)
+// Module 4231 (isPremiumGiftingSupported)
 import set from "set" /* 2 */;
-import set2 from "set" /* 1234 */;
-import isMetaQuest from "isMetaQuest" /* 1623 */;
+import set2 from "set" /* 1115 */;
+import isMetaQuest from "isMetaQuest" /* 1608 */;
 
 const result = set.fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 

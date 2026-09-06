@@ -1,21 +1,21 @@
-// === Module 15909: IconOrPreview ===
+// === Module 16073: IconOrPreview ===
 
-// Module 15909 (IconOrPreview)
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10171 */;
-import useLiveStageData from "useLiveStageData" /* 15907 */;
-import registerAssetDefault from "registerAsset" /* 15910 */;
-import registerAssetDefault2 from "registerAsset" /* 15911 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 15918 */;
+// Module 16073 (IconOrPreview)
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10062 */;
+import useLiveStageData from "useLiveStageData" /* 16071 */;
+import registerAssetDefault from "registerAsset" /* 16074 */;
+import registerAssetDefault2 from "registerAsset" /* 16075 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16082 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15134 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15294 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function IconOrPreview(arg0) {
@@ -54,7 +54,7 @@ function IconOrPreview(arg0) {
     tmp9 = null != large_image;
   }
   if (tmp9) {
-    let obj = _require(8060);
+    let obj = _require(8139);
     let application_id;
     if (activity != null) {
       application_id = activity.application_id;
@@ -85,7 +85,7 @@ function IconOrPreview(arg0) {
     tmp17 = null != small_image;
   }
   if (tmp17) {
-    obj1 = _require(8060);
+    obj1 = _require(8139);
     let application_id1;
     if (activity != null) {
       application_id1 = activity.application_id;
@@ -98,15 +98,15 @@ function IconOrPreview(arg0) {
     assetImage = obj1.getAssetImage(application_id1, small_image1, items1);
   }
   if (null != assetImage) {
-    let obj3 = _require(8121);
+    let obj3 = _require(8248);
     const memoizedImageSourceResult = obj3.memoizedImageSource(assetImage);
-    let obj4 = _require(8121);
+    let obj4 = _require(8248);
     const dominantRGBFromImage = obj4.useDominantRGBFromImage(assetImage, memoizedImageSourceResult);
     ({ r, g, b } = dominantRGBFromImage);
-    const rgbToHexResult = _require(4326).rgbToHex(r, g, b);
+    const rgbToHexResult = _require(4409).rgbToHex(r, g, b);
     importDefault = rgbToHexResult;
-    const obj6 = _require(4326);
-    const hexWithOpacityResult = _require(4326).hexWithOpacity(rgbToHexResult, 0.2);
+    const obj6 = _require(4409);
+    const hexWithOpacityResult = _require(4409).hexWithOpacity(rgbToHexResult, 0.2);
     dependencyMap = hexWithOpacityResult;
     const items2 = [rgbToHexResult, tmp.cardImageAssetContainer];
     const memo = importAllResult.useMemo(() => {
@@ -119,38 +119,38 @@ function IconOrPreview(arg0) {
       obj[0] = memo;
       obj = { stream: null, children: null, style: null, ctaText: null, disabled: true };
       obj[0] = stream;
-      let tmp2Result = tmp2(10168);
+      let tmp2Result = tmp2(10059);
       obj1 = { style: null, textStyle: null, allowFontScaling: false };
       ({ cardImageStreamLive: obj13[0], stageStreamLiveText: obj13[1] } = tmp);
-      obj[1] = callback(tmp28(1296).LiveTag, obj1);
+      obj[1] = callback(tmp28(1178).LiveTag, obj1);
       obj[2] = tmp.cardImageStreamPreview;
-      const intl5 = tmp28(1233).intl;
-      obj[3] = intl5.string(tmp28(1233).t["7Xq/nV"]);
+      const intl5 = tmp28(1114).intl;
+      obj[3] = intl5.string(tmp28(1114).t["7Xq/nV"]);
       obj[1] = callback(tmp2Result, obj);
       return callback(closure_4, obj);
     } else {
-      if (tmp2(9273)(activity)) {
-        const intl4 = tmp28(1233).intl;
-        let stringResult = intl4.string(tmp28(1233).t.rmnkz4);
+      if (tmp2(10891)(activity)) {
+        const intl4 = tmp28(1114).intl;
+        let stringResult = intl4.string(tmp28(1114).t.rmnkz4);
       } else {
         let type;
         if (activity != null) {
           type = activity.type;
         }
         if (type === constants.LISTENING) {
-          const intl3 = tmp28(1233).intl;
-          stringResult = intl3.string(tmp28(1233).t.kUEnxN);
-        } else if (tmp2(9404)(activity)) {
-          const intl2 = tmp28(1233).intl;
-          stringResult = intl2.string(tmp28(1233).t.T0uYK9);
+          const intl3 = tmp28(1114).intl;
+          stringResult = intl3.string(tmp28(1114).t.kUEnxN);
+        } else if (tmp2(13002)(activity)) {
+          const intl2 = tmp28(1114).intl;
+          stringResult = intl2.string(tmp28(1114).t.T0uYK9);
         } else {
           let type1;
           if (activity != null) {
             type1 = activity.type;
           }
           if (type1 !== tmp37.CUSTOM_STATUS) {
-            const intl = tmp28(1233).intl;
-            stringResult = intl.string(tmp28(1233).t["2TbM/G"]);
+            const intl = tmp28(1114).intl;
+            stringResult = intl.string(tmp28(1114).t["2TbM/G"]);
           }
         }
       }
@@ -162,11 +162,11 @@ function IconOrPreview(arg0) {
       obj4 = { style: null, source: null };
       obj4[0] = tmp.cardImageAsset;
       obj4[1] = memoizedImageSourceResult;
-      obj3[1] = callback(tmp2(5502), obj4);
+      obj3[1] = callback(tmp2(5587), obj4);
       obj2[2] = callback(closure_4, obj3);
       return callback(closure_4, obj2);
     }
-    const obj7 = _require(4326);
+    const obj7 = _require(4409);
   } else {
     let type2;
     if (activity != null) {
@@ -177,7 +177,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       tmp2Result = items[userId % items.length];
     } else {
-      tmp2Result = tmp2(15920);
+      tmp2Result = tmp2(16084);
     }
   }
 }

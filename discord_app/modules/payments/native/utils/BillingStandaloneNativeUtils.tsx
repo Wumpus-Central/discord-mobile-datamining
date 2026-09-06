@@ -1,11 +1,11 @@
-// === Module 7158: emitMWRCSentryErrorOnFailure ===
+// === Module 7405: emitMWRCSentryErrorOnFailure ===
 
-// Module 7158 (emitMWRCSentryErrorOnFailure)
+// Module 7405 (emitMWRCSentryErrorOnFailure)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
-import ME from "ME" /* 673 */;
-import CustomCheckoutFlow2 from "CustomCheckoutFlow" /* 4460 */;
-import MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG from "MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG" /* 7159 */;
+import ME from "ME" /* 1074 */;
+import CustomCheckoutFlow2 from "CustomCheckoutFlow" /* 4542 */;
+import MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG from "MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG" /* 7406 */;
 
 function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
   [tmp4, tmp5] = arg0;
@@ -42,22 +42,22 @@ export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalon
   closure_1 = arg1;
   dependencyMap = arg2;
   CustomCheckoutFlow = arg3;
-  let obj = _require(7160);
+  let obj = _require(7407);
   obj = {};
-  const obj2 = _require(1623);
+  const obj2 = _require(1608);
   const tmp = _require;
   const merged = Object.assign(arg1);
   if (isMetaQuestResult) {
     obj.flowType = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
     let tmp5 = obj;
   } else {
-    obj.deepLinkType = tmp(688).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
+    obj.deepLinkType = tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
     tmp5 = obj;
   }
   return obj.goToStandalonePremiumCheckout(tmp5, (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);
-    lib(4190).openURLExternally(searchParams.href);
+    lib(4255).openURLExternally(searchParams.href);
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
@@ -70,17 +70,17 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
   loadId = loadId.loadId;
   dependencyMap = arg2;
   CustomCheckoutFlow = arg3;
-  const obj = _require(7160);
+  const obj = _require(7407);
   const tmp = _require;
   if (obj2.isMetaQuest()) {
     let result = obj3.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT, loadId);
   } else {
-    result = obj3.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(tmp(688).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT, loadId);
+    result = obj3.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT, loadId);
   }
   return obj.goToBillingStandalonePageWithHandoff(result, (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);
-    loadId(4190).openURLExternally(searchParams.href);
+    loadId(4255).openURLExternally(searchParams.href);
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
@@ -95,18 +95,18 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
   CustomCheckoutFlow = arg4;
   let prop;
   if (!obj.isMetaQuest()) {
-    prop = tmp(688).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
+    prop = tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
   }
-  let tmpResult = tmp(1623);
+  let tmpResult = tmp(1608);
   let prop1;
   if (tmpResult.isMetaQuest()) {
     prop1 = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
   }
-  tmpResult = tmp(7160);
+  tmpResult = tmp(7407);
   return tmpResult.goToBillingStandalonePageWithHandoff(Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(closure_1, prop, newAnalyticsLoadId, prop1), (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);
-    newAnalyticsLoadId(4190).openURLExternally(searchParams.href);
+    newAnalyticsLoadId(4255).openURLExternally(searchParams.href);
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];

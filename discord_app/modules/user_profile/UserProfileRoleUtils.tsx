@@ -1,8 +1,8 @@
-// === Module 6008: sortRolesByVerification ===
+// === Module 7206: sortRolesByVerification ===
 
-// Module 6008 (sortRolesByVerification)
+// Module 7206 (sortRolesByVerification)
 import set from "set" /* 2 */;
-import compareGuildRoles from "compareGuildRoles" /* 1988 */;
+import compareGuildRoles from "compareGuildRoles" /* 2019 */;
 
 const result = set.fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 9875: useSecureFramesDeeplinkExperiment ===
+// === Module 9160: useSecureFramesDeeplinkExperiment ===
 
-// Module 9875 (useSecureFramesDeeplinkExperiment)
-import createExperimentDefault from "createExperiment" /* 4390 */;
+// Module 9160 (useSecureFramesDeeplinkExperiment)
+import createExperimentDefault from "createExperiment" /* 4475 */;
 
 const items = [{ id: 1, label: "Enabled.", config: { enabled: true } }];
 let closure_0 = createExperimentDefault({ kind: "user", id: "2024-09_secure_frames_deeplink", label: "Secure Frames Deeplinks", defaultConfig: { enabled: false }, treatments: items });

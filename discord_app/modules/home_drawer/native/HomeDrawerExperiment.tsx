@@ -1,7 +1,7 @@
-// === Module 4338: MobileHomeDrawerExperiment ===
+// === Module 4423: MobileHomeDrawerExperiment ===
 
-// Module 4338 (MobileHomeDrawerExperiment)
-import getUnitIdDefault from "getUnitId" /* 1468 */;
+// Module 4423 (MobileHomeDrawerExperiment)
+import getUnitIdDefault from "getUnitId" /* 1434 */;
 
 const obj = { 1: null, 2: { enableHome: true, landOnHome: false, enablePeekHint: true } };
 obj[2] = { enableHome: true, landOnHome: true, enablePeekHint: false };

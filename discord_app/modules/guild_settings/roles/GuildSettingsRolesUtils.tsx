@@ -1,13 +1,13 @@
-// === Module 17454: ADD_MEMBER_QUERY_LIMIT ===
+// === Module 17614: ADD_MEMBER_QUERY_LIMIT ===
 
-// Module 17454 (ADD_MEMBER_QUERY_LIMIT)
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5463 */;
+// Module 17614 (ADD_MEMBER_QUERY_LIMIT)
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5517 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 1991 */;
-import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { GuildSettingsRoleEditSections as closure_6 } from "MAX_SUBCATEGORIES" /* 17445 */;
-import { AnalyticEvents } from "ME" /* 673 */;
+import closure_4 from "trackCommunicationDisabled" /* 2021 */;
+import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import { GuildSettingsRoleEditSections as closure_6 } from "MAX_SUBCATEGORIES" /* 17605 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");

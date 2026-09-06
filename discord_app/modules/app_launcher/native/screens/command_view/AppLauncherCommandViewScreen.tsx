@@ -1,29 +1,29 @@
-// === Module 11952: AppLauncherCommandViewFooter ===
+// === Module 12153: AppLauncherCommandViewFooter ===
 
-// Module 11952 (AppLauncherCommandViewFooter)
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 1296 */;
-import Text from "Text" /* 4474 */;
-import CollapsingText from "CollapsingText" /* 4930 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8448 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 11852 */;
-import registerAssetDefault from "registerAsset" /* 11915 */;
-import registerAssetDefault2 from "registerAsset" /* 11916 */;
-import registerAssetDefault3 from "registerAsset" /* 11989 */;
-import registerAssetDefault4 from "registerAsset" /* 11990 */;
+// Module 12153 (AppLauncherCommandViewFooter)
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Button from "Button" /* 1178 */;
+import Text from "Text" /* 4556 */;
+import CollapsingText from "CollapsingText" /* 4976 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9409 */;
+import handleApplicationSelected from "handleApplicationSelected" /* 12051 */;
+import registerAssetDefault from "registerAsset" /* 12114 */;
+import registerAssetDefault2 from "registerAsset" /* 12115 */;
+import registerAssetDefault3 from "registerAsset" /* 12193 */;
+import registerAssetDefault4 from "registerAsset" /* 12194 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import getIndexKey from "getIndexKey" /* 8158 */;
-import closure_13 from "createGuildRoleRecordFromRust" /* 1984 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
-import ME from "ME" /* 673 */;
-import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1622 */;
+import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import getIndexKey from "getIndexKey" /* 9290 */;
+import closure_13 from "createGuildRoleRecordFromRust" /* 2015 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
+import ME from "ME" /* 1074 */;
+import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1607 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function AppLauncherCommandViewFooter(arg0) {
@@ -51,8 +51,8 @@ function AppLauncherCommandViewFooter(arg0) {
       obj1 = { translateX: null };
       const obj9 = closure_1_0(stateFromStores[16]);
       const fn = function e() {
-        const obj = callback(4217);
-        return callback(4217).runOnJS(callback(4446).triggerHapticFeedback)(callback(4446).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = callback(4296);
+        return callback(4296).runOnJS(callback(4528).triggerHapticFeedback)(callback(4528).HapticFeedbackTypes.IMPACT_LIGHT);
       };
       const obj2 = { runOnJS: null, triggerHapticFeedback: null, HapticFeedbackTypes: null };
       obj2[0] = closure_1_0(stateFromStores[15]).runOnJS;

@@ -1,11 +1,11 @@
-// === Module 15142: toggle ===
+// === Module 15302: toggle ===
 
-// Module 15142 (toggle)
-import initialize from "initialize" /* 586 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import handleSaveTheme from "handleSaveTheme" /* 15019 */;
-import closure_2 from "handleThemeChange" /* 1301 */;
-import createToggle from "createToggle" /* 11292 */;
+// Module 15302 (toggle)
+import initialize from "initialize" /* 504 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import handleSaveTheme from "handleSaveTheme" /* 15177 */;
+import closure_2 from "handleThemeChange" /* 1183 */;
+import createToggle from "createToggle" /* 11468 */;
 
 require = arg1;
 createToggle = {

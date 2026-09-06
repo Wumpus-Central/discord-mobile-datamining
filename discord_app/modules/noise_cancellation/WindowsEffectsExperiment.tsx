@@ -1,8 +1,8 @@
-// === Module 10105: getWindowsAudioEffectsExperimentConfig ===
+// === Module 9996: getWindowsAudioEffectsExperimentConfig ===
 
-// Module 10105 (getWindowsAudioEffectsExperimentConfig)
-import closure_2 from "initialize" /* 1209 */;
-import ApexExperiment from "ApexExperiment" /* 1467 */;
+// Module 9996 (getWindowsAudioEffectsExperimentConfig)
+import closure_2 from "initialize" /* 1236 */;
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 const require = arg1;
 let obj = { preferSystemEffects: false };
@@ -22,5 +22,5 @@ export const getWindowsAudioEffectsExperimentConfig = function getWindowsAudioEf
 export const useWindowsAudioEffectsExperimentConfig = function useWindowsAudioEffectsExperimentConfig(location) {
   location = location.location;
   const items = [closure_2];
-  return location(586).useStateFromStores(items, () => closure_1_3.getConfig({ location }));
+  return location(504).useStateFromStores(items, () => closure_1_3.getConfig({ location }));
 };

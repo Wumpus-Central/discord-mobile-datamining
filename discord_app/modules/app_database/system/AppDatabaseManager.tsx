@@ -1,11 +1,11 @@
-// === Module 7400: set ===
+// === Module 7645: set ===
 
-// Module 7400 (set)
+// Module 7645 (set)
 import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import databaseNameDefault from "databaseName" /* 1972 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import databaseNameDefault from "databaseName" /* 2003 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -69,7 +69,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
   if (null != value) {
     if (0 !== value.length) {
       if (null != databaseResult) {
-        if (stateResult === _require(1956).DatabaseState.Open) {
+        if (stateResult === _require(1987).DatabaseState.Open) {
           let combined = null;
           if (!set.has(type.type)) {
             const _HermesInternal2 = HermesInternal;
@@ -136,7 +136,7 @@ AppDatabaseManager["register"] = function register(arg0, arr) {
     return items;
   })), () => {
 
-  }, _require(706).DispatchBand.Database);
+  }, _require(573).DispatchBand.Database);
   const fromEntriesResult = Object.fromEntries(arr.map((arg0) => {
     const items = [arg0, closure_0];
     return items;

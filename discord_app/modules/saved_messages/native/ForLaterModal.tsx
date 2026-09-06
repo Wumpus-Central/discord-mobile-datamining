@@ -1,14 +1,14 @@
-// === Module 7617: ForLaterModal ===
+// === Module 7862: ForLaterModal ===
 
-// Module 7617 (ForLaterModal)
+// Module 7862 (ForLaterModal)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _modDef4724 from "module_4724" /* 4724 */;
-import keyExtractorDefault from "keyExtractor" /* 13176 */;
+import ThemesDefault from "Themes" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import _modDef4763 from "module_4763" /* 4763 */;
+import keyExtractorDefault from "keyExtractor" /* 13281 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 noopAll;
@@ -27,8 +27,8 @@ export default function ForLaterModal(type) {
   type = type.type;
   let _require;
   const tmp = callback();
-  const intl = _require(1233).intl;
-  if (type === _require(7615).SavedMessageSortTypes.REMINDER) {
+  const intl = _require(1114).intl;
+  if (type === _require(7860).SavedMessageSortTypes.REMINDER) {
   } else {
   }
   const stringResult = intl.string(_2pAkDA);
@@ -45,17 +45,17 @@ export default function ForLaterModal(type) {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null
   };
-  let tmp4Result = tmp4(1234);
+  let tmp4Result = tmp4(1115);
   let num = 0;
   if (!tmp4Result.isIOS()) {
     num = useSafeAreaInsetsDefault().top;
   }
   obj[3] = num + ThemesDefault.space.PX_8;
-  tmp4Result = tmp4(5504);
-  obj[4] = tmp4Result.getHeaderCloseButton(_modDef4724.pop);
+  tmp4Result = tmp4(5624);
+  obj[4] = tmp4Result.getHeaderCloseButton(_modDef4763.pop);
   ({ headerLeftContainer: obj2[5], headerRightContainer: obj2[6] } = tmp);
-  const items = [closure_4(_require(5511).Header, obj), ];
-  obj = { type, onClose: _modDef4724.pop };
+  const items = [closure_4(_require(5631).Header, obj), ];
+  obj = { type, onClose: _modDef4763.pop };
   items[1] = closure_4(keyExtractorDefault, obj, type);
   obj[1] = items;
   return closure_5(View, obj);

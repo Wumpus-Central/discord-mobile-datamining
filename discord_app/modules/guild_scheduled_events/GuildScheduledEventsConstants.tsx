@@ -1,8 +1,8 @@
-// === Module 1392: GUILD_EVENT_MAX_NAME_LENGTH ===
+// === Module 1963: GUILD_EVENT_MAX_NAME_LENGTH ===
 
-// Module 1392 (GUILD_EVENT_MAX_NAME_LENGTH)
-import ME from "ME" /* 673 */;
-import setDefault from "set" /* 684 */;
+// Module 1963 (GUILD_EVENT_MAX_NAME_LENGTH)
+import ME from "ME" /* 1074 */;
+import setDefault from "set" /* 1090 */;
 import set from "set" /* 2 */;
 
 const ChannelTypes = ME.ChannelTypes;

@@ -1,13 +1,13 @@
-// === Module 17662: updateApiRequestConfig ===
+// === Module 17822: updateApiRequestConfig ===
 
-// Module 17662 (updateApiRequestConfig)
+// Module 17822 (updateApiRequestConfig)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import sendRequest from "sendRequest" /* 527 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import set2 from "set" /* 1234 */;
-import initializeDefault from "initialize" /* 5495 */;
-import closure_4 from "fetchFingerprint" /* 1215 */;
+import set2 from "set" /* 1115 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import initializeDefault from "initialize" /* 7118 */;
+import closure_4 from "fetchFingerprint" /* 502 */;
 
 function updateApiRequestConfig() {
   const NativeCacheModule = NativeModules.NativeCacheModule;

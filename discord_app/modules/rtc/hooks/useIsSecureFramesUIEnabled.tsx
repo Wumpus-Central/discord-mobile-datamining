@@ -1,9 +1,9 @@
-// === Module 9885: useIsSecureFramesUIEnabled ===
+// === Module 9170: useIsSecureFramesUIEnabled ===
 
-// Module 9885 (useIsSecureFramesUIEnabled)
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "createRTCConnection" /* 4554 */;
-import { END_TO_END_ENCRYPTION_DISABLED as closure_4 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9867 */;
+// Module 9170 (useIsSecureFramesUIEnabled)
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "createRTCConnection" /* 4583 */;
+import { END_TO_END_ENCRYPTION_DISABLED as closure_4 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9152 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
@@ -12,7 +12,7 @@ export const useIsSecureFramesUIEnabled = function useIsSecureFramesUIEnabled(ch
   channelId = channelId.channelId;
   let items = [closure_3, closure_2];
   const items1 = [channelId];
-  return channelId(586).useStateFromStores(items, () => {
+  return channelId(504).useStateFromStores(items, () => {
     const items = [closure_1_3, closure_1_2];
     [obj, obj2] = items;
     let flag = false;

@@ -1,7 +1,7 @@
-// === Module 9454: doesGameHaveRichPresence ===
+// === Module 11461: doesGameHaveRichPresence ===
 
-// Module 9454 (doesGameHaveRichPresence)
-import closure_2 from "addApplication" /* 4519 */;
+// Module 11461 (doesGameHaveRichPresence)
+import closure_2 from "addApplication" /* 4788 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rich_presence/PresenceActivityFiltering.tsx");

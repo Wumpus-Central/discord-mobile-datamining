@@ -1,9 +1,9 @@
-// === Module 5979: getDefaultProviderDescription ===
+// === Module 7179: getDefaultProviderDescription ===
 
-// Module 5979 (getDefaultProviderDescription)
+// Module 7179 (getDefaultProviderDescription)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
+import ME from "ME" /* 1074 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
 
 const PlatformTypes = ME.PlatformTypes;
 const result = set.fileFinishedImporting("modules/guild_onboarding/getDefaultProviderDescription.tsx");

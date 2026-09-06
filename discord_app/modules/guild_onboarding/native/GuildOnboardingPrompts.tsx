@@ -1,26 +1,26 @@
-// === Module 5500: _getBackgroundGradientColor ===
+// === Module 7122: _getBackgroundGradientColor ===
 
-// Module 5500 (_getBackgroundGradientColor)
-import keys from "keys" /* 688 */;
-import ThemesDefault from "Themes" /* 709 */;
-import hexToRgba from "hexToRgba" /* 4326 */;
-import LinearGradientDefault from "LinearGradient" /* 4941 */;
-import preloadDefault from "preload" /* 5502 */;
+// Module 7122 (_getBackgroundGradientColor)
+import ThemesDefault from "Themes" /* 576 */;
+import keys from "keys" /* 1093 */;
+import hexToRgba from "hexToRgba" /* 4409 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import preloadDefault from "preload" /* 5587 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_9 from "get" /* 5499 */;
-import closure_10 from "ensureGuildLoaded" /* 1386 */;
-import closure_11 from "createGuildRecordFromRust" /* 1908 */;
-import closure_12 from "handleConnectionOpen" /* 1980 */;
-import closure_13 from "handleUpdate" /* 5476 */;
-import { OnboardingPromptType } from "serverPromptToClientPrompt" /* 5477 */;
-import { GuildOnboardingModalStates as closure_15 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5473 */;
-import ME from "ME" /* 673 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import closure_9 from "get" /* 5572 */;
+import closure_10 from "ensureGuildLoaded" /* 1957 */;
+import closure_11 from "createGuildRecordFromRust" /* 1979 */;
+import closure_12 from "handleConnectionOpen" /* 2011 */;
+import closure_13 from "handleUpdate" /* 7100 */;
+import { OnboardingPromptType } from "serverPromptToClientPrompt" /* 7101 */;
+import { GuildOnboardingModalStates as closure_15 } from "GUILD_ONBOARDING_MODAL_KEY" /* 7097 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function _getBackgroundGradientColor() {

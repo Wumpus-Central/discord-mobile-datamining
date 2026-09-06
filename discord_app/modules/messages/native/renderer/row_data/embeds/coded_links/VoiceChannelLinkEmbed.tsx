@@ -1,19 +1,19 @@
-// === Module 13122: createVoiceChannelLinkEmbed ===
+// === Module 13222: createVoiceChannelLinkEmbed ===
 
-// Module 13122 (createVoiceChannelLinkEmbed)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import set from "set" /* 1234 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7866 */;
+// Module 13222 (createVoiceChannelLinkEmbed)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import set from "set" /* 1115 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
-import { getGuildAcronym } from "GuildNSFWContentLevel" /* 1429 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_9 from "markAllUserIdListsStale" /* 4130 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import { Permissions } from "ME" /* 673 */;
-import { InviteTypes } from "InviteSendStates" /* 7492 */;
+import { getGuildAcronym } from "GuildNSFWContentLevel" /* 1975 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "createGuildRecordFromRust" /* 1979 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_9 from "markAllUserIdListsStale" /* 4209 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
+import { Permissions } from "ME" /* 1074 */;
+import { InviteTypes } from "InviteSendStates" /* 7736 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");
@@ -44,8 +44,8 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
                 icon1 = guild.icon;
               }
               obj[1] = icon1;
-              const guildIconURL = tmp4(1430).getGuildIconURL(obj);
-              const tmp4Result = tmp4(1430);
+              const guildIconURL = tmp4(1396).getGuildIconURL(obj);
+              const tmp4Result = tmp4(1396);
             } else if (null != guild) {
               const tmp8 = getGuildAcronym(guild);
             }
@@ -60,9 +60,9 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.headerText = str;
             obj.headerColor = colors.headerColor;
             obj5 = set;
-            const intl = tmp16(1233).intl;
+            const intl = tmp16(1114).intl;
             const string = intl.string;
-            const t = tmp16(1233).t;
+            const t = tmp16(1114).t;
             if (isGuildStageVoiceResult) {
               let stringResult = string(t["7vb2cc"]);
             } else {
@@ -71,14 +71,14 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.acceptLabelText = stringResult;
             obj.onlineText = undefined;
             obj.memberText = undefined;
-            let tmp16Result = tmp16(4982);
+            let tmp16Result = tmp16(5028);
             const assetSource = Image.resolveAssetSource(tmp16Result.getChannelIcon(channel));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.channelIcon = uri;
-            tmp16Result = tmp16(4674);
+            tmp16Result = tmp16(4713);
             obj.titleText = tmp16Result.computeChannelName(channel, closure_10, closure_9);
             obj.titleColor = colors.titleColor;
             let tmp24;
@@ -93,7 +93,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.acceptLabelColor = colors.acceptLabelGreenColor;
             obj.embedCanBeTapped = true;
             obj.canBeAccepted = true;
-            const intl2 = tmp16(1233).intl;
+            const intl2 = tmp16(1114).intl;
             obj1 = { guildName: null };
             obj1[0] = guild.name;
             obj.channelName = intl2.formatToPlainString(getSystemLocale.t["2wimj5"], obj1);

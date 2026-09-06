@@ -1,16 +1,16 @@
-// === Module 12160: handleSearchQuery ===
+// === Module 12362: handleSearchQuery ===
 
-// Module 12160 (handleSearchQuery)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 12136 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "handleReaction" /* 6137 */;
-import closure_5 from "search" /* 12161 */;
-import closure_6 from "setAutocompleteOptions" /* 12162 */;
-import closure_7 from "teardown" /* 12163 */;
-import closure_8 from "prototype" /* 12135 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7633 */;
+// Module 12362 (handleSearchQuery)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 12340 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "handleReaction" /* 7281 */;
+import closure_5 from "search" /* 12363 */;
+import closure_6 from "setAutocompleteOptions" /* 12364 */;
+import closure_7 from "teardown" /* 12365 */;
+import closure_8 from "prototype" /* 12339 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
 
 require = arg1;
 function handleSearchQuery(searchContext) {
@@ -46,7 +46,7 @@ function computeLayoutForState(value) {
     } else {
       arr = table2[searchContext.type];
     }
-    channel = channel.getChannel(_require(12136).getChannelIdFromSearchContext(searchContext));
+    channel = channel.getChannel(_require(12340).getChannelIdFromSearchContext(searchContext));
     let flag;
     if (channel != null) {
       flag = channel.isArchivedThread();
@@ -80,7 +80,7 @@ function computeLayoutForState(value) {
         return closure_5;
       }
     });
-    let tmp6Result = tmp6(12136);
+    let tmp6Result = tmp6(12340);
     autocompleteVisible = tmp6Result.getSearchContextId(searchContext);
     const reduced = found.reduce((arg0, closure_1) => {
       if (reduced.MEMBERS === closure_1) {
@@ -119,17 +119,17 @@ function computeLayoutForState(value) {
         flag2 = tmp11;
       }
     }
-    tmp6Result = tmp6(640);
+    tmp6Result = tmp6(558);
     const result = tmp6Result.areArraysShallowEqual(value.candidateTabs, found);
     let tmp13 = !result;
-    const obj2 = _require(12136);
-    const result1 = _require(640).areArraysShallowEqual(value.visibleTabs, visibleTabs);
+    const obj2 = _require(12340);
+    const result1 = _require(558).areArraysShallowEqual(value.visibleTabs, visibleTabs);
     const visibleTabCounts2 = value.visibleTabCounts;
     let tmp16 = visibleTabCounts2 === visibleTabCounts;
     if (!tmp16) {
       let tmp17 = null != visibleTabCounts2 && null != visibleTabCounts;
       if (tmp17) {
-        tmp17 = searchContext(640)(visibleTabCounts2, visibleTabCounts);
+        tmp17 = searchContext(558)(visibleTabCounts2, visibleTabCounts);
       }
       tmp16 = tmp17;
     }

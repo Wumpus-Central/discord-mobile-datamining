@@ -1,8 +1,8 @@
-// === Module 6156: isForwardMessage ===
+// === Module 7302: isForwardMessage ===
 
-// Module 6156 (isForwardMessage)
+// Module 7302 (isForwardMessage)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const MessageReferenceTypes = ME.MessageReferenceTypes;
 const result = set.fileFinishedImporting("modules/forwarding/isForwardMessage.tsx");

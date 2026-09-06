@@ -1,10 +1,10 @@
-// === Module 6421: ClydeAnnouncementSpotIllustration ===
+// === Module 5853: ClydeAnnouncementSpotIllustration ===
 
-// Module 6421 (ClydeAnnouncementSpotIllustration)
+// Module 5853 (ClydeAnnouncementSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6422 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 5854 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ClydeAnnouncementSpotIllustration.native.tsx");

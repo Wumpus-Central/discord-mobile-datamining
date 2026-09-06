@@ -1,19 +1,19 @@
-// === Module 17150: handleAVAudioSessionMode ===
+// === Module 17316: handleAVAudioSessionMode ===
 
-// Module 17150 (handleAVAudioSessionMode)
-import initializeDefault from "initialize" /* 5495 */;
-import handleVoiceChannelSelect from "handleVoiceChannelSelect" /* 17151 */;
-import closure_2 from "participantFromServer" /* 1385 */;
-import closure_3 from "buildStageChannelUserRoles" /* 5374 */;
-import closure_4 from "reset" /* 4500 */;
-import closure_5 from "fetchFingerprint" /* 1215 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_8 from "handleConnectionOpen" /* 1980 */;
-import closure_9 from "updateVoiceState" /* 4497 */;
-import closure_10 from "getState" /* 7167 */;
-import { AppStates } from "ME" /* 673 */;
-import set from "set" /* 1234 */;
+// Module 17316 (handleAVAudioSessionMode)
+import initializeDefault from "initialize" /* 7118 */;
+import handleVoiceChannelSelect from "handleVoiceChannelSelect" /* 17317 */;
+import closure_2 from "participantFromServer" /* 1956 */;
+import closure_3 from "buildStageChannelUserRoles" /* 5421 */;
+import closure_4 from "reset" /* 4582 */;
+import closure_5 from "fetchFingerprint" /* 502 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_8 from "handleConnectionOpen" /* 2011 */;
+import closure_9 from "updateVoiceState" /* 4579 */;
+import closure_10 from "getState" /* 1895 */;
+import { AppStates } from "ME" /* 1074 */;
+import set from "set" /* 1115 */;
 
 require = arg1;
 function handleAVAudioSessionMode() {

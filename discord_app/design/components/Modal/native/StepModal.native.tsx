@@ -1,11 +1,11 @@
-// === Module 14056: StepModal ===
+// === Module 14174: StepModal ===
 
-// Module 14056 (StepModal)
+// Module 14174 (StepModal)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -21,7 +21,7 @@ export const StepModal = function StepModal(steps) {
   const merged = Object.assign(steps, Object.create(null));
   dependencyMap = undefined;
   const tmp2 = callback3();
-  const tmp3 = onWillFocus(1627)();
+  const tmp3 = onWillFocus(1611)();
   const tmp4 = callback(React.useState(0), 2);
   dependencyMap = tmp4[1];
   const items = [onWillFocus, steps];
@@ -42,10 +42,10 @@ export const StepModal = function StepModal(steps) {
   obj = {};
   const merged1 = Object.assign(merged);
   obj.onWillFocus = callback;
-  obj = { height: steps(5501).NAV_BAR_HEIGHT + tmp3.top };
+  obj = { height: steps(5682).NAV_BAR_HEIGHT + tmp3.top };
   obj.headerStyle = obj;
   obj.hideTitle = true;
-  const items1 = [callback2(steps(11729).Modal, obj), ];
+  const items1 = [callback2(steps(11928).Modal, obj), ];
   obj1 = { style: items2, pointerEvents: "box-none", children: null };
   items2 = [tmp2.stepContainer, { marginTop: tmp3.top }];
   const obj2 = { currentStep: tmp4[0], totalSteps: null };
@@ -57,7 +57,7 @@ export const StepModal = function StepModal(steps) {
     num = 0;
   }
   obj2[1] = num;
-  obj1[2] = callback2(steps(14057).ModalStepIndicator, obj2);
+  obj1[2] = callback2(steps(14175).ModalStepIndicator, obj2);
   items1[1] = callback2(View, obj1);
   obj[1] = items1;
   return closure_7(View, obj);

@@ -1,14 +1,14 @@
-// === Module 15835: _initialize ===
+// === Module 15997: _initialize ===
 
-// Module 15835 (_initialize)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import initializeDefault from "initialize" /* 4662 */;
+// Module 15997 (_initialize)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import initializeDefault from "initialize" /* 1898 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PermissionStateType } from "set" /* 12209 */;
-import { ME } from "ME" /* 673 */;
-import { NotificationAuthorizationStatus as closure_8 } from "NativePermissionStatus" /* 4731 */;
-import { NewUserTypes } from "NewUserTypes" /* 12479 */;
+import { PermissionStateType } from "set" /* 12409 */;
+import { ME } from "ME" /* 1074 */;
+import { NotificationAuthorizationStatus as closure_8 } from "NativePermissionStatus" /* 4770 */;
+import { NewUserTypes } from "NewUserTypes" /* 12705 */;
 
 const require = arg1;
 ({ NativeModules: c4, Keyboard: c5 } = get_ActivityIndicator);
@@ -114,17 +114,17 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = tmp(12520);
+        let tmpResult = tmp(12746);
         tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
       }
-      tmpResult = tmp(12478);
+      tmpResult = tmp(12704);
       tmpResult.startOnboarding();
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = lib.handlePushNotificationOptIn(() => {
-        callback(6196).transitionToGuild(closure_7);
-        const obj = callback(6196);
-        callback2(706).dispatch({ type: "DEFERRED_INVITE_SHOW" });
+        callback(7342).transitionToGuild(closure_7);
+        const obj = callback(7342);
+        callback2(573).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };
     applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
@@ -147,7 +147,7 @@ class AuthManager extends tmp3 {
       c11 = null;
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
-      const result = callback(7515).deleteAllInteractions();
+      const result = callback(7760).deleteAllInteractions();
       DCDShortcutManager = DCDShortcutManager.DCDShortcutManager;
       if (DCDShortcutManager != null) {
         DCDShortcutManager.handleLogout();

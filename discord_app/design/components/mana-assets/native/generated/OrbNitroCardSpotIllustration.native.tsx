@@ -1,10 +1,10 @@
-// === Module 6897: OrbNitroCardSpotIllustration ===
+// === Module 6333: OrbNitroCardSpotIllustration ===
 
-// Module 6897 (OrbNitroCardSpotIllustration)
+// Module 6333 (OrbNitroCardSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5502 */;
-import metadataDefault from "metadata" /* 6898 */;
+import preloadDefault from "preload" /* 5587 */;
+import metadataDefault from "metadata" /* 6334 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/OrbNitroCardSpotIllustration.native.tsx");

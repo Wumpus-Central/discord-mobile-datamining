@@ -1,6 +1,6 @@
-// === Module 15874: useRelativeTimestamp ===
+// === Module 16036: useRelativeTimestamp ===
 
-// Module 15874 (useRelativeTimestamp)
+// Module 16036 (useRelativeTimestamp)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -14,17 +14,17 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
     flag = true;
   }
   closure_2 = undefined;
-  const tmp = callback(React.useState(() => timestamp(7396).getRelativeTimestamp(timestamp, flag)), 2);
+  const tmp = callback(React.useState(() => timestamp(7641).getRelativeTimestamp(timestamp, flag)), 2);
   closure_2 = tmp[1];
   const items = [timestamp, flag];
   const effect = React.useEffect(() => {
-    dependencyMap(timestamp(7396).getRelativeTimestamp(interval, flag));
+    dependencyMap(timestamp(7641).getRelativeTimestamp(interval, flag));
     const diff = Date.now() - interval;
-    if (diff <= flag(684).Millis.DAY) {
-      if (diff >= tmp4(684).Millis.HOUR) {
-        let MINUTE = tmp4(684).Millis.HOUR;
+    if (diff <= flag(1090).Millis.DAY) {
+      if (diff >= tmp4(1090).Millis.HOUR) {
+        let MINUTE = tmp4(1090).Millis.HOUR;
       } else {
-        MINUTE = tmp4(684).Millis.MINUTE;
+        MINUTE = tmp4(1090).Millis.MINUTE;
       }
       const _setInterval = setInterval;
       interval = setInterval(() => {
@@ -32,7 +32,7 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
       }, MINUTE, MINUTE - diff % MINUTE);
       return () => clearInterval(closure_0);
     }
-    const obj = timestamp(7396);
+    const obj = timestamp(7641);
   }, items);
   return tmp[0];
 };

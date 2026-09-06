@@ -1,9 +1,9 @@
-// === Module 15967: RedesignVoiceUserSummary ===
+// === Module 16131: RedesignVoiceUserSummary ===
 
-// Module 15967 (RedesignVoiceUserSummary)
+// Module 16131 (RedesignVoiceUserSummary)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 1980 */;
-import closure_5 from "getVoiceStatesForGuild" /* 4555 */;
+import closure_4 from "handleConnectionOpen" /* 2011 */;
+import closure_5 from "getVoiceStatesForGuild" /* 4584 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

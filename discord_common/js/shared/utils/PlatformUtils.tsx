@@ -1,6 +1,6 @@
-// === Module 1235: PlatformTypes ===
+// === Module 1116: PlatformTypes ===
 
-// Module 1235 (PlatformTypes)
+// Module 1116 (PlatformTypes)
 import set from "set" /* 2 */;
 
 let obj = { WINDOWS: "WINDOWS", OSX: "OSX", LINUX: "LINUX", WEB: "WEB" };

@@ -1,14 +1,14 @@
-// === Module 11920: useFrecentApps ===
+// === Module 12119: useFrecentApps ===
 
-// Module 11920 (useFrecentApps)
-import findCommandInSectionAll from "findCommandInSection" /* 8456 */;
+// Module 12119 (useFrecentApps)
+import findCommandInSectionAll from "findCommandInSection" /* 9416 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "recomputeFromAppTokens" /* 5484 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5484 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import closure_8 from "initialize" /* 11921 */;
-import { WATCH_YOUTUBE_PROD_APP_ID } from "items3" /* 4506 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4953 */;
+import closure_5 from "recomputeFromAppTokens" /* 7107 */;
+import { FetchState } from "recomputeFromAppTokens" /* 7107 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import closure_8 from "initialize" /* 12120 */;
+import { WATCH_YOUTUBE_PROD_APP_ID } from "items3" /* 1920 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4999 */;
 
 const require = arg1;
 function useFrecentApps(onlyActivityApps) {

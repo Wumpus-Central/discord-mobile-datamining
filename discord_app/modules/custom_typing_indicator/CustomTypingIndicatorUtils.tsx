@@ -1,16 +1,16 @@
-// === Module 11772: items ===
+// === Module 11971: items ===
 
-// Module 11772 (items)
-import fromStringAll from "fromString" /* 503 */;
-import messagesProxyDefault from "messagesProxy" /* 3502 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
-import closure_4 from "getEmojiToGroupId" /* 5410 */;
-import closure_5 from "handleFormOpen" /* 8081 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "insertUnsortedGuilds" /* 5390 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import { Permissions } from "ME" /* 673 */;
-import { EmojiIntention } from "set" /* 1924 */;
+// Module 11971 (items)
+import fromStringAll from "fromString" /* 1086 */;
+import messagesProxyDefault from "messagesProxy" /* 3549 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
+import closure_4 from "getEmojiToGroupId" /* 5459 */;
+import closure_5 from "handleFormOpen" /* 8160 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import closure_7 from "insertUnsortedGuilds" /* 5438 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import { Permissions } from "ME" /* 1074 */;
+import { EmojiIntention } from "set" /* 1374 */;
 
 const require = arg1;
 let obj = {};
@@ -55,7 +55,7 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
     usableGuildEmoji = usableGuildEmoji.getUsableGuildEmoji(arg0);
     const found = usableGuildEmoji.filter((emoji) => {
       obj = callback(table[10]);
-      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl" };
+      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: null };
       obj[3] = constants.TYPING_INDICATOR;
       return null == obj.getEmojiUnavailableReason(obj);
     });
@@ -66,7 +66,7 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
 export const pickRandomCustomTypingIndicatorEmojis = function pickRandomCustomTypingIndicatorEmojis(current) {
   let size;
   const _require = current;
-  const bound = Math.min(_require(1941).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT, current.length);
+  const bound = Math.min(_require(1392).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT, current.length);
   const set = new Set();
   if (set.size < bound) {
     do {
@@ -143,7 +143,7 @@ export const useCurrentCustomTypingIndicatorConfig = function useCurrentCustomTy
   const _require = isTryItOut;
   items = [closure_5, closure_8];
   items1 = [isTryItOut];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     if (isTryItOut) {
       let EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2 = obj.getTryItOutChanges().tryItOutCustomTypingIndicatorStyle;
       if (EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2 == null) {

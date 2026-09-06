@@ -1,8 +1,8 @@
-// === Module 7741: makePasswordResetLink ===
+// === Module 6956: makePasswordResetLink ===
 
-// Module 7741 (makePasswordResetLink)
+// Module 6956 (makePasswordResetLink)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const Routes = ME.Routes;
 const result = set.fileFinishedImporting("modules/auth/makePasswordResetLink.tsx");

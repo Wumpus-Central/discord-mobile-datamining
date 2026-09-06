@@ -1,8 +1,8 @@
-// === Module 11241: LikelyAtoMoreTipsModalActionItems ===
+// === Module 11380: LikelyAtoMoreTipsModalActionItems ===
 
-// Module 11241 (LikelyAtoMoreTipsModalActionItems)
+// Module 11380 (LikelyAtoMoreTipsModalActionItems)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/ato_alerts/native/c
 export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   senderId = senderId.senderId;
   let stateFromStores;
-  let obj = senderId(586);
+  let obj = senderId(504);
   const items = [closure_4];
   const items1 = [senderId];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(senderId), items1);
@@ -19,12 +19,12 @@ export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   const memo = React.useMemo(() => stateFromStores(closure_1_2[4]).getName(stateFromStores), items2);
   obj = { hasIcons: true, children: null };
   obj = { label: null, subLabel: null, onPress: null, icon: null };
-  const intl = senderId(1233).intl;
-  obj[0] = intl.formatToPlainString(senderId(1233).t["F/ID+9"], { username: memo });
-  const intl2 = senderId(1233).intl;
-  obj[1] = intl2.string(senderId(1233).t.w2ve0t);
+  const intl = senderId(1114).intl;
+  obj[0] = intl.formatToPlainString(senderId(1114).t["F/ID+9"], { username: memo });
+  const intl2 = senderId(1114).intl;
+  obj[1] = intl2.string(senderId(1114).t.w2ve0t);
   obj[2] = senderId.handleMutePressed;
-  obj[3] = jsx(senderId(10264).BellSlashIcon, {});
-  obj[1] = jsx(senderId(5608).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
-  return jsx(senderId(6001).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
+  obj[3] = jsx(senderId(9059).BellSlashIcon, {});
+  obj[1] = jsx(senderId(5605).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  return jsx(senderId(5687).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
 };

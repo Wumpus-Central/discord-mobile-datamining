@@ -1,8 +1,8 @@
-// === Module 1361: ThemeContextFlags ===
+// === Module 4287: ThemeContextFlags ===
 
-// Module 1361 (ThemeContextFlags)
+// Module 4287 (ThemeContextFlags)
 import set from "set" /* 2 */;
-import json from "json" /* 1358 */;
+import json from "json" /* 4284 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextFlags.tsx");
 

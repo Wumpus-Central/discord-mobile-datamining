@@ -1,11 +1,11 @@
-// === Module 15827: useAuthWebsocket ===
+// === Module 15989: useAuthWebsocket ===
 
-// Module 15827 (useAuthWebsocket)
+// Module 15989 (useAuthWebsocket)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ ComponentActions: closure_6, Endpoints: error } = ME);

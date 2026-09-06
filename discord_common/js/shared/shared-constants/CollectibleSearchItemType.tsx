@@ -1,6 +1,6 @@
-// === Module 677: CollectibleSearchItemType ===
+// === Module 1078: CollectibleSearchItemType ===
 
-// Module 677 (CollectibleSearchItemType)
+// Module 1078 (CollectibleSearchItemType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectibleSearchItemType.tsx");

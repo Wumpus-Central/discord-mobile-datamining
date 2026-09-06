@@ -1,17 +1,17 @@
-// === Module 15565: TakeActionButtons ===
+// === Module 15723: TakeActionButtons ===
 
-// Module 15565 (TakeActionButtons)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 15723 (TakeActionButtons)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { useState } from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 11224 */;
+import closure_8 from "markAllUserIdListsStale" /* 4209 */;
+import closure_9 from "mergeGuildAvatar" /* 1371 */;
+import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 11363 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ MODAL_LOCATION_CONTEXT_MOBILE: c10, NOFILTR_URL: unpackModuleId, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1, TOAST_CHECKMARK_ICON_COLOR: closure_14 } = LOCATION_CONTEXT_MOBILE);
@@ -100,23 +100,23 @@ export default function TakeActionButtons(senderId) {
             closure_0 = tmp4;
             if (null != closure_1_9.getUser(closure_1_0)) {
               closure_1_6(true);
-              let obj2 = closure_1_0(8775);
+              let obj2 = closure_1_0(8629);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
               obj1[0] = obj2.submitReportForInappropriateConversationSafetyAlert(closure_1_5, () => {
                 dependencyMap(true);
-                let obj = v1(4194);
+                let obj = v1(4259);
                 obj = { key: closure_1_13, content: null, IconComponent: null, iconColor: null, containerStyle: null };
-                const intl = tmp4(1233).intl;
-                obj[1] = intl.string(tmp4(1233).t.gn2c6X);
-                obj[2] = tmp4(4438).CircleCheckIcon;
+                const intl = tmp4(1114).intl;
+                obj[1] = intl.string(tmp4(1114).t.gn2c6X);
+                obj[2] = tmp4(4520).CircleCheckIcon;
                 obj[3] = closure_1_14;
                 obj[4] = toastContainer.toastContainer;
                 obj.open(obj);
               }, () => {
-                const intl = tmp4(1233).intl;
-                tmp4(4193).presentFailedToast(intl.string(tmp4(1233).t["0YV04/"]));
+                const intl = tmp4(1114).intl;
+                tmp4(4258).presentFailedToast(intl.string(tmp4(1114).t["0YV04/"]));
               });
               return obj1;
             } else {
@@ -128,9 +128,9 @@ export default function TakeActionButtons(senderId) {
           throw arg1;
         } else if (arg0 !== 2) {
           callback2(false);
-          obj = v0(8694);
+          obj = v0(8404);
           const result = obj.showReportSuccessToast(closure_0, v0);
-          callback(closure_1_0(11231).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          callback(closure_1_0(11370).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
         }
         dependencyMap = 3;
         obj2 = { value: null, done: true };

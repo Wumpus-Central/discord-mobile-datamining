@@ -1,11 +1,11 @@
-// === Module 13362: useEligibleActiveOutboundPromotions ===
+// === Module 13468: useEligibleActiveOutboundPromotions ===
 
-// Module 13362 (useEligibleActiveOutboundPromotions)
-import initialize from "initialize" /* 586 */;
+// Module 13468 (useEligibleActiveOutboundPromotions)
+import initialize from "initialize" /* 504 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "createEmptyPromotionsByType" /* 10700 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import closure_5 from "createEmptyPromotionsByType" /* 10665 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 
 require = arg1;
 function useEligibleActiveOutboundPromotions(arg0) {
@@ -149,7 +149,7 @@ export const useOutboundPromotions = function useOutboundPromotions() {
 };
 export const useUnseenOutboundPromotions = function useUnseenOutboundPromotions() {
   const items = [closure_5];
-  stateFromStores = stateFromStores(586).useStateFromStores(items, () => obj.lastSeenOutboundPromotionStartDate);
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => obj.lastSeenOutboundPromotionStartDate);
   const tmp2 = useEligibleActiveOutboundPromotions();
   closure_1 = tmp2;
   const items1 = [tmp2, stateFromStores];
@@ -174,7 +174,7 @@ export const useBogoPromotion = function useBogoPromotion() {
 export const useIsInPromotion = function useIsInPromotion(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  return _require(586).useStateFromStores(items, () => closure_1_5.hasPromotion(closure_0));
+  return _require(504).useStateFromStores(items, () => closure_1_5.hasPromotion(closure_0));
 };
 export const useHasActiveBogoPromotion = function useHasActiveBogoPromotion() {
   const effect = React.useEffect(() => {

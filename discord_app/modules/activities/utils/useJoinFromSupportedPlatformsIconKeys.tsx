@@ -1,8 +1,8 @@
-// === Module 13136: getJoinFromSupportedPlatformsIconKeys ===
+// === Module 13236: getJoinFromSupportedPlatformsIconKeys ===
 
-// Module 13136 (getJoinFromSupportedPlatformsIconKeys)
+// Module 13236 (getJoinFromSupportedPlatformsIconKeys)
 import closure_0 from "noop" /* 19 */;
-import { ActivityGamePlatforms } from "ME" /* 673 */;
+import { ActivityGamePlatforms } from "ME" /* 1074 */;
 
 function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
   ({ platforms, currentPlatform } = isGameLaunchable);

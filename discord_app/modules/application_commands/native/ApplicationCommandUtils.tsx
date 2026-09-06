@@ -1,16 +1,16 @@
-// === Module 12027: getApplicationCommandsIconSource ===
+// === Module 12231: getApplicationCommandsIconSource ===
 
-// Module 12027 (getApplicationCommandsIconSource)
+// Module 12231 (getApplicationCommandsIconSource)
 import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import registerAssetDefault from "registerAsset" /* 1900 */;
-import handleChanged from "handleChanged" /* 4855 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4953 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7278 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10651 */;
-import registerAssetDefault2 from "registerAsset" /* 12028 */;
-import registerAssetDefault3 from "registerAsset" /* 12029 */;
-import closure_4 from "map" /* 4854 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import registerAssetDefault from "registerAsset" /* 1884 */;
+import handleChanged from "handleChanged" /* 4901 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4999 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10633 */;
+import registerAssetDefault2 from "registerAsset" /* 12232 */;
+import registerAssetDefault3 from "registerAsset" /* 12233 */;
+import closure_4 from "map" /* 4900 */;
 
 const DraftType = handleChanged.DraftType;
 const BuiltInSectionId = TRUE_OPTION_NAME.BuiltInSectionId;

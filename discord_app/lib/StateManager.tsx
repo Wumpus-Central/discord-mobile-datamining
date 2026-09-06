@@ -1,8 +1,8 @@
-// === Module 13565: shouldCommit ===
+// === Module 13671: shouldCommit ===
 
-// Module 13565 (shouldCommit)
+// Module 13671 (shouldCommit)
 import set from "set" /* 2 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 656 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 1332 */;
 
 const result = set.fileFinishedImporting("lib/StateManager.tsx");
 class StateManager {

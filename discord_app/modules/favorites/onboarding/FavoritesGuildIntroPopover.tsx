@@ -1,15 +1,15 @@
-// === Module 10343: hasOfferedFavoritesGuildOnboarding ===
+// === Module 10238: hasOfferedFavoritesGuildOnboarding ===
 
-// Module 10343 (hasOfferedFavoritesGuildOnboarding)
-import DismissibleContent from "DismissibleContent" /* 1372 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10344 */;
+// Module 10238 (hasOfferedFavoritesGuildOnboarding)
+import DismissibleContent from "DismissibleContent" /* 1943 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10239 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import withContent from "withContent" /* 1378 */;
-import closure_7 from "withContent" /* 1378 */;
-import closure_8 from "initializeFromUserSettings" /* 1389 */;
-import { NOOP } from "ME" /* 673 */;
-import keys from "keys" /* 641 */;
+import withContent from "withContent" /* 1949 */;
+import closure_7 from "withContent" /* 1949 */;
+import closure_8 from "initializeFromUserSettings" /* 1960 */;
+import { NOOP } from "ME" /* 1074 */;
+import keys from "keys" /* 560 */;
 
 require = arg1;
 let c4 = importAllResult;
@@ -17,30 +17,30 @@ let c4 = importAllResult;
 let closure_10 = keys.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
 let c11 = false;
 const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
-  const favoritesAccess = _require(10333).useFavoritesAccess("FavoritesGuildIntroPopover");
+  const favoritesAccess = _require(10224).useFavoritesAccess("FavoritesGuildIntroPopover");
   ({ hasAccess, isFreemium } = favoritesAccess);
-  const obj = _require(10333);
+  const obj = _require(10224);
   const items = [closure_8];
-  const stateFromStores = _require(586).useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
-  const obj2 = _require(586);
+  const stateFromStores = _require(504).useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
+  const obj2 = _require(504);
   const tmp5 = useCanShowFavoritesGuildOnboardingDefault();
-  _require(6261);
+  _require(7388);
   if (hasAccess) {
     if (isFreemium) {
       if (!stateFromStores) {
         if (tmp5) {
           if (tmp6) {
-            let items1 = [tmp(1372).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
+            let items1 = [tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
           }
           const tmp10 = callback(tmp8(items1), 2);
           _require = tmp11;
-          if (tmp10[0] === tmp(1372).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
-            const items2 = [tmp(1372).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+          if (tmp10[0] === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
+            const items2 = [tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
             let items3 = items2;
           } else {
             items3 = [];
           }
-          const tmp12 = callback(tmp(6261).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1372).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 = callback(tmp(7388).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = importAllResult.useEffect(() => {

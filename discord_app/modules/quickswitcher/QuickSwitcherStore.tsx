@@ -1,30 +1,30 @@
-// === Module 9949: handleConnectionOpen ===
+// === Module 9834: handleConnectionOpen ===
 
-// Module 9949 (handleConnectionOpen)
+// Module 9834 (handleConnectionOpen)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import Storage2 from "Storage" /* 592 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import sortByMatchScore from "sortByMatchScore" /* 9950 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 9950 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9961 */;
-import closure_4 from "set" /* 5062 */;
-import closure_5 from "rebuild" /* 5457 */;
-import closure_6 from "handleThemeChange" /* 1301 */;
-import closure_7 from "fetchFingerprint" /* 1215 */;
-import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import closure_9 from "handleChanged" /* 4855 */;
-import { DraftType } from "handleChanged" /* 4855 */;
-import closure_11 from "comparator" /* 1981 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
-import closure_13 from "trackCommunicationDisabled" /* 1991 */;
-import closure_14 from "createGuildRecordFromRust" /* 1908 */;
-import closure_15 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_16 from "generateOldThreadCutoff" /* 4493 */;
-import closure_17 from "handleConnectionOpen" /* 1980 */;
-import closure_18 from "handleConnectionOpen" /* 4299 */;
-import closure_19 from "updateUserGuildSettingsInternal" /* 4702 */;
-import ME from "ME" /* 673 */;
+import initializeDefault from "initialize" /* 504 */;
+import Storage2 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sortByMatchScore from "sortByMatchScore" /* 9835 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 9835 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9844 */;
+import closure_4 from "set" /* 5108 */;
+import closure_5 from "rebuild" /* 5506 */;
+import closure_6 from "handleThemeChange" /* 1183 */;
+import closure_7 from "fetchFingerprint" /* 502 */;
+import closure_8 from "ensureGuildLoaded" /* 1957 */;
+import closure_9 from "handleChanged" /* 4901 */;
+import { DraftType } from "handleChanged" /* 4901 */;
+import closure_11 from "comparator" /* 2012 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 2012 */;
+import closure_13 from "trackCommunicationDisabled" /* 2021 */;
+import closure_14 from "createGuildRecordFromRust" /* 1979 */;
+import closure_15 from "getUncachedChannelPermissions" /* 4199 */;
+import closure_16 from "generateOldThreadCutoff" /* 4575 */;
+import closure_17 from "handleConnectionOpen" /* 2011 */;
+import closure_18 from "handleConnectionOpen" /* 4381 */;
+import closure_19 from "updateUserGuildSettingsInternal" /* 4741 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function handleConnectionOpen() {
@@ -42,7 +42,7 @@ function generateResultFromId(arg0) {
     return null;
   } else {
     if (tmp3) {
-      if (tmp2.type !== tmp7(9950).AutocompleterResultTypes.USER) {
+      if (tmp2.type !== tmp7(9835).AutocompleterResultTypes.USER) {
         return null;
       }
     } else if (null != c26) {
@@ -396,75 +396,75 @@ function handleUserSearchUpdate(arr, str) {
   if (!flag) {
     let DOWN = require;
     if (sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL !== c26) {
-      if (DOWN(9950).AutocompleterResultTypes.USER !== tmp7) {
-        if (DOWN(9950).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
-          const intl5 = DOWN(1233).intl;
-          arr = arr.unshift(DOWN(9950).createHeaderResult(intl5.string(DOWN(1233).t.W26k4V)));
+      if (DOWN(9835).AutocompleterResultTypes.USER !== tmp7) {
+        if (DOWN(9835).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
+          const intl5 = DOWN(1114).intl;
+          arr = arr.unshift(DOWN(9835).createHeaderResult(intl5.string(DOWN(1114).t.W26k4V)));
           let items = arr;
-          const DOWNResult = DOWN(9950);
-        } else if (DOWN(9950).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
-          const intl4 = DOWN(1233).intl;
-          arr = arr.unshift(DOWN(9950).createHeaderResult(intl4.string(DOWN(1233).t.zUoI5C)));
+          const DOWNResult = DOWN(9835);
+        } else if (DOWN(9835).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
+          const intl4 = DOWN(1114).intl;
+          arr = arr.unshift(DOWN(9835).createHeaderResult(intl4.string(DOWN(1114).t.zUoI5C)));
           items = arr;
-          const DOWNResult1 = DOWN(9950);
-        } else if (DOWN(9950).AutocompleterResultTypes.GUILD === tmp7) {
-          const intl3 = DOWN(1233).intl;
-          arr.unshift(DOWN(9950).createHeaderResult(intl3.string(DOWN(1233).t.olADPs)));
+          const DOWNResult1 = DOWN(9835);
+        } else if (DOWN(9835).AutocompleterResultTypes.GUILD === tmp7) {
+          const intl3 = DOWN(1114).intl;
+          arr.unshift(DOWN(9835).createHeaderResult(intl3.string(DOWN(1114).t.olADPs)));
           items = arr;
-          const DOWNResult2 = DOWN(9950);
-        } else if (DOWN(9950).AutocompleterResultTypes.APPLICATION === tmp7) {
-          const intl2 = DOWN(1233).intl;
-          arr.unshift(DOWN(9950).createHeaderResult(intl2.string(DOWN(1233).t.VwK1ld)));
+          const DOWNResult2 = DOWN(9835);
+        } else if (DOWN(9835).AutocompleterResultTypes.APPLICATION === tmp7) {
+          const intl2 = DOWN(1114).intl;
+          arr.unshift(DOWN(9835).createHeaderResult(intl2.string(DOWN(1114).t.VwK1ld)));
           items = arr;
-          const DOWNResult3 = DOWN(9950);
-        } else if (DOWN(9950).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
-          const intl = DOWN(1233).intl;
-          arr.unshift(DOWN(9950).createHeaderResult(intl.string(DOWN(1233).t.gEp2SG)));
+          const DOWNResult3 = DOWN(9835);
+        } else if (DOWN(9835).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
+          const intl = DOWN(1114).intl;
+          arr.unshift(DOWN(9835).createHeaderResult(intl.string(DOWN(1114).t.gEp2SG)));
           items = arr;
-          const DOWNResult4 = DOWN(9950);
+          const DOWNResult4 = DOWN(9835);
         } else {
-          const found = arr.filter((type) => type.type === callback(9950).AutocompleterResultTypes.GAME_PROFILE);
+          const found = arr.filter((type) => type.type === callback(9835).AutocompleterResultTypes.GAME_PROFILE);
           const substr = found.slice(0, 3);
           items = [];
-          HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== callback(9950).AutocompleterResultTypes.GAME_PROFILE), 0));
+          HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== callback(9835).AutocompleterResultTypes.GAME_PROFILE), 0));
           arr = items;
         }
         if (str !== str) {
           const _Math = Math;
           closure_29 = Math.max(str.length, closure_29);
-          str = DOWN(9950).findNextSelectedResult;
-          DOWN = DOWN(9950).FindResultDirections.DOWN;
+          str = DOWN(9835).findNextSelectedResult;
+          DOWN = DOWN(9835).FindResultDirections.DOWN;
           closure_23 = str(DOWN, -1, arr);
-          const DOWNResult5 = DOWN(9950);
+          const DOWNResult5 = DOWN(9835);
         } else {
           let tmp31 = null != tmp29;
           if (tmp31) {
-            tmp31 = tmp29.type === DOWN(9950).AutocompleterResultTypes.HEADER;
+            tmp31 = tmp29.type === DOWN(9835).AutocompleterResultTypes.HEADER;
           }
           if (tmp31) {
-            closure_23 = DOWN(9950).findNextSelectedResult(DOWN(9950).FindResultDirections.DOWN, closure_23, arr);
-            const DOWNResult6 = DOWN(9950);
+            closure_23 = DOWN(9835).findNextSelectedResult(DOWN(9835).FindResultDirections.DOWN, closure_23, arr);
+            const DOWNResult6 = DOWN(9835);
           }
         }
         quickSwitcherStoreClass.emitChange();
       }
     }
     let guild = null;
-    if (c26 !== DOWN(9950).AutocompleterResultTypes.USER_GLOBAL) {
+    if (c26 !== DOWN(9835).AutocompleterResultTypes.USER_GLOBAL) {
       guild = store3.getGuild(store4.getGuildId());
     }
     if (null != guild) {
-      const intl7 = DOWN(1233).intl;
+      const intl7 = DOWN(1114).intl;
       const obj = { name: null };
       guild = guild.name;
       obj[0] = guild;
-      let formatToPlainStringResult = intl7.formatToPlainString(DOWN(1233).t.FREzQs, obj);
+      let formatToPlainStringResult = intl7.formatToPlainString(DOWN(1114).t.FREzQs, obj);
     } else {
-      const intl6 = DOWN(1233).intl;
-      formatToPlainStringResult = intl6.string(DOWN(1233).t.XFYW1o);
+      const intl6 = DOWN(1114).intl;
+      formatToPlainStringResult = intl6.string(DOWN(1114).t.XFYW1o);
     }
-    arr.unshift(DOWN(9950).createHeaderResult(formatToPlainStringResult));
-    const DOWNResult7 = DOWN(9950);
+    arr.unshift(DOWN(9835).createHeaderResult(formatToPlainStringResult));
+    const DOWNResult7 = DOWN(9835);
   }
 }
 function handleQuickSwitcherHide() {
@@ -607,7 +607,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
           let tmp6 = require;
         } else {
           if (tmp2) {
-            const items1 = [tmp31(9950).AutocompleterResultTypes.USER];
+            const items1 = [tmp31(9835).AutocompleterResultTypes.USER];
             setResultTypes(items1);
             tmp6 = tmp31;
           } else {
@@ -623,7 +623,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
         }
         store.setLimit(num);
         const guildId = store4.getGuildId();
-        if (queryMode === tmp6(9950).AutocompleterResultTypes.USER) {
+        if (queryMode === tmp6(9835).AutocompleterResultTypes.USER) {
           if (null != guildId) {
             let obj = { userFilters: null };
             obj = { guild: null, friends: true };
@@ -632,10 +632,10 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
             store.setOptions(obj, true);
           }
         }
-        if (queryMode === tmp6(9950).AutocompleterResultTypes.VOICE_CHANNEL) {
+        if (queryMode === tmp6(9835).AutocompleterResultTypes.VOICE_CHANNEL) {
           store.setOptions({ voiceChannelGuildFilter: null }, true);
         } else {
-          store.setOptions({ userFilters: null, voiceChannelGuildFilter: "Array" }, true);
+          store.setOptions({ userFilters: null, voiceChannelGuildFilter: "a" }, true);
         }
       }
       if (queryMode === sortByMatchScore.AutocompleterResultTypes.USER) {

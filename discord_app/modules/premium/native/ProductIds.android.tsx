@@ -1,9 +1,9 @@
-// === Module 6096: SubscriptionPlans ===
+// === Module 7240: SubscriptionPlans ===
 
-// Module 6096 (SubscriptionPlans)
+// Module 7240 (SubscriptionPlans)
 import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1923 */;
-import isMetaQuest from "isMetaQuest" /* 1623 */;
+import GuildFeatures from "GuildFeatures" /* 1373 */;
+import isMetaQuest from "isMetaQuest" /* 1608 */;
 
 ({ PremiumTypes, SubscriptionIntervalTypes, SubscriptionPlans } = GuildFeatures);
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID, PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID, PREMIUM_TIER_2_REFERRAL_TRIAL_ID, PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID } = GuildFeatures);

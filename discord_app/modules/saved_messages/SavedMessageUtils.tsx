@@ -1,13 +1,13 @@
-// === Module 11522: _savedMessageJumpToMessage ===
+// === Module 11711: _savedMessageJumpToMessage ===
 
-// Module 11522 (_savedMessageJumpToMessage)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import hooksDefault from "hooks" /* 4074 */;
+// Module 11711 (_savedMessageJumpToMessage)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import hooksDefault from "hooks" /* 4153 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { UnknownChannelRecord } from "createChannelRecord" /* 1390 */;
-import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import ME from "ME" /* 673 */;
+import { UnknownChannelRecord } from "createChannelRecord" /* 1961 */;
+import closure_6 from "ensureGuildLoaded" /* 1957 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function _savedMessageJumpToMessage() {
@@ -153,15 +153,15 @@ export const useDueInString = function useDueInString(arg0) {
       H4gnX9 = getSystemLocale.t.H4gnX9;
     }
     if (type === tmp8.LONG) {
-      Uq7Y_7 = tmp(1233).t.haia16;
+      Uq7Y_7 = tmp(1114).t.haia16;
     } else {
-      Uq7Y_7 = tmp(1233).t["Uq7Y+7"];
+      Uq7Y_7 = tmp(1114).t["Uq7Y+7"];
     }
     if (now > dueAt) {
       H4gnX9 = Uq7Y_7;
     }
     obj = { dueInText: null, isOverdue: null };
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     obj = { duration: null };
     const time = dueAt.getTime();
     const obj3 = hooksDefault;
@@ -175,7 +175,7 @@ export const useDueInString = function useDueInString(arg0) {
 export const useSavedMessageChannel = function useSavedMessageChannel(savedMessage) {
   const _require = savedMessage;
   const items = [closure_6];
-  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_6.getChannel(savedMessage.saveData.channelId));
+  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_6.getChannel(savedMessage.saveData.channelId));
   const items1 = [stateFromStores, savedMessage];
   return React.useMemo(() => {
     let tmp = stateFromStores;

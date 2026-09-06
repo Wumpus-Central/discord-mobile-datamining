@@ -1,17 +1,17 @@
-// === Module 9834: VideoDisabledSvgIcon ===
+// === Module 9119: VideoDisabledSvgIcon ===
 
-// Module 9834 (VideoDisabledSvgIcon)
-import ThemesDefault from "Themes" /* 709 */;
-import Button from "Button" /* 1296 */;
-import inlineStyles from "inlineStyles" /* 8254 */;
-import inlineStylesDefault from "inlineStyles" /* 8254 */;
-import isStableVoiceStateEqual from "isStableVoiceStateEqual" /* 9835 */;
-import registerAssetDefault from "registerAsset" /* 9844 */;
-import registerAssetDefault2 from "registerAsset" /* 9845 */;
+// Module 9119 (VideoDisabledSvgIcon)
+import ThemesDefault from "Themes" /* 576 */;
+import Button from "Button" /* 1178 */;
+import inlineStyles from "inlineStyles" /* 8453 */;
+import inlineStylesDefault from "inlineStyles" /* 8453 */;
+import isStableVoiceStateEqual from "isStableVoiceStateEqual" /* 9120 */;
+import registerAssetDefault from "registerAsset" /* 9129 */;
+import registerAssetDefault2 from "registerAsset" /* 9130 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function VideoDisabledSvgIcon(size) {
@@ -65,13 +65,13 @@ const memoResult = importAllResult.memo((arg0) => {
     let obj = { style: null, size: "xs" };
     items[1] = redTint;
     obj[0] = items;
-    return callback(tmp2(9836).HeadphonesDenyIcon, obj);
-  } else if (tmp2(9835).MuteDeafenIconState.DEAFENED === state) {
+    return callback(tmp2(9121).HeadphonesDenyIcon, obj);
+  } else if (tmp2(9120).MuteDeafenIconState.DEAFENED === state) {
     obj = { style: null, size: "xs" };
     const items1 = [style];
     obj[0] = items1;
-    return callback(tmp2(9838).HeadphonesSlashIcon, obj);
-  } else if (tmp2(9835).MuteDeafenIconState.MUTED_SERVER === state) {
+    return callback(tmp2(9123).HeadphonesSlashIcon, obj);
+  } else if (tmp2(9120).MuteDeafenIconState.MUTED_SERVER === state) {
     const items2 = [style, ];
     let redTint1 = null;
     if (!alwaysWhite) {
@@ -80,19 +80,19 @@ const memoResult = importAllResult.memo((arg0) => {
     obj1 = { style: null, size: "xs" };
     items2[1] = redTint1;
     obj1[0] = items2;
-    return callback(tmp2(9840).MicrophoneDenyIcon, obj1);
-  } else if (tmp2(9835).MuteDeafenIconState.MUTED_LOCAL === state) {
+    return callback(tmp2(9125).MicrophoneDenyIcon, obj1);
+  } else if (tmp2(9120).MuteDeafenIconState.MUTED_LOCAL === state) {
     const obj2 = { style: null, size: "xs" };
     const items3 = [style];
     obj2[0] = items3;
-    return callback(tmp2(9840).MicrophoneDenyIcon, obj2);
-  } else if (tmp2(9835).MuteDeafenIconState.MUTED === state) {
+    return callback(tmp2(9125).MicrophoneDenyIcon, obj2);
+  } else if (tmp2(9120).MuteDeafenIconState.MUTED === state) {
     const obj3 = { style: null, size: "xs" };
     const items4 = [style];
     obj3[0] = items4;
-    return callback(tmp2(9842).MicrophoneSlashIcon, obj3);
+    return callback(tmp2(9127).MicrophoneSlashIcon, obj3);
   } else {
-    tmp2(1470).assertNever(state);
+    tmp2(1369).assertNever(state);
   }
 });
 const memoResult1 = importAllResult.memo((state) => {
@@ -104,18 +104,18 @@ const memoResult1 = importAllResult.memo((state) => {
     obj.source = registerAssetDefault;
     const items = [merged.style, tmp2.noTint];
     obj.style = items;
-    return callback(tmp3(1296).Icon, obj);
-  } else if (tmp3(9835).VideoIconState.VIDEO_DISABLED_LOCAL === state) {
+    return callback(tmp3(1178).Icon, obj);
+  } else if (tmp3(9120).VideoIconState.VIDEO_DISABLED_LOCAL === state) {
     obj = {};
     const merged2 = Object.assign(merged);
     return callback(VideoDisabledSvgIcon, obj);
-  } else if (tmp3(9835).VideoIconState.VIDEO_ACTIVE === state) {
+  } else if (tmp3(9120).VideoIconState.VIDEO_ACTIVE === state) {
     obj1 = {};
     const merged3 = Object.assign(merged);
     obj1.source = registerAssetDefault2;
-    return callback(tmp3(1296).Icon, obj1);
+    return callback(tmp3(1178).Icon, obj1);
   } else {
-    tmp3(1470).assertNever(state);
+    tmp3(1369).assertNever(state);
   }
   tmp2 = callback3();
 });

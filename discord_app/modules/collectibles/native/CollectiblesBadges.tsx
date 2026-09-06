@@ -1,17 +1,17 @@
-// === Module 8105: NewBadge ===
+// === Module 8832: NewBadge ===
 
-// Module 8105 (NewBadge)
+// Module 8832 (NewBadge)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Text from "Text" /* 4474 */;
-import LockIcon from "LockIcon" /* 5049 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8106 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8107 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Text from "Text" /* 4556 */;
+import LockIcon from "LockIcon" /* 5095 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8833 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;

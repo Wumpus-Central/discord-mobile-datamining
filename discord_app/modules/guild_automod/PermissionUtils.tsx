@@ -1,9 +1,9 @@
-// === Module 16668: canCurrentUserManageMessageFilters ===
+// === Module 16833: canCurrentUserManageMessageFilters ===
 
-// Module 16668 (canCurrentUserManageMessageFilters)
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
-import ME from "ME" /* 673 */;
+// Module 16833 (canCurrentUserManageMessageFilters)
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
@@ -34,7 +34,7 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
   const _require = arg0;
   const items = [closure_2, closure_3];
   const items1 = [arg0];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
       if (obj2 !== undefined) {
         const guild = closure_1_2.getGuild(tmp);
@@ -51,7 +51,7 @@ export const useIsUserProfileRuleEnabled = function useIsUserProfileRuleEnabled(
   const _require = arg0;
   const items = [closure_2];
   const items1 = [arg0];
-  return _require(586).useStateFromStores(items, () => {
+  return _require(504).useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let flag;
     if (guild != null) {

@@ -1,11 +1,11 @@
-// === Module 9965: fetchUserAffinitiesV2 ===
+// === Module 9848: fetchUserAffinitiesV2 ===
 
-// Module 9965 (fetchUserAffinitiesV2)
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_3 from "hasConsented" /* 6063 */;
-import closure_4 from "recomputeAffinities" /* 7414 */;
-import ME from "ME" /* 673 */;
+// Module 9848 (fetchUserAffinitiesV2)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
+import closure_3 from "hasConsented" /* 6595 */;
+import closure_4 from "recomputeAffinities" /* 7659 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ Endpoints: c5, Consents: closure_6 } = ME);
@@ -30,7 +30,7 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
       obj[1] = num;
       const value = HTTP.get(obj);
       let nextPromise = value.then((body) => {
-        let obj = callback(706);
+        let obj = callback(573);
         obj = {
           type: "LOAD_USER_AFFINITIES_V2_SUCCESS",
           affineUsers: user_affinities.map((otherUserId) => {
@@ -81,7 +81,7 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
         user_affinities = body.body.user_affinities;
         obj.dispatch(obj);
       }, () => {
-        callback(706).dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
+        callback(573).dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
       });
     }
     return nextPromise;

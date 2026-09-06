@@ -1,25 +1,25 @@
-// === Module 10984: PremiumGiftStyles ===
+// === Module 11016: PremiumGiftStyles ===
 
-// Module 10984 (PremiumGiftStyles)
+// Module 11016 (PremiumGiftStyles)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import messagesProxyDefault from "messagesProxy" /* 2432 */;
-import preloadDefault from "preload" /* 5502 */;
-import registerAssetDefault from "registerAsset" /* 10986 */;
-import registerAssetDefault2 from "registerAsset" /* 10987 */;
-import registerAssetDefault3 from "registerAsset" /* 10988 */;
-import registerAssetDefault4 from "registerAsset" /* 10989 */;
-import metadataDefault from "metadata" /* 10990 */;
-import metadataDefault2 from "metadata" /* 10991 */;
-import metadataDefault3 from "metadata" /* 10992 */;
-import metadataDefault4 from "metadata" /* 10993 */;
-import metadataDefault5 from "metadata" /* 10994 */;
+import ThemesDefault from "Themes" /* 576 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import messagesProxyDefault from "messagesProxy" /* 2460 */;
+import preloadDefault from "preload" /* 5587 */;
+import registerAssetDefault from "registerAsset" /* 11018 */;
+import registerAssetDefault2 from "registerAsset" /* 11019 */;
+import registerAssetDefault3 from "registerAsset" /* 11020 */;
+import registerAssetDefault4 from "registerAsset" /* 11021 */;
+import metadataDefault from "metadata" /* 11022 */;
+import metadataDefault2 from "metadata" /* 11023 */;
+import metadataDefault3 from "metadata" /* 11024 */;
+import metadataDefault4 from "metadata" /* 11025 */;
+import metadataDefault5 from "metadata" /* 11026 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PremiumGiftStyles } from "GuildFeatures" /* 1923 */;
-import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 10985 */;
+import { PremiumGiftStyles } from "GuildFeatures" /* 1373 */;
+import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 11017 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 noopAll;
@@ -47,7 +47,7 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   }
   obj = { container: obj, selected: null, image: null };
   obj[4] = num;
-  obj = { position: "absolute", borderColor: tmp(709).colors.TEXT_BRAND, borderRadius: tmp(709).radii.sm, borderWidth: 2, flex: 1, width: 78, height: 44 };
+  obj = { position: "absolute", borderColor: tmp(576).colors.TEXT_BRAND, borderRadius: tmp(576).radii.sm, borderWidth: 2, flex: 1, width: 78, height: 44 };
   obj[1] = obj;
   obj[2] = { width: 72, height: 38, alignSelf: "center" };
   return obj;

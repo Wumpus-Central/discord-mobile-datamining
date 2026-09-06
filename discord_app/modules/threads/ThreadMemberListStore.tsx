@@ -1,20 +1,20 @@
-// === Module 9952: handleUserUpdate ===
+// === Module 9837: handleUserUpdate ===
 
-// Module 9952 (handleUserUpdate)
+// Module 9837 (handleUserUpdate)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import nameFromUserDefault from "nameFromUser" /* 4322 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
+import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import closure_7 from "handleConnectionOpenOrResumed" /* 6134 */;
-import closure_8 from "sortActivity" /* 4569 */;
-import closure_9 from "filterPlayingActivities" /* 5232 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "trackCommunicationDisabled" /* 2021 */;
+import closure_7 from "handleConnectionOpenOrResumed" /* 7278 */;
+import closure_8 from "sortActivity" /* 4600 */;
+import closure_9 from "filterPlayingActivities" /* 5279 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function handleUserUpdate(user) {

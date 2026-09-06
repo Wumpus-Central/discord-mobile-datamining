@@ -1,10 +1,10 @@
-// === Module 9658: VIEW_CHANNEL ===
+// === Module 9672: VIEW_CHANNEL ===
 
-// Module 9658 (VIEW_CHANNEL)
+// Module 9672 (VIEW_CHANNEL)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import Permissions2 from "Permissions" /* 1394 */;
-import importAllResult from "fromString" /* 503 */;
+import ME from "ME" /* 1074 */;
+import Permissions2 from "Permissions" /* 1965 */;
+import importAllResult from "fromString" /* 1086 */;
 
 const Permissions = ME.Permissions;
 const VIEW_CHANNEL = Permissions.VIEW_CHANNEL;

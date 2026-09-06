@@ -1,8 +1,8 @@
-// === Module 5080: getIsScreenLandscape ===
+// === Module 5126: getIsScreenLandscape ===
 
-// Module 5080 (getIsScreenLandscape)
+// Module 5126 (getIsScreenLandscape)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "getDimensionsStoreStateForEntry" /* 1493 */;
+import closure_3 from "getDimensionsStoreStateForEntry" /* 1478 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
@@ -15,7 +15,7 @@ export const getIsScreenLandscape = function getIsScreenLandscape() {
   return state.getState().byAppEntry[str].screenIsLandscape;
 };
 export const useIsScreenLandscape = function useIsScreenLandscape() {
-  appEntryKey = appEntryKey(1495).useAppEntryKey();
+  appEntryKey = appEntryKey(1480).useAppEntryKey();
   const items = [appEntryKey];
   return state(React.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));
 };

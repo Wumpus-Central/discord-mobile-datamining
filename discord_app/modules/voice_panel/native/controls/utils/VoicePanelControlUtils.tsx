@@ -1,8 +1,8 @@
-// === Module 17008: getDrawerSpec ===
+// === Module 17172: getDrawerSpec ===
 
-// Module 17008 (getDrawerSpec)
+// Module 17172 (getDrawerSpec)
 import set from "set" /* 2 */;
-import tDefault from "t" /* 10955 */;
+import tDefault from "t" /* 10993 */;
 
 function getDrawerSpec(height, top) {
   const diff = height - top;

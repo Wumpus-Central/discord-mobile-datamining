@@ -1,16 +1,16 @@
-// === Module 11356: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11531: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11356 (createSocialLayerStorefrontProductDetailsEmbed)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getPrice from "getPrice" /* 6082 */;
-import useSKUPrice from "useSKUPrice" /* 6087 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7866 */;
+// Module 11531 (createSocialLayerStorefrontProductDetailsEmbed)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import getPrice from "getPrice" /* 7226 */;
+import useSKUPrice from "useSKUPrice" /* 7231 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "addApplication" /* 4519 */;
-import closure_6 from "addSku" /* 4527 */;
-import { PaymentGateways } from "ME" /* 673 */;
-import { InviteTypes } from "InviteSendStates" /* 7492 */;
+import closure_5 from "addApplication" /* 4788 */;
+import closure_6 from "addSku" /* 5510 */;
+import { PaymentGateways } from "ME" /* 1074 */;
+import { InviteTypes } from "InviteSendStates" /* 7736 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
@@ -46,7 +46,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (tmp(11357)(application)) {
+        if (tmp(11532)(application)) {
           if ("guild" !== guildOrApplication.type) {
             const result1 = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(value);
             const obj4 = useSKUPrice;
@@ -64,17 +64,17 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             obj.headerColor = colors.headerColor;
             obj.titleText = value.name;
             obj.titleColor = colors.titleColor;
-            const intl2 = tmp12(1233).intl;
+            const intl2 = tmp12(1114).intl;
             obj.subtitle = intl2.string(getSystemLocale.t.V91tvy);
             obj.subtitleColor = colors.subtitleColor;
             obj.thumbnailUrl = str;
             obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-            const intl3 = tmp12(1233).intl;
+            const intl3 = tmp12(1114).intl;
             const string = intl3.string;
             if (result1) {
-              let stringResult = string(tmp12(1233).t.boqtTA);
+              let stringResult = string(tmp12(1114).t.boqtTA);
             } else {
-              stringResult = string(tmp(3370).BKf0MM);
+              stringResult = string(tmp(3417).BKf0MM);
             }
             obj.acceptLabelText = stringResult;
             let prop;

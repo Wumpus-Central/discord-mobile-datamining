@@ -1,6 +1,6 @@
-// === Module 6644: vanityUrl ===
+// === Module 6080: vanityUrl ===
 
-// Module 6644 (vanityUrl)
+// Module 6080 (vanityUrl)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDiversityTier7SmallBadge-2x.png.js");

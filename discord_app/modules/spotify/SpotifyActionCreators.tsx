@@ -1,12 +1,12 @@
-// === Module 9409: apiRequest ===
+// === Module 11751: apiRequest ===
 
-// Module 9409 (apiRequest)
-import dispatcherDefault from "dispatcher" /* 706 */;
-import set from "set" /* 1234 */;
-import setDefault from "set" /* 8829 */;
-import closure_3 from "isProtocolRegistered" /* 9408 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8630 */;
-import ME from "ME" /* 673 */;
+// Module 11751 (apiRequest)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import set from "set" /* 1115 */;
+import setDefault from "set" /* 8684 */;
+import closure_3 from "isProtocolRegistered" /* 11750 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8340 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function apiRequest(arg0, arg1, arg2, arg3) {
@@ -326,7 +326,7 @@ const result = require("set").fileFinishedImporting("modules/spotify/SpotifyActi
 export const SpotifyAPI = obj;
 export const getAccessToken = function getAccessToken(id) {
   const _require = id;
-  const HTTP = _require(527).HTTP;
+  const HTTP = _require(1272).HTTP;
   const value = HTTP.get({ url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false });
   obj = { url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false };
   return value.catch((body) => {

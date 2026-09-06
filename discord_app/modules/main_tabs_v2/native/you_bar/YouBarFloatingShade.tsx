@@ -1,16 +1,16 @@
-// === Module 16233: ? ===
+// === Module 16395: ? ===
 
-// Module 16233
-import initialize from "initialize" /* 586 */;
-import int2hslRaw from "int2hslRaw" /* 685 */;
-import map from "map" /* 4197 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14942 */;
+// Module 16395
+import initialize from "initialize" /* 504 */;
+import int2hslRaw from "int2hslRaw" /* 1091 */;
+import map from "map" /* 4262 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15100 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "reset" /* 4297 */;
-import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT" /* 14940 */;
-import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE" /* 16123 */;
+import closure_4 from "reset" /* 4379 */;
+import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT" /* 15098 */;
+import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE" /* 16285 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -23,11 +23,11 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   const youBarTotalHeight = obj.useYouBarTotalHeight();
   const sum = youBarTotalHeight + closure_5;
   require = sum;
-  width = width(1492)().width;
-  if (width(4335)().isChatBesideChannelList) {
+  width = width(1477)().width;
+  if (width(4420)().isChatBesideChannelList) {
     width = tmp7 + GUILD_LIST_WIDTH;
   }
-  let tmp2Result = tmp2(4217);
+  let tmp2Result = tmp2(4296);
   const fn = function t() {
     return { height: closure_0, opacity: 1, width };
   };
@@ -35,16 +35,16 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   fn.__workletHash = 7609004216185;
   fn.__initData = closure_11;
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
-  tmp2Result = tmp2(4296);
-  const gradientValue = tmp2Result.useGradientValue(tmp2(4296).GradientPercentage.END);
-  const token = map.useToken(tmp6(709).colors.BACKGROUND_BASE_LOWER);
+  tmp2Result = tmp2(4378);
+  const gradientValue = tmp2Result.useGradientValue(tmp2(4378).GradientPercentage.END);
+  const token = map.useToken(tmp6(576).colors.BACKGROUND_BASE_LOWER);
   const tmp2Result1 = map;
   const items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
   const tmp2Result2 = initialize;
   let token1 = null;
   if (null != stateFromStores) {
-    token1 = tmp2Result3.useToken(tmp6(709).colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
+    token1 = tmp2Result3.useToken(tmp6(576).colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
   }
   if (null == token1) {
     token1 = token;
@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   obj = { bottom: sum / 2, height: sum / 2, width };
   items3[1] = obj;
   const items4 = [str2, str];
-  items2[1] = callback(width(4941), { style: items3, colors: items4, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" });
+  items2[1] = callback(width(4987), { style: items3, colors: items4, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" });
   const items5 = [tmp.container, { width, height: sum / 2, backgroundColor: str }];
   items2[2] = callback(View, { style: items5 });
   obj[0] = items2;

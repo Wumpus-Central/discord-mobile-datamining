@@ -1,14 +1,14 @@
-// === Module 16567: useChannelTopicGradientBackground ===
+// === Module 16733: useChannelTopicGradientBackground ===
 
-// Module 16567 (useChannelTopicGradientBackground)
-import ThemesDefault from "Themes" /* 709 */;
+// Module 16733 (useChannelTopicGradientBackground)
+import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopicGradient.tsx");
 
 export const useChannelTopicGradientBackground = function useChannelTopicGradientBackground() {
-  token = token(4197).useToken(ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  token = token(4262).useToken(ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   return React.useMemo(() => {
     const obj = closure_1_1(closure_1_2[3])(token);

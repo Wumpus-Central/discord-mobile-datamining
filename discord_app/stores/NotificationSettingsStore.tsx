@@ -1,11 +1,11 @@
-// === Module 10190: DesktopNotificationTypes ===
+// === Module 10081: DesktopNotificationTypes ===
 
-// Module 10190 (DesktopNotificationTypes)
+// Module 10081 (DesktopNotificationTypes)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import set2 from "set" /* 1234 */;
-import ME from "ME" /* 673 */;
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import set2 from "set" /* 1115 */;
+import ME from "ME" /* 1074 */;
 
 const DesktopNotificationTypes = ME.DesktopNotificationTypes;
 ({ NotificationPermissionTypes: c3, TTSNotificationTypes } = ME);

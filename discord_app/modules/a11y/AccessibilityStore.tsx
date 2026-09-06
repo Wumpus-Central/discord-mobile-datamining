@@ -1,17 +1,17 @@
-// === Module 4470: maybeApplyNoTextColorForLightCustomTheme ===
+// === Module 4552: maybeApplyNoTextColorForLightCustomTheme ===
 
-// Module 4470 (maybeApplyNoTextColorForLightCustomTheme)
-import initializeDefault from "initialize" /* 586 */;
-import Storage7 from "Storage" /* 592 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
-import setDefault from "set" /* 4472 */;
+// Module 4552 (maybeApplyNoTextColorForLightCustomTheme)
+import initializeDefault from "initialize" /* 504 */;
+import Storage7 from "Storage" /* 510 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import setDefault from "set" /* 4554 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "initialize" /* 1302 */;
-import closure_6 from "handleThemeChange" /* 1301 */;
-import closure_7 from "handleConnectionClosedOrResumed" /* 1339 */;
-import ME from "ME" /* 673 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4471 */;
+import closure_5 from "initialize" /* 1184 */;
+import closure_6 from "handleThemeChange" /* 1183 */;
+import closure_7 from "handleConnectionClosedOrResumed" /* 1221 */;
+import ME from "ME" /* 1074 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
 
 require = arg1;
 function maybeApplyNoTextColorForLightCustomTheme() {
@@ -23,7 +23,7 @@ function maybeApplyNoTextColorForLightCustomTheme() {
       tmp3 = theme.theme !== ThemeTypes.LIGHT;
     }
     if (!tmp3) {
-      const ClientThemeSettings = require(4166) /* explicitContentFromProto */.ClientThemeSettings;
+      const ClientThemeSettings = require(1935) /* explicitContentFromProto */.ClientThemeSettings;
       const setting = ClientThemeSettings.getSetting();
       let tmp10 = null != setting.backgroundGradientPresetId;
       if (!tmp10) {
@@ -243,7 +243,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
     if (null != obj.messageGroupSpacing) {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
-      const MessageDisplayCompact = require(4166) /* explicitContentFromProto */.MessageDisplayCompact;
+      const MessageDisplayCompact = require(1935) /* explicitContentFromProto */.MessageDisplayCompact;
       messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_11 : closure_12;
     }
     return messageGroupSpacing;
@@ -252,14 +252,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
-    const MessageDisplayCompact = require(4166) /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = require(1935) /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
-    const MessageDisplayCompact = require(4166) /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = require(1935) /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
   set: undefined
@@ -465,18 +465,18 @@ let items = [
   () => {
     const Storage = Storage7.Storage;
     const fontScale = Storage.get("a11yFontScale") || 100;
-    const Storage2 = tmp(592).Storage;
+    const Storage2 = tmp(510).Storage;
     let zoom = Storage2.get("a11yZoom");
     if (!zoom) {
       zoom = Accessibility.ZOOM_DEFAULT;
     }
-    const Storage3 = tmp(592).Storage;
+    const Storage3 = tmp(510).Storage;
     const colorblindMode = Storage3.get("a11yColorblindMode") || false;
-    const Storage4 = tmp(592).Storage;
+    const Storage4 = tmp(510).Storage;
     Storage4.remove("a11yFontScale");
-    const Storage5 = tmp(592).Storage;
+    const Storage5 = tmp(510).Storage;
     Storage5.remove("a11yZoom");
-    const Storage6 = tmp(592).Storage;
+    const Storage6 = tmp(510).Storage;
     Storage6.remove("a11yColorblindMode");
     return { fontScale, zoom, colorblindMode, keyboardModeEnabled: false };
   },

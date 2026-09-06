@@ -1,11 +1,11 @@
-// === Module 8789: items ===
+// === Module 8643: items ===
 
-// Module 8789 (items)
+// Module 8643 (items)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import create from "create" /* 1305 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 6155 */;
-import ReportNames from "ReportNames" /* 8776 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import create from "create" /* 1187 */;
+import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 7301 */;
+import ReportNames from "ReportNames" /* 8630 */;
 
 let obj = {
   getTitle() {
@@ -32,13 +32,13 @@ obj[4] = function onApply() {
   obj = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
   if (goreContentGuilds === create.ExplicitContentRedaction.SHOW) {
-    obj.goreContentGuilds = tmp(1305).ExplicitContentRedaction.BLUR;
+    obj.goreContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
   }
   if (goreContentFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.goreContentFriendDm = tmp(1305).ExplicitContentRedaction.BLUR;
+    obj.goreContentFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
   if (goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.goreContentNonFriendDm = tmp(1305).ExplicitContentRedaction.BLUR;
+    obj.goreContentNonFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
   return obj.updateGoreContentSetting(obj);
 };

@@ -1,11 +1,11 @@
-// === Module 17653: _fetch ===
+// === Module 17813: _fetch ===
 
-// Module 17653 (_fetch)
-import setDefault from "set" /* 684 */;
-import _modDef1205 from "module_1205" /* 1205 */;
-import initializeDefault from "initialize" /* 5495 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11308 */;
-import closure_3 from "initializeState" /* 7459 */;
+// Module 17813 (_fetch)
+import setDefault from "set" /* 1090 */;
+import _modDef1232 from "module_1232" /* 1232 */;
+import initializeDefault from "initialize" /* 7118 */;
+import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11484 */;
+import closure_3 from "initializeState" /* 7703 */;
 
 require = arg1;
 const DAY = setDefault.Millis.DAY;
@@ -120,15 +120,15 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     obj[3] = Date.now() - closure_3.lastFetchedCurrentQuests;
     obj[4] = closure_3.isFetchingCurrentQuests;
     obj[2] = obj;
-    _modDef1205.addBreadcrumb(obj);
-    let tmpResult = tmp(11137);
+    _modDef1232.addBreadcrumb(obj);
+    let tmpResult = tmp(11276);
     const currentQuests = tmpResult.fetchCurrentQuests();
-    tmpResult = tmp(1234);
+    tmpResult = tmp(1115);
     if (tmpResult.isMac()) {
-      const state = tmp6(11161).getState();
-      const tmp6Result = tmp6(11161);
+      const state = tmp6(11300).getState();
+      const tmp6Result = tmp6(11300);
     }
-    const obj2 = _modDef1205;
+    const obj2 = _modDef1232;
     tmp6 = importDefault;
   }
 };

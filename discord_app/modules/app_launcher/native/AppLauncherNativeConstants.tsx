@@ -1,10 +1,10 @@
-// === Module 1497: APP_LAUNCHER_BUILT_IN_SECTION_ICON ===
+// === Module 1482: APP_LAUNCHER_BUILT_IN_SECTION_ICON ===
 
-// Module 1497 (APP_LAUNCHER_BUILT_IN_SECTION_ICON)
+// Module 1482 (APP_LAUNCHER_BUILT_IN_SECTION_ICON)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 709 */;
-import useNavigation from "useNavigation" /* 1498 */;
-import registerAssetDefault from "registerAsset" /* 1621 */;
+import ThemesDefault from "Themes" /* 576 */;
+import useNavigation from "useNavigation" /* 1483 */;
+import registerAssetDefault from "registerAsset" /* 1606 */;
 
 const result = set.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 

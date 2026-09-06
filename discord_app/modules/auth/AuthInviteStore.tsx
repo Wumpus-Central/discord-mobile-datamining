@@ -1,9 +1,9 @@
-// === Module 4397: getGuild ===
+// === Module 4479: getGuild ===
 
-// Module 4397 (getGuild)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1425 */;
+// Module 4479 (getGuild)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
 
 require = arg1;
 let closure_2 = {};

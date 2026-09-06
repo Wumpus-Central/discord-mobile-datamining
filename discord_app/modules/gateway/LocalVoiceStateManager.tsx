@@ -1,14 +1,14 @@
-// === Module 13567: guildId ===
+// === Module 13673: guildId ===
 
-// Module 13567 (guildId)
-import hasFlag from "hasFlag" /* 1398 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import isClipsEnabled from "isClipsEnabled" /* 4539 */;
-import shouldCommitDefault from "shouldCommit" /* 13565 */;
-import closure_2 from "ensureGuildLoaded" /* 1386 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_4 from "initialize" /* 4575 */;
-import ME from "ME" /* 673 */;
+// Module 13673 (guildId)
+import hasFlag from "hasFlag" /* 1384 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import shouldCommitDefault from "shouldCommit" /* 13671 */;
+import isClipsEnabled from "isClipsEnabled" /* 13674 */;
+import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_4 from "initialize" /* 4610 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 ({ ChannelTypes: c5, VoiceFlags: closure_6 } = ME);

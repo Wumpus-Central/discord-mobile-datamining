@@ -1,9 +1,9 @@
-// === Module 12790: useOpenNitroSubscribeActionSheet ===
+// === Module 13148: useOpenNitroSubscribeActionSheet ===
 
-// Module 12790 (useOpenNitroSubscribeActionSheet)
+// Module 13148 (useOpenNitroSubscribeActionSheet)
 import closure_2 from "noop" /* 19 */;
-import ME from "ME" /* 673 */;
-import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+import ME from "ME" /* 1074 */;
+import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 
 ({ AnalyticsPages: c3, AnalyticsSections: c4 } = ME);
 const result = require("set").fileFinishedImporting("modules/collectibles/native/useOpenNitroSubscribeActionSheet.tsx");

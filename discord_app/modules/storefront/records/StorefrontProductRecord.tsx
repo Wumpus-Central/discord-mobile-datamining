@@ -1,8 +1,8 @@
-// === Module 7318: fromServer ===
+// === Module 7563: fromServer ===
 
-// Module 7318 (fromServer)
-import closure_0 from "fromServer" /* 7317 */;
-import closure_1 from "createFromServer" /* 4521 */;
+// Module 7563 (fromServer)
+import closure_0 from "fromServer" /* 7562 */;
+import closure_1 from "createFromServer" /* 5511 */;
 
 let prototype;
 prototype = function StorefrontProductRecord(arg0) {

@@ -1,10 +1,10 @@
-// === Module 14783: route ===
+// === Module 14939: route ===
 
-// Module 14783 (route)
+// Module 14939 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import MobileUserSettings from "MobileUserSettings" /* 7896 */;
-import createToggle from "createToggle" /* 11292 */;
+import ME from "ME" /* 1074 */;
+import MobileUserSettings from "MobileUserSettings" /* 7975 */;
+import createToggle from "createToggle" /* 11468 */;
 
 obj = {
   useTitle() {
@@ -17,7 +17,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.AUTHORIZED_APP,
   getComponent() {
-    return require(14784) /* AuthorizedAppScreen */.default;
+    return require(14940) /* AuthorizedAppScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,10 +1,10 @@
-// === Module 8897: toAnnouncementMessages ===
+// === Module 8752: toAnnouncementMessages ===
 
-// Module 8897 (toAnnouncementMessages)
+// Module 8752 (toAnnouncementMessages)
 import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
-import hasFlag from "hasFlag" /* 4131 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8141 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
+import hasFlag from "hasFlag" /* 4210 */;
+import formatExpirationLabel from "formatExpirationLabel" /* 8754 */;
 
 const isMessageComponentsV2 = hasFlag.isMessageComponentsV2;
 const re4 = /^#{1,3}\s+(.+)$/;
@@ -245,8 +245,8 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   let result = formatExpirationLabel.formatExpirationLabel(poll.expiry);
   if (result == null) {
-    const intl = tmp(1233).intl;
-    result = intl.string(tmp(1233).t["e+J3JZ"]);
+    const intl = tmp(1114).intl;
+    result = intl.string(tmp(1114).t["e+J3JZ"]);
   }
   return result;
 };

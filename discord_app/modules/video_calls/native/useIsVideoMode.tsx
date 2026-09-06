@@ -1,12 +1,12 @@
-// === Module 9920: useIsVideoMode ===
+// === Module 9465: useIsVideoMode ===
 
-// Module 9920 (useIsVideoMode)
-import initialize from "initialize" /* 586 */;
-import closure_2 from "reset" /* 4500 */;
-import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import closure_6 from "updateVoiceState" /* 4497 */;
+// Module 9465 (useIsVideoMode)
+import initialize from "initialize" /* 504 */;
+import closure_2 from "reset" /* 4582 */;
+import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_5 from "handleConnectionOpen" /* 2011 */;
+import closure_6 from "updateVoiceState" /* 4579 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");

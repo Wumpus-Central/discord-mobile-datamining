@@ -1,6 +1,6 @@
-// === Module 7136: metadata ===
+// === Module 6576: metadata ===
 
-// Module 7136 (metadata)
+// Module 6576 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WindIllocon-2x.png.js");

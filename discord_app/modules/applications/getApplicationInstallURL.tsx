@@ -1,8 +1,8 @@
-// === Module 9102: getActivityLaunchURL ===
+// === Module 12132: getActivityLaunchURL ===
 
-// Module 9102 (getActivityLaunchURL)
+// Module 12132 (getActivityLaunchURL)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
+import ME from "ME" /* 1074 */;
 
 const Routes = ME.Routes;
 let result = set.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");

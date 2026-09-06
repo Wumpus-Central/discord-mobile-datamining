@@ -1,11 +1,11 @@
-// === Module 16927: usePanelOpenState ===
+// === Module 17091: usePanelOpenState ===
 
-// Module 16927 (usePanelOpenState)
+// Module 17091 (usePanelOpenState)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "withEqualityFn" /* 4729 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 12069 */;
-import ME from "ME" /* 673 */;
+import closure_5 from "withEqualityFn" /* 4768 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 12273 */;
+import ME from "ME" /* 1074 */;
 
 const require = arg1;
 ({ ComponentActions: error, Routes: closure_8 } = ME);
@@ -22,7 +22,7 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
     const state = first.getState();
     return state.closeChannel(closure_0);
   }
-  let obj = _require(4217);
+  let obj = _require(4296);
   const fn = function f() {
     return { connected: connected.get() };
   };
@@ -46,7 +46,7 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       return;
     }
   }
-  obj = { runOnJS: _require(4217).runOnJS, doCloseChannel };
+  obj = { runOnJS: _require(4296).runOnJS, doCloseChannel };
   O.__closure = obj;
   O.__workletHash = 9166012598595;
   O.__initData = closure_10;
@@ -72,23 +72,23 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
         state.closeChannel(componentActionOpen);
       }
     }
-    let ComponentDispatch = callback(1228).ComponentDispatch;
+    let ComponentDispatch = callback(1109).ComponentDispatch;
     const subscription = ComponentDispatch.subscribe(closure_1_7.VOICE_PANEL_OPEN, componentActionOpen);
-    let ComponentDispatch2 = callback(1228).ComponentDispatch;
+    let ComponentDispatch2 = callback(1109).ComponentDispatch;
     const subscription1 = ComponentDispatch2.subscribe(closure_1_7.VOICE_PANEL_CLOSE, componentActionClose);
     return () => {
-      const ComponentDispatch = componentActionOpen(1228).ComponentDispatch;
+      const ComponentDispatch = componentActionOpen(1109).ComponentDispatch;
       ComponentDispatch.unsubscribe(closure_2_7.VOICE_PANEL_OPEN, componentActionOpen);
-      const ComponentDispatch2 = componentActionOpen(1228).ComponentDispatch;
+      const ComponentDispatch2 = componentActionOpen(1109).ComponentDispatch;
       ComponentDispatch2.unsubscribe(closure_2_7.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  const tmp3 = callback(doCloseChannel.useState(() => callback2(12563).getHistory().location.pathname), 2);
+  const tmp3 = callback(doCloseChannel.useState(() => callback2(12789).getHistory().location.pathname), 2);
   const first = tmp3[0];
   closure_6 = tmp3[1];
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = callback2(12563).addRouteChangeListener((pathname) => {
+    closure_0 = callback2(12789).addRouteChangeListener((pathname) => {
       if (closure_5 !== pathname.pathname) {
         callback2(tmp);
         let obj = callback(closure_1_2[8]);

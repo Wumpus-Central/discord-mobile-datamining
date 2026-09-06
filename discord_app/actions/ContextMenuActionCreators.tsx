@@ -1,9 +1,9 @@
-// === Module 5573: openContextMenu ===
+// === Module 5553: openContextMenu ===
 
-// Module 5573 (openContextMenu)
+// Module 5553 (openContextMenu)
 import set from "set" /* 2 */;
-import ME from "ME" /* 673 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import ME from "ME" /* 1074 */;
 
 function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
   stopPropagation.stopPropagation();
@@ -101,7 +101,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
     const _DOMRect = DOMRect;
     const dOMRect = new DOMRect(tmp3, sum1, 0, 0);
     obj[3] = dOMRect;
-    let APP = obj(5574).getCurrentlyInteractingAppContext();
+    let APP = obj(5554).getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
     }
@@ -118,10 +118,10 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
       enableSpellCheck = enableSpellCheck.enableSpellCheck;
     }
     if (enableSpellCheck) {
-      let tmp16Result = tmp16(1234);
+      let tmp16Result = tmp16(1115);
       if (tmp16Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          tmp16Result = tmp16(5577);
+          tmp16Result = tmp16(5557);
           importDefault = tmp16Result.addResultListener(() => {
             callback();
             obj = callback(closure_1_2[1]);
@@ -132,7 +132,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
       }
     }
     stopPropagation.preventDefault();
-    const obj3 = obj(5574);
+    const obj3 = obj(5554);
     obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
     obj1[1] = obj;
     dispatcherDefault.dispatch(obj1);

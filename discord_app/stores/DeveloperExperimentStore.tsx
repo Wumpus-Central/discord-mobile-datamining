@@ -1,13 +1,13 @@
-// === Module 7476: init ===
+// === Module 7720: init ===
 
-// Module 7476 (init)
-import initializeDefault from "initialize" /* 586 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import validatePremiumType from "validatePremiumType" /* 1932 */;
-import closure_2 from "createGuildRecordFromRust" /* 1908 */;
-import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import { ExperimentBuckets } from "ExperimentBuckets" /* 4392 */;
-import { Environments } from "Environments" /* 1933 */;
+// Module 7720 (init)
+import initializeDefault from "initialize" /* 504 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import validatePremiumType from "validatePremiumType" /* 1382 */;
+import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import { ExperimentBuckets } from "ExperimentBuckets" /* 4477 */;
+import { Environments } from "Environments" /* 1383 */;
 
 require = arg1;
 let tmp2 = "production" === Environments.DEVELOPMENT;
@@ -37,7 +37,7 @@ prototype["initialize"] = function initialize() {
       }
     }
   });
-  closure_5 = self(1932).isStaffEnv(authStore.getCurrentUser());
+  closure_5 = self(1382).isStaffEnv(authStore.getCurrentUser());
   const timerId = setTimeout(() => Object.freeze(self));
 };
 prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {

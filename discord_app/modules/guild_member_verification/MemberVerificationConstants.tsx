@@ -1,7 +1,7 @@
-// === Module 5013: items ===
+// === Module 5059: items ===
 
-// Module 5013 (items)
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
+// Module 5059 (items)
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
 import set from "set" /* 2 */;
 
 const items = [{ field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION }];

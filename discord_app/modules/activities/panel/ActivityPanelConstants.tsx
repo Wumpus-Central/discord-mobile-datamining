@@ -1,6 +1,6 @@
-// === Module 9483: ActivityPanelModes ===
+// === Module 9505: ActivityPanelModes ===
 
-// Module 9483 (ActivityPanelModes)
+// Module 9505 (ActivityPanelModes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/panel/ActivityPanelConstants.tsx");

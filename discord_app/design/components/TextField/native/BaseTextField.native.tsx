@@ -1,12 +1,12 @@
-// === Module 6241: BaseTextField ===
+// === Module 6623: BaseTextField ===
 
-// Module 6241 (BaseTextField)
+// Module 6623 (BaseTextField)
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
+const forwardRefResult = importAllResult.forwardRef((size, closure_1) => {
   let obj = ref(onChangeText[3]);
   obj = { size: size.size, isRound: size.isRound, hasLeadingIcon: null != size.leadingIcon };
   const inputStyles = obj.useInputStyles(obj);
@@ -82,7 +82,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
   const tmp11 = closure_3;
   const tmp9 = closure_4;
   const tmpResult2 = ref(onChangeText[6]);
-  obj2.ref = ref(onChangeText[6]).mergeRefs(ref, ref2);
+  obj2.ref = ref(onChangeText[6]).mergeRefs(ref, closure_1);
   const items2 = [, , ];
   ({ padding: arr3[0], text: arr3[1] } = inputStyles);
   items2[2] = size.inputStyle;

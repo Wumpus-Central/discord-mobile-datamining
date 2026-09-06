@@ -1,22 +1,23 @@
-// === Module 15025: QuestDockWithGestureAnimation ===
+// === Module 15183: QuestDockWithGestureAnimation ===
 
-// Module 15025 (QuestDockWithGestureAnimation)
-import ThemesDefault from "Themes" /* 709 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5399 */;
-import useQuests from "useQuests" /* 11307 */;
-import _modDef15043 from "module_15043" /* 15043 */;
+// Module 15183 (QuestDockWithGestureAnimation)
+import ThemesDefault from "Themes" /* 576 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
+import useQuests from "useQuests" /* 11483 */;
+import _modDef15202 from "module_15202" /* 15202 */;
+import _modDef15203 from "module_15203" /* 15203 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_11 from "QuestDockMode" /* 14935 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5396 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14937 */;
-import { AnalyticEvents } from "ME" /* 673 */;
-import { ThemeTypes } from "sum" /* 502 */;
+import closure_11 from "QuestDockMode" /* 15093 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
+import { AnalyticEvents } from "ME" /* 1074 */;
+import { ThemeTypes } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function QuestDockWithGestureAnimation(appThemedBackgroundColor) {
@@ -747,18 +748,18 @@ function QuestDockBountyContent(bounty) {
     iconUrl: bounty.productIcon,
     layoutVariant: "insetHeader",
     theme: ThemeTypes.DARK,
-    collapsedContent: callback3(_modDef15043, {}),
-    expandedContent: null,
+    collapsedContent: callback3(_modDef15202, {}),
+    expandedContent: callback3(_modDef15203, {}),
     backgroundContent: null,
     renderImpressionTracker(children) {
-      return closure_1_21(bounty(closure_1_2[54]).BillableAdPlacementImpressionTrackerNative, { adContentId: bounty.id, adCreativeType: bounty(closure_1_2[56]).AdCreativeType.BOUNTY, overrideVisibility: false, questContent: bounty(closure_1_2[36]).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: bounty(closure_1_2[36]).QuestContent.QUEST_BAR_MOBILE, children: children.children });
+      return closure_1_21(bounty(closure_1_2[54]).BillableAdPlacementImpressionTrackerNative, { adContentId: bounty.id, adCreativeType: bounty(closure_1_2[57]).AdCreativeType.BOUNTY, overrideVisibility: false, questContent: bounty(closure_1_2[36]).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: bounty(closure_1_2[36]).QuestContent.QUEST_BAR_MOBILE, children: children.children });
     },
     renderModeChangeTracker(mode) {
-      return closure_1_21(closure_1_34, { adCreativeType: bounty(closure_1_2[56]).AdCreativeType.BOUNTY, adContentId: bounty.id, mode: mode.mode });
+      return closure_1_21(closure_1_34, { adCreativeType: bounty(closure_1_2[57]).AdCreativeType.BOUNTY, adContentId: bounty.id, mode: mode.mode });
     }
   };
   obj[1] = callback3(QuestDockWithEntranceAnimation, obj);
-  return callback3(bounty(14944).QuestDockBountyProvider, obj);
+  return callback3(bounty(15102).QuestDockBountyProvider, obj);
 }
 let closure_3 = ["mode"];
 const error = importAllResult;
@@ -818,20 +819,20 @@ const memoResult = importAllResult.memo(function QuestDockWithVisibilityContext(
   const memo = importAllResult.useMemo(() => ({ isRendered: isMobileQuestDockRenderedBase, isVisibleToUser: isMobileQuestDockVisibleToUser }), items);
   const memo1 = importAllResult.useMemo(() => {
     const type = mobileQuestDock.type;
-    if (mobileQuestDock(isMobileQuestDockVisibleToUser[56]).AdCreativeType.BOUNTY === type) {
+    if (mobileQuestDock(isMobileQuestDockVisibleToUser[57]).AdCreativeType.BOUNTY === type) {
       let obj = { bounty: null };
       obj[0] = tmp.bounty;
       return closure_1_21(closure_1_42, obj);
-    } else if (tmp2(tmp3[56]).AdCreativeType.QUEST === type) {
+    } else if (tmp2(tmp3[57]).AdCreativeType.QUEST === type) {
       obj = { quest: null };
       obj[0] = tmp.quest;
       return closure_1_21(closure_1_41, obj);
-    } else if (tmp2(tmp3[56]).AdCreativeType.NO_FILL === type) {
+    } else if (tmp2(tmp3[57]).AdCreativeType.NO_FILL === type) {
       return null;
     }
   }, items1);
   let tmp7 = null;
-  if (mobileQuestDock.type !== mobileQuestDock(isMobileQuestDockVisibleToUser[56]).AdCreativeType.NO_FILL) {
+  if (mobileQuestDock.type !== mobileQuestDock(isMobileQuestDockVisibleToUser[57]).AdCreativeType.NO_FILL) {
     obj = { value: null, children: null };
     obj[0] = memo;
     obj[1] = memo1;

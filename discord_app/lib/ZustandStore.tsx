@@ -1,6 +1,6 @@
-// === Module 4344: defaultStatesAreEqual ===
+// === Module 4429: defaultStatesAreEqual ===
 
-// Module 4344 (defaultStatesAreEqual)
+// Module 4429 (defaultStatesAreEqual)
 import set from "set" /* 2 */;
 
 function defaultStatesAreEqual(arg0, arg1) {
@@ -10,8 +10,8 @@ const result = set.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
   const _require = arg0;
-  let obj = _require(697);
-  dependencyMap = obj.createWithEqualityFn(_require(4345).subscribeWithSelector((arg0, arg1, arg2) => {
+  let obj = _require(1244);
+  dependencyMap = obj.createWithEqualityFn(_require(4430).subscribeWithSelector((arg0, arg1, arg2) => {
     let callback = arg0;
     return callback((arg0) => {
       const callback = arg0;

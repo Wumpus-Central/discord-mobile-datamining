@@ -1,17 +1,17 @@
-// === Module 15399: getClientInfo ===
+// === Module 15557: getClientInfo ===
 
-// Module 15399 (getClientInfo)
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import CopyIcon from "CopyIcon" /* 4425 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
-import ActionSheet from "ActionSheet" /* 5998 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 6000 */;
-import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 11588 */;
-import closure_3 from "getCurrentBuildOverride" /* 11283 */;
+// Module 15557 (getClientInfo)
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import CopyIcon from "CopyIcon" /* 4507 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
+import ActionSheet from "ActionSheet" /* 7198 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
+import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 11789 */;
+import closure_3 from "getCurrentBuildOverride" /* 11425 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11292 */;
-import importAllResult from "getConstants" /* 1624 */;
+import createToggle from "createToggle" /* 11468 */;
+import importAllResult from "getConstants" /* 1364 */;
 
 require = arg1;
 function getClientInfo() {
@@ -75,9 +75,9 @@ function ClientClientInfoActionSheet() {
   obj1[0] = intl2.string(getSystemLocale.t.H66MEk);
   obj1[1] = getClientInfo().appVersion;
   obj1[2] = function onPress() {
-    callback(5990).copy(callback2().appVersion);
-    const obj = callback(5990);
-    const result = callback(4193).presentCopiedToClipboard();
+    callback(7190).copy(callback2().appVersion);
+    const obj = callback(7190);
+    const result = callback(4258).presentCopiedToClipboard();
   };
   const items = [callback(ActionSheetRowIcon.ActionSheetRow, obj1), , , , ];
   let obj2 = { label: null, subLabel: null, onPress: null };
@@ -85,9 +85,9 @@ function ClientClientInfoActionSheet() {
   obj2[0] = intl3.string(getSystemLocale.t.zuaWIt);
   obj2[1] = getClientInfo().buildNumber;
   obj2[2] = function onPress() {
-    callback(5990).copy(callback2().buildNumber);
-    const obj = callback(5990);
-    const result = callback(4193).presentCopiedToClipboard();
+    callback(7190).copy(callback2().buildNumber);
+    const obj = callback(7190);
+    const result = callback(4258).presentCopiedToClipboard();
   };
   items[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj2);
   let obj3 = { label: null, subLabel: null, onPress: null };
@@ -95,9 +95,9 @@ function ClientClientInfoActionSheet() {
   obj3[0] = intl4.string(getSystemLocale.t["YD/2+H"]);
   obj3[1] = getClientInfo().releaseChannel;
   obj3[2] = function onPress() {
-    callback(5990).copy(callback2().releaseChannel);
-    const obj = callback(5990);
-    const result = callback(4193).presentCopiedToClipboard();
+    callback(7190).copy(callback2().releaseChannel);
+    const obj = callback(7190);
+    const result = callback(4258).presentCopiedToClipboard();
   };
   items[2] = callback(ActionSheetRowIcon.ActionSheetRow, obj3);
   const obj4 = { label: null, subLabel: null, onPress: null };
@@ -105,9 +105,9 @@ function ClientClientInfoActionSheet() {
   obj4[0] = intl5.string(getSystemLocale.t["4bhpIV"]);
   obj4[1] = getClientInfo().manifest;
   obj4[2] = function onPress() {
-    callback(5990).copy(callback2().manifest);
-    const obj = callback(5990);
-    const result = callback(4193).presentCopiedToClipboard();
+    callback(7190).copy(callback2().manifest);
+    const obj = callback(7190);
+    const result = callback(4258).presentCopiedToClipboard();
   };
   items[3] = callback(ActionSheetRowIcon.ActionSheetRow, obj4);
   const obj5 = { label: null, subLabel: null, onPress: null };
@@ -115,9 +115,9 @@ function ClientClientInfoActionSheet() {
   obj5[0] = intl6.string(getSystemLocale.t.Wj3LW4);
   obj5[1] = getClientInfo().buildOverride;
   obj5[2] = function onPress() {
-    callback(5990).copy(callback2().buildOverride);
-    const obj = callback(5990);
-    const result = callback(4193).presentCopiedToClipboard();
+    callback(7190).copy(callback2().buildOverride);
+    const obj = callback(7190);
+    const result = callback(4258).presentCopiedToClipboard();
   };
   items[4] = callback(ActionSheetRowIcon.ActionSheetRow, obj5);
   obj[1] = items;
@@ -130,13 +130,13 @@ function ClientClientInfoActionSheet() {
     const tmp = callback2();
     ({ appVersion, buildNumber } = tmp);
     ({ releaseChannel, buildOverride, manifest } = tmp);
-    const deviceInfo = callback(4457).getDeviceInfo();
-    const obj = callback(4457);
-    const combined = "App: " + appVersion + " (" + buildNumber + ") " + releaseChannel + "; Manifest: " + manifest + "; Build Override: " + buildOverride + "; " + "Device: " + deviceInfo + " OS " + callback(4457).getSystemVersion() + ";";
-    const obj2 = callback(4457);
-    callback(5990).copy(combined);
-    const obj3 = callback(5990);
-    const result = callback(4193).presentCopiedToClipboard();
+    const deviceInfo = callback(4539).getDeviceInfo();
+    const obj = callback(4539);
+    const combined = "App: " + appVersion + " (" + buildNumber + ") " + releaseChannel + "; Manifest: " + manifest + "; Build Override: " + buildOverride + "; " + "Device: " + deviceInfo + " OS " + callback(4539).getSystemVersion() + ";";
+    const obj2 = callback(4539);
+    callback(7190).copy(combined);
+    const obj3 = callback(7190);
+    const result = callback(4258).presentCopiedToClipboard();
   };
   obj6[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj7);
   items1[1] = callback(ActionSheetRowIcon.ActionSheetRow.Group, obj6);

@@ -1,8 +1,8 @@
-// === Module 15691: useSecureFramesVerifiedUserIds ===
+// === Module 15849: useSecureFramesVerifiedUserIds ===
 
-// Module 15691 (useSecureFramesVerifiedUserIds)
-import initialize from "initialize" /* 586 */;
-import closure_2 from "initialize" /* 9849 */;
+// Module 15849 (useSecureFramesVerifiedUserIds)
+import initialize from "initialize" /* 504 */;
+import closure_2 from "initialize" /* 9134 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");

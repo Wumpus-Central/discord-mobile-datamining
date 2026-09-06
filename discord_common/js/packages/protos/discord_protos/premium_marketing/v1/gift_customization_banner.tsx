@@ -1,12 +1,12 @@
-// === Module 8478: create ===
+// === Module 10682: create ===
 
-// Module 8478 (create)
-import _mod1306 from "module_1306" /* 1306 */;
-import create from "create" /* 8466 */;
-import create2 from "create" /* 8474 */;
-import create3 from "create" /* 8476 */;
+// Module 10682 (create)
+import _mod1188 from "module_1188" /* 1188 */;
+import create from "create" /* 10670 */;
+import create2 from "create" /* 10678 */;
+import create3 from "create" /* 10680 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1306" /* 1306 */;
+import { MessageType } from "module_1188" /* 1188 */;
 
 require = arg1;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", NORMAL: 1, [1]: "NORMAL", LARGE_TILTED: 2, [2]: "LARGE_TILTED" };
@@ -21,7 +21,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-            return callback(8474).Gradient;
+            return callback(10678).Gradient;
           }
     };
     items[4] = { no: 5, name: "background_asset_url", kind: "scalar", T: 9 };
@@ -30,7 +30,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8476).ThemeAwareAsset;
+            return callback(10680).ThemeAwareAsset;
           }
     };
     items[6] = {
@@ -38,7 +38,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "background_asset",
       kind: "message",
       T() {
-            return callback(8476).ThemeAwareAsset;
+            return callback(10680).ThemeAwareAsset;
           }
     };
     items[7] = {
@@ -46,7 +46,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "mobile_background_asset",
       kind: "message",
       T() {
-            return callback(8476).ThemeAwareAsset;
+            return callback(10680).ThemeAwareAsset;
           }
     };
     items[8] = {
@@ -71,7 +71,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "mobile_body_localized",
       kind: "message",
       T() {
-            return callback(8466).LocalizedString;
+            return callback(10670).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, T);
@@ -84,10 +84,10 @@ prototype["create"] = function create(arr) {
   obj = { assetUrl: "", desktopBody: "", mobileBody: "", backgroundAssetUrl: "", assetVariant: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1306.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1306;
+    const result = _mod1188.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1188;
   }
   return obj;
 };
@@ -106,65 +106,65 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, writeUnknownFields) {
   if ("" !== assetUrl.assetUrl) {
-    tag.tag(1, _mod1306.WireType.LengthDelimited).string(assetUrl.assetUrl);
-    const tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
+    tag.tag(1, _mod1188.WireType.LengthDelimited).string(assetUrl.assetUrl);
+    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
   }
   if ("" !== assetUrl.desktopBody) {
-    tag.tag(2, _mod1306.WireType.LengthDelimited).string(assetUrl.desktopBody);
-    const tagResult1 = tag.tag(2, _mod1306.WireType.LengthDelimited);
+    tag.tag(2, _mod1188.WireType.LengthDelimited).string(assetUrl.desktopBody);
+    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
   }
   if ("" !== assetUrl.mobileBody) {
-    tag.tag(3, _mod1306.WireType.LengthDelimited).string(assetUrl.mobileBody);
-    const tagResult2 = tag.tag(3, _mod1306.WireType.LengthDelimited);
+    tag.tag(3, _mod1188.WireType.LengthDelimited).string(assetUrl.mobileBody);
+    const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
   }
   if (assetUrl.gradient) {
     const Gradient = create2.Gradient;
-    const tagResult3 = tag.tag(4, _mod1306.WireType.LengthDelimited);
-    const joined = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
+    const joined = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== assetUrl.backgroundAssetUrl) {
-    tag.tag(5, _mod1306.WireType.LengthDelimited).string(assetUrl.backgroundAssetUrl);
-    const tagResult4 = tag.tag(5, _mod1306.WireType.LengthDelimited);
+    tag.tag(5, _mod1188.WireType.LengthDelimited).string(assetUrl.backgroundAssetUrl);
+    const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
   }
   if (assetUrl.asset) {
     const ThemeAwareAsset = create3.ThemeAwareAsset;
-    const tagResult5 = tag.tag(6, _mod1306.WireType.LengthDelimited);
-    const joined1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult5 = tag.tag(6, _mod1188.WireType.LengthDelimited);
+    const joined1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.backgroundAsset) {
     const ThemeAwareAsset2 = create3.ThemeAwareAsset;
-    const tagResult6 = tag.tag(7, _mod1306.WireType.LengthDelimited);
-    const joined2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult6 = tag.tag(7, _mod1188.WireType.LengthDelimited);
+    const joined2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.mobileBackgroundAsset) {
     const ThemeAwareAsset3 = create3.ThemeAwareAsset;
-    const tagResult7 = tag.tag(8, _mod1306.WireType.LengthDelimited);
-    const joined3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult7 = tag.tag(8, _mod1188.WireType.LengthDelimited);
+    const joined3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (0 !== assetUrl.assetVariant) {
-    tag.tag(9, _mod1306.WireType.Varint).int32(assetUrl.assetVariant);
-    const tagResult8 = tag.tag(9, _mod1306.WireType.Varint);
+    tag.tag(9, _mod1188.WireType.Varint).int32(assetUrl.assetVariant);
+    const tagResult8 = tag.tag(9, _mod1188.WireType.Varint);
   }
   if (assetUrl.desktopBodyLocalized) {
     const LocalizedString = create.LocalizedString;
-    const tagResult9 = tag.tag(10, _mod1306.WireType.LengthDelimited);
-    const joined4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult9 = tag.tag(10, _mod1188.WireType.LengthDelimited);
+    const joined4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.mobileBodyLocalized) {
     const LocalizedString2 = create.LocalizedString;
-    const tagResult10 = tag.tag(11, _mod1306.WireType.LengthDelimited);
-    const joined5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult10 = tag.tag(11, _mod1188.WireType.LengthDelimited);
+    const joined5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1306.UnknownFieldHandler.onWrite;
+      onWrite = _mod1188.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, assetUrl, tag);
@@ -180,7 +180,7 @@ let items = [
     name: "gradient",
     kind: "message",
     T() {
-      return callback(8474).Gradient;
+      return callback(10678).Gradient;
     }
   },
   { no: 5, name: "background_asset_url", kind: "scalar", T: 9 },
@@ -189,7 +189,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(8476).ThemeAwareAsset;
+      return callback(10680).ThemeAwareAsset;
     }
   },
   {
@@ -197,7 +197,7 @@ let items = [
     name: "background_asset",
     kind: "message",
     T() {
-      return callback(8476).ThemeAwareAsset;
+      return callback(10680).ThemeAwareAsset;
     }
   },
   {
@@ -205,7 +205,7 @@ let items = [
     name: "mobile_background_asset",
     kind: "message",
     T() {
-      return callback(8476).ThemeAwareAsset;
+      return callback(10680).ThemeAwareAsset;
     }
   },
   {
@@ -233,7 +233,7 @@ items[10] = {
   name: "mobile_body_localized",
   kind: "message",
   T() {
-    return callback(8466).LocalizedString;
+    return callback(10670).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, tmp, T, GiftCustomizationBanner$Type, prototype, items, arg1, dependencyMap);

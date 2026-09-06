@@ -1,10 +1,10 @@
-// === Module 17264: prototype ===
+// === Module 17430: prototype ===
 
-// Module 17264 (prototype)
-import initializeDefault from "initialize" /* 5495 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_3 from "getState" /* 7167 */;
-import { AppStates } from "ME" /* 673 */;
+// Module 17430 (prototype)
+import initializeDefault from "initialize" /* 7118 */;
+import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_3 from "getState" /* 1895 */;
+import { AppStates } from "ME" /* 1074 */;
 
 initializeDefault;
 let prototype = function NativeOnDemandResourceManager() {

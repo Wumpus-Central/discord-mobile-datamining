@@ -1,12 +1,12 @@
-// === Module 14334: handleBackPress ===
+// === Module 14440: handleBackPress ===
 
-// Module 14334 (handleBackPress)
+// Module 14440 (handleBackPress)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import KeyboardTypes from "KeyboardTypes" /* 1625 */;
-import useKeyboardType from "useKeyboardType" /* 4342 */;
-import initializeDefault from "initialize" /* 4662 */;
-import updateContextMenuState from "updateContextMenuState" /* 8812 */;
+import KeyboardTypes from "KeyboardTypes" /* 1609 */;
+import initializeDefault from "initialize" /* 1898 */;
+import useKeyboardType from "useKeyboardType" /* 4427 */;
+import updateContextMenuState from "updateContextMenuState" /* 8667 */;
 
 function handleBackPress() {
   let obj = updateContextMenuState;
@@ -15,10 +15,10 @@ function handleBackPress() {
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
     obj = { type: null };
-    obj[0] = tmp(1625).KeyboardTypes.SYSTEM;
-    tmp(1496).setKeyboardType(obj);
+    obj[0] = tmp(1609).KeyboardTypes.SYSTEM;
+    tmp(1481).setKeyboardType(obj);
     flag = true;
-    const tmpResult = tmp(1496);
+    const tmpResult = tmp(1481);
   }
   return flag;
 }

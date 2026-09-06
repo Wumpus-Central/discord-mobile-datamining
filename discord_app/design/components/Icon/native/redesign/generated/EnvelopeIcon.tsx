@@ -1,10 +1,10 @@
-// === Module 7816: EnvelopeIcon ===
+// === Module 7081: EnvelopeIcon ===
 
-// Module 7816 (EnvelopeIcon)
+// Module 7081 (EnvelopeIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 709 */;
-import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 7817 */;
+import ThemesDefault from "Themes" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4261 */;
+import registerAsset from "registerAsset" /* 7082 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

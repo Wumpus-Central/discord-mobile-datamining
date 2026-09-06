@@ -1,20 +1,20 @@
-// === Module 16602: handleFindFriends ===
+// === Module 16767: handleFindFriends ===
 
-// Module 16602 (handleFindFriends)
-import ThemesDefault from "Themes" /* 709 */;
-import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 12450 */;
+// Module 16767 (handleFindFriends)
+import ThemesDefault from "Themes" /* 576 */;
+import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 12676 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "recountRelationshipTypes" /* 7413 */;
-import closure_9 from "markAllUserIdListsStale" /* 4130 */;
-import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import { Sections } from "SuggestedFriendSource" /* 12473 */;
-import ME from "ME" /* 673 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12452 */;
+import closure_8 from "recountRelationshipTypes" /* 7658 */;
+import closure_9 from "markAllUserIdListsStale" /* 4209 */;
+import closure_10 from "mergeGuildAvatar" /* 1371 */;
+import { Sections } from "SuggestedFriendSource" /* 12699 */;
+import ME from "ME" /* 1074 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12678 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function handleFindFriends() {
@@ -77,9 +77,9 @@ function _handleShare() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            obj1 = callback(4193);
-            const intl = callback(1233).intl;
-            obj1.presentError(intl.string(callback(1233).t.R0RpRX));
+            obj1 = callback(4258);
+            const intl = callback(1114).intl;
+            obj1.presentError(intl.string(callback(1114).t.R0RpRX));
             c6 = 3;
             const obj2 = { value: null, done: true };
             obj2[0] = undefined;
@@ -98,10 +98,10 @@ function _handleShare() {
             c4 = 0;
             obj3 = { channel: null, code: null, message: null, location: null };
             obj3[1] = code;
-            const intl2 = callback(1233).intl;
+            const intl2 = callback(1114).intl;
             const obj4 = { link: null };
-            obj4[0] = code(7514)(code);
-            obj3[2] = intl2.formatToPlainString(callback(1233).t.PJf9P9, obj4);
+            obj4[0] = code(7759)(code);
+            obj3[2] = intl2.formatToPlainString(callback(1114).t.PJf9P9, obj4);
             obj3[3] = constants.ADD_FRIENDS_MODAL;
             callback(obj3);
             c6 = 3;
@@ -280,9 +280,9 @@ export default function AddFriendsScreen(navigation) {
     });
     const obj2 = callback(analyticsLocations[26]);
     return callback(analyticsLocations[26]).unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = callback(4322).getName(arg0);
-      const obj = callback(4322);
-      return name.localeCompare(callback(4322).getName(arg1));
+      const name = callback(4404).getName(arg0);
+      const obj = callback(4404);
+      return name.localeCompare(callback(4404).getName(arg1));
     });
   });
   let obj3 = _require(analyticsLocations[25]);
@@ -322,9 +322,9 @@ export default function AddFriendsScreen(navigation) {
     });
     let obj = callback(analyticsLocations[26]);
     return callback(analyticsLocations[26]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(4322).getName(user.user);
-      const obj = items1(4322);
-      return name.localeCompare(items1(4322).getName(user2.user));
+      const name = items1(4404).getName(user.user);
+      const obj = items1(4404);
+      return name.localeCompare(items1(4404).getName(user2.user));
     });
   }, items4, areHydratedGameFriendRequestRowStatesEqual);
   let tmp6 = callback(React.useState([]), 2);

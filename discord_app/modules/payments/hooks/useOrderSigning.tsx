@@ -1,10 +1,10 @@
-// === Module 11583: useOrderSigning ===
+// === Module 8860: useOrderSigning ===
 
-// Module 11583 (useOrderSigning)
+// Module 8860 (useOrderSigning)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import { OrderStatus } from "CustomCheckoutFlow" /* 4460 */;
+import { OrderStatus } from "CustomCheckoutFlow" /* 4542 */;
 
 const require = arg1;
 ({ useCallback: c5, useState: closure_6 } = noop);

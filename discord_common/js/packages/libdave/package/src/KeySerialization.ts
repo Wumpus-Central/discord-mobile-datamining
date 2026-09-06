@@ -1,8 +1,8 @@
-// === Module 9863: serializeKey ===
+// === Module 9148: serializeKey ===
 
-// Module 9863 (serializeKey)
+// Module 9148 (serializeKey)
 import set from "set" /* 2 */;
-import byteLengthDefault from "byteLength" /* 9864 */;
+import byteLengthDefault from "byteLength" /* 9149 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/KeySerialization.ts");
 

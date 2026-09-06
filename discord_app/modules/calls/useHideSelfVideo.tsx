@@ -1,10 +1,10 @@
-// === Module 17047: useHideSelfVideo ===
+// === Module 17213: useHideSelfVideo ===
 
-// Module 17047 (useHideSelfVideo)
-import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
-import { VideoToggleState } from "ME" /* 673 */;
-import DesktopSources from "DesktopSources" /* 4542 */;
+// Module 17213 (useHideSelfVideo)
+import closure_3 from "fetchFingerprint" /* 502 */;
+import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
+import { VideoToggleState } from "ME" /* 1074 */;
+import DesktopSources from "DesktopSources" /* 4585 */;
 
 const require = arg1;
 ({ MediaEngineContextTypes: closure_6, Features: error } = DesktopSources);
@@ -17,15 +17,15 @@ export default function useHideSelfVideo(arg0) {
   }
   let stateFromStores;
   const items = [closure_3];
-  stateFromStores = DEFAULT(586).useStateFromStores(items, () => id.getId());
-  const obj = DEFAULT(586);
+  stateFromStores = DEFAULT(504).useStateFromStores(items, () => id.getId());
+  const obj = DEFAULT(504);
   const items1 = [closure_4];
-  const stateFromStores1 = DEFAULT(586).useStateFromStores(items1, () => closure_4.supports(constants.DISABLE_VIDEO));
-  const obj2 = DEFAULT(586);
+  const stateFromStores1 = DEFAULT(504).useStateFromStores(items1, () => closure_4.supports(constants.DISABLE_VIDEO));
+  const obj2 = DEFAULT(504);
   const items2 = [closure_4];
   const items3 = [stateFromStores, DEFAULT];
   let tmp5 = null == arg0;
-  const stateFromStores2 = DEFAULT(586).useStateFromStores(items2, () => closure_1_4.isLocalVideoDisabled(stateFromStores, DEFAULT), items3);
+  const stateFromStores2 = DEFAULT(504).useStateFromStores(items2, () => closure_1_4.isLocalVideoDisabled(stateFromStores, DEFAULT), items3);
   if (!tmp5) {
     tmp5 = arg0 === stateFromStores;
   }

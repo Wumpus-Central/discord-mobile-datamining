@@ -1,26 +1,26 @@
-// === Module 10218: PreviewIcon ===
+// === Module 10109: PreviewIcon ===
 
-// Module 10218 (PreviewIcon)
-import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import map from "map" /* 4197 */;
-import LinkIcon from "LinkIcon" /* 4421 */;
-import Text from "Text" /* 4474 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
-import getFontScale from "getFontScale" /* 4936 */;
-import ImageIcon from "ImageIcon" /* 5041 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 7634 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7636 */;
-import map2 from "map" /* 9106 */;
-import MusicIcon from "MusicIcon" /* 9268 */;
-import formatMessagePreview from "formatMessagePreview" /* 10202 */;
-import VideoIcon from "VideoIcon" /* 10219 */;
-import AttachmentIcon from "AttachmentIcon" /* 10221 */;
-import StickerIcon from "StickerIcon" /* 10223 */;
-import getOrParseMessagePreviewMarkupAST from "getOrParseMessagePreviewMarkupAST" /* 10225 */;
-import getLayoutStyles from "getLayoutStyles" /* 10228 */;
+// Module 10109 (PreviewIcon)
+import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import map from "map" /* 4262 */;
+import LinkIcon from "LinkIcon" /* 4503 */;
+import Text from "Text" /* 4556 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
+import getFontScale from "getFontScale" /* 4982 */;
+import ImageIcon from "ImageIcon" /* 5087 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 7880 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7882 */;
+import MusicIcon from "MusicIcon" /* 9911 */;
+import formatMessagePreview from "formatMessagePreview" /* 10093 */;
+import VideoIcon from "VideoIcon" /* 10110 */;
+import AttachmentIcon from "AttachmentIcon" /* 10112 */;
+import StickerIcon from "StickerIcon" /* 10114 */;
+import getOrParseMessagePreviewMarkupAST from "getOrParseMessagePreviewMarkupAST" /* 10116 */;
+import map2 from "map" /* 10119 */;
+import getLayoutStyles from "getLayoutStyles" /* 10121 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4130 */;
+import closure_5 from "markAllUserIdListsStale" /* 4209 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -241,7 +241,7 @@ let closure_9 = importAllResult.memo((arg0) => {
 });
 const memoResult = importAllResult.memo((message) => {
   const _require = message;
-  let obj = _require(586);
+  let obj = _require(504);
   const items = [closure_5];
   const items1 = [message.message.author.id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.isBlockedOrIgnored(message.message.author.id), items1);

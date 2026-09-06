@@ -1,9 +1,9 @@
-// === Module 10937: useFavoritesGuildCategoryAddAction ===
+// === Module 10975: useFavoritesGuildCategoryAddAction ===
 
-// Module 10937 (useFavoritesGuildCategoryAddAction)
-import messagesProxyDefault from "messagesProxy" /* 3178 */;
+// Module 10975 (useFavoritesGuildCategoryAddAction)
+import messagesProxyDefault from "messagesProxy" /* 3225 */;
 import closure_3 from "noop" /* 19 */;
-import { ChannelTypes } from "ME" /* 673 */;
+import { ChannelTypes } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx");
@@ -14,13 +14,13 @@ export default function useFavoritesGuildCategoryAddAction(id) {
   const callback = React.useCallback(() => {
     closure_1_1(closure_1_2[2])({ parentId: id.id, source: "favorites_add_to_category" });
   }, items);
-  let obj = _require(1911);
+  let obj = _require(1982);
   let tmp4 = null;
   if (obj.isFavoritesGuildId(id.getGuildId())) {
     tmp4 = null;
     if (id.type === ChannelTypes.GUILD_CATEGORY) {
       obj = { label: null, perform: null };
-      const intl = _require(1233).intl;
+      const intl = _require(1114).intl;
       obj[0] = intl.string(messagesProxyDefault["1QJmIL"]);
       obj[1] = callback;
       tmp4 = obj;

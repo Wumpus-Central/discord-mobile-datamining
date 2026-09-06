@@ -1,8 +1,8 @@
-// === Module 9630: useIframeLifecycle ===
+// === Module 9644: useIframeLifecycle ===
 
-// Module 9630 (useIframeLifecycle)
+// Module 9644 (useIframeLifecycle)
 import closure_2 from "noop" /* 19 */;
-import { ComponentActions } from "ME" /* 673 */;
+import { ComponentActions } from "ME" /* 1074 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useIframeLifecycle.tsx");

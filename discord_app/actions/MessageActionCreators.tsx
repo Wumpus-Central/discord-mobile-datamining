@@ -1,50 +1,50 @@
-// === Module 7211: trackInvite ===
+// === Module 7456: trackInvite ===
 
-// Module 7211 (trackInvite)
+// Module 7456 (trackInvite)
 import timestampDefault from "timestamp" /* 3 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import hasFlag from "hasFlag" /* 1398 */;
-import combinedDefault from "combined" /* 1994 */;
-import getUncachedChannelPermissionsDefault from "getUncachedChannelPermissions" /* 4120 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import readSnowflake from "readSnowflake" /* 4463 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4701 */;
-import t2 from "t" /* 4706 */;
-import items2 from "items" /* 5083 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7355 */;
-import createMessage from "createMessage" /* 7508 */;
-import createMessageDefault from "createMessage" /* 7508 */;
-import snowflakeSequence from "snowflakeSequence" /* 7509 */;
-import getInviteURLDefault from "getInviteURL" /* 7514 */;
-import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 10742 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import hasFlag from "hasFlag" /* 1384 */;
+import combinedDefault from "combined" /* 2024 */;
+import getUncachedChannelPermissionsDefault from "getUncachedChannelPermissions" /* 4199 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
+import readSnowflake from "readSnowflake" /* 4545 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
+import t2 from "t" /* 4745 */;
+import items2 from "items" /* 5129 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
+import createMessage from "createMessage" /* 7752 */;
+import createMessageDefault from "createMessage" /* 7752 */;
+import snowflakeSequence from "snowflakeSequence" /* 7753 */;
+import getInviteURLDefault from "getInviteURL" /* 7759 */;
+import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 10744 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "_handleConnectionOpen" /* 5230 */;
-import closure_7 from "updateSubmittedGuildJoinRequestTotal" /* 7212 */;
-import closure_8 from "handleGuildTemplateResolveSuccess" /* 7213 */;
-import closure_9 from "trackRoundtrip" /* 7214 */;
-import closure_10 from "initialize" /* 7433 */;
-import closure_11 from "getState" /* 7435 */;
-import closure_12 from "processMessage" /* 7350 */;
-import { ReferencedMessageState } from "processMessage" /* 7350 */;
-import closure_14 from "loadSavedGuildStickers" /* 5453 */;
-import closure_15 from "reset" /* 4500 */;
-import closure_16 from "fetchFingerprint" /* 1215 */;
-import closure_17 from "ensureGuildLoaded" /* 1386 */;
-import closure_18 from "initialize" /* 7436 */;
-import closure_19 from "createGuildRecordFromRust" /* 1908 */;
-import closure_20 from "updateInvite" /* 4462 */;
-import closure_21 from "reinjectEphemerals" /* 4736 */;
-import closure_22 from "sortActivity" /* 4569 */;
-import closure_23 from "generateOldThreadCutoff" /* 4493 */;
-import { SlowmodeType } from "setCooldown" /* 7442 */;
-import closure_25 from "mergeGuildAvatar" /* 1921 */;
-import ME from "ME" /* 673 */;
-import { LinkType } from "LinkType" /* 7444 */;
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6180 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4471 */;
+import closure_6 from "_handleConnectionOpen" /* 5277 */;
+import closure_7 from "updateSubmittedGuildJoinRequestTotal" /* 5542 */;
+import closure_8 from "handleGuildTemplateResolveSuccess" /* 7457 */;
+import closure_9 from "trackRoundtrip" /* 7458 */;
+import closure_10 from "initialize" /* 7678 */;
+import closure_11 from "getState" /* 7680 */;
+import closure_12 from "processMessage" /* 7595 */;
+import { ReferencedMessageState } from "processMessage" /* 7595 */;
+import closure_14 from "loadSavedGuildStickers" /* 5502 */;
+import closure_15 from "reset" /* 4582 */;
+import closure_16 from "fetchFingerprint" /* 502 */;
+import closure_17 from "ensureGuildLoaded" /* 1957 */;
+import closure_18 from "initialize" /* 7681 */;
+import closure_19 from "createGuildRecordFromRust" /* 1979 */;
+import closure_20 from "updateInvite" /* 4544 */;
+import closure_21 from "reinjectEphemerals" /* 4781 */;
+import closure_22 from "sortActivity" /* 4600 */;
+import closure_23 from "generateOldThreadCutoff" /* 4575 */;
+import { SlowmodeType } from "setCooldown" /* 7687 */;
+import closure_25 from "mergeGuildAvatar" /* 1371 */;
+import ME from "ME" /* 1074 */;
+import { LinkType } from "LinkType" /* 7689 */;
+import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7326 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
 
 require = arg1;
 function trackInvite(channelId) {
@@ -58,7 +58,7 @@ function trackInvite(channelId) {
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
-    let tmp3Result = tmp3(7491);
+    let tmp3Result = tmp3(7735);
     result1 = tmp3Result.isEmbeddedApplicationInvite(invite);
   }
   let id1;
@@ -69,7 +69,7 @@ function trackInvite(channelId) {
     }
   }
   if (tmp8) {
-    tmp3Result = tmp3(7449);
+    tmp3Result = tmp3(7694);
     const result2 = tmp3Result.trackAppEmbedLinkSent(id1, LinkType.ACTIVITY_INVITE, id);
   }
   let channel = store.getChannel(channelId.channelId);
@@ -110,14 +110,14 @@ function trackInvite(channelId) {
             STREAM = GDM_INVITE;
             if (lastActiveStream.channelId === channel.id) {
               obj.destination_user_id = lastActiveStream.ownerId;
-              const streamerApplication = tmp3(7494).getStreamerApplication(lastActiveStream, closure_22);
+              const streamerApplication = tmp3(7738).getStreamerApplication(lastActiveStream, closure_22);
               let id3 = null;
               if (null != streamerApplication) {
                 id3 = streamerApplication.id;
               }
               obj.application_id = id3;
               STREAM = constants3.STREAM;
-              const tmp3Result1 = tmp3(7494);
+              const tmp3Result1 = tmp3(7738);
             }
           }
         }
@@ -143,13 +143,13 @@ function trackInvite(channelId) {
     obj.message_id = messageId;
     obj.send_type = constants4.DIRECT_MESSAGE;
     obj.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-    let inviteInstanceId = tmp3(4463).getInviteInstanceId(result.baseCode, messageId);
+    let inviteInstanceId = tmp3(4545).getInviteInstanceId(result.baseCode, messageId);
     if (inviteInstanceId == null) {
       inviteInstanceId = null;
     }
     obj.invite_instance_id = inviteInstanceId;
     const merged1 = Object.assign(overrideProperties);
-    const tmp3Result2 = tmp3(4463);
+    const tmp3Result2 = tmp3(4545);
     collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.INVITE_SENT, obj);
     const obj13 = collectGuildAnalyticsMetadataDefault;
   } else {
@@ -173,13 +173,13 @@ function trackInvite(channelId) {
       obj2.message_id = messageId;
       obj2.send_type = constants4.DIRECT_MESSAGE;
       obj2.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-      let inviteInstanceId1 = tmp3(4463).getInviteInstanceId(result.baseCode, messageId);
+      let inviteInstanceId1 = tmp3(4545).getInviteInstanceId(result.baseCode, messageId);
       if (inviteInstanceId1 == null) {
         inviteInstanceId1 = null;
       }
       obj2.invite_instance_id = inviteInstanceId1;
       const merged3 = Object.assign(overrideProperties);
-      const tmp3Result3 = tmp3(4463);
+      const tmp3Result3 = tmp3(4545);
       collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.INVITE_SENT, obj2);
       const obj8 = collectGuildAnalyticsMetadataDefault;
     }
@@ -420,51 +420,51 @@ let obj14 = {
       const str = t2;
       const withResult = match.with({ isDM: true }, () => {
         const obj = { message: null, messageName: "BOT_DM_EXPLICIT_CONTENT" };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t["mktny/"]);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t["mktny/"]);
         return obj;
       });
       const withResult1 = match.with({ isDM: true }, () => {
         const obj = { message: null, messageName: "BOT_DM_EXPLICIT_CONTENT" };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t["mktny/"]);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t["mktny/"]);
         return obj;
       }).with({ isDM: false, isGDM: true }, () => {
         const obj = { message: null, messageName: "BOT_GDM_EXPLICIT_CONTENT" };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t["mktny/"]);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t["mktny/"]);
         return obj;
       });
       ({ message, messageName } = match.with({ isDM: true }, () => {
         const obj = { message: null, messageName: "BOT_DM_EXPLICIT_CONTENT" };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t["mktny/"]);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t["mktny/"]);
         return obj;
       }).with({ isDM: false, isGDM: true }, () => {
         const obj = { message: null, messageName: "BOT_GDM_EXPLICIT_CONTENT" };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t["mktny/"]);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t["mktny/"]);
         return obj;
       }).otherwise(() => {
         const obj = { message: null, messageName: "BOT_GUILD_EXPLICIT_CONTENT" };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t.i4AbAS);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t.i4AbAS);
         return obj;
       }));
       const otherwiseResult = match.with({ isDM: true }, () => {
         const obj = { message: null, messageName: "BOT_DM_EXPLICIT_CONTENT" };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t["mktny/"]);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t["mktny/"]);
         return obj;
       }).with({ isDM: false, isGDM: true }, () => {
         const obj = { message: null, messageName: "BOT_GDM_EXPLICIT_CONTENT" };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t["mktny/"]);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t["mktny/"]);
         return obj;
       }).otherwise(() => {
         const obj = { message: null, messageName: "BOT_GUILD_EXPLICIT_CONTENT" };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t.i4AbAS);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t.i4AbAS);
         return obj;
       });
       const nonce = snowflakeSequence.createNonce();
@@ -584,13 +584,13 @@ let obj14 = {
               closure_1 = tmp2;
               closure_0 = 0;
               closure_0 = undefined;
-              const HTTP = closure_1_0(527).HTTP;
+              const HTTP = closure_1_0(1272).HTTP;
               obj1 = { url: null, query: null, retries: 2, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_28.MESSAGES(closure_1_0);
               const obj2 = { limit: 1, around: null };
               obj2[1] = closure_1_1;
               obj1[1] = obj2;
-              obj1[4] = closure_1_0(527).rejectWithMigratedError();
+              obj1[4] = closure_1_0(1272).rejectWithMigratedError();
               c2 = 1;
               dependencyMap = 1;
               const obj3 = { value: null, done: false };
@@ -608,7 +608,7 @@ let obj14 = {
           } else {
             closure_0 = arg1;
             if (closure_0.body.length > 0) {
-              obj = closure_1_0(4738);
+              obj = closure_1_0(4783);
               dependencyMap = 3;
               const obj5 = { value: null, done: true };
               obj5[0] = obj.createMessageRecord(closure_0.body[0]);
@@ -838,9 +838,9 @@ let obj14 = {
               closure_2 = undefined;
               dependencyMap = undefined;
               basicChannel = closure_1_17.getBasicChannel(closure_1_0);
-              const orCreate = closure_1_1(5225).getOrCreate(closure_1_0);
-              const obj13 = closure_1_1(5225);
-              const databaseResult = closure_1_1(1955).database();
+              const orCreate = closure_1_1(5272).getOrCreate(closure_1_0);
+              const obj13 = closure_1_1(5272);
+              const databaseResult = closure_1_1(1986).database();
               c1 = databaseResult;
               if (null != databaseResult) {
                 if (null != basicChannel) {
@@ -855,14 +855,14 @@ let obj14 = {
                       closure_2 = 1;
                       dependencyMap = 1;
                       obj1 = { value: null, done: false };
-                      obj1[0] = closure_1_0(1975).tryLoadAsync(() => closure_2_1(tmp[60]).load(c1, basicChannel, closure_1_4));
+                      obj1[0] = closure_1_0(2006).tryLoadAsync(() => closure_2_1(tmp[60]).load(c1, basicChannel, closure_1_4));
                       return obj1;
                     }
                     dependencyMap = 3;
                   }
                 }
               }
-              obj14 = closure_1_1(1955);
+              obj14 = closure_1_1(1986);
               closure_1_1(9).addLocalMessages(closure_1_0, -1);
               const obj7 = closure_1_1(9);
             }
@@ -892,9 +892,9 @@ let obj14 = {
                 tmp30 = closure_2.connectionId === closure_1_6.lastTimeConnectedChanged();
               }
               dependencyMap = tmp30;
-              obj2 = closure_1_1(7243);
+              obj2 = closure_1_1(7488);
               const result = obj2.recordChannelFetchedLocal(basicChannel, c1, closure_2, dependencyMap, closure_4, closure_2.messages);
-              let obj3 = closure_1_1(706);
+              let obj3 = closure_1_1(573);
               obj3 = { type: "LOCAL_MESSAGES_LOADED", guildId: null, channelId: null, users: null, members: null, messages: null, stale: null };
               obj3[1] = basicChannel.guild_id;
               obj3[2] = basicChannel;
@@ -962,7 +962,7 @@ let obj14 = {
                     orCreate = 1;
                     c3 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = obj2.tryLoadAsync(() => closure_2_1(7232).load(c1, basicChannel, c1));
+                    obj1[0] = obj2.tryLoadAsync(() => closure_2_1(7477).load(c1, basicChannel, c1));
                     return obj1;
                   }
                 }
@@ -1386,12 +1386,12 @@ let obj14 = {
       obj = {};
     }
     ({ messageReference, allowedMentions } = obj);
-    const HTTP = _require(527).HTTP;
-    obj = { url: closure_28.MESSAGES_GREET(id), body: { sticker_ids: items, allowed_mentions: allowedMentions, message_reference: messageReference }, oldFormErrors: true, rejectWithError: _require(527).rejectWithMigratedError(), context: null };
+    const HTTP = _require(1272).HTTP;
+    obj = { url: closure_28.MESSAGES_GREET(id), body: { sticker_ids: items, allowed_mentions: allowedMentions, message_reference: messageReference }, oldFormErrors: true, rejectWithError: _require(1272).rejectWithMigratedError(), context: null };
     items = [closure_1_14];
     obj = { location: constants10.GREET };
     obj[4] = obj;
-    const obj3 = _require(527);
+    const obj3 = _require(1272);
     return HTTP.post(obj).then((body) => {
       callback(closure_1_3[65]).donateSentMessage(body.body.content, closure_0);
       closure_1_55.receiveMessage(closure_0, body.body);
@@ -2350,7 +2350,7 @@ let obj14 = {
                             obj = {};
                             const merged = Object.assign(attachments(pendingReplyActionSource[42]).getClipBaseProperties(clip));
                             const obj3 = attachments(pendingReplyActionSource[42]);
-                            const merged1 = Object.assign(attachments(pendingReplyActionSource[42]).getClipContextProperties("trackClipsShared"));
+                            const merged1 = Object.assign(attachments(pendingReplyActionSource[42]).getClipContextProperties());
                             obj.channel_id = clip;
                             obj.guild_id = pendingReplyActionSource.getGuildId();
                             obj.channel_type = pendingReplyActionSource.type;
@@ -2607,7 +2607,7 @@ let obj14 = {
               (function tryTrackEditMessageSwipeSend(closure_1_1, closure_1_0) {
                 if ("message_swipe" === editActionSource.getEditActionSource(closure_1_0)) {
                   channel = channel.getChannel(closure_1_0);
-                  let obj = callback(695);
+                  let obj = callback(1242);
                   obj = { message_id: null, channel_id: null, guild_id: null, swipe_action: "edit", is_own_message: true };
                   obj[0] = closure_1_1;
                   obj[1] = closure_1_0;
@@ -2619,7 +2619,7 @@ let obj14 = {
                   obj.track(constants2.MESSAGE_SWIPE_ACTION_SENT, obj);
                 }
               })(closure_1_1, closure_1_0);
-              obj1 = closure_1_1(7520);
+              obj1 = closure_1_1(7765);
               obj2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2668,20 +2668,20 @@ let obj14 = {
             obj2[4] = closure_0;
             obj2[5] = dependencyMap;
             const obj3 = { type: null, message: null };
-            obj3[0] = closure_1_0(7589).MessageDataType.EDIT;
+            obj3[0] = closure_1_0(7834).MessageDataType.EDIT;
             obj3[1] = obj2;
-            closure_1_1(7589).enqueue(obj3, (hasErr) => {
+            closure_1_1(7834).enqueue(obj3, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = closure_2_0(7860).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = closure_2_0(7939).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
                 let obj = { type: null, message: null };
-                obj[0] = closure_2_0(7589).MessageDataType.EDIT;
+                obj[0] = closure_2_0(7834).MessageDataType.EDIT;
                 obj[1] = obj2;
-                obj1 = closure_2_1(706);
+                obj1 = closure_2_1(573);
                 obj = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
                 obj[1] = obj;
                 obj = { code: null, message: null };
@@ -2690,11 +2690,11 @@ let obj14 = {
                 obj[2] = obj;
                 obj1.dispatch(obj);
               }
-              const AccessibilityAnnouncer = closure_2_0(1362).AccessibilityAnnouncer;
+              const AccessibilityAnnouncer = closure_2_0(4411).AccessibilityAnnouncer;
               const announce = AccessibilityAnnouncer.announce;
-              const intl = closure_2_0(1233).intl;
+              const intl = closure_2_0(1114).intl;
               const string = intl.string;
-              const t = closure_2_0(1233).t;
+              const t = closure_2_0(1114).t;
               if (hasErr.hasErr) {
                 announce(string(t.Atp7FP));
               } else if (hasItem) {
@@ -2753,7 +2753,7 @@ let obj14 = {
               closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              obj1 = closure_1_1(7520);
+              obj1 = closure_1_1(7765);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2771,16 +2771,16 @@ let obj14 = {
           } else {
             flags = closure_1_21.getMessage(flags, closure_1);
             if (null != flags) {
-              const HTTP = closure_1_0(527).HTTP;
+              const HTTP = closure_1_0(1272).HTTP;
               const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj2[0] = closure_1_28.MESSAGE(flags, closure_1);
               const obj3 = { flags: null };
-              obj3[0] = closure_1_0(1398).setFlag(flags.flags, closure_1_33.SUPPRESS_EMBEDS, true);
+              obj3[0] = closure_1_0(1384).setFlag(flags.flags, closure_1_33.SUPPRESS_EMBEDS, true);
               obj2[1] = obj3;
-              const obj8 = closure_1_0(1398);
-              obj2[3] = closure_1_0(527).rejectWithMigratedError();
+              const obj8 = closure_1_0(1384);
+              obj2[3] = closure_1_0(1272).rejectWithMigratedError();
               HTTP.patch(obj2);
-              const obj9 = closure_1_0(527);
+              const obj9 = closure_1_0(1272);
             }
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
@@ -2826,7 +2826,7 @@ let obj14 = {
               closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              obj1 = closure_1_1(7520);
+              obj1 = closure_1_1(7765);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2844,16 +2844,16 @@ let obj14 = {
           } else {
             flags = closure_1_21.getMessage(flags, closure_1);
             if (null != flags) {
-              const HTTP = closure_1_0(527).HTTP;
+              const HTTP = closure_1_0(1272).HTTP;
               const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj2[0] = closure_1_28.MESSAGE(flags, closure_1);
               const obj3 = { flags: null };
-              obj3[0] = closure_1_0(1398).setFlag(flags.flags, closure_1_33.IS_GUILD_OFFICIAL, c2);
+              obj3[0] = closure_1_0(1384).setFlag(flags.flags, closure_1_33.IS_GUILD_OFFICIAL, c2);
               obj2[1] = obj3;
-              const obj8 = closure_1_0(1398);
-              obj2[3] = closure_1_0(527).rejectWithMigratedError();
+              const obj8 = closure_1_0(1384);
+              obj2[3] = closure_1_0(1272).rejectWithMigratedError();
               HTTP.patch(obj2);
-              const obj9 = closure_1_0(527);
+              const obj9 = closure_1_0(1272);
             }
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
@@ -2969,17 +2969,17 @@ let obj14 = {
               closure_0 = tmp4;
               if (c2) {
                 (function dispatchDelete() {
-                  let obj = callback(706);
+                  let obj = callback(573);
                   obj = { type: "MESSAGE_DELETE", id: callback, channelId: closure_0 };
                   obj.dispatch(obj).then(() => {
-                    const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
-                    const intl = callback(1233).intl;
-                    AccessibilityAnnouncer.announce(intl.string(callback(1233).t.RYMs7s));
+                    const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
+                    const intl = callback(1114).intl;
+                    AccessibilityAnnouncer.announce(intl.string(callback(1114).t.RYMs7s));
                   });
                 })();
                 dependencyMap = 3;
               } else {
-                obj1 = closure_1_1(7520);
+                obj1 = closure_1_1(7765);
                 c2 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -2991,18 +2991,18 @@ let obj14 = {
             dependencyMap = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            const HTTP = closure_1_0(527).HTTP;
+            const HTTP = closure_1_0(1272).HTTP;
             const obj2 = { url: null, oldFormErrors: true, rejectWithError: null };
             obj2[0] = closure_1_28.MESSAGE(closure_0, closure_1);
-            obj2[2] = closure_1_0(527).rejectWithMigratedError();
-            const obj7 = closure_1_0(527);
+            obj2[2] = closure_1_0(1272).rejectWithMigratedError();
+            const obj7 = closure_1_0(1272);
             HTTP.del(obj2).then(() => {
-              let obj = callback(706);
+              let obj = callback(573);
               obj = { type: "MESSAGE_DELETE", id: callback, channelId: closure_0 };
               obj.dispatch(obj).then(() => {
-                const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
-                const intl = callback(1233).intl;
-                AccessibilityAnnouncer.announce(intl.string(callback(1233).t.RYMs7s));
+                const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
+                const intl = callback(1114).intl;
+                AccessibilityAnnouncer.announce(intl.string(callback(1114).t.RYMs7s));
               });
             });
             const delResult = HTTP.del(obj2);
@@ -3018,16 +3018,16 @@ let obj14 = {
       }
     })();
   },
-  dismissAutomatedMessage(message) {
-    if (null != message.loggingName) {
+  dismissAutomatedMessage(loggingName) {
+    if (null != loggingName.loggingName) {
       let obj = collectGuildAnalyticsMetadataDefault;
       obj = { message_name: null, message_author: null };
-      obj[0] = message.loggingName;
-      obj[1] = message.author.username;
+      obj[0] = loggingName.loggingName;
+      obj[1] = loggingName.author.username;
       obj.trackWithMetadata(constants.AUTOMATED_MESSAGE_DISMISSED, obj);
     }
-    const result = fetchAndReconcileGiftIntentDismissals.logGiftIntentMessageDismissed(message.channel_id, message.id);
-    this.deleteMessage(message.channel_id, message.id, true);
+    const result = fetchAndReconcileGiftIntentDismissals.logGiftIntentMessageDismissed(loggingName.channel_id, loggingName.id);
+    this.deleteMessage(loggingName.channel_id, loggingName.id, true);
   },
   revealMessage(id, messageId) {
     let obj = dispatcherDefault;
@@ -3068,10 +3068,10 @@ let obj14 = {
               c0 = tmp7;
               c0 = undefined;
               dependencyMap = 1;
-              const HTTP = closure_1_0(527).HTTP;
+              const HTTP = closure_1_0(1272).HTTP;
               obj1 = { url: null, oldFormErrors: true, failImmediatelyWhenRateLimited: true, rejectWithError: null };
               obj1[0] = closure_1_28.MESSAGE_CROSSPOST(closure_1_0, closure_1_1);
-              obj1[3] = closure_1_0(527).rejectWithMigratedError();
+              obj1[3] = closure_1_0(1272).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
               const obj2 = { value: null, done: false };
@@ -3082,23 +3082,23 @@ let obj14 = {
             dependencyMap = 0;
             closure_1 = closure_2;
             if (429 === closure_1.status) {
-              const intl2 = closure_1_0(1233).intl;
+              const intl2 = closure_1_0(1114).intl;
               let obj3 = { retryAfter: null };
               const _Math = Math;
               obj3[0] = Math.floor(closure_1.body.retry_after / 60);
-              let formatToPlainStringResult = intl2.formatToPlainString(closure_1_0(1233).t["77cuqz"], obj3);
+              let formatToPlainStringResult = intl2.formatToPlainString(closure_1_0(1114).t["77cuqz"], obj3);
             } else {
-              const intl = closure_1_0(1233).intl;
-              formatToPlainStringResult = intl.string(closure_1_0(1233).t.z2gyNF);
+              const intl = closure_1_0(1114).intl;
+              formatToPlainStringResult = intl.string(closure_1_0(1114).t.z2gyNF);
             }
             c0 = formatToPlainStringResult;
-            obj3 = closure_1_1(4858);
+            obj3 = closure_1_1(4904);
             const obj4 = { title: null, body: null, confirmText: null };
-            const intl3 = closure_1_0(1233).intl;
-            obj4[0] = intl3.string(closure_1_0(1233).t.Vd1hs6);
+            const intl3 = closure_1_0(1114).intl;
+            obj4[0] = intl3.string(closure_1_0(1114).t.Vd1hs6);
             obj4[1] = c0;
-            const intl4 = closure_1_0(1233).intl;
-            obj4[2] = intl4.string(closure_1_0(1233).t.BddRzS);
+            const intl4 = closure_1_0(1114).intl;
+            obj4[2] = intl4.string(closure_1_0(1114).t.BddRzS);
             obj3.show(obj4);
             c5 = 3;
           } else if (arg0 === 1) {

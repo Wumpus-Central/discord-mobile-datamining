@@ -1,9 +1,9 @@
-// === Module 17317: fetchRTCLatencyTestRegions ===
+// === Module 17477: fetchRTCLatencyTestRegions ===
 
-// Module 17317 (fetchRTCLatencyTestRegions)
+// Module 17477 (fetchRTCLatencyTestRegions)
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 527 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
+import dispatcherDefault from "dispatcher" /* 573 */;
+import sendRequest from "sendRequest" /* 1272 */;
 
 const result = set.fileFinishedImporting("actions/RTCLatencyTestActionCreators.tsx");
 

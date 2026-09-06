@@ -1,8 +1,8 @@
-// === Module 8001: getFriendAnniversaryGateConfig ===
+// === Module 8080: getFriendAnniversaryGateConfig ===
 
-// Module 8001 (getFriendAnniversaryGateConfig)
+// Module 8080 (getFriendAnniversaryGateConfig)
 import set from "set" /* 2 */;
-import apexExperimentDefault from "apexExperiment" /* 8002 */;
+import apexExperimentDefault from "apexExperiment" /* 8081 */;
 
 const result = set.fileFinishedImporting("modules/premium/gifting/FriendAnniversaryGate.native.tsx");
 

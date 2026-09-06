@@ -1,12 +1,12 @@
-// === Module 16104: fetchMobileGameCommunities ===
+// === Module 16266: fetchMobileGameCommunities ===
 
-// Module 16104 (fetchMobileGameCommunities)
-import setDefault from "set" /* 684 */;
-import parseDefault from "parse" /* 1482 */;
-import closure_3 from "set" /* 15462 */;
-import { Endpoints } from "ME" /* 673 */;
-import importDefaultResult from "fails" /* 581 */;
-import importDefaultResult1 from "dispatcher" /* 706 */;
+// Module 16266 (fetchMobileGameCommunities)
+import setDefault from "set" /* 1090 */;
+import parseDefault from "parse" /* 1471 */;
+import closure_3 from "set" /* 15620 */;
+import { Endpoints } from "ME" /* 1074 */;
+import importDefaultResult from "fails" /* 559 */;
+import importDefaultResult1 from "dispatcher" /* 573 */;
 
 const require = arg1;
 importDefaultResult = new importDefaultResult(setDefault.Millis.SECOND, setDefault.Millis.MINUTE, true);
@@ -24,7 +24,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
   if (closure_5 === undefined) {
     num = 20;
   }
-  const HTTP = _require(527).HTTP;
+  const HTTP = _require(1272).HTTP;
   let obj = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: null, oldFormErrors: true, rejectWithError: true };
   obj = { game_ids: gameIdsForDetectedGames, limit: num, ignored_guild_ids: items };
   obj[1] = parseDefault.stringify(obj);
@@ -65,7 +65,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
               let value = HTTP.get(obj);
               let obj2 = callback(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F123042 */ function() { ... });
+              value.then(() => { ... }, () => { ... }).catch(/* F123678 */ function() { ... });
             });
           }
         }).catch(() => {
@@ -88,7 +88,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
       if (items === undefined) {
         items = [];
       }
-      const HTTP = arr(527).HTTP;
+      const HTTP = arr(1272).HTTP;
       obj = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = Endpoints.MOBILE_GAME_COMMUNITIES;
       obj = { game_ids: null, limit: null, ignored_guild_ids: null };
@@ -133,7 +133,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
                   let value = HTTP.get(obj);
                   let obj2 = callback(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F123042 */ function() { ... });
+                  value.then(() => { ... }, () => { ... }).catch(/* F123678 */ function() { ... });
                 });
               }
             }).catch(() => {

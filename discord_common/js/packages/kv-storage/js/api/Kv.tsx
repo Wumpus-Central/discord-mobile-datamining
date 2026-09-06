@@ -1,8 +1,8 @@
-// === Module 1969: databases ===
+// === Module 2000: databases ===
 
-// Module 1969 (databases)
+// Module 2000 (databases)
 import set from "set" /* 2 */;
-import open from "open" /* 1964 */;
+import open from "open" /* 1995 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Kv.tsx");
 const prototype = function Kv() {

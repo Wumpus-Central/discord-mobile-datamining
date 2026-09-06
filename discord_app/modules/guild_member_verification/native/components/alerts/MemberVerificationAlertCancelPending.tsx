@@ -1,6 +1,6 @@
-// === Module 7672: MemberVerificationAlertCancelPending ===
+// === Module 5540: MemberVerificationAlertCancelPending ===
 
-// Module 7672 (MemberVerificationAlertCancelPending)
+// Module 5540 (MemberVerificationAlertCancelPending)
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -21,25 +21,25 @@ export default function MemberVerificationAlertCancelPending(guildId) {
   }, items);
   let obj = {};
   const merged1 = Object.assign(merged);
-  const intl = guildId(1233).intl;
-  obj.header = intl.string(guildId(1233).t.KYiN1Q);
+  const intl = guildId(1114).intl;
+  obj.header = intl.string(guildId(1114).t.KYiN1Q);
   if (subtitleText == null) {
-    const intl2 = tmp7(1233).intl;
-    subtitleText = intl2.string(tmp7(1233).t.nQHxqm);
+    const intl2 = tmp7(1114).intl;
+    subtitleText = intl2.string(tmp7(1114).t.nQHxqm);
   }
   obj.subtitle = subtitleText;
   if (confirmText == null) {
-    const intl3 = tmp7(1233).intl;
-    confirmText = intl3.string(tmp7(1233).t.OzHPde);
+    const intl3 = tmp7(1114).intl;
+    confirmText = intl3.string(tmp7(1114).t.OzHPde);
   }
   obj = { children: null };
-  const items1 = [closure_4(guildId(4929).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
+  const items1 = [closure_4(guildId(4975).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
   obj = { text: null, variant: "secondary", onPress: null };
-  const intl4 = tmp7(1233).intl;
-  obj[0] = intl4.string(guildId(1233).t.bANR0R);
+  const intl4 = tmp7(1114).intl;
+  obj[0] = intl4.string(guildId(1114).t.bANR0R);
   obj[2] = onClose;
-  items1[1] = closure_4(guildId(4929).Button, obj);
+  items1[1] = closure_4(guildId(4975).Button, obj);
   obj[0] = items1;
   obj.buttons = closure_6(closure_5, obj);
-  return closure_4(onClose(7669), obj);
+  return closure_4(onClose(5537), obj);
 };

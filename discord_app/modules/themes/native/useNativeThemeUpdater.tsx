@@ -1,8 +1,8 @@
-// === Module 16792: useNativeThemeUpdater ===
+// === Module 16957: useNativeThemeUpdater ===
 
-// Module 16792 (useNativeThemeUpdater)
+// Module 16957 (useNativeThemeUpdater)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleThemeChange" /* 1301 */;
+import closure_3 from "handleThemeChange" /* 1183 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");

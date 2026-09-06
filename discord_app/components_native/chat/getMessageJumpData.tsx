@@ -1,14 +1,14 @@
-// === Module 11349: getMessageJumpData ===
+// === Module 11525: getMessageJumpData ===
 
-// Module 11349 (getMessageJumpData)
+// Module 11525 (getMessageJumpData)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import set from "set" /* 1234 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1893 */;
-import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4409 */;
+import set from "set" /* 1115 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1877 */;
+import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4491 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "subscribeToKeyboardUIStore" /* 1494 */;
-import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import closure_5 from "subscribeToKeyboardUIStore" /* 1479 */;
+import closure_6 from "mergeGuildAvatar" /* 1371 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("components_native/chat/getMessageJumpData.tsx");

@@ -1,19 +1,19 @@
-// === Module 17013: FloatingCTA ===
+// === Module 17177: FloatingCTA ===
 
-// Module 17013 (FloatingCTA)
-import ThemesDefault from "Themes" /* 709 */;
-import ManaContext from "ManaContext" /* 4204 */;
-import Stack from "Stack" /* 4927 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8378 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 15860 */;
+// Module 17177 (FloatingCTA)
+import ThemesDefault from "Themes" /* 576 */;
+import ManaContext from "ManaContext" /* 4271 */;
+import Stack from "Stack" /* 4973 */;
+import RowButtonWrapper from "RowButtonWrapper" /* 8595 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 12187 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import { UI_SHOW_HIDE_PHYSICS } from "VoicePanelModes" /* 12069 */;
-import { CALL_TILE_GUTTER } from "CARD_SIZE" /* 12072 */;
-import { ThemeTypes } from "sum" /* 502 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import { UI_SHOW_HIDE_PHYSICS } from "VoicePanelModes" /* 12273 */;
+import { CALL_TILE_GUTTER } from "CARD_SIZE" /* 12276 */;
+import { ThemeTypes } from "sum" /* 1085 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function FloatingCTA(trailing) {
@@ -46,7 +46,7 @@ class VoicePanelFloatingCTAContainer {
     channelId = context.channelId;
     safeArea = context.safeArea;
     tmp5 = require("useChannelFloatingCTAContent")(channelId);
-    obj = require("canShowTimeRecurringContent");
+    obj = require("useGetVisibleContent");
     first = gestureState(obj.useGetDismissibleContent(tmp5), 1)[0];
     closure_7 = first;
     obj2 = require("defaultAreStatesEqual");
@@ -67,7 +67,7 @@ class VoicePanelFloatingCTAContainer {
     floatingCTAProps = obj3.useFloatingCTAProps(stateFromStores);
     tmp10 = require("useControlsHiddenPresentation")(context.mode, wrapperSpecs, { state, cleanUp });
     ({ hiddenProps, hiddenStyles } = tmp10);
-    obj4 = require("module_4217");
+    obj4 = require("module_4296");
     fn = function f() {
       let obj = wrapperSpecs(controlsSpecs[20]);
       const controlsDefaultWidth = obj.getControlsDefaultWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);

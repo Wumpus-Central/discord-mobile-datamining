@@ -1,15 +1,15 @@
-// === Module 12080: _fetchGuildHomeSettings ===
+// === Module 12284: _fetchGuildHomeSettings ===
 
-// Module 12080 (_fetchGuildHomeSettings)
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import dispatcherDefault from "dispatcher" /* 706 */;
-import transitionToChannel from "transitionToChannel" /* 4489 */;
+// Module 12284 (_fetchGuildHomeSettings)
+import dispatcherDefault from "dispatcher" /* 573 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import transitionToChannel from "transitionToChannel" /* 4571 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 1983 */;
-import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 4708 */;
-import closure_7 from "set" /* 4709 */;
-import ME from "ME" /* 673 */;
+import closure_4 from "initialize" /* 2014 */;
+import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import closure_6 from "handleSettingsLoadSuccess" /* 4747 */;
+import closure_7 from "set" /* 4748 */;
+import ME from "ME" /* 1074 */;
 
 require = arg1;
 function _fetchGuildHomeSettings() {
@@ -30,17 +30,17 @@ function _fetchGuildHomeSettings() {
       obj2[0] = closure_1_9.GUILD_HOME_SETTINGS(callback);
       yield HTTP.get(obj2);
       c4 = 0;
-      obj2 = lib(706);
+      obj2 = lib(573);
       const obj4 = { type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: null };
       obj4[1] = callback;
       obj2.dispatch(obj4);
       lib = yield "HermesInternal";
-      dependencyMap = callback(12081).settingsFromServer(lib.body);
-      const obj8 = callback(12081);
+      dependencyMap = callback(12285).settingsFromServer(lib.body);
+      const obj8 = callback(12285);
       const obj6 = { type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: null, homeSettings: null };
       obj6[1] = callback;
       obj6[2] = dependencyMap;
-      lib(706).dispatch(obj6);
+      lib(573).dispatch(obj6);
       c4 = 0;
       return dependencyMap;
     })();
@@ -112,7 +112,7 @@ function _fetchNewMemberActions() {
             }
           } else if (1 === isFullServerPreviewResult) {
             fullServerPreview = 0;
-            obj2 = lib(706);
+            obj2 = lib(573);
             obj4 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL", guildId: null };
             obj4[1] = callback;
             isFullServerPreviewResult = obj2.dispatch(obj4);
@@ -127,12 +127,12 @@ function _fetchNewMemberActions() {
             return obj5;
           } else {
             lib = arg1;
-            dependencyMap = callback(12081).actionsFromServer(lib.body);
-            const obj11 = callback(12081);
+            dependencyMap = callback(12285).actionsFromServer(lib.body);
+            const obj11 = callback(12285);
             const obj6 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: null, memberActions: null };
             obj6[1] = callback;
             obj6[2] = dependencyMap;
-            lib(706).dispatch(obj6);
+            lib(573).dispatch(obj6);
             fullServerPreview = 0;
             c6 = 3;
             obj = { value: null, done: true };
@@ -180,7 +180,7 @@ function _clearNewMemberActions() {
       yield HTTP.del(obj2);
       if (1 === tmp7) {
         c4 = 0;
-        const obj3 = callback2(706);
+        const obj3 = callback2(573);
         const obj4 = { type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_FAIL", guildId: null };
         obj4[1] = callback;
         obj3.dispatch(obj4);
@@ -189,7 +189,7 @@ function _clearNewMemberActions() {
         c6 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const obj = callback2(706);
+        const obj = callback2(573);
         const obj5 = { type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS", guildId: null };
         obj5[1] = callback;
         obj.dispatch(obj5);
@@ -314,7 +314,7 @@ export const completeNewMemberAction = function completeNewMemberAction(c0, c1) 
         if (newMemberActions == null) {
           newMemberActions = [];
         }
-        tmpResult = tmp(695);
+        tmpResult = tmp(1242);
         obj = { guild_id: null, channel_id: null, channel_action_type: null, has_completed_all: null };
         ({ guild_id: obj6[0], id: obj6[1] } = channel);
         obj[2] = actionForChannel.actionType;
@@ -328,7 +328,7 @@ export const completeNewMemberAction = function completeNewMemberAction(c0, c1) 
         tmpResult.track(constants.SERVER_GUIDE_ACTION_COMPLETED, obj);
       }
     }
-    const HTTP = _require(527).HTTP;
+    const HTTP = _require(1272).HTTP;
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = closure_9.GUILD_MEMBER_ACTION_UPDATE(c0, c1);
     HTTP.post(obj1);

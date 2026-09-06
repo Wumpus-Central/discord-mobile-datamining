@@ -1,21 +1,21 @@
-// === Module 5377: sortKey ===
+// === Module 5425: sortKey ===
 
-// Module 5377 (sortKey)
-import version from "version" /* 4116 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
-import getNicknameDefault from "getNickname" /* 4673 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5380 */;
-import getHighestHoistedRole from "getHighestHoistedRole" /* 5381 */;
-import closure_3 from "reset" /* 4500 */;
-import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "handleConnectionReset" /* 5378 */;
-import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import closure_9 from "updateVoiceState" /* 4497 */;
-import { getComparator } from "getVoiceStatesForGuild" /* 4555 */;
-import closure_11 from "buildStageChannelUserRoles" /* 5374 */;
-import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
+// Module 5425 (sortKey)
+import version from "version" /* 4195 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
+import getNicknameDefault from "getNickname" /* 4712 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5428 */;
+import getHighestHoistedRole from "getHighestHoistedRole" /* 5429 */;
+import closure_3 from "reset" /* 4582 */;
+import closure_4 from "ensureGuildLoaded" /* 1957 */;
+import closure_5 from "handleConnectionReset" /* 5426 */;
+import closure_6 from "trackCommunicationDisabled" /* 2021 */;
+import closure_7 from "markAllUserIdListsStale" /* 4209 */;
+import closure_8 from "mergeGuildAvatar" /* 1371 */;
+import closure_9 from "updateVoiceState" /* 4579 */;
+import { getComparator } from "getVoiceStatesForGuild" /* 4584 */;
+import closure_11 from "buildStageChannelUserRoles" /* 5421 */;
+import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
 
 require = arg1;
 function sortKey(speaker) {
@@ -173,7 +173,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       const merged = Object.assign(obj);
       obj.type = obj.VOICE;
       obj.id = user.id;
-      let tmp11Result = tmp11(4668);
+      let tmp11Result = tmp11(4707);
       obj.rtsState = tmp11Result.getAudienceRequestToSpeakState(voiceStateForChannel);
       items.push(obj);
       streamForUser = streamForUser.getStreamForUser(userId, self.guildId);
@@ -182,12 +182,12 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       }
       if (null != streamForUser) {
         if (streamForUser.channelId === self.channelId) {
-          tmp11Result = tmp11(4544);
+          tmp11Result = tmp11(4612);
           obj1 = {};
           const merged1 = Object.assign(obj);
           obj1.id = tmp11Result.encodeStreamKey(streamForUser);
           obj1.type = obj.STREAM;
-          obj1.rtsState = tmp11(4668).RequestToSpeakStates.NONE;
+          obj1.rtsState = tmp11(4707).RequestToSpeakStates.NONE;
           items.push(obj1);
           const encodeStreamKeyResult = tmp11Result.encodeStreamKey(streamForUser);
         }

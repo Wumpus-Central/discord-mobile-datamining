@@ -1,7 +1,7 @@
-// === Module 10935: useChannelSafetyWarning ===
+// === Module 10973: useChannelSafetyWarning ===
 
-// Module 10935 (useChannelSafetyWarning)
-import closure_2 from "handleConnectionOpen" /* 10878 */;
+// Module 10973 (useChannelSafetyWarning)
+import closure_2 from "handleConnectionOpen" /* 10915 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useChannelSafetyWarning.tsx");
@@ -11,7 +11,7 @@ export const useChannelSafetyWarning = function useChannelSafetyWarning(channelI
   dependencyMap = LIKELY_ATO;
   const items = [closure_2];
   const items1 = [channelId];
-  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_2.getChannelSafetyWarnings(closure_0), items1);
+  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_2.getChannelSafetyWarnings(closure_0), items1);
   const found = stateFromStores.filter((type) => type.type === closure_1);
   return found.find((dismiss_timestamp) => {
     let tmp = null == dismiss_timestamp.dismiss_timestamp;

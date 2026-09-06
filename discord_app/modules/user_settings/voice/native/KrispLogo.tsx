@@ -1,17 +1,17 @@
-// === Module 10106: handleKrispLinkPressed ===
+// === Module 9997: handleKrispLinkPressed ===
 
-// Module 10106 (handleKrispLinkPressed)
+// Module 9997 (handleKrispLinkPressed)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 586 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
-import combinedDefault from "combined" /* 1994 */;
-import _modDef4190 from "module_4190" /* 4190 */;
-import Text from "Text" /* 4474 */;
+import initialize from "initialize" /* 504 */;
+import getSystemLocale from "getSystemLocale" /* 1114 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import combinedDefault from "combined" /* 2024 */;
+import _modDef4255 from "module_4255" /* 4255 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import Text from "Text" /* 4556 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleThemeChange" /* 1301 */;
-import ME from "ME" /* 673 */;
+import closure_6 from "handleThemeChange" /* 1183 */;
+import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -26,7 +26,7 @@ function handleKrispLinkPressed() {
   obj[2] = obj;
   expandEventPropertiesDefault.track(constants.NOISE_CANCELLATION_LINK_CLICKED, obj);
   const obj2 = expandEventPropertiesDefault;
-  _modDef4190.openURL(articleURL);
+  _modDef4255.openURL(articleURL);
 }
 noopAll;
 ({ Image: c3, View: c4, Pressable: c5 } = get_ActivityIndicator);
@@ -41,21 +41,21 @@ export default function KrispLogo() {
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   obj1 = AccessibilityAnnouncer;
   if (obj1.isThemeLight(stateFromStores)) {
-    let tmp4Result = tmp4(10107);
+    let tmp4Result = tmp4(9998);
   } else {
-    tmp4Result = tmp4(10108);
+    tmp4Result = tmp4(9999);
   }
   obj = { style: closure_13.detailsView, children: null };
   obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj[2] = intl.string(getSystemLocale.t.vFiCSx);
   const items1 = [callback(closure_3, obj), ];
   obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
   obj1[2] = handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
-  const intl3 = tmp(1233).intl;
+  const intl3 = tmp(1114).intl;
   obj2[2] = intl3.string(getSystemLocale.t.hvVgAZ);
   obj1[3] = callback(Text.Text, obj2);
   items1[1] = callback(closure_5, obj1);

@@ -1,20 +1,20 @@
-// === Module 14723: ConnectGuardianBottomSheet ===
+// === Module 14879: ConnectGuardianBottomSheet ===
 
-// Module 14723 (ConnectGuardianBottomSheet)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
-import ThemesDefault from "Themes" /* 709 */;
-import messagesProxyDefault from "messagesProxy" /* 2368 */;
-import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4929 */;
-import Background from "Background" /* 5631 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14724 */;
-import ConnectGuardianCard from "ConnectGuardianCard" /* 14725 */;
+// Module 14879 (ConnectGuardianBottomSheet)
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
+import ThemesDefault from "Themes" /* 576 */;
+import messagesProxyDefault from "messagesProxy" /* 2396 */;
+import Text from "Text" /* 4556 */;
+import Button from "Button" /* 4975 */;
+import Background from "Background" /* 7150 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14880 */;
+import ConnectGuardianCard from "ConnectGuardianCard" /* 14881 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7292 */;
-import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_6 } from "items" /* 7293 */;
+import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
+import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_6 } from "items" /* 7538 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -46,15 +46,15 @@ export default function ConnectGuardianBottomSheet(arg0) {
   obj = { style: tmp.info, children: null };
   obj1 = { style: tmp.centered, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   if (title == null) {
-    const intl = tmp2(1233).intl;
-    title = intl.string(tmp7(2368).aCUVfL);
+    const intl = tmp2(1114).intl;
+    title = intl.string(tmp7(2396).aCUVfL);
   }
   obj1[4] = title;
   const items2 = [closure_7(Text.Text, obj1), ];
   const obj2 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
   if (body == null) {
-    const intl2 = tmp2(1233).intl;
-    body = intl2.format(tmp7(2368)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
+    const intl2 = tmp2(1114).intl;
+    body = intl2.format(tmp7(2396)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   }
   obj2[3] = body;
   items2[1] = closure_7(Text.Text, obj2);
@@ -74,7 +74,7 @@ export default function ConnectGuardianBottomSheet(arg0) {
   obj3[1] = closure_7(ConnectGuardianCard.ConnectGuardianCard, obj4);
   items3[1] = closure_7(View, obj3);
   const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
-  const intl3 = tmp2(1233).intl;
+  const intl3 = tmp2(1114).intl;
   obj6[2] = intl3.string(messagesProxyDefault.Hsm5IF);
   obj6[3] = callback;
   items3[2] = closure_7(Button.Button, obj6);

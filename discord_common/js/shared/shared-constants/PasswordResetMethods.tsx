@@ -1,6 +1,6 @@
-// === Module 7731: PasswordResetMethods ===
+// === Module 6946: PasswordResetMethods ===
 
-// Module 7731 (PasswordResetMethods)
+// Module 6946 (PasswordResetMethods)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/PasswordResetMethods.tsx");

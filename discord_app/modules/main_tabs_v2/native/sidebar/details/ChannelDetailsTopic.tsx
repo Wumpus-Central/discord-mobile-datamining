@@ -1,15 +1,15 @@
-// === Module 16566: GuildChannelDetailsTopic ===
+// === Module 16732: GuildChannelDetailsTopic ===
 
-// Module 16566 (GuildChannelDetailsTopic)
+// Module 16732 (GuildChannelDetailsTopic)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10879 */;
-import { VerticalGradient } from "ME" /* 673 */;
+import closure_7 from "mergeGuildAvatar" /* 1371 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10916 */;
+import { VerticalGradient } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 1234 */;
-import createCacheKey from "createCacheKey" /* 4478 */;
+import set from "set" /* 1115 */;
+import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 function GuildChannelDetailsTopic(channel) {
@@ -177,7 +177,7 @@ function GuildChannelDetailsTopic(channel) {
 }
 function PrivateChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const user = closure_1_7.getUser(channel.getRecipientId());
@@ -199,13 +199,13 @@ function PrivateChannelDetailsTopic(channel) {
     obj[0] = channel.textAlign;
     obj[2] = obj;
     obj[3] = stateFromStores;
-    tmp4 = callback2(channel(4474).Text, obj);
+    tmp4 = callback2(channel(4556).Text, obj);
   }
   return tmp4;
 }
 function GroupDMChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => channel(closure_1_2[18]).getPrivateChannelUserTagsString(channel.recipients, closure_1_7));
   let tmp4 = null;
@@ -215,7 +215,7 @@ function GroupDMChannelDetailsTopic(channel) {
     obj[0] = channel.textAlign;
     obj[2] = obj;
     obj[3] = stateFromStores;
-    tmp4 = callback2(channel(4474).Text, obj);
+    tmp4 = callback2(channel(4556).Text, obj);
   }
   return tmp4;
 }

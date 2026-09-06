@@ -1,14 +1,14 @@
-// === Module 9871: _computeNativeDisplayPair ===
+// === Module 9156: _computeNativeDisplayPair ===
 
-// Module 9871 (_computeNativeDisplayPair)
+// Module 9156 (_computeNativeDisplayPair)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "fetchFingerprint" /* 1215 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_8 from "createRTCConnection" /* 4554 */;
-import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9867 */;
-import { Features } from "DesktopSources" /* 4542 */;
+import closure_6 from "fetchFingerprint" /* 502 */;
+import closure_7 from "_detectH265HardwareDecode" /* 1908 */;
+import closure_8 from "createRTCConnection" /* 4583 */;
+import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9152 */;
+import { Features } from "DesktopSources" /* 4585 */;
 
 const require = arg1;
 function _computeNativeDisplayPair() {
